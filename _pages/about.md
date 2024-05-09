@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD candidate at Georgia Tech. I am fortunate enough to work with the great people at the [EIC lab](https://eiclab.scs.gatech.edu/index.html), under [Professor Lin](https://eiclab.scs.gatech.edu/pages/team.html#PI).
+I am a 1st-year PhD candidate at Georgia Tech. I am fortunate enough to work with the great people at the [EIC lab](https://eiclab.scs.gatech.edu/index.html), under [Professor Lin](https://eiclab.scs.gatech.edu/pages/team.html#PI).
 
 My research interests are in building scalable and robust machine learning systems through algorithmic and hardware design and optimization.
 
