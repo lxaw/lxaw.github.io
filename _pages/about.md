@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a 1st-year PhD candidate at Georgia Tech. I am fortunate enough to work with the great people at the [EIC lab](https://eiclab.scs.gatech.edu/index.html), under [Professor Lin](https://eiclab.scs.gatech.edu/pages/team.html#PI).
+I am a 1st-year PhD candidate at Georgia Tech, who is fortunate enough to work with the great people at the [EIC lab](https://eiclab.scs.gatech.edu/index.html) under [Professor Lin](https://eiclab.scs.gatech.edu/pages/team.html#PI).
 
 My research interests are in building scalable and robust machine learning systems through algorithmic and hardware design and optimization.
 
@@ -17,6 +17,6 @@ Outside of research, I enjoy learning mathematics and languages. I am fluent in 
 
 I also am open to any odd jobs that may be available. As long as the project is interesting, I am willing to go anywhere and learn anything.
 
-大学の一部を日本で過ごし、普通に日本人の大学生向けの授業を受け、普通にそこそこの成績を収めました（LinkedInを参照）ので、メールを英語にする必要はありません。
+大学の一部を日本で過ごし、普通に日本人の大学生向けの授業を受け、普通にそこそこの成績を収めました（LinkedInを参照）. なので、メールを英語にする必要はありません。
 
 未来，我也会说普通话！
