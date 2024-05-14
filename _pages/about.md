@@ -17,6 +17,6 @@ Outside of research, I enjoy learning mathematics and languages. I am fluent in 
 
 I also am open to any odd jobs that may be available. As long as the project is interesting, I am willing to go anywhere and learn anything.
 
-大学の一部を日本で過ごし、普通に日本人の大学生向けの授業を受け、普通にそこそこの成績を収めました（LinkedInを参照）. なので、メールを英語にする必要はありません。
+大学の一部を日本で過ごし、普通に日本人の大学生向けの授業を受け、普通にそこそこの成績を収めました（LinkedInを参照）。なので、メールを英語にする必要はありません。
 
 未来，我也会说普通话！
