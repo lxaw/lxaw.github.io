@@ -1,0 +1,15 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+
+{% include base_path %}
+
+Here's what I have been up to lately. For the most up-to-date image, please check out my <a href="https://github.com/lxaw">GitHub</a>.
+
+{% for post in site.projects%}
+  {% include archive-single.html %}
+{% endfor %}
+

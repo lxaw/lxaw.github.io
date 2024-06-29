@@ -5,9 +5,9 @@ permalink: /reading/
 author_profile: true
 ---
 
-Here are books I have read starting from 2023. During 2023, I forgot to record some, so I am sure I have missed a little. I will be more careful!
+For my own reference, I am recording books I have read. Hopefully I won't accidentally re-read them!
 
-## Books Read in Reverse Chronological Order
+## Books Read (Reverse Chronological Order)
 
 | Name           | Author        | Date Finished | Page Count | Rating | Description                 | Amazon |
 |----------------|---------------|---------------|------------|--------|-----------------------------|--------|
@@ -15,7 +15,7 @@ Here are books I have read starting from 2023. During 2023, I forgot to record s
 | 若きサムライのために | 三島由紀夫 | 06/04/2024 | 288 | 75/100 | Collection of essays / interviews with Mishima. I think some of these essays / interviews were right before he did 自決. His お茶漬ナショナリズム discussion was interesting. | [link](https://amzn.asia/d/8ThDD1T)
 | 世界はラテン語でできている | ラテン語さん | 05/19/2024 | 216 | 70/100 | Basically just a bunch of うんちく. Good for random facts. | [link](https://amzn.asia/d/9yA2HiK)
 | 銀河英雄伝説３　雌伏篇 | 田中芳樹 | 05/05/2024 | 315 | 95/100 | 査問会、帝国の新たな要塞、などなど。 | [link](https://amzn.asia/d/g6wcDgf)
-| グラスホッパー | 伊坂 幸太郎 | 04/04/2024 | 318 | 70/100 | 鯨 was my favorite character. | [link](https://www.amazon.co.jp/dp/B0093GE5B2?ref_=cm_sw_r_cp_ud_dp_NXVNWEEC0HPY2P3YR5NQ&skipTwisterOG=2)
+| グラスホッパー | 伊坂 幸太郎 | 04/04/2024 | 318 | 70/100 | 鯨 was my favorite character. | [link](https://www.amazon.co.jp/dp/B0093GE5B2?ref=cm_sw_r_cp_ud_dp_NXVNWEEC0HPY2P3YR5NQ&skipTwisterOG=2)
 | 銀河英雄伝説２　野望篇 | 田中芳樹 | 03/22/2024 | 334 | 95/100 | Coup d'état, big ice ball destroys complex military system, a main character dies. | [link](https://amzn.asia/d/alLO6Iv)
 | 台湾の歴史と文化-六つの時代が織りなす | 大東 和重 | 02/25/2024 | 304 | 80/100 | Taiwan's history and culture. Told more like a story than a textbook. Pretty interesting!| [link](https://www.amazon.co.jp/gp/product/4121025814/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 | 深層学習 改訂第2版 | 岡谷 貴之 | 02/16/2024 | 384 | 80/100 | Easy to begin introduction. I thought that it was a little less rigorous, and more of an overview of the topic. Next will be the Goodfellow/Bengio/Courville book.| [link](https://www.amazon.co.jp/dp/4065133327?psc=1&ref=ppx_yo2ov_dt_b_product_details)
