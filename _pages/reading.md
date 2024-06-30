@@ -11,6 +11,7 @@ For my own reference, I am recording books I have read. Hopefully I won't accide
 
 | Name           | Author        | Date Finished | Page Count | Rating | Description                 | Amazon |
 |----------------|---------------|---------------|------------|--------|-----------------------------|--------|
+| 銀河英雄伝説４　策謀篇 | 田中芳樹 | 06/30/2024 | 298 | 95/100 | 誘拐、フェザーン、大規模軍事作戦. | [link](https://amzn.asia/d/0gnQAVuT)
 | 宇宙が始まる前には何があったのか? | ローレンス・クラウス | 06/17/2024 | 343 | 70/100 | It seems like the universe will expand faster and faster. | [link](https://amzn.asia/d/9ghSgyi)
 | 若きサムライのために | 三島由紀夫 | 06/04/2024 | 288 | 75/100 | Collection of essays / interviews with Mishima. I think some of these essays / interviews were right before he did 自決. His お茶漬ナショナリズム discussion was interesting. | [link](https://amzn.asia/d/8ThDD1T)
 | 世界はラテン語でできている | ラテン語さん | 05/19/2024 | 216 | 70/100 | Basically just a bunch of うんちく. Good for random facts. | [link](https://amzn.asia/d/9yA2HiK)
