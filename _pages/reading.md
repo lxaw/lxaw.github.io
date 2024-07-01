@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 ## Papers Read (Reverse Chronological Order)
-Here's some papers I have read. This list is kept for personal reference, just in case I need to look more at an idea. Most of these are not really in any order; they are just in the order that they appeared on my i-Pad.
+Here are some papers I have read. This list is kept for personal reference, just in case I need to look more at an idea. Most of these are not really in any order; they are just in the order that they appeared on my i-Pad.
 
 ### Note: On Authors
 The author section contains only the first author, followed by *et al*. This is **not** to say that the other authors did not contribute; their work should be recognized and is important. I chose to only do the first author as I do not want to crowd the page. Please see the paper itself if you are more interesting.
@@ -77,7 +77,7 @@ The publication venue may not always be correct here. I just put whatever was fo
 | The Shattered Gradients Problem: If resnets are the answer, then what is the question? | David Balduzzi *et al* | 2018 | ICML | The paper identifies the "shattered gradients" problem in standard feedforward neural networks. It shows that gradients in these networks exhibit an exponential decay in correlation with depth, leading to gradients that resemble white noise. In contrast, architectures like highway and ResNets with skip-connections demonstrate gradients that decay sublinearly, indicating greater resilience against shattering. The paper introduces a new initialization technique termed "Looks Linear" (LL) that addresses the shattered gradients issue. Preliminary experiments demonstrate that LL initialization enables the training of very deep networks without the need for skip-connections like those in ResNets or highway networks. This initialization method offers a promising alternative to achieving stable gradient propagation in deep networks, potentially simplifying network architecture and improving training efficiency. | 
 
 # Books Read (Reverse Chronological Order)
-Here's some books I have read. I started recording back in 2023. This is kept so I can record insights gained, and motivate myself to keep reading. Human beings love seeing numbers grow!
+Here are some books I have read. I started recording back in 2023. This is kept so I can record insights gained, and motivate myself to keep reading. Human beings love seeing numbers grow!
 
 | Name           | Author        | Date Finished | Page Count | Rating | Description                 | Amazon |
 |----------------|---------------|---------------|------------|--------|-----------------------------|--------|
