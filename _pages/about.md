@@ -9,14 +9,14 @@ redirect_from:
 
 I am a 1st-year PhD candidate at Georgia Tech, who is fortunate enough to work with the great people at the [EIC lab](https://eiclab.scs.gatech.edu/index.html) under [Professor Lin](https://eiclab.scs.gatech.edu/pages/team.html#PI).
 
-My research interests are in building scalable and robust machine learning systems through algorithmic and hardware design and optimization.
+### Research Interests
+My research interests are in building scalable and robust machine learning systems through algorithmic and hardware design and optimization. 
 
-I completed my Bachelor's and Master's degree in CS at the University of South Carolina, advised by [Dr. Homayoun Valafar](https://sc.edu/study/colleges_schools/engineering_and_computing/faculty-staff/homayounvalafar.php). I worked on various projects during my time there, from a [Comprehensive Food Database](https://github.com/lxaw/ComprehensiveFoodDatabase) of all foods in America to an [open source research file sharing service](https://github.com/lxaw/DataDock), while also working on data analytics of health studies.
+My goal is to help the world achieve super-human intelligence at a low cost.
 
-Outside of research, I enjoy learning mathematics and languages. I am fluent in Japanese, and intermediate in Mandarin. By the end of the PhD, I hope to be fluent in Mandarin too!
+### Prior to GT
+Before Georgia Tech, I completed my Bachelor's and Master's degree in CS at the University of South Carolina, advised by [Dr. Homayoun Valafar](https://sc.edu/study/colleges_schools/engineering_and_computing/faculty-staff/homayounvalafar.php). 
 
-I also am open to any odd jobs that may be available. As long as the project is interesting, I am willing to go anywhere and learn anything.
+Outside of academia I have done several different things, such as working on open source projects ([GitHub](https://github.com/lxaw)), learning Japanese and then later doing a semester at an all Japanese university ([CV](/files/cv.pdf)), or starting my own LLC and working as an independent consultant. 
 
-大学の一部を日本で過ごし、普通に日本人の大学生向けの授業を受け、普通にそこそこの成績を収めました（LinkedInを参照）。なので、メールを英語にする必要はありません。
-
-未来，我也会说普通话！
+I am grateful to be receiving the [NSF Graduate Research Fellowship](https://www.nsfgrfp.org/), which is helping to fund my research.
