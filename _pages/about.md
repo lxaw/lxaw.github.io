@@ -12,7 +12,7 @@ I am a 1st-year PhD candidate at Georgia Tech, who is fortunate enough to work w
 ### Research Interests
 My research interests are in building scalable and robust machine learning systems through algorithmic and hardware design and optimization. 
 
-My goal is to help the world achieve super-human intelligence at a low cost.
+My goal is to help the world achieve super-human intelligence at an affordable price.
 
 ### Prior to GT
 Before Georgia Tech, I completed my Bachelor's and Master's degree in CS at the University of South Carolina, advised by [Dr. Homayoun Valafar](https://sc.edu/study/colleges_schools/engineering_and_computing/faculty-staff/homayounvalafar.php). 
