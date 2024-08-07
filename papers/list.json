@@ -1,5 +1,68 @@
 [
   {
+    "title": "The wake-sleep algorithm for unsupervised neural networks",
+    "author": "Geoffry Hinton et al",
+    "year": "1995",
+    "topic": "representation, generative",
+    "venue": "Arxiv",
+    "description": "One of the first generative neural networks that kind of resembles diffusion.",
+    "link": "https://www.cs.toronto.edu/~hinton/csc2535/readings/ws.pdf"
+  },
+  {
+    "title": "ViTCoD: Vision Transformer Acceleration via Dedicated Algorithm and Accelerator Co-Design",
+    "author": "Haoran You et al",
+    "year": "2022",
+    "topic": "vit, accelerator, attention",
+    "venue": "Arxiv",
+    "description": "Co-deisng for ViTs. Prunes and polarizes attention maps to have denser/sparser patterns. Development of hardware accelerator as well.",
+    "link": "https://arxiv.org/pdf/2210.09573"
+  },
+  {
+    "title": "Evolving Neural Networks through Augmenting Topologies",
+    "author": "Kenneth O. Stanley et al",
+    "year": "2002",
+    "topic": "nas, evolution",
+    "venue": "Arxiv",
+    "description": "Evolution for NAS.",
+    "link": "https://www.cse.unr.edu/~sushil/class/gas/papers/NEAT.pdf"
+  },
+  {
+    "title": "A Brief Review of Hypernetworks in Deep Learning",
+    "author": "Vinod Kumar Chauhan et al",
+    "year": "2024",
+    "topic": "hypernetwork",
+    "venue": "Arxiv",
+    "description": "Review of hypernets.",
+    "link": "https://arxiv.org/pdf/2306.06955"
+  },
+  {
+    "title": "HyperNetworks",
+    "author": "David Ha et al",
+    "year": "2016",
+    "topic": "hypernetwork",
+    "venue": "Arxiv",
+    "description": "Looking at HyperNetworks: networks that generate weights for other networks.",
+    "link": "https://arxiv.org/pdf/1609.09106"
+  },
+  {
+    "title": "Deep Learners Benefit More from Out-of-Distribution Examples",
+    "author": "Yoshio Bengio et al",
+    "year": "2024",
+    "topic": "ood",
+    "venue": "ICML",
+    "description": "Evidence that ood samples can help learning. They also argue that intermediate levels of representation can benefit the models in multi-task settings.",
+    "link": "http://proceedings.mlr.press/v15/bengio11b/bengio11b.pdf"
+  },
+  {
+    "title": "Balanced Data, Imbalanced Spectra: Unveiling Class Disparities with Spectral Imbalance",
+    "author": "Chiraag Kaushik et al",
+    "year": "2024",
+    "topic": "spectra, class imbalance",
+    "venue": "ICML",
+    "description": "Introduction of the idea of \"spectral imbalance\", which can affect classification accuracy even when classes are balanced. Basically, they look at how the distributions of eigenvalues in different classes affect classification accuracy.",
+    "link": "https://arxiv.org/pdf/2402.11742"
+  },
+  {
     "title": "DeepArchitect: Automatically Designing and Training Deep Architectures",
     "author": "Renato Negrinho et al",
     "year": "2017",
