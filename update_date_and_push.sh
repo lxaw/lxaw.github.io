@@ -4,16 +4,14 @@
 current_date=$(date +"%Y-%m-%d")
 
 # Update the date in the index.html file
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    # macOS version
-    sed -i '' '/<p>.*Last time this was edited was.*<\/p>/c\
-    <p>\
-        Last time this was edited was '"$current_date"'.\
-    </p>' index.html
-else
-    # Linux version
-    sed -i '/<p>.*Last time this was edited was.*<\/p>/c\    <p>\n        Last time this was edited was '"$current_date"'.\n    </p>' index.html
-fi
+awk -v date="$current_date" '
+/<p>.*Last time this was edited was.*<\/p>/ {
+    print "    <p>"
+    print "        Last time this was edited was " date "."
+    print "    </p>"
+    next
+}
+{print}' index.html > temp.html && mv temp.html index.html
 
 # Add all changes to git
 git add .
