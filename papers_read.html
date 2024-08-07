@@ -91,17 +91,29 @@
             })
             .catch(error => console.error('Error loading papers:', error));
 
-        function populateTable(papers) {
-            papers.forEach(paper => {
-                const row = document.createElement('tr');
-                for (let key in searchInputs) {
-                    const cell = document.createElement('td');
-                    cell.textContent = paper[key];
-                    row.appendChild(cell);
-                }
-                tbody.appendChild(row);
-            });
-        }
+            function populateTable(papers) {
+                papers.forEach(paper => {
+                    const row = document.createElement('tr');
+                    for (let key in searchInputs) {
+                        const cell = document.createElement('td');
+                        cell.textContent = paper[key];
+                        row.appendChild(cell);
+                    }
+                    // Add the link cell
+                    const linkCell = document.createElement('td');
+                    if (paper.link) {
+                        const link = document.createElement('a');
+                        link.href = paper.link;
+                        link.textContent = 'Link';
+                        link.target = '_blank'; // Opens in a new tab
+                        linkCell.appendChild(link);
+                    } else {
+                        linkCell.textContent = 'N/A';
+                    }
+                    row.appendChild(linkCell);
+                    tbody.appendChild(row);
+                });
+            }
 
         function updatePaperCount(count) {
             paperCountElement.textContent = `So far, we have read ${count} papers. Let's keep it up!`;

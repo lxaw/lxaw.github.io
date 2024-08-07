@@ -32,6 +32,8 @@
     This list was curated by <a href="index.html">Lexington Whalen</a>, beginning from his first year of PhD to end. As he is me, I hope he keeps going!
     
     I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.
+
+    <p id="bookCount">So far, we have read 0 books.</p>
     
     <div class="search-inputs">
         <input type="text" id="titleSearch" placeholder="Search title...">
@@ -59,7 +61,6 @@
         </tbody>
     </table>
 
-    <p id="bookCount">So far, we have read 0 books</p>
 
     <script>
         const table = document.getElementById('bookTable');
@@ -99,7 +100,7 @@
         }
 
         function updateBookCount(count) {
-            bookCountElement.textContent = `So far, we have read ${count} books`;
+            bookCountElement.textContent = `So far, we have read ${count} books. Let's keep it up!`;
         }
 
         function setupEventListeners() {
