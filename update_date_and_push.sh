@@ -4,7 +4,7 @@
 current_date=$(date +"%Y-%m-%d")
 
 # Update the date in the HTML file
-sed -i "s/\[date\]/$current_date/" index.html
+sed -i '/<p>.*Last time this was edited was.*<\/p>/c\    <p>\n        Last time this was edited was '"$current_date"'.\n    </p>' *.html
 
 # Add all changes to git
 git add .
