@@ -1,0 +1,605 @@
+[
+  {
+    "title": "DeepArchitect: Automatically Designing and Training Deep Architectures",
+    "author": "Renato Negrinho et al",
+    "year": "2017",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " Proposal of a language to describe neural networks architectures. Can then describe them as trees to search through. Show different search methods for going through the trees (Monte Carlo tree search, random, use of surrogate function, etc.).",
+    "link": ""
+  },
+  {
+    "title": "Graph neural networks: A review of methods and applications",
+    "author": "Jie Zhou et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "AI Open",
+    "description": " What graph neural networks are, what they are made of, how to train them. And examples. They describe a general design pipeline (Find graph structure, specify graph type and scale, design loss function) and explain the main modules in GNNs (propagation to propagate information between notes, sampling module to conduct the propagation, pooling module to extract information from notes).",
+    "link": ""
+  },
+  {
+    "title": "1D convolution neural networks and applications: A survey",
+    "author": "Serkan Kiranyaz et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "Mechanical Systems and Signal Processing",
+    "description": " A brief overview of applications of 1D CNNs is performed. It is largely focused on medicine (for instance, ECG) and fault detection (for instance, vibration-based structural damage).",
+    "link": ""
+  },
+  {
+    "title": "2-in-1 Accelerator: Enabling Random Precision Switch for Winning Both Adversarial Robustness and Efficiency",
+    "author": "Yonggan Fu et al",
+    "year": "2021",
+    "topic": "",
+    "venue": "ACM",
+    "description": " The most interesting point of this paper (among many things!) is the smart idea to use quantization as a way to boost DNN robustness. Cool!",
+    "link": ""
+  },
+  {
+    "title": "Token-Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation",
+    "author": "Junyoung Park et al",
+    "year": "2024",
+    "topic": "",
+    "venue": "DAC",
+    "description": " In autoregressive models with attention, off-chip memory accesses need to be minimized. The authors note that there have been efforts to prune unimportant tokens, but these do not do much for removing tokens with attention scores near zero. The authors (smartly!) notice this issue, and provide a fast method of estimating the decision to prune or not based on estimation of the probability if a token is or is not important. An architecture for this is also provided.",
+    "link": ""
+  },
+  {
+    "title": "Maxout Networks",
+    "author": "Ian Goodfellow et al",
+    "year": "2013",
+    "topic": "",
+    "venue": "ICML",
+    "description": " The authors note that dropout is \"most effective when taking relatively large steps in parameter space. In this regime, each update can be seen as making a significat update to a different model on a different subset of the training set\". I really liked that quote. They then develop the maxout unit, which iessentially takes the maxmimum across some number of affine transformations, allowing for learning of piecewise linear approximations of nonlinear functions.",
+    "link": ""
+  },
+  {
+    "title": "Geometric deep learning: Going beyond Euclidean data",
+    "author": "Michael Bronstein et al",
+    "year": "2017",
+    "topic": "",
+    "venue": "IEEE SIG",
+    "description": " Provides an overview of geometric deep learning, which are methods of generalizing DNNs to non-Euclidean domains (graphs, manifolds, etc).",
+    "link": ""
+  },
+  {
+    "title": "Sampling in Constrained Domains with Orthogonal-Space Variational Gradient Descent",
+    "author": "Ruqi Zhang et al",
+    "year": "2022",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " The authors propose a new variational framework called O-Gradient for sampling in implicitly defined constrained domains, using two orthogonal directions to drive the sampler towards the domain and explore it by decreasing a KL divergence. They prove the convergence of O-Gradient and apply it to both Langevin dynamics and Stein Variational Gradient Descent (SVGD), demonstrating its effectiveness on various machine learning tasks.",
+    "link": ""
+  },
+  {
+    "title": "Entropy MCMC: Sampling from Flat Basins with Ease",
+    "author": "Bolian Li et al",
+    "year": "2024",
+    "topic": "",
+    "venue": "ICML",
+    "description": " The authors propose a practical MCMC algorithm for sampling from flat basins of DNN posterior distributions, using a guiding variable based on local entropy to steer the sampler. They prove the fast convergence rate of their method compared to existing flatness-aware methods and demonstrate its superior performance on various tasks through comprehensive experiments. The method is mathematically simple and computationally efficient, making it suitable as a drop-in replacement for standard sampling methods like SGLD.",
+    "link": ""
+  },
+  {
+    "title": "AdderNet: Do We Really Need Multiplications in Deep Learning?",
+    "author": "Hanting Chen et al",
+    "year": "2021",
+    "topic": "",
+    "venue": "CVPR",
+    "description": " The authors show that with a cost of accuracy you can use additions instead of multiplications. They mainly tested CNNs.",
+    "link": ""
+  },
+  {
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "author": "Ian Goodfellow et al",
+    "year": "2015",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " Adversarial examples (adding \"small but intentially worst-case perturbations to examples from the dataset\") proves to be an interesting method to train models. The authors also (smartly!) describe a method to generate adversarial examples by a linear method.",
+    "link": ""
+  },
+  {
+    "title": "Identifying and attacking the saddle point problem in high-dimensional non-convex optimization",
+    "author": "Yann Dauphin et al",
+    "year": "2014",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " The authors argue that saddle points, rather than local minima, are the primary challenge in minimizing non-convex error functions in high-dimensional spaces, based on insights from various scientific fields and empirical evidence. They explain that saddle points surrounded by high-error plateaus can significantly slow down learning and create the illusion of local minima, particularly in high-dimensional problems of practical interest. To address this challenge, the authors propose a new approach called the saddle-free Newton method, designed to quickly escape high-dimensional saddle points, unlike traditional gradient descent and quasi-Newton methods.",
+    "link": ""
+  },
+  {
+    "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+    "author": "Sergey Ioffe et al",
+    "year": "2015",
+    "topic": "",
+    "venue": "PMLR",
+    "description": " The authors identify internal covariate shift as a significant challenge in training deep neural networks, where the distribution of each layer's inputs changes during training due to parameter updates in previous layers. To address this issue, they propose Batch Normalization, a method that normalizes layer inputs as part of the model architecture, performing normalization for each training mini-batch. Batch Normalization enables the use of much higher learning rates, reduces sensitivity to initialization, and acts as a regularizer, sometimes eliminating the need for Dropout.|",
+    "link": ""
+  },
+  {
+    "title": "Batch Normalization enables the use of much higher learning rates, reduces sensitivity to initialization, and acts as a regularizer, sometimes eliminating the need for Dropout.",
+    "author": "Andrew Wilson et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " The authors emphasize that marginalization, rather than using a single set of weights, is the key distinguishing feature of a Bayesian approach, which can significantly improve the accuracy and calibration of modern deep neural networks. They demonstrate that deep ensembles provide an effective mechanism for approximate Bayesian marginalization and propose a related approach that further improves the predictive distribution by marginalizing within basins of attraction. The paper investigates the prior over functions implied by a vague distribution over neural network weights, explaining neural network generalization from a probabilistic perspective and showing that seemingly mysterious results (like fitting random labels) can be reproduced with Gaussian processes. The authors demonstrate that Bayesian model averaging mitigates the double descent phenomenon, leading to monotonic performance improvements as model flexibility increases.",
+    "link": ""
+  },
+  {
+    "title": "A Practical Bayesian Framework for Backpropagation Networks",
+    "author": "David MacKay et al",
+    "year": "1992",
+    "topic": "",
+    "venue": "Neural Computation",
+    "description": " The authors present a quantitative and practical Bayesian framework for learning mappings in feedforward networks, enabling objective comparisons between different network architectures and providing stopping rules for network pruning or growing procedures. This framework allows for objective selection of weight decay terms or regularizers, measures the effective number of well-determined parameters in a model, and provides quantified estimates of error bars on network parameters and outputs. The approach helps detect poor underlying assumptions in learning models and demonstrates a good correlation between generalization ability and Bayesian evidence for well-matched learning models.",
+    "link": ""
+  },
+  {
+    "title": "Bayesian Neural Network Priors Revisited",
+    "author": "Vincent Fortuin et al",
+    "year": "2022",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " Isotropic Gaussian priors are the standard for modern Bayesian neural network inference, but their accuracy and optimal performance are uncertain. By studying summary statistics of neural network weights trained with stochastic gradient descent (SGD), the authors find that CNN and ResNet weights exhibit strong spatial correlations, while FCNNs display heavy-tailed weight distributions. Incorporating these observations into priors improves performance on various image classification datasets, mitigating the cold posterior effect in FCNNs but slightly increasing it in ResNets.",
+    "link": ""
+  },
+  {
+    "title": "Hands-on Bayesian Neural Networks - A Tutorial for Deep Learning Users",
+    "author": "Laurent Jospin et al",
+    "year": "2022",
+    "topic": "",
+    "venue": "IEEE",
+    "description": " A good summary / tutorial for using Bayesian Nets. Also provides some good paper references within.",
+    "link": ""
+  },
+  {
+    "title": "Position Paper: Bayesian Deep Learning in the Age of Large-Scale AI",
+    "author": "Theodore Papamarkou et al",
+    "year": "2024",
+    "topic": "",
+    "venue": "ICML",
+    "description": " A good summary of strengths of BDL (Bayesian Deep Learning) with regards to modern deep learning, while also addressing some weaknesses. A good paper if need to do an overview of modern challenges (as of 2024).|",
+    "link": ""
+  },
+  {
+    "title": "A Neural Probabilistic Language Model",
+    "author": "Bengio et al",
+    "year": "2003",
+    "topic": "",
+    "venue": "JMLR",
+    "description": " One of the first papers about modern methods in using neural systems to estimate probability functions of word sequences. They show that MLPs can model better than the SOTA (at that time). A classic.|",
+    "link": ""
+  },
+  {
+    "title": "Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Networks",
+    "author": "Hardik Sharma et al",
+    "year": "2018",
+    "topic": "",
+    "venue": "ISCA",
+    "description": " Hardware acceleration of Deep Neural Networks (DNNs) aims to address their high compute intensity, with the paper focusing on the potential of reducing bitwidth in operations without compromising classification accuracy. To prevent accuracy loss, the bitwidth varies significantly across DNNs, and a fixed-bitwidth accelerator may lead to limited benefits or degraded accuracy. The authors introduce Bit Fusion, a bit-flexible accelerator that dynamically adjusts bitwidth for individual DNN layers, resulting in significant speedup and energy savings compared to state-of-the-art accelerators, Eyeriss and Stripes, and achieving performance close to a 250-Watt Titan Xp GPU while consuming much less power.",
+    "link": ""
+  },
+  {
+    "title": "A Framework for the Cooperation of Learning Algorithms",
+    "author": "Leon Bottou et al",
+    "year": "1990",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " Cooperative training of modular systems offers a unified approach to many learning algorithms and hybrid systems, allowing the design and implementation of complex learning systems that incorporate structural a priori knowledge about tasks. The authors introduce a framework using a statistical formulation of learning systems to define and combine modules into cooperative systems, enabling the creation of hybrid systems that combine the advantages of connectionist and other learning algorithms. By decomposing complex tasks into simpler subtasks, modular architectures can be built, where each module corresponds to a subtask, facilitating easier achievement of the learning goal by introducing a modular decomposition of the global task.",
+    "link": ""
+  },
+  {
+    "title": "CNP: An FPGA-Based Processor for Convolutional Networks",
+    "author": "Clement Farabet et al",
+    "year": "2009",
+    "topic": "",
+    "venue": "IEEE",
+    "description": " One of the first attempts (that I have found) at putting a CNN into an FPGA and showing it can be done to perform some task (face detection).",
+    "link": ""
+  },
+  {
+    "title": "A Complete Recipe for Stochastic Gradient MCMC",
+    "author": "Yi-An Ma et al",
+    "year": "2015",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " Recent Markov chain Monte Carlo (MCMC) samplers use continuous dynamics and scalable variants with stochastic gradients to efficiently explore target distributions, but proving convergence with stochastic gradient noise remains challenging. The authors provide a general framework for constructing MCMC samplers, including stochastic gradient versions, based on continuous Markov processes defined by two matrices, demonstrating that any such process can be represented within this framework. Using this framework, they propose a new state-adaptive sampler, stochastic gradient Riemann Hamiltonian Monte Carlo (SGRHMC), which combines the benefits of Riemann HMC with the scalability of stochastic gradient methods, as shown in experiments with simulated data and a streaming Wikipedia analysis.",
+    "link": ""
+  },
+  {
+    "title": "CPT: Efficient Deep Neural Network Training via Cyclic Precision",
+    "author": "Yonggan Fu et al",
+    "year": "2021",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " Low-precision deep neural network (DNN) training is an effective method for improving training time and energy efficiency, with this paper proposing a new perspective: that DNN precision may act similarly to the learning rate during training. The authors introduce Cyclic Precision Training (CPT), which cyclically varies precision between two boundary values identified through a simple precision range test in the initial training epochs, aiming to boost time and energy efficiency further. ",
+    "link": ""
+  },
+  {
+    "title": "Approximation by Superpositions of a Sigmoidal Function",
+    "author": "G. Cybenko",
+    "year": "1989",
+    "topic": "",
+    "venue": "Mathematics of Control, Signals, and Systems",
+    "description": " This paper demonstrates that finite linear combinations of compositions of a fixed univariate function and a set of affine functionals can uniformly approximate any continuous function of nn real variables within the unit hypercube, under mild conditions on the univariate function. These findings resolve an open question about the representability of functions by single hidden layer neural networks, specifically showing that arbitrary decision regions can be well approximated by continuous feedforward neural networks with a single hidden layer and any continuous sigmoidal nonlinearity.",
+    "link": ""
+  },
+  {
+    "title": "Cyclical Stochastic Gradient MCMC for Bayesian Deep Learning",
+    "author": "Ruqi Zhang et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " The posteriors over neural network weights are high-dimensional and multimodal, with each mode representing a different meaningful interpretation of the data. The authors introduce Cyclical Stochastic Gradient MCMC (SG-MCMC) with a cyclical stepsize schedule, where larger steps discover new modes and smaller steps characterize each mode, and they prove the non-asymptotic convergence of this algorithm.",
+    "link": ""
+  },
+  {
+    "title": "DaDianNao: A Machine-Learning Supercomputer",
+    "author": "Yunji Chen et al",
+    "year": "2014",
+    "topic": "",
+    "venue": "IEEE/ACM",
+    "description": " This paper introduces a custom multi-chip architecture optimized for Convolutional and Deep Neural Networks (CNNs and DNNs), addressing their computational and memory-intensive nature by leveraging on-chip storage to enhance internal bandwidth and reduce external communication bottlenecks. The authors demonstrate significant performance gains with their 64-chip system achieving up to a 450.65x speedup over GPUs and reducing energy consumption by up to 150.31x on large neural network layers, implemented with custom storage, computational units, and robust interconnects at 28nm scale.",
+    "link": ""
+  },
+  {
+    "title": "DARTS: Differentiable Architecture Search",
+    "author": "Hanxiao Liu et al",
+    "year": "2019",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " This paper introduces a differentiable approach to architecture search, tackling scalability challenges by reformulating the task to allow gradient-based optimization over a continuous relaxation of architecture representations. Unlike traditional methods relying on evolutionary or reinforcement learning in discrete, non-differentiable spaces, the proposed method efficiently discovers high-performance convolutional architectures for image classification and recurrent architectures for language modeling.",
+    "link": ""
+  },
+  {
+    "title": "Decoupled Contrastive Learning",
+    "author": "Chun-Hsiao Yeh et al",
+    "year": "2022",
+    "topic": "",
+    "venue": "ACM",
+    "description": " This paper introduces decoupled contrastive learning (DCL), which removes the negative-positive-coupling (NPC) effect from the InfoNCE loss, significantly improving the efficiency of self-supervised learning (SSL) tasks with smaller batch sizes. DCL achieves efficient and reliable performance enhancements across various benchmarks, outperforming the SimCLR baseline without requiring momentum encoding, large batch sizes, or extensive epochs.",
+    "link": ""
+  },
+  {
+    "title": "Deep Image Prior",
+    "author": "Dmitry Ulyanov et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "IEEE",
+    "description": " This paper challenges the conventional wisdom by demonstrating that the structure of a generator network, even when randomly initialized, can effectively capture low-level image statistics without any specific training on example images. The authors show that this randomly-initialized neural network can serve as a powerful handcrafted prior, yielding excellent results in standard image processing tasks such as denoising, super-resolution, and inpainting. Furthermore, the same network structure can invert deep neural representations for diagnostic purposes and restore images based on input pairs like flash and no-flash conditions, showcasing its versatility and effectiveness across various image restoration applications.",
+    "link": ""
+  },
+  {
+    "title": "Deep Double Descent: Where Bigger Models and More Data Hurt",
+    "author": "Preetum Nakkiran et al",
+    "year": "2019",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " This paper explores the \"double-descent\" phenomenon in modern deep learning tasks, showing that as model size or training epochs increase, performance initially worsens before improving. The authors unify these observations by introducing a new complexity measure termed effective model complexity, conjecturing a generalized double descent across this measure.",
+    "link": ""
+  },
+  {
+    "title": "DeepShift: Towards Multiplication-Less Neural Networks",
+    "author": "Mostafa Elhoushi et al",
+    "year": "2021",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " This paper addresses the computational challenges of deploying convolutional neural networks (CNNs) on edge computing platforms by introducing convolutional shifts and fully connected shifts, replacing multiplications with efficient bitwise operations during both training and inference. The proposed DeepShift models achieve competitive or higher accuracies compared to baseline models like ResNet18, ResNet50, VGG16, and GoogleNet, while significantly reducing the memory footprint by using only 5 bits or less for weight representation during inference.",
+    "link": ""
+  },
+  {
+    "title": "DepthShrinker: A New Compression Paradigm Towards Boosting Real-Hardware Efficiency of Compact Neural Networks",
+    "author": "Yonggan Fu et al",
+    "year": "2022",
+    "topic": "",
+    "venue": "ICML",
+    "description": " This paper introduces DepthShrinker, a framework designed to enhance hardware efficiency of deep neural networks (DNNs) by transforming irregular computation patterns of compact operators into dense ones, thereby improving hardware utilization without sacrificing model accuracy. By leveraging insights that certain activation functions can be removed post-training without loss of accuracy, DepthShrinker pioneers a compression paradigm that optimizes DNNs for real-hardware efficiency, presenting a significant advancement in efficient model deployment.|",
+    "link": ""
+  },
+  {
+    "title": "Dimensionality Reduction by Learning an Invariant Mapping",
+    "author": "Raia Hadsell et al",
+    "year": "2006",
+    "topic": "",
+    "venue": "CVPR",
+    "description": " DrLIM, or Dimensionality Reduction by Learning an Invariant Mapping, addresses key limitations of existing dimensionality reduction techniques by learning a non-linear function that maps high-dimensional data to a low-dimensional manifold based solely on neighborhood relationships, without requiring a predefined distance metric in input space. The method is distinguished by its ability to handle transformations and maintain invariant mappings, demonstrated through experiments that show its effectiveness in preserving neighborhood relationships and accurately mapping new, unseen samples to meaningful locations on the manifold. Unlike methods like LLE, which may struggle with variability and registration issues in input data, DrLIM's contrastive loss function ensures robustness by balancing similarity and dissimilarity in output space, offering a promising approach for applications requiring invariant mappings, such as learning positional information from image sequences in robotics.",
+    "link": ""
+  },
+  {
+    "title": "Disentangling Trainability and Generalization in Deep Neural Networks",
+    "author": "Lechao Xiao et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "ICML",
+    "description": " This study focuses on characterizing the trainability and generalization of deep neural networks, particularly under conditions of very wide and very deep architectures, leveraging insights from the Neural Tangent Kernel (NTK). By analyzing the NTK's spectrum, the study formulates necessary conditions for both memorization and generalization across architectures like Fully Connected Networks (FCNs) and Convolutional Neural Networks (CNNs). The research identifies key spectral quantities such as λmax, λbulk, κ, and P(Θ(l)) that critically influence the performance of deep networks, providing a precise theoretical framework validated by extensive experiments on CIFAR10. It highlights distinctions in generalization behavior between CNNs with and without global average pooling.",
+    "link": ""
+  },
+  {
+    "title": "Finding Structure in Time",
+    "author": "Jeffrey Elman",
+    "year": "1990",
+    "topic": "",
+    "venue": "Cognitive Science",
+    "description": " I think this was the original backpropagation through time paper. Good insights on time-dependent system learning.",
+    "link": ""
+  },
+  {
+    "title": "E2-Train: Training State-of-the-art CNNs with Over 80% Energy Savings",
+    "author": "Yue Wang et al",
+    "year": "2019",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " This paper introduces E2-Train, a framework for energy-efficient CNN training on resource-constrained platforms. E2-Train optimizes training energy costs through stochastic mini-batch dropping, selective layer updates, and low-cost, low-precision back-propagation strategies. Experimental results on CIFAR-10 and CIFAR-100 demonstrate significant energy savings of over 90% and 84%, respectively, with minimal loss in accuracy. E2-Train addresses the challenge of on-device CNN training by integrating three levels of energy-saving techniques: data-level stochastic mini-batch dropping, model-level selective layer updates, and algorithm-level low-precision back-propagation. Real energy measurements on an FPGA validate its effectiveness, achieving notable energy reductions in training ResNet models on CIFAR datasets.",
+    "link": ""
+  },
+  {
+    "title": "cuDNN: Efficient Primitives for Deep Learning",
+    "author": "Sharan Chetlur et al",
+    "year": "2014",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " This paper introduces cuDNN, a library designed to optimize deep learning primitives akin to BLAS for HPC. cuDNN offers efficient implementations of key deep learning kernels tailored for GPUs, improving performance and reducing memory usage in frameworks like Caffe by up to 36%.",
+    "link": ""
+  },
+  {
+    "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network",
+    "author": "Song Han et al",
+    "year": "2016",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " This paper introduces EIE, an energy-efficient inference engine designed for compressed deep neural networks, achieving significant energy savings by exploiting weight sharing, sparsity, and quantization. EIE performs sparse matrix-vector multiplications directly on compressed models, enabling 189× and 13× faster inference speeds compared to CPU and GPU implementations of uncompressed DNNs.",
+    "link": ""
+  },
+  {
+    "title": "An Empirical Analysis of Deep Network Loss Surfaces",
+    "author": "Daniel Jiwoong Im et al",
+    "year": "2016",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " This paper empirically investigates the geometry of loss functions in state-of-the-art neural networks, employing various stochastic optimization methods. Through visualizations in low-dimensional subspaces, it explores how different optimization procedures lead to distinct local minima, even when algorithms are changed late in the optimization process. The study reveals that modifications to optimization procedures consistently yield different local minima, each affecting the network's performance on test examples differently. Interestingly, while different optimization algorithms find varied local minima from different initializations, the shape of the loss function around these minima remains characteristic to the algorithm used, with ADAM showing larger basins compared to vanilla SGD.",
+    "link": ""
+  },
+  {
+    "title": "EyeCoD: Eye Tracking System Accelerator via FlatCam-based Algorithm & Accelerator Co-Design",
+    "author": "Haoran You et al",
+    "year": "2023",
+    "topic": "",
+    "venue": "ACM",
+    "description": " This paper introduces EyeCoD, a lensless FlatCam-based eye tracking system designed to overcome limitations of traditional systems, such as large form-factor and high communication costs. By integrating a predict-then-focus algorithm pipeline and dedicated hardware accelerator, EyeCoD achieves significant reductions in computation and communication overhead while maintaining high tracking accuracy.",
+    "link": ""
+  },
+  {
+    "title": "Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices",
+    "author": "Yu-Hsin Chen et al",
+    "year": "2019",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " This paper introduces Eyeriss v2, a specialized DNN accelerator architecture designed to efficiently handle compact and sparse neural networks. Unlike traditional DNN accelerators, Eyeriss v2 incorporates a hierarchical mesh network on-chip to adapt to varying layer shapes and sizes, optimizing data reuse and bandwidth utilization. Eyeriss v2 excels in processing sparse data directly in the compressed domain, both for weights and activations, thereby enhancing processing speed and energy efficiency particularly suited for sparse models.",
+    "link": ""
+  },
+  {
+    "title": "Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for Convolutional Neural Networks",
+    "author": "Yu-Hsin Chen et al",
+    "year": "2016",
+    "topic": "",
+    "venue": "ACM/IEEE",
+    "description": " The paper addresses the high energy consumption in deep convolutional neural networks (CNNs) due to extensive data movement, despite advancements in parallel computing paradigms like SIMD/SIMT. Introduces a novel row-stationary (RS) dataflow designed for spatial architectures. RS maximizes local data reuse and minimizes data movement during convolutions, leveraging PE local storage, inter-PE communication, and spatial parallelism.",
+    "link": ""
+  },
+  {
+    "title": "Flat Minima",
+    "author": "Sepp Hochreiter et al",
+    "year": "1997",
+    "topic": "",
+    "venue": "Neural Computation",
+    "description": " The algorithm focuses on identifying \"flat\" minima of the error function in weight space. A flat minimum is characterized by a large connected region where the error remains approximately constant. This property suggests simplicity in the network structure and low expected overfitting, supported by an MDL-based Bayesian argument. Unlike traditional approaches that rely on Gaussian assumptions or specific weight priors, this algorithm uses a Bayesian framework with a prior over input-output functions. This approach considers both network architecture and the training set, facilitating the identification of simpler and more generalizable models.",
+    "link": ""
+  },
+  {
+    "title": "Fused-Layer CNN Accelerators",
+    "author": "Manoj Alwani et al",
+    "year": "2016",
+    "topic": "",
+    "venue": "IEEE",
+    "description": " This work introduces a novel approach to CNN accelerator design by fusing the computation of multiple convolutional layers. By rearranging the dataflow across layers, intermediate data can be cached on-chip between adjacent layers, reducing the need for off-chip memory storage and minimizing data transfer. Specifically, the study demonstrates the effectiveness of this approach by implementing a fused-layer CNN accelerator for the initial five convolutional layers of VGGNet-E. Using 362KB of on-chip storage, the accelerator significantly reduces off-chip feature map data transfer by 95%, from 77MB to 3.6MB per image processed.  This innovation targets early convolutional layers where data transfer typically dominates. By optimizing data reuse and minimizing off-chip memory usage, the proposed design strategy enhances the efficiency of CNN accelerators, paving the way for improved performance in various machine learning tasks.",
+    "link": ""
+  },
+  {
+    "title": "EnlightenGAN: Deep Light Enhancement Without Paired Supervision",
+    "author": "Yifan Jiang et al",
+    "year": "2021",
+    "topic": "",
+    "venue": "IEEE",
+    "description": " Exploration of low-light to well-lit image generation using GANs. Also provides an interesting global-local discriminator and self-regularized perceptual loss fusion, with a simplified attention (the attention is just an inverse of the brightness of the image essentially).",
+    "link": ""
+  },
+  {
+    "title": "Understanding the difficulty of training deep feedforward neural networks",
+    "author": "Xavier Glorot et al",
+    "year": "2010",
+    "topic": "",
+    "venue": "AISTATS",
+    "description": " The logistic sigmoid activation function is problematic for deep networks due to its mean value, which can lead to saturation of the top hidden layer. This saturation slows down learning and can cause training plateaus. The difficulty in training deep networks correlates with the singular values of the Jacobian matrix for each layer. When these values deviate significantly from 1, it indicates poor activation and gradient flow across layers, complicating training. New initialization schemes have been proposed to address issues with activation saturation and gradient flow. These schemes aim to achieve faster convergence by ensuring that activations and gradients flow well across layers, thereby improving overall training efficiency.",
+    "link": ""
+  },
+  {
+    "title": "Group Normalization",
+    "author": "Yuxin Wu et al",
+    "year": "2018",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " Batch Normalization performs normalization along the batch dimension, which causes errors to increase rapidly as batch sizes decrease. This limitation makes BN less effective for training larger models and tasks that require smaller batches due to memory constraints. GN divides channels into groups and computes normalization statistics (mean and variance) independently within each group. Unlike BN, GN's computation is not dependent on batch sizes, leading to stable performance across a wide range of batch sizes.",
+    "link": ""
+  },
+  {
+    "title": "Singularity of the Hessian in Deep Learning",
+    "author": "Levent Sagun et al",
+    "year": "2017",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " The bulk of eigenvalues concentrated around zero indicates how overparametrized the model is. In deep learning, overparametrization often leads to better generalization despite the potential for higher computational costs. The edges of the eigenvalue distribution, scattered away from zero, reflect the complexity of the input data. This complexity influences how the loss landscape is structured and affects optimization difficulty. Second-order optimization methods, which leverage information from the Hessian, can potentially accelerate training and find better solutions by providing insights into the loss landscape's curvature. The top discrete eigenvalues of the Hessian are influenced by the data characteristics, indicating that different datasets may require different optimization strategies or model architectures for optimal performance.",
+    "link": ""
+  },
+  {
+    "title": "Long Short-Term Memory",
+    "author": "Sepp Hochreiter et al",
+    "year": "1997",
+    "topic": "",
+    "venue": "Neural Computation",
+    "description": " The original paper on the LSTM. A classic, and demonstrated the power of gating.",
+    "link": ""
+  },
+  {
+    "title": "On the importance of initialization and momentum in deep learning",
+    "author": "Ilya Sutskever et al",
+    "year": "2013",
+    "topic": "",
+    "venue": "ICML",
+    "description": " Traditionally, training DNNs and RNNs with stochastic gradient descent (SGD) with momentum was considered challenging due to issues with gradient propagation and vanishing/exploding gradients, especially in networks with many layers or long-term dependencies. The paper demonstrates that using a well-designed random initialization significantly improves the training success of deep and recurrent networks with SGD and momentum.",
+    "link": ""
+  },
+  {
+    "title": "Algorithms for manifold learning",
+    "author": "Lawrence Cayton",
+    "year": "2005",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " Many datasets exhibit complex relationships that cannot be effectively captured by linear methods like Principal Component Analysis (PCA). Manifold hypothesis: Despite high-dimensional appearances, data points often lie on or near a much lower-dimensional manifold embedded within the higher-dimensional space. Manifold learning aims to uncover this underlying low-dimensional structure to provide a more meaningful and compact representation of the data.",
+    "link": ""
+  },
+  {
+    "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+    "author": "Ben Mildenhall et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " The method utilizes a fully-connected deep network to represent scenes as continuous volumetric functions. This network takes a 5D input (spatial location and viewing direction) and outputs volume density and view-dependent radiance. By querying these 5D coordinates along camera rays and employing differentiable volume rendering techniques, the method synthesizes novel views of scenes.",
+    "link": ""
+  },
+  {
+    "title": "On Large-Batch Training for Deep Learning Generalization Gap and Sharp Minima",
+    "author": "Nitish Shirish Keskar et al",
+    "year": "2017",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " The study identifies a phenomenon where large-batch SGD methods tend to converge towards sharp minimizers of training and testing functions. Sharp minima are associated with poorer generalization, meaning the model performs worse on unseen data. In contrast, small-batch methods more consistently converge towards flat minimizers. This behavior is attributed to the inherent noise in gradient estimation during training with small batches.",
+    "link": ""
+  },
+  {
+    "title": "Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks",
+    "author": "Chen Zhang et al",
+    "year": "2015",
+    "topic": "",
+    "venue": "ACM",
+    "description": " The study employs quantitative analysis techniques, including loop tiling and transformation, to optimize the CNN accelerator design. These techniques aim to maximize computation throughput while minimizing the resource utilization on the FPGA, particularly balancing logic resource usage and memory bandwidth.|",
+    "link": ""
+  },
+  {
+    "title": "Learning Phrase Representation using RNN Encoder-Decoder for Statistical Machine Translation",
+    "author": "Kyunghyun Cho et al",
+    "year": "2014",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " Introduces a novel neural network architecture called RNN Encoder-Decoder, comprising two recurrent neural networks. One RNN serves as an encoder, converting a sequence of symbols into a fixed-length vector representation. The other RNN acts as a decoder, generating another sequence of symbols based on the encoded representation.",
+    "link": ""
+  },
+  {
+    "title": "Qualitatively Characterizing Neural Network Optimization Problems",
+    "author": "Ian Goodfellow et al",
+    "year": "2015",
+    "topic": "",
+    "venue": "ICLR",
+    "description": " Demonstrates that contemporary neural networks can achieve minimal training error through direct training with stochastic gradient descent alone, without needing complex schemes like unsupervised pretraining. This finding challenges earlier beliefs about the difficulty of navigating non-convex optimization landscapes in neural network training. They also introduce a nice graphical tool to show the energy landscape.",
+    "link": ""
+  },
+  {
+    "title": "Language Models are Unsupervised Multitask Learners",
+    "author": "Alec Radford et al",
+    "year": "2018",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " Demonstrates that language models, specifically GPT-2, trained on the WebText dataset, start to learn various natural language processing tasks (question answering, machine translation, reading comprehension, summarization) without explicit task-specific supervision. For instance, when conditioned on a document and questions, the model achieves an F1 score of 55 on the CoQA dataset, matching or exceeding several baseline systems that were trained with over 127,000 examples.",
+    "link": ""
+  },
+  {
+    "title": "On the difficulty of training Recurrent Neural Networks",
+    "author": "Razvan Pascanu et al",
+    "year": "2013",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " Explanation of issues in RNNs (vanishing / exploding gradient) and proposal of gradient clipping.",
+    "link": ""
+  },
+  {
+    "title": "Learning representations by back-propagating errors",
+    "author": "David Rumelhart et al",
+    "year": "1986",
+    "topic": "",
+    "venue": "Nature",
+    "description": " The main paper for backprop.",
+    "link": ""
+  },
+  {
+    "title": "The Shattered Gradients Problem: If resnets are the answer, then what is the question?",
+    "author": "David Balduzzi et al",
+    "year": "2018",
+    "topic": "",
+    "venue": "ICML",
+    "description": " The paper identifies the \"shattered gradients\" problem in standard feedforward neural networks. It shows that gradients in these networks exhibit an exponential decay in correlation with depth, leading to gradients that resemble white noise. In contrast, architectures like highway and ResNets with skip-connections demonstrate gradients that decay sublinearly, indicating greater resilience against shattering. The paper introduces a new initialization technique termed \"Looks Linear\" (LL) that addresses the shattered gradients issue. Preliminary experiments demonstrate that LL initialization enables the training of very deep networks without the need for skip-connections like those in ResNets or highway networks. This initialization method offers a promising alternative to achieving stable gradient propagation in deep networks, potentially simplifying network architecture and improving training efficiency.",
+    "link": ""
+  },
+  {
+    "title": "A Simple Baseline for Bayesian Uncertainty in Deep Learning",
+    "author": "Wesley Maddox et al",
+    "year": "2019",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " SWAG combines Stochastic Weight Averaging (SWA) with Gaussian fitting to provide an approximate posterior distribution over neural network weights. SWA computes the first moment of SGD iterates using a modified learning rate schedule. SWAG extends this by fitting a Gaussian distribution using SWA's solution as the first moment and incorporating a low-rank plus diagonal covariance derived from SGD iterates.",
+    "link": ""
+  },
+  {
+    "title": "SmartExchange: Trading Higher-cost Memory Storage/Access for Lower-cost Computation",
+    "author": "Yang Zhao et al",
+    "year": "2020",
+    "topic": "",
+    "venue": "ACM/IEEE",
+    "description": " SmartExchange integrates sparsification or pruning, decomposition, and quantization techniques into a unified algorithm. It aims to enforce a structured DNN weight format where each layer's weight matrix is represented as a product of a small basis matrix and a large sparse coefficient matrix with power-of-2 elements.",
+    "link": ""
+  },
+  {
+    "title": "On the Spectral Bias of Neural Networks",
+    "author": "Nasim Rahaman et al",
+    "year": "2019",
+    "topic": "",
+    "venue": "ICML",
+    "description": " Neural networks, particularly deep ReLU networks, exhibit a learning bias towards low-frequency functions. This bias means they tend to prioritize learning global variations over local fluctuations in data. This property aligns with their ability to generalize well across different samples and datasets. Contrary to intuition, as the complexity of the data manifold increases, deep networks find it easier to learn higher frequency functions. This suggests that while they naturally favor low-frequency patterns, they can also adapt to more complex data structures to capture higher frequency variations.",
+    "link": ""
+  },
+  {
+    "title": "Sequence to Sequence Learning with Neural Networks",
+    "author": "Ilya Sutskever et al",
+    "year": "2014",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": " The paper introduces an end-to-end approach for sequence learning using multilayered Long Short-Term Memory (LSTM) networks. This method requires minimal assumptions about the structure of the sequences and effectively maps input sequences to a fixed-dimensional vector using one LSTM layer, and decodes target sequences using another deep LSTM layer.",
+    "link": ""
+  },
+  {
+    "title": "Tiled convolutional neural networks",
+    "author": "Quoc Le et al",
+    "year": "2010",
+    "topic": "",
+    "venue": "NeurIps",
+    "description": " Tiled CNNs introduce a novel approach to learning invariances by using a regular \"tiled\" pattern of tied weights. Unlike traditional CNNs where adjacent hidden units share identical weights, Tiled CNNs require only that hidden units at a certain distance from each other share tied weights. This allows the network to learn complex invariances such as scale and rotational invariance, in addition to translational invariance.",
+    "link": ""
+  },
+  {
+    "title": "Unsupervised Learning of Image Manifolds by Semidefinite Programming",
+    "author": "Kilian Weinberger et al",
+    "year": "2004",
+    "topic": "",
+    "venue": "IEEE",
+    "description": " The paper proposes a new approach to detect low-dimensional structure in high-dimensional datasets using semidefinite programming (SDP). SDP is leveraged to analyze data that resides on or near a low-dimensional manifold, which is a common challenge in computer vision and pattern recognition. The algorithm introduced overcomes limitations observed in previous manifold learning techniques like Isomap and locally linear embedding (LLE). These traditional methods often struggle with certain types of data distributions or computational complexities, which the proposed SDP-based approach aims to address more effectively.",
+    "link": ""
+  }
+]

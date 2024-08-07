@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable book list</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        .search-inputs {
+            margin-bottom: 10px;
+        }
+        .search-inputs input {
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here's where I keep a list of books I have read.</h1>
+    This list was curated by <a href="index.html">Lexington Whalen</a>, beginning from his first year of PhD to end. As he is me, I hope he keeps going!
+    
+    I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.
+    
+    <div class="search-inputs">
+        <input type="text" id="titleSearch" placeholder="Search title...">
+        <input type="text" id="authorSearch" placeholder="Search author...">
+        <input type="text" id="dateCompleteSearch" placeholder="Search date complete...">
+        <input type="text" id="pageCountSearch" placeholder="Search page count...">
+        <input type="text" id="ratingSearch" placeholder="Search rating...">
+        <input type="text" id="descriptionSearch" placeholder="Search description...">
+        <button id="clearSearch">Clear Search</button>
+    </div>
+    
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th data-sort="title">Title</th>
+                <th data-sort="author">Author</th>
+                <th data-sort="date-complete">Date Complete</th>
+                <th data-sort="page-count">Page Count</th>
+                <th data-sort="rating">Rating</th>
+                <th data-sort="description">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table body will be populated by JavaScript -->
+        </tbody>
+    </table>
+
+    <p id="bookCount">So far, we have read 0 books</p>
+
+    <script>
+        const table = document.getElementById('bookTable');
+        const tbody = table.querySelector('tbody');
+        const clearButton = document.getElementById('clearSearch');
+        const searchInputs = {
+            title: document.getElementById('titleSearch'),
+            author: document.getElementById('authorSearch'),
+            'date-complete': document.getElementById('dateCompleteSearch'),
+            'page-count': document.getElementById('pageCountSearch'),
+            rating: document.getElementById('ratingSearch'),
+            description: document.getElementById('descriptionSearch')
+        };
+        const bookCountElement = document.getElementById('bookCount');
+        let sortOrder = {};
+
+        // Load books from JSON file
+        fetch('books/list.json')
+            .then(response => response.json())
+            .then(books => {
+                populateTable(books);
+                updateBookCount(books.length);
+                setupEventListeners();
+            })
+            .catch(error => console.error('Error loading books:', error));
+
+        function populateTable(books) {
+            books.forEach(book => {
+                const row = document.createElement('tr');
+                for (let key in searchInputs) {
+                    const cell = document.createElement('td');
+                    cell.textContent = book[key];
+                    row.appendChild(cell);
+                }
+                tbody.appendChild(row);
+            });
+        }
+
+        function updateBookCount(count) {
+            bookCountElement.textContent = `So far, we have read ${count} books`;
+        }
+
+        function setupEventListeners() {
+            for (let key in searchInputs) {
+                searchInputs[key].addEventListener('keyup', searchTable);
+            }
+
+            clearButton.addEventListener('click', function() {
+                for (let key in searchInputs) {
+                    searchInputs[key].value = '';
+                }
+                searchTable();
+            });
+
+            table.querySelector('thead').addEventListener('click', function(e) {
+                const th = e.target.closest('th');
+                if (!th) return;
+                const column = th.dataset.sort;
+                const dataType = (column === 'page-count') ? 'number' : 'string';
+                sortOrder[column] = sortOrder[column] === 'asc' ? 'desc' : 'asc';
+                sortTable(column, dataType, sortOrder[column]);
+            });
+        }
+
+        function searchTable() {
+            const rows = tbody.getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const cells = row.getElementsByTagName('td');
+                let foundMatch = true;
+
+                for (let key in searchInputs) {
+                    const cellText = cells[Object.keys(searchInputs).indexOf(key)].textContent.toLowerCase();
+                    const searchTerm = searchInputs[key].value.toLowerCase();
+                    if (searchTerm && !cellText.includes(searchTerm)) {
+                        foundMatch = false;
+                        break;
+                    }
+                }
+
+                row.style.display = foundMatch ? '' : 'none';
+            }
+        }
+
+        function sortTable(column, dataType, order) {
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const columnIndex = Array.from(table.querySelector('thead tr').children).findIndex(th => th.dataset.sort === column);
+
+            rows.sort((a, b) => {
+                let aValue = a.children[columnIndex].textContent;
+                let bValue = b.children[columnIndex].textContent;
+
+                if (dataType === 'number') {
+                    return order === 'asc' ? Number(aValue) - Number(bValue) : Number(bValue) - Number(aValue);
+                } else if (column === 'date-complete') {
+                    return order === 'asc' ? new Date(aValue) - new Date(bValue) : new Date(bValue) - new Date(aValue);
+                } else if (column === 'rating') {
+                    return order === 'asc' ? Number(aValue.split('/')[0]) - Number(bValue.split('/')[0]) : Number(bValue.split('/')[0]) - Number(aValue.split('/')[0]);
+                } else {
+                    return order === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                }
+            });
+
+            tbody.append(...rows);
+        }
+    </script>
+</body>
+</html>
