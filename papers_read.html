@@ -38,6 +38,9 @@
     <p id="paperCount">
         So far, we have read 0 papers. Let's keep it up!
     </p> 
+    <small id="searchCount">
+        your search returned 0 papers. nice! 
+    </small>
     
     <div class="search-inputs">
         <input type="text" id="titleSearch" placeholder="Search title...">
@@ -79,6 +82,7 @@
             description: document.getElementById('descriptionSearch')
         };
         const paperCountElement = document.getElementById('paperCount');
+        const searchCountElement = document.getElementById('searchCount');
         let sortOrder = {};
 
         // Load papers from JSON file
@@ -87,6 +91,8 @@
             .then(papers => {
                 populateTable(papers);
                 updatePaperCount(papers.length);
+                // set search count as paper count initially
+                updateSearchCount(papers.length);
                 setupEventListeners();
             })
             .catch(error => console.error('Error loading papers:', error));
@@ -118,6 +124,9 @@
         function updatePaperCount(count) {
             paperCountElement.textContent = `So far, we have read ${count} papers. Let's keep it up!`;
         }
+        function updateSearchCount(count) {
+            searchCount.textContent = `your search returned ${count} papers. nice!`;
+        }
 
         function setupEventListeners() {
             for (let key in searchInputs) {
@@ -143,6 +152,7 @@
 
         function searchTable() {
             const rows = tbody.getElementsByTagName('tr');
+            var numRowsMatch = 0;
             for (let i = 0; i < rows.length; i++) {
                 const row = rows[i];
                 const cells = row.getElementsByTagName('td');
@@ -157,8 +167,14 @@
                     }
                 }
 
-                row.style.display = foundMatch ? '' : 'none';
+                if(foundMatch){
+                    row.style.display = ''
+                    numRowsMatch ++;
+                }else{
+                    row.style.display = 'none'
+                }
             }
+            updateSearchCount(numRowsMatch)
         }
 
         function sortTable(column, dataType, order) {
