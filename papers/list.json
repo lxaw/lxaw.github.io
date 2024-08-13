@@ -1,5 +1,68 @@
 [
   {
+    "title": "SMASH: One-Shot Model Architecture Search through Hypernetworks",
+    "author": "Tomer Volk et al",
+    "year": "2023",
+    "topic": "hypernetworks, multi-source adaptation, unseen domains, NLP",
+    "venue": "EMNLP",
+    "description": "The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain's semantic space. The signature is then used by a hypernet to generate the task classifier's weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. ",
+    "link": "https://aclanthology.org/2023.findings-emnlp.610.pdf"
+  },
+  {
+    "title": "Example-based Hypernetworks for Multi-source Adaptation to Unseen Domains",
+    "author": "Tomer Volk et al",
+    "year": "2023",
+    "topic": "hypernetworks, multi-source adaptation, unseen domains, NLP",
+    "venue": "EMNLP",
+    "description": "The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain's semantic space. The signature is then used by a hypernet to generate the task classifier's weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. ",
+    "link": "https://aclanthology.org/2023.findings-emnlp.610.pdf"
+  },
+  {
+    "title": "Meta-Learning via Hypernetworks",
+    "author": "Dominic Zhao et al",
+    "year": "2020",
+    "topic": "hypernetworks, meta-learning",
+    "venue": "NeurIps Workshop",
+    "description": "The authors propose a soft weight-sharing hypernet architecture that performs well on meta-learning tasks. A good paper to show efforts in meta-learning with regards to hypernets, and comparing them to SOTA methods like Model-Agnostic Meta-Learning (MAML).",
+    "link": "https://neurips.cc/virtual/2020/20189"
+  },
+  {
+    "title": "HyperDynamics: Meta-Learning Object and Agent Dynamics with Hypernetworks",
+    "author": "Zhou Xian et al",
+    "year": "2021",
+    "topic": "hypernetworks, meta-learning, dynamics",
+    "venue": "ICLR",
+    "description": "The authors present a dynamics meta-learning framework which conditions on an agent's interations w/ env and (optionally) the visual input from it. From this, they can generate params of a neural dynamics model. The three modules they use are 1) an encoding module that encodes a few agent-env interations / agent's visual observations into a feature code, 2) a hypernet that conditions on the latent feature code to generate params of a dynamic model dedicated to this observed system, and 3) a target dynamics model that is made using the generated parameters, and takes input as a low-dim system state / agent action and outputs the prediction of next system state.",
+    "link": "https://arxiv.org/pdf/2103.09439"
+  },
+  {
+    "title": "Principled Weight Initialization for Hypernetworks",
+    "author": "Oscar Chang et al",
+    "year": "2020",
+    "topic": "hypernetworks, weight initialization",
+    "venue": "ICLR",
+    "description": "Classical weight initialization techniques don't really work on hypernets, because they fail to produce weights for the mainnet in the correct scale. The authors derive formulas for hyperfan-out and hyperfan-in weight initialization, and show that it works well for the mainnet.",
+    "link": "https://arxiv.org/pdf/2312.08399"
+  },
+  {
+    "title": "Continual Learning with Hypernetworks",
+    "author": "Johannes von Oswald et al",
+    "year": "2020",
+    "topic": "hypernetworks, continual learning, meta learning",
+    "venue": "ICLR",
+    "description": "The authors present a method of preventing catastrophic forgetting, by using task-conditioned hypernets (i.e., hypernets that generate weights of target model based on some task embedding). Thus, rather than memorizing many data characteristics, we can split the problem into just learning a single point per task, given the task embedding.",
+    "link": "https://arxiv.org/pdf/1906.00695"
+  },
+  {
+    "title": "Stochastic Hyperparameter Optimization through Hypernetworks",
+    "author": "Jonathan Lorraine et al",
+    "year": "2018",
+    "topic": "hypernetworks, hyperparameters",
+    "venue": "ICLR",
+    "description": "Using hypernetworks to learn hyperparameters. They replace the training optimization loop in favor of a differentiable hypernetwork to allow for tuning of hyperparameters using grad descent.",
+    "link": "https://arxiv.org/pdf/1802.09419"
+  },
+  {
     "title": "Playing Atari with Deep Reinforcement Learning",
     "author": "Volodymyr Mnih et al",
     "year": "2013",
