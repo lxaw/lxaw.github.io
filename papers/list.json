@@ -1,12 +1,12 @@
 [
   {
     "title": "SMASH: One-Shot Model Architecture Search through Hypernetworks",
-    "author": "Tomer Volk et al",
-    "year": "2023",
-    "topic": "hypernetworks, multi-source adaptation, unseen domains, NLP",
-    "venue": "EMNLP",
-    "description": "The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain's semantic space. The signature is then used by a hypernet to generate the task classifier's weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. ",
-    "link": "https://aclanthology.org/2023.findings-emnlp.610.pdf"
+    "author": "Andrew Brock et al",
+    "year": "2017",
+    "topic": "hypernetworks, nas, one-shot, few-shot",
+    "venue": "Arxiv",
+    "description": "The authors propose a technique to speed up NAS by using a hypernet. Basically, they train a hypernet to generate weights of a main model that has variable architecure. The input to the hypernet is a binarized representation of model architecture. The hypernet takes this representation in, and then outputs weights. They then train only for a few epochs, and compare the validation scores obtained across different representations. Then, they fully train the model that had the best validation score.",
+    "link": "https://arxiv.org/abs/1708.05344"
   },
   {
     "title": "Example-based Hypernetworks for Multi-source Adaptation to Unseen Domains",
