@@ -1,11 +1,20 @@
 [
   {
+    "title": "DoReFaNet: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients",
+    "author": "Shuchang Zhou et al",
+    "year": "2018",
+    "topic": "quantization, cnn, gradients",
+    "venue": "Arxiv",
+    "description": "The authors introduce a method to train CNNs with low bitwidth weights and activations using low bitwidth param gradients. They use deterministic quantization for weights and activations, while stochastically quantizing gradients. Note that they do not quantize the weights of the first CNN layer for the most part, as they noted that it would often degrade performance (Han et al. 2015 also notes a similar thing). Another interesting thing they do is add noise to the gradient after quantization to increase performance. This paper also uses the straight through estimator (Bengio et al 2013) for propagating gradients when using their quantization scheme.",
+    "link": "https://arxiv.org/pdf/1606.06160"
+  },
+  {
     "title": "Training Deep Neural Networks with 8-bit Floating Point Numbers",
     "author": "Naigang Wang et al",
     "year": "2018",
     "topic": "quantization, floating-point, precision",
     "venue": "NeurIps",
-    "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develope a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates. One interesting point they make is that swamping (the issue of truncation in large-to-small number addition) is a serious problem in DNN bit-precision reduction.",
+    "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develop a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates. One interesting point they make is that swamping (the issue of truncation in large-to-small number addition) is a serious problem in DNN bit-precision reduction.",
     "link": "https://arxiv.org/pdf/1812.08011"
   },
   {
