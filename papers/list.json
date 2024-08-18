@@ -5,7 +5,7 @@
     "year": "2018",
     "topic": "quantization, floating-point, precision",
     "venue": "NeurIps",
-    "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develope a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates.",
+    "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develope a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates. One interesting point they make is that swamping (the issue of truncation in large-to-small number addition) is a serious problem in DNN bit-precision reduction.",
     "link": "https://arxiv.org/pdf/1812.08011"
   },
   {
