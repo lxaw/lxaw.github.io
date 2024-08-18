@@ -1,5 +1,23 @@
 [
   {
+    "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+    "author": "Benoit Jacob et al",
+    "year": "2017",
+    "topic": "quantization, quantization schemes, efficient inference, floating-point",
+    "venue": "arxiv",
+    "description": "The authors propose a quantization scheme that allows us to only use integer arithmetic to approximate fp computations in a neural network. They also describe a training approach that simulates the effect of quantization in the forward pass. Backprop still occurs, but all weights and biases are stored in fp. The forward prop pass then simulates quantized inference by rounding off using the quantization scheme they describe that changes fp to int.",
+    "link": "https://arxiv.org/pdf/1712.05877"
+  },
+  {
+    "title": "PACT: Parameterized Clipping Activation for Quantized Neural Networks",
+    "author": "Jungwook Choi et al",
+    "year": "2018",
+    "topic": "quantization, clipping, activations",
+    "venue": "ICLR",
+    "description": "The authors present a method of quantization by clipping activations using a learnable parameter, alpha. They show that this can lead to lower decreases in accuracy compared to other quantization methods. They also note that activations have been hard to quantize compared to weights in the past. They also prove that PACT is as expressive as ReLU, by showing it can reach the same solution as ReLU if SGD is used. They also describe the hardware benefits that can be incurred.",
+    "link": "https://arxiv.org/pdf/1805.06085"
+  },
+  {
     "title": "SMASH: One-Shot Model Architecture Search through Hypernetworks",
     "author": "Andrew Brock et al",
     "year": "2017",
