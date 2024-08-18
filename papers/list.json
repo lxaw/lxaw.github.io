@@ -1,5 +1,14 @@
 [
   {
+    "title": "Training Deep Neural Networks with 8-bit Floating Point Numbers",
+    "author": "Naigang Wang et al",
+    "year": "2018",
+    "topic": "quantization, floating-point, precision",
+    "venue": "NeurIps",
+    "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develope a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates.",
+    "link": "https://arxiv.org/pdf/1812.08011"
+  },
+  {
     "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
     "author": "Benoit Jacob et al",
     "year": "2017",
