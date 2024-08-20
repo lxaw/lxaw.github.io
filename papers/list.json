@@ -1,4 +1,14 @@
 [
+  
+  {
+    "title": "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation",
+    "author": "Yoshua Bengio et al",
+    "year": "2013",
+    "topic": "gradients, stochasticy, backpropagation",
+    "venue": "Arxiv",
+    "description": "The authors introduce a several methods of estimation / propagation for networks that have stochastic neurons. This is used often in networks that are quantization-aware, as they sometimes have decision-boundaries in the neurons that are not differentiable regularly. The paper also introduces the \"Straight Through Estimator\", which was actually first introduced in one of Hinton's lectures. One interesting idea they present (that I think may have also been introduced in Kingma's VAE paper?) is that we can model the output h_{i} of some stochastic neuron as the application of a deterministic function that also depends on some noise source z_{i}: h_{i} = f(a_{i},z_{i}). TLDR: Straight through units are typically the go-to due to ease of use and good performance.",
+    "link": "https://arxiv.org/pdf/1308.3432"
+  },
   {
     "title": "DoReFaNet: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients",
     "author": "Shuchang Zhou et al",
