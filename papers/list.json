@@ -1,5 +1,13 @@
 [
-  
+  {
+    "title": "Superposition of Many Models into One",
+    "author": "Cheung et al",
+    "year": "2019",
+    "topic": "superposition, online learning, tasks",
+    "venue": "NeurIPS",
+    "description": "A method of storing multiple models using only one set of parameters via parameter superposition is provided; it shares similarities to superposition in the fourier analysis for signal processing.",
+    "link": "https://arxiv.org/pdf/1902.05522"
+  },
   {
     "title": "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation",
     "author": "Yoshua Bengio et al",
@@ -23,7 +31,7 @@
     "author": "Naigang Wang et al",
     "year": "2018",
     "topic": "quantization, floating-point, precision",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develop a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates. One interesting point they make is that swamping (the issue of truncation in large-to-small number addition) is a serious problem in DNN bit-precision reduction.",
     "link": "https://arxiv.org/pdf/1812.08011"
   },
@@ -68,7 +76,7 @@
     "author": "Dominic Zhao et al",
     "year": "2020",
     "topic": "hypernetworks, meta-learning",
-    "venue": "NeurIps Workshop",
+    "venue": "NeurIPS Workshop",
     "description": "The authors propose a soft weight-sharing hypernet architecture that performs well on meta-learning tasks. A good paper to show efforts in meta-learning with regards to hypernets, and comparing them to SOTA methods like Model-Agnostic Meta-Learning (MAML).",
     "link": "https://neurips.cc/virtual/2020/20189"
   },
@@ -284,7 +292,7 @@
     "author": "Ruqi Zhang et al",
     "year": "2022",
     "topic": "variational gradient descent, gradient flow",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "The authors propose a new variational framework called O Gradient for sampling in implicitly defined constrained domains, using two orthogonal directions to drive the sampler towards the domain and explore it by decreasing a KL divergence. They prove the convergence of O Gradient and apply it to both Langevin dynamics and Stein Variational Gradient Descent (SVGD), demonstrating its effectiveness on various machine learning tasks.",
     "link": "https://arxiv.org/pdf/2210.06447"
   },
@@ -320,7 +328,7 @@
     "author": "Yann Dauphin et al",
     "year": "2014",
     "topic": "saddle points, optimization",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "The authors argue that saddle points, rather than local minima, are the primary challenge in minimizing non convex error functions in high dimensional spaces, based on insights from various scientific fields and empirical evidence. They explain that saddle points surrounded by high error plateaus can significantly slow down learning and create the illusion of local minima, particularly in high dimensional problems of practical interest. To address this challenge, the authors propose a new approach called the saddle free Newton method, designed to quickly escape high dimensional saddle points, unlike traditional gradient descent and quasi Newton methods.",
     "link": "https://arxiv.org/pdf/1406.2572"
   },
@@ -338,7 +346,7 @@
     "author": "Andrew Wilson et al",
     "year": "2020",
     "topic": "bayesian, marginalization",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "The authors emphasize that marginalization, rather than using a single set of weights, is the key distinguishing feature of a Bayesian approach, which can significantly improve the accuracy and calibration of modern deep neural networks. They demonstrate that deep ensembles provide an effective mechanism for approximate Bayesian marginalization and propose a related approach that further improves the predictive distribution by marginalizing within basins of attraction. The paper investigates the prior over functions implied by a vague distribution over neural network weights, explaining neural network generalization from a probabilistic perspective and showing that seemingly mysterious results (like fitting random labels) can be reproduced with Gaussian processes. The authors demonstrate that Bayesian model averaging mitigates the double descent phenomenon, leading to monotonic performance improvements as model flexibility increases.",
     "link": "https://arxiv.org/pdf/2002.08791"
   },
@@ -401,7 +409,7 @@
     "author": "Leon Bottou et al",
     "year": "1990",
     "topic": "learning algorithms, modules",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "Cooperative training of modular systems offers a unified approach to many learning algorithms and hybrid systems, allowing the design and implementation of complex learning systems that incorporate structural a priori knowledge about tasks. The authors introduce a framework using a statistical formulation of learning systems to define and combine modules into cooperative systems, enabling the creation of hybrid systems that combine the advantages of connectionist and other learning algorithms. By decomposing complex tasks into simpler subtasks, modular architectures can be built, where each module corresponds to a subtask, facilitating easier achievement of the learning goal by introducing a modular decomposition of the global task.",
     "link": "https://proceedings.neurips.cc/paper/1990/file/a8c88a0055f636e4a163a5e3d16adab7-Paper.pdf"
   },
@@ -419,7 +427,7 @@
     "author": "Yi An Ma et al",
     "year": "2015",
     "topic": "hamiltonian, mcmc",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "Recent Markov chain Monte Carlo (MCMC) samplers use continuous dynamics and scalable variants with stochastic gradients to efficiently explore target distributions, but proving convergence with stochastic gradient noise remains challenging. The authors provide a general framework for constructing MCMC samplers, including stochastic gradient versions, based on continuous Markov processes defined by two matrices, demonstrating that any such process can be represented within this framework. Using this framework, they propose a new state adaptive sampler, stochastic gradient Riemann Hamiltonian Monte Carlo (SGRHMC), which combines the benefits of Riemann HMC with the scalability of stochastic gradient methods, as shown in experiments with simulated data and a streaming Wikipedia analysis.",
     "link": "https://arxiv.org/pdf/1506.04696"
   },
@@ -545,7 +553,7 @@
     "author": "Yue Wang et al",
     "year": "2019",
     "topic": "cnn, batch, energy",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "This paper introduces E2 Train, a framework for energy efficient CNN training on resource constrained platforms. E2 Train optimizes training energy costs through stochastic mini batch dropping, selective layer updates, and low cost, low precision back propagation strategies. Experimental results on CIFAR 10 and CIFAR 100 demonstrate significant energy savings of over 90% and 84%, respectively, with minimal loss in accuracy. E2 Train addresses the challenge of on device CNN training by integrating three levels of energy saving techniques: data level stochastic mini batch dropping, model level selective layer updates, and algorithm level low precision back propagation. Real energy measurements on an FPGA validate its effectiveness, achieving notable energy reductions in training ResNet models on CIFAR datasets.",
     "link": "https://arxiv.org/pdf/1910.13349"
   },
@@ -770,7 +778,7 @@
     "author": "Wesley Maddox et al",
     "year": "2019",
     "topic": "bayesian, uncertainty, guassian",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "SWAG combines Stochastic Weight Averaging (SWA) with Gaussian fitting to provide an approximate posterior distribution over neural network weights. SWA computes the first moment of SGD iterates using a modified learning rate schedule. SWAG extends this by fitting a Gaussian distribution using SWA's solution as the first moment and incorporating a low rank plus diagonal covariance derived from SGD iterates.",
     "link": "https://arxiv.org/pdf/1902.02476"
   },
@@ -806,7 +814,7 @@
     "author": "Quoc Le et al",
     "year": "2010",
     "topic": "tiling, cnn",
-    "venue": "NeurIps",
+    "venue": "NeurIPS",
     "description": "Tiled CNNs introduce a novel approach to learning invariances by using a regular \"tiled\" pattern of tied weights. Unlike traditional CNNs where adjacent hidden units share identical weights, Tiled CNNs require only that hidden units at a certain distance from each other share tied weights. This allows the network to learn complex invariances such as scale and rotational invariance, in addition to translational invariance.",
     "link": "https://dl.acm.org/doi/10.5555/2997189.2997332"
   },
