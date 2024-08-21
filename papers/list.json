@@ -3,7 +3,7 @@
     "title": "Superposition of Many Models into One",
     "author": "Cheung et al",
     "year": "2019",
-    "topic": "superposition, online learning, tasks",
+    "topic": "superposition, online learning, tasks, continual learning",
     "venue": "NeurIPS",
     "description": "A method of storing multiple models using only one set of parameters via parameter superposition is provided; it shares similarities to superposition in the fourier analysis for signal processing.",
     "link": "https://arxiv.org/pdf/1902.05522"
