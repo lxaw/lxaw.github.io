@@ -1,5 +1,14 @@
 [
   {
+    "title": "Learning to Compress Prompts with Gist Tokens",
+    "author": "Jesse Mu et al",
+    "year": "2023",
+    "topic": "llms, prompting, compression, tokens",
+    "venue": "NeurIPS",
+    "description": "The authors describe a method of using a distilling function G (similar to a hypernet) that is able to compress LM prompts into a smaller set of \"gist\" tokens. These tokens can then be cached and reused. The neat trick is that they reuse the LM itself as G, so gisting itself incurs no additional training cost. Note that in their \"Failure Cases\" section, they mention \"... While it is unclear why only the gist models exhibit this behavior (i.e. the fail example behavior), these issues can likely be mitigated with more careful sampling techniques...",
+    "link": "https://arxiv.org/pdf/2304.08467"
+  },
+  {
     "title": "Once-For-All: Train One Network and Specialize it For Efficient Deployment",
     "author": "Han Cai et al",
     "year": "2020",
