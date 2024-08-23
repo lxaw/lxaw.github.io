@@ -1,5 +1,14 @@
 [
   {
+    "title": "Dataless Knowledge Fusion by Merging Weights",
+    "author": "Xisen Jin et al",
+    "year": "2023",
+    "topic": "knowledge fusion, weight merging",
+    "venue": "ICLR",
+    "description": "The paper introduces RegMean, a method for merging pre-trained language models from different datasets by solving a linear optimization problem, which improves generalization across domains without requiring the original training data. Compared to existing methods like Simple Averaging and Fisher Averaging, RegMean offers higher computational efficiency and comparable memory overhead, while achieving better or equivalent performance across various natural language tasks, including out-of-domain generalization. The method is evaluated using GLUE datasets and demonstrates superior performance in most tasks, outperforming traditional model ensembling and multi-task learning approaches.",
+    "link": "https://arxiv.org/pdf/2212.09849"
+  },
+  {
     "title": "Superposition of Many Models into One",
     "author": "Cheung et al",
     "year": "2019",
