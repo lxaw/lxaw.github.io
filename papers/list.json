@@ -1,5 +1,14 @@
 [
   {
+    "title": "Once-For-All: Train One Network and Specialize it For Efficient Deployment",
+    "author": "Han Cai et al",
+    "year": "2020",
+    "topic": "nas, supernets",
+    "venue": "ICLR",
+    "description": "The authors proposed training one large supernetwork and then sampling subnetworks as an approach for NAS. This method allows for the simultaneous generation of many different subnetworks that could satisfy different constraints (i.e. hardware, latency, accuracy, etc). The authors also propose a progressive shrinking method to train the net (start by training the big supernet, then progressively shrink down), which can be seen as a generalized pruning method. Furthermore, they introduce an idea of training a twin neural network to help estimate latency / accuracy given some architecture, which allows for fast feedback when conducting the search for subnetworks.",
+    "link": "https://arxiv.org/abs/1908.09791"
+  },
+  {
     "title": "Dataless Knowledge Fusion by Merging Weights",
     "author": "Xisen Jin et al",
     "year": "2023",
