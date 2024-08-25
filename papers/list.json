@@ -1,5 +1,14 @@
 [
   {
+    "title": "HyperTuning: Toward Adapting Large Language Models without Back-propagation",
+    "author": "Jason Phang et al",
+    "year": "2023",
+    "topic": "hypernetworks, adaptation, tuning, LoRA, LLMs",
+    "venue": "ICML",
+    "description": "The authors show that we can a hypernetwork for model adaptation in order to generate task-specific parameters. They try two approaches: generating prefixs and generating LoRA parameters for a frozen T5 model using few-shot examples. They also note the importance of hyperpretraining, i.e., an additional stage to adapt the hypernet to generate parameters for the downstream model. They also propose a scheme for this. NOTE! \"We also observe a consistent trend where HyperT5-Prefix outperforms HyperT5-LoRA. We speculate that it is easier for hypermodels to learn to generate soft prefixes as compared to LoRA weights...\"",
+    "link": "https://arxiv.org/pdf/2211.12485"
+  },
+  {
     "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
     "author": "Armen Aghajanyan et al",
     "year": "2020",
