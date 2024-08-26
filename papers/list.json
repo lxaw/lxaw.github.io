@@ -1,5 +1,14 @@
 [
   {
+    "title": "Distilling the Knowledge in a Neural Network",
+    "author": "Geoffry Hinton et al",
+    "year": "2015",
+    "topic": "distillation, ensemble, MoE",
+    "venue": "Arxiv",
+    "description": "The first proposal of knowledge distillation. The main interesting point I found was that they change the temperature of the softmax to be higher to allow for softer targets. This allows for understanding what 2's look like 3's (in an MNIST example). Basically, adds a sort of regularization since more information can be carried in these softer targets compared to a single 0 or 1. They also propose the idea of having an ensemble of models, and then learning a distilled model that is smaller. The biological example of having a clumsy larvae that then becomes a more specialized bug was good.",
+    "link": "https://arxiv.org/pdf/1503.02531"
+  },
+  {
     "title": "HyperTuning: Toward Adapting Large Language Models without Back-propagation",
     "author": "Jason Phang et al",
     "year": "2023",
