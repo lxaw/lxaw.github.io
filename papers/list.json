@@ -1,5 +1,32 @@
 [
   {
+    "title": "Meta-Learning of Neural Architectures for Few-Shot Learning",
+    "author": "Thomas Elsken et al",
+    "year": "2021",
+    "topic": "NAS, meta-learning, few-shot, fsl",
+    "venue": "Arxiv",
+    "description": "The authors propose MetaNAS, which is the first method that fully integrates NAS with gradient-based meta-learning. Basically, they learn a method of joint learning gradient-based NAS methods like DARTS and meta-learning the architecture itself. Their goal is thus: meta-learn an architecture \\alpha_{meta} with corresponding meta-learned weights w_{meta}. When given a new task \\mathcal{T}_{i}, both \\alpha_{meta} and w_{meta} adapt quickly to \\mathcal{T}_{i} based on a few samples. One interesting technique they do is add a temperature term that is annealed to 0 over the course of task training; this is to help with sparsity of the mixture weights of the operations when using the DARTS search.",
+    "link": "https://arxiv.org/pdf/1911.11090"
+  },
+  {
+    "title": "MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification",
+    "author": "Sivan Doveh et al",
+    "year": "2020",
+    "topic": "NAS, meta-learning, few-shot, fsl",
+    "venue": "Arxiv",
+    "description": "The authors propose a method using a DARTS-like search for FSL architectures. \"Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.\". Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.",
+    "link": "https://arxiv.org/pdf/1912.00412"
+  },
+  {
+    "title": "MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification",
+    "author": "Sivan Doveh et al",
+    "year": "2020",
+    "topic": "NAS, meta-learning, few-shot, fsl",
+    "venue": "Arxiv",
+    "description": "The authors propose a method using a DARTS-like search for FSL architectures. \"Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.\". Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.",
+    "link": "https://arxiv.org/pdf/1912.00412"
+  },
+  {
     "title": "Distilling the Knowledge in a Neural Network",
     "author": "Geoffry Hinton et al",
     "year": "2015",
