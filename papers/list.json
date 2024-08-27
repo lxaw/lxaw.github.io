@@ -28,15 +28,6 @@
     "link": "https://arxiv.org/pdf/1912.00412"
   },
   {
-    "title": "MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification",
-    "author": "Sivan Doveh et al",
-    "year": "2020",
-    "topic": "NAS, meta-learning, few-shot, fsl",
-    "venue": "Arxiv",
-    "description": "The authors propose a method using a DARTS-like search for FSL architectures. \"Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.\". Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.",
-    "link": "https://arxiv.org/pdf/1912.00412"
-  },
-  {
     "title": "Distilling the Knowledge in a Neural Network",
     "author": "Geoffry Hinton et al",
     "year": "2015",
