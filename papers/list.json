@@ -1,4 +1,14 @@
 [
+
+  {
+    "title": "BigNAS: Scaling Up Neural Architecture Search with Big Single-Stage Models",
+    "author": "Jiahui Yu et al",
+    "year": "2020",
+    "topic": "NAS, one-shot",
+    "venue": "Arxiv",
+    "description": "Most NAS frameworks train some one-shot model to rank the quality of different child architectures. However, these rankings often are different than reality, so frameworks typically finetune architecture after finding them. BigNAS proposes that this fine-tuning / post-processing is not necessary. They find some interesting points, such as that \"big models converge faster while small child models converge slower\". Thus, at some training step t when the performance of a big model peaks, the small child models are not yet fully-trained, and at a t' where the child models are fully trained, the big model is overfitting. Thus, they use an exponentially decaying with constant ending learning rate scheduler, which has constant learning rate at the end of training when it reaches 5% of initial learning rate. Another point they bring up is a \"coarse-to-fine\" strategy where one first finds a rough sketch of promising network candidates, and then samples multiple finer grained variations around the sketch of interest.",
+    "link": "https://arxiv.org/pdf/2003.11142"
+  },
   {
     "title": "Meta-Learning of Neural Architectures for Few-Shot Learning",
     "author": "Thomas Elsken et al",
