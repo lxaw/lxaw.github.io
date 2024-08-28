@@ -1,6 +1,15 @@
 [
 
   {
+    "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+    "author": "Jiaming Tang et al",
+    "year": "2024",
+    "topic": "KV cache, sparsity, LLM",
+    "venue": "ICML",
+    "description": "Long context LLM inference is slow and the speed decreases significantly as sequence lengths grow. This is mainly due to needing to load a big KV cache during self-attention. Prior works have use methods to evict tokens in the attention maps to promote sparsity, but the Han lab (smartly!) found that the criticality of tokens strongly correlates with the current query token. Thus, they employ a KV Cache eviction method that retains all KV cache (since past evicted tokens may be needed to handle future queries), while being able to select the top K relevant tokens to a particular query. This allows for speedups in self-attention at low cost to accuracy.",
+    "link": "https://arxiv.org/pdf/2406.10774"
+  },
+  {
     "title": "BigNAS: Scaling Up Neural Architecture Search with Big Single-Stage Models",
     "author": "Jiahui Yu et al",
     "year": "2020",
