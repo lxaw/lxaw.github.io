@@ -1,6 +1,15 @@
 [
 
   {
+    "title": "Learning both Weights and Connections for Efficient Neural Networks",
+    "author": "Song Han et al",
+    "year": "2015",
+    "topic": "pruning, compression, regularization",
+    "venue": "NeurIPS",
+    "description": "The authors show a method of pruning neural networks in three steps: 1) train the network to learn what connections are important, 2) prune unimportant connections, 3) retrain and fine-tune. In order to train for learning what connections are important, they do not focus on learning the final weight values, but rather just focus on the importance of connections. They don't explicitly mention how this is done, but one could look at the Hessian of the loss or the magnitude of the weights. I'd imagine you could do this within only a few training iterations. In their \"Regularization\" section, it is interesting to note that L1 regularization (penalizes non-zero params resulting in more params near zero) gave better accuracy after pruning, but before retraining. But, these remaining connections are not as good as with using L2. The authors also present a discussion of what dropout rate to use.",
+    "link": "https://arxiv.org/pdf/1506.02626"
+  },
+  {
     "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
     "author": "Jiaming Tang et al",
     "year": "2024",
