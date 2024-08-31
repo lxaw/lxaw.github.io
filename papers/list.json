@@ -1,6 +1,15 @@
 [
 
   {
+    "title": "Drawing Early-Bird Tickets: Towards More Efficient Training of Deep Networks",
+    "author": "Haoran You et al",
+    "year": "2020",
+    "topic": "early-bird, lottery-hypothesis, pruning, low-precision",
+    "venue": "ICLR",
+    "description": "The authors show that there exist early-bird (EB) tickets: small, but critical subnetworks for dense randomly intialized networks, that can be found using low-cost training schemes (low precision, early stopping). They also design a practical low compute method for finding these. They use mask distance. Basically, for each pruning iteration, a binary mask is created. This mask represents which parts of the network are kept (the \"ticket\", or pruned subnet) and which parts are removed. They then consider the scaling factor \"r\" in BN layers as indicators of significance. This r is learned during training and is used to scale normalized activations. The magnitude of r is an indicator of how important the channel is to the network's performance. After deciding which channels to prune based on r, the binary mask is created. If the channel is kept (not pruned), marked as 1 in the mask. Else, 0. For any two subnets, they then compute the \"mask distance\" (AKA Hamming distance) between the two ticketmasks. They measure the mask distance between consequtive epochs and draw EB tickets when such distance is smaller than some threshold.",
+    "link": "https://arxiv.org/pdf/1909.11957"
+  },
+  {
     "title": "Learning both Weights and Connections for Efficient Neural Networks",
     "author": "Song Han et al",
     "year": "2015",
