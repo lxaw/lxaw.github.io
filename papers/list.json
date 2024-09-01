@@ -1,6 +1,15 @@
 [
 
   {
+    "title": "Max-Affine Spline Insights Into Deep Network Pruning",
+    "author": "Haoran You et al",
+    "year": "2022",
+    "topic": "early-bird, lottery-hypothesis, pruning, low-precision",
+    "venue": "TMLR",
+    "description": "The authors make connections from spline-theory (AKA, consdering DNNs as a continuous piecewise affline mapping) and pruning. Basically, they say that pruning removes redundant decision boundaries in layers that are pruned, and that we can compare the decision boundaries of unpruned networks to their pruned counterparts to show this (they have some nice visualizations). They also note that the final decision boundary often does not always depend on existing subdivision lines. Finally, they demonstrate another way of finding EB tickets using this spline formulation.",
+    "link": "https://arxiv.org/pdf/2101.02338"
+  },
+  {
     "title": "Drawing Early-Bird Tickets: Towards More Efficient Training of Deep Networks",
     "author": "Haoran You et al",
     "year": "2020",
