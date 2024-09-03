@@ -1,5 +1,13 @@
 [
-
+  {
+    "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium",
+    "author": "Martin Heusel et al",
+    "year": "2017",
+    "topic": "gan, equilibrium, FID, IS",
+    "venue": "NeurIPS",
+    "description": "This paper introduces a two time-scale update rule (TTUR) for games, and proves that this makes GANs converge to a local Nash equilibrium. More cited is the FID score introduced here. FID improves on IS by comparing the distributions of real and generated images directly. This is done by using the Inception model to extract features from images and then assuming these features follow a multidimensional Gaussian distribution. FID measures the difference between the Gaussians (representing the real and generated images) using the Frechet distance, which effectively captures differences in the mean and covariance (the first two moments) of the distributions. FID makes sense as it directly compares the distributions of real and generated images by using the extracted features from Inception. These features are assumed to follow some multidimensional Gaussian, which simplifies the comparison. The Guassian is chosen as it is the maximum entropy distribution for a given mean and covariance (proof: https://medium.com/mathematical-musings/how-gaussian-distribution-maximizes-entropy-the-proof-7f7dcb2caf4d) -- maximum entropy is important, because this means that the Gaussian makes the fewest additional assumptions about the data, making sure the model is as non-committal as possible given the available information. Then, we calculate the statistics between the real and generated image features, like their mean and covariances. Finally, we compute the FID score using Frechet AKA Wasserstein-2 distance.",
+    "link": "https://arxiv.org/pdf/2212.09748"
+  },
   {
     "title": "Scalable Diffusion Models with Transformers",
     "author": "William Peebles et al",
@@ -212,7 +220,7 @@
     "author": "Dominic Zhao et al",
     "year": "2020",
     "topic": "hypernetworks, meta-learning",
-    "venue": "NeurIPS Workshop",
+    "venue": "NeurIPS ",
     "description": "The authors propose a soft weight-sharing hypernet architecture that performs well on meta-learning tasks. A good paper to show efforts in meta-learning with regards to hypernets, and comparing them to SOTA methods like Model-Agnostic Meta-Learning (MAML).",
     "link": "https://neurips.cc/virtual/2020/20189"
   },
