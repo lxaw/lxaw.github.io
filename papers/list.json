@@ -1,6 +1,15 @@
 [
 
   {
+    "title": "Scalable Diffusion Models with Transformers",
+    "author": "William Peebles et al",
+    "year": "2023",
+    "topic": "Diffusion, DDPM, DiT",
+    "venue": "CVPR",
+    "description": "The authors explore using transformers in the latent space, rather than U-Nets. They find that their methods can lead to lower FID scores compared to prior SOTA. In this paper, their image generation pipeline is roughly: 1) Input high resolution image x 2) Encoder z = E(x), where E is a pre-trained frozen VAE encoder, and z is the latent representation 3) The DiT model operates on z 4) New latent representation z’ is sampled from the diffusion model 5) We then decode the z’ using the pre-trained frozen VAE decoder D, and x’ is now the generated high resolution image.",
+    "link": "https://arxiv.org/pdf/2212.09748"
+  },
+  {
     "title": "Max-Affine Spline Insights Into Deep Network Pruning",
     "author": "Haoran You et al",
     "year": "2022",
