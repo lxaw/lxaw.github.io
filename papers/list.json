@@ -1,9 +1,63 @@
 [
   {
+    "title": "Diffusion Models Beat GANs on Image Synthesis",
+    "author": "Prafulla Dhariwal et al",
+    "year": "2021",
+    "topic": "diffusion, gan",
+    "venue": "Arxiv",
+    "description": "This work demonstrates that diffusion models surpass the current state-of-the-art generative models in image quality, achieved through architecture improvements and classifier guidance, which balances diversity and fidelity. The model attains FID scores of 2.97 on ImageNet 128×128 and 4.59 on ImageNet 256×256, matching BigGAN-deep with as few as 25 forward passes while maintaining better distribution coverage. Additionally, combining classifier guidance with upsampling diffusion models further enhances FID scores to 3.94 on ImageNet 256×256 and 3.85 on ImageNet 512×512.",
+    "link": "https://arxiv.org/pdf/2105.05233"
+  },
+  {
+    "title": "Progressive Distillation for Fast Sampling of Diffusion Models",
+    "author": "Tim Salimans et al",
+    "year": "2022",
+    "topic": "diffusion, distillation, sampling",
+    "venue": "ICLR",
+    "description": "Diffusion models excel in generative modeling, surpassing GANs in perceptual quality and autoregressive models in density estimation, but they suffer from slow sampling times. This paper introduces two key contributions: new parameterizations that improve stability with fewer sampling steps and a distillation method that progressively reduces the number of required steps by half each time. Applied to benchmarks like CIFAR-10 and ImageNet, the approach distills models from 8192 steps down to as few as 4 steps, maintaining high image quality while offering a more efficient solution for both training and inference.",
+    "link": "https://arxiv.org/pdf/2202.00512"
+  },
+  {
+    "title": "On Distillation of Guided Diffusion Models",
+    "author": "Chenlin Meng et al",
+    "year": "2023",
+    "topic": "diffusion, classifier-free guidance",
+    "venue": "Arxiv",
+    "description": "Classifier-free guided diffusion models are effective for high-resolution image generation but are computationally expensive during inference due to the need to evaluate both conditional and unconditional models many times. This paper proposes a method to distill these models into faster ones by learning a single model that approximates the combined outputs, then progressively reducing the number of sampling steps. The approach significantly accelerates inference, generating images with comparable quality to the original model using as few as 1-4 denoising steps, achieving up to 256× speedup on datasets like ImageNet and LAION.",
+    "link": "https://arxiv.org/pdf/2210.03142"
+  },
+  {
+    "title": "Diffusion Probabilistic Models Made Slim",
+    "author": "Xingyi Yang et al",
+    "year": "2022",
+    "topic": "diffusion, dpms, spectral diffusion",
+    "venue": "Arxiv",
+    "description": "Diffusion Probabilistic Models (DPMs) produce impressive visual results but suffer from high computational costs, limiting their use on resource-limited platforms. This paper introduces Spectral Diffusion (SD), a lightweight model designed to address DPMs' bias against high-frequency generation, which smaller networks struggle to capture. SD incorporates wavelet gating for frequency dynamics and spectrum-aware distillation to enhance high-frequency recovery, achieving 8-18× computational efficiency while maintaining competitive image fidelity.",
+    "link": "https://arxiv.org/pdf/2211.17106"
+  },
+  {
+    "title": "Structural Pruning for Diffusion Models",
+    "author": "Gongfan Fang et al",
+    "year": "2023",
+    "topic": "diffusion, pruning",
+    "venue": "NeurIPS",
+    "description": "Generative modeling has advanced significantly with Diffusion Probabilistic Models (DPMs), but these models often require substantial computational resources. To address this, Diff-Pruning is introduced as a compression method that reduces the computational load by pruning unnecessary diffusion steps, using a Taylor expansion to identify key weights without extensive re-training. Empirical results show that Diff-Pruning can cut FLOPs by around 50%, while maintaining consistent generative performance at only 10-20% of the original training cost.",
+    "link": "https://arxiv.org/pdf/2305.10924"
+  },
+  {
+    "title": "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+    "author": "Ling Yang et al",
+    "year": "2024",
+    "topic": "diffusion, survey",
+    "venue": "ACM",
+    "description": "Diffusion models are a powerful class of deep generative models known for their success in tasks like image synthesis, video generation, and molecule design. This survey categorizes diffusion model research into efficient sampling, improved likelihood estimation, and handling specialized data structures, while also discussing the potential for combining them with other generative models. The review highlights their broad applications across fields such as computer vision, NLP, temporal data modeling, and interdisciplinary sciences, suggesting areas for further exploration.",
+    "link": "https://arxiv.org/pdf/2209.00796"
+  },
+  {
     "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium",
     "author": "Martin Heusel et al",
     "year": "2017",
-    "topic": "gan, equilibrium, FID, IS",
+    "topic": "gan, equilibrium, fid, is",
     "venue": "NeurIPS",
     "description": "This paper introduces a two time-scale update rule (TTUR) for games, and proves that this makes GANs converge to a local Nash equilibrium. More cited is the FID score introduced here. FID improves on IS by comparing the distributions of real and generated images directly. This is done by using the Inception model to extract features from images and then assuming these features follow a multidimensional Gaussian distribution. FID measures the difference between the Gaussians (representing the real and generated images) using the Frechet distance, which effectively captures differences in the mean and covariance (the first two moments) of the distributions. FID makes sense as it directly compares the distributions of real and generated images by using the extracted features from Inception. These features are assumed to follow some multidimensional Gaussian, which simplifies the comparison. The Guassian is chosen as it is the maximum entropy distribution for a given mean and covariance (proof: https://medium.com/mathematical-musings/how-gaussian-distribution-maximizes-entropy-the-proof-7f7dcb2caf4d) -- maximum entropy is important, because this means that the Gaussian makes the fewest additional assumptions about the data, making sure the model is as non-committal as possible given the available information. Then, we calculate the statistics between the real and generated image features, like their mean and covariances. Finally, we compute the FID score using Frechet AKA Wasserstein-2 distance.",
     "link": "https://arxiv.org/pdf/2212.09748"
@@ -12,7 +66,7 @@
     "title": "Scalable Diffusion Models with Transformers",
     "author": "William Peebles et al",
     "year": "2023",
-    "topic": "Diffusion, DDPM, DiT",
+    "topic": "diffusion,ddpm, dit",
     "venue": "CVPR",
     "description": "The authors explore using transformers in the latent space, rather than U-Nets. They find that their methods can lead to lower FID scores compared to prior SOTA. In this paper, their image generation pipeline is roughly: 1) Input high resolution image x 2) Encoder z = E(x), where E is a pre-trained frozen VAE encoder, and z is the latent representation 3) The DiT model operates on z 4) New latent representation z’ is sampled from the diffusion model 5) We then decode the z’ using the pre-trained frozen VAE decoder D, and x’ is now the generated high resolution image.",
     "link": "https://arxiv.org/pdf/2212.09748"
@@ -390,7 +444,7 @@
     "title": "1D convolution neural networks and applications: A survey",
     "author": "Serkan Kiranyaz et al",
     "year": "2020",
-    "topic": "cnn",
+    "topic": "cnn, survey",
     "venue": "Mechanical Systems and Signal Processing",
     "description": "A brief overview of applications of 1D CNNs is performed. It is largely focused on medicine (for instance, ECG) and fault detection (for instance, vibration based structural damage).",
     "link": "https://arxiv.org/pdf/1905.03554"
