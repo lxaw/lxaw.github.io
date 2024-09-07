@@ -1,5 +1,23 @@
 [
   {
+    "title": "LLM Inference Unveiled: Survey and Roofline Model Insights",
+    "author": "Roger Waleffe et al",
+    "year": "2024",
+    "topic": "llms, survey",
+    "venue": "Arxiv",
+    "description": "This paper surveys some recent advancements in LLC inference, like speculative decoding or operator fusion. They also analyze the findings using the Roofline model, which is likely the first paper to do such a thing for LLM inference. Good for checking out other papers that have recently been published.",
+    "link": "https://arxiv.org/pdf/2402.16363"
+  },
+  {
+    "title": "An Empircal Study of Mamba-based Language Models",
+    "author": "Roger Waleffe et al",
+    "year": "2024",
+    "topic": "mamba, llms, transformer",
+    "venue": "Arxiv",
+    "description": "This paper compares Mamba-based, Transformer-based, and hybrid-based language models in a controlled setting where sizes and datasets are larger than the past (8B-params / 3.5T tokens). They find that Mamba and Mamba-2 lag behind Transformer models on copying and in-context learning tasks. They then see that a hybrid architecture of 43% Mamba, 7% self attention, and 50% MLP layers performs better than all others.",
+    "link": "https://arxiv.org/pdf/2406.07887"
+  },
+  {
     "title": "Diffusion Models Beat GANs on Image Synthesis",
     "author": "Prafulla Dhariwal et al",
     "year": "2021",
