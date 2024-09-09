@@ -1,5 +1,14 @@
 [
   {
+    "title": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+    "author": "Alex Nichol et al",
+    "year": "2022",
+    "topic": "text-conditioned diffusion, inpainting",
+    "venue": "Arxiv",
+    "description": "This paper explores text-conditional image synthesis using diffusion models, comparing CLIP guidance and classifier-free guidance, and finds that classifier-free guidance produces more photorealistic and caption-aligned images.",
+    "link": "https://arxiv.org/pdf/2112.10741"
+  },
+  {
     "title": "LLM Inference Unveiled: Survey and Roofline Model Insights",
     "author": "Roger Waleffe et al",
     "year": "2024",
