@@ -1,5 +1,14 @@
 [
   {
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "author": "Jianlin Su et al",
+    "year": "2021",
+    "topic": "attention, positional embedding",
+    "venue": "Arxiv",
+    "description": "This paper introduces Rotary Position Embedding (RoPE), a method for integrating positional information into transformer models by using a rotation matrix to encode absolute positions and incorporating relative position dependencies.",
+    "link": "https://arxiv.org/pdf/2104.09864"
+  },
+  {
     "title": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
     "author": "Alex Nichol et al",
     "year": "2022",
