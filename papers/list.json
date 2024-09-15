@@ -1,6 +1,15 @@
 [
   {
-    "title": "LD-Pruner",
+    "title": "Classifier-Free Diffusion Guidance",
+    "author": "Jonathan Ho et al",
+    "year": "2022",
+    "topic": "diffusion, guidance",
+    "venue": "NeurIPS",
+    "description": "This paper introduces classifier-free guidance, a novel technique for improving sample quality in conditional diffusion models without using a separate classifier. Unlike traditional classifier guidance, which relies on gradients from an additional classifier model, classifier-free guidance achieves similar results by combining score estimates from jointly trained conditional and unconditional diffusion models. The method involves training a single neural network that can produce both conditional and unconditional score estimates, and then using a weighted combination of these estimates during the sampling process. This approach simplifies the training pipeline, avoids potential issues associated with training classifiers on noisy data, and eliminates the need for adversarial attacks on classifiers during sampling. The authors demonstrate that classifier-free guidance can achieve a similar trade-off between Fréchet Inception Distance (FID) and Inception Score (IS) as classifier guidance, effectively boosting sample quality while reducing diversity. The key difference is that classifier-free guidance operates purely within the generative model framework, without relying on external classifier gradients. This method provides an intuitive explanation for how guidance works: it increases conditional likelihood while decreasing unconditional likelihood, pushing generated samples towards more characteristic features of the desired condition.",
+    "link": "https://arxiv.org/pdf/2207.12598"
+  },
+  {
+    "title": "LD-Pruner: Efficient Pruning of Latent Diffusion Models using Task-Agnostic Insights",
     "author": "Thibault Castells et al",
     "year": "2024",
     "topic": "pruning, diffusion, ldm",
@@ -36,7 +45,7 @@
     "link": "https://arxiv.org/pdf/2402.16363"
   },
   {
-    "title": "An Empircal Study of Mamba-based Language Models",
+    "title": "An Empirical Study of Mamba-based Language Models",
     "author": "Roger Waleffe et al",
     "year": "2024",
     "topic": "mamba, llms, transformer",

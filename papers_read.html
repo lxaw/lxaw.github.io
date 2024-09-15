@@ -37,10 +37,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 119 papers. Let's keep it up!
+        So far, we have read 120 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 119 papers. Nice! 
+        Your search returned 120 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -68,7 +68,17 @@
         <tbody>
         
             <tr>
-                <td>LD-Pruner</td>
+                <td>Classifier-Free Diffusion Guidance</td>
+                <td>Jonathan Ho et al</td>
+                <td>2022</td>
+                <td>diffusion, guidance</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces classifier-free guidance, a novel technique for improving sample quality in conditional diffusion models without using a separate classifier. Unlike traditional classifier guidance, which relies on gradients from an additional classifier model, classifier-free guidance achieves similar results by combining score estimates from jointly trained conditional and unconditional diffusion models. The method involves training a single neural network that can produce both conditional and unconditional score estimates, and then using a weighted combination of these estimates during the sampling process. This approach simplifies the training pipeline, avoids potential issues associated with training classifiers on noisy data, and eliminates the need for adversarial attacks on classifiers during sampling. The authors demonstrate that classifier-free guidance can achieve a similar trade-off between Fréchet Inception Distance (FID) and Inception Score (IS) as classifier guidance, effectively boosting sample quality while reducing diversity. The key difference is that classifier-free guidance operates purely within the generative model framework, without relying on external classifier gradients. This method provides an intuitive explanation for how guidance works: it increases conditional likelihood while decreasing unconditional likelihood, pushing generated samples towards more characteristic features of the desired condition.</td>
+                <td><a href="https://arxiv.org/pdf/2207.12598" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LD-Pruner: Efficient Pruning of Latent Diffusion Models using Task-Agnostic Insights</td>
                 <td>Thibault Castells et al</td>
                 <td>2024</td>
                 <td>pruning, diffusion, ldm</td>
@@ -108,7 +118,7 @@
             </tr>
         
             <tr>
-                <td>An Empircal Study of Mamba-based Language Models</td>
+                <td>An Empirical Study of Mamba-based Language Models</td>
                 <td>Roger Waleffe et al</td>
                 <td>2024</td>
                 <td>mamba, llms, transformer</td>
