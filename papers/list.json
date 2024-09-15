@@ -1,5 +1,14 @@
 [
   {
+    "title": "LD-Pruner",
+    "author": "Thibault Castells et al",
+    "year": "2024",
+    "topic": "pruning, diffusion, ldm",
+    "venue": "CVPR",
+    "description": "This paper presents LD-Pruner. The main interesting part is how the frame the pruning problem. Basically, they define an \"operator\" (any fundamental building block of a net, like convolutional layers, activation functions, transformer blocks), and try to either 1) remove it or 2) replace it with a less demanding operation. As they operate on the latent space, this work can be applied to any generation that uses diffusion (task agnostic). It is interesting to note their limitations: the approach does not extend to pruning the decoder, and their approach does not consider dependencies between operators (which is a big deal I think). Finally, their score function seems a bit arbitrary (maybe this could be learned?).",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024W/EDGE/papers/Castells_LD-Pruner_Efficient_Pruning_of_Latent_Diffusion_Models_using_Task-Agnostic_Insights_CVPRW_2024_paper.pdf"
+  },
+  {
     "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
     "author": "Jianlin Su et al",
     "year": "2021",

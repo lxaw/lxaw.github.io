@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +37,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 0 papers. Let's keep it up!
+        So far, we have read 119 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        your search returned 0 papers. nice! 
+        Your search returned 119 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -65,7 +66,1197 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Table body will be populated by JavaScript -->
+        
+            <tr>
+                <td>LD-Pruner</td>
+                <td>Thibault Castells et al</td>
+                <td>2024</td>
+                <td>pruning, diffusion, ldm</td>
+                <td>CVPR</td>
+                <td>This paper presents LD-Pruner. The main interesting part is how the frame the pruning problem. Basically, they define an &quot;operator&quot; (any fundamental building block of a net, like convolutional layers, activation functions, transformer blocks), and try to either 1) remove it or 2) replace it with a less demanding operation. As they operate on the latent space, this work can be applied to any generation that uses diffusion (task agnostic). It is interesting to note their limitations: the approach does not extend to pruning the decoder, and their approach does not consider dependencies between operators (which is a big deal I think). Finally, their score function seems a bit arbitrary (maybe this could be learned?).</td>
+                <td><a href="https://openaccess.thecvf.com/content/CVPR2024W/EDGE/papers/Castells_LD-Pruner_Efficient_Pruning_of_Latent_Diffusion_Models_using_Task-Agnostic_Insights_CVPRW_2024_paper.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>RoFormer: Enhanced Transformer with Rotary Position Embedding</td>
+                <td>Jianlin Su et al</td>
+                <td>2021</td>
+                <td>attention, positional embedding</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Rotary Position Embedding (RoPE), a method for integrating positional information into transformer models by using a rotation matrix to encode absolute positions and incorporating relative position dependencies.</td>
+                <td><a href="https://arxiv.org/pdf/2104.09864" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models</td>
+                <td>Alex Nichol et al</td>
+                <td>2022</td>
+                <td>text-conditioned diffusion, inpainting</td>
+                <td>Arxiv</td>
+                <td>This paper explores text-conditional image synthesis using diffusion models, comparing CLIP guidance and classifier-free guidance, and finds that classifier-free guidance produces more photorealistic and caption-aligned images.</td>
+                <td><a href="https://arxiv.org/pdf/2112.10741" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LLM Inference Unveiled: Survey and Roofline Model Insights</td>
+                <td>Roger Waleffe et al</td>
+                <td>2024</td>
+                <td>llms, survey</td>
+                <td>Arxiv</td>
+                <td>This paper surveys some recent advancements in LLC inference, like speculative decoding or operator fusion. They also analyze the findings using the Roofline model, which is likely the first paper to do such a thing for LLM inference. Good for checking out other papers that have recently been published.</td>
+                <td><a href="https://arxiv.org/pdf/2402.16363" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>An Empircal Study of Mamba-based Language Models</td>
+                <td>Roger Waleffe et al</td>
+                <td>2024</td>
+                <td>mamba, llms, transformer</td>
+                <td>Arxiv</td>
+                <td>This paper compares Mamba-based, Transformer-based, and hybrid-based language models in a controlled setting where sizes and datasets are larger than the past (8B-params / 3.5T tokens). They find that Mamba and Mamba-2 lag behind Transformer models on copying and in-context learning tasks. They then see that a hybrid architecture of 43% Mamba, 7% self attention, and 50% MLP layers performs better than all others.</td>
+                <td><a href="https://arxiv.org/pdf/2406.07887" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion Models Beat GANs on Image Synthesis</td>
+                <td>Prafulla Dhariwal et al</td>
+                <td>2021</td>
+                <td>diffusion, gan</td>
+                <td>Arxiv</td>
+                <td>This work demonstrates that diffusion models surpass the current state-of-the-art generative models in image quality, achieved through architecture improvements and classifier guidance, which balances diversity and fidelity. The model attains FID scores of 2.97 on ImageNet 128×128 and 4.59 on ImageNet 256×256, matching BigGAN-deep with as few as 25 forward passes while maintaining better distribution coverage. Additionally, combining classifier guidance with upsampling diffusion models further enhances FID scores to 3.94 on ImageNet 256×256 and 3.85 on ImageNet 512×512.</td>
+                <td><a href="https://arxiv.org/pdf/2105.05233" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Progressive Distillation for Fast Sampling of Diffusion Models</td>
+                <td>Tim Salimans et al</td>
+                <td>2022</td>
+                <td>diffusion, distillation, sampling</td>
+                <td>ICLR</td>
+                <td>Diffusion models excel in generative modeling, surpassing GANs in perceptual quality and autoregressive models in density estimation, but they suffer from slow sampling times. This paper introduces two key contributions: new parameterizations that improve stability with fewer sampling steps and a distillation method that progressively reduces the number of required steps by half each time. Applied to benchmarks like CIFAR-10 and ImageNet, the approach distills models from 8192 steps down to as few as 4 steps, maintaining high image quality while offering a more efficient solution for both training and inference.</td>
+                <td><a href="https://arxiv.org/pdf/2202.00512" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On Distillation of Guided Diffusion Models</td>
+                <td>Chenlin Meng et al</td>
+                <td>2023</td>
+                <td>diffusion, classifier-free guidance</td>
+                <td>Arxiv</td>
+                <td>Classifier-free guided diffusion models are effective for high-resolution image generation but are computationally expensive during inference due to the need to evaluate both conditional and unconditional models many times. This paper proposes a method to distill these models into faster ones by learning a single model that approximates the combined outputs, then progressively reducing the number of sampling steps. The approach significantly accelerates inference, generating images with comparable quality to the original model using as few as 1-4 denoising steps, achieving up to 256× speedup on datasets like ImageNet and LAION.</td>
+                <td><a href="https://arxiv.org/pdf/2210.03142" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion Probabilistic Models Made Slim</td>
+                <td>Xingyi Yang et al</td>
+                <td>2022</td>
+                <td>diffusion, dpms, spectral diffusion</td>
+                <td>Arxiv</td>
+                <td>Diffusion Probabilistic Models (DPMs) produce impressive visual results but suffer from high computational costs, limiting their use on resource-limited platforms. This paper introduces Spectral Diffusion (SD), a lightweight model designed to address DPMs&#x27; bias against high-frequency generation, which smaller networks struggle to capture. SD incorporates wavelet gating for frequency dynamics and spectrum-aware distillation to enhance high-frequency recovery, achieving 8-18× computational efficiency while maintaining competitive image fidelity.</td>
+                <td><a href="https://arxiv.org/pdf/2211.17106" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Structural Pruning for Diffusion Models</td>
+                <td>Gongfan Fang et al</td>
+                <td>2023</td>
+                <td>diffusion, pruning</td>
+                <td>NeurIPS</td>
+                <td>Generative modeling has advanced significantly with Diffusion Probabilistic Models (DPMs), but these models often require substantial computational resources. To address this, Diff-Pruning is introduced as a compression method that reduces the computational load by pruning unnecessary diffusion steps, using a Taylor expansion to identify key weights without extensive re-training. Empirical results show that Diff-Pruning can cut FLOPs by around 50%, while maintaining consistent generative performance at only 10-20% of the original training cost.</td>
+                <td><a href="https://arxiv.org/pdf/2305.10924" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion Models: A Comprehensive Survey of Methods and Applications</td>
+                <td>Ling Yang et al</td>
+                <td>2024</td>
+                <td>diffusion, survey</td>
+                <td>ACM</td>
+                <td>Diffusion models are a powerful class of deep generative models known for their success in tasks like image synthesis, video generation, and molecule design. This survey categorizes diffusion model research into efficient sampling, improved likelihood estimation, and handling specialized data structures, while also discussing the potential for combining them with other generative models. The review highlights their broad applications across fields such as computer vision, NLP, temporal data modeling, and interdisciplinary sciences, suggesting areas for further exploration.</td>
+                <td><a href="https://arxiv.org/pdf/2209.00796" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium</td>
+                <td>Martin Heusel et al</td>
+                <td>2017</td>
+                <td>gan, equilibrium, fid, is</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces a two time-scale update rule (TTUR) for GANs, and proves that this makes GANs converge to a local Nash equilibrium. More cited is the FID score introduced here. FID improves on IS by comparing the distributions of real and generated images directly. This is done by using the Inception model to extract features from images and then assuming these features follow a multidimensional Gaussian distribution. FID measures the difference between the Gaussians (representing the real and generated images) using the Frechet distance, which effectively captures differences in the mean and covariance (the first two moments) of the distributions. FID makes sense as it directly compares the distributions of real and generated images by using the extracted features from Inception. These features are assumed to follow some multidimensional Gaussian, which simplifies the comparison. The Guassian is chosen as it is the maximum entropy distribution for a given mean and covariance (proof: https://medium.com/mathematical-musings/how-gaussian-distribution-maximizes-entropy-the-proof-7f7dcb2caf4d) -- maximum entropy is important, because this means that the Gaussian makes the fewest additional assumptions about the data, making sure the model is as non-committal as possible given the available information. Then, we calculate the statistics between the real and generated image features, like their mean and covariances. Finally, we compute the FID score using Frechet AKA Wasserstein-2 distance.</td>
+                <td><a href="https://arxiv.org/pdf/2212.09748" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Scalable Diffusion Models with Transformers</td>
+                <td>William Peebles et al</td>
+                <td>2023</td>
+                <td>diffusion,ddpm, dit</td>
+                <td>CVPR</td>
+                <td>The authors explore using transformers in the latent space, rather than U-Nets. They find that their methods can lead to lower FID scores compared to prior SOTA. In this paper, their image generation pipeline is roughly: 1) Input high resolution image x 2) Encoder z = E(x), where E is a pre-trained frozen VAE encoder, and z is the latent representation 3) The DiT model operates on z 4) New latent representation z’ is sampled from the diffusion model 5) We then decode the z’ using the pre-trained frozen VAE decoder D, and x’ is now the generated high resolution image.</td>
+                <td><a href="https://arxiv.org/pdf/2212.09748" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Max-Affine Spline Insights Into Deep Network Pruning</td>
+                <td>Haoran You et al</td>
+                <td>2022</td>
+                <td>early-bird, lottery-hypothesis, pruning, low-precision</td>
+                <td>TMLR</td>
+                <td>The authors make connections from spline-theory (AKA, consdering DNNs as a continuous piecewise affline mapping) and pruning. Basically, they say that pruning removes redundant decision boundaries in layers that are pruned, and that we can compare the decision boundaries of unpruned networks to their pruned counterparts to show this (they have some nice visualizations). They also note that the final decision boundary often does not always depend on existing subdivision lines. Finally, they demonstrate another way of finding EB tickets using this spline formulation.</td>
+                <td><a href="https://arxiv.org/pdf/2101.02338" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Drawing Early-Bird Tickets: Towards More Efficient Training of Deep Networks</td>
+                <td>Haoran You et al</td>
+                <td>2020</td>
+                <td>early-bird, lottery-hypothesis, pruning, low-precision</td>
+                <td>ICLR</td>
+                <td>The authors show that there exist early-bird (EB) tickets: small, but critical subnetworks for dense randomly intialized networks, that can be found using low-cost training schemes (low precision, early stopping). They also design a practical low compute method for finding these. They use mask distance. Basically, for each pruning iteration, a binary mask is created. This mask represents which parts of the network are kept (the &quot;ticket&quot;, or pruned subnet) and which parts are removed. They then consider the scaling factor &quot;r&quot; in BN layers as indicators of significance. This r is learned during training and is used to scale normalized activations. The magnitude of r is an indicator of how important the channel is to the network&#x27;s performance. After deciding which channels to prune based on r, the binary mask is created. If the channel is kept (not pruned), marked as 1 in the mask. Else, 0. For any two subnets, they then compute the &quot;mask distance&quot; (AKA Hamming distance) between the two ticketmasks. They measure the mask distance between consequtive epochs and draw EB tickets when such distance is smaller than some threshold.</td>
+                <td><a href="https://arxiv.org/pdf/1909.11957" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Learning both Weights and Connections for Efficient Neural Networks</td>
+                <td>Song Han et al</td>
+                <td>2015</td>
+                <td>pruning, compression, regularization</td>
+                <td>NeurIPS</td>
+                <td>The authors show a method of pruning neural networks in three steps: 1) train the network to learn what connections are important, 2) prune unimportant connections, 3) retrain and fine-tune. In order to train for learning what connections are important, they do not focus on learning the final weight values, but rather just focus on the importance of connections. They don&#x27;t explicitly mention how this is done, but one could look at the Hessian of the loss or the magnitude of the weights. I&#x27;d imagine you could do this within only a few training iterations. In their &quot;Regularization&quot; section, it is interesting to note that L1 regularization (penalizes non-zero params resulting in more params near zero) gave better accuracy after pruning, but before retraining. But, these remaining connections are not as good as with using L2. The authors also present a discussion of what dropout rate to use.</td>
+                <td><a href="https://arxiv.org/pdf/1506.02626" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference</td>
+                <td>Jiaming Tang et al</td>
+                <td>2024</td>
+                <td>KV cache, sparsity, LLM</td>
+                <td>ICML</td>
+                <td>Long context LLM inference is slow and the speed decreases significantly as sequence lengths grow. This is mainly due to needing to load a big KV cache during self-attention. Prior works have use methods to evict tokens in the attention maps to promote sparsity, but the Han lab (smartly!) found that the criticality of tokens strongly correlates with the current query token. Thus, they employ a KV Cache eviction method that retains all KV cache (since past evicted tokens may be needed to handle future queries), while being able to select the top K relevant tokens to a particular query. This allows for speedups in self-attention at low cost to accuracy.</td>
+                <td><a href="https://arxiv.org/pdf/2406.10774" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>BigNAS: Scaling Up Neural Architecture Search with Big Single-Stage Models</td>
+                <td>Jiahui Yu et al</td>
+                <td>2020</td>
+                <td>NAS, one-shot</td>
+                <td>Arxiv</td>
+                <td>Most NAS frameworks train some one-shot model to rank the quality of different child architectures. However, these rankings often are different than reality, so frameworks typically finetune architecture after finding them. BigNAS proposes that this fine-tuning / post-processing is not necessary. They find some interesting points, such as that &quot;big models converge faster while small child models converge slower&quot;. Thus, at some training step t when the performance of a big model peaks, the small child models are not yet fully-trained, and at a t&#x27; where the child models are fully trained, the big model is overfitting. Thus, they use an exponentially decaying with constant ending learning rate scheduler, which has constant learning rate at the end of training when it reaches 5% of initial learning rate. Another point they bring up is a &quot;coarse-to-fine&quot; strategy where one first finds a rough sketch of promising network candidates, and then samples multiple finer grained variations around the sketch of interest.</td>
+                <td><a href="https://arxiv.org/pdf/2003.11142" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Meta-Learning of Neural Architectures for Few-Shot Learning</td>
+                <td>Thomas Elsken et al</td>
+                <td>2021</td>
+                <td>NAS, meta-learning, few-shot, fsl</td>
+                <td>Arxiv</td>
+                <td>The authors propose MetaNAS, which is the first method that fully integrates NAS with gradient-based meta-learning. Basically, they learn a method of joint learning gradient-based NAS methods like DARTS and meta-learning the architecture itself. Their goal is thus: meta-learn an architecture \alpha_{meta} with corresponding meta-learned weights w_{meta}. When given a new task \mathcal{T}_{i}, both \alpha_{meta} and w_{meta} adapt quickly to \mathcal{T}_{i} based on a few samples. One interesting technique they do is add a temperature term that is annealed to 0 over the course of task training; this is to help with sparsity of the mixture weights of the operations when using the DARTS search.</td>
+                <td><a href="https://arxiv.org/pdf/1911.11090" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification</td>
+                <td>Sivan Doveh et al</td>
+                <td>2020</td>
+                <td>NAS, meta-learning, few-shot, fsl</td>
+                <td>Arxiv</td>
+                <td>The authors propose a method using a DARTS-like search for FSL architectures. &quot;Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.&quot;. Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.</td>
+                <td><a href="https://arxiv.org/pdf/1912.00412" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Distilling the Knowledge in a Neural Network</td>
+                <td>Geoffry Hinton et al</td>
+                <td>2015</td>
+                <td>distillation, ensemble, MoE</td>
+                <td>Arxiv</td>
+                <td>The first proposal of knowledge distillation. The main interesting point I found was that they change the temperature of the softmax to be higher to allow for softer targets. This allows for understanding what 2&#x27;s look like 3&#x27;s (in an MNIST example). Basically, adds a sort of regularization since more information can be carried in these softer targets compared to a single 0 or 1. They also propose the idea of having an ensemble of models, and then learning a distilled model that is smaller. The biological example of having a clumsy larvae that then becomes a more specialized bug was good.</td>
+                <td><a href="https://arxiv.org/pdf/1503.02531" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>HyperTuning: Toward Adapting Large Language Models without Back-propagation</td>
+                <td>Jason Phang et al</td>
+                <td>2023</td>
+                <td>hypernetworks, adaptation, tuning, LoRA, LLMs</td>
+                <td>ICML</td>
+                <td>The authors show that we can a hypernetwork for model adaptation in order to generate task-specific parameters. They try two approaches: generating prefixs and generating LoRA parameters for a frozen T5 model using few-shot examples. They also note the importance of hyperpretraining, i.e., an additional stage to adapt the hypernet to generate parameters for the downstream model. They also propose a scheme for this. NOTE! &quot;We also observe a consistent trend where HyperT5-Prefix outperforms HyperT5-LoRA. We speculate that it is easier for hypermodels to learn to generate soft prefixes as compared to LoRA weights...&quot;</td>
+                <td><a href="https://arxiv.org/pdf/2211.12485" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning</td>
+                <td>Armen Aghajanyan et al</td>
+                <td>2020</td>
+                <td>fine-tuning, intrinsic dimension, lora</td>
+                <td>Arxiv</td>
+                <td>Large models with billions of parameters can be fine-tuned using only a few hundred examples. Why is this? Furthermore, large models often allow for significant sparsification, which implies that there is much redundancy. This paper targets both of these ideas, by showing that many common models have an &quot;intrinsic dimension&quot; much less than the full parameterization.</td>
+                <td><a href="https://arxiv.org/pdf/2012.13255" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LoRA: Low-Rank Adaptation of Large Language Models</td>
+                <td>Edward Hu et al</td>
+                <td>2021</td>
+                <td>low rank adaptation, lora, llm, fine-tuning</td>
+                <td>Arxiv</td>
+                <td>Fine-tuning large models is expensive, because we update all the original parameters. LoRA, taking inspiration from Aghajanyan et al, 2020 (pre-trained language models have a low &quot;intrinsic dimension&quot;), the authors thought that the weight updates would also have low intrinsic rank. Thus, they decompose Delta W = BA, where B and A are lower rank. The A and B are trainable. They initialize A with Gaussian, and B as zero, so Delta W = BA is zero initialy. They then optimize and find this method to be more efficient in terms of both time and space.</td>
+                <td><a href="https://arxiv.org/pdf/2106.09685" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Learning to Compress Prompts with Gist Tokens</td>
+                <td>Jesse Mu et al</td>
+                <td>2023</td>
+                <td>llms, prompting, compression, tokens</td>
+                <td>NeurIPS</td>
+                <td>The authors describe a method of using a distilling function G (similar to a hypernet) that is able to compress LM prompts into a smaller set of &quot;gist&quot; tokens. These tokens can then be cached and reused. The neat trick is that they reuse the LM itself as G, so gisting itself incurs no additional training cost. Note that in their &quot;Failure Cases&quot; section, they mention &quot;... While it is unclear why only the gist models exhibit this behavior (i.e. the fail example behavior), these issues can likely be mitigated with more careful sampling techniques.</td>
+                <td><a href="https://arxiv.org/pdf/2304.08467" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Once-For-All: Train One Network and Specialize it For Efficient Deployment</td>
+                <td>Han Cai et al</td>
+                <td>2020</td>
+                <td>nas, supernets</td>
+                <td>ICLR</td>
+                <td>The authors proposed training one large supernetwork and then sampling subnetworks as an approach for NAS. This method allows for the simultaneous generation of many different subnetworks that could satisfy different constraints (i.e. hardware, latency, accuracy, etc). The authors also propose a progressive shrinking method to train the net (start by training the big supernet, then progressively shrink down), which can be seen as a generalized pruning method. Furthermore, they introduce an idea of training a twin neural network to help estimate latency / accuracy given some architecture, which allows for fast feedback when conducting the search for subnetworks.</td>
+                <td><a href="https://arxiv.org/abs/1908.09791" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Dataless Knowledge Fusion by Merging Weights</td>
+                <td>Xisen Jin et al</td>
+                <td>2023</td>
+                <td>knowledge fusion, weight merging</td>
+                <td>ICLR</td>
+                <td>The paper introduces RegMean, a method for merging pre-trained language models from different datasets by solving a linear optimization problem, which improves generalization across domains without requiring the original training data. Compared to existing methods like Simple Averaging and Fisher Averaging, RegMean offers higher computational efficiency and comparable memory overhead, while achieving better or equivalent performance across various natural language tasks, including out-of-domain generalization. The method is evaluated using GLUE datasets and demonstrates superior performance in most tasks, outperforming traditional model ensembling and multi-task learning approaches.</td>
+                <td><a href="https://arxiv.org/pdf/2212.09849" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Superposition of Many Models into One</td>
+                <td>Cheung et al</td>
+                <td>2019</td>
+                <td>superposition, online learning, tasks, continual learning</td>
+                <td>NeurIPS</td>
+                <td>A method of storing multiple models using only one set of parameters via parameter superposition is provided; it shares similarities to superposition in the fourier analysis for signal processing.</td>
+                <td><a href="https://arxiv.org/pdf/1902.05522" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation</td>
+                <td>Yoshua Bengio et al</td>
+                <td>2013</td>
+                <td>gradients, stochasticy, backpropagation</td>
+                <td>Arxiv</td>
+                <td>The authors introduce a several methods of estimation / propagation for networks that have stochastic neurons. This is used often in networks that are quantization-aware, as they sometimes have decision-boundaries in the neurons that are not differentiable regularly. The paper also introduces the &quot;Straight Through Estimator&quot;, which was actually first introduced in one of Hinton&#x27;s lectures. One interesting idea they present (that I think may have also been introduced in Kingma&#x27;s VAE paper?) is that we can model the output h_{i} of some stochastic neuron as the application of a deterministic function that also depends on some noise source z_{i}: h_{i} = f(a_{i},z_{i}). TLDR: Straight through units are typically the go-to due to ease of use and good performance.</td>
+                <td><a href="https://arxiv.org/pdf/1308.3432" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DoReFaNet: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients</td>
+                <td>Shuchang Zhou et al</td>
+                <td>2018</td>
+                <td>quantization, cnn, gradients</td>
+                <td>Arxiv</td>
+                <td>The authors introduce a method to train CNNs with low bitwidth weights and activations using low bitwidth param gradients. They use deterministic quantization for weights and activations, while stochastically quantizing gradients. Note that they do not quantize the weights of the first CNN layer for the most part, as they noted that it would often degrade performance (Han et al. 2015 also notes a similar thing). Another interesting thing they do is add noise to the gradient after quantization to increase performance. This paper also uses the straight through estimator (Bengio et al 2013) for propagating gradients when using their quantization scheme.</td>
+                <td><a href="https://arxiv.org/pdf/1606.06160" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Training Deep Neural Networks with 8-bit Floating Point Numbers</td>
+                <td>Naigang Wang et al</td>
+                <td>2018</td>
+                <td>quantization, floating-point, precision</td>
+                <td>NeurIPS</td>
+                <td>The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develop a technique &quot;chunk-based computations&quot; that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates. One interesting point they make is that swamping (the issue of truncation in large-to-small number addition) is a serious problem in DNN bit-precision reduction.</td>
+                <td><a href="https://arxiv.org/pdf/1812.08011" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference</td>
+                <td>Benoit Jacob et al</td>
+                <td>2017</td>
+                <td>quantization, quantization schemes, efficient inference, floating-point</td>
+                <td>Arxiv</td>
+                <td>The authors propose a quantization scheme that allows us to only use integer arithmetic to approximate fp computations in a neural network. They also describe a training approach that simulates the effect of quantization in the forward pass. Backprop still occurs, but all weights and biases are stored in fp. The forward prop pass then simulates quantized inference by rounding off using the quantization scheme they describe that changes fp to int.</td>
+                <td><a href="https://arxiv.org/pdf/1712.05877" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>PACT: Parameterized Clipping Activation for Quantized Neural Networks</td>
+                <td>Jungwook Choi et al</td>
+                <td>2018</td>
+                <td>quantization, clipping, activations</td>
+                <td>ICLR</td>
+                <td>The authors present a method of quantization by clipping activations using a learnable parameter, alpha. They show that this can lead to lower decreases in accuracy compared to other quantization methods. They also note that activations have been hard to quantize compared to weights in the past. They also prove that PACT is as expressive as ReLU, by showing it can reach the same solution as ReLU if SGD is used. They also describe the hardware benefits that can be incurred.</td>
+                <td><a href="https://arxiv.org/pdf/1805.06085" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>SMASH: One-Shot Model Architecture Search through Hypernetworks</td>
+                <td>Andrew Brock et al</td>
+                <td>2017</td>
+                <td>hypernetworks, nas, one-shot, few-shot</td>
+                <td>Arxiv</td>
+                <td>The authors propose a technique to speed up NAS by using a hypernet. Basically, they train a hypernet to generate weights of a main model that has variable architecure. The input to the hypernet is a binarized representation of model architecture. The hypernet takes this representation in, and then outputs weights. They then train only for a few epochs, and compare the validation scores obtained across different representations. Then, they fully train the model that had the best validation score.</td>
+                <td><a href="https://arxiv.org/abs/1708.05344" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Example-based Hypernetworks for Multi-source Adaptation to Unseen Domains</td>
+                <td>Tomer Volk et al</td>
+                <td>2023</td>
+                <td>hypernetworks, multi-source adaptation, unseen domains, NLP</td>
+                <td>EMNLP</td>
+                <td>The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain&#x27;s semantic space. The signature is then used by a hypernet to generate the task classifier&#x27;s weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. </td>
+                <td><a href="https://aclanthology.org/2023.findings-emnlp.610.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Meta-Learning via Hypernetworks</td>
+                <td>Dominic Zhao et al</td>
+                <td>2020</td>
+                <td>hypernetworks, meta-learning</td>
+                <td>NeurIPS </td>
+                <td>The authors propose a soft weight-sharing hypernet architecture that performs well on meta-learning tasks. A good paper to show efforts in meta-learning with regards to hypernets, and comparing them to SOTA methods like Model-Agnostic Meta-Learning (MAML).</td>
+                <td><a href="https://neurips.cc/virtual/2020/20189" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>HyperDynamics: Meta-Learning Object and Agent Dynamics with Hypernetworks</td>
+                <td>Zhou Xian et al</td>
+                <td>2021</td>
+                <td>hypernetworks, meta-learning, dynamics</td>
+                <td>ICLR</td>
+                <td>The authors present a dynamics meta-learning framework which conditions on an agent&#x27;s interations w/ env and (optionally) the visual input from it. From this, they can generate params of a neural dynamics model. The three modules they use are 1) an encoding module that encodes a few agent-env interations / agent&#x27;s visual observations into a feature code, 2) a hypernet that conditions on the latent feature code to generate params of a dynamic model dedicated to this observed system, and 3) a target dynamics model that is made using the generated parameters, and takes input as a low-dim system state / agent action and outputs the prediction of next system state.</td>
+                <td><a href="https://arxiv.org/pdf/2103.09439" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Principled Weight Initialization for Hypernetworks</td>
+                <td>Oscar Chang et al</td>
+                <td>2020</td>
+                <td>hypernetworks, weight initialization</td>
+                <td>ICLR</td>
+                <td>Classical weight initialization techniques don&#x27;t really work on hypernets, because they fail to produce weights for the mainnet in the correct scale. The authors derive formulas for hyperfan-out and hyperfan-in weight initialization, and show that it works well for the mainnet.</td>
+                <td><a href="https://arxiv.org/pdf/2312.08399" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Continual Learning with Hypernetworks</td>
+                <td>Johannes von Oswald et al</td>
+                <td>2020</td>
+                <td>hypernetworks, continual learning, meta learning</td>
+                <td>ICLR</td>
+                <td>The authors present a method of preventing catastrophic forgetting, by using task-conditioned hypernets (i.e., hypernets that generate weights of target model based on some task embedding). Thus, rather than memorizing many data characteristics, we can split the problem into just learning a single point per task, given the task embedding.</td>
+                <td><a href="https://arxiv.org/pdf/1906.00695" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Stochastic Hyperparameter Optimization through Hypernetworks</td>
+                <td>Jonathan Lorraine et al</td>
+                <td>2018</td>
+                <td>hypernetworks, hyperparameters</td>
+                <td>ICLR</td>
+                <td>Using hypernetworks to learn hyperparameters. They replace the training optimization loop in favor of a differentiable hypernetwork to allow for tuning of hyperparameters using grad descent.</td>
+                <td><a href="https://arxiv.org/pdf/1802.09419" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Playing Atari with Deep Reinforcement Learning</td>
+                <td>Volodymyr Mnih et al</td>
+                <td>2013</td>
+                <td>q-learning, reinforcement learning</td>
+                <td>Arxiv</td>
+                <td>The authors present the first deep learning model that can learn complex control policies, and they teach it to play Atari 2600 games using Q-learning. Their goal was to create one net that can play as many games as possible.</td>
+                <td><a href="TODO" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Encoding</td>
+                <td>Song Han et al</td>
+                <td>2016</td>
+                <td>quantization, encoding, pruning</td>
+                <td>ICML</td>
+                <td>A three-pronged approach to compressing nets. They prune networks, then quantize and share weights, and then apply Huffman encoding.</td>
+                <td><a href="TODO" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or -1</td>
+                <td>Matthieu Courbariaux et al</td>
+                <td>2016</td>
+                <td>quantization, efficiency, binary</td>
+                <td>Arxiv</td>
+                <td>Introduction of training Binary Neural Networks, or nets with binary weights and activations. They also present experiments on deterministic vs stochastic binarization. They use the deterministic one for the most part, except for activations.</td>
+                <td><a href="TODO" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks</td>
+                <td>Mingxing Tan et al</td>
+                <td>2020</td>
+                <td>efficiency, scaling</td>
+                <td>ICML</td>
+                <td>A study of model scaling is presented. They propose a novel scaling method to uniformly scale all dimensions of depth/width/resolution using a compound coefficient. This paper presents a method for scaling width/depth/resolution; for instance, if you want to use 2^{N} more compute resources, then you can scale by their coefficients to do so. They also quantify the relationship between width, depth, and resolution.</td>
+                <td><a href="TODO" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>2-in-1 Accelerator: Enabling Random Precision Switch for Winning Both Adversarial Robustness and Efficiency</td>
+                <td>Yonggan Fu et al</td>
+                <td>2021</td>
+                <td>precision, adversarial, efficiency</td>
+                <td>ACM</td>
+                <td>Introduction of a Random Precision Switch algorithm that has potential for defending against adversarial attacks while promoting efficiency.</td>
+                <td><a href="TODO" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>The wake-sleep algorithm for unsupervised neural networks</td>
+                <td>Geoffry Hinton et al</td>
+                <td>1995</td>
+                <td>representation, generative</td>
+                <td>Arxiv</td>
+                <td>One of the first generative neural networks that kind of resembles diffusion.</td>
+                <td><a href="https://www.cs.toronto.edu/~hinton/csc2535/readings/ws.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>ViTCoD: Vision Transformer Acceleration via Dedicated Algorithm and Accelerator Co-Design</td>
+                <td>Haoran You et al</td>
+                <td>2022</td>
+                <td>vit, accelerator, attention</td>
+                <td>Arxiv</td>
+                <td>Co-deisng for ViTs. Prunes and polarizes attention maps to have denser/sparser patterns. Development of hardware accelerator as well.</td>
+                <td><a href="https://arxiv.org/pdf/2210.09573" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Evolving Neural Networks through Augmenting Topologies</td>
+                <td>Kenneth O. Stanley et al</td>
+                <td>2002</td>
+                <td>nas, evolution</td>
+                <td>Arxiv</td>
+                <td>Evolution for NAS.</td>
+                <td><a href="https://www.cse.unr.edu/~sushil/class/gas/papers/NEAT.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Brief Review of Hypernetworks in Deep Learning</td>
+                <td>Vinod Kumar Chauhan et al</td>
+                <td>2024</td>
+                <td>hypernetwork</td>
+                <td>Arxiv</td>
+                <td>Review of hypernets.</td>
+                <td><a href="https://arxiv.org/pdf/2306.06955" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>HyperNetworks</td>
+                <td>David Ha et al</td>
+                <td>2016</td>
+                <td>hypernetwork</td>
+                <td>Arxiv</td>
+                <td>Looking at HyperNetworks: networks that generate weights for other networks.</td>
+                <td><a href="https://arxiv.org/pdf/1609.09106" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Deep Learners Benefit More from Out-of-Distribution Examples</td>
+                <td>Yoshio Bengio et al</td>
+                <td>2024</td>
+                <td>ood</td>
+                <td>ICML</td>
+                <td>Evidence that ood samples can help learning. They also argue that intermediate levels of representation can benefit the models in multi-task settings.</td>
+                <td><a href="http://proceedings.mlr.press/v15/bengio11b/bengio11b.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Balanced Data, Imbalanced Spectra: Unveiling Class Disparities with Spectral Imbalance</td>
+                <td>Chiraag Kaushik et al</td>
+                <td>2024</td>
+                <td>spectra, class imbalance</td>
+                <td>ICML</td>
+                <td>Introduction of the idea of &quot;spectral imbalance&quot;, which can affect classification accuracy even when classes are balanced. Basically, they look at how the distributions of eigenvalues in different classes affect classification accuracy.</td>
+                <td><a href="https://arxiv.org/pdf/2402.11742" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DeepArchitect: Automatically Designing and Training Deep Architectures</td>
+                <td>Renato Negrinho et al</td>
+                <td>2017</td>
+                <td>nas</td>
+                <td>Arxiv</td>
+                <td>Proposal of a language to describe neural networks architectures. Can then describe them as trees to search through. Show different search methods for going through the trees (Monte Carlo tree search, random, use of surrogate function, etc.).</td>
+                <td><a href="https://arxiv.org/pdf/1704.08792" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Graph neural networks: A review of methods and applications</td>
+                <td>Jie Zhou et al</td>
+                <td>2020</td>
+                <td>gnn</td>
+                <td>AI Open</td>
+                <td>What graph neural networks are, what they are made of, how to train them. And examples. They describe a general design pipeline (Find graph structure, specify graph type and scale, design loss function) and explain the main modules in GNNs (propagation to propagate information between notes, sampling module to conduct the propagation, pooling module to extract information from notes).</td>
+                <td><a href="https://arxiv.org/pdf/1812.08434" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>1D convolution neural networks and applications: A survey</td>
+                <td>Serkan Kiranyaz et al</td>
+                <td>2020</td>
+                <td>cnn, survey</td>
+                <td>Mechanical Systems and Signal Processing</td>
+                <td>A brief overview of applications of 1D CNNs is performed. It is largely focused on medicine (for instance, ECG) and fault detection (for instance, vibration based structural damage).</td>
+                <td><a href="https://arxiv.org/pdf/1905.03554" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>2 in 1 Accelerator: Enabling Random Precision Switch for Winning Both Adversarial Robustness and Efficiency</td>
+                <td>Yonggan Fu et al</td>
+                <td>2021</td>
+                <td>quantization, accelerator</td>
+                <td>ACM</td>
+                <td>The most interesting point of this paper (among many things!) is the smart idea to use quantization as a way to boost DNN robustness. Cool!</td>
+                <td><a href="https://arxiv.org/pdf/2109.05223" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Token Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation</td>
+                <td>Junyoung Park et al</td>
+                <td>2024</td>
+                <td>efficiency, hardware, accelerator, attention</td>
+                <td>DAC</td>
+                <td>In autoregressive models with attention, off chip memory accesses need to be minimized. The authors note that there have been efforts to prune unimportant tokens, but these do not do much for removing tokens with attention scores near zero. The authors (smartly!) notice this issue, and provide a fast method of estimating the decision to prune or not based on estimation of the probability if a token is or is not important. An architecture for this is also provided.</td>
+                <td><a href="https://arxiv.org/pdf/2407.15131" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Maxout Networks</td>
+                <td>Ian Goodfellow et al</td>
+                <td>2013</td>
+                <td>dropout, maxout</td>
+                <td>ICML</td>
+                <td>The authors note that dropout is &quot;most effective when taking relatively large steps in parameter space. In this regime, each update can be seen as making a significat update to a different model on a different subset of the training set&quot;. I really liked that quote. They then develop the maxout unit, which iessentially takes the maxmimum across some number of affine transformations, allowing for learning of piecewise linear approximations of nonlinear functions.</td>
+                <td><a href="https://arxiv.org/pdf/1302.4389" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Geometric deep learning: Going beyond Euclidean data</td>
+                <td>Michael Bronstein et al</td>
+                <td>2017</td>
+                <td>geometric deep learning</td>
+                <td>IEEE SIG</td>
+                <td>Provides an overview of geometric deep learning, which are methods of generalizing DNNs to non Euclidean domains (graphs, manifolds, etc).</td>
+                <td><a href="https://arxiv.org/pdf/1611.08097" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Sampling in Constrained Domains with Orthogonal Space Variational Gradient Descent</td>
+                <td>Ruqi Zhang et al</td>
+                <td>2022</td>
+                <td>variational gradient descent, gradient flow</td>
+                <td>NeurIPS</td>
+                <td>The authors propose a new variational framework called O Gradient for sampling in implicitly defined constrained domains, using two orthogonal directions to drive the sampler towards the domain and explore it by decreasing a KL divergence. They prove the convergence of O Gradient and apply it to both Langevin dynamics and Stein Variational Gradient Descent (SVGD), demonstrating its effectiveness on various machine learning tasks.</td>
+                <td><a href="https://arxiv.org/pdf/2210.06447" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Entropy MCMC: Sampling from Flat Basins with Ease</td>
+                <td>Bolian Li et al</td>
+                <td>2024</td>
+                <td>sampling, bayesian, flat basins</td>
+                <td>ICML</td>
+                <td>The authors propose a practical MCMC algorithm for sampling from flat basins of DNN posterior distributions, using a guiding variable based on local entropy to steer the sampler. They prove the fast convergence rate of their method compared to existing flatness aware methods and demonstrate its superior performance on various tasks through comprehensive experiments. The method is mathematically simple and computationally efficient, making it suitable as a drop in replacement for standard sampling methods like SGLD.</td>
+                <td><a href="https://arxiv.org/pdf/2310.05401" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>AdderNet: Do We Really Need Multiplications in Deep Learning?</td>
+                <td>Hanting Chen et al</td>
+                <td>2021</td>
+                <td>multiplication-less, efficiency</td>
+                <td>CVPR</td>
+                <td>The authors show that with a cost of accuracy you can use additions instead of multiplications. They mainly tested CNNs.</td>
+                <td><a href="https://arxiv.org/pdf/1912.13200" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Explaining and Harnessing Adversarial Examples</td>
+                <td>Ian Goodfellow et al</td>
+                <td>2015</td>
+                <td>adversarial examples</td>
+                <td>ICLR</td>
+                <td>Adversarial examples (adding &quot;small but intentially worst case perturbations to examples from the dataset&quot;) proves to be an interesting method to train models. The authors also (smartly!) describe a method to generate adversarial examples by a linear method.</td>
+                <td><a href="https://arxiv.org/pdf/1412.6572" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Identifying and attacking the saddle point problem in high dimensional non convex optimization</td>
+                <td>Yann Dauphin et al</td>
+                <td>2014</td>
+                <td>saddle points, optimization</td>
+                <td>NeurIPS</td>
+                <td>The authors argue that saddle points, rather than local minima, are the primary challenge in minimizing non convex error functions in high dimensional spaces, based on insights from various scientific fields and empirical evidence. They explain that saddle points surrounded by high error plateaus can significantly slow down learning and create the illusion of local minima, particularly in high dimensional problems of practical interest. To address this challenge, the authors propose a new approach called the saddle free Newton method, designed to quickly escape high dimensional saddle points, unlike traditional gradient descent and quasi Newton methods.</td>
+                <td><a href="https://arxiv.org/pdf/1406.2572" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</td>
+                <td>Sergey Ioffe et al</td>
+                <td>2015</td>
+                <td>batch, normalization</td>
+                <td>PMLR</td>
+                <td>The authors identify internal covariate shift as a significant challenge in training deep neural networks, where the distribution of each layer&#x27;s inputs changes during training due to parameter updates in previous layers. To address this issue, they propose Batch Normalization, a method that normalizes layer inputs as part of the model architecture, performing normalization for each training mini batch. Batch Normalization enables the use of much higher learning rates, reduces sensitivity to initialization, and acts as a regularizer, sometimes eliminating the need for Dropout.|</td>
+                <td><a href="https://arxiv.org/pdf/1502.03167" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Bayesian Deep Learning and a Probabilistic Perspective of Generalization</td>
+                <td>Andrew Wilson et al</td>
+                <td>2020</td>
+                <td>bayesian, marginalization</td>
+                <td>NeurIPS</td>
+                <td>The authors emphasize that marginalization, rather than using a single set of weights, is the key distinguishing feature of a Bayesian approach, which can significantly improve the accuracy and calibration of modern deep neural networks. They demonstrate that deep ensembles provide an effective mechanism for approximate Bayesian marginalization and propose a related approach that further improves the predictive distribution by marginalizing within basins of attraction. The paper investigates the prior over functions implied by a vague distribution over neural network weights, explaining neural network generalization from a probabilistic perspective and showing that seemingly mysterious results (like fitting random labels) can be reproduced with Gaussian processes. The authors demonstrate that Bayesian model averaging mitigates the double descent phenomenon, leading to monotonic performance improvements as model flexibility increases.</td>
+                <td><a href="https://arxiv.org/pdf/2002.08791" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Practical Bayesian Framework for Backpropagation Networks</td>
+                <td>David MacKay et al</td>
+                <td>1992</td>
+                <td>bayesian</td>
+                <td>Neural Computation</td>
+                <td>The authors present a quantitative and practical Bayesian framework for learning mappings in feedforward networks, enabling objective comparisons between different network architectures and providing stopping rules for network pruning or growing procedures. This framework allows for objective selection of weight decay terms or regularizers, measures the effective number of well determined parameters in a model, and provides quantified estimates of error bars on network parameters and outputs. The approach helps detect poor underlying assumptions in learning models and demonstrates a good correlation between generalization ability and Bayesian evidence for well matched learning models.</td>
+                <td><a href="https://ieeexplore.ieee.org/document/6796869" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Bayesian Neural Network Priors Revisited</td>
+                <td>Vincent Fortuin et al</td>
+                <td>2022</td>
+                <td>bayesian, priors</td>
+                <td>ICLR</td>
+                <td>Isotropic Gaussian priors are the standard for modern Bayesian neural network inference, but their accuracy and optimal performance are uncertain. By studying summary statistics of neural network weights trained with stochastic gradient descent (SGD), the authors find that CNN and ResNet weights exhibit strong spatial correlations, while FCNNs display heavy tailed weight distributions. Incorporating these observations into priors improves performance on various image classification datasets, mitigating the cold posterior effect in FCNNs but slightly increasing it in ResNets.</td>
+                <td><a href="https://arxiv.org/pdf/2102.06571" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Hands on Bayesian Neural Networks   A Tutorial for Deep Learning Users</td>
+                <td>Laurent Jospin et al</td>
+                <td>2022</td>
+                <td>bayesian</td>
+                <td>IEEE</td>
+                <td>A good summary / tutorial for using Bayesian Nets. Also provides some good paper references within.</td>
+                <td><a href="https://arxiv.org/pdf/2007.06823" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Position Paper: Bayesian Deep Learning in the Age of Large Scale AI</td>
+                <td>Theodore Papamarkou et al</td>
+                <td>2024</td>
+                <td>bayesian, mcmc</td>
+                <td>ICML</td>
+                <td>A good summary of strengths of BDL (Bayesian Deep Learning) with regards to modern deep learning, while also addressing some weaknesses. A good paper if need to do an overview of modern challenges (as of 2024).|</td>
+                <td><a href="https://arxiv.org/pdf/2402.00809" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Neural Probabilistic Language Model</td>
+                <td>Bengio et al</td>
+                <td>2003</td>
+                <td>statistical language modeling</td>
+                <td>JMLR</td>
+                <td>One of the first papers about modern methods in using neural systems to estimate probability functions of word sequences. They show that MLPs can model better than the SOTA (at that time). A classic.|</td>
+                <td><a href="https://jmlr.org/papers/volume3/bengio03a/bengio03a.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Bit Fusion: Bit Level Dynamically Composable Architecture for Accelerating Deep Neural Networks</td>
+                <td>Hardik Sharma et al</td>
+                <td>2018</td>
+                <td>accelerator, quantization, bit fusion</td>
+                <td>ISCA</td>
+                <td>Hardware acceleration of Deep Neural Networks (DNNs) aims to address their high compute intensity, with the paper focusing on the potential of reducing bitwidth in operations without compromising classification accuracy. To prevent accuracy loss, the bitwidth varies significantly across DNNs, and a fixed bitwidth accelerator may lead to limited benefits or degraded accuracy. The authors introduce Bit Fusion, a bit flexible accelerator that dynamically adjusts bitwidth for individual DNN layers, resulting in significant speedup and energy savings compared to state of the art accelerators, Eyeriss and Stripes, and achieving performance close to a 250 Watt Titan Xp GPU while consuming much less power.</td>
+                <td><a href="https://arxiv.org/pdf/1712.01507" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Framework for the Cooperation of Learning Algorithms</td>
+                <td>Leon Bottou et al</td>
+                <td>1990</td>
+                <td>learning algorithms, modules</td>
+                <td>NeurIPS</td>
+                <td>Cooperative training of modular systems offers a unified approach to many learning algorithms and hybrid systems, allowing the design and implementation of complex learning systems that incorporate structural a priori knowledge about tasks. The authors introduce a framework using a statistical formulation of learning systems to define and combine modules into cooperative systems, enabling the creation of hybrid systems that combine the advantages of connectionist and other learning algorithms. By decomposing complex tasks into simpler subtasks, modular architectures can be built, where each module corresponds to a subtask, facilitating easier achievement of the learning goal by introducing a modular decomposition of the global task.</td>
+                <td><a href="https://proceedings.neurips.cc/paper/1990/file/a8c88a0055f636e4a163a5e3d16adab7-Paper.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>CNP: An FPGA Based Processor for Convolutional Networks</td>
+                <td>Clement Farabet et al</td>
+                <td>2009</td>
+                <td>fpga, cnn</td>
+                <td>IEEE</td>
+                <td>One of the first attempts (that I have found) at putting a CNN into an FPGA and showing it can be done to perform some task (face detection).</td>
+                <td><a href="https://yann.lecun.com/exdb/publis/pdf/farabet-fpl-09.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Complete Recipe for Stochastic Gradient MCMC</td>
+                <td>Yi An Ma et al</td>
+                <td>2015</td>
+                <td>hamiltonian, mcmc</td>
+                <td>NeurIPS</td>
+                <td>Recent Markov chain Monte Carlo (MCMC) samplers use continuous dynamics and scalable variants with stochastic gradients to efficiently explore target distributions, but proving convergence with stochastic gradient noise remains challenging. The authors provide a general framework for constructing MCMC samplers, including stochastic gradient versions, based on continuous Markov processes defined by two matrices, demonstrating that any such process can be represented within this framework. Using this framework, they propose a new state adaptive sampler, stochastic gradient Riemann Hamiltonian Monte Carlo (SGRHMC), which combines the benefits of Riemann HMC with the scalability of stochastic gradient methods, as shown in experiments with simulated data and a streaming Wikipedia analysis.</td>
+                <td><a href="https://arxiv.org/pdf/1506.04696" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>CPT: Efficient Deep Neural Network Training via Cyclic Precision</td>
+                <td>Yonggan Fu et al</td>
+                <td>2021</td>
+                <td>precision, efficiency, wide minima</td>
+                <td>ICLR</td>
+                <td>Low precision deep neural network (DNN) training is an effective method for improving training time and energy efficiency, with this paper proposing a new perspective: that DNN precision may act similarly to the learning rate during training. The authors introduce Cyclic Precision Training (CPT), which cyclically varies precision between two boundary values identified through a simple precision range test in the initial training epochs, aiming to boost time and energy efficiency further. </td>
+                <td><a href="https://arxiv.org/pdf/2101.09868" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Approximation by Superpositions of a Sigmoidal Function</td>
+                <td>G. Cybenko</td>
+                <td>universal approximator, completeness</td>
+                <td>TODO</td>
+                <td>Mathematics of Control, Signals, and Systems</td>
+                <td>This paper demonstrates that finite linear combinations of compositions of a fixed univariate function and a set of affine functionals can uniformly approximate any continuous function of nn real variables within the unit hypercube, under mild conditions on the univariate function. These findings resolve an open question about the representability of functions by single hidden layer neural networks, specifically showing that arbitrary decision regions can be well approximated by continuous feedforward neural networks with a single hidden layer and any continuous sigmoidal nonlinearity.</td>
+                <td><a href="https://cognitivemedium.com/magic_paper/assets/Cybenko.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Cyclical Stochastic Gradient MCMC for Bayesian Deep Learning</td>
+                <td>Ruqi Zhang et al</td>
+                <td>2020</td>
+                <td>mcmc, bayesian</td>
+                <td>ICLR</td>
+                <td>The posteriors over neural network weights are high dimensional and multimodal, with each mode representing a different meaningful interpretation of the data. The authors introduce Cyclical Stochastic Gradient MCMC (SG MCMC) with a cyclical stepsize schedule, where larger steps discover new modes and smaller steps characterize each mode, and they prove the non asymptotic convergence of this algorithm.</td>
+                <td><a href="https://arxiv.org/pdf/1902.03932" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DaDianNao: A Machine Learning Supercomputer</td>
+                <td>Yunji Chen et al</td>
+                <td>2014</td>
+                <td>accelerator, gpu</td>
+                <td>IEEE/ACM</td>
+                <td>This paper introduces a custom multi chip architecture optimized for Convolutional and Deep Neural Networks (CNNs and DNNs), addressing their computational and memory intensive nature by leveraging on chip storage to enhance internal bandwidth and reduce external communication bottlenecks. The authors demonstrate significant performance gains with their 64 chip system achieving up to a 450.65x speedup over GPUs and reducing energy consumption by up to 150.31x on large neural network layers, implemented with custom storage, computational units, and robust interconnects at 28nm scale.</td>
+                <td><a href="https://www.cs.virginia.edu/~smk9u/CS6501F16/p609-chen.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DARTS: Differentiable Architecture Search</td>
+                <td>Hanxiao Liu et al</td>
+                <td>2019</td>
+                <td>nas</td>
+                <td>ICLR</td>
+                <td>This paper introduces a differentiable approach to architecture search, tackling scalability challenges by reformulating the task to allow gradient based optimization over a continuous relaxation of architecture representations. Unlike traditional methods relying on evolutionary or reinforcement learning in discrete, non differentiable spaces, the proposed method efficiently discovers high performance convolutional architectures for image classification and recurrent architectures for language modeling.</td>
+                <td><a href="https://arxiv.org/pdf/1806.09055" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Decoupled Contrastive Learning</td>
+                <td>Chun Hsiao Yeh et al</td>
+                <td>2022</td>
+                <td>contrastive learning, self-supervised learning</td>
+                <td>ACM</td>
+                <td>This paper introduces decoupled contrastive learning (DCL), which removes the negative positive coupling (NPC) effect from the InfoNCE loss, significantly improving the efficiency of self supervised learning (SSL) tasks with smaller batch sizes. DCL achieves efficient and reliable performance enhancements across various benchmarks, outperforming the SimCLR baseline without requiring momentum encoding, large batch sizes, or extensive epochs.</td>
+                <td><a href="https://arxiv.org/pdf/2110.06848" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Deep Image Prior</td>
+                <td>Dmitry Ulyanov et al</td>
+                <td>2020</td>
+                <td>inpatining, super-resolution, denoising</td>
+                <td>IEEE</td>
+                <td>This paper challenges the conventional wisdom by demonstrating that the structure of a generator network, even when randomly initialized, can effectively capture low level image statistics without any specific training on example images. The authors show that this randomly initialized neural network can serve as a powerful handcrafted prior, yielding excellent results in standard image processing tasks such as denoising, super resolution, and inpainting. Furthermore, the same network structure can invert deep neural representations for diagnostic purposes and restore images based on input pairs like flash and no flash conditions, showcasing its versatility and effectiveness across various image restoration applications.</td>
+                <td><a href="https://arxiv.org/pdf/1711.10925" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Deep Double Descent: Where Bigger Models and More Data Hurt</td>
+                <td>Preetum Nakkiran et al</td>
+                <td>2019</td>
+                <td>capacity, double descent</td>
+                <td>Arxiv</td>
+                <td>This paper explores the &quot;double descent&quot; phenomenon in modern deep learning tasks, showing that as model size or training epochs increase, performance initially worsens before improving. The authors unify these observations by introducing a new complexity measure termed effective model complexity, conjecturing a generalized double descent across this measure.</td>
+                <td><a href="https://arxiv.org/pdf/1912.02292" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DeepShift: Towards Multiplication Less Neural Networks</td>
+                <td>Mostafa Elhoushi et al</td>
+                <td>2021</td>
+                <td>multiplication-less, efficiency</td>
+                <td>Arxiv</td>
+                <td>This paper addresses the computational challenges of deploying convolutional neural networks (CNNs) on edge computing platforms by introducing convolutional shifts and fully connected shifts, replacing multiplications with efficient bitwise operations during both training and inference. The proposed DeepShift models achieve competitive or higher accuracies compared to baseline models like ResNet18, ResNet50, VGG16, and GoogleNet, while significantly reducing the memory footprint by using only 5 bits or less for weight representation during inference.</td>
+                <td><a href="https://arxiv.org/pdf/1905.13298" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DepthShrinker: A New Compression Paradigm Towards Boosting Real Hardware Efficiency of Compact Neural Networks</td>
+                <td>Yonggan Fu et al</td>
+                <td>2022</td>
+                <td>compression, efficiency, pruning</td>
+                <td>ICML</td>
+                <td>This paper introduces DepthShrinker, a framework designed to enhance hardware efficiency of deep neural networks (DNNs) by transforming irregular computation patterns of compact operators into dense ones, thereby improving hardware utilization without sacrificing model accuracy. By leveraging insights that certain activation functions can be removed post training without loss of accuracy, DepthShrinker pioneers a compression paradigm that optimizes DNNs for real hardware efficiency, presenting a significant advancement in efficient model deployment.|</td>
+                <td><a href="https://arxiv.org/pdf/2206.00843" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Dimensionality Reduction by Learning an Invariant Mapping</td>
+                <td>Raia Hadsell et al</td>
+                <td>2006</td>
+                <td>dimensionality reduction, mapping</td>
+                <td>CVPR</td>
+                <td>DrLIM, or Dimensionality Reduction by Learning an Invariant Mapping, addresses key limitations of existing dimensionality reduction techniques by learning a non linear function that maps high dimensional data to a low dimensional manifold based solely on neighborhood relationships, without requiring a predefined distance metric in input space. The method is distinguished by its ability to handle transformations and maintain invariant mappings, demonstrated through experiments that show its effectiveness in preserving neighborhood relationships and accurately mapping new, unseen samples to meaningful locations on the manifold. Unlike methods like LLE, which may struggle with variability and registration issues in input data, DrLIM&#x27;s contrastive loss function ensures robustness by balancing similarity and dissimilarity in output space, offering a promising approach for applications requiring invariant mappings, such as learning positional information from image sequences in robotics.</td>
+                <td><a href="https://yann.lecun.com/exdb/publis/pdf/hadsell-chopra-lecun-06.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Disentangling Trainability and Generalization in Deep Neural Networks</td>
+                <td>Lechao Xiao et al</td>
+                <td>2020</td>
+                <td>neural tangent kernel, ntk</td>
+                <td>ICML</td>
+                <td>This study focuses on characterizing the trainability and generalization of deep neural networks, particularly under conditions of very wide and very deep architectures, leveraging insights from the Neural Tangent Kernel (NTK). By analyzing the NTK&#x27;s spectrum, the study formulates necessary conditions for both memorization and generalization across architectures like Fully Connected Networks (FCNs) and Convolutional Neural Networks (CNNs). The research identifies key spectral quantities such as λmax, λbulk, κ, and P(Θ(l)) that critically influence the performance of deep networks, providing a precise theoretical framework validated by extensive experiments on CIFAR10. It highlights distinctions in generalization behavior between CNNs with and without global average pooling.</td>
+                <td><a href="https://arxiv.org/pdf/1912.13053" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Finding Structure in Time</td>
+                <td>Jeffrey Elman</td>
+                <td>1990</td>
+                <td>rnn</td>
+                <td>Cognitive Science</td>
+                <td>I think this was the original backpropagation through time paper. Good insights on time dependent system learning.</td>
+                <td><a href="https://axon.cs.byu.edu/~martinez/classes/678/Papers/Elman_time.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>E2 Train: Training State of the art CNNs with Over 80% Energy Savings</td>
+                <td>Yue Wang et al</td>
+                <td>2019</td>
+                <td>cnn, batch, energy</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces E2 Train, a framework for energy efficient CNN training on resource constrained platforms. E2 Train optimizes training energy costs through stochastic mini batch dropping, selective layer updates, and low cost, low precision back propagation strategies. Experimental results on CIFAR 10 and CIFAR 100 demonstrate significant energy savings of over 90% and 84%, respectively, with minimal loss in accuracy. E2 Train addresses the challenge of on device CNN training by integrating three levels of energy saving techniques: data level stochastic mini batch dropping, model level selective layer updates, and algorithm level low precision back propagation. Real energy measurements on an FPGA validate its effectiveness, achieving notable energy reductions in training ResNet models on CIFAR datasets.</td>
+                <td><a href="https://arxiv.org/pdf/1910.13349" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>cuDNN: Efficient Primitives for Deep Learning</td>
+                <td>Sharan Chetlur et al</td>
+                <td>2014</td>
+                <td>cuda, gpu</td>
+                <td>Arxiv</td>
+                <td>This paper introduces cuDNN, a library designed to optimize deep learning primitives akin to BLAS for HPC. cuDNN offers efficient implementations of key deep learning kernels tailored for GPUs, improving performance and reducing memory usage in frameworks like Caffe by up to 36%.</td>
+                <td><a href="https://arxiv.org/pdf/1410.0759" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>EIE: Efficient Inference Engine on Compressed Deep Neural Network</td>
+                <td>Song Han et al</td>
+                <td>2016</td>
+                <td>compression, accelerator, co-design</td>
+                <td>Arxiv</td>
+                <td>This paper introduces EIE, an energy efficient inference engine designed for compressed deep neural networks, achieving significant energy savings by exploiting weight sharing, sparsity, and quantization. EIE performs sparse matrix vector multiplications directly on compressed models, enabling 189× and 13× faster inference speeds compared to CPU and GPU implementations of uncompressed DNNs.</td>
+                <td><a href="https://arxiv.org/pdf/1602.01528" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>An Empirical Analysis of Deep Network Loss Surfaces</td>
+                <td>Daniel Jiwoong Im et al</td>
+                <td>2016</td>
+                <td>optimization, loss surface, saddle points</td>
+                <td>Arxiv</td>
+                <td>This paper empirically investigates the geometry of loss functions in state of the art neural networks, employing various stochastic optimization methods. Through visualizations in low dimensional subspaces, it explores how different optimization procedures lead to distinct local minima, even when algorithms are changed late in the optimization process. The study reveals that modifications to optimization procedures consistently yield different local minima, each affecting the network&#x27;s performance on test examples differently. Interestingly, while different optimization algorithms find varied local minima from different initializations, the shape of the loss function around these minima remains characteristic to the algorithm used, with ADAM showing larger basins compared to vanilla SGD.</td>
+                <td><a href="https://arxiv.org/pdf/1612.04010" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>EyeCoD: Eye Tracking System Accelerator via FlatCam based Algorithm &amp; Accelerator Co Design</td>
+                <td>Haoran You et al</td>
+                <td>2023</td>
+                <td>accelerator, co-design, eye-tracking</td>
+                <td>ACM</td>
+                <td>This paper introduces EyeCoD, a lensless FlatCam based eye tracking system designed to overcome limitations of traditional systems, such as large form factor and high communication costs. By integrating a predict then focus algorithm pipeline and dedicated hardware accelerator, EyeCoD achieves significant reductions in computation and communication overhead while maintaining high tracking accuracy.</td>
+                <td><a href="https://arxiv.org/pdf/2206.00877" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices</td>
+                <td>Yu Hsin Chen et al</td>
+                <td>2019</td>
+                <td>efficiency, sparsity</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Eyeriss v2, a specialized DNN accelerator architecture designed to efficiently handle compact and sparse neural networks. Unlike traditional DNN accelerators, Eyeriss v2 incorporates a hierarchical mesh network on chip to adapt to varying layer shapes and sizes, optimizing data reuse and bandwidth utilization. Eyeriss v2 excels in processing sparse data directly in the compressed domain, both for weights and activations, thereby enhancing processing speed and energy efficiency particularly suited for sparse models.</td>
+                <td><a href="https://arxiv.org/pdf/1807.07928" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Eyeriss: A Spatial Architecture for Energy Efficient Dataflow for Convolutional Neural Networks</td>
+                <td>Yu Hsin Chen et al</td>
+                <td>2016</td>
+                <td>cnn, row-stationary, efficiency</td>
+                <td>ACM/IEEE</td>
+                <td>The paper addresses the high energy consumption in deep convolutional neural networks (CNNs) due to extensive data movement, despite advancements in parallel computing paradigms like SIMD/SIMT. Introduces a novel row stationary (RS) dataflow designed for spatial architectures. RS maximizes local data reuse and minimizes data movement during convolutions, leveraging PE local storage, inter PE communication, and spatial parallelism.</td>
+                <td><a href="https://eems.mit.edu/wp-content/uploads/2016/04/eyeriss_isca_2016.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Flat Minima</td>
+                <td>Sepp Hochreiter et al</td>
+                <td>1997</td>
+                <td>flat minima, low complexity, gibbs</td>
+                <td>Neural Computation</td>
+                <td>The algorithm focuses on identifying &quot;flat&quot; minima of the error function in weight space. A flat minimum is characterized by a large connected region where the error remains approximately constant. This property suggests simplicity in the network structure and low expected overfitting, supported by an MDL based Bayesian argument. Unlike traditional approaches that rely on Gaussian assumptions or specific weight priors, this algorithm uses a Bayesian framework with a prior over input output functions. This approach considers both network architecture and the training set, facilitating the identification of simpler and more generalizable models.</td>
+                <td><a href="https://www.researchgate.net/publication/14100213_Flat_Minima" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Fused Layer CNN Accelerators</td>
+                <td>Manoj Alwani et al</td>
+                <td>2016</td>
+                <td>cnn, accelerator, fusion</td>
+                <td>IEEE</td>
+                <td>This work introduces a novel approach to CNN accelerator design by fusing the computation of multiple convolutional layers. By rearranging the dataflow across layers, intermediate data can be cached on chip between adjacent layers, reducing the need for off chip memory storage and minimizing data transfer. Specifically, the study demonstrates the effectiveness of this approach by implementing a fused layer CNN accelerator for the initial five convolutional layers of VGGNet E. Using 362KB of on chip storage, the accelerator significantly reduces off chip feature map data transfer by 95%, from 77MB to 3.6MB per image processed.  This innovation targets early convolutional layers where data transfer typically dominates. By optimizing data reuse and minimizing off chip memory usage, the proposed design strategy enhances the efficiency of CNN accelerators, paving the way for improved performance in various machine learning tasks.</td>
+                <td><a href="https://compas.cs.stonybrook.edu/~mferdman/downloads.php/MICRO16_Fused_Layer_CNN_Accelerators.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>EnlightenGAN: Deep Light Enhancement Without Paired Supervision</td>
+                <td>Yifan Jiang et al</td>
+                <td>2021</td>
+                <td>gan, enhancement, unsupervised</td>
+                <td>IEEE</td>
+                <td>Exploration of low light to well lit image generation using GANs. Also provides an interesting global local discriminator and self regularized perceptual loss fusion, with a simplified attention (the attention is just an inverse of the brightness of the image essentially).</td>
+                <td><a href="https://arxiv.org/pdf/1906.06972" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Understanding the difficulty of training deep feedforward neural networks</td>
+                <td>Xavier Glorot et al</td>
+                <td>2010</td>
+                <td>activation, saturation, initialization</td>
+                <td>AISTATS</td>
+                <td>The logistic sigmoid activation function is problematic for deep networks due to its mean value, which can lead to saturation of the top hidden layer. This saturation slows down learning and can cause training plateaus. The difficulty in training deep networks correlates with the singular values of the Jacobian matrix for each layer. When these values deviate significantly from 1, it indicates poor activation and gradient flow across layers, complicating training. New initialization schemes have been proposed to address issues with activation saturation and gradient flow. These schemes aim to achieve faster convergence by ensuring that activations and gradients flow well across layers, thereby improving overall training efficiency.</td>
+                <td><a href="http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Group Normalization</td>
+                <td>Yuxin Wu et al</td>
+                <td>2018</td>
+                <td>normalization</td>
+                <td>Arxiv</td>
+                <td>Batch Normalization performs normalization along the batch dimension, which causes errors to increase rapidly as batch sizes decrease. This limitation makes BN less effective for training larger models and tasks that require smaller batches due to memory constraints. GN divides channels into groups and computes normalization statistics (mean and variance) independently within each group. Unlike BN, GN&#x27;s computation is not dependent on batch sizes, leading to stable performance across a wide range of batch sizes.</td>
+                <td><a href="https://arxiv.org/pdf/1803.08494" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Singularity of the Hessian in Deep Learning</td>
+                <td>Levent Sagun et al</td>
+                <td>2017</td>
+                <td>eigenvalues, hessian</td>
+                <td>ICLR</td>
+                <td>The bulk of eigenvalues concentrated around zero indicates how overparametrized the model is. In deep learning, overparametrization often leads to better generalization despite the potential for higher computational costs. The edges of the eigenvalue distribution, scattered away from zero, reflect the complexity of the input data. This complexity influences how the loss landscape is structured and affects optimization difficulty. Second order optimization methods, which leverage information from the Hessian, can potentially accelerate training and find better solutions by providing insights into the loss landscape&#x27;s curvature. The top discrete eigenvalues of the Hessian are influenced by the data characteristics, indicating that different datasets may require different optimization strategies or model architectures for optimal performance.</td>
+                <td><a href="https://arxiv.org/pdf/1611.07476" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Long Short Term Memory</td>
+                <td>Sepp Hochreiter et al</td>
+                <td>1997</td>
+                <td>lstm, rnn</td>
+                <td>Neural Computation</td>
+                <td>The original paper on the LSTM. A classic, and demonstrated the power of gating.</td>
+                <td><a href="https://deeplearning.cs.cmu.edu/F23/document/readings/LSTM.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On the importance of initialization and momentum in deep learning</td>
+                <td>Ilya Sutskever et al</td>
+                <td>2013</td>
+                <td>initialization, momentum</td>
+                <td>ICML</td>
+                <td>Traditionally, training DNNs and RNNs with stochastic gradient descent (SGD) with momentum was considered challenging due to issues with gradient propagation and vanishing/exploding gradients, especially in networks with many layers or long term dependencies. The paper demonstrates that using a well designed random initialization significantly improves the training success of deep and recurrent networks with SGD and momentum.</td>
+                <td><a href="https://www.cs.toronto.edu/~fritz/absps/momentum.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Algorithms for manifold learning</td>
+                <td>Lawrence Cayton</td>
+                <td>2005</td>
+                <td>manifold learning, dimensionality reduction</td>
+                <td>Arxiv</td>
+                <td>Many datasets exhibit complex relationships that cannot be effectively captured by linear methods like Principal Component Analysis (PCA). Manifold hypothesis: Despite high dimensional appearances, data points often lie on or near a much lower dimensional manifold embedded within the higher dimensional space. Manifold learning aims to uncover this underlying low dimensional structure to provide a more meaningful and compact representation of the data.</td>
+                <td><a href="https://cseweb.ucsd.edu/~lcayton/resexam.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</td>
+                <td>Ben Mildenhall et al</td>
+                <td>2020</td>
+                <td>nerf, view synthesis, 3d, scene representation, volume rendering</td>
+                <td>Arxiv</td>
+                <td>The method utilizes a fully connected deep network to represent scenes as continuous volumetric functions. This network takes a 5D input (spatial location and viewing direction) and outputs volume density and view dependent radiance. By querying these 5D coordinates along camera rays and employing differentiable volume rendering techniques, the method synthesizes novel views of scenes.</td>
+                <td><a href="https://arxiv.org/pdf/2003.08934" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On Large Batch Training for Deep Learning Generalization Gap and Sharp Minima</td>
+                <td>Nitish Shirish Keskar et al</td>
+                <td>2017</td>
+                <td>sharp minima, large batch</td>
+                <td>ICLR</td>
+                <td>The study identifies a phenomenon where large batch SGD methods tend to converge towards sharp minimizers of training and testing functions. Sharp minima are associated with poorer generalization, meaning the model performs worse on unseen data. In contrast, small batch methods more consistently converge towards flat minimizers. This behavior is attributed to the inherent noise in gradient estimation during training with small batches.</td>
+                <td><a href="https://arxiv.org/pdf/1609.04836" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Optimizing FPGA based Accelerator Design for Deep Convolutional Neural Networks</td>
+                <td>Chen Zhang et al</td>
+                <td>2015</td>
+                <td>cnn, fpga, accelerator</td>
+                <td>ACM</td>
+                <td>The study employs quantitative analysis techniques, including loop tiling and transformation, to optimize the CNN accelerator design. These techniques aim to maximize computation throughput while minimizing the resource utilization on the FPGA, particularly balancing logic resource usage and memory bandwidth.|</td>
+                <td><a href="https://dl.acm.org/doi/10.1145/2684746.2689060" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Learning Phrase Representation using RNN Encoder Decoder for Statistical Machine Translation</td>
+                <td>Kyunghyun Cho et al</td>
+                <td>2014</td>
+                <td>encoder decoder, machine translation</td>
+                <td>Arxiv</td>
+                <td>Introduces a novel neural network architecture called RNN Encoder Decoder, comprising two recurrent neural networks. One RNN serves as an encoder, converting a sequence of symbols into a fixed length vector representation. The other RNN acts as a decoder, generating another sequence of symbols based on the encoded representation.</td>
+                <td><a href="https://arxiv.org/pdf/1406.1078" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Qualitatively Characterizing Neural Network Optimization Problems</td>
+                <td>Ian Goodfellow et al</td>
+                <td>2015</td>
+                <td>optimization, visualization</td>
+                <td>ICLR</td>
+                <td>Demonstrates that contemporary neural networks can achieve minimal training error through direct training with stochastic gradient descent alone, without needing complex schemes like unsupervised pretraining. This finding challenges earlier beliefs about the difficulty of navigating non convex optimization landscapes in neural network training. They also introduce a nice graphical tool to show the energy landscape.</td>
+                <td><a href="https://arxiv.org/pdf/1412.6544" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Language Models are Unsupervised Multitask Learners</td>
+                <td>Alec Radford et al</td>
+                <td>2018</td>
+                <td>unsupervised, GPT</td>
+                <td>Arxiv</td>
+                <td>Demonstrates that language models, specifically GPT 2, trained on the WebText dataset, start to learn various natural language processing tasks (question answering, machine translation, reading comprehension, summarization) without explicit task specific supervision. For instance, when conditioned on a document and questions, the model achieves an F1 score of 55 on the CoQA dataset, matching or exceeding several baseline systems that were trained with over 127,000 examples.</td>
+                <td><a href="https://cdn.openai.com/better language models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On the difficulty of training Recurrent Neural Networks</td>
+                <td>Razvan Pascanu et al</td>
+                <td>2013</td>
+                <td>exploding gradient, vanishing gradient, gradient clipping, normalization</td>
+                <td>Arxiv</td>
+                <td>Explanation of issues in RNNs (vanishing / exploding gradient) and proposal of gradient clipping.</td>
+                <td><a href="https://arxiv.org/pdf/1211.5063" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Learning representations by back propagating errors</td>
+                <td>David Rumelhart et al</td>
+                <td>1986</td>
+                <td>backpropagation, learning procedure, convergence</td>
+                <td>Nature</td>
+                <td>The main paper for backprop.</td>
+                <td><a href="https://www.nature.com/articles/323533a0" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>The Shattered Gradients Problem: If resnets are the answer, then what is the question?</td>
+                <td>David Balduzzi et al</td>
+                <td>2018</td>
+                <td>shattering, initialization</td>
+                <td>ICML</td>
+                <td>The paper identifies the &quot;shattered gradients&quot; problem in standard feedforward neural networks. It shows that gradients in these networks exhibit an exponential decay in correlation with depth, leading to gradients that resemble white noise. In contrast, architectures like highway and ResNets with skip connections demonstrate gradients that decay sublinearly, indicating greater resilience against shattering. The paper introduces a new initialization technique termed &quot;Looks Linear&quot; (LL) that addresses the shattered gradients issue. Preliminary experiments demonstrate that LL initialization enables the training of very deep networks without the need for skip connections like those in ResNets or highway networks. This initialization method offers a promising alternative to achieving stable gradient propagation in deep networks, potentially simplifying network architecture and improving training efficiency.</td>
+                <td><a href="https://arxiv.org/pdf/1702.08591" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Simple Baseline for Bayesian Uncertainty in Deep Learning</td>
+                <td>Wesley Maddox et al</td>
+                <td>2019</td>
+                <td>bayesian, uncertainty, guassian</td>
+                <td>NeurIPS</td>
+                <td>SWAG combines Stochastic Weight Averaging (SWA) with Gaussian fitting to provide an approximate posterior distribution over neural network weights. SWA computes the first moment of SGD iterates using a modified learning rate schedule. SWAG extends this by fitting a Gaussian distribution using SWA&#x27;s solution as the first moment and incorporating a low rank plus diagonal covariance derived from SGD iterates.</td>
+                <td><a href="https://arxiv.org/pdf/1902.02476" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>SmartExchange: Trading Higher cost Memory Storage/Access for Lower cost Computation</td>
+                <td>Yang Zhao et al</td>
+                <td>2020</td>
+                <td>compression, accelerator, pruning, decomposition, quantization</td>
+                <td>ACM/IEEE</td>
+                <td>SmartExchange integrates sparsification or pruning, decomposition, and quantization techniques into a unified algorithm. It aims to enforce a structured DNN weight format where each layer&#x27;s weight matrix is represented as a product of a small basis matrix and a large sparse coefficient matrix with power of 2 elements.</td>
+                <td><a href="https://arxiv.org/pdf/2005.03403" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On the Spectral Bias of Neural Networks</td>
+                <td>Nasim Rahaman et al</td>
+                <td>2019</td>
+                <td>spectra, fourier analysis, manifold learning</td>
+                <td>ICML</td>
+                <td>Neural networks, particularly deep ReLU networks, exhibit a learning bias towards low frequency functions. This bias means they tend to prioritize learning global variations over local fluctuations in data. This property aligns with their ability to generalize well across different samples and datasets. Contrary to intuition, as the complexity of the data manifold increases, deep networks find it easier to learn higher frequency functions. This suggests that while they naturally favor low frequency patterns, they can also adapt to more complex data structures to capture higher frequency variations.</td>
+                <td><a href="https://arxiv.org/pdf/1806.08734" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Sequence to Sequence Learning with Neural Networks</td>
+                <td>Ilya Sutskever et al</td>
+                <td>2014</td>
+                <td>seq2seq</td>
+                <td>Arxiv</td>
+                <td>The paper introduces an end to end approach for sequence learning using multilayered Long Short Term Memory (LSTM) networks. This method requires minimal assumptions about the structure of the sequences and effectively maps input sequences to a fixed dimensional vector using one LSTM layer, and decodes target sequences using another deep LSTM layer.</td>
+                <td><a href="https://arxiv.org/abs/1409.3215" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Tiled convolutional neural networks</td>
+                <td>Quoc Le et al</td>
+                <td>2010</td>
+                <td>tiling, cnn</td>
+                <td>NeurIPS</td>
+                <td>Tiled CNNs introduce a novel approach to learning invariances by using a regular &quot;tiled&quot; pattern of tied weights. Unlike traditional CNNs where adjacent hidden units share identical weights, Tiled CNNs require only that hidden units at a certain distance from each other share tied weights. This allows the network to learn complex invariances such as scale and rotational invariance, in addition to translational invariance.</td>
+                <td><a href="https://dl.acm.org/doi/10.5555/2997189.2997332" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Unsupervised Learning of Image Manifolds by Semidefinite Programming</td>
+                <td>Kilian Weinberger et al</td>
+                <td>2004</td>
+                <td>manifold learning, dimensionality reduction</td>
+                <td>IEEE</td>
+                <td>The paper proposes a new approach to detect low dimensional structure in high dimensional datasets using semidefinite programming (SDP). SDP is leveraged to analyze data that resides on or near a low dimensional manifold, which is a common challenge in computer vision and pattern recognition. The algorithm introduced overcomes limitations observed in previous manifold learning techniques like Isomap and locally linear embedding (LLE). These traditional methods often struggle with certain types of data distributions or computational complexities, which the proposed SDP based approach aims to address more effectively.</td>
+                <td><a href="https://ieeexplore.ieee.org/document/1315272" target="_blank">Link</a></td>
+            </tr>
+        
         </tbody>
     </table>
 
@@ -84,49 +1275,6 @@
         const paperCountElement = document.getElementById('paperCount');
         const searchCountElement = document.getElementById('searchCount');
         let sortOrder = {};
-
-        // Load papers from JSON file
-        fetch('papers/list.json')
-            .then(response => response.json())
-            .then(papers => {
-                populateTable(papers);
-                updatePaperCount(papers.length);
-                // set search count as paper count initially
-                updateSearchCount(papers.length);
-                setupEventListeners();
-            })
-            .catch(error => console.error('Error loading papers:', error));
-
-            function populateTable(papers) {
-                papers.forEach(paper => {
-                    const row = document.createElement('tr');
-                    for (let key in searchInputs) {
-                        const cell = document.createElement('td');
-                        cell.textContent = paper[key];
-                        row.appendChild(cell);
-                    }
-                    // Add the link cell
-                    const linkCell = document.createElement('td');
-                    if (paper.link) {
-                        const link = document.createElement('a');
-                        link.href = paper.link;
-                        link.textContent = 'Link';
-                        link.target = '_blank'; // Opens in a new tab
-                        linkCell.appendChild(link);
-                    } else {
-                        linkCell.textContent = 'N/A';
-                    }
-                    row.appendChild(linkCell);
-                    tbody.appendChild(row);
-                });
-            }
-
-        function updatePaperCount(count) {
-            paperCountElement.textContent = `So far, we have read ${count} papers. Let's keep it up!`;
-        }
-        function updateSearchCount(count) {
-            searchCount.textContent = `your search returned ${count} papers. nice!`;
-        }
 
         function setupEventListeners() {
             for (let key in searchInputs) {
@@ -152,7 +1300,7 @@
 
         function searchTable() {
             const rows = tbody.getElementsByTagName('tr');
-            var numRowsMatch = 0;
+            let numRowsMatch = 0;
             for (let i = 0; i < rows.length; i++) {
                 const row = rows[i];
                 const cells = row.getElementsByTagName('td');
@@ -167,14 +1315,18 @@
                     }
                 }
 
-                if(foundMatch){
-                    row.style.display = ''
-                    numRowsMatch ++;
-                }else{
-                    row.style.display = 'none'
+                if(foundMatch) {
+                    row.style.display = '';
+                    numRowsMatch++;
+                } else {
+                    row.style.display = 'none';
                 }
             }
-            updateSearchCount(numRowsMatch)
+            updateSearchCount(numRowsMatch);
+        }
+
+        function updateSearchCount(count) {
+            searchCountElement.textContent = `Your search returned ${count} papers. Nice!`;
         }
 
         function sortTable(column, dataType, order) {
@@ -194,6 +1346,9 @@
 
             tbody.append(...rows);
         }
+
+        setupEventListeners();
     </script>
 </body>
 </html>
+    
