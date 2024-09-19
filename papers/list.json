@@ -1,5 +1,14 @@
 [
   {
+    "title": "LAPTOP-Diff: Layer Pruning and Normalized Distillation for Compression Diffusion Models",
+    "author": "Dingkun Zhang et al",
+    "year": "2024",
+    "topic": "diffusion, pruning",
+    "venue": "Arxiv",
+    "description": "This paper proposes layer pruning and normalized distillation for pruning diffusion models. They use a surrogate function and show that their surrogate implies a property called \"additivity\", where the output distortion caused by many perturbations approximately equals the sum of the output distortion caused by each single perturbation. They then show that their computation can be formed as a 0-1 Knapsack problem. They then analyze what is the important objective for retraining, and see that there is an imbalance in previous feature distillation approaches employed in the retraining phase. They note that the L2-Norms of feature maps at the end of different stages and the values of different feature loss terms vary significantly, for instance, the highest loss term is ~10k times greater than the lowest one throughout the distillation process, and produces about 1k times larger gradients. This dilutes the gradients of the numerically insignificant feature loss terms. So, they opt to normalize the feature loss.",
+    "link": "https://arxiv.org/pdf/2404.11098"
+  },
+  {
     "title": "Classifier-Free Diffusion Guidance",
     "author": "Jonathan Ho et al",
     "year": "2022",

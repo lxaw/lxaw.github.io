@@ -37,10 +37,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 120 papers. Let's keep it up!
+        So far, we have read 121 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 120 papers. Nice! 
+        Your search returned 121 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -66,6 +66,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>LAPTOP-Diff: Layer Pruning and Normalized Distillation for Compression Diffusion Models</td>
+                <td>Dingkun Zhang et al</td>
+                <td>2024</td>
+                <td>diffusion, pruning</td>
+                <td>Arxiv</td>
+                <td>This paper proposes layer pruning and normalized distillation for pruning diffusion models. They use a surrogate function and show that their surrogate implies a property called &quot;additivity&quot;, where the output distortion caused by many perturbations approximately equals the sum of the output distortion caused by each single perturbation. They then show that their computation can be formed as a 0-1 Knapsack problem. They then analyze what is the important objective for retraining, and see that there is an imbalance in previous feature distillation approaches employed in the retraining phase. They note that the L2-Norms of feature maps at the end of different stages and the values of different feature loss terms vary significantly, for instance, the highest loss term is ~10k times greater than the lowest one throughout the distillation process, and produces about 1k times larger gradients. This dilutes the gradients of the numerically insignificant feature loss terms. So, they opt to normalize the feature loss.</td>
+                <td><a href="https://arxiv.org/pdf/2404.11098" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Classifier-Free Diffusion Guidance</td>
