@@ -1,5 +1,14 @@
 [
   {
+    "title": "Masked Diffusion Transformer is a Strong Image Synthesizer",
+    "author": "Shanghua Gao et al",
+    "year": "2023",
+    "topic": "diffusion, masking, transformer",
+    "venue": "ICCV",
+    "description": "This paper (smartly!) notices that one of the major reasons for long training and poor results of diffusion models is the lack of fast learning of relationships. For instance, they remark on the learning of one eye of a dog before both eyes. They propose to mask the input image in the latent space and learn how to predict the masks, and then diffuse these masks. Brilliant!",
+    "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Masked_Diffusion_Transformer_is_a_Strong_Image_Synthesizer_ICCV_2023_paper.pdf"
+  },
+  {
     "title": "Generative Modeling by Estimating Gradients of the Data Distribution",
     "author": "Yang Song et al",
     "year": "2019",
