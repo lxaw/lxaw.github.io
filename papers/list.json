@@ -1,5 +1,14 @@
 [
   {
+    "title": "Generative Modeling by Estimating Gradients of the Data Distribution",
+    "author": "Yang Song et al",
+    "year": "2019",
+    "topic": "diffusion, score matching",
+    "venue": "NeurIPS",
+    "description": "This paper introduces Noise Conditional Score Networks (NCSNs), a novel approach to generative modeling that learns to estimate the score function of a data distribution at multiple noise levels. NCSNs are trained using score matching, avoiding the need to compute normalizing constants, and generate samples using annealed Langevin dynamics. The method addresses challenges in modeling complex, high-dimensional data distributions, particularly for data lying on or near low-dimensional manifolds.",
+    "link": "https://arxiv.org/pdf/1907.05600"
+  },
+  {
     "title": "LAPTOP-Diff: Layer Pruning and Normalized Distillation for Compression Diffusion Models",
     "author": "Dingkun Zhang et al",
     "year": "2024",
