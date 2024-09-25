@@ -37,10 +37,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 123 papers. Let's keep it up!
+        So far, we have read 126 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 123 papers. Nice! 
+        Your search returned 126 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -66,6 +66,36 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Diffusion Models Already Have a Semantic Latent Space</td>
+                <td>Mingi Kwon et al</td>
+                <td>2023</td>
+                <td>diffusion, latent space</td>
+                <td>ICLR</td>
+                <td>This paper introduces Asymmetric Reverse Process (Asyrp), a method that discovers a semantic latent space (h-space) in pretrained diffusion models, enabling controlled image manipulation with desirable properties such as homogeneity, linearity, and consistency across timesteps, while also proposing a principled design for versatile editing and quality enhancement in the generative process. The authors propose Asymmetric Reverse Process (Asyrp). It modifies only the P_{t} term while preserving the D_{t} term in the reverse process. This makes sense because it a) breaks the destructive interference seen in previous methods, b) allows for controlled modification of the generation process towards target attributes, and c) maintains the overall structure and quality of the diffusion process.</td>
+                <td><a href="https://arxiv.org/pdf/2210.10960" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale</td>
+                <td>Fan Bao et al</td>
+                <td>2023</td>
+                <td>diffusion, multi-model</td>
+                <td>ICML</td>
+                <td>The authors present a method of sampling from joint and conditional distributions using a small modification on diffusion models. UniDiffuser’s proposed method involves handling multiple modalities (such as images and text) within a single diffusion model. Here is in general what they do: 1. Perturb data in all modalities: For a given data point (x0,y0), where x0 is an image and y0 is text, UniDiffuser adds noise to both simultaneously. The noisy versions are represented as xt_{x} and yt_{y}, where t_{x} and t_{y} are the respective timesteps. 2. Use of individual timesteps for different modalities: Instead of using a single timestep t for both modalities, UniDiffuser uses separate timesteps t_{x} and t_{y}. This allows for more flexibility in handling the different characteristics of each modality. 3. Predicting noise for all modalities simultaneously: UniDiffuser uses a joint noise prediction network \epsilon_{\theta}(xt_{x},yt_{y},t_{x},t_{y}) that takes in the noisy versions of both modalities and their respective timesteps. The network then outputs predicted noise for both modalities in one forward pass.</td>
+                <td><a href="https://arxiv.org/pdf/2303.06555" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion Models as a Representation Learner</td>
+                <td>Xingyi Yang et al</td>
+                <td>2023</td>
+                <td>diffusion, representation learner</td>
+                <td>ICCV</td>
+                <td>This paper (smartly!) notices that one of the major reasons for long training and poor results of diffusion models is the lack of fast learning of relationships. For instance, they remark on the learning of one eye of a dog before both eyes. They propose to mask the input image in the latent space and learn how to predict the masks, and then diffuse these masks. Brilliant!</td>
+                <td><a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Masked_Diffusion_Transformer_is_a_Strong_Image_Synthesizer_ICCV_2023_paper.pdf" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Masked Diffusion Transformer is a Strong Image Synthesizer</td>

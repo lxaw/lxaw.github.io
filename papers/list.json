@@ -1,5 +1,32 @@
 [
   {
+    "title": "Diffusion Models Already Have a Semantic Latent Space",
+    "author": "Mingi Kwon et al",
+    "year": "2023",
+    "topic": "diffusion, latent space",
+    "venue": "ICLR",
+    "description": "This paper introduces Asymmetric Reverse Process (Asyrp), a method that discovers a semantic latent space (h-space) in pretrained diffusion models, enabling controlled image manipulation with desirable properties such as homogeneity, linearity, and consistency across timesteps, while also proposing a principled design for versatile editing and quality enhancement in the generative process. The authors propose Asymmetric Reverse Process (Asyrp). It modifies only the P_{t} term while preserving the D_{t} term in the reverse process. This makes sense because it a) breaks the destructive interference seen in previous methods, b) allows for controlled modification of the generation process towards target attributes, and c) maintains the overall structure and quality of the diffusion process.",
+    "link": "https://arxiv.org/pdf/2210.10960"
+  },
+  {
+    "title": "One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale",
+    "author": "Fan Bao et al",
+    "year": "2023",
+    "topic": "diffusion, multi-model",
+    "venue": "ICML",
+    "description": "The authors present a method of sampling from joint and conditional distributions using a small modification on diffusion models. UniDiffuser’s proposed method involves handling multiple modalities (such as images and text) within a single diffusion model. Here is in general what they do: 1. Perturb data in all modalities: For a given data point (x0,y0), where x0 is an image and y0 is text, UniDiffuser adds noise to both simultaneously. The noisy versions are represented as xt_{x} and yt_{y}, where t_{x} and t_{y} are the respective timesteps. 2. Use of individual timesteps for different modalities: Instead of using a single timestep t for both modalities, UniDiffuser uses separate timesteps t_{x} and t_{y}. This allows for more flexibility in handling the different characteristics of each modality. 3. Predicting noise for all modalities simultaneously: UniDiffuser uses a joint noise prediction network \\epsilon_{\\theta}(xt_{x},yt_{y},t_{x},t_{y}) that takes in the noisy versions of both modalities and their respective timesteps. The network then outputs predicted noise for both modalities in one forward pass.",
+    "link": "https://arxiv.org/pdf/2303.06555"
+  },
+  {
+    "title": "Diffusion Models as a Representation Learner",
+    "author": "Xingyi Yang et al",
+    "year": "2023",
+    "topic": "diffusion, representation learner",
+    "venue": "ICCV",
+    "description": "This paper (smartly!) notices that one of the major reasons for long training and poor results of diffusion models is the lack of fast learning of relationships. For instance, they remark on the learning of one eye of a dog before both eyes. They propose to mask the input image in the latent space and learn how to predict the masks, and then diffuse these masks. Brilliant!",
+    "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Masked_Diffusion_Transformer_is_a_Strong_Image_Synthesizer_ICCV_2023_paper.pdf"
+  },
+  {
     "title": "Masked Diffusion Transformer is a Strong Image Synthesizer",
     "author": "Shanghua Gao et al",
     "year": "2023",
