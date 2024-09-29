@@ -37,10 +37,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 127 papers. Let's keep it up!
+        So far, we have read 128 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 127 papers. Nice! 
+        Your search returned 128 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -66,6 +66,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>A Closer Look at Time Steps is Worthy of Triple Speed-Up for Diffusion Model Training</td>
+                <td>Kai Wang et al</td>
+                <td>2024</td>
+                <td>diffusion, sampling</td>
+                <td>Arxiv</td>
+                <td>This paper introduces SpeeD, a novel approach for accelerating the training of diffusion models without compromising performance. The authors analyze the diffusion process and identify three distinct areas: acceleration, deceleration, and convergence, each with different characteristics and importance for model training. Based on these insights, SpeeD implements two key components: asymmetric sampling, which reduces the sampling of less informative time steps in the convergence area, and change-aware weighting, which gives more importance to the rapidly changing areas between acceleration and deceleration. The authors&#x27; key insight is that not all time steps in the diffusion process are equally valuable for training, with the convergence area providing limited benefits despite occupying a large proportion of time steps, while the rapidly changing area between acceleration and deceleration is crucial but often undersampled. To address this, SpeeD introduces an asymmetric sampling strategy using a two-step probability function: $P(t) = \begin{cases} \frac{k}{T + \tau(k-1)}, &amp; 0 &lt; t \leq \tau \ \frac{1}{T + \tau(k-1)}, &amp; \tau &lt; t \leq T \end{cases}$, where τ is a carefully selected threshold marking the beginning of the convergence area, k is a suppression intensity factor, T is the total number of time steps, and t is the current time step. This function increases sampling probability before τ and suppresses it after. Additionally, SpeeD employs a change-aware weighting scheme based on the gradient of the process increment&#x27;s variance, assigning higher weights to time steps with faster changes. By combining these strategies, SpeeD aims to focus computational resources on the most informative parts of the diffusion process, potentially leading to significant speedups in training time without sacrificing model quality.</td>
+                <td><a href="https://arxiv.org/pdf/2405.17403" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>HyperGAN: A Generative Model for Diverse, Performant Neural Networks</td>
