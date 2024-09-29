@@ -1,5 +1,14 @@
 [
   {
+    "title": "HyperGAN: A Generative Model for Diverse, Performant Neural Networks",
+    "author": "Neale Ratzlaff et al",
+    "year": "2019",
+    "topic": "gan, ensemble",
+    "venue": "ICML",
+    "description": "This paper introduces HyperGAN, a novel generative model designed to learn a distribution of neural network parameters, addressing the issue of overconfidence in standard neural networks when faced with out-of-distribution data. Unlike traditional approaches, HyperGAN doesn't require restrictive prior assumptions and can rapidly generate large, diverse ensembles of neural networks. The model employs a unique \"mixer\" component that projects prior samples into a correlated latent space, from which layer-specific generators create weights for a deep neural network. Experimental results show that HyperGAN can achieve competitive performance on datasets like MNIST and CIFAR-10 while providing improved uncertainty estimates for out-of-distribution and adversarial data compared to standard ensembles. NOTE: There has actually been a diffusion variant of this idea: https://arxiv.org/pdf/2402.13144",
+    "link": "https://arxiv.org/pdf/2405.17403"
+  },
+  {
     "title": "Diffusion Models Already Have a Semantic Latent Space",
     "author": "Mingi Kwon et al",
     "year": "2023",

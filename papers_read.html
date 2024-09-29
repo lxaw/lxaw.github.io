@@ -6,15 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Searchable paper list</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin: 1em;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
         table {
             border-collapse: collapse;
             width: 100%;
@@ -46,10 +37,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 126 papers. Let's keep it up!
+        So far, we have read 127 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 126 papers. Nice! 
+        Your search returned 127 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -75,6 +66,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>HyperGAN: A Generative Model for Diverse, Performant Neural Networks</td>
+                <td>Neale Ratzlaff et al</td>
+                <td>2019</td>
+                <td>gan, ensemble</td>
+                <td>ICML</td>
+                <td>This paper introduces HyperGAN, a novel generative model designed to learn a distribution of neural network parameters, addressing the issue of overconfidence in standard neural networks when faced with out-of-distribution data. Unlike traditional approaches, HyperGAN doesn&#x27;t require restrictive prior assumptions and can rapidly generate large, diverse ensembles of neural networks. The model employs a unique &quot;mixer&quot; component that projects prior samples into a correlated latent space, from which layer-specific generators create weights for a deep neural network. Experimental results show that HyperGAN can achieve competitive performance on datasets like MNIST and CIFAR-10 while providing improved uncertainty estimates for out-of-distribution and adversarial data compared to standard ensembles. NOTE: There has actually been a diffusion variant of this idea: https://arxiv.org/pdf/2402.13144</td>
+                <td><a href="https://arxiv.org/pdf/2405.17403" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Diffusion Models Already Have a Semantic Latent Space</td>
