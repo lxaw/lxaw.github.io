@@ -1,5 +1,14 @@
 [
   {
+    "title": "Mixture of Efficient Diffusion Experts Through Automatic Interval and Sub-Network Selection",
+    "author": "Alireza Ganjdanesh et al",
+    "year": "2024",
+    "topic": "diffusion, sampling",
+    "venue": "Arxiv",
+    "description": "This paper reduces the cost of sampling via pruning a pretrained diffusion model into a mixture of experts (MoE) for their respective time intervals, via a routing agent that predicts the architecture needed to generate the experts.",
+    "link": "https://arxiv.org/pdf/2409.15557"
+  },
+  {
     "title": "A Closer Look at Time Steps is Worthy of Triple Speed-Up for Diffusion Model Training",
     "author": "Kai Wang et al",
     "year": "2024",

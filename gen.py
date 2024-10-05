@@ -15,6 +15,44 @@ def generate_html(json_file_path, output_file_path):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Searchable paper list</title>
     <style>
+        body {{
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }}
+
+        .center {{
+            text-align: center;
+            padding: 2rem;
+            margin: 0 auto;
+        }}
+
+        h1 {{
+            margin-top: 1.5rem;
+            font-size: 1.8rem;
+        }}
+
+        p {{
+            margin: 1rem 0;
+        }}
+
+        a {{
+            color: #0066cc;
+            text-decoration: none;
+        }}
+
+        a:hover {{
+            text-decoration: underline;
+        }}
+
+        small {{
+            display: block;
+            margin-top: 2rem;
+        }}
         table {{
             border-collapse: collapse;
             width: 100%;
