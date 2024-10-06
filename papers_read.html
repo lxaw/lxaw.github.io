@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 129 papers. Let's keep it up!
+        So far, we have read 131 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 129 papers. Nice! 
+        Your search returned 131 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Learning Efficient Convolutional Networks through Network Slimming</td>
+                <td>Zhuang Liu et al</td>
+                <td>2017</td>
+                <td>diffusion, sampling</td>
+                <td>CVPR</td>
+                <td>This paper introduces *network slimming*, a method to reduce the size, memory footprint, and computation of CNNs by enforcing channel-level sparsity without sacrificing accuracy. It works by identifying and pruning insignificant channels during training, leveraging the γ scaling factors in Batch Normalization (BN) layers to effectively determine channel importance. The approach introduces minimal training overhead and is compatible with modern CNN architectures, eliminating the need for specialized hardware or software. Using the BN layer’s built-in scaling properties makes this pruning efficient, avoiding redundant scaling layers or issues that arise from linear transformations in convolution layers.</td>
+                <td><a href="https://arxiv.org/pdf/1708.06519" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Q-Diffusion: Quantizing Diffusion Models</td>
+                <td>Xiuyu Li et al</td>
+                <td>2023</td>
+                <td>diffusion, sampling</td>
+                <td>ICCV</td>
+                <td>This paper tackles the inefficiencies of diffusion models, such as slow inference and high computational cost, by proposing a post-training quantization (PTQ) method designed specifically for their multi-timestep process. The key innovation includes a *time step-aware calibration data sampling* approach, which uniformly samples inputs across multiple time steps to better reflect real inference data, addressing quantization errors and varying activation distributions without the need for additional data. Additionally, the paper introduces *shortcut-splitting quantization* to handle the bimodal activation distributions caused by the concatenation of deep and shallow feature channels in shortcuts, quantizing them separately before concatenation for improved accuracy with minimal extra resources.</td>
+                <td><a href="https://arxiv.org/pdf/2302.04304" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Mixture of Efficient Diffusion Experts Through Automatic Interval and Sub-Network Selection</td>

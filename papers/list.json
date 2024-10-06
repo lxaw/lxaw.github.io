@@ -1,4 +1,23 @@
 [
+
+  {
+    "title": "Learning Efficient Convolutional Networks through Network Slimming",
+    "author": "Zhuang Liu et al",
+    "year": "2017",
+    "topic": "diffusion, sampling",
+    "venue": "CVPR",
+    "description": "This paper introduces *network slimming*, a method to reduce the size, memory footprint, and computation of CNNs by enforcing channel-level sparsity without sacrificing accuracy. It works by identifying and pruning insignificant channels during training, leveraging the γ scaling factors in Batch Normalization (BN) layers to effectively determine channel importance. The approach introduces minimal training overhead and is compatible with modern CNN architectures, eliminating the need for specialized hardware or software. Using the BN layer’s built-in scaling properties makes this pruning efficient, avoiding redundant scaling layers or issues that arise from linear transformations in convolution layers.",
+    "link": "https://arxiv.org/pdf/1708.06519"
+  },
+  {
+    "title": "Q-Diffusion: Quantizing Diffusion Models",
+    "author": "Xiuyu Li et al",
+    "year": "2023",
+    "topic": "diffusion, sampling",
+    "venue": "ICCV",
+    "description": "This paper tackles the inefficiencies of diffusion models, such as slow inference and high computational cost, by proposing a post-training quantization (PTQ) method designed specifically for their multi-timestep process. The key innovation includes a *time step-aware calibration data sampling* approach, which uniformly samples inputs across multiple time steps to better reflect real inference data, addressing quantization errors and varying activation distributions without the need for additional data. Additionally, the paper introduces *shortcut-splitting quantization* to handle the bimodal activation distributions caused by the concatenation of deep and shallow feature channels in shortcuts, quantizing them separately before concatenation for improved accuracy with minimal extra resources.",
+    "link": "https://arxiv.org/pdf/2302.04304"
+  },
   {
     "title": "Mixture of Efficient Diffusion Experts Through Automatic Interval and Sub-Network Selection",
     "author": "Alireza Ganjdanesh et al",
