@@ -1,10 +1,18 @@
 [
-
+  {
+    "title": "Temporal Dynamic Quantization for Diffusion Models",
+    "author": "Junhyuk So et al",
+    "year": "2023",
+    "topic": "diffusion, quantization",
+    "venue": "NeurIPS",
+    "description": "Temporal Dynamic Quantization (TDQ) addresses the challenge of quantizing diffusion models by dynamically adjusting quantization parameters based on the denoising time step. TDQ employs a trainable module consisting of frequency encoding, a multi-layer perceptron (MLP), and a SoftPlus activation to predict optimal quantization intervals for each time step. This module maps the temporal information to appropriate quantization parameters, allowing the method to adapt to the varying activation distributions across different stages of the diffusion process. By pre-computing these quantization intervals, TDQ avoids the runtime overhead associated with traditional dynamic quantization methods while still providing the necessary flexibility to handle the temporal dynamics of diffusion models.",
+    "link": "https://arxiv.org/pdf/2306.02316v2"
+  },
   {
     "title": "Learning Efficient Convolutional Networks through Network Slimming",
     "author": "Zhuang Liu et al",
     "year": "2017",
-    "topic": "diffusion, sampling",
+    "topic": "pruning, importance",
     "venue": "CVPR",
     "description": "This paper introduces *network slimming*, a method to reduce the size, memory footprint, and computation of CNNs by enforcing channel-level sparsity without sacrificing accuracy. It works by identifying and pruning insignificant channels during training, leveraging the γ scaling factors in Batch Normalization (BN) layers to effectively determine channel importance. The approach introduces minimal training overhead and is compatible with modern CNN architectures, eliminating the need for specialized hardware or software. Using the BN layer’s built-in scaling properties makes this pruning efficient, avoiding redundant scaling layers or issues that arise from linear transformations in convolution layers.",
     "link": "https://arxiv.org/pdf/1708.06519"
@@ -428,7 +436,7 @@
     "author": "Dominic Zhao et al",
     "year": "2020",
     "topic": "hypernetworks, meta-learning",
-    "venue": "NeurIPS ",
+    "venue": "NeurIPS",
     "description": "The authors propose a soft weight-sharing hypernet architecture that performs well on meta-learning tasks. A good paper to show efforts in meta-learning with regards to hypernets, and comparing them to SOTA methods like Model-Agnostic Meta-Learning (MAML).",
     "link": "https://neurips.cc/virtual/2020/20189"
   },
