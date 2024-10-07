@@ -1,5 +1,14 @@
 [
   {
+    "title": "Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture",
+    "author": "Huijie Zhang et al",
+    "year": "2024",
+    "topic": "diffusion, multi-stage",
+    "venue": "CVPR",
+    "description": "This paper proposes a multi-stage framework for diffusion models that uses a shared encoder and separate decoders for different timestep intervals, along with an optimal denoiser-based timestep clustering method, to improve training and sampling efficiency while maintaining or enhancing image generation quality.",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Improving_Training_Efficiency_of_Diffusion_Models_via_Multi-Stage_Framework_and_CVPR_2024_paper.pdf"
+  },
+  {
     "title": "Temporal Dynamic Quantization for Diffusion Models",
     "author": "Junhyuk So et al",
     "year": "2023",
