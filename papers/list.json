@@ -1,5 +1,14 @@
 [
   {
+    "title": "Improved Denoising Diffusion Probabilistic Models",
+    "author": "Alex Nichol et al",
+    "year": "2021",
+    "topic": "diffusion, precision, recall",
+    "venue": "Arxiv",
+    "description": "This paper is the first to show that DDPMs can get competitive log-likelihoods. They use a reparameterization and a hybrid learning objective to more tightly optimize the variational lower bound, and find that their objective has less gradient noise during training. They use learned variances and find that they can get convincing samples using fewer steps. They also use the improved precision and recall metrics (Kynkaanniemi et al 2019) to show that diffusion models have higher recall for similar FID, which suggests they cover a large portion of the target distribution. They focused on optimizing log-likelihood as it is believed that optimizing ll forces the model to capture all models of data distribution (Razavi et al 2019). Heninghan et al 2020 has also shown that small improvements in ll can dramatically impact sample quality / learned feature representations. The authors argue that fixing \\sigma_{t} (as Ho et al 2020 does) is reasonable in terms of sample quality, but does not explain much about the ll. Thus, to improve ll they think of finding a better choice for \\Sigma_{\\theta}(x_{t},t), so they choose to try to learn it. They note that it is better to parameterize the var as an interpolation between \\beta_{t} and \\tilde{\\beta_{t}} in the log domain. Remember that \\beta_{t} is the noise schedule, which is typically a small value that increases over time following some schedule. \\tilde{\\beta is a reparameterization of \\beta_{t} used to simplify calculations. They are related via \\alpha, which is 1-\beta_{t}. Finally, they note that a linear schedule for noise leads to faster destroying of information than is necessary, and propose a different noise scheduler. Lots of insights!",
+    "link": "https://arxiv.org/pdf/2102.09672"
+  },
+  {
     "title": "Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture",
     "author": "Huijie Zhang et al",
     "year": "2024",

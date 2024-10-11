@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 133 papers. Let's keep it up!
+        So far, we have read 134 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 133 papers. Nice! 
+        Your search returned 134 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Improved Denoising Diffusion Probabilistic Models</td>
+                <td>Alex Nichol et al</td>
+                <td>2021</td>
+                <td>diffusion, precision, recall</td>
+                <td>Arxiv</td>
+                <td>This paper is the first to show that DDPMs can get competitive log-likelihoods. They use a reparameterization and a hybrid learning objective to more tightly optimize the variational lower bound, and find that their objective has less gradient noise during training. They use learned variances and find that they can get convincing samples using fewer steps. They also use the improved precision and recall metrics (Kynkaanniemi et al 2019) to show that diffusion models have higher recall for similar FID, which suggests they cover a large portion of the target distribution. They focused on optimizing log-likelihood as it is believed that optimizing ll forces the model to capture all models of data distribution (Razavi et al 2019). Heninghan et al 2020 has also shown that small improvements in ll can dramatically impact sample quality / learned feature representations. The authors argue that fixing \sigma_{t} (as Ho et al 2020 does) is reasonable in terms of sample quality, but does not explain much about the ll. Thus, to improve ll they think of finding a better choice for \Sigma_{\theta}(x_{t},t), so they choose to try to learn it. They note that it is better to parameterize the var as an interpolation between \beta_{t} and \tilde{\beta_{t}} in the log domain. Remember that \beta_{t} is the noise schedule, which is typically a small value that increases over time following some schedule. \tilde{\beta is a reparameterization of \beta_{t} used to simplify calculations. They are related via \alpha, which is 1-eta_{t}. Finally, they note that a linear schedule for noise leads to faster destroying of information than is necessary, and propose a different noise scheduler. Lots of insights!</td>
+                <td><a href="https://arxiv.org/pdf/2102.09672" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture</td>
