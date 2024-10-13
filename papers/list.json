@@ -1,5 +1,14 @@
 [
   {
+    "title": "Faster Diffusion: Rethinking the Role of UNet Encoder in Diffusion Models",
+    "author": "Senmao Li et al",
+    "year": "2024",
+    "topic": "diffusion, encoder",
+    "venue": "NeurIPS",
+    "description": "This paper notes that the UNet decoder in diffusion models has similar output between timesteps. Thus, they seek to basically cyclically reuse encoder features for the decoder. Smart!",
+    "link": "https://arxiv.org/pdf/2312.09608"
+  },
+  {
     "title": "Improved Denoising Diffusion Probabilistic Models",
     "author": "Alex Nichol et al",
     "year": "2021",
