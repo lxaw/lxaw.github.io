@@ -1,5 +1,14 @@
 [
   {
+    "title": "DeepCache: Accelerating Diffusion Models for Free",
+    "author": "Xinyin Ma et al",
+    "year": "2023",
+    "topic": "diffusion, cache",
+    "venue": "Arxiv",
+    "description": "Similarly to Faster Diffusion (Senma Li et al, 2024), this paper uses the temporal redundancy in the denoising stages. They then cache features across the UNet by skipping some of the skip branches / paths. Basically, for timesteps t and t+1 that are similar, we can cache some of the high level features between them and directly use them. Also smart!",
+    "link": "https://arxiv.org/pdf/2312.00858"
+  },
+  {
     "title": "Faster Diffusion: Rethinking the Role of UNet Encoder in Diffusion Models",
     "author": "Senmao Li et al",
     "year": "2024",
