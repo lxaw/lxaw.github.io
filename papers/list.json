@@ -1,5 +1,14 @@
 [
   {
+    "title": "Token Merging for Fast Stable Diffusion",
+    "author": "Daniel Bolya et al",
+    "year": "2023",
+    "topic": "diffusion, token merging",
+    "venue": "Arxiv",
+    "description": "This paper seeks to apply ToMe (https://arxiv.org/pdf/2210.09461) to diffusion models, introducing techniques for token partitioning (by changing the way src and dst is merged) and a token unmerging operation (which is basically just setting the two merged tokens equal to their average, and then resetting back the two tokens with that average). Remarkably, this works very well!",
+    "link": "https://arxiv.org/pdf/2303.17604"
+  },
+  {
     "title": "DeepCache: Accelerating Diffusion Models for Free",
     "author": "Xinyin Ma et al",
     "year": "2023",
