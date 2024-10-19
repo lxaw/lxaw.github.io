@@ -1,5 +1,14 @@
 [
   {
+    "title": "Flash Attention",
+    "author": "Tri Dao et al",
+    "year": "2022",
+    "topic": "attention, transformer",
+    "venue": "Arxiv",
+    "description": "This introduces FlashAttention, which is an IO-aware exact attention algo that uses tiling. Basically, they use tiling to prevent needing to put the large NxN attention matrix on GPU HBM; FlashAttention goes through blocks of the K and V matrices, loads them to on-chip SRAM, which increases speed! Neat!",
+    "link": "https://arxiv.org/pdf/2205.14135"
+  },
+  {
     "title": "Token Merging for Fast Stable Diffusion",
     "author": "Daniel Bolya et al",
     "year": "2023",
