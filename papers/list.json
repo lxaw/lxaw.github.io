@@ -1,5 +1,14 @@
 [
   {
+    "title": "DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models",
+    "author": "Muyang Li et al",
+    "year": "2024",
+    "topic": "diffusion, distributed inference",
+    "venue": "Arxiv",
+    "description": "DistriFusion introduces *displaced patch parallelism*, where the input image is split into patches, each processed independently by different GPUs. To maintain fidelity and reduce communication costs, the method reuses activations from the previous timestep as context for the current step, ensuring interaction between patches without excessive synchronization. Synchronous communication is only used at the initial step, while subsequent steps leverage asynchronous communication, hiding communication overhead within computation. This technique allows each device to process only a portion of the workload efficiently, avoiding artifacts and achieving scalable parallelism tailored to the sequential nature of diffusion models.",
+    "link": "https://arxiv.org/pdf/2402.19481"
+  },
+  {
     "title": "Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching",
     "author": "Xinyin Ma et al",
     "year": "2024",
