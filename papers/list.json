@@ -1,5 +1,14 @@
 [
   {
+    "title": "Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching",
+    "author": "Xinyin Ma et al",
+    "year": "2024",
+    "topic": "diffusion, caching",
+    "venue": "Arxiv",
+    "description": "This paper proposes interpolation between computationally inexpensive solutions that are suboptimal and optimal solutions that are expensive by training a router the learn how to cache layers of the diffusion transformer.",
+    "link": "https://arxiv.org/pdf/2406.01733"
+  },
+  {
     "title": "Flash Attention",
     "author": "Tri Dao et al",
     "year": "2022",
