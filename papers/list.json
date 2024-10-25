@@ -1,5 +1,14 @@
 [
   {
+    "title": "Simplifying Neural Networks by Soft Weight-Sharing",
+    "author": "Steven Nowlan et al",
+    "year": "1992",
+    "topic": "soft weight sharing, mog",
+    "venue": "Neural Computation",
+    "description": "This paper tackles the challenge of penalizing complexity and preventing overfitting in neural networks. Traditional methods, like L2 regularization, penalize the sum of squared weights but can favor multiple weak connections over a single strong one, leading to suboptimal weight configurations. To address this, the authors propose a mixture of Gaussians (MoG) prior: a narrow Gaussian encourages small weights to shrink to zero, while a broad Gaussian preserves large weights essential for modeling the data accurately. By clustering weights into near-zero and larger groups, this data-driven regularization avoids forcing all weights toward zero equally and demonstrates better generalization on 12 toy tasks compared to early stopping and traditional squared-weight penalties.",
+    "link": "https://www.cs.toronto.edu/~hinton/absps/sunspots.pdf"
+  },
+  {
     "title": "DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models",
     "author": "Muyang Li et al",
     "year": "2024",
