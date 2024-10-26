@@ -1,5 +1,14 @@
 [
   {
+    "title": "Why Does Unsupervised Pre-Training Help Deep Learning?",
+    "author": "Dumitru Erhan et al",
+    "year": "2010",
+    "topic": "pretraining, unsupervised",
+    "venue": "JMLR",
+    "description": "This paper argues that standard training schemes place parameters in regions of the parameter space that generalize poorly, while greedy layer-wise unsupervised pre-training allows each layer to learn a nonlinear transformation of its input that captures the main variations in the input, which acts as a regularizer: minimizing variance and introducing bias towards good initializations for the parameters. They argue that defining particular initialization points implicitly imposes constraints on the parameters in that it specifies which minima (out of many possible minima) of the cost function are allowed. They further argue that small perturbations in the trajectory of the parameters have a larger effect early on, and hint that early examples have larger influence and may trap model parameters in particular regions of parameter space corresponding to the arbitrary ordering of training examples (similar to the \"critical period\" in developmental psychology).",
+    "link": "https://jmlr.org/papers/volume11/erhan10a/erhan10a.pdf"
+  },
+  {
     "title": "Improving Language Understanding by Generative Pre-Training",
     "author": "Alec Radford et al",
     "year": "2020",
