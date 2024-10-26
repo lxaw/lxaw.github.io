@@ -1,5 +1,14 @@
 [
   {
+    "title": "Improving Language Understanding by Generative Pre-Training",
+    "author": "Alec Radford et al",
+    "year": "2020",
+    "topic": "pretraining",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper is that language models can learn deep linguistic and world knowledge through unsupervised pre-training on large corpora of contiguous text, which can then be effectively transferred to downstream tasks. The authors demonstrate this by using a Transformer architecture that can capture long-range dependencies, pre-training it on a books dataset that contains extended narratives rather than shuffled sentences, making it particularly effective at understanding context. Their innovation extends to how they handle transfer learning - rather than creating complex task-specific architectures, they show that simple input transformations can adapt their pre-trained model to various tasks while preserving its learned capabilities. This elegant approach proves remarkably effective, with their single task-agnostic model outperforming specially-designed architectures across nine different natural language understanding tasks, suggesting that their pre-training method captures fundamental aspects of language understanding.",
+    "link": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+  },
+  {
     "title": "Learning Transferable Visual Models from Natural Language Supervision",
     "author": "Alec Radford et al",
     "year": "2021",
