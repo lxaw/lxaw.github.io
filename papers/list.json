@@ -1,5 +1,14 @@
 [
   {
+    "title": "Adam: A Method for Stochastic Optimization",
+    "author": "Diederik Kingma et al",
+    "year": "2015",
+    "topic": "optimizers",
+    "venue": "ICLR",
+    "description": "Adam combines momentum (through exponential moving average of gradients mt) and adaptive learning rates (through exponential moving average of squared gradients vt) to create an efficient optimizer, where mt captures the direction of updates while vt adapts the step size for each parameter based on its gradient history. The optimizer corrects initialization bias in these moving averages by scaling them with factors 1/(1-β₁ᵗ) and 1/(1-β₂ᵗ) respectively, ensuring unbiased estimates even in early training. The parameter update θt ← θt-1 - α·mt/(√vt + ϵ) is invariant to gradient scaling because it uses the ratio mt/√vt, while the adaptive learning rate 1/√vt approximates the diagonal of the Fisher Information Matrix's square root, making it a more conservative version of natural gradient descent that works well with sparse gradients and non-stationary objectives. The hyperparameters β₁ = 0.9 and β₂ = 0.999 mean the momentum term considers roughly the last 10 steps while the variance term considers the last 1000 steps, allowing Adam to both move quickly in consistent directions while being careful in directions with high historical variance.",
+    "link": "https://arxiv.org/pdf/1412.6980"
+  },
+  {
     "title": "Simplifying Neural Networks by Soft Weight-Sharing",
     "author": "Steven Nowlan et al",
     "year": "1992",
