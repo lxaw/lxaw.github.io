@@ -1,5 +1,14 @@
 [
   {
+    "title": "Learning Transferable Visual Models from Natural Language Supervision",
+    "author": "Alec Radford et al",
+    "year": "2021",
+    "topic": "CLIP",
+    "venue": "Arxiv",
+    "description": "CLIP (Contrastive Language-Image Pre-training) works by simultaneously training two neural networks - one that encodes images and another that encodes text - to project their inputs into a shared multi-dimensional space where similar concepts end up close together. During training, CLIP takes a batch of image-text pairs and learns to identify which text descriptions actually match which images, doing this by maximizing the cosine similarity between embeddings of genuine pairs while minimizing similarity between mismatched pairs. The training data consists of hundreds of millions of (image, text) pairs collected from the internet, which helps CLIP learn broad visual concepts and their relationships to language without requiring hand-labeled data. What makes CLIP particularly powerful is its zero-shot capability - after training, it can make predictions about images it has never seen before by comparing them against any arbitrary text descriptions, rather than being limited to a fixed set of predetermined labels.",
+    "link": "https://arxiv.org/pdf/2103.00020"
+  },
+  {
     "title": "Adam: A Method for Stochastic Optimization",
     "author": "Diederik Kingma et al",
     "year": "2015",
