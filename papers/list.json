@@ -1,5 +1,23 @@
 [
   {
+    "title": "MaskGIT: Masked Generative Image Transformer",
+    "author": "Huiwen Chang et al",
+    "year": "2022",
+    "topic": "image transformer, generation",
+    "venue": "Arxiv",
+    "description": "The MaskGIT paper introduces a novel bidirectional transformer architecture for image generation that can predict multiple image tokens in parallel, rather than generating them sequentially like previous methods. They develop a new iterative decoding strategy where the model predicts all masked tokens simultaneously at each step, keeps the most confident predictions, and refines the remaining tokens over multiple iterations using a decreasing mask scheduling function. The approach significantly outperforms previous transformer-based methods in both generation quality and speed on ImageNet, while maintaining good diversity in the generated samples. The bidirectional nature of their model enables flexible image editing applications like inpainting, outpainting, and class-conditional object manipulation without requiring any architectural changes or task-specific training.",
+    "link": "https://arxiv.org/pdf/2202.04200"
+  },
+  {
+    "title": "Generative Pretraining from Pixels",
+    "author": "Mark Chen et al",
+    "year": "2020",
+    "topic": "pretraining, gpt",
+    "venue": "PMLR",
+    "description": "The paper demonstrates that transformer models can learn high-quality image representations by simply predicting pixels in a generative way, without incorporating any knowledge of the 2D structure of images. They show that as the generative models get better at predicting pixels (measured by log probability), they also learn better representations that can be used for downstream image classification tasks. The authors discover that, unlike in supervised learning where the best representations are in the final layers, their generative models learn the best representations in the middle layers - suggesting the model first builds up representations before using them to predict pixels. Finally, while their approach requires significant compute and works best at lower resolutions, it achieves competitive results with other self-supervised methods and shows that generative pre-training can be a promising direction for learning visual representations without labels.",
+    "link": "https://cdn.openai.com/papers/Generative_Pretraining_from_Pixels_V2.pdf"
+  },
+  {
     "title": "Why Does Unsupervised Pre-Training Help Deep Learning?",
     "author": "Dumitru Erhan et al",
     "year": "2010",

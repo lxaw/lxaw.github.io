@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 145 papers. Let's keep it up!
+        So far, we have read 147 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 145 papers. Nice! 
+        Your search returned 147 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>MaskGIT: Masked Generative Image Transformer</td>
+                <td>Huiwen Chang et al</td>
+                <td>2022</td>
+                <td>image transformer, generation</td>
+                <td>Arxiv</td>
+                <td>The MaskGIT paper introduces a novel bidirectional transformer architecture for image generation that can predict multiple image tokens in parallel, rather than generating them sequentially like previous methods. They develop a new iterative decoding strategy where the model predicts all masked tokens simultaneously at each step, keeps the most confident predictions, and refines the remaining tokens over multiple iterations using a decreasing mask scheduling function. The approach significantly outperforms previous transformer-based methods in both generation quality and speed on ImageNet, while maintaining good diversity in the generated samples. The bidirectional nature of their model enables flexible image editing applications like inpainting, outpainting, and class-conditional object manipulation without requiring any architectural changes or task-specific training.</td>
+                <td><a href="https://arxiv.org/pdf/2202.04200" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Generative Pretraining from Pixels</td>
+                <td>Mark Chen et al</td>
+                <td>2020</td>
+                <td>pretraining, gpt</td>
+                <td>PMLR</td>
+                <td>The paper demonstrates that transformer models can learn high-quality image representations by simply predicting pixels in a generative way, without incorporating any knowledge of the 2D structure of images. They show that as the generative models get better at predicting pixels (measured by log probability), they also learn better representations that can be used for downstream image classification tasks. The authors discover that, unlike in supervised learning where the best representations are in the final layers, their generative models learn the best representations in the middle layers - suggesting the model first builds up representations before using them to predict pixels. Finally, while their approach requires significant compute and works best at lower resolutions, it achieves competitive results with other self-supervised methods and shows that generative pre-training can be a promising direction for learning visual representations without labels.</td>
+                <td><a href="https://cdn.openai.com/papers/Generative_Pretraining_from_Pixels_V2.pdf" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Why Does Unsupervised Pre-Training Help Deep Learning?</td>
