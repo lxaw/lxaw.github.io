@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 147 papers. Let's keep it up!
+        So far, we have read 148 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 147 papers. Nice! 
+        Your search returned 148 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -106,13 +106,23 @@
         <tbody>
         
             <tr>
+                <td>MaskGIT: Masked Generative Image Transformer</td>
+                <td>Huiwen Chang et al</td>
+                <td>2022</td>
+                <td>generative models, masking, image transformer</td>
+                <td>Arxiv</td>
+                <td>The MaskGIT paper introduces a novel bidirectional transformer architecture for image generation that can predict multiple image tokens in parallel, rather than generating them sequentially like previous methods. They develop a new iterative decoding strategy where the model predicts all masked tokens simultaneously at each step, keeps the most confident predictions, and refines the remaining tokens over multiple iterations using a decreasing mask scheduling function. The approach significantly outperforms previous transformer-based methods in both generation quality and speed on ImageNet, while maintaining good diversity in the generated samples. The bidirectional nature of their model enables flexible image editing applications like inpainting, outpainting, and class-conditional object manipulation without requiring any architectural changes or task-specific training.</td>
+                <td><a href="https://arxiv.org/pdf/2202.04200" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
                 <td>Improved Precision and Recall Metric for Assessing Generative Models</td>
                 <td>Tuomas Kynkaanniemi et al</td>
                 <td>2019</td>
                 <td>generative models, precision, recall</td>
-                <td>NeurIPS 2019</td>
+                <td>NeurIPS</td>
                 <td>This paper introduces an improved metric for evaluating generative models by separately measuring precision (quality of generated samples) and recall (coverage/diversity of generated distribution) using k-nearest neighbors to construct non-parametric manifold approximations of real and generated data distributions. The authors demonstrate their metric&#x27;s effectiveness using StyleGAN and BigGAN, showing how it provides more nuanced insights than existing metrics like FID, particularly in revealing tradeoffs between image quality and variation that other metrics obscure. They use their metric to analyze and improve StyleGAN&#x27;s architecture and training configurations, identifying new variants that achieve state-of-the-art results, and perform the first principled analysis of truncation methods. Finally, they extend their metric to evaluate individual sample quality, enabling quality assessment of interpolations and providing insights into the shape of the latent space that produces realistic images.</td>
-                <td>N/A</td>
+                <td><a href="https://arxiv.org/pdf/1904.06991" target="_blank">Link</a></td>
             </tr>
         
             <tr>
