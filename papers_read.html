@@ -106,13 +106,13 @@
         <tbody>
         
             <tr>
-                <td>Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning</td>
-                <td>Ronald J Williams et al</td>
+                <td>Improved Precision and Recall Metric for Assessing Generative Models</td>
+                <td>Tuomas Kynkaanniemi et al</td>
                 <td>1192</td>
-                <td>reinforcement learning</td>
-                <td>Machine Learning</td>
-                <td>This paper introduces REINFORCE algorithms, a family of reinforcement learning algorithms for stochastic connectionist networks that perform gradient ascent on expected reinforcement without explicitly computing gradient estimates. The core contribution is the weight update rule Δwij = αij(r - bij)eij, where eij = ∂ln gi/∂wij represents characteristic eligibility, which naturally guides the network toward maximizing expected rewards in both immediate-reinforcement tasks and certain delayed-reinforcement scenarios. The paper demonstrates how these algorithms can be seamlessly integrated with backpropagation, extending their applicability to more complex neural architectures. Finally, the work provides theoretical guarantees about the algorithms&#x27; convergence properties and establishes connections to existing methods while introducing novel variants that could lead to more powerful reinforcement learning approaches.</td>
-                <td><a href="https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf" target="_blank">Link</a></td>
+                <td>generative models, precision, recall</td>
+                <td>NeurIPS 2019</td>
+                <td>This paper introduces an improved metric for evaluating generative models by separately measuring precision (quality of generated samples) and recall (coverage/diversity of generated distribution) using k-nearest neighbors to construct non-parametric manifold approximations of real and generated data distributions. The authors demonstrate their metric&#x27;s effectiveness using StyleGAN and BigGAN, showing how it provides more nuanced insights than existing metrics like FID, particularly in revealing tradeoffs between image quality and variation that other metrics obscure. They use their metric to analyze and improve StyleGAN&#x27;s architecture and training configurations, identifying new variants that achieve state-of-the-art results, and perform the first principled analysis of truncation methods. Finally, they extend their metric to evaluate individual sample quality, enabling quality assessment of interpolations and providing insights into the shape of the latent space that produces realistic images.</td>
+                <td>N/A</td>
             </tr>
         
             <tr>
