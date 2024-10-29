@@ -106,13 +106,13 @@
         <tbody>
         
             <tr>
-                <td>MaskGIT: Masked Generative Image Transformer</td>
-                <td>Huiwen Chang et al</td>
-                <td>2022</td>
-                <td>generative models, masking, image transformer</td>
-                <td>Arxiv</td>
-                <td>The MaskGIT paper introduces a novel bidirectional transformer architecture for image generation that can predict multiple image tokens in parallel, rather than generating them sequentially like previous methods. They develop a new iterative decoding strategy where the model predicts all masked tokens simultaneously at each step, keeps the most confident predictions, and refines the remaining tokens over multiple iterations using a decreasing mask scheduling function. The approach significantly outperforms previous transformer-based methods in both generation quality and speed on ImageNet, while maintaining good diversity in the generated samples. The bidirectional nature of their model enables flexible image editing applications like inpainting, outpainting, and class-conditional object manipulation without requiring any architectural changes or task-specific training.</td>
-                <td><a href="https://arxiv.org/pdf/2202.04200" target="_blank">Link</a></td>
+                <td>Neural Discrete Representation Learning</td>
+                <td>Aaron van der Oord et al</td>
+                <td>2017</td>
+                <td>generative models, vae</td>
+                <td>NeurIPS</td>
+                <td>The key innovation of this paper is the introduction of the Vector Quantised-Variational AutoEncoder (VQ-VAE), which combines vector quantization with VAEs to learn discrete latent representations instead of continuous ones. Unlike previous approaches to discrete latent variables which struggled with high variance or optimization challenges, VQ-VAE uses a simple but effective nearest-neighbor lookup system in the latent space, along with a straight-through gradient estimator, to learn meaningful discrete codes. This approach allows the model to avoid the common posterior collapse problem where latents are ignored when paired with powerful decoders, while still maintaining good reconstruction quality comparable to continuous VAEs. The discrete nature of the latent space enables the model to focus on capturing important high-level features that span many dimensions in the input space (like objects in images or phonemes in speech) rather than local details, and these discrete latents can then be effectively modeled using powerful autoregressive priors for generation.</td>
+                <td><a href="https://arxiv.org/pdf/1711.00937" target="_blank">Link</a></td>
             </tr>
         
             <tr>
