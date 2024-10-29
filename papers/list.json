@@ -1,5 +1,14 @@
 [
   {
+    "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+    "author": "Jiawei Zhao et al",
+    "year": "2024",
+    "topic": "lora, low-rank projection",
+    "venue": "ICML",
+    "description": "This paper introduces GaLore, a memory-efficient approach for training large language models that exploits the inherent low-rank structure of gradients rather than imposing low-rank constraints on the model weights themselves. The key insight is that while weight matrices may need to be full-rank for optimal performance, their gradients naturally become low-rank during training due to the specific structure of backpropagated gradients in neural networks, particularly in cases where the batch size is smaller than the matrix dimensions or when the gradients follow certain parametric forms. Building on this observation, GaLore projects gradients into low-rank spaces for memory-efficient optimization while still allowing full-parameter learning, contrasting with previous approaches like LoRA that restrict the weight updates to low-rank spaces. By periodically switching between different low-rank subspaces during training, GaLore maintains the flexibility of full-rank training while significantly reducing memory usage, particularly in storing optimizer states.",
+    "link": "https://arxiv.org/pdf/2403.03507"
+  },
+  {
     "title": "Neural Discrete Representation Learning",
     "author": "Aaron van der Oord et al",
     "year": "2017",
