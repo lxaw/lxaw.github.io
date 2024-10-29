@@ -1,5 +1,14 @@
 [
   {
+    "title": "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model",
+    "author": "Chunting Zhou et al",
+    "year": "2024",
+    "topic": "diffusion, transformer, multi-modal",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper is that a single transformer model can effectively handle both discrete data (like text) and continuous data (like images) by using different training objectives for each modality within the same model. They introduce \"Transfusion,\" which uses traditional language modeling (next token prediction) for text sequences while simultaneously applying diffusion modeling for image sequences, combining these distinct objectives into a unified training approach. The architecture employs a novel attention pattern that allows for causal attention across the entire sequence while enabling bidirectional attention within individual images, letting image patches attend to each other freely while maintaining proper causality for text generation. This unified approach avoids the need for separate specialized models or complex architectures while still allowing each modality to be processed according to its most effective paradigm.",
+    "link": "https://arxiv.org/pdf/2408.11039"
+  },
+  {
     "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
     "author": "Jiawei Zhao et al",
     "year": "2024",
