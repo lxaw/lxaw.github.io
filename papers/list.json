@@ -1,5 +1,14 @@
 [
   {
+    "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+    "author": "Xinyini Ma et al",
+    "year": "2023",
+    "topic": "llm, structural pruning",
+    "venue": "Arxiv",
+    "description": "The authors introduce LLM-Pruner, a novel approach for compressing large language models that operates in a task-agnostic manner while requiring minimal access to the original training data. Their key insight is to first automatically identify groups of interdependent neural structures within the LLM by analyzing dependency patterns, ensuring that coupled structures are pruned together to maintain model coherence. The method then estimates the importance of these structural groups using both first-order gradients and approximated Hessian information from a small set of calibration samples, allowing them to selectively remove less critical groups while preserving the model's core functionality. Finally, they employ a rapid recovery phase using low-rank adaptation (LoRA) to fine-tune the pruned model with a limited dataset in just a few hours, enabling efficient compression while maintaining the LLM's general-purpose capabilities.",
+    "link": "https://arxiv.org/pdf/2305.11627"
+  },
+  {
     "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
     "author": "Guangxuan Xiao et al",
     "year": "2023",
