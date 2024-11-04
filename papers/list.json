@@ -1,5 +1,14 @@
 [
   {
+    "title": "ESPACE: Dimensionality Reduction of Activations for Model Compression",
+    "author": "Charbel Sakr et al",
+    "year": "2024",
+    "topic": "llm, dimensionality reduction, activations, compression",
+    "venue": "NeurIPS",
+    "description": "Instead of decomposing weight matrices as done in previous work, ESPACE reduces the dimensionality of activation tensors by projecting them onto a pre-calibrated set of principal components using a static projection matrix P, where for an activation x, its projection is x̃ = PPᵀx. The projection matrix P is carefully constructed (using eigendecomposition of activation statistics) to preserve the most important components while reducing dimensionality, taking advantage of natural redundancies that exist in activation patterns due to properties like the Central Limit Theorem when stacking sequence/batch dimensions. During training, the weights remain uncompressed and fully trainable (maintaining model expressivity), while at inference time, the weight matrices can be pre-multiplied with the projection matrix (PTWᵀ) to achieve compression through matrix multiplication associativity: Y = WᵀX ≈ Wᵀ(PPᵀX) = (PTWᵀ)(PᵀX). This activation-centric approach is fundamentally different from previous methods because it maintains full model expressivity during training while still achieving compression at inference time, and it takes advantage of natural statistical redundancies in activation patterns rather than trying to directly compress weights.",
+    "link": "https://arxiv.org/pdf/2410.05437"
+  },
+  {
     "title": "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model",
     "author": "Chunting Zhou et al",
     "year": "2024",

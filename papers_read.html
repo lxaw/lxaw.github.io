@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 150 papers. Let's keep it up!
+        So far, we have read 151 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 150 papers. Nice! 
+        Your search returned 151 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>ESPACE: Dimensionality Reduction of Activations for Model Compression</td>
+                <td>Charbel Sakr et al</td>
+                <td>2024</td>
+                <td>llm, dimensionality reduction, activations, compression</td>
+                <td>NeurIPS</td>
+                <td>Instead of decomposing weight matrices as done in previous work, ESPACE reduces the dimensionality of activation tensors by projecting them onto a pre-calibrated set of principal components using a static projection matrix P, where for an activation x, its projection is x̃ = PPᵀx. The projection matrix P is carefully constructed (using eigendecomposition of activation statistics) to preserve the most important components while reducing dimensionality, taking advantage of natural redundancies that exist in activation patterns due to properties like the Central Limit Theorem when stacking sequence/batch dimensions. During training, the weights remain uncompressed and fully trainable (maintaining model expressivity), while at inference time, the weight matrices can be pre-multiplied with the projection matrix (PTWᵀ) to achieve compression through matrix multiplication associativity: Y = WᵀX ≈ Wᵀ(PPᵀX) = (PTWᵀ)(PᵀX). This activation-centric approach is fundamentally different from previous methods because it maintains full model expressivity during training while still achieving compression at inference time, and it takes advantage of natural statistical redundancies in activation patterns rather than trying to directly compress weights.</td>
+                <td><a href="https://arxiv.org/pdf/2410.05437" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model</td>
