@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 151 papers. Let's keep it up!
+        So far, we have read 152 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 151 papers. Nice! 
+        Your search returned 152 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models</td>
+                <td>Guangxuan Xiao et al</td>
+                <td>2023</td>
+                <td>llm, quantization, activations</td>
+                <td>ICML</td>
+                <td>The key insight of SmoothQuant is that in large language models, while weights are relatively easy to quantize, activations are much harder due to outliers. They observed that these outliers persistently appear in specific channels across different tokens, suggesting that the difficulty could be redistributed. Their solution is to mathematically transform the model by scaling down problematic activation channels while scaling up the corresponding weight channels proportionally, which maintains mathematical equivalence while making both weights and activations easier to quantize. This &quot;difficulty migration&quot; approach allows them to balance the quantization challenges between weights and activations using a tunable parameter α, rather than having all the difficulty concentrated in the activation values.</td>
+                <td><a href="https://arxiv.org/pdf/2211.10438" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>ESPACE: Dimensionality Reduction of Activations for Model Compression</td>

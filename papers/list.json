@@ -1,5 +1,14 @@
 [
   {
+    "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+    "author": "Guangxuan Xiao et al",
+    "year": "2023",
+    "topic": "llm, quantization, activations",
+    "venue": "ICML",
+    "description": "The key insight of SmoothQuant is that in large language models, while weights are relatively easy to quantize, activations are much harder due to outliers. They observed that these outliers persistently appear in specific channels across different tokens, suggesting that the difficulty could be redistributed. Their solution is to mathematically transform the model by scaling down problematic activation channels while scaling up the corresponding weight channels proportionally, which maintains mathematical equivalence while making both weights and activations easier to quantize. This \"difficulty migration\" approach allows them to balance the quantization challenges between weights and activations using a tunable parameter α, rather than having all the difficulty concentrated in the activation values.",
+    "link": "https://arxiv.org/pdf/2211.10438"
+  },
+  {
     "title": "ESPACE: Dimensionality Reduction of Activations for Model Compression",
     "author": "Charbel Sakr et al",
     "year": "2024",
