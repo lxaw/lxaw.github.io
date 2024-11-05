@@ -1,5 +1,14 @@
 [
   {
+    "title": "Guiding a Diffusion Model with a Bad Version of Itself",
+    "author": "Tero Karras et al",
+    "year": "2024",
+    "topic": "diffusion, guidance",
+    "venue": "Arxiv",
+    "description": "The paper makes two key contributions: First, they show that Classifier-Free Guidance (CFG) improves image quality not just through better prompt alignment, but because the unconditional model D0 learns a more spread-out distribution than the conditional model D1, causing the guidance term ∇x log(p1/p0) to push samples toward high-probability regions of the data manifold. Second, based on this insight, they introduce \"autoguidance\" - using a smaller, less-trained version of the model itself as the guiding model D0 rather than an unconditional model, which allows for quality improvements without reducing variation and works even for unconditional models.",
+    "link": "https://arxiv.org/pdf/2406.02507"
+  },
+  {
     "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
     "author": "Xinyini Ma et al",
     "year": "2023",
