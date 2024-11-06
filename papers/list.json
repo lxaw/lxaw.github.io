@@ -1,5 +1,14 @@
 [
   {
+    "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
+    "author": "Guangxuan Xiao et al",
+    "year": "2024",
+    "topic": "llm, kv cache, attention",
+    "venue": "Arxiv",
+    "description": "The key insight of DuoAttention is the observation that attention heads in LLMs naturally fall into two distinct categories: retrieval heads that need to access the full context to make connections across long distances, and streaming heads that mainly focus on recent tokens and attention sinks. This dichotomy makes intuitive sense because not all parts of language processing require long-range dependencies - while some aspects like fact recall or logical reasoning need broad context, others like local grammar or immediate context processing can work with nearby tokens. The paper's approach of using optimization to identify these heads (rather than just looking at attention patterns) is clever because it directly measures the impact on model outputs, capturing the true functional role of each head rather than just its surface behavior. Finally, the insight to maintain two separate KV caches (full for retrieval heads, minimal for streaming heads) is an elegant way to preserve the model's capabilities while reducing memory usage, since it aligns the memory allocation with each head's actual needs.",
+    "link": "https://arxiv.org/pdf/2410.10819"
+  },
+  {
     "title": "Efficient Streaming Language Models with Attention Sinks",
     "author": "Guangxuan Xiao et al",
     "year": "2024",

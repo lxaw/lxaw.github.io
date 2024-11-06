@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 156 papers. Let's keep it up!
+        So far, we have read 157 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 156 papers. Nice! 
+        Your search returned 157 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads</td>
+                <td>Guangxuan Xiao et al</td>
+                <td>2024</td>
+                <td>llm, kv cache, attention</td>
+                <td>Arxiv</td>
+                <td>The key insight of DuoAttention is the observation that attention heads in LLMs naturally fall into two distinct categories: retrieval heads that need to access the full context to make connections across long distances, and streaming heads that mainly focus on recent tokens and attention sinks. This dichotomy makes intuitive sense because not all parts of language processing require long-range dependencies - while some aspects like fact recall or logical reasoning need broad context, others like local grammar or immediate context processing can work with nearby tokens. The paper&#x27;s approach of using optimization to identify these heads (rather than just looking at attention patterns) is clever because it directly measures the impact on model outputs, capturing the true functional role of each head rather than just its surface behavior. Finally, the insight to maintain two separate KV caches (full for retrieval heads, minimal for streaming heads) is an elegant way to preserve the model&#x27;s capabilities while reducing memory usage, since it aligns the memory allocation with each head&#x27;s actual needs.</td>
+                <td><a href="https://arxiv.org/pdf/2410.10819" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Efficient Streaming Language Models with Attention Sinks</td>
