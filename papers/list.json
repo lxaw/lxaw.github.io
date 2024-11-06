@@ -1,5 +1,14 @@
 [
   {
+    "title": "MagicPIG: LSH Sampling for Efficient LLM Generation",
+    "author": "Zhuoming Chen et al",
+    "year": "2024",
+    "topic": "llm, kv cache",
+    "venue": "Arxiv",
+    "description": "This paper challenges the common assumption that attention in LLMs is naturally sparse, showing that TopK attention (selecting only the highest attention scores) can significantly degrade performance on tasks that require aggregating information across the full context. The authors demonstrate that sampling-based approaches to attention can be more effective than TopK selection, leading them to develop MagicPIG, a system that uses Locality Sensitive Hashing (LSH) to efficiently sample attention keys and values. A key insight is that the geometry of attention in LLMs has specific patterns - notably that the initial attention sink token remains almost static regardless of input, and that query and key vectors typically lie in opposite directions - which helps explain why simple TopK selection is suboptimal. Their solution involves a heterogeneous system design that leverages both GPU and CPU resources, with hash computations on GPU and attention computation on CPU, allowing for efficient processing of longer contexts while maintaining accuracy.",
+    "link": "https://arxiv.org/pdf/2410.16179"
+  },
+  {
     "title": "Guiding a Diffusion Model with a Bad Version of Itself",
     "author": "Tero Karras et al",
     "year": "2024",

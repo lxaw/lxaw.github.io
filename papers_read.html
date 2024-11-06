@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 154 papers. Let's keep it up!
+        So far, we have read 155 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 154 papers. Nice! 
+        Your search returned 155 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>MagicPIG: LSH Sampling for Efficient LLM Generation</td>
+                <td>Zhuoming Chen et al</td>
+                <td>2024</td>
+                <td>llm, kv cache</td>
+                <td>Arxiv</td>
+                <td>This paper challenges the common assumption that attention in LLMs is naturally sparse, showing that TopK attention (selecting only the highest attention scores) can significantly degrade performance on tasks that require aggregating information across the full context. The authors demonstrate that sampling-based approaches to attention can be more effective than TopK selection, leading them to develop MagicPIG, a system that uses Locality Sensitive Hashing (LSH) to efficiently sample attention keys and values. A key insight is that the geometry of attention in LLMs has specific patterns - notably that the initial attention sink token remains almost static regardless of input, and that query and key vectors typically lie in opposite directions - which helps explain why simple TopK selection is suboptimal. Their solution involves a heterogeneous system design that leverages both GPU and CPU resources, with hash computations on GPU and attention computation on CPU, allowing for efficient processing of longer contexts while maintaining accuracy.</td>
+                <td><a href="https://arxiv.org/pdf/2410.16179" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Guiding a Diffusion Model with a Bad Version of Itself</td>
