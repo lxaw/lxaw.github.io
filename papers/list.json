@@ -1,5 +1,14 @@
 [
   {
+    "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching",
+    "author": "Felix Wimbauer et al",
+    "year": "2024",
+    "topic": "diffusion, caching, distillation",
+    "venue": "Arxiv",
+    "description": "This paper introduces \"block caching\" to accelerate diffusion models by reusing computations across denoising steps. The key insight is that many layer blocks (particularly attention blocks) in diffusion models change very gradually during the denoising process, making their repeated computation redundant. The authors propose automatically determining which blocks to cache and when to refresh them based on measuring the relative changes in block outputs across timesteps. They also introduce a lightweight scale-shift adjustment mechanism that uses a student-teacher setup, where the student (cached model) learns additional scale and shift parameters to better align its cached block outputs with those of the teacher (uncached model), while keeping the original model weights frozen.",
+    "link": "https://arxiv.org/pdf/2312.03209"
+  },
+  {
     "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
     "author": "Guangxuan Xiao et al",
     "year": "2024",
