@@ -1,5 +1,14 @@
 [
   {
+    "title": "Efficient Streaming Language Models with Attention Sinks",
+    "author": "Guangxuan Xiao et al",
+    "year": "2024",
+    "topic": "llm, kv cache, attention",
+    "venue": "ICLR",
+    "description": "This paper introduces StreamingLLM, a framework that enables large language models to process infinitely long text sequences efficiently without fine-tuning, based on a key insight about \"attention sinks.\" The authors discover that LLMs allocate surprisingly high attention scores to initial tokens regardless of their semantic relevance, which they explain is due to the softmax operation requiring attention scores to sum to one - even when a token has no strong matches in context, the model must distribute attention somewhere, and initial tokens become natural \"sinks\" since they're visible to all subsequent tokens during autoregressive training. Building on this insight, StreamingLLM maintains just a few initial tokens (as attention sinks) along with a sliding window of recent tokens, achieving up to 22.2x speedup compared to baselines while maintaining performance on sequences up to 4 million tokens long. Additionally, they show that incorporating a dedicated learnable \"sink token\" during model pre-training can further improve streaming capabilities by providing an explicit token for collecting excess attention.",
+    "link": "https://arxiv.org/pdf/2309.17453"
+  },
+  {
     "title": "MagicPIG: LSH Sampling for Efficient LLM Generation",
     "author": "Zhuoming Chen et al",
     "year": "2024",
