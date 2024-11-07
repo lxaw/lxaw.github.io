@@ -1,5 +1,14 @@
 [
   {
+    "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
+    "author": "Tim Salimans et al",
+    "year": "2016",
+    "topic": "normalization, gradient descent",
+    "venue": "Arxiv",
+    "description": "This paper introduces weight normalization, a simple reparameterization technique that decouples a neural network's weight vectors into their direction and magnitude by expressing w = (g/||v||)v, where g is a scalar and v is a vector. The key insight is that this decoupling improves optimization by making the conditioning of the gradient better - the direction and scale of weight updates can be learned somewhat independently, which helps avoid problems with pathological curvature in the optimization landscape. While inspired by batch normalization, weight normalization is deterministic and doesn't add noise to gradients or create dependencies between minibatch examples, making it well-suited for scenarios like reinforcement learning and RNNs where batch normalization is problematic. The authors also propose a data-dependent initialization scheme where g and bias terms are initialized to normalize the initial pre-activations of neurons, helping ensure good scaling of activations across layers at the start of training.",
+    "link": "https://arxiv.org/pdf/1602.07868"
+  },
+  {
     "title": "Applying Guidance in a Limited Interval Improves Sample and Distribution Quality in Diffusion Models",
     "author": "Tuomas Kynkäänniemi et al",
     "year": "2024",
