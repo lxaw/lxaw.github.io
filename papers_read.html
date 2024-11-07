@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 158 papers. Let's keep it up!
+        So far, we have read 159 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 158 papers. Nice! 
+        Your search returned 159 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Applying Guidance in a Limited Interval Improves Sample and Distribution Quality in Diffusion Models</td>
+                <td>Tuomas Kynkäänniemi et al</td>
+                <td>2024</td>
+                <td>diffusion, cfg, guidance</td>
+                <td>Arxiv</td>
+                <td>This paper&#x27;s key insight is that classifier-free guidance (CFG) in diffusion models should only be applied during a specific interval of noise levels in the middle of the sampling process, rather than throughout the entire sampling chain as traditionally done. The intuition is that guidance is harmful at high noise levels (where it causes mode collapse and template-like outputs), largely unnecessary at low noise levels, and only truly beneficial in the middle range. They demonstrate this theoretically using a 1D synthetic example where they can visualize how guidance at high noise levels causes sampling trajectories to drift far from the smoothed data distribution, leading to mode dropping. Beyond this theoretical demonstration, they propose a simple solution of making the guidance weight a piecewise function that only applies guidance within a specific noise level interval.</td>
+                <td><a href="https://arxiv.org/pdf/2404.07724" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Cache Me if You Can: Accelerating Diffusion Models through Block Caching</td>

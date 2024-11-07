@@ -1,5 +1,14 @@
 [
   {
+    "title": "Applying Guidance in a Limited Interval Improves Sample and Distribution Quality in Diffusion Models",
+    "author": "Tuomas Kynkäänniemi et al",
+    "year": "2024",
+    "topic": "diffusion, cfg, guidance",
+    "venue": "Arxiv",
+    "description": "This paper's key insight is that classifier-free guidance (CFG) in diffusion models should only be applied during a specific interval of noise levels in the middle of the sampling process, rather than throughout the entire sampling chain as traditionally done. The intuition is that guidance is harmful at high noise levels (where it causes mode collapse and template-like outputs), largely unnecessary at low noise levels, and only truly beneficial in the middle range. They demonstrate this theoretically using a 1D synthetic example where they can visualize how guidance at high noise levels causes sampling trajectories to drift far from the smoothed data distribution, leading to mode dropping. Beyond this theoretical demonstration, they propose a simple solution of making the guidance weight a piecewise function that only applies guidance within a specific noise level interval.",
+    "link": "https://arxiv.org/pdf/2404.07724"
+  },
+  {
     "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching",
     "author": "Felix Wimbauer et al",
     "year": "2024",
