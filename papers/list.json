@@ -1,5 +1,14 @@
 [
   {
+    "title": "One Step Diffusion via ShortCut Models",
+    "author": "Kevin Frans et al",
+    "year": "2024",
+    "topic": "diffusion, ode, flow-matching",
+    "venue": "Arxiv",
+    "description": "This paper introduces shortcut models, a new type of diffusion model that enables high-quality image generation in a single forward pass by conditioning the model not only on the timestep but also on the desired step size, allowing it to learn larger jumps during the denoising process. Unlike previous approaches that require multiple training phases or complex scheduling, shortcut models can be trained end-to-end in a single phase by leveraging a self-consistency property where one large step should equal two consecutive smaller steps, combined with flow-matching loss as a base case. The key insight is that by conditioning on step size, the model can account for future curvature in the denoising path and jump directly to the correct next point rather than following the curved path naively, which would lead to errors with large steps. The approach simplifies the training pipeline while maintaining flexibility in inference budget, as the same model can generate samples using either single or multiple steps after training.",
+    "link": "https://arxiv.org/abs/2410.12557"
+  },
+  {
     "title": "Attention-Driven Training-Free Efficiency Enhancement of Diffusion Models",
     "author": "Hongjie Wang et al",
     "year": "2024",

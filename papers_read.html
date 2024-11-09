@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 161 papers. Let's keep it up!
+        So far, we have read 162 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 161 papers. Nice! 
+        Your search returned 162 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>One Step Diffusion via ShortCut Models</td>
+                <td>Kevin Frans et al</td>
+                <td>2024</td>
+                <td>diffusion, ode, flow-matching</td>
+                <td>Arxiv</td>
+                <td>This paper introduces shortcut models, a new type of diffusion model that enables high-quality image generation in a single forward pass by conditioning the model not only on the timestep but also on the desired step size, allowing it to learn larger jumps during the denoising process. Unlike previous approaches that require multiple training phases or complex scheduling, shortcut models can be trained end-to-end in a single phase by leveraging a self-consistency property where one large step should equal two consecutive smaller steps, combined with flow-matching loss as a base case. The key insight is that by conditioning on step size, the model can account for future curvature in the denoising path and jump directly to the correct next point rather than following the curved path naively, which would lead to errors with large steps. The approach simplifies the training pipeline while maintaining flexibility in inference budget, as the same model can generate samples using either single or multiple steps after training.</td>
+                <td><a href="https://arxiv.org/abs/2410.12557" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Attention-Driven Training-Free Efficiency Enhancement of Diffusion Models</td>
