@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 160 papers. Let's keep it up!
+        So far, we have read 161 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 160 papers. Nice! 
+        Your search returned 161 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Attention-Driven Training-Free Efficiency Enhancement of Diffusion Models</td>
+                <td>Hongjie Wang et al</td>
+                <td>2024</td>
+                <td>diffusion, training-free, attention, token pruning</td>
+                <td>CVPR</td>
+                <td>This paper introduces AT-EDM, a training-free framework to accelerate diffusion models by pruning redundant tokens during inference without requiring model retraining. The key innovation is a Generalized Weighted PageRank (G-WPR) algorithm that uses attention maps to identify and prune less important tokens, along with a novel similarity-based token recovery method that fills in pruned tokens based on attention patterns to maintain compatibility with convolutional layers. The authors also propose a Denoising-Steps-Aware Pruning (DSAP) schedule that prunes fewer tokens in early denoising steps when attention maps are more chaotic and less informative, and more tokens in later steps when attention patterns are better established. The overall approach focuses on making diffusion models more efficient by leveraging the rich information contained in attention maps to guide token pruning decisions while maintaining image generation quality.</td>
+                <td><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Attention-Driven_Training-Free_Efficiency_Enhancement_of_Diffusion_Models_CVPR_2024_paper.pdf" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks</td>

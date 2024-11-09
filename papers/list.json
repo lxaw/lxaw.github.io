@@ -1,5 +1,14 @@
 [
   {
+    "title": "Attention-Driven Training-Free Efficiency Enhancement of Diffusion Models",
+    "author": "Hongjie Wang et al",
+    "year": "2024",
+    "topic": "diffusion, training-free, attention, token pruning",
+    "venue": "CVPR",
+    "description": "This paper introduces AT-EDM, a training-free framework to accelerate diffusion models by pruning redundant tokens during inference without requiring model retraining. The key innovation is a Generalized Weighted PageRank (G-WPR) algorithm that uses attention maps to identify and prune less important tokens, along with a novel similarity-based token recovery method that fills in pruned tokens based on attention patterns to maintain compatibility with convolutional layers. The authors also propose a Denoising-Steps-Aware Pruning (DSAP) schedule that prunes fewer tokens in early denoising steps when attention maps are more chaotic and less informative, and more tokens in later steps when attention patterns are better established. The overall approach focuses on making diffusion models more efficient by leveraging the rich information contained in attention maps to guide token pruning decisions while maintaining image generation quality.",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Attention-Driven_Training-Free_Efficiency_Enhancement_of_Diffusion_Models_CVPR_2024_paper.pdf"
+  },
+  {
     "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
     "author": "Tim Salimans et al",
     "year": "2016",
