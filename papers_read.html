@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             font-size: 1.1rem;
             line-height: 1.6;
-            margin: 0;
+            margin: 1em;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 162 papers. Let's keep it up!
+        So far, we have read 163 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 162 papers. Nice! 
+        Your search returned 163 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Consistency Models</td>
+                <td>Yang Song et al</td>
+                <td>2023</td>
+                <td>diffusion, ode, consistency</td>
+                <td>ICML</td>
+                <td>This paper introduces consistency models, a new family of generative models that can generate high-quality samples in a single step while preserving the ability to trade compute for quality through multi-step sampling. The key innovation is training models to map any point on a probability flow ODE trajectory to its origin point, enforcing consistency across different time steps through either distillation from pre-trained diffusion models or direct training. The models support zero-shot data editing capabilities like inpainting, colorization, and super-resolution without requiring explicit training on these tasks, similar to diffusion models. The authors provide two training approaches - consistency distillation which leverages existing diffusion models, and consistency training which allows training from scratch without any pre-trained models, establishing consistency models as an independent class of generative models.</td>
+                <td><a href="https://arxiv.org/pdf/2303.01469" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>One Step Diffusion via ShortCut Models</td>
@@ -197,7 +207,7 @@
         
             <tr>
                 <td>LLM-Pruner: On the Structural Pruning of Large Language Models</td>
-                <td>Xinyini Ma et al</td>
+                <td>Xinyin Ma et al</td>
                 <td>2023</td>
                 <td>llm, structural pruning</td>
                 <td>Arxiv</td>

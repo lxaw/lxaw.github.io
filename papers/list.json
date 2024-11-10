@@ -1,5 +1,14 @@
 [
   {
+    "title": "Consistency Models",
+    "author": "Yang Song et al",
+    "year": "2023",
+    "topic": "diffusion, ode, consistency",
+    "venue": "ICML",
+    "description": "This paper introduces consistency models, a new family of generative models that can generate high-quality samples in a single step while preserving the ability to trade compute for quality through multi-step sampling. The key innovation is training models to map any point on a probability flow ODE trajectory to its origin point, enforcing consistency across different time steps through either distillation from pre-trained diffusion models or direct training. The models support zero-shot data editing capabilities like inpainting, colorization, and super-resolution without requiring explicit training on these tasks, similar to diffusion models. The authors provide two training approaches - consistency distillation which leverages existing diffusion models, and consistency training which allows training from scratch without any pre-trained models, establishing consistency models as an independent class of generative models.",
+    "link": "https://arxiv.org/pdf/2303.01469"
+  },
+  {
     "title": "One Step Diffusion via ShortCut Models",
     "author": "Kevin Frans et al",
     "year": "2024",
@@ -82,7 +91,7 @@
   },
   {
     "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
-    "author": "Xinyini Ma et al",
+    "author": "Xinyin Ma et al",
     "year": "2023",
     "topic": "llm, structural pruning",
     "venue": "Arxiv",

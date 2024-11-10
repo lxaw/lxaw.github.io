@@ -19,7 +19,7 @@ def generate_html(json_file_path, output_file_path):
             font-family: Arial, sans-serif;
             font-size: 1.1rem;
             line-height: 1.6;
-            margin: 0;
+            margin: 1em;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
