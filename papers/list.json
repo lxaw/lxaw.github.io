@@ -1,5 +1,14 @@
 [
   {
+    "title": "One Weight Bitwidth to Rule Them All",
+    "author": "Ting-Wu Chin et al",
+    "year": "2020",
+    "topic": "quantization, bitwidth",
+    "venue": "Arxiv",
+    "description": "This paper examines weight quantization in deep neural networks and challenges the common assumption that using the lowest possible bitwidth without accuracy loss is optimal. The key insight is that when considering model size as a constraint and allowing network width to vary, some bitwidths consistently outperform others - specifically, networks with standard convolutions work better with binary weights while networks with depthwise convolutions prefer higher bitwidths. The authors discover that this difference is related to the number of input channels (fan-in) per convolutional kernel, with higher fan-in making networks more resilient to aggressive quantization. Most surprisingly, they demonstrate that using a single well-chosen bitwidth throughout the network can outperform more complex mixed-precision quantization approaches when comparing networks of equal size, suggesting that the traditional focus on minimizing bitwidth without considering network width may be suboptimal.",
+    "link": "https://arxiv.org/pdf/2008.09916"
+  },
+  {
     "title": "Consistency Models",
     "author": "Yang Song et al",
     "year": "2023",
