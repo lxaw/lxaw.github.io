@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 164 papers. Let's keep it up!
+        So far, we have read 165 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 164 papers. Nice! 
+        Your search returned 165 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion</td>
+                <td>Muyang Li et al</td>
+                <td>2024</td>
+                <td>quantization, diffusion</td>
+                <td>Arxiv</td>
+                <td>SVDQuant introduces a novel approach to 4-bit quantization of diffusion models by using a low-rank branch to absorb outliers in both weights and activations, making quantization more feasible at such aggressive bit reduction. The method first consolidates outliers from activations to weights through smoothing, then decomposes the weights using Singular Value Decomposition (SVD) to separate the dominant components into a 16-bit low-rank branch while keeping the residual in 4 bits. To make this practical, they developed an inference engine called Nunchaku that fuses the low-rank and low-bit branch kernels together, eliminating redundant memory access that would otherwise negate the performance benefits. The approach is designed to work across different diffusion model architectures and can seamlessly integrate with existing low-rank adapters (LoRAs) without requiring re-quantization.</td>
+                <td><a href="https://arxiv.org/pdf/2411.05007" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>One Weight Bitwidth to Rule Them All</td>

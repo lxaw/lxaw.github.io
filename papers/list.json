@@ -1,5 +1,14 @@
 [
   {
+    "title": "SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion",
+    "author": "Muyang Li et al",
+    "year": "2024",
+    "topic": "quantization, diffusion",
+    "venue": "Arxiv",
+    "description": "SVDQuant introduces a novel approach to 4-bit quantization of diffusion models by using a low-rank branch to absorb outliers in both weights and activations, making quantization more feasible at such aggressive bit reduction. The method first consolidates outliers from activations to weights through smoothing, then decomposes the weights using Singular Value Decomposition (SVD) to separate the dominant components into a 16-bit low-rank branch while keeping the residual in 4 bits. To make this practical, they developed an inference engine called Nunchaku that fuses the low-rank and low-bit branch kernels together, eliminating redundant memory access that would otherwise negate the performance benefits. The approach is designed to work across different diffusion model architectures and can seamlessly integrate with existing low-rank adapters (LoRAs) without requiring re-quantization.",
+    "link": "https://arxiv.org/pdf/2411.05007"
+  },
+  {
     "title": "One Weight Bitwidth to Rule Them All",
     "author": "Ting-Wu Chin et al",
     "year": "2020",
