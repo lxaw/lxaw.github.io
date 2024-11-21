@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 167 papers. Let's keep it up!
+        So far, we have read 168 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 167 papers. Nice! 
+        Your search returned 168 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Fine-Tuning Language Models with Just Forward Passes</td>
+                <td>Sadhika Malladi et al</td>
+                <td>2024</td>
+                <td>finetuning, zo, optimization</td>
+                <td>Arxiv</td>
+                <td>The paper introduces MeZO, a memory-efficient zeroth-order optimization method, to fine-tune large language models using forward passes alone. Classical zeroth-order methods scale poorly with model size, but MeZO adapts these approaches to leverage structured pre-trained model landscapes, avoiding catastrophic slowdown even with billions of parameters. The authors theoretically show that MeZO’s convergence depends on the local effective rank of the Hessian, not the number of parameters, enabling efficient optimization despite prior bounds suggesting otherwise. Furthermore, MeZO’s flexibility allows optimization of non-differentiable objectives (e.g., accuracy or F1 score) and compatibility with parameter-efficient tuning methods like LoRA and prefix-tuning.</td>
+                <td><a href="https://arxiv.org/pdf/2305.17333" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference</td>

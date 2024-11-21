@@ -1,5 +1,14 @@
 [
   {
+    "title": "Fine-Tuning Language Models with Just Forward Passes",
+    "author": "Sadhika Malladi et al",
+    "year": "2024",
+    "topic": "finetuning, zo, optimization",
+    "venue": "Arxiv",
+    "description": "The paper introduces MeZO, a memory-efficient zeroth-order optimization method, to fine-tune large language models using forward passes alone. Classical zeroth-order methods scale poorly with model size, but MeZO adapts these approaches to leverage structured pre-trained model landscapes, avoiding catastrophic slowdown even with billions of parameters. The authors theoretically show that MeZO’s convergence depends on the local effective rank of the Hessian, not the number of parameters, enabling efficient optimization despite prior bounds suggesting otherwise. Furthermore, MeZO’s flexibility allows optimization of non-differentiable objectives (e.g., accuracy or F1 score) and compatibility with parameter-efficient tuning methods like LoRA and prefix-tuning.",
+    "link": "https://arxiv.org/pdf/2305.17333"
+  },
+  {
     "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
     "author": "Hanshi Sun et al",
     "year": "2024",
