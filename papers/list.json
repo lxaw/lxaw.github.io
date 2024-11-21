@@ -1,5 +1,14 @@
 [
   {
+    "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
+    "author": "Hanshi Sun et al",
+    "year": "2024",
+    "topic": "kv cache",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper lies in optimizing long-context large language model  inference by addressing the memory and latency bottlenecks associated with managing the key-value (KV) cache. The authors observe that pre-Rotary Position Embedding (RoPE) keys exhibit a low-rank structure, allowing them to be compressed without accuracy loss, while value caches lack this property and are therefore offloaded to the CPU to reduce GPU memory usage. To minimize decoding latency, they leverage landmarks—compact representations of the low-rank key cache—and identify a small set of outliers to be retained on the GPU, enabling efficient reconstruction of sparse KV pairs on-the-fly. This approach allows the system to handle significantly longer contexts and larger batch sizes while maintaining inference throughput and accuracy.",
+    "link": "https://arxiv.org/pdf/2410.21465"
+  },
+  {
     "title": "LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning",
     "author": "Rui Pan et al",
     "year": "2024",
