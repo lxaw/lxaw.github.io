@@ -1,5 +1,14 @@
 [
   {
+    "title": "LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning",
+    "author": "Rui Pan et al",
+    "year": "2024",
+    "topic": "peft, finetuning, sampling",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper is the discovery of a **skewed weight-norm distribution** across layers during LoRA fine-tuning, where the majority of updates occur in the bottom (embedding) and top (language modeling head) layers, leaving middle layers underutilized. This highlights that different layers have varied importance and suggests that selectively updating layers could improve efficiency without sacrificing performance. Building on this, the authors propose **Layerwise Importance Sampling AdamW (LISA)**, which randomly freezes most middle layers during training, using importance sampling to emulate LoRA’s fast learning pattern while avoiding its low-rank constraints. This approach achieves significant memory savings, faster convergence, and superior performance compared to LoRA and full-parameter fine-tuning, particularly in large-scale and domain-specific tasks.",
+    "link": "https://arxiv.org/pdf/2403.17919"
+  },
+  {
     "title": "SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion",
     "author": "Muyang Li et al",
     "year": "2024",
