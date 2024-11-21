@@ -1,5 +1,14 @@
 [
   {
+    "title": "The Cost of Down-Scaling Language Models: Fact Recall Deteriorates before In-Context Learning",
+    "author": "Tian Jin et al",
+    "year": "2023",
+    "topic": "pruning, icl",
+    "venue": "Arxiv",
+    "description": "This paper explores the effects of scaling the parameter count of large language models (LLMs) on two distinct capabilities: fact recall from pre-training and in-context learning (ICL). By investigating both dense scaling (training models of varying sizes) and pruning (removing weights), the authors identify that these approaches disproportionately affect fact recall while preserving ICL abilities. They demonstrate that a model's ability to learn from in-context information remains robust under significant parameter reductions, whereas the ability to recall pre-trained facts degrades with even moderate scaling down. This dichotomy highlights a fundamental difference in how these capabilities rely on model size and opens avenues for more efficient model design and deployment, emphasizing trade-offs between memory augmentation and parameter efficiency.",
+    "link": "https://arxiv.org/pdf/2310.04680"
+  },
+  {
     "title": "Fine-Tuning Language Models with Just Forward Passes",
     "author": "Sadhika Malladi et al",
     "year": "2024",
