@@ -1,5 +1,14 @@
 [
   {
+    "title": "SaySelf: Teaching LLMs to Express Confidence with Self-Reflective Rationales",
+    "author": "Tianyang Xu et al",
+    "year": "2024",
+    "topic": "confidence estimation, llm",
+    "venue": "Arxiv",
+    "description": "The SaySelf framework trains large language models (LLMs) to produce fine-grained confidence estimates and self-reflective rationales by focusing on internal uncertainties. It consists of two stages: supervised fine-tuning and reinforcement learning (RL). In the first stage, multiple reasoning chains are sampled from the LLM, clustered for semantic similarity, and analyzed by an advanced LLM to generate rationales summarizing uncertainties. The model is fine-tuned on a dataset that pairs questions with reasoning chains, rationales, and confidence estimates, using a loss function that optimizes the generation of all three outputs. In the second stage, RL refines the confidence predictions using a reward function that encourages accurate, high-confidence outputs while penalizing overconfidence in incorrect responses. The framework ensures that LLMs not only generate confidence scores but also provide explanations for their uncertainty, making their outputs more interpretable and calibrated.",
+    "link": "https://arxiv.org/pdf/2405.20974"
+  },
+  {
     "title": "Deep Reinforcement Learning from Human Preferences",
     "author": "Paul F Christiano et al",
     "year": "2016",
