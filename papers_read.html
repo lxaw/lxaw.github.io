@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 172 papers. Let's keep it up!
+        So far, we have read 173 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 172 papers. Nice! 
+        Your search returned 173 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>A deeper look at depth pruning of LLMs</td>
+                <td>Shoaib Ahmed Siddiqui et al</td>
+                <td>2024</td>
+                <td>pruning, depth pruning, llm</td>
+                <td>ICML</td>
+                <td>This paper explored different approaches to pruning large language models, revealing that while static metrics like cosine similarity work well for maintaining MMLU performance, adaptive metrics like Shapley values show interesting trade-offs between different tasks. A key insight was that self-attention layers are significantly more amenable to pruning compared to feed-forward layers, suggesting that models can maintain performance even with substantial attention layer reduction. The paper also demonstrated that simple performance recovery techniques, like applying an average update in place of removed layers, can be as effective or better than more complex approaches like low-rank adapters. Finally, the work highlighted how pruning affects different tasks unequally - while some metrics preserve performance on certain tasks like MMLU, they may significantly degrade performance on others like mathematical reasoning tasks.</td>
+                <td><a href="https://www.arxiv.org/pdf/2407.16286" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Editing Models with Task Arithmetic</td>

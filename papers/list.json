@@ -1,5 +1,14 @@
 [
   {
+    "title": "A deeper look at depth pruning of LLMs",
+    "author": "Shoaib Ahmed Siddiqui et al",
+    "year": "2024",
+    "topic": "pruning, depth pruning, llm",
+    "venue": "ICML",
+    "description": "This paper explored different approaches to pruning large language models, revealing that while static metrics like cosine similarity work well for maintaining MMLU performance, adaptive metrics like Shapley values show interesting trade-offs between different tasks. A key insight was that self-attention layers are significantly more amenable to pruning compared to feed-forward layers, suggesting that models can maintain performance even with substantial attention layer reduction. The paper also demonstrated that simple performance recovery techniques, like applying an average update in place of removed layers, can be as effective or better than more complex approaches like low-rank adapters. Finally, the work highlighted how pruning affects different tasks unequally - while some metrics preserve performance on certain tasks like MMLU, they may significantly degrade performance on others like mathematical reasoning tasks.",
+    "link": "https://www.arxiv.org/pdf/2407.16286"
+  },
+  {
     "title": "Editing Models with Task Arithmetic",
     "author": "Gabriel Ilharco et al",
     "year": "2023",
