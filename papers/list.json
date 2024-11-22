@@ -1,5 +1,14 @@
 [
   {
+    "title": "Editing Models with Task Arithmetic",
+    "author": "Gabriel Ilharco et al",
+    "year": "2023",
+    "topic": "task arithmetic, finetuning, task",
+    "venue": "ICLR",
+    "description": "This paper introduces a novel method for model editing called task arithmetic, where \"task vectors\" represent specific tasks by capturing the difference between pre-trained and fine-tuned model weights. Task vectors can be manipulated mathematically, such as being negated to unlearn tasks or added together to enable multi-tasking or improve performance in novel settings. A standout finding is the ability to create new task capabilities through analogies (e.g., \"A is to B as C is to D\"), which allows performance improvement on tasks with little or no data. This method is computationally efficient, leveraging linear operations on model weights without incurring extra inference costs, providing a flexible and modular framework for modifying models post-training. The approach highlights significant advantages in adapting existing models while bypassing costly re-training or data access constraints.",
+    "link": "https://arxiv.org/pdf/2212.04089"
+  },
+  {
     "title": "SaySelf: Teaching LLMs to Express Confidence with Self-Reflective Rationales",
     "author": "Tianyang Xu et al",
     "year": "2024",
