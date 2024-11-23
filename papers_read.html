@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 174 papers. Let's keep it up!
+        So far, we have read 175 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 174 papers. Nice! 
+        Your search returned 175 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>DoRA: Weight-Decomposed Low-Rank Adaptation</td>
+                <td>Shih-Yang Liu et al</td>
+                <td>2024</td>
+                <td>peft, lora</td>
+                <td>Arxiv</td>
+                <td>This paper introduces DoRA (Weight-Decomposed Low-Rank Adaptation), a novel parameter-efficient fine-tuning method that decomposes pre-trained weights into magnitude and direction components for separate optimization. Through a detailed weight decomposition analysis, the authors reveal that LoRA and full fine-tuning exhibit distinct learning patterns, with LoRA showing proportional changes in magnitude and direction while full fine-tuning demonstrates more nuanced, independent adjustments between these components. Based on this insight, DoRA uses LoRA specifically for directional updates while allowing independent magnitude optimization, which simplifies the learning task compared to having LoRA learn both components simultaneously. The authors also provide theoretical analysis showing how this decomposition benefits optimization by aligning the gradient&#x27;s covariance matrix more closely with the identity matrix and demonstrate mathematically why DoRA&#x27;s learning pattern more closely resembles full fine-tuning.</td>
+                <td><a href="https://arxiv.org/pdf/2402.09353" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>SphereFed: Hyperspherical Federated Learning</td>

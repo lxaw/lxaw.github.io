@@ -1,5 +1,14 @@
 [
   {
+    "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+    "author": "Shih-Yang Liu et al",
+    "year": "2024",
+    "topic": "peft, lora",
+    "venue": "Arxiv",
+    "description": "This paper introduces DoRA (Weight-Decomposed Low-Rank Adaptation), a novel parameter-efficient fine-tuning method that decomposes pre-trained weights into magnitude and direction components for separate optimization. Through a detailed weight decomposition analysis, the authors reveal that LoRA and full fine-tuning exhibit distinct learning patterns, with LoRA showing proportional changes in magnitude and direction while full fine-tuning demonstrates more nuanced, independent adjustments between these components. Based on this insight, DoRA uses LoRA specifically for directional updates while allowing independent magnitude optimization, which simplifies the learning task compared to having LoRA learn both components simultaneously. The authors also provide theoretical analysis showing how this decomposition benefits optimization by aligning the gradient's covariance matrix more closely with the identity matrix and demonstrate mathematically why DoRA's learning pattern more closely resembles full fine-tuning.",
+    "link": "https://arxiv.org/pdf/2402.09353"
+  },
+  {
     "title": "SphereFed: Hyperspherical Federated Learning",
     "author": "Xin Dong et al",
     "year": "2022",
