@@ -1,5 +1,14 @@
 [
   {
+    "title": "AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising",
+    "author": "Zigeng Chen, et al",
+    "year": "2024",
+    "topic": "diffusion, parallelization, denoising",
+    "venue": "Arxiv",
+    "description": "This paper introduces AsyncDiff, a novel approach to accelerate diffusion models through parallel processing across multiple devices. The key insight is that hidden states between consecutive diffusion steps are highly similar, which allows them to break the traditional sequential dependency chain of the denoising process by transforming it into an asynchronous one. They execute this by dividing the denoising model into multiple components distributed across different devices, where each component uses the output from the previous component's prior step as an approximation of its input, enabling parallel computation. To further enhance efficiency, they introduce stride denoising, which completes multiple denoising steps simultaneously through a single parallel computation batch and reduces the frequency of communication between devices. This solution is particularly elegant because it's universal and plug-and-play, requiring no model retraining or architectural changes to achieve significant speedups while maintaining generation quality.",
+    "link": "https://arxiv.org/pdf/2406.06911"
+  },
+  {
     "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
     "author": "Shih-Yang Liu et al",
     "year": "2024",

@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 175 papers. Let's keep it up!
+        So far, we have read 176 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 175 papers. Nice! 
+        Your search returned 176 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising</td>
+                <td>Zigeng Chen, et al</td>
+                <td>2024</td>
+                <td>diffusion, parallelization, denoising</td>
+                <td>Arxiv</td>
+                <td>This paper introduces AsyncDiff, a novel approach to accelerate diffusion models through parallel processing across multiple devices. The key insight is that hidden states between consecutive diffusion steps are highly similar, which allows them to break the traditional sequential dependency chain of the denoising process by transforming it into an asynchronous one. They execute this by dividing the denoising model into multiple components distributed across different devices, where each component uses the output from the previous component&#x27;s prior step as an approximation of its input, enabling parallel computation. To further enhance efficiency, they introduce stride denoising, which completes multiple denoising steps simultaneously through a single parallel computation batch and reduces the frequency of communication between devices. This solution is particularly elegant because it&#x27;s universal and plug-and-play, requiring no model retraining or architectural changes to achieve significant speedups while maintaining generation quality.</td>
+                <td><a href="https://arxiv.org/pdf/2406.06911" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>DoRA: Weight-Decomposed Low-Rank Adaptation</td>
