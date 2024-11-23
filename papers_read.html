@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 173 papers. Let's keep it up!
+        So far, we have read 174 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 173 papers. Nice! 
+        Your search returned 174 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>SphereFed: Hyperspherical Federated Learning</td>
+                <td>Xin Dong et al</td>
+                <td>2022</td>
+                <td>federated learning</td>
+                <td>Arxiv</td>
+                <td>This paper presents a novel approach to addressing the non-i.i.d. (non-independent and identically distributed) data challenge in federated learning by introducing hyperspherical federated learning (SphereFed). The key insight is that instead of letting clients independently learn their classifiers, which leads to inconsistent learning targets across clients, they should share a fixed classifier whose weights span a unit hypersphere, ensuring all clients work toward the same learning objectives. The approach normalizes features to project them onto this same hypersphere and uses mean squared error loss instead of cross-entropy to avoid scaling issues that arise when working with normalized features. Finally, after federated training is complete, they propose a computationally efficient way to calibrate the classifier using a closed-form solution that can be computed in a distributed manner without requiring direct access to private client data.</td>
+                <td><a href="https://arxiv.org/pdf/2207.09413" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>A deeper look at depth pruning of LLMs</td>

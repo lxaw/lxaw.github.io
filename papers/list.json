@@ -1,5 +1,14 @@
 [
   {
+    "title": "SphereFed: Hyperspherical Federated Learning",
+    "author": "Xin Dong et al",
+    "year": "2022",
+    "topic": "federated learning",
+    "venue": "Arxiv",
+    "description": "This paper presents a novel approach to addressing the non-i.i.d. (non-independent and identically distributed) data challenge in federated learning by introducing hyperspherical federated learning (SphereFed). The key insight is that instead of letting clients independently learn their classifiers, which leads to inconsistent learning targets across clients, they should share a fixed classifier whose weights span a unit hypersphere, ensuring all clients work toward the same learning objectives. The approach normalizes features to project them onto this same hypersphere and uses mean squared error loss instead of cross-entropy to avoid scaling issues that arise when working with normalized features. Finally, after federated training is complete, they propose a computationally efficient way to calibrate the classifier using a closed-form solution that can be computed in a distributed manner without requiring direct access to private client data.",
+    "link": "https://arxiv.org/pdf/2207.09413"
+  },
+  {
     "title": "A deeper look at depth pruning of LLMs",
     "author": "Shoaib Ahmed Siddiqui et al",
     "year": "2024",
