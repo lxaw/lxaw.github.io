@@ -1,5 +1,14 @@
 [
   {
+    "title": "RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment",
+    "author": "Hanze Dong, et al",
+    "year": "2023",
+    "topic": "watermark, offset learning",
+    "venue": "TMLR",
+    "description": "The paper introduces RAFT (Reward rAnked FineTuning), a simpler alternative to RLHF for aligning generative models with human preferences. The key insight is decoupling the data generation and model fine-tuning steps - instead of using complex reinforcement learning, RAFT generates multiple samples for each prompt, ranks them by reward, and then fine-tunes the model on only the highest-scoring samples in an iterative process. This approach is more stable and efficient than RLHF because it uses standard supervised learning techniques rather than RL, while being less sensitive to reward scaling issues since it only uses relative rankings rather than absolute reward values. Additionally, the decoupled nature of RAFT means it requires less memory (only needs to load one model at a time vs multiple for RLHF) and allows more flexibility in data collection and processing.",
+    "link": "https://arxiv.org/pdf/2304.06767"
+  },
+  {
     "title": "Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection",
     "author": "Minzhou Pan, et al",
     "year": "2024",

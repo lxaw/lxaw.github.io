@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 178 papers. Let's keep it up!
+        So far, we have read 179 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 178 papers. Nice! 
+        Your search returned 179 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment</td>
+                <td>Hanze Dong, et al</td>
+                <td>2023</td>
+                <td>watermark, offset learning</td>
+                <td>TMLR</td>
+                <td>The paper introduces RAFT (Reward rAnked FineTuning), a simpler alternative to RLHF for aligning generative models with human preferences. The key insight is decoupling the data generation and model fine-tuning steps - instead of using complex reinforcement learning, RAFT generates multiple samples for each prompt, ranks them by reward, and then fine-tunes the model on only the highest-scoring samples in an iterative process. This approach is more stable and efficient than RLHF because it uses standard supervised learning techniques rather than RL, while being less sensitive to reward scaling issues since it only uses relative rankings rather than absolute reward values. Additionally, the decoupled nature of RAFT means it requires less memory (only needs to load one model at a time vs multiple for RLHF) and allows more flexibility in data collection and processing.</td>
+                <td><a href="https://arxiv.org/pdf/2304.06767" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection</td>
