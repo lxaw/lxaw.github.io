@@ -1,5 +1,23 @@
 [
   {
+    "title": "Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection",
+    "author": "Minzhou Pan, et al",
+    "year": "2024",
+    "topic": "watermark, offset learning",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper centers on using \"offset learning\" to detect invisible watermarks in images. The intuition is that by having a clean reference dataset of similar images, you can effectively \"cancel out\" the normal image features that are common between clean and watermarked images, leaving only the watermark perturbations. They design an asymmetric loss function where clean images use exponential/softmax loss (to focus on hard examples) while detection dataset uses linear loss (to give equal weight to all examples), helping isolate the watermark signal. This is combined with an iterative pruning strategy that gradually removes likely-clean images from the detection set, allowing the model to better focus on and learn the watermark patterns. By formulating watermark detection this way, they avoid needing any prior knowledge of watermarking techniques or labeled data, making it a truly black-box approach.",
+    "link": "https://arxiv.org/pdf/2403.15955"
+  },
+  {
+    "title": "Mitigating the Alignment Tax of RLHF",
+    "author": "Yong Lin, et al",
+    "year": "2024",
+    "topic": "rlhf, alignment",
+    "venue": "Arxiv",
+    "description": "This paper investigates the \"alignment tax\" problem where large language models lose some of their pre-trained abilities when aligned with human preferences through RLHF. The key insight is that model averaging (interpolating between pre-RLHF and post-RLHF model weights) is surprisingly effective at mitigating this trade-off because tasks share overlapping feature spaces, particularly in lower layers of the model. Building on this understanding, they propose Heterogeneous Model Averaging (HMA) which applies different averaging ratios to different layers of the transformer model, allowing optimization of the alignment-forgetting trade-off. The intuition is that since different layers capture different levels of features and task similarities, they should not be averaged equally, and finding optimal layer-specific averaging ratios can better preserve both alignment and pre-trained capabilities.",
+    "link": "https://arxiv.org/pdf/2309.06256"
+  },
+  {
     "title": "AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising",
     "author": "Zigeng Chen, et al",
     "year": "2024",

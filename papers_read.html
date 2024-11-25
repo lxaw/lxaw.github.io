@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 176 papers. Let's keep it up!
+        So far, we have read 178 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 176 papers. Nice! 
+        Your search returned 178 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection</td>
+                <td>Minzhou Pan, et al</td>
+                <td>2024</td>
+                <td>watermark, offset learning</td>
+                <td>Arxiv</td>
+                <td>The key insight of this paper centers on using &quot;offset learning&quot; to detect invisible watermarks in images. The intuition is that by having a clean reference dataset of similar images, you can effectively &quot;cancel out&quot; the normal image features that are common between clean and watermarked images, leaving only the watermark perturbations. They design an asymmetric loss function where clean images use exponential/softmax loss (to focus on hard examples) while detection dataset uses linear loss (to give equal weight to all examples), helping isolate the watermark signal. This is combined with an iterative pruning strategy that gradually removes likely-clean images from the detection set, allowing the model to better focus on and learn the watermark patterns. By formulating watermark detection this way, they avoid needing any prior knowledge of watermarking techniques or labeled data, making it a truly black-box approach.</td>
+                <td><a href="https://arxiv.org/pdf/2403.15955" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Mitigating the Alignment Tax of RLHF</td>
+                <td>Yong Lin, et al</td>
+                <td>2024</td>
+                <td>rlhf, alignment</td>
+                <td>Arxiv</td>
+                <td>This paper investigates the &quot;alignment tax&quot; problem where large language models lose some of their pre-trained abilities when aligned with human preferences through RLHF. The key insight is that model averaging (interpolating between pre-RLHF and post-RLHF model weights) is surprisingly effective at mitigating this trade-off because tasks share overlapping feature spaces, particularly in lower layers of the model. Building on this understanding, they propose Heterogeneous Model Averaging (HMA) which applies different averaging ratios to different layers of the transformer model, allowing optimization of the alignment-forgetting trade-off. The intuition is that since different layers capture different levels of features and task similarities, they should not be averaged equally, and finding optimal layer-specific averaging ratios can better preserve both alignment and pre-trained capabilities.</td>
+                <td><a href="https://arxiv.org/pdf/2309.06256" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising</td>
