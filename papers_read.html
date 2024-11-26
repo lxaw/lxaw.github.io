@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 180 papers. Let's keep it up!
+        So far, we have read 181 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 180 papers. Nice! 
+        Your search returned 181 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -106,8 +106,18 @@
         <tbody>
         
             <tr>
+                <td>A Simple Early Exiting Framework for Accelerating Sampling in Diffusion Models</td>
+                <td>Taehong Moon et al</td>
+                <td>2024</td>
+                <td>diffusion, early exit</td>
+                <td>ICML</td>
+                <td>This paper presents Adaptive Score Estimation (ASE), a novel framework that accelerates diffusion model sampling by adaptively allocating computational resources based on the time step being processed. The authors observe that score estimation near the noise distribution (t→1) requires less computational power than estimation near the data distribution (t→0), leading them to develop a time-dependent early-exiting scheme where more neural network blocks are skipped during the noise-phase sampling steps. Their approach differs between architectures - for DiT models they skip entire blocks, while for U-ViT models they preserve the linear layers connected to skip connections while dropping other block components to maintain the residual pathway information. The authors fine-tune their models using a specially designed training procedure that employs exponential moving averages and weighted coefficients to ensure minimal information updates near t→0 while allowing more updates near t→1.</td>
+                <td><a href="https://arxiv.org/pdf/2408.05927" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
                 <td>Active Prompting with Chain-of-Thought for Large Language Models</td>
-                <td>Shizhe Diao, et al</td>
+                <td>Shizhe Diao et al</td>
                 <td>2023</td>
                 <td>prompting, cot</td>
                 <td>Arxiv</td>
@@ -117,7 +127,7 @@
         
             <tr>
                 <td>RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment</td>
-                <td>Hanze Dong, et al</td>
+                <td>Hanze Dong et al</td>
                 <td>2023</td>
                 <td>watermark, offset learning</td>
                 <td>TMLR</td>
@@ -127,7 +137,7 @@
         
             <tr>
                 <td>Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection</td>
-                <td>Minzhou Pan, et al</td>
+                <td>Minzhou Pan et al</td>
                 <td>2024</td>
                 <td>watermark, offset learning</td>
                 <td>Arxiv</td>
@@ -137,7 +147,7 @@
         
             <tr>
                 <td>Mitigating the Alignment Tax of RLHF</td>
-                <td>Yong Lin, et al</td>
+                <td>Yong Lin et al</td>
                 <td>2024</td>
                 <td>rlhf, alignment</td>
                 <td>Arxiv</td>
@@ -147,7 +157,7 @@
         
             <tr>
                 <td>AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising</td>
-                <td>Zigeng Chen, et al</td>
+                <td>Zigeng Chen et al</td>
                 <td>2024</td>
                 <td>diffusion, parallelization, denoising</td>
                 <td>Arxiv</td>

@@ -1,7 +1,16 @@
 [
   {
+    "title": "A Simple Early Exiting Framework for Accelerating Sampling in Diffusion Models",
+    "author": "Taehong Moon et al",
+    "year": "2024",
+    "topic": "diffusion, early exit",
+    "venue": "ICML",
+    "description": "This paper presents Adaptive Score Estimation (ASE), a novel framework that accelerates diffusion model sampling by adaptively allocating computational resources based on the time step being processed. The authors observe that score estimation near the noise distribution (t→1) requires less computational power than estimation near the data distribution (t→0), leading them to develop a time-dependent early-exiting scheme where more neural network blocks are skipped during the noise-phase sampling steps. Their approach differs between architectures - for DiT models they skip entire blocks, while for U-ViT models they preserve the linear layers connected to skip connections while dropping other block components to maintain the residual pathway information. The authors fine-tune their models using a specially designed training procedure that employs exponential moving averages and weighted coefficients to ensure minimal information updates near t→0 while allowing more updates near t→1.",
+    "link": "https://arxiv.org/pdf/2408.05927"
+  },
+  {
     "title": "Active Prompting with Chain-of-Thought for Large Language Models",
-    "author": "Shizhe Diao, et al",
+    "author": "Shizhe Diao et al",
     "year": "2023",
     "topic": "prompting, cot",
     "venue": "Arxiv",
@@ -10,7 +19,7 @@
   },
   {
     "title": "RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment",
-    "author": "Hanze Dong, et al",
+    "author": "Hanze Dong et al",
     "year": "2023",
     "topic": "watermark, offset learning",
     "venue": "TMLR",
@@ -19,7 +28,7 @@
   },
   {
     "title": "Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection",
-    "author": "Minzhou Pan, et al",
+    "author": "Minzhou Pan et al",
     "year": "2024",
     "topic": "watermark, offset learning",
     "venue": "Arxiv",
@@ -28,7 +37,7 @@
   },
   {
     "title": "Mitigating the Alignment Tax of RLHF",
-    "author": "Yong Lin, et al",
+    "author": "Yong Lin et al",
     "year": "2024",
     "topic": "rlhf, alignment",
     "venue": "Arxiv",
@@ -37,7 +46,7 @@
   },
   {
     "title": "AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising",
-    "author": "Zigeng Chen, et al",
+    "author": "Zigeng Chen et al",
     "year": "2024",
     "topic": "diffusion, parallelization, denoising",
     "venue": "Arxiv",
