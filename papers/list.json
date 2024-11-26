@@ -1,5 +1,14 @@
 [
   {
+    "title": "Active Prompting with Chain-of-Thought for Large Language Models",
+    "author": "Shizhe Diao, et al",
+    "year": "2023",
+    "topic": "prompting, cot",
+    "venue": "Arxiv",
+    "description": "The paper introduces Active-Prompt, a novel method that improves chain-of-thought (CoT) prompting by strategically selecting which examples to use as demonstrations for large language models. Rather than using randomly selected or manually crafted examples, Active-Prompt identifies the most informative examples by measuring the model's uncertainty on different potential prompts through metrics like disagreement and entropy across multiple model outputs. The key insight is that by systematically choosing examples where the model shows high uncertainty, and then having humans provide detailed reasoning chains for those specific cases, the resulting prompts will be more effective at teaching the model how to approach challenging problems. This approach shifts the human effort from trying to intuitively guess good examples to a more principled selection process guided by the model's own uncertainty signals.",
+    "link": "https://arxiv.org/pdf/2302.12246"
+  },
+  {
     "title": "RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment",
     "author": "Hanze Dong, et al",
     "year": "2023",
