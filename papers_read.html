@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 181 papers. Let's keep it up!
+        So far, we have read 185 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 181 papers. Nice! 
+        Your search returned 185 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,46 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Similarity of Neural Network Representations Revisited</td>
+                <td>Simon Kornblith et al</td>
+                <td>2019</td>
+                <td>network similarity</td>
+                <td>ICML</td>
+                <td>This paper examines methods for comparing neural network representations and proposes Centered Kernel Alignment (CKA) as a more effective similarity measure. The authors provide key theoretical insights about what properties a similarity metric should have - arguing it should be invariant to orthogonal transformations and isotropic scaling, but not to arbitrary invertible linear transformations, as neural network training itself isn&#x27;t invariant to such transformations. They show that for representations with more dimensions than training examples, any metric invariant to arbitrary invertible transformations will give meaningless results. CKA works by first measuring the similarity between every pair of examples in each representation separately (creating representational similarity matrices), then comparing these similarity structures - when using inner products, this reduces to computing normalized Hilbert-Schmidt Independence Criterion between the representations. They demonstrate theoretically that CKA is closely related to canonical correlation analysis (CCA) and regression, but incorporates feature scale information that CCA discards. Finally, they show that unlike previous methods like CCA and SVCCA, CKA can reliably identify corresponding layers between networks trained from different initializations and reveal meaningful relationships between different architectures.</td>
+                <td><a href="https://arxiv.org/pdf/1905.00414" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>What is being transferred in transfer learning?</td>
+                <td>Behnam Neyshabur et al</td>
+                <td>2020</td>
+                <td>transfer learning</td>
+                <td>NeurIPS</td>
+                <td>This paper investigated what exactly gets transferred during transfer learning in neural networks through a comprehensive series of analyses. Through experiments with block-shuffled images, the researchers demonstrated that successful transfer learning relies on both feature reuse and low-level statistics of the data, showing that even when visual features are disrupted, transfer learning still provides benefits. The study revealed that models fine-tuned from pre-trained weights tend to stay in the same basin in the loss landscape, make similar mistakes, and remain close to each other in parameter space, while models trained from scratch end up in different basins with more diverse behaviors. By analyzing module criticality, they found that lower layers handle more general features while higher layers become more specialized, confirming previous theories about feature hierarchy in neural networks. Finally, they showed that transfer learning can begin from earlier checkpoints of the pre-trained model without losing accuracy, suggesting that the benefits of pre-training emerge before the model fully converges on the source task.</td>
+                <td><a href="https://arxiv.org/pdf/2008.11687" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>ZipIt! Merging Models from Different Tasks without Training</td>
+                <td>George Stoica et al</td>
+                <td>2024</td>
+                <td>model merging</td>
+                <td>ICLR</td>
+                <td>This paper presents a novel approach to model merging that significantly improves upon previous methods by recognizing that similar features can exist within the same model, not just across different models. The key insight is that when merging models trained on different tasks, it&#x27;s often better to combine similar features within each model first, rather than forcing dissimilar features from different models to merge, as these features may have developed to solve fundamentally different problems. Their method first concatenates the feature spaces of both models and computes a comprehensive correlation matrix between all features (both within and across models), using these correlations to guide intelligent feature merging decisions. To handle the multi-layer nature of neural networks, they introduce an &quot;unmerge&quot; operation that allows the merged features to remain compatible with later layers in both original networks, essentially decompressing the merged features before they&#x27;re processed by subsequent layers. Theoretically, they prove that this approach provides better guarantees than traditional cross-model merging, showing that when models have internal redundancy (which is common in practice), their method can achieve perfect merging with zero performance loss.</td>
+                <td><a href="https://arxiv.org/pdf/2305.03053" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts</td>
+                <td>Ruida Wang et al</td>
+                <td>2024</td>
+                <td>llm, llm agent</td>
+                <td>Arxiv</td>
+                <td>This research introduces TheoremLlama, a framework that transforms general-purpose Large Language Models (LLMs) into expert theorem provers for the Lean4 formal mathematics language, addressing a significant challenge in automated theorem proving. The key innovation is their &quot;NL-FL bootstrapping&quot; method, which integrates natural language reasoning steps directly into formal mathematical proofs as comments during training, helping LLMs bridge the gap between natural language understanding and formal mathematical reasoning. The researchers also contribute the Open Bootstrapped Theorems (OBT) dataset, containing over 100,000 theorem-proof pairs with aligned natural and formal language, helping address the scarcity of training data in this field. The framework introduces specialized training techniques like block training and curriculum learning that help LLMs gradually build theorem-proving capabilities, potentially offering a blueprint for adapting LLMs to other specialized domains that lack extensive training data.</td>
+                <td><a href="https://arxiv.org/pdf/2407.03203" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>A Simple Early Exiting Framework for Accelerating Sampling in Diffusion Models</td>
