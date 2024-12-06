@@ -1,5 +1,14 @@
 [
   {
+    "title": "Training-Free Pretrained Model Merging",
+    "author": "Zhengqi Xu et al",
+    "year": "2024",
+    "topic": "model merging",
+    "venue": "CVPR",
+    "description": "This paper introduces Merging under Dual-Space Constraints (MuDSC), a novel framework for merging pretrained neural network models without additional training or requiring the same pretraining initialization. Unlike prior approaches that operate solely in either the weight space or the activation space, MuDSC addresses inconsistencies between these two spaces by combining their similarity measures into a unified objective using a weighted linear combination. This approach ensures that merged units are similar in both their structure and behavior, leading to more consistent and effective merging outcomes. The framework also adapts to networks with group structures, such as those using multi-head attention or group normalization, by proposing modifications to unit-matching algorithms. Overall, MuDSC simplifies model merging while enhancing performance across diverse architectures and tasks, enabling merged models to achieve balanced and overlapping multi-task performance.",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Training-Free_Pretrained_Model_Merging_CVPR_2024_paper.pdf"
+  },
+  {
     "title": "Similarity of Neural Network Representations Revisited",
     "author": "Simon Kornblith et al",
     "year": "2019",
