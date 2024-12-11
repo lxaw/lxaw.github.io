@@ -75,10 +75,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 187 papers. Let's keep it up!
+        So far, we have read 189 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 187 papers. Nice! 
+        Your search returned 189 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -104,6 +104,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs</td>
+                <td>Saleh Ashkboos et al</td>
+                <td>2024</td>
+                <td>quantization, rotation</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces a quantization scheme based on rotations, that allows quantization of down to 4-bits for weights, activations, and KV cache. They rotate LLMs in such a way that removes outliers from hidden state w/o changing the output. In particular, they use randomized Hadamard transformations on the weight matrices to remove outlier features and make activations easier to quantize. They then extend this to apply online Hadamard transformations to attention model to remove outlier features in keys and values, which allows the KV cache to be quantized.</td>
+                <td><a href="https://arxiv.org/pdf/2404.00456" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch</td>
+                <td>Le Yu et al</td>
+                <td>2024</td>
+                <td>model merging</td>
+                <td>ICML</td>
+                <td>This paper shows that language models (LMs) can get new abilities via assimilating params from homologous models. They also note that LMs after Supervised Fine-Tuning (SFT) have many redundant delta parameters (i.e, the alteration of the model params before and after SFT). They then present DARE (Drop And REscale) as a means of setting delta parameters to zero with drop rate of p and then rescaling the remaining ones by a factor of 1/(1-p). They then use DARE to remove redundant delta parameters in each model prior to merging, which they find can help mitigate the interference of params among multiple models. Then they use standard model merging techniqes to merge the models.</td>
+                <td><a href="https://arxiv.org/pdf/2311.03099" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch</td>

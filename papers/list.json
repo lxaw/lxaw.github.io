@@ -1,5 +1,23 @@
 [
   {
+    "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+    "author": "Saleh Ashkboos et al",
+    "year": "2024",
+    "topic": "quantization, rotation",
+    "venue": "NeurIPS",
+    "description": "This paper introduces a quantization scheme based on rotations, that allows quantization of down to 4-bits for weights, activations, and KV cache. They rotate LLMs in such a way that removes outliers from hidden state w/o changing the output. In particular, they use randomized Hadamard transformations on the weight matrices to remove outlier features and make activations easier to quantize. They then extend this to apply online Hadamard transformations to attention model to remove outlier features in keys and values, which allows the KV cache to be quantized.",
+    "link": "https://arxiv.org/pdf/2404.00456"
+  },
+  {
+    "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch",
+    "author": "Le Yu et al",
+    "year": "2024",
+    "topic": "model merging",
+    "venue": "ICML",
+    "description": "This paper shows that language models (LMs) can get new abilities via assimilating params from homologous models. They also note that LMs after Supervised Fine-Tuning (SFT) have many redundant delta parameters (i.e, the alteration of the model params before and after SFT). They then present DARE (Drop And REscale) as a means of setting delta parameters to zero with drop rate of p and then rescaling the remaining ones by a factor of 1/(1-p). They then use DARE to remove redundant delta parameters in each model prior to merging, which they find can help mitigate the interference of params among multiple models. Then they use standard model merging techniqes to merge the models.",
+    "link": "https://arxiv.org/pdf/2311.03099"
+  },
+  {
     "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch",
     "author": "Le Yu et al",
     "year": "2024",
