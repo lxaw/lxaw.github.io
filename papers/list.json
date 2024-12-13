@@ -1,5 +1,14 @@
 [
   {
+    "title": "Rho-1: Not All Tokens Are What You Need",
+    "author": "Zhenghao Lin et al",
+    "year": "2024",
+    "topic": "tokens, reference model",
+    "venue": "NeurIPS",
+    "description": "This paper scores tokens using a reference model and then trains a language model to focus on the tokens with higher scores. They find that they can improve performance while training on less tokens.",
+    "link": "https://arxiv.org/pdf/2404.07965"
+  },
+  {
     "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
     "author": "Saleh Ashkboos et al",
     "year": "2024",
