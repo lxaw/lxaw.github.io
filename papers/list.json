@@ -1,5 +1,14 @@
 [
   {
+    "title": "Visual Autoregressive Modeling: Scaling Image Generation via Next-Scale Prediction",
+    "author": "Key Tian et al",
+    "year": "2024",
+    "topic": "tokens, reference model",
+    "venue": "NeurIPS",
+    "description": "The paper proposes Visual AutoRegressive (VAR) modeling, which shifts the paradigm of autoregressive learning for image generation from sequential \"next-token prediction\" to \"next-scale prediction.\" This approach treats entire token maps at progressively finer resolutions as the autoregressive units, reflecting the coarse-to-fine manner in which humans perceive images. Unlike traditional models that flatten 2D spatial structures into 1D sequences, VAR preserves spatial locality and leverages multi-scale visual representations to reduce computational inefficiencies. By adopting hierarchical generation aligned with natural image structures, VAR overcomes the limitations of standard autoregressive models, such as mathematical premise violations and loss of spatial coherence. Its design integrates autoregressive transformers with multi-scale tokenization, creating a framework that is theoretically scalable and generalizable across diverse visual generation tasks.",
+    "link": "https://openreview.net/pdf?id=gojL67CfS8"
+  },
+  {
     "title": "Rho-1: Not All Tokens Are What You Need",
     "author": "Zhenghao Lin et al",
     "year": "2024",
