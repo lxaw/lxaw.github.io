@@ -14,66 +14,7 @@ def generate_html(json_file_path, output_file_path):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Searchable paper list</title>
-    <style>
-        body {{
-            font-family: Arial, sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin: 1em;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }}
-
-        .center {{
-            text-align: center;
-            padding: 2rem;
-            margin: 0 auto;
-        }}
-
-        h1 {{
-            margin-top: 1.5rem;
-            font-size: 1.8rem;
-        }}
-
-        p {{
-            margin: 1rem 0;
-        }}
-
-        a {{
-            color: #0066cc;
-            text-decoration: none;
-        }}
-
-        a:hover {{
-            text-decoration: underline;
-        }}
-
-        small {{
-            display: block;
-            margin-top: 2rem;
-        }}
-        table {{
-            border-collapse: collapse;
-            width: 100%;
-        }}
-        th, td {{
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }}
-        th {{
-            background-color: #f2f2f2;
-            cursor: pointer;
-        }}
-        .search-inputs {{
-            margin-bottom: 10px;
-        }}
-        .search-inputs input {{
-            margin-right: 10px;
-            margin-bottom: 5px;
-        }}
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Here's where I keep a list of papers I have read.</h1>
