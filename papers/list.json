@@ -1,5 +1,14 @@
 [
   {
+    "title": "Remix-DiT: Mixing Diffusion Transformers for Multi-Expert Denoising",
+    "author": "Gongfan Fang et al",
+    "year": "2024",
+    "topic": "dit, diffusion, moe",
+    "venue": "NeurIPS",
+    "description": "This paper introduces a method of mixing diffusion models for multi-expert denoising. Basically, they increase the width of the linear layers by a factor of K, and then modify the forward pass to support it. This allows for K experts that are initialized from the original weights. ",
+    "link": "https://arxiv.org/pdf/2412.05628"
+  },
+  {
     "title": "Hymba: A Hybrid-head Architecture for Small Language Models",
     "author": "Xin Dong et al",
     "year": "2024",
