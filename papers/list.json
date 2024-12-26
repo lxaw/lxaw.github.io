@@ -1,5 +1,14 @@
 [
   {
+    "title": "All are Worth Words: A ViT Backbone for Diffusion Models",
+    "author": "Fan Bao et al",
+    "year": "2023",
+    "topic": "diffusion, vit",
+    "venue": "Arxiv",
+    "description": "This paperdesigns a general ViT-based architecture for diffusion models. Notably, it treats all inputs (time, condition, noisy image patches) as tokens and uses long skip connections between the shallow and deep layers.",
+    "link": "https://arxiv.org/pdf/2209.12152"
+  },
+  {
     "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
     "author": "Saleh Ashkboos et al",
     "year": "2024",
