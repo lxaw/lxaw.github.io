@@ -1,5 +1,14 @@
 [
   {
+    "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+    "author": "Saleh Ashkboos et al",
+    "year": "2024",
+    "topic": "pruning, llm",
+    "venue": "ICLR",
+    "description": "The authors propose a method of slicing off entire rows or columns of weight matrices. They do this by applying a transformation that leaves the predictions invariant prior to the slice. The authors also introduce the notion of \"computational invariance\", AKA that one can apply orthogonal matrix transformations to each weight matrix in the transformer without changing the model, which they use to edit the blocks in a transformer to project the activation matrix between blocks onto its principal components, and then slice. They make the key insight that if you insert linear layers with the orthogonal matrix Q before RMSNorm and Q^{T} after, the network remains unchanged, i.e. RMSNorm(XQ)Q^{T} = RMSNorm(X). They also note that since LayerNorm can be converted to RMSNorm, LayerNorm is the same story. To find the Qs they use a calibration dataset from the training set and run it thru the model. They then use the output of the network to find the orthogonal matrices of the next layers by computing the covariance matrix and then getting the eigenvalues (read the paper for more).",
+    "link": "https://arxiv.org/pdf/2401.15024"
+  },
+  {
     "title": "Visual Autoregressive Modeling: Scaling Image Generation via Next-Scale Prediction",
     "author": "Key Tian et al",
     "year": "2024",
