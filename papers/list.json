@@ -1,11 +1,20 @@
 [
   {
+    "title": "Hymba: A Hybrid-head Architecture for Small Language Models",
+    "author": "Xin Dong et al",
+    "year": "2024",
+    "topic": "llm, hybrid, meta-tokens",
+    "venue": "Arxiv",
+    "description": "This paper introduces a family of small language models that have a hybrid attention-ssm head parallel architecture. There are many interesting architectural designs to note here, but my favoriate is the use of \"meta tokens\", learnable tokens that are prepended to prompts. These tokens help reduce the entropy of attention and ssm heads, and can be seen as a good initialization for KV cache and the SSM state.",
+    "link": "https://arxiv.org/pdf/2411.13676"
+  },
+  {
     "title": "All are Worth Words: A ViT Backbone for Diffusion Models",
     "author": "Fan Bao et al",
     "year": "2023",
     "topic": "diffusion, vit",
     "venue": "Arxiv",
-    "description": "This paperdesigns a general ViT-based architecture for diffusion models. Notably, it treats all inputs (time, condition, noisy image patches) as tokens and uses long skip connections between the shallow and deep layers.",
+    "description": "This paper designs a general ViT-based architecture for diffusion models. Notably, it treats all inputs (time, condition, noisy image patches) as tokens and uses long skip connections between the shallow and deep layers.",
     "link": "https://arxiv.org/pdf/2209.12152"
   },
   {
