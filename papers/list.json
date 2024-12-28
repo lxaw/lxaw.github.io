@@ -1,5 +1,14 @@
 [
   {
+    "title": "Hyper-Connections",
+    "author": "Defa Zhu et al",
+    "year": "2024",
+    "topic": "residual connections, hyper-connections",
+    "venue": "Arxiv",
+    "description": "This paper introduces hyper-connections, which is a novel alternative to residual connections. Basically, they introduce learnable depth and width connections.",
+    "link": "https://arxiv.org/pdf/2409.19606"
+  },
+  {
     "title": "Remix-DiT: Mixing Diffusion Transformers for Multi-Expert Denoising",
     "author": "Gongfan Fang et al",
     "year": "2024",
@@ -1050,7 +1059,7 @@
     "topic": "q-learning, reinforcement learning",
     "venue": "Arxiv",
     "description": "The authors present the first deep learning model that can learn complex control policies, and they teach it to play Atari 2600 games using Q-learning. Their goal was to create one net that can play as many games as possible.",
-    "link": "TODO"
+    "link": "https://arxiv.org/pdf/1312.5602"
   },
   {
     "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Encoding",
@@ -1059,7 +1068,7 @@
     "topic": "quantization, encoding, pruning",
     "venue": "ICML",
     "description": "A three-pronged approach to compressing nets. They prune networks, then quantize and share weights, and then apply Huffman encoding.",
-    "link": "TODO"
+    "link": "https://arxiv.org/pdf/1510.00149"
   },
   {
     "title": "Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or -1",
@@ -1068,7 +1077,7 @@
     "topic": "quantization, efficiency, binary",
     "venue": "Arxiv",
     "description": "Introduction of training Binary Neural Networks, or nets with binary weights and activations. They also present experiments on deterministic vs stochastic binarization. They use the deterministic one for the most part, except for activations.",
-    "link": "TODO"
+    "link": "https://arxiv.org/pdf/1602.02830"
   },
   {
     "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
@@ -1077,16 +1086,7 @@
     "topic": "efficiency, scaling",
     "venue": "ICML",
     "description": "A study of model scaling is presented. They propose a novel scaling method to uniformly scale all dimensions of depth/width/resolution using a compound coefficient. This paper presents a method for scaling width/depth/resolution; for instance, if you want to use 2^{N} more compute resources, then you can scale by their coefficients to do so. They also quantify the relationship between width, depth, and resolution.",
-    "link": "TODO"
-  },
-  {
-    "title": "2-in-1 Accelerator: Enabling Random Precision Switch for Winning Both Adversarial Robustness and Efficiency",
-    "author": "Yonggan Fu et al",
-    "year": "2021",
-    "topic": "precision, adversarial, efficiency",
-    "venue": "ACM",
-    "description": "Introduction of a Random Precision Switch algorithm that has potential for defending against adversarial attacks while promoting efficiency.",
-    "link": "TODO"
+    "link": "https://arxiv.org/pdf/1905.11946"
   },
   {
     "title": "The wake-sleep algorithm for unsupervised neural networks",
