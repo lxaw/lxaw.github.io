@@ -13,6 +13,9 @@
     I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.
 
     <p id="bookCount">So far, we have read 0 books.</p>
+    <small id = "searchCount">
+        Your search returned 0 books. Nice!
+    </small>
     
     <div class="search-inputs">
         <input type="text" id="titleSearch" placeholder="Search title...">
@@ -80,6 +83,7 @@
 
         function updateBookCount(count) {
             bookCountElement.textContent = `So far, we have read ${count} books. Let's keep it up!`;
+            searchCountElement.textContent = `Your search returned ${count} books. Nice!`
         }
 
         function setupEventListeners() {
@@ -106,6 +110,8 @@
 
         function searchTable() {
             const rows = tbody.getElementsByTagName('tr');
+            let numRowsMatch = 0;
+
             for (let i = 0; i < rows.length; i++) {
                 const row = rows[i];
                 const cells = row.getElementsByTagName('td');
@@ -119,9 +125,14 @@
                         break;
                     }
                 }
-
-                row.style.display = foundMatch ? '' : 'none';
+                if(foundMatch){
+                    row.style.display = '';
+                    numRowsMatch++;
+                }else{
+                    row.style.display='none';
+                }
             }
+            updateSearchCount(numRowsMatch);
         }
 
         function sortTable(column, dataType, order) {
@@ -144,6 +155,11 @@
             });
 
             tbody.append(...rows);
+        }
+        // for getting number of found results
+        const searchCountElement = document.getElementById('searchCount');
+        function updateSearchCount(count) {
+            searchCountElement.textContent = `Your search returned ${count} books. Nice!`;
         }
     </script>
 </body>
