@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 195 papers. Let's keep it up!
+        So far, we have read 196 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 195 papers. Nice! 
+        Your search returned 196 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>LASER: Attention with Exponential Transformation</td>
+                <td>Sai Surya Duvvuri et al</td>
+                <td>2024</td>
+                <td>attention, gradients</td>
+                <td>Arxiv</td>
+                <td>This paper identifies that gradients backpropagated through the softmax operation often can be quite small. To mitigate this, they propose doing a dot-product attention with an exp()-transformed value matrix V (meaning, they do the attention calculation on exp(V)), which allows for a larger Jacobian (mitigating the small gradient issue).</td>
+                <td><a href="https://arxiv.org/pdf/2411.03493" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Hyper-Connections</td>

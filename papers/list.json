@@ -1,5 +1,14 @@
 [
   {
+    "title": "LASER: Attention with Exponential Transformation",
+    "author": "Sai Surya Duvvuri et al",
+    "year": "2024",
+    "topic": "attention, gradients",
+    "venue": "Arxiv",
+    "description": "This paper identifies that gradients backpropagated through the softmax operation often can be quite small. To mitigate this, they propose doing a dot-product attention with an exp()-transformed value matrix V (meaning, they do the attention calculation on exp(V)), which allows for a larger Jacobian (mitigating the small gradient issue).",
+    "link": "https://arxiv.org/pdf/2411.03493"
+  },
+  {
     "title": "Hyper-Connections",
     "author": "Defa Zhu et al",
     "year": "2024",
