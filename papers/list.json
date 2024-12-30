@@ -1,5 +1,14 @@
 [
   {
+    "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+    "author": "Brian Lester et al",
+    "year": "2021",
+    "topic": "prompting, llm",
+    "venue": "Arxiv",
+    "description": "This paper explores adding soft prompts to condition forzen language models. Basically, soft prompts are learned through back-propagation and can be used to finetune language models without fully retraining. They also introduce the idea of \"prompt ensembling\" which is basically using multiple soft prompts on a model and ensembling their outputs.",
+    "link": "https://arxiv.org/pdf/2104.08691"
+  },
+  {
     "title": "Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs",
     "author": "Nguyen Nhat Minh et al",
     "year": "2024",
