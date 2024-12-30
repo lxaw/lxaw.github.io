@@ -1,5 +1,14 @@
 [
   {
+    "title": "Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs",
+    "author": "Nguyen Nhat Minh et al",
+    "year": "2024",
+    "topic": "sampling, llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces a neat trick to sample the next token. Min-p sampling basically adjusts the sampling threshold based on the model's confidence. It does so by scaling according to the top token's probability. This is a compelling alternative to other common sampling methods, like nucleus sampling.",
+    "link": "https://arxiv.org/pdf/2407.01082"
+  },
+  {
     "title": "LASER: Attention with Exponential Transformation",
     "author": "Sai Surya Duvvuri et al",
     "year": "2024",
