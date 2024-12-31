@@ -48,7 +48,7 @@ def generate_html(json_file_path, output_file_path):
                 <th data-sort="author">Author</th>
                 <th data-sort="year">Year</th>
                 <th data-sort="topic">Topic</th>
-                <th data-sort="venue">Publication Venue</th>
+                <th data-sort="venue">Venue</th>
                 <th data-sort="description">Description</th>
                 <th>Link</th>
             </tr>
