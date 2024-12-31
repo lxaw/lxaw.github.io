@@ -1,11 +1,20 @@
 [
   {
+    "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+    "author": "Xiang Lisa Li et al",
+    "year": "2021",
+    "topic": "prefix-tuning, prompting, llm",
+    "venue": "Arxiv",
+    "description": "This paper proposes prefix-tuning, which keeps language model params frozen but optimizes a continuous task-specific vector (prefix).",
+    "link": "https://arxiv.org/pdf/2101.00190"
+  },
+  {
     "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
     "author": "Brian Lester et al",
     "year": "2021",
     "topic": "prompting, llm",
     "venue": "Arxiv",
-    "description": "This paper explores adding soft prompts to condition forzen language models. Basically, soft prompts are learned through back-propagation and can be used to finetune language models without fully retraining. They also introduce the idea of \"prompt ensembling\" which is basically using multiple soft prompts on a model and ensembling their outputs.",
+    "description": "This paper explores adding soft prompts to condition frozen language models. Basically, soft prompts are learned through back-propagation and can be used to finetune language models without fully retraining. They also introduce the idea of \"prompt ensembling\" which is basically using multiple soft prompts on a model and ensembling their outputs.",
     "link": "https://arxiv.org/pdf/2104.08691"
   },
   {
