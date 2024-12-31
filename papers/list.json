@@ -1,5 +1,14 @@
 [
   {
+    "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+    "author": "Angelos Katharopoulos et al",
+    "year": "2020",
+    "topic": "attention, transformer",
+    "venue": "ICML",
+    "description": "This paper rephrases transformers as RNNs (title). They express the self-attention mechanism as a linear dot-product of kernel feature maps to make the complexity go from O(N^2) to O(N). Personal note: this is the 200th paper recorded on here, and the last of 2024! Summer of 2024 was when I began studying machine learning. Let's keep it up!",
+    "link": "https://arxiv.org/pdf/2006.16236"
+  },
+  {
     "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
     "author": "Xiang Lisa Li et al",
     "year": "2021",
