@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lex Whalen</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .center {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .who-section img {
+            float: right; /* Float the image to the right */
+            margin-left: 20px; /* Add some spacing between text and image */
+            margin-top: -50px; /* Adjust the image upward */
+            width: 150px;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .who-section img {
+                float: none; /* Reset float for smaller screens */
+                display: block;
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="center">
         <section>
             <h1>Who?</h1>
-            <p>My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>.</p> For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.
+            <div class="who-section">
+                <img src="pictures/myself_profile_pic_bw.png" alt="Lex Whalen">
+                <p>My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>. For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.</p>
+            </div>
         </section>
         <section>
             <h1>What?</h1>
