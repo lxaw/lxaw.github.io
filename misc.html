@@ -5,22 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miscellaneous</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h4, h6 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        .quote-section {
+            margin: 20px auto;
+            padding: 15px;
+            max-width: 600px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .quote-text {
+            font-style: italic;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .quote-author {
+            font-size: 1em;
+            text-align: right;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer a {
+            text-decoration: none;
+            color: #007acc;
+        }
+        footer a:hover {
+            color: #005bb5;
+        }
+    </style>
 </head>
 <body>
-    <h4>
-        You have discovered the secret page!
-    </h4>
-    <p>
-      You weren't suppose to be here! Here's where I store some things.
-    </p>
-    <h6>
-    Quotes I like:
-    </h6>
-    <p>
-    孫子: 故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。
-    </p>
-    <p>
-    松尾芭蕉: 夏草や 兵どもが 夢の跡。
-    </p>
+    <h4>You have discovered the secret page!</h4>
+    <p>You weren't supposed to be here! Here's where I store some things.</p>
+
+    <h6>Quotes I like:</h6>
+
+    <div class="quote-section">
+        <div class="quote-text">
+            故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。
+        </div>
+        <div class="quote-author">- 孫子</div>
+    </div>
+
+    <div class="quote-section">
+        <div class="quote-text">
+            夏草や 兵どもが 夢の跡。
+        </div>
+        <div class="quote-author">- 松尾芭蕉</div>
+    </div>
+
+    <div class="quote-section">
+        <div class="quote-text">
+            Man muss immer umkehren.
+        </div>
+        <div class="quote-author">- Carl Gustav Jacob Jacobi</div>
+    </div>
+
+    <div class="quote-section">
+        <div class="quote-text">
+            人の一生は重荷を負うて遠き道を行くがごとし。急ぐべからず。
+            不自由を常と思えば不足なし。こころに望みおこらば困窮したる時を思い出すべし。
+            堪忍は無事長久の基、いかりは敵と思え。
+            勝つ事ばかり知りて、負くること知らざれば害その身にいたる。
+            おのれを責めて人をせむるな。
+            及ばざるは過ぎたるよりまされり。
+            滅びる原因は自らの内にある。
+        </div>
+        <div class="quote-author">- Various quotes from 徳川家康.</div>
+    </div>
+
+
+    <footer class="site-footer">
+        <p><a href="index.html">Back to home</a></p>
+    </footer>
 </body>
 </html>
