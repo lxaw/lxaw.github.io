@@ -1,5 +1,23 @@
 [
   {
+    "title": "SpinQuant: LLM Quantization with Learned Rotations",
+    "author": "Zechun Liu et al",
+    "year": "2024",
+    "topic": "quantization, spins, rotation",
+    "venue": "Arxiv",
+    "description": "This paper uses two mergeable rotation matrices (R1, R2) that make rotationally invariant full-precision networks, and then apply two online Hadamard rotations (G3, R4) to further reduce the outliers so they can quantize activations and KV-cache quantizations. They then show how one can optimize these rotation matrices on Stiefel manifolds (orthogonal manifolds) using Cayley SGD. The reason for Cayley SGD and Stiefel manifolds is bc they need to optimize rotation matrices (R1, R2) such that they stay orthogonal during optimization. Regular SGD would break this constraint. By optimizing on Stiefel manifolds (space of all orthonormal matrices), they can specifc that the optimizations stays on a specific surface that only contains rotation matrices.",
+    "link": "https://arxiv.org/pdf/2405.16406"
+  },
+  {
+    "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+    "author": "Yuhong Li et al",
+    "year": "2024",
+    "topic": "llm, kv cache",
+    "venue": "Arxiv",
+    "description": "This paper identifies and selects the most important features per head to create compressed KV cache. It works in two stages: 1) vote for important previous features by taking the last segment of the prompt (\"observation window\") and uses this window to analyze which parts of the earlier text (prefix) are most important. For each attn head, we aggregate the attn weights from queries in the observation window. Then we select the top-k positions based on the aggregated weights (k=p*L_prefix, where p is the compression weight) 2) then cluster and perform context preservation: we then use a pooling layer to cluster the selected important features. The last part of the prompt is kept as the observation window because they note that the attention patterns observed in the last window of the input sequence have high overlap rates (~80-90%) with the actual attention patterns used during generation.",
+    "link": "https://arxiv.org/pdf/2404.14469"
+  },
+  {
     "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
     "author": "Angelos Katharopoulos et al",
     "year": "2020",
