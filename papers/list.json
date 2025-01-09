@@ -1,5 +1,14 @@
 [
   {
+    "title": "BlockDialect: Block-wise Fine-grained Mixed Format for Energy-Efficient LLM Inference",
+    "author": "Wonsuk Jang et al",
+    "year": "2024",
+    "topic": "quantization, block-wise",
+    "venue": "Arxiv",
+    "description": "This paper introduces a block-wise quantization scheme that assigns a per-block optimal number format from a format book (they make their own format book called \"DialectFP4\"). \"Focusing on how to represent over how to scale\".",
+    "link": "https://arxiv.org/pdf/2501.01144v2"
+  },
+  {
     "title": "SpinQuant: LLM Quantization with Learned Rotations",
     "author": "Zechun Liu et al",
     "year": "2024",
