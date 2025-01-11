@@ -1,5 +1,23 @@
 [
   {
+    "title": "Recurrent Drafter for Fast Speculative Decoding in Large Language Models",
+    "author": "Yunfei Cheng et al",
+    "year": "2024",
+    "topic": "speculative decoding, drafting, llm",
+    "venue": "Arxiv",
+    "description": "This paper indroduces ReDrafter (Recurrent Drafter) that uses an RNN as the draft model and conditions on the LLM's hidden states. They use a beam search to explore the candidate seqeunces and then apply a dynamic tree attention alg to remove duplicated prefixes among the candidates to improve the speedup. They also train via knowledge distillation from LLMs to improve the alignment of the draft model's predictions with those of the LLM.",
+    "link": "https://arxiv.org/pdf/2403.09919"
+  },
+  {
+    "title": "QuIP: 2-Bit Quantization of Large Language Models With Guarantees",
+    "author": "Jerry Chee et al",
+    "year": "2024",
+    "topic": "quantization, block-wise",
+    "venue": "Arxiv",
+    "description": "QuIP (quantization with incoherence processing) is a method based on the insight that quantization benefits from incoherent weight and Hessian mats, meaning that they benefit from the weights being even in magnitude and benefit from having the directions in whcih they are rounded to being unaligned with the coordinate axes. ",
+    "link": "https://arxiv.org/pdf/2307.13304"
+  },
+  {
     "title": "BlockDialect: Block-wise Fine-grained Mixed Format for Energy-Efficient LLM Inference",
     "author": "Wonsuk Jang et al",
     "year": "2024",

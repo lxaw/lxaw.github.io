@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 203 papers. Let's keep it up!
+        So far, we have read 205 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 203 papers. Nice! 
+        Your search returned 205 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Recurrent Drafter for Fast Speculative Decoding in Large Language Models</td>
+                <td>Yunfei Cheng et al</td>
+                <td>2024</td>
+                <td>speculative decoding, drafting, llm</td>
+                <td>Arxiv</td>
+                <td>This paper indroduces ReDrafter (Recurrent Drafter) that uses an RNN as the draft model and conditions on the LLM&#x27;s hidden states. They use a beam search to explore the candidate seqeunces and then apply a dynamic tree attention alg to remove duplicated prefixes among the candidates to improve the speedup. They also train via knowledge distillation from LLMs to improve the alignment of the draft model&#x27;s predictions with those of the LLM.</td>
+                <td><a href="https://arxiv.org/pdf/2403.09919" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>QuIP: 2-Bit Quantization of Large Language Models With Guarantees</td>
+                <td>Jerry Chee et al</td>
+                <td>2024</td>
+                <td>quantization, block-wise</td>
+                <td>Arxiv</td>
+                <td>QuIP (quantization with incoherence processing) is a method based on the insight that quantization benefits from incoherent weight and Hessian mats, meaning that they benefit from the weights being even in magnitude and benefit from having the directions in whcih they are rounded to being unaligned with the coordinate axes. </td>
+                <td><a href="https://arxiv.org/pdf/2307.13304" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>BlockDialect: Block-wise Fine-grained Mixed Format for Energy-Efficient LLM Inference</td>
