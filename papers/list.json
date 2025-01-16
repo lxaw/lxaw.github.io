@@ -1,5 +1,23 @@
 [
   {
+    "title": "Think Before You Speak: Training Language Models with Pause Tokens",
+    "author": "Sachin Goyal et al",
+    "year": "2024",
+    "topic": "test-time compute, meta-tokens",
+    "venue": "Arxiv",
+    "description": "This paper introduces \"Pause Tokens\" which are a way of appending a sequence of tokens to the input prefix, and then delaying the output until the last pause token is seen.",
+    "link": "https://arxiv.org/pdf/2310.02226"
+  },
+  {
+    "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+    "author": "Charlie Snell et al",
+    "year": "2024",
+    "topic": "test-time compute",
+    "venue": "Arxiv",
+    "description": "This paper explores the question of \"If an LLM is allowed to use a fixed but non-trivial amount of inference-time compute, how much can it improve its performance on a challenge prompt?\". Good for references on various test-time compute strategies.",
+    "link": "https://arxiv.org/pdf/2408.03314"
+  },
+  {
     "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
     "author": "Tianle Cai et al",
     "year": "2024",
