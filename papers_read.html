@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 208 papers. Let's keep it up!
+        So far, we have read 217 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 208 papers. Nice! 
+        Your search returned 217 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,96 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Hopping Too Late: Exploring the Limitations of Large Language Models on Multi-Hop Queries</td>
+                <td>Eden Biran et al</td>
+                <td>2024</td>
+                <td>multi-hop reasoning, llm</td>
+                <td>Arxiv</td>
+                <td>The paper shows that large language models solve multi-hop queries (like &quot;spouse of performer of Imagine&quot;) through a sequential process where early layers resolve the first hop (&quot;performer of Imagine&quot; → &quot;John Lennon&quot;), middle layers propagate this information, and later layers resolve the second hop (&quot;spouse of John Lennon&quot; → &quot;Yoko Ono&quot;), with performance limitations arising because later layers sometimes lack the knowledge needed for the second hop.</td>
+                <td><a href="https://arxiv.org/pdf/2406.12775" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Distributed Reasoning in LLMs: Parallel Reasoning Processes in Multi-Hop Reasoning</td>
+                <td>Yuval Shalev et al</td>
+                <td>2024</td>
+                <td>multi-hop reasoning, llm</td>
+                <td>Arxiv</td>
+                <td>The paper demonstrates that large language models perform multi-hop reasoning by generating interpretable distributions of potential intermediate answers in their middle layers, which are then linearly transformed into final answers through parallel reasoning paths - providing novel insights into how artificial neural networks implement both associative and structured reasoning processes.</td>
+                <td><a href="https://arxiv.org/pdf/2406.13858" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Training Large Language Models to Reason in Continuous Latent Space</td>
+                <td>Shibo Hao et al</td>
+                <td>2024</td>
+                <td>test-time compute, latent space</td>
+                <td>Arxiv</td>
+                <td>The paper introduces &quot;Coconut&quot; (Chain of Continuous Thought), which lets language models perform reasoning in continuous latent space rather than through discrete language tokens, leading to improved performance through implicit breadth-first search capabilities, especially on tasks requiring complex planning.</td>
+                <td><a href="https://arxiv.org/pdf/2412.06769" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking</td>
+                <td>Eric Zelikman et al</td>
+                <td>2024</td>
+                <td>test-time compute, star</td>
+                <td>Arxiv</td>
+                <td>The paper presents Quiet-STaR, a technique that trains language models to generate internal rationales at each token position by using parallel sampling, learned meta-tokens, and reinforcement learning to optimize thoughts that improve future token prediction, demonstrating significant zero-shot performance gains on reasoning tasks.</td>
+                <td><a href="https://arxiv.org/pdf/2403.09629" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step</td>
+                <td>Yuntian Deng et al</td>
+                <td>2024</td>
+                <td>test-time compute, cot</td>
+                <td>Arxiv</td>
+                <td>The authors present &quot;Stepwise Internalization&quot; a simple yet effective method that gradually removes chain-of-thought reasoning steps during training while maintaining high performance, enabling a small GPT-2 model to solve complex multiplication problems with 99% accuracy and achieving state-of-the-art results on GSM8K math problems without using intermediate reasoning steps.</td>
+                <td><a href="https://arxiv.org/pdf/2405.14838" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Deliberation in Latent Space via Differentiable Cache Augmentation</td>
+                <td>Luyang Liu et al</td>
+                <td>2024</td>
+                <td>test-time compute, latent space, coprocessor</td>
+                <td>Arxiv</td>
+                <td>The paper introduces a differentiable coprocessor that augments a frozen LLM&#x27;s key-value cache with learned latent embeddings, enabling improved reasoning capabilities through asynchronous &quot;thinking&quot; in latent space rather than generating explicit intermediate steps as text.</td>
+                <td><a href="https://arxiv.org/pdf/2412.17747" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Training Language Models to Self-Correct via Reinforcement Learning</td>
+                <td>Aviral Kumar et al</td>
+                <td>2024</td>
+                <td>self-correct, reinforcement learning</td>
+                <td>Arxiv</td>
+                <td>The paper introduces SCoRe, a novel multi-turn reinforcement learning approach that successfully teaches language models to self-correct their own mistakes without external feedback by addressing two key failure modes of previous methods: distribution shift and behavior collapse.</td>
+                <td><a href="https://arxiv.org/pdf/2409.12917" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Improving Factuality and Reasoning in Language Models through Multiagent Debate</td>
+                <td>Yilun Du et al</td>
+                <td>2023</td>
+                <td>multiagent, agentic</td>
+                <td>Arxiv</td>
+                <td>The paper demonstrates that having multiple large language model instances debate and critique each other&#x27;s responses over multiple rounds leads to improved factual accuracy and reasoning capabilities compared to single-model approaches, without requiring access to model internals.</td>
+                <td><a href="https://arxiv.org/pdf/2310.01798" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Large Language Models Cannot Self-Correct Reasoning Yet</td>
+                <td>Jie Huang et al</td>
+                <td>2024</td>
+                <td>self-correction</td>
+                <td>Arxiv</td>
+                <td>This paper demonstrates that large language models cannot effectively self-correct their reasoning without external feedback, showing that existing self-correction methods either rely on oracle labels, perform worse than simpler alternatives, or benefit mainly from improved prompting rather than actual self-correction.</td>
+                <td><a href="https://arxiv.org/pdf/2310.01798" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Think Before You Speak: Training Language Models with Pause Tokens</td>

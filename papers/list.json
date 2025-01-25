@@ -1,5 +1,86 @@
 [
   {
+    "title": "Hopping Too Late: Exploring the Limitations of Large Language Models on Multi-Hop Queries",
+    "author": "Eden Biran et al",
+    "year": "2024",
+    "topic": "multi-hop reasoning, llm",
+    "venue": "Arxiv",
+    "description": "The paper shows that large language models solve multi-hop queries (like \"spouse of performer of Imagine\") through a sequential process where early layers resolve the first hop (\"performer of Imagine\" → \"John Lennon\"), middle layers propagate this information, and later layers resolve the second hop (\"spouse of John Lennon\" → \"Yoko Ono\"), with performance limitations arising because later layers sometimes lack the knowledge needed for the second hop.",
+    "link": "https://arxiv.org/pdf/2406.12775"
+  },
+  {
+    "title": "Distributed Reasoning in LLMs: Parallel Reasoning Processes in Multi-Hop Reasoning",
+    "author": "Yuval Shalev et al",
+    "year": "2024",
+    "topic": "multi-hop reasoning, llm",
+    "venue": "Arxiv",
+    "description": "The paper demonstrates that large language models perform multi-hop reasoning by generating interpretable distributions of potential intermediate answers in their middle layers, which are then linearly transformed into final answers through parallel reasoning paths - providing novel insights into how artificial neural networks implement both associative and structured reasoning processes.",
+    "link": "https://arxiv.org/pdf/2406.13858"
+  },
+  {
+    "title": "Training Large Language Models to Reason in Continuous Latent Space",
+    "author": "Shibo Hao et al",
+    "year": "2024",
+    "topic": "test-time compute, latent space",
+    "venue": "Arxiv",
+    "description": "The paper introduces \"Coconut\" (Chain of Continuous Thought), which lets language models perform reasoning in continuous latent space rather than through discrete language tokens, leading to improved performance through implicit breadth-first search capabilities, especially on tasks requiring complex planning.",
+    "link": "https://arxiv.org/pdf/2412.06769"
+  },
+  {
+    "title": "Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking",
+    "author": "Eric Zelikman et al",
+    "year": "2024",
+    "topic": "test-time compute, star",
+    "venue": "Arxiv",
+    "description": "The paper presents Quiet-STaR, a technique that trains language models to generate internal rationales at each token position by using parallel sampling, learned meta-tokens, and reinforcement learning to optimize thoughts that improve future token prediction, demonstrating significant zero-shot performance gains on reasoning tasks.",
+    "link": "https://arxiv.org/pdf/2403.09629"
+  },
+  {
+    "title": "From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step",
+    "author": "Yuntian Deng et al",
+    "year": "2024",
+    "topic": "test-time compute, cot",
+    "venue": "Arxiv",
+    "description": "The authors present \"Stepwise Internalization\" a simple yet effective method that gradually removes chain-of-thought reasoning steps during training while maintaining high performance, enabling a small GPT-2 model to solve complex multiplication problems with 99% accuracy and achieving state-of-the-art results on GSM8K math problems without using intermediate reasoning steps.",
+    "link": "https://arxiv.org/pdf/2405.14838"
+  },
+  {
+    "title": "Deliberation in Latent Space via Differentiable Cache Augmentation",
+    "author": "Luyang Liu et al",
+    "year": "2024",
+    "topic": "test-time compute, latent space, coprocessor",
+    "venue": "Arxiv",
+    "description": "The paper introduces a differentiable coprocessor that augments a frozen LLM's key-value cache with learned latent embeddings, enabling improved reasoning capabilities through asynchronous \"thinking\" in latent space rather than generating explicit intermediate steps as text.",
+    "link": "https://arxiv.org/pdf/2412.17747"
+  },
+  {
+    "title": "Training Language Models to Self-Correct via Reinforcement Learning",
+    "author": "Aviral Kumar et al",
+    "year": "2024",
+    "topic": "self-correct, reinforcement learning",
+    "venue": "Arxiv",
+    "description": "The paper introduces SCoRe, a novel multi-turn reinforcement learning approach that successfully teaches language models to self-correct their own mistakes without external feedback by addressing two key failure modes of previous methods: distribution shift and behavior collapse.",
+    "link": "https://arxiv.org/pdf/2409.12917"
+  },
+  {
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "author": "Yilun Du et al",
+    "year": "2023",
+    "topic": "multiagent, agentic",
+    "venue": "Arxiv",
+    "description": "The paper demonstrates that having multiple large language model instances debate and critique each other's responses over multiple rounds leads to improved factual accuracy and reasoning capabilities compared to single-model approaches, without requiring access to model internals.",
+    "link": "https://arxiv.org/pdf/2310.01798"
+  },
+  {
+    "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+    "author": "Jie Huang et al",
+    "year": "2024",
+    "topic": "self-correction",
+    "venue": "Arxiv",
+    "description": "This paper demonstrates that large language models cannot effectively self-correct their reasoning without external feedback, showing that existing self-correction methods either rely on oracle labels, perform worse than simpler alternatives, or benefit mainly from improved prompting rather than actual self-correction.",
+    "link": "https://arxiv.org/pdf/2310.01798"
+  },
+  {
     "title": "Think Before You Speak: Training Language Models with Pause Tokens",
     "author": "Sachin Goyal et al",
     "year": "2024",
