@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 217 papers. Let's keep it up!
+        So far, we have read 221 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 217 papers. Nice! 
+        Your search returned 221 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,46 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Direct Preference Optimization: Your Language Model is Secretly a Reward Model</td>
+                <td>Rafael Rafailov et al</td>
+                <td>2023</td>
+                <td>rlhf, reward modeling</td>
+                <td>NeurIPS</td>
+                <td>The key innovation is that the paper eliminates the need for reinforcement learning in training language models from human preferences by introducing Direct Preference Optimization (DPO). DPO achieves this by leveraging a mathematical mapping between reward functions and optimal policies to transform preference learning into a simple classification problem. This allows language models to be trained directly from human preference data using a straightforward binary cross-entropy loss, while theoretically maintaining the same optimization objective as traditional RLHF methods.</td>
+                <td><a href="https://arxiv.org/pdf/2408.16737" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling</td>
+                <td>Hritik Bansal et al</td>
+                <td>2024</td>
+                <td>llm, compute-optimal, test-time compute</td>
+                <td>Arxiv</td>
+                <td>The paper&#x27;s key innovation is challenging the common practice of using larger language models to generate synthetic training data for reasoning tasks. It shows that at a fixed compute budget, generating more samples from a smaller, cheaper model can be more effective than fewer samples from a larger, more expensive model. The authors introduce a novel &quot;weak-to-strong improvement&quot; paradigm where a stronger model can be improved using data from a weaker model, while also providing a theoretical framework for compute-matched sampling between different model sizes.</td>
+                <td><a href="https://arxiv.org/pdf/2408.16737" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>ReAct: Synergizing Reasoning and Acting in Language Models</td>
+                <td>Shunyu Yao et al</td>
+                <td>2023</td>
+                <td>llm, reasoning, acting</td>
+                <td>Arxiv</td>
+                <td>This paper introduces ReAct, a novel approach that combines reasoning and acting capabilities in large language models through prompting. The key innovation is having language models generate both verbal reasoning traces and task-specific actions in an interleaved manner, allowing models to maintain high-level plans while gathering information from external sources. Through experiments on question answering, fact verification, and interactive decision-making tasks, ReAct outperforms baselines that use only reasoning or only actions, while providing interpretable decision traces that enable human oversight of the model&#x27;s behavior.</td>
+                <td><a href="https://arxiv.org/pdf/2210.03629" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>STaR: Self Taught Reasoner</td>
+                <td>Eric Zelikman et al</td>
+                <td>2022</td>
+                <td>reasoning, llm</td>
+                <td>Arxiv</td>
+                <td>This paper proposes a method of iteratively leveraging a small number of rationale examples and a large dataset w/o rationales to bootstrap the ability to perform successively more complex reasoning. Basically it is a loop: if generated answers are wrong, try again to generate a rationale given the correct answer; finetune on all rationales that ultimately yielded correct answers, and repeat.</td>
+                <td><a href="https://arxiv.org/pdf/2203.14465" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Hopping Too Late: Exploring the Limitations of Large Language Models on Multi-Hop Queries</td>

@@ -1,5 +1,41 @@
 [
   {
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "author": "Rafael Rafailov et al",
+    "year": "2023",
+    "topic": "rlhf, reward modeling",
+    "venue": "NeurIPS",
+    "description": "The key innovation is that the paper eliminates the need for reinforcement learning in training language models from human preferences by introducing Direct Preference Optimization (DPO). DPO achieves this by leveraging a mathematical mapping between reward functions and optimal policies to transform preference learning into a simple classification problem. This allows language models to be trained directly from human preference data using a straightforward binary cross-entropy loss, while theoretically maintaining the same optimization objective as traditional RLHF methods.",
+    "link": "https://arxiv.org/pdf/2408.16737"
+  },
+  {
+    "title": "Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling",
+    "author": "Hritik Bansal et al",
+    "year": "2024",
+    "topic": "llm, compute-optimal, test-time compute",
+    "venue": "Arxiv",
+    "description": "The paper's key innovation is challenging the common practice of using larger language models to generate synthetic training data for reasoning tasks. It shows that at a fixed compute budget, generating more samples from a smaller, cheaper model can be more effective than fewer samples from a larger, more expensive model. The authors introduce a novel \"weak-to-strong improvement\" paradigm where a stronger model can be improved using data from a weaker model, while also providing a theoretical framework for compute-matched sampling between different model sizes.",
+    "link": "https://arxiv.org/pdf/2408.16737"
+  },
+  {
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "author": "Shunyu Yao et al",
+    "year": "2023",
+    "topic": "llm, reasoning, acting",
+    "venue": "Arxiv",
+    "description": "This paper introduces ReAct, a novel approach that combines reasoning and acting capabilities in large language models through prompting. The key innovation is having language models generate both verbal reasoning traces and task-specific actions in an interleaved manner, allowing models to maintain high-level plans while gathering information from external sources. Through experiments on question answering, fact verification, and interactive decision-making tasks, ReAct outperforms baselines that use only reasoning or only actions, while providing interpretable decision traces that enable human oversight of the model's behavior.",
+    "link": "https://arxiv.org/pdf/2210.03629"
+  },
+  {
+    "title": "STaR: Self Taught Reasoner",
+    "author": "Eric Zelikman et al",
+    "year": "2022",
+    "topic": "reasoning, llm",
+    "venue": "Arxiv",
+    "description": "This paper proposes a method of iteratively leveraging a small number of rationale examples and a large dataset w/o rationales to bootstrap the ability to perform successively more complex reasoning. Basically it is a loop: if generated answers are wrong, try again to generate a rationale given the correct answer; finetune on all rationales that ultimately yielded correct answers, and repeat.",
+    "link": "https://arxiv.org/pdf/2203.14465"
+  },
+  {
     "title": "Hopping Too Late: Exploring the Limitations of Large Language Models on Multi-Hop Queries",
     "author": "Eden Biran et al",
     "year": "2024",
