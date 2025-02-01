@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miscellaneous</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h4, h6 {
-            text-align: center;
-        }
-        p {
-            text-align: center;
-        }
-        .quote-section {
-            margin: 20px auto;
-            padding: 15px;
-            max-width: 600px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .quote-text {
-            font-style: italic;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .quote-author {
-            font-size: 1em;
-            text-align: right;
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-        }
-        footer a {
-            text-decoration: none;
-            color: #007acc;
-        }
-        footer a:hover {
-            color: #005bb5;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miscellaneous Quotes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .quote-group {
+      margin-bottom: 30px;
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .quote-text {
+      font-style: italic;
+      font-size: 1.2em;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .quote-author {
+      font-size: 1em;
+      text-align: right;
+      color: #555;
+    }
+    footer a {
+      text-decoration: none;
+      color: #007acc;
+    }
+    footer a:hover {
+      color: #005bb5;
+    }
+  </style>
 </head>
 <body>
-    <h4>You have discovered the secret page!</h4>
+  <header>
+    <h2>You have discovered the secret page!</h2>
     <p>You weren't supposed to be here! Here's where I store some things.</p>
+    <h3>Quotes I Like</h3>
+  </header>
 
-    <h6>Quotes I like:</h6>
+  <main>
+    <!-- 孫子 Quote -->
+    <article class="quote-group">
+      <p class="quote-text">故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。</p>
+      <p class="quote-author">- 孫子</p>
+    </article>
 
-    <div class="quote-section">
-        <div class="quote-text">
-            故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。
-        </div>
-        <div class="quote-author">- 孫子</div>
-    </div>
+    <!-- 松尾芭蕉 Quote -->
+    <article class="quote-group">
+      <p class="quote-text">夏草や 兵どもが 夢の跡。</p>
+      <p class="quote-author">- 松尾芭蕉</p>
+    </article>
 
-    <div class="quote-section">
-        <div class="quote-text">
-            夏草や 兵どもが 夢の跡。
-        </div>
-        <div class="quote-author">- 松尾芭蕉</div>
-    </div>
+    <!-- Jacobi Quote -->
+    <article class="quote-group">
+      <p class="quote-text">Man muss immer umkehren.</p>
+      <p class="quote-author">- Carl Gustav Jacob Jacobi</p>
+    </article>
 
-    <div class="quote-section">
-        <div class="quote-text">
-            Man muss immer umkehren.
-        </div>
-        <div class="quote-author">- Carl Gustav Jacob Jacobi</div>
-    </div>
+    <!-- 徳川家康 Quotes -->
+    <article class="quote-group">
+      <p class="quote-text">
+        人の一生は重荷を負うて遠き道を行くがごとし。急ぐべからず。<br>
+        不自由を常と思えば不足なし。こころに望みおこらば困窮したる時を思い出すべし。<br>
+        堪忍は無事長久の基、いかりは敵と思え。<br>
+        勝つ事ばかり知りて、負くること知らざれば害その身にいたる。<br>
+        おのれを責めて人をせむるな。<br>
+        及ばざるは過ぎたるよりまされり。<br>
+        滅びる原因は自らの内にある。
+      </p>
+      <p class="quote-author">- Various quotes from 徳川家康</p>
+    </article>
 
-    <div class="quote-section">
-        <div class="quote-text">
-            人の一生は重荷を負うて遠き道を行くがごとし。急ぐべからず。
-            不自由を常と思えば不足なし。こころに望みおこらば困窮したる時を思い出すべし。
-            堪忍は無事長久の基、いかりは敵と思え。
-            勝つ事ばかり知りて、負くること知らざれば害その身にいたる。
-            おのれを責めて人をせむるな。
-            及ばざるは過ぎたるよりまされり。
-            滅びる原因は自らの内にある。
-        </div>
-        <div class="quote-author">- Various quotes from 徳川家康.</div>
-    </div>
+    <!-- Dale Carnegie Quotes -->
+    <article class="quote-group">
+      <p class="quote-text">First ask yourself: What is the worst that can happen? Then prepare to accept it. Then proceed to improve on the worst.</p>
+      <p class="quote-text">Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.</p>
+      <p class="quote-text">The successful man will profit from his mistakes and try again in a different way.</p>
+      <p class="quote-text">Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.</p>
+      <p class="quote-text">Inaction breeds doubt and fear. Action breeds confidence and courage. If you want to conquer fear, do not sit home and think about it. Go out and get busy.</p>
+      <p class="quote-author">- Various quotes from Dale Carnegie</p>
+    </article>
+  </main>
 
-
-    <footer class="site-footer">
-        <p><a href="index.html">Back to home</a></p>
-    </footer>
+  <footer>
+    <p><a href="index.html">Back to home</a></p>
+  </footer>
 </body>
 </html>
