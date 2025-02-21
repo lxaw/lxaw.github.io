@@ -4,71 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lex Whalen</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .profile-pic {
-            display: block;
+            max-width: 900px;
             margin: 0 auto;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .center {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .who-section img {
-            float: right; /* Float the image to the right */
-            margin-left: 20px; /* Add some spacing between text and image */
-            margin-top: -45px; /* Adjust the image upward */
-            width: 150px;
-            height: auto;
+            padding: 2rem;
+            color: #333;
         }
 
+        .content-wrapper {
+            overflow: hidden;
+        }
+
+        .figure-wrapper {
+            float: right;
+            margin: 0 0 1rem 2rem;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 300px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        figcaption {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        h1:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 0 0 1rem;
+        }
+
+        a {
+            color: #4299e1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        small {
+            color: #666;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .bottom-content {
+            clear: both;
+            padding-top: 1rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .figure-wrapper {
+                float: none;
+                margin: 0 auto 1rem;
+                width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="center">
-        <section>
-            <h1>Who?</h1>
-            <div class="who-section">
-                <img src="pictures/myself_profile_pic_bw.png" alt="Lex Whalen" class="profile-pic">
+    <div class="content-wrapper">
+        <figure class="figure-wrapper">
+            <img src="pictures/myself_nagasaki.png" alt="Lex Whalen" class="profile-pic">
+            <figcaption>Nagasaki, Dec. 2024</figcaption>
+        </figure>
+        
+        <h1>Who?</h1>
+        <p>My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>. For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.</p>
 
-                <p>My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>. For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.</p>
-            </div>
-        </section>
-        <section>
-            <h1>What?</h1>
-            <p>PhD student @ GT. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world. Bonus points if we can vastly improve society as we do it.</p>
-            <small>I also claim to have a <a href="personal_interests.html">life outside of research</a>.</small>
-        </section>
-        <section>
-            <h1>Why?</h1>
-            <p>The purpose of this website is to store <a href="cv/main.pdf">my CV</a>, a <a href="papers_read.html">list of searchable papers</a>, and a list of <a href="books_read.html">books I've read</a>.</p>
-        </section>
-        <section>
-            <h1>Where?</h1>
-            <p>You can contact me by emailing at [first letter of first name lowercase][last name lowercase]7@gatech.edu.</p>
-            <p>You can also check out my <a href="https://github.com/lxaw">GitHub</a>.</p>
-            <p>As long as the project is interesting, I am willing to go anywhere and learn anything.</p>
-        </section>
-        <section>
-            <h1>When?</h1>
-        Last time this was edited was 2025-02-01 (YYYY/MM/DD).
-        </section>
-        <footer>
-            <small><a href="misc.html">misc</a></small>
-        </footer>
+        <h1>What?</h1>
+        <p>PhD student @ GT. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world. Bonus points if we can vastly improve society as we do it.</p>
+        <small>I also claim to have a <a href="personal_interests.html">life outside of research</a>.</small>
+
+        <h1>Why?</h1>
+        <p>The purpose of this website is to store <a href="cv/main.pdf">my CV</a>, a <a href="papers_read.html">list of searchable papers</a>, and a list of <a href="books_read.html">books I've read</a>.</p>
+
+        <h1>Where?</h1>
+        <p>You can contact me by emailing at [first letter of first name lowercase][last name lowercase]7@gatech.edu.</p>
+        <p>You can also check out my <a href="https://github.com/lxaw">GitHub</a>.</p>
+        <p>As long as the project is interesting, I am willing to go anywhere and learn anything.</p>
+
+        <h1>When?</h1>
+        Last time this was edited was 2025-02-21 (YYYY/MM/DD).
     </div>
+
+    <footer>
+        <small><a href="misc.html">misc</a></small>
+    </footer>
 </body>
 </html>

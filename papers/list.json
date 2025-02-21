@@ -1,5 +1,50 @@
 [
   {
+    "title": "DistiLLM: Towards Streamlined Distillation for Large Language Models",
+    "author": "Jongwoo Ko et al",
+    "year": "2024",
+    "topic": "knowledge distillation, llm",
+    "venue": "ICML",
+    "description": "This paper introduces DISTILLM, a new knowledge distillation framework for large language models that addresses critical limitations in efficiency and effectiveness through two key components: a novel skew Kullback-Leibler divergence loss with strong theoretical foundations, and an adaptive off-policy approach that efficiently utilizes student-generated outputs. The skew KLD is mathematically proven to provide more stable gradients and minimal approximation errors compared to standard KLD objectives, while the adaptive off-policy approach uses a replay buffer to dramatically improve sample efficiency and reduce training time. Through extensive experiments on various tasks like instruction-following and text summarization, DISTILLM achieves state-of-the-art performance while requiring up to 4.3x less training time than existing methods. The framework demonstrates strong scalability across different model sizes (120M to 13B parameters) and model families, making it a practical solution for compressing large language models.",
+    "link": "https://arxiv.org/pdf/2402.03898"
+  },
+  {
+    "title": "MiniLLM: Knowledge Distillation of Large Language Models",
+    "author": "Yuxian Gu et al",
+    "year": "2024",
+    "topic": "knowledge distillation, llm",
+    "venue": "ICLR",
+    "description": "This paper introduces MiniLLM, a novel approach to knowledge distillation for large language models that uses reverse Kullback-Leibler divergence (KLD) instead of forward KLD, which prevents student models from overestimating low-probability regions of the teacher's distribution. The authors develop an optimization approach using policy gradient with three key improvements: single-step decomposition to reduce variance, teacher-mixed sampling to prevent reward hacking, and length normalization to eliminate length bias. Through extensive experiments on various model sizes (120M to 13B parameters) and instruction-following tasks, they demonstrate that MiniLLM produces more precise responses with higher quality, lower exposure bias, better calibration, and improved long-text generation compared to baselines. Most importantly, they show the approach scales effectively across different model families and sizes while requiring significantly fewer training tokens than traditional methods, making it a practical solution for compressing large language models.",
+    "link": "https://arxiv.org/pdf/2306.08543"
+  },
+  {
+    "title": "Rethinking Soft Labels for Knowledge Distillation: A Bias-Variance Tradeoff Perspective",
+    "author": "Helong Zhou et al",
+    "year": "2021",
+    "topic": "knowledge distillation",
+    "venue": "ICLR",
+    "description": "The paper analyzes knowledge distillation through the lens of bias-variance tradeoff, discovering that soft labels create a sample-wise tradeoff where some training examples reduce variance at the cost of increased bias while others have different effects. The authors identify "regularization samples" where distillation primarily acts as a regularizer and find that their quantity negatively correlates with model performance in standard knowledge distillation. To address this, they propose "weighted soft labels" that adaptively weight each training sample's contribution to optimally balance the bias-variance tradeoff, leading to improved distillation performance. The key insight is that regularization samples shouldn't be completely ignored but rather have their influence carefully modulated through weighting, which the authors validate through both theoretical analysis and extensive experiments establishing new state-of-the-art results.",
+    "link": "https://arxiv.org/pdf/2102.00650"
+  },
+  {
+    "title": "The Unreasonable Ineffectiveness of the Deeper Layers",
+    "author": "Andrey Gromov et al",
+    "year": "2024",
+    "topic": "layer analysis, pruning",
+    "venue": "Arxiv",
+    "description": "This paper presents an empirical study of layer pruning in large language models, demonstrating that many layers can be removed without significant performance degradation until a critical threshold. The authors introduce a novel pruning approach that identifies optimal layers to remove by analyzing the similarity between layer representations, combined with a small amount of parameter-efficient finetuning to \"heal\" the model after pruning. They discover that LLMs are surprisingly robust to removing up to half of their layers, suggesting either that current pretraining methods don't fully utilize deeper layers or that shallow layers play a crucial role in storing knowledge. A key finding is that while question-answering performance shows a sharp transition after removing critical layers, autoregressive loss changes smoothly, indicating an interesting disconnect between these different measures of model capability.",
+    "link": "https://arxiv.org/pdf/2403.17887"
+  },
+  {
+    "title": "LLM Pruning and Distillation in Practice: The Minitron Approach",
+    "author": "Sharath Turuvekere Sreenivas et al",
+    "year": "2024",
+    "topic": "llm, pruning, distillation",
+    "venue": "Arxiv",
+    "description": "The paper introduces an improved approach to LLM model compression by combining structured pruning with knowledge distillation, notably adding a \"teacher correction\" phase that allows the teacher model to adapt to new data distributions when the original pretraining dataset is unavailable. The authors explore two distinct pruning strategies - depth pruning (removing entire layers) and width pruning (reducing hidden/attention/MLP dimensions), along with a new task-based saliency criteria for depth pruning. They demonstrate this approach by successfully compressing Mistral NeMo 12B and Llama 3.1 8B models to 8B and 4B parameters respectively, using significantly fewer training tokens than training from scratch. The methodology is particularly valuable because it removes the dependency on accessing the original pretraining dataset, making it more practical for compressing proprietary models.",
+    "link": "https://arxiv.org/pdf/2408.11796"
+  },
+  {
     "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
     "author": "Rafael Rafailov et al",
     "year": "2023",
