@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lex Whalen</title>
     <style>
+        /* Original styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -13,11 +14,9 @@
             padding: 2rem;
             color: #333;
         }
-
         .content-wrapper {
             overflow: hidden;
         }
-
         .figure-wrapper {
             float: right;
             margin: 0 0 1rem 2rem;
@@ -32,42 +31,98 @@
             font-size: 0.9rem;
             color: #666;
         }
-
         h1 {
             font-size: 1.5rem;
             margin: 1rem 0 0.5rem;
         }
-
         h1:first-child {
             margin-top: 0;
         }
-
         p {
             margin: 0 0 1rem;
         }
-
         a {
             color: #4299e1;
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
         small {
             color: #666;
             display: block;
             margin-bottom: 1rem;
         }
-
         .bottom-content {
             clear: both;
             padding-top: 1rem;
         }
-
         footer {
             margin-top: 2rem;
+        }
+
+        /* Language switcher styles */
+        .lang-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+
+        #lang-toggle {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            width: 0;
+            height: 0;
+        }
+
+        .lang-switch label {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: #4299e1;
+            color: white;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-size: 0.875rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .lang-switch label:hover {
+            background: #3182ce;
+        }
+
+        /* Language content switching */
+        [lang="ja"] {
+            display: none;
+        }
+
+        #lang-toggle:checked ~ .content-wrapper [lang="en"] {
+            display: none;
+        }
+
+        #lang-toggle:checked ~ .content-wrapper [lang="ja"] {
+            display: block;
+        }
+
+        /* Button text switching */
+        .lang-text-en,
+        .lang-text-ja {
+            transition: opacity 0.2s;
+        }
+
+        .lang-text-ja {
+            display: none;
+        }
+
+        #lang-toggle:checked ~ .lang-switch .lang-text-en {
+            display: none;
+        }
+
+        #lang-toggle:checked ~ .lang-switch .lang-text-ja {
+            display: inline;
         }
 
         @media (max-width: 600px) {
@@ -80,33 +135,55 @@
     </style>
 </head>
 <body>
+    <input type="checkbox" id="lang-toggle">
+    <div class="lang-switch">
+        <label for="lang-toggle">
+            <span class="lang-text-en">日本語</span>
+            <span class="lang-text-ja">English</span>
+        </label>
+    </div>
+
     <div class="content-wrapper">
         <figure class="figure-wrapper">
             <img src="pictures/myself_nagasaki.png" alt="Lex Whalen" class="profile-pic">
-            <figcaption>Nagasaki, Dec. 2024</figcaption>
+            <figcaption lang="en">Nagasaki, Dec. 2024</figcaption>
+            <figcaption lang="ja">長崎、2024年12月</figcaption>
         </figure>
         
-        <h1>Who?</h1>
-        <p>My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>. For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.</p>
+        <h1 lang="en">Who?</h1>
+        <h1 lang="ja">だれ？</h1>
+        <p lang="en">My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>. For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.</p>
+        <p lang="ja">レックスと申します。写真（右のやつ以外）は<a href="picture.html">こちら</a>で、LinkedInは<a href="https://www.linkedin.com/in/lxaw/">こちら</a>になります。</p>
 
-        <h1>What?</h1>
-        <p>PhD student @ GT. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world. Bonus points if we can vastly improve society as we do it.</p>
-        <small>I also claim to have a <a href="personal_interests.html">life outside of research</a>.</small>
+        <h1 lang="en">What?</h1>
+        <h1 lang="ja">なに？</h1>
+        <p lang="en">PhD student @ GT. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world. Bonus points if we can vastly improve society as we do it.</p>
+        <p lang="ja">ジョージア工科大学の博士課程の学生です。目標は、手頃な価格で超人工知能を実現し、改善することです。それと同時に、社会を大きく改善できれば更に良いと考えています。</p>
+        <small lang="en">I also claim to have a <a href="personal_interests.html">life outside of research</a>.</small>
+        <small lang="ja">研究以外の<a href="personal_interests.html">生活</a>もあると主張したいと思います。</small>
 
-        <h1>Why?</h1>
-        <p>The purpose of this website is to store <a href="cv/main.pdf">my CV</a>, a <a href="papers_read.html">list of searchable papers</a>, and a list of <a href="books_read.html">books I've read</a>.</p>
+        <h1 lang="en">Why?</h1>
+        <h1 lang="ja">目的</h1>
+        <p lang="en">The purpose of this website is to store <a href="cv/main.pdf">my CV</a>, a <a href="papers_read.html">list of searchable papers</a>, and a list of <a href="books_read.html">books I've read</a>.</p>
+        <p lang="ja">このウェブサイトは<a href="cv/main.pdf">CV</a>、<a href="papers_read.html">検索可能な論文リスト</a>、そして<a href="books_read.html">読んだ本のリスト</a>を保存するためのものです。</p>
 
-        <h1>Where?</h1>
-        <p>You can contact me by emailing at [first letter of first name lowercase][last name lowercase]7@gatech.edu.</p>
-        <p>You can also check out my <a href="https://github.com/lxaw">GitHub</a>.</p>
-        <p>As long as the project is interesting, I am willing to go anywhere and learn anything.</p>
+        <h1 lang="en">Where?</h1>
+        <h1 lang="ja">どこ？</h1>
+        <p lang="en">You can contact me by emailing at [first letter of first name lowercase][last name lowercase]7@gatech.edu.</p>
+        <p lang="ja">メールでの連絡は[名前の最初の文字（小文字）][苗字（小文字）]7@gatech.eduまでお願いします。</p>
+        <p lang="en">You can also check out my <a href="https://github.com/lxaw">GitHub</a>.</p>
+        <p lang="ja"><a href="https://github.com/lxaw">GitHub</a>もご覧ください。</p>
+        <p lang="en">As long as the project is interesting, I am willing to go anywhere and learn anything.</p>
+        <p lang="ja">面白いプロジェクトであれば、どこへでも行き、何でも学びたいのです。</p>
 
-        <h1>When?</h1>
-        Last time this was edited was 2025-02-21 (YYYY/MM/DD).
-    </div>
+        <h1 lang="en">When?</h1>
+        <h1 lang="ja">いつ？</h1>
+        Last time this was edited was 2025-02-23 (YYYY/MM/DD).
+        最終更新日： 2025-02-23 (YYYY/MM/DD).    </div>
 
     <footer>
-        <small><a href="misc.html">misc</a></small>
+        <small lang="en"><a href="misc.html">misc</a></small>
+        <small lang="ja"><a href="misc.html">その他</a></small>
     </footer>
 </body>
 </html>
