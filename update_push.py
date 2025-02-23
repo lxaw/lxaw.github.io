@@ -15,8 +15,6 @@ def update_html():
     for i, line in enumerate(content):
         if "Last time this was edited was" in line:
             content[i] = f"        Last time this was edited was {current_date} (YYYY/MM/DD).\n"
-        if "最終更新日：" in line:
-            content[i] = f"        最終更新日： {current_date} (YYYY/MM/DD)."
     
     # Write the updated content back to index.html
     with open('index.html', 'w') as file:
