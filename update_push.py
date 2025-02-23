@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
-
 import os
 import subprocess
 from datetime import date
 
 def update_html():
+    # Get current date in both formats
     current_date = date.today().strftime("%Y-%m-%d")
+    # Convert to Japanese format (YYYY年MM月DD日)
+    japanese_date = date.today().strftime("%Y年%m月%d日")
     
     # Read the content of index.html
     with open('index.html', 'r') as file:
         content = file.readlines()
     
-    # Update the date
+    # Update both English and Japanese dates
     for i, line in enumerate(content):
         if "Last time this was edited was" in line:
             content[i] = f"        Last time this was edited was {current_date} (YYYY/MM/DD).\n"
+        elif "最終更新日：" in line:
+            content[i] = f"        <p lang=\"ja\">最終更新日：{japanese_date}</p>\n"
     
     # Write the updated content back to index.html
     with open('index.html', 'w') as file:
