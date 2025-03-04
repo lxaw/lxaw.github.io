@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 221 papers. Let's keep it up!
+        So far, we have read 229 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 221 papers. Nice! 
+        Your search returned 229 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,86 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Compact Language Models via Pruning and Knowledge Distillation</td>
+                <td>Saurav Muralidharan et al</td>
+                <td>2024</td>
+                <td>pruning, knowledge distillation</td>
+                <td>Arxiv</td>
+                <td>This paper investigates whether large language models (LLMs) can be efficiently compressed by pruning an existing model and retraining it with a fraction of the original training data, rather than training smaller variants from scratch. The authors develop and empirically explore best practices for structured LLM pruning across multiple dimensions (depth, width, attention, and MLP) combined with knowledge distillation-based retraining. Their approach produces the MINITRON family of models (8B and 4B variants) from the Nemotron-4 15B model using up to 40× fewer training tokens than training from scratch, while maintaining competitive performance compared to similarly-sized models like Mistral 7B, Gemma 7B, and Llama-3 8B. The methodology demonstrates significant compute savings (1.8×) for training a full model family and outperforms state-of-the-art compression techniques in the literature.</td>
+                <td><a href="https://arxiv.org/pdf/2407.14679" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>MergeNet: Knowledge Migration across Heterogeneous Models, Tasks, and Modalities</td>
+                <td>Kunxi Li et al</td>
+                <td>2024</td>
+                <td>model merging, knowledge distillation</td>
+                <td>Arxiv</td>
+                <td>The paper introduces MergeNet, a novel framework for knowledge transfer between heterogeneous models, tasks, and modalities. Unlike traditional methods like knowledge distillation that require similar model architectures or tasks, MergeNet facilitates knowledge transfer by operating directly on model parameters through low-rank decomposition and a specialized adapter that bridges different parameter spaces. The authors demonstrate MergeNet&#x27;s effectiveness through extensive experiments across challenging scenarios including cross-structure (different model architectures), cross-modal (image-text), and cross-task (classification-QA) knowledge transfer, consistently outperforming baseline methods. Their approach enables previously difficult knowledge transfers by allowing models to extract only the knowledge they need from source models, effectively addressing the issue of knowledge incompatibility between heterogeneous models.</td>
+                <td><a href="https://arxiv.org/pdf/2404.13322" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Reuse, Don&#x27;t Retrain: A Recipe for Continued Pretraining of Language Models</td>
+                <td>Jupinder Parmar et al</td>
+                <td>2024</td>
+                <td>pretraining</td>
+                <td>Arxiv</td>
+                <td>This paper introduces a recipe for effectively continuing the pretraining of large language models (LLMs) without having to retrain them from scratch. The authors demonstrate that using a two-phase data distribution approach—starting with general data similar to pretraining and transitioning to specialized data focused on model weaknesses—produces the best results when combined with a specific learning rate schedule that starts at the pretrained model&#x27;s minimum learning rate and decays with cosine annealing. They find that the optimal point to switch between data distributions occurs at one-fifth of the maximum learning rate, and demonstrate that their approach yields a 9% improvement in model accuracy compared to simply continuing training on the pretraining dataset. The recipe proves effective across different training scales (from 100B to 1T tokens) and includes innovations like document mining to identify the most useful examples for continued training, enabling developers to improve model capabilities without the massive computational costs of retraining from scratch.</td>
+                <td><a href="https://arxiv.org/pdf/2407.07263" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>DistiLLM: Towards Streamlined Distillation for Large Language Models</td>
+                <td>Jongwoo Ko et al</td>
+                <td>2024</td>
+                <td>knowledge distillation, llm</td>
+                <td>ICML</td>
+                <td>This paper introduces DISTILLM, a new knowledge distillation framework for large language models that addresses critical limitations in efficiency and effectiveness through two key components: a novel skew Kullback-Leibler divergence loss with strong theoretical foundations, and an adaptive off-policy approach that efficiently utilizes student-generated outputs. The skew KLD is mathematically proven to provide more stable gradients and minimal approximation errors compared to standard KLD objectives, while the adaptive off-policy approach uses a replay buffer to dramatically improve sample efficiency and reduce training time. Through extensive experiments on various tasks like instruction-following and text summarization, DISTILLM achieves state-of-the-art performance while requiring up to 4.3x less training time than existing methods. The framework demonstrates strong scalability across different model sizes (120M to 13B parameters) and model families, making it a practical solution for compressing large language models.</td>
+                <td><a href="https://arxiv.org/pdf/2402.03898" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>MiniLLM: Knowledge Distillation of Large Language Models</td>
+                <td>Yuxian Gu et al</td>
+                <td>2024</td>
+                <td>knowledge distillation, llm</td>
+                <td>ICLR</td>
+                <td>This paper introduces MiniLLM, a novel approach to knowledge distillation for large language models that uses reverse Kullback-Leibler divergence (KLD) instead of forward KLD, which prevents student models from overestimating low-probability regions of the teacher&#x27;s distribution. The authors develop an optimization approach using policy gradient with three key improvements: single-step decomposition to reduce variance, teacher-mixed sampling to prevent reward hacking, and length normalization to eliminate length bias. Through extensive experiments on various model sizes (120M to 13B parameters) and instruction-following tasks, they demonstrate that MiniLLM produces more precise responses with higher quality, lower exposure bias, better calibration, and improved long-text generation compared to baselines. Most importantly, they show the approach scales effectively across different model families and sizes while requiring significantly fewer training tokens than traditional methods, making it a practical solution for compressing large language models.</td>
+                <td><a href="https://arxiv.org/pdf/2306.08543" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Rethinking Soft Labels for Knowledge Distillation: A Bias-Variance Tradeoff Perspective</td>
+                <td>Helong Zhou et al</td>
+                <td>2021</td>
+                <td>knowledge distillation</td>
+                <td>ICLR</td>
+                <td>The paper analyzes knowledge distillation through the lens of bias-variance tradeoff, discovering that soft labels create a sample-wise tradeoff where some training examples reduce variance at the cost of increased bias while others have different effects. The authors identify &quot;regularization samples&quot; where distillation primarily acts as a regularizer and find that their quantity negatively correlates with model performance in standard knowledge distillation. To address this, they propose &quot;weighted soft labels&quot; that adaptively weight each training sample&#x27;s contribution to optimally balance the bias-variance tradeoff, leading to improved distillation performance. The key insight is that regularization samples shouldn&#x27;t be completely ignored but rather have their influence carefully modulated through weighting, which the authors validate through both theoretical analysis and extensive experiments establishing new state-of-the-art results.</td>
+                <td><a href="https://arxiv.org/pdf/2102.00650" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>The Unreasonable Ineffectiveness of the Deeper Layers</td>
+                <td>Andrey Gromov et al</td>
+                <td>2024</td>
+                <td>layer analysis, pruning</td>
+                <td>Arxiv</td>
+                <td>This paper presents an empirical study of layer pruning in large language models, demonstrating that many layers can be removed without significant performance degradation until a critical threshold. The authors introduce a novel pruning approach that identifies optimal layers to remove by analyzing the similarity between layer representations, combined with a small amount of parameter-efficient finetuning to &quot;heal&quot; the model after pruning. They discover that LLMs are surprisingly robust to removing up to half of their layers, suggesting either that current pretraining methods don&#x27;t fully utilize deeper layers or that shallow layers play a crucial role in storing knowledge. A key finding is that while question-answering performance shows a sharp transition after removing critical layers, autoregressive loss changes smoothly, indicating an interesting disconnect between these different measures of model capability.</td>
+                <td><a href="https://arxiv.org/pdf/2403.17887" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LLM Pruning and Distillation in Practice: The Minitron Approach</td>
+                <td>Sharath Turuvekere Sreenivas et al</td>
+                <td>2024</td>
+                <td>llm, pruning, distillation</td>
+                <td>Arxiv</td>
+                <td>The paper introduces an improved approach to LLM model compression by combining structured pruning with knowledge distillation, notably adding a &quot;teacher correction&quot; phase that allows the teacher model to adapt to new data distributions when the original pretraining dataset is unavailable. The authors explore two distinct pruning strategies - depth pruning (removing entire layers) and width pruning (reducing hidden/attention/MLP dimensions), along with a new task-based saliency criteria for depth pruning. They demonstrate this approach by successfully compressing Mistral NeMo 12B and Llama 3.1 8B models to 8B and 4B parameters respectively, using significantly fewer training tokens than training from scratch. The methodology is particularly valuable because it removes the dependency on accessing the original pretraining dataset, making it more practical for compressing proprietary models.</td>
+                <td><a href="https://arxiv.org/pdf/2408.11796" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Direct Preference Optimization: Your Language Model is Secretly a Reward Model</td>
