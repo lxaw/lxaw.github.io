@@ -1,5 +1,23 @@
 [
   {
+    "title": "DORY: Deliberative Prompt Recovery for LLM",
+    "author": "Lirong Gao et al",
+    "year": "2024",
+    "topic": "inversion",
+    "venue": "Arxiv",
+    "description": "This paper introduces a novel approach to recover original prompts from limited outputs of large language models. The authors discover a strong negative correlation between output probability-based uncertainty and prompt recovery success, showing that tokens with lower uncertainty are more likely to have appeared in the original prompt. Building on this insight, DORY recovers prompts through a three-step process: reconstructing a draft from output text, generating hints based on uncertainty, and reducing noise by comparing draft output with actual output. Unlike previous methods, DORY requires only a single LLM without any external resources or model training, making it a cost-effective solution for prompt recovery.",
+    "link": "https://arxiv.org/pdf/2405.20657"
+  },
+  {
+    "title": "Weak-to-Strong Reasoning",
+    "author": "Yuqing Yang et al",
+    "year": "2024",
+    "topic": "reasoning",
+    "venue": "Arxiv",
+    "description": "This paper introduces a progressive learning framework for weak-to-strong reasoning, addressing the challenge of improving large language models (LLMs) without high-quality supervision. The authors demonstrate that naively fine-tuning a stronger model (like Llama2-70b) on outputs from weaker models (like Llama2-7b or Gemma-2b) is insufficient for complex reasoning tasks. Their proposed two-stage approach first uses selective data curation through a \"final answer consistency\" method to identify potentially correct examples, then applies preference optimization that enables the model to learn from contrasting examples. Experiments on mathematical reasoning datasets show substantial improvements over baseline approaches, with the framework proving particularly effective when the strong model learns to distinguish between correct and incorrect reasoning paths.",
+    "link": "https://arxiv.org/pdf/2407.13647"
+  },
+  {
     "title": "The False Promise of Imitating Proprietary LLMs",
     "author": "Arnav Gudibande et al",
     "year": "2023",
