@@ -1,5 +1,41 @@
 [
   {
+    "title": "Born Again Networks",
+    "author": "Tommaso Furlanello et al",
+    "year": "2018",
+    "topic": "knowledge distillation, self distillation",
+    "venue": "ICML",
+    "description": "This paper introduces Born-Again Neural Networks (BANs), a novel approach where knowledge distillation is applied to train student models with identical architectures to their teachers. Surprisingly, these student models consistently outperform their teachers on both computer vision and language modeling tasks, even when the student and teacher have the exact same architecture and capacity. The authors experiment with multiple generations of BANs, showing that performance continues to improve (though with diminishing returns), and explore the effect of \"dark knowledge\" by testing variations where they either weight examples by teacher confidence or permute non-argmax outputs. Their framework also allows for cross-architecture knowledge transfer, such as training ResNet students from DenseNet teachers, resulting in state-of-the-art performance on CIFAR datasets and demonstrating that the benefits of knowledge distillation extend beyond model compression.",
+    "link": "https://arxiv.org/pdf/1805.04770"
+  },
+  {
+    "title": "The Curious Case of Neural Text Degeneration",
+    "author": "Ari Holtzman et al",
+    "year": "2020",
+    "topic": "nucleus sampling, generation",
+    "venue": "ICLR",
+    "description": "This work identifies fundamental problems with traditional text generation methods: beam search creates repetitive text while pure sampling produces incoherent content. As a solution, the authors propose Nucleus Sampling, which dynamically truncates the probability distribution to include only the most likely tokens that constitute the vast majority of the probability mass, avoiding both repetition and incoherence issues. Through extensive evaluations comparing perplexity, vocabulary distribution, self-similarity, and human judgments, they demonstrate that Nucleus Sampling produces text that is both high-quality and diverse, closely matching human-written text distributions. The authors also make the important observation that human language rarely maximizes probability, suggesting that language models which optimize for likelihood may inherently struggle to generate natural text.",
+    "link": "https://arxiv.org/pdf/1904.09751"
+  },
+  {
+    "title": "Data-Free Knowledge Distillation for Deep Neural Networks",
+    "author": "Raphael Gontijo Lopes et al",
+    "year": "2017",
+    "topic": "knowledge distillation, network inversion",
+    "venue": "Arxiv",
+    "description": "This paper introduces a novel method for data-free knowledge distillation, which enables the compression of deep neural networks without requiring access to the original training dataset. The authors propose using various forms of activation metadata collected during the initial model training to reconstruct synthetic datasets that can then be used to train smaller student networks. They explore different approaches to creating this activation metadata, including top-layer statistics, all-layers statistics with dropout filters, and spectral methods based on graph Fourier transforms. Experimental results on MNIST and CelebA datasets demonstrate that their spectral methods can achieve compression rates of approximately 50% with minimal accuracy loss, making this approach valuable for scenarios where the original training data cannot be shared due to privacy concerns, storage limitations, or proprietary restrictions.",
+    "link": "https://arxiv.org/pdf/1710.07535"
+  },
+  {
+    "title": "Dreaming to Distill: Data-free Knowledge Transfer via DeepInversion",
+    "author": "Hongxu Yu et al",
+    "year": "2020",
+    "topic": "knowledge distillation, network inversion",
+    "venue": "CVPR",
+    "description": "The paper introduces DeepInversion, a method that synthesizes realistic, high-fidelity images from a trained CNN without requiring access to the original training data by using information stored in batch normalization layers. The authors further enhance this technique with Adaptive DeepInversion, which improves image diversity by maximizing Jensen-Shannon divergence between teacher and student network outputs. With these methods, the paper demonstrates three data-free applications: network pruning, knowledge transfer between models, and continual learning for adding new classes to existing networks. The synthesized images show impressive realism and generalize well across different model architectures, enabling knowledge distillation and other tasks that typically require the original training dataset.",
+    "link": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Yin_Dreaming_to_Distill_Data-Free_Knowledge_Transfer_via_DeepInversion_CVPR_2020_paper.pdf"
+  },
+  {
     "title": "Sequence-Level Knowledge Distillation",
     "author": "Yoon Kim et al",
     "year": "2016",

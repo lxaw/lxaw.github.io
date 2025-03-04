@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 231 papers. Let's keep it up!
+        So far, we have read 235 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 231 papers. Nice! 
+        Your search returned 235 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,46 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Born Again Networks</td>
+                <td>Tommaso Furlanello et al</td>
+                <td>2018</td>
+                <td>knowledge distillation, self distillation</td>
+                <td>ICML</td>
+                <td>This paper introduces Born-Again Neural Networks (BANs), a novel approach where knowledge distillation is applied to train student models with identical architectures to their teachers. Surprisingly, these student models consistently outperform their teachers on both computer vision and language modeling tasks, even when the student and teacher have the exact same architecture and capacity. The authors experiment with multiple generations of BANs, showing that performance continues to improve (though with diminishing returns), and explore the effect of &quot;dark knowledge&quot; by testing variations where they either weight examples by teacher confidence or permute non-argmax outputs. Their framework also allows for cross-architecture knowledge transfer, such as training ResNet students from DenseNet teachers, resulting in state-of-the-art performance on CIFAR datasets and demonstrating that the benefits of knowledge distillation extend beyond model compression.</td>
+                <td><a href="https://arxiv.org/pdf/1805.04770" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>The Curious Case of Neural Text Degeneration</td>
+                <td>Ari Holtzman et al</td>
+                <td>2020</td>
+                <td>nucleus sampling, generation</td>
+                <td>ICLR</td>
+                <td>This work identifies fundamental problems with traditional text generation methods: beam search creates repetitive text while pure sampling produces incoherent content. As a solution, the authors propose Nucleus Sampling, which dynamically truncates the probability distribution to include only the most likely tokens that constitute the vast majority of the probability mass, avoiding both repetition and incoherence issues. Through extensive evaluations comparing perplexity, vocabulary distribution, self-similarity, and human judgments, they demonstrate that Nucleus Sampling produces text that is both high-quality and diverse, closely matching human-written text distributions. The authors also make the important observation that human language rarely maximizes probability, suggesting that language models which optimize for likelihood may inherently struggle to generate natural text.</td>
+                <td><a href="https://arxiv.org/pdf/1904.09751" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Data-Free Knowledge Distillation for Deep Neural Networks</td>
+                <td>Raphael Gontijo Lopes et al</td>
+                <td>2017</td>
+                <td>knowledge distillation, network inversion</td>
+                <td>Arxiv</td>
+                <td>This paper introduces a novel method for data-free knowledge distillation, which enables the compression of deep neural networks without requiring access to the original training dataset. The authors propose using various forms of activation metadata collected during the initial model training to reconstruct synthetic datasets that can then be used to train smaller student networks. They explore different approaches to creating this activation metadata, including top-layer statistics, all-layers statistics with dropout filters, and spectral methods based on graph Fourier transforms. Experimental results on MNIST and CelebA datasets demonstrate that their spectral methods can achieve compression rates of approximately 50% with minimal accuracy loss, making this approach valuable for scenarios where the original training data cannot be shared due to privacy concerns, storage limitations, or proprietary restrictions.</td>
+                <td><a href="https://arxiv.org/pdf/1710.07535" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Dreaming to Distill: Data-free Knowledge Transfer via DeepInversion</td>
+                <td>Hongxu Yu et al</td>
+                <td>2020</td>
+                <td>knowledge distillation, network inversion</td>
+                <td>CVPR</td>
+                <td>The paper introduces DeepInversion, a method that synthesizes realistic, high-fidelity images from a trained CNN without requiring access to the original training data by using information stored in batch normalization layers. The authors further enhance this technique with Adaptive DeepInversion, which improves image diversity by maximizing Jensen-Shannon divergence between teacher and student network outputs. With these methods, the paper demonstrates three data-free applications: network pruning, knowledge transfer between models, and continual learning for adding new classes to existing networks. The synthesized images show impressive realism and generalize well across different model architectures, enabling knowledge distillation and other tasks that typically require the original training dataset.</td>
+                <td><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yin_Dreaming_to_Distill_Data-Free_Knowledge_Transfer_via_DeepInversion_CVPR_2020_paper.pdf" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Sequence-Level Knowledge Distillation</td>
