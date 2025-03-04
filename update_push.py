@@ -16,7 +16,7 @@ def update_html():
     # Update both English and Japanese dates
     for i, line in enumerate(content):
         if "Last time this was edited was" in line:
-            content[i] = f"        Last time this was edited was {current_date} (YYYY/MM/DD).\n"
+            content[i] = f"        <p lang=\"en\">Last time this was edited was {current_date} (YYYY/MM/DD).</p>\n"
         elif "最終更新日：" in line:
             content[i] = f"        <p lang=\"ja\">最終更新日：{japanese_date}</p>\n"
     

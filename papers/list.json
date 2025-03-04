@@ -1,5 +1,32 @@
 [
   {
+    "title": "Compact Language Models via Pruning and Knowledge Distillation",
+    "author": "Saurav Muralidharan et al",
+    "year": "2024",
+    "topic": "pruning, knowledge distillation",
+    "venue": "Arxiv",
+    "description": "This paper investigates whether large language models (LLMs) can be efficiently compressed by pruning an existing model and retraining it with a fraction of the original training data, rather than training smaller variants from scratch. The authors develop and empirically explore best practices for structured LLM pruning across multiple dimensions (depth, width, attention, and MLP) combined with knowledge distillation-based retraining. Their approach produces the MINITRON family of models (8B and 4B variants) from the Nemotron-4 15B model using up to 40× fewer training tokens than training from scratch, while maintaining competitive performance compared to similarly-sized models like Mistral 7B, Gemma 7B, and Llama-3 8B. The methodology demonstrates significant compute savings (1.8×) for training a full model family and outperforms state-of-the-art compression techniques in the literature.",
+    "link": "https://arxiv.org/pdf/2407.14679"
+  },
+  {
+    "title": "MergeNet: Knowledge Migration across Heterogeneous Models, Tasks, and Modalities",
+    "author": "Kunxi Li et al",
+    "year": "2024",
+    "topic": "model merging, knowledge distillation",
+    "venue": "Arxiv",
+    "description": "The paper introduces MergeNet, a novel framework for knowledge transfer between heterogeneous models, tasks, and modalities. Unlike traditional methods like knowledge distillation that require similar model architectures or tasks, MergeNet facilitates knowledge transfer by operating directly on model parameters through low-rank decomposition and a specialized adapter that bridges different parameter spaces. The authors demonstrate MergeNet's effectiveness through extensive experiments across challenging scenarios including cross-structure (different model architectures), cross-modal (image-text), and cross-task (classification-QA) knowledge transfer, consistently outperforming baseline methods. Their approach enables previously difficult knowledge transfers by allowing models to extract only the knowledge they need from source models, effectively addressing the issue of knowledge incompatibility between heterogeneous models.",
+    "link": "https://arxiv.org/pdf/2404.13322"
+  },
+  {
+    "title": "Reuse, Don't Retrain: A Recipe for Continued Pretraining of Language Models",
+    "author": "Jupinder Parmar et al",
+    "year": "2024",
+    "topic": "pretraining",
+    "venue": "Arxiv",
+    "description": "This paper introduces a recipe for effectively continuing the pretraining of large language models (LLMs) without having to retrain them from scratch. The authors demonstrate that using a two-phase data distribution approach—starting with general data similar to pretraining and transitioning to specialized data focused on model weaknesses—produces the best results when combined with a specific learning rate schedule that starts at the pretrained model's minimum learning rate and decays with cosine annealing. They find that the optimal point to switch between data distributions occurs at one-fifth of the maximum learning rate, and demonstrate that their approach yields a 9% improvement in model accuracy compared to simply continuing training on the pretraining dataset. The recipe proves effective across different training scales (from 100B to 1T tokens) and includes innovations like document mining to identify the most useful examples for continued training, enabling developers to improve model capabilities without the massive computational costs of retraining from scratch.",
+    "link": "https://arxiv.org/pdf/2407.07263"
+  },
+  {
     "title": "DistiLLM: Towards Streamlined Distillation for Large Language Models",
     "author": "Jongwoo Ko et al",
     "year": "2024",
@@ -23,7 +50,7 @@
     "year": "2021",
     "topic": "knowledge distillation",
     "venue": "ICLR",
-    "description": "The paper analyzes knowledge distillation through the lens of bias-variance tradeoff, discovering that soft labels create a sample-wise tradeoff where some training examples reduce variance at the cost of increased bias while others have different effects. The authors identify "regularization samples" where distillation primarily acts as a regularizer and find that their quantity negatively correlates with model performance in standard knowledge distillation. To address this, they propose "weighted soft labels" that adaptively weight each training sample's contribution to optimally balance the bias-variance tradeoff, leading to improved distillation performance. The key insight is that regularization samples shouldn't be completely ignored but rather have their influence carefully modulated through weighting, which the authors validate through both theoretical analysis and extensive experiments establishing new state-of-the-art results.",
+    "description": "The paper analyzes knowledge distillation through the lens of bias-variance tradeoff, discovering that soft labels create a sample-wise tradeoff where some training examples reduce variance at the cost of increased bias while others have different effects. The authors identify \"regularization samples\" where distillation primarily acts as a regularizer and find that their quantity negatively correlates with model performance in standard knowledge distillation. To address this, they propose \"weighted soft labels\" that adaptively weight each training sample's contribution to optimally balance the bias-variance tradeoff, leading to improved distillation performance. The key insight is that regularization samples shouldn't be completely ignored but rather have their influence carefully modulated through weighting, which the authors validate through both theoretical analysis and extensive experiments establishing new state-of-the-art results.",
     "link": "https://arxiv.org/pdf/2102.00650"
   },
   {
