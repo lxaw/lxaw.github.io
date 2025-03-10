@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 238 papers. Let's keep it up!
+        So far, we have read 243 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 238 papers. Nice! 
+        Your search returned 243 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,56 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Simple and Effective Masked Diffusion Language Models</td>
+                <td>Subham Sekhar Sahoo et al</td>
+                <td>2024</td>
+                <td>diffusion, masked diffusion, ddlm</td>
+                <td>NeurIPS</td>
+                <td>Masked Diffusion Language Models (MDLMs) improve upon previous discrete diffusion approaches by implementing a simplified, Rao-Blackwellized objective that serves as a weighted average of masked language modeling losses, enabling principled generation from encoder-only language models. This approach combines a substitution-based (SUBS) parameterization of the reverse unmasking process with effective training recipes that significantly outperform previous diffusion models across language benchmarks, approaching autoregressive perplexity within 15-25%. MDLMs support variable-length generation through a semi-autoregressive sampling algorithm that outperforms previous methods, while the framework extends to other domains like biological sequence modeling where it preserves or improves downstream task performance compared to traditional masked language models. The core insight is that through well-engineered training and a tighter variational bound, masked diffusion can be more competitive with autoregressive approaches than previously thought, providing alternative pathways for controllable text generation.</td>
+                <td><a href="https://openreview.net/pdf?id=L4uaAR4ArM" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Structured Denoising Diffusion Models in Discrete State-Spaces</td>
+                <td>Jacob Austin et al</td>
+                <td>2023</td>
+                <td>diffusion, discrete</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces Discrete Denoising Diffusion Probabilistic Models (D3PMs), extending diffusion models to discrete data like text and images. Unlike previous approaches with uniform transition probabilities, D3PMs incorporate structured corruption processes through various transition matrices that can better model domain-specific relationships. The paper explores several matrix types: uniform transitions, absorbing states (like BERT&#x27;s masking), discretized Gaussian transitions for ordinal data, and token embedding distance for semantic relationships in text. D3PMs achieve state-of-the-art results for discrete diffusion, approaching or exceeding continuous diffusion models on image tasks while enabling effective text generation. The authors also establish connections between D3PMs and existing models like BERT and autoregressive language models, showing how these seemingly different approaches can be unified under the diffusion framework. A key contribution is a new auxiliary loss that stabilizes training and improves sample quality by combining variational inference with cross-entropy loss.</td>
+                <td><a href="https://arxiv.org/pdf/2107.03006" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models</td>
+                <td>Marianne Arriola et al</td>
+                <td>2025</td>
+                <td>diffusion, lldm</td>
+                <td>ICLR</td>
+                <td>Block Diffusion Language Models (BD3-LMs) introduce a hybrid approach that combines autoregressive modeling over blocks of tokens with diffusion within each block, effectively bridging discrete diffusion and autoregressive language models. This innovative design overcomes key limitations of existing diffusion models by supporting flexible-length generation and improving inference efficiency through KV caching and parallel token sampling. The authors identify gradient variance as a critical factor in the performance gap between diffusion and autoregressive models, and propose data-driven &quot;clipped&quot; noise schedules that significantly reduce this variance during training. Through extensive experiments, BD3-LMs establish a new state-of-the-art in perplexity among diffusion language models and demonstrate the ability to generate arbitrary-length sequences with improved quality using fewer generation steps than alternative approaches.</td>
+                <td><a href="https://openreview.net/pdf?id=tyEyYT267x" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>CLLMs: Consistency Large Language Models</td>
+                <td>Siqi Kou et al</td>
+                <td>2024</td>
+                <td>llms, consistency models</td>
+                <td>ICML</td>
+                <td>This paper introduces Consistency Large Language Models (CLLMs), a new approach that significantly improves the efficiency of Jacobi decoding for language model inference. The key innovation is training language models to consistently predict the fixed point of a Jacobi trajectory in fewer steps, addressing the main limitation of standard Jacobi decoding which typically predicts only one correct token per iteration. By fine-tuning target LLMs using a consistency loss that maps arbitrary points on the Jacobi trajectory to the fixed point, CLLMs achieve 2.4× to 3.4× improvements in generation speed while maintaining quality across both domain-specific and open-domain tasks. Unlike alternative approaches like speculative decoding or Medusa, CLLMs don&#x27;t require auxiliary model components or architectural modifications, making them memory-efficient and highly adaptable. The authors identify two key acceleration mechanisms in CLLMs: &quot;fast forwarding,&quot; where multiple consecutive tokens are correctly predicted in a single step, and &quot;stationary tokens,&quot; which remain correct despite being preceded by inaccurate tokens. These phenomena are especially prominent in domain-specific tasks where text contains predictable collocations and syntactic structures.</td>
+                <td><a href="https://arxiv.org/pdf/2403.00835" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Large Language Diffusion Models</td>
+                <td>Shen Nie et al</td>
+                <td>2025</td>
+                <td>lldm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces LLaDA (Large Language Diffusion with mAsking), a diffusion model for natural language trained from scratch that challenges the dominance of autoregressive models (ARMs) in large language modeling. LLaDA models distributions through a forward data masking process and a reverse prediction process using a vanilla Transformer to predict masked tokens. By optimizing a likelihood bound, it provides a principled generative approach for probabilistic inference. The research demonstrates that diffusion models can be a viable alternative to autoregressive models, showing comparable or superior performance on various benchmarks. LLaDA addresses the reversal curse that affects autoregressive models, showing consistent performance in both forward and reverse reasoning tasks. After scaling to 8B parameters and supervised fine-tuning, LLaDA demonstrates strong capabilities in in-context learning, instruction following, and multi-turn dialogue generation, challenging the assumption that these capabilities are inherently tied to autoregressive architectures.</td>
+                <td><a href="https://arxiv.org/pdf/2502.09992" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>DORY: Deliberative Prompt Recovery for LLM</td>
