@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 255 papers. Let's keep it up!
+        So far, we have read 261 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 255 papers. Nice! 
+        Your search returned 261 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -47,6 +47,66 @@
         <tbody>
         
             <tr>
+                <td>Diffusion of Thought: Chain-of-Thought Reasoning in Diffusion Language Models</td>
+                <td>Jiacheng Ye et al</td>
+                <td>2024</td>
+                <td>cot, llm, diffusion</td>
+                <td>NeurIPS</td>
+                <td>The paper introduces Diffusion-of-Thought (DoT), a novel approach that adapts chain-of-thought reasoning for diffusion language models. Unlike autoregressive language models that generate reasoning steps sequentially left-to-right, DoT allows reasoning to diffuse over time through parallel updates of latent variables, offering greater flexibility in trading computation for reasoning performance. Two key innovations include scheduled sampling during training to improve self-correction capabilities and a multi-pass variant (DoTMP) that generates reasoning steps sequentially to introduce causal bias. For training, the authors fine-tune pre-trained diffusion models (Plaid and SEDD) using classifier-free guidance and implement a conditional ODE solver to accelerate inference. Experimental results on multiplication, boolean logic, and grade school math problems demonstrate that DoT achieves comparable or better performance than autoregressive models while offering significant speed advantages on simpler tasks, with a small diffusion model outperforming a much larger autoregressive model in both efficiency and accuracy.</td>
+                <td><a href="https://arxiv.org/pdf/2402.07754" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning</td>
+                <td>Jiacheng Ye et al</td>
+                <td>2025</td>
+                <td>planning, llm, diffusion</td>
+                <td>ICLR</td>
+                <td>The authors introduce the concept of &quot;subgoal imbalance,&quot; demonstrating that autoregressive models struggle with difficult subgoals in planning tasks, often achieving near-random performance. They show that diffusion models effectively decompose these challenging subgoals into more manageable interrelated views within a multi-view learning framework, resulting in superior performance. Building on these insights, they propose Multi-Granularity Diffusion Modeling (MGDM), which prioritizes subgoals based on difficulty during learning, leading to more effective outcomes and faster convergence. Their experimental evaluation focuses on complex problem-solving tasks like Countdown (a mathematical reasoning challenge), Sudoku, and Boolean Satisfiability Problems. For problems like math reasoning or Sudoku where later steps directly depend on earlier ones, this creates a &quot;plan as you go&quot; approach that&#x27;s inherently flawed. Diffusion models transform hard subgoals into multiple interrelated &quot;views&quot; during the denoising process. Each view offers a different perspective on the same problem, creating a more manageable learning objective. The authors identified a phenomenon they call the &quot;Regretful Compromise&quot; where AR models, after making early mistakes, are forced to produce clearly incorrect calculations in final steps to reach the target answer. The iterative nature of diffusion models naturally promotes global consistency. Each refinement step considers the entire solution, allowing the model to make coordinated changes that maintain mathematical validity across all equations or puzzle constraints.</td>
+                <td><a href="https://arxiv.org/pdf/2410.14157" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Do Language Models Plan Ahead for Future Tokens?</td>
+                <td>Wilson Wu et al</td>
+                <td>2024</td>
+                <td>planning, llm</td>
+                <td>COLM</td>
+                <td>This paper investigates whether transformers &quot;think ahead&quot; during inference by preparing information in hidden states that will be useful for future tokens. The authors propose two hypotheses: the &quot;pre-caching&quot; hypothesis (where models deliberately compute features irrelevant to the current token but useful for future tokens) and the &quot;breadcrumbs&quot; hypothesis (where features helpful for current prediction naturally benefit future tokens without deliberate planning). To test these hypotheses, the researchers develop &quot;myopic training&quot;, where models are trained without propagating gradients to past timesteps. They first create a synthetic task that can only be solved via pre-caching, confirming that transformers can learn this capability when necessary. However, in natural language modeling with smaller models like GPT-2, they find minimal pre-caching, suggesting the breadcrumbs hypothesis predominates—models compute features relevant to the immediate next token that happen to benefit future tokens, without significant trade-offs. Interestingly, the authors discover that pre-caching increases with model scale, becoming more significant with larger models like Pythia 2.8B. This indicates that larger language models may indeed &quot;plan for the future&quot; in ways smaller models cannot. They also examine multiplication tasks, finding evidence that pre-caching enables computation on &quot;filler tokens&quot; that improves overall performance.</td>
+                <td><a href="https://arxiv.org/pdf/2404.00859" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Categorical Reparameterization with Gumbel-Softmax</td>
+                <td>Eric Jang et al</td>
+                <td>2017</td>
+                <td>gumbel-softmax</td>
+                <td>ICLR</td>
+                <td>This paper presents a method for efficiently training neural networks with discrete random variables. The Gumbel-Softmax is a continuous relaxation of categorical distributions that addresses the challenge of backpropagating through discrete random variables in neural networks. It builds upon the Gumbel-Max trick, which samples from categorical distributions by adding Gumbel noise to logits and taking the argmax, but replaces the non-differentiable argmax operation with a differentiable softmax function controlled by a temperature parameter τ. When the temperature approaches zero, the distribution approximates a categorical one-hot vector, while higher temperatures yield more uniform distributions. This temperature can be gradually annealed during training to balance exploration and discrete decision-making. For applications requiring truly discrete outputs, the Straight-Through Gumbel-Softmax variant uses argmax in the forward pass while preserving differentiable gradients through the softmax in the backward pass. This technique has enabled significant advances in training neural networks with discrete variables, categorical variational autoencoders, and efficient semi-supervised learning algorithms, solving a fundamental limitation in stochastic neural networks.</td>
+                <td><a href="https://arxiv.org/pdf/1611.01144" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Training Verifiers to Solve Math Word Problems</td>
+                <td>Karl Cobbe et al</td>
+                <td>2021</td>
+                <td>verifiers</td>
+                <td>Arxiv</td>
+                <td>This paper introduces GSM8K, a dataset of 8.5K high-quality linguistic diverse grade school math word problems, to address the challenges language models face with multi-step mathematical reasoning. Despite their success in many tasks, even large language models struggle with mathematics due to the sensitivity to individual errors in step-by-step reasoning. The authors propose a verification approach to improve performance: they first finetune a generator model, then train a separate verifier model to judge the correctness of potential solutions. At test time, they generate multiple candidate solutions and select the highest-ranked one. This verification method significantly outperforms basic finetuning, providing performance equivalent to a 30x increase in model size.</td>
+                <td><a href="https://arxiv.org/pdf/2110.14168" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models</td>
+                <td>Yukang Chen et al</td>
+                <td>2024</td>
+                <td>lora, long context</td>
+                <td>ICML</td>
+                <td>LongLoRA efficiently extends the context window of large language models through a two-pronged methodology. First, the authors introduce Shifted Sparse Attention (S²-Attn), which divides the input sequence into multiple groups and performs attention only within each group, then critically shifts the group partitioning by half a group size in 50% of attention heads to ensure information flows between groups. This approximates full attention during training while dramatically reducing computational costs. Second, they enhance Low-Rank Adaptation (LoRA) by making embedding and normalization layers trainable—components that comprise less than 2% of model parameters but prove essential for long-context adaptation. Their experiments demonstrate this approach closes the performance gap between LoRA and full fine-tuning while maintaining significantly lower memory requirements. Importantly, models trained with S²-Attn retain standard attention during inference, ensuring compatibility with existing optimization techniques like Flash-Attention2, making LongLoRA a practical solution that enables extending Llama2 models to context lengths of up to 100K tokens on modest hardware setups.</td>
+                <td><a href="https://arxiv.org/pdf/2309.12307" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
                 <td>Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference</td>
                 <td>Hao (Mark) Chen et al</td>
                 <td>2024</td>
@@ -67,7 +127,7 @@
             </tr>
         
             <tr>
-                <td>Learning to Keep a Promise: Sacling Language Model Decoding Parallelism with Learned Asynchronous Decoding</td>
+                <td>Learning to Keep a Promise: Scaling Language Model Decoding Parallelism with Learned Asynchronous Decoding</td>
                 <td>Tian Jin et al</td>
                 <td>2025</td>
                 <td>parallelism, asynchronous</td>
