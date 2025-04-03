@@ -1,5 +1,14 @@
 [
   {
+    "title": "PLANNER: Generating Diversified Paragraph via Latent Language Diffusion Model",
+    "author": "Yizhe Zhang et al",
+    "year": "2023",
+    "topic":"planning, llm, diffusion",
+    "venue": "NeurIPS",
+    "description": "The paper introduces PLANNER, a novel two-stage latent text diffusion model for generating diversified paragraphs that addresses repetitive and low-quality output issues in autoregressive models. Unlike previous text diffusion models that operate directly on tokens, PLANNER combines an autoregressive \"decoding\" module with a \"planning\" module that uses latent diffusion to generate semantic paragraph embeddings in a coarse-to-fine manner. The approach first learns a variational paragraph embedder that condenses lengthy texts into a fixed number of semantic tokens, then applies a continuous-time latent diffusion model to learn the distribution of these embeddings. Experimental results across sentiment-guided generation, text completion, and summarization tasks demonstrate that PLANNER generates more fluent and diverse text with less repetition compared to both autoregressive methods and text diffusion baselines, while maintaining comparable relevance scores and offering computational advantages through batched processing of fixed-length latent codes.",
+    "link": "https://openreview.net/pdf?id=SLwy8UVS8Y"
+  },
+  {
     "title": "Diffusion of Thought: Chain-of-Thought Reasoning in Diffusion Language Models",
     "author": "Jiacheng Ye et al",
     "year": "2024",
