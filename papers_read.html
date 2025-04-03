@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 243 papers. Let's keep it up!
+        So far, we have read 255 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 243 papers. Nice! 
+        Your search returned 255 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,126 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference</td>
+                <td>Hao (Mark) Chen et al</td>
+                <td>2024</td>
+                <td>llm, hardware, parallel decoding</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Parallel Prompt Decoding (PPD), a memory-efficient approach for accelerating Large Language Model inference by using trainable prompt tokens to enable parallel token generation. Unlike existing speculative decoding methods that require separate draft models, PPD works by training only the embeddings of special prompt tokens (0.0002% of parameters) that are strategically inserted into the input sequence at positions where future tokens are expected to be generated. The prompt tokens partially recover conditional dependency information necessary for accurate multi-token prediction, with the authors using Knowledge Distillation to train the prompt token embeddings against the original LLM&#x27;s logits while keeping the base model frozen. They enhance accuracy through Ensemble Prompt Tokens (EPTs), where multiple trained embeddings represent each prompt position with specialized attention masking to ensure each EPT only depends on corresponding EPTs from preceding positions. To optimize performance across hardware, they developed a hardware-aware dynamic sparse tree technique that adaptively determines the optimal tree structure and balances the number of candidate tokens versus prompt tokens at each decoding step based on token acceptance probabilities and computational resources. Experiments across models from MobileLlama to Vicuna-13B demonstrate up to 2.49× inference speedup with minimal memory overhead (0.0004%) while maintaining output quality, and PPD can be combined with existing speculative decoding methods for further performance improvements.</td>
+                <td><a href="https://arxiv.org/pdf/2405.18628" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Recurrent Memory Transformer</td>
+                <td>Aydar Bulatov et al</td>
+                <td>2022</td>
+                <td>meta tokens, memory</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces the Recurrent Memory Transformer (RMT), a novel architecture that combines memory tokens with segment-level recurrence to address two key limitations of standard Transformer models: the difficulty of storing global information across a sequence and the quadratic computational complexity that limits input sequence length. RMT works by adding special memory tokens to both the beginning and end of each input segment, with the end tokens capturing information as &quot;write memory&quot; and then being passed to the next segment as &quot;read memory&quot; creating a recurrent connection between segments. The key innovation is that both the memory mechanism and recurrence are implemented without modifying the core Transformer architecture - only the input and output sequences are changed by adding special tokens. This makes RMT compatible with any Transformer-based model.</td>
+                <td><a href="https://arxiv.org/pdf/2207.06881" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Learning to Keep a Promise: Sacling Language Model Decoding Parallelism with Learned Asynchronous Decoding</td>
+                <td>Tian Jin et al</td>
+                <td>2025</td>
+                <td>parallelism, asynchronous</td>
+                <td>Arxiv</td>
+                <td>This paper introduces PASTA (PArallel STructure Annotation LANGuage), a system that teaches large language models (LLMs) to identify semantic independence in their responses and leverage it for parallel decoding to improve inference speed. The authors observe that while autoregressive LLM decoding is inherently sequential and inefficient (often achieving less than 20% Model Flops Utilization during inference), many parts of an LLM&#x27;s response can actually be generated in parallel because they&#x27;re semantically independent. Unlike previous approaches that rely on hand-crafted heuristics tied to specific syntactic structures like lists and paragraphs, PASTA uses a learning-based approach. The system consists of three components: (1) a specialized annotation language (PASTA-LANG) that allows LLMs to express semantic independence in their own responses using tags like &lt;promise&gt; and &lt;sync/&gt;; (2) an interpreter that orchestrates asynchronous decoding at inference time based on these annotations; and (3) a two-stage finetuning process that teaches LLMs to generate effective annotations that optimize both response quality and decoding speed.</td>
+                <td><a href="https://arxiv.org/pdf/2502.06901" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Enabling Autoregressive Models to Fill in Masked Tokens</td>
+                <td>Daniel Israel et al</td>
+                <td>2025</td>
+                <td>autoregression, mlm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces MARIA (Masked and Autoregressive Infilling Architecture), a novel approach that combines the strengths of both autoregressive (AR) and masked language modeling (MLM) paradigms. The method addresses a fundamental limitation of AR models, which cannot effectively perform masked infilling (predicting tokens between past and future context) despite their dominance in the field due to superior training and inference efficiency. MARIA works by taking a pre-trained MLM model (which can naturally handle infilling but is computationally inefficient) and an AR model, then training a simple linear decoder that operates on their concatenated hidden states. This minimal architectural modification enables the resulting model to perform masked infilling while retaining the computational benefits of AR models, particularly KV caching during inference.</td>
+                <td><a href="https://arxiv.org/pdf/2502.06901" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Unlocking Guidance for Discrete State-Space Diffusion and Flow Models</td>
+                <td>Hunter Nisonoff et al</td>
+                <td>2025</td>
+                <td>state space, discrete, diffusion</td>
+                <td>ICLR</td>
+                <td>This paper introduces &quot;Discrete Guidance&quot; a novel approach for applying guidance to generative models in discrete state-spaces. The key innovation is a mathematically rigorous framework for controlling the outputs of discrete diffusion and flow models by leveraging continuous-time Markov processes. The authors tackle a fundamental challenge in discrete guidance: the intractability of computing the normalizing constant in Bayes&#x27; theorem, which would normally require summing over an exponentially large state space. They overcome this by exploiting the fact that in continuous-time Markov chains, only one dimension of the state can change at any instant, making exact guidance computationally feasible. The paper develops both predictor guidance (PG) and predictor-free guidance (PFG) variants, along with a computationally efficient approximation called Taylor-approximated guidance (TAG). They demonstrate their method&#x27;s effectiveness across multiple domains including small-molecule generation, DNA sequence design, and protein engineering. Notably, their framework enables repurposing existing unconditional generative models by modulating their behavior with guidance signals, avoiding the need for retraining on limited labeled data. This approach creates new possibilities for controllable generation in scientific applications where discrete representations are essential, such as molecular and biological sequence design.</td>
+                <td><a href="https://arxiv.org/pdf/2406.01572" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data</td>
+                <td>Jingyang Ou et al</td>
+                <td>2025</td>
+                <td>dit, token, caching</td>
+                <td>ICLR</td>
+                <td>This paper created a simpler and faster way to generate text using AI. The researchers realized that previous text generation models were unnecessarily complicated because they included time as an input. They found that time could be separated into a simple formula multiplied by the actual prediction, allowing them to remove time completely from their model. This simplification made their model (called RADD) faster in two ways: it had fewer parameters to compute, and they could cache results when parts of the text stayed the same during generation. They also proved that their approach is mathematically equivalent to another type of text generation method, bringing together different research approaches.</td>
+                <td><a href="https://arxiv.org/pdf/2406.03736" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Accelerating Diffusion Transformers with Token-wise Feature Caching</td>
+                <td>Chang Zou et al</td>
+                <td>2025</td>
+                <td>dit, token, caching</td>
+                <td>ICLR</td>
+                <td>The ToCa (Token-wise Feature Caching) methodology accelerates diffusion transformers through a sophisticated token selection strategy for caching. The approach begins with cache initialization at the first timestep where all tokens are computed and stored, followed by selective computing in subsequent timesteps based on a pre-defined caching ratio R. Unlike traditional methods, ToCa updates the cache with newly computed values at every timestep to reduce error accumulation. The heart of ToCa is its caching score function, which combines four critical criteria: the token&#x27;s influence on other tokens through self-attention (s1), its importance for text conditioning via cross-attention entropy (s2), how frequently it has been cached (s3), and whether caching it maintains uniform spatial distribution (s4). ToCa further refines its approach by applying different caching ratios to different layers, with deeper layers receiving higher caching ratios since errors in them have less opportunity to propagate, while shallow layers get lower ratios. The method also distinguishes between layer types, handling self-attention layers differently from MLP layers to prevent error propagation. Additional engineering optimizations include timestep-dependent scheduling and consistent token selection between conditional and unconditional paths. By intelligently selecting which tokens can be safely cached based on their specific characteristics and position in the network, ToCa achieves significant speedups while maintaining generation quality across different diffusion transformer architectures.</td>
+                <td><a href="https://arxiv.org/pdf/2410.05317" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Faith and Fate: Limits of Transformers on Compositionality</td>
+                <td>Nouha Dziri et al</td>
+                <td>2023</td>
+                <td>transformers, compositionality</td>
+                <td>Arxiv</td>
+                <td>The paper reveals that transformer large language models (LLMs) struggle with seemingly simple compositional problems requiring multi-step reasoning, despite their impressive performance on complex tasks. Using a computation graph framework to measure task complexity across multi-digit multiplication, logic puzzles, and dynamic programming problems, the authors demonstrate that LLMs solve compositional tasks through pattern matching rather than systematic reasoning, performing well on in-distribution examples but failing dramatically on out-of-distribution cases even after extensive fine-tuning with explicit reasoning steps. Their error analysis shows that while models can perform single-step operations correctly, they fail to compose these steps into correct reasoning paths, with errors propagating through the computation graph because the autoregressive nature of transformers forces them to tackle problems sequentially through a greedy process of producing the next token without developing a global understanding of the task. Both empirical findings and mathematical analysis reveal a fundamental limitation where error probability increases exponentially with task complexity, suggesting transformers may be inherently limited in solving complex compositional tasks without additional mechanisms. The paper concludes that transformers are best suited for tasks with few reasoning steps, tasks allowing approximate solutions, or when combined with planning modules or refinement methods to overcome the limitations of their autoregressive architecture.</td>
+                <td><a href="https://arxiv.org/pdf/2305.18654" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>The Generative AI Paradox: What it Can Create, It May Not Understand</td>
+                <td>Peter West et al</td>
+                <td>2023</td>
+                <td>llm, intelligence, generation</td>
+                <td>Arxiv</td>
+                <td>This paper introduces the &quot;Generative AI Paradox&quot;, revealing that generative AI models can produce high-quality outputs while simultaneously failing to demonstrate understanding of those same outputs. Through experiments in both language and vision modalities, the authors demonstrate that models like GPT-4 and Midjourney often outperform humans in generation tasks but underperform in related discriminative and question-answering tasks about their own creations. This capability gap widens with increasing task complexity and presents more starkly than in human intelligence, where understanding typically precedes generation ability. The research suggests this divergence stems from fundamental differences in how AI systems and humans develop intelligence—models are trained directly on reproducing expert-like outputs without requiring deep understanding. This finding cautions against interpreting AI capabilities by analogy to human intelligence and suggests studying AI as a counterpoint rather than a parallel to human cognition.</td>
+                <td><a href="https://arxiv.org/pdf/2311.00059" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>StyleRemix: Interpretable Authorship Obfuscation via Distillation and Perturbation of Style Elements</td>
+                <td>Jillian Fisher et al</td>
+                <td>2024</td>
+                <td>authorship, style, llm</td>
+                <td>Arxiv</td>
+                <td>STYLEREMIX operates through two distinct phases to effectively obscure authorship style. In the pre-obfuscation phase, which is performed just once, the system identifies key stylistic axes that differentiate authors, including text length, function word usage, grade level, formality, voice, sarcasm, and writing type. For each of these style axes, the researchers create parallel datasets where identical content is rewritten in different stylistic directions, which are then used to train lightweight Low-Rank Adaptation (LoRA) modules that can be integrated with a larger base language model. During the actual obfuscation phase, STYLEREMIX analyzes the author&#x27;s text to create an &quot;author vector&quot; measuring their style along various axes and compares this to the average style vector of all authors in the same domain to identify which style elements are most distinctive for this specific author. Based on this analysis, the system selectively applies the appropriate LoRA adapters with calculated weights to steer the text away from the author&#x27;s most recognizable style elements. These adapters can be applied sequentially, through adapter merging (combining weights before applying), or using LoraHub+ (which optimizes the weights through gradient-free optimization). What makes STYLEREMIX innovative is its adaptive approach to identifying and targeting the specific style elements that make an author recognizable, rather than applying generic transformations, resulting in more effective obfuscation while maintaining content integrity and fluency.</td>
+                <td><a href="https://arxiv.org/pdf/2408.15666" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Scaling Diffusion Language Models via Adaptive From Autoregressive Models</td>
+                <td>Shansan Gong et al</td>
+                <td>2025</td>
+                <td>diffusion, masked diffusion, mdm</td>
+                <td>ICLR</td>
+                <td>The paper introduces a method for converting autoregressive (AR) language models into diffusion language models (DLMs) through three key techniques. First, they unify the loss functions between AR and diffusion models by establishing connections between their modeling objectives. Second, they implement attention mask annealing, which gradually transitions from the causal (unidirectional) attention mask of AR models to the full bidirectional attention pattern needed for diffusion models. Third, they maintain the shift operation from AR models, where predictions at each position correspond to the next token, ensuring alignment between the pretrained AR model&#x27;s behavior and the diffusion objective. This approach allows them to efficiently adapt existing models like GPT2 and LLaMA to create DiffuGPT and DiffuLLaMA without time-embedding layers, preserving the original models&#x27; capabilities while enabling the non-autoregressive generation benefits of diffusion models.</td>
+                <td><a href="https://arxiv.org/pdf/2410.17891" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Masked Diffusion Models are Secretly Time-Agnostic Masked Models and Exploit Inaccurate Categorical Sampling</td>
+                <td>Kaiwen Zheng et al</td>
+                <td>2025</td>
+                <td>diffusion, masked diffusion, mdm</td>
+                <td>ICLR</td>
+                <td>The authors provide a comprehensive theoretical analysis revealing that masked diffusion models (MDMs) are functionally equivalent to simpler masked language models despite their diffusion-based formulation. They mathematically prove that MDMs&#x27; continuous-time Evidence Lower Bound (ELBO) can be reformulated based on the number of masked tokens rather than time, effectively showing that the time variable serves merely as a continuous relaxation of the masked ratio. Building on this insight, they develop the First-Hitting Sampler (FHS), which analytically calculates when each masked token should be unmasked, enabling token-by-token decoding that is provably equivalent to MDMs&#x27; original sampling process but 20 times faster. The authors also uncover a critical numerical precision issue in Gumbel-based categorical sampling where 32-bit floating-point representation truncates maximum Gumbel values, artificially lowering the effective temperature during sampling. Through closed-form mathematical analysis, they demonstrate how this truncation shifts probability distributions and creates unequal unmasking probabilities across token positions, explaining why MDMs appeared to outperform auto-regressive models in previous evaluations when measured by generative perplexity. Their high-order sampling variants (using extrapolation and predictor-corrector approaches) further enhance efficiency while maintaining theoretical equivalence to the original MDM sampling process.</td>
+                <td><a href="https://arxiv.org/pdf/2409.02908" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Simple and Effective Masked Diffusion Language Models</td>
