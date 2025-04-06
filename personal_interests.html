@@ -1,145 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Interests</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <main>
-            <!-- Main Header -->
-            <header class="page-header">
-                <h1>Personal Interests</h1>
-                <h2>What else is there?</h2>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Interests | Lex Whalen</title>
+    <style>
+        /* Retro minimalist styles to match main page */
+        :root {
+            --text-color: #333;
+            --background: #f8f8f8;
+            --accent: #0074D9;
+            --link-hover: #7FDBFF;
+            --border: #ddd;
+            --code-bg: #eee;
+            --mono-font: 'Courier New', Courier, monospace;
+            --sans-font: 'Helvetica', Arial, sans-serif;
+            --jp-font: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--mono-font);
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: var(--text-color);
+            background-color: var(--background);
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-family: var(--mono-font);
+            font-size: 1.2rem;
+            margin: 0.5rem 0 1.5rem;
+            font-weight: normal;
+            font-style: italic;
+        }
+        
+        h3 {
+            font-family: var(--mono-font);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 0.25rem;
+        }
+        
+        h4 {
+            font-family: var(--mono-font);
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem;
+            font-weight: normal;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            padding-bottom: 1px;
+            border-bottom: 1px dotted var(--accent);
+        }
+        
+        a:hover {
+            color: var(--link-hover);
+            border-bottom: 1px solid var(--link-hover);
+        }
+        
+        ol, ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .major-section {
+            margin-bottom: 2rem;
+        }
+        
+        .language-entry, .interest-section, .media-entry {
+            margin-bottom: 1.5rem;
+        }
+        
+        .lifetime-goals, .end-goals {
+            margin-bottom: 1.5rem;
+        }
+        
+        .interests-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: 600px) {
+            .interests-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px dashed var(--border);
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Main Header -->
+        <header class="page-header">
+            <h1>Personal Interests</h1>
+            <h2>What else is there?</h2>
+        </header>
 
-            <!-- Life Goals Section -->
-            <section id="overall_goals" class="major-section">
-                <div class="lifetime-goals">
-                    Before I die, I need to have the following completed (habits are included):
-                    <ol>
-                        <li>3 languages to fluency (rn I am thinking English, Japanese, Mandarin)</li>
-                        <li>100 million in investments (every paycheck I deposit about a third into my investments, at this rate I think by at least 40 I should be complete)</li>
-                        <li>Monthly donate to education / charities / space exploration (from the wealth, give back a significant portion. The wealth accumulation is mainly a means of creating a sustainable loop of cashflow to redirect to improve society)</li>
-                    </ol>
-                </div>
-
-                <div class="end-goals">
-                    At time of death:
-                    <ol>
-                        <li>Still be physically and mentally fit. This is why daily exercise, stretching, and eating habits are critical.</li>
-                        <li>At least have some people there. Doesn't have to be a party.</li>
-                    </ol>
-                </div>
-            </section>
-
-            <!-- Language Section -->
-            <section id="languages" class="major-section">
-                <h3>Languages</h3>
-                
-                <article id="japanese" class="language-entry">
-                    <h4>Japanese</h4>
-                    <p>
-                        I am quite interested in learning languages. During my undergrad I learned Japanese 
-                        and then went to 東洋大学 as a regular student. I then gave a 
-                        <a href="pictures/speech.png">speech at graduation</a> as the exchange student 
-                        representative. My favorite class was 
-                        <a href="misc_files/学習心理学　期末レポート.pdf">学習心理学</a>. The professor was 
-                        quite funny, and the content was great.
-                    </p>
-                </article>
-
-                <article id="mandarin" class="language-entry">
-                    <h4>Mandarin</h4>
-                    <p>
-                        By the end of Ph.D, I aim to be of a comparable level in Mandarin as in Japanese. 
-                        In order to do this, I spend about 1.5 hours every day studying Mandarin. This 
-                        consists of 1 hour of <a href="https://en.wikipedia.org/wiki/Input_hypothesis">pure 
-                        immersion</a> and about 30 minutes of 
-                        <a href="https://apps.ankiweb.net/#download">spaced repetition study</a>.
-                        I would like to be able to read 老子 by the end of the degree.
-                    </p>
-                </article>
-
-                <article id="language-general" class="language-entry">
-                    <h4>Language in General</h4>
-                    <p>
-                        When in undergrad, I was quite passionate about language communities. I used to lead the 
-                        Japanese Language Table and the Japanese Cultural Association. This was the most 
-                        fun during undergrad, and I am honored to have met great people from around the world.
-                    </p>
-                </article>
-            </section>
-
-            <!-- Personal Interests Sections -->
-            <div class="interests-container">
-                <!-- Music Section -->
-                <section id="music" class="interest-section">
-                    <h3>Music</h3>
-                    <p>
-                        In general, jazz is my favorite genre. I like Coltrane 
-                        (<a href="https://www.youtube.com/watch?v=ll3CMgiUPuU">this</a> and 
-                        <a href="https://youtu.be/ioPRCwpB1Ak?si=sjB5jiMi8M3XpH4d">this</a>). 
-                        Other than jazz, classical is of course quite good. I also like 
-                        <a href="https://www.youtube.com/watch?v=tJBtztG-xR4">hip-hop</a>.
-                    </p>
-                </section>
-
-                <!-- Books Section -->
-                <section id="books" class="interest-section">
-                    <h3>Books</h3>
-                    <p>
-                        My favorite genre is sci-fi. This may be visible from the 
-                        <a href="books_read.html">books that I read</a>.
-                    </p>
-                </section>
-
-                <!-- Exercise Section -->
-                <section id="exercise" class="interest-section">
-                    <h3>Exercise</h3>
-                    <p>
-                        Sleep, diet and exercise. I believe that motivation and success are not some sort of 
-                        mental thing, but are direct products of how much you sleep, eat, and exercise. This 
-                        is quite important to me. I tend to wake up around ~4:00AM and go to be around ~8:00PM. 
-                        With regards to exercise, as I worry about my joints I enjoy swimming (I never knew they 
-                        had <a href="https://www.swimcloud.com/swimmer/519051/">this</a> online). However, I typically now just do weights.                    </p>
-                </section>
-
-                <!-- Entertainment Section -->
-                <section id="entertainment" class="interest-section">
-                    <h3>Shows, Movies, Characters</h3>
-                    <article id="movies" class="media-entry">
-                        <p>
-                            Favorite color movie is probably 
-                            <a href="https://en.wikipedia.org/wiki/Inception">Inception</a>, and favorite 
-                            black and white movie is probably 
-                            <a href="https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)">Twelve Angry Men</a>.
-                        </p>
-                    </article>
-                    <article id="tv-shows" class="media-entry">
-                        <p>
-                            Favorite TV show is probably 
-                            <a href="https://en.wikipedia.org/wiki/A_Game_of_Pool_(The_Twilight_Zone,_1959)">The Twilight Zone</a> or 
-                            <a href="https://en.wikipedia.org/wiki/Monster_(manga)">Monster</a> (the manga 
-                            is also good).
-                        </p>
-                    </article>
-                    <article id="characters" class="media-entry">
-                        <p>
-                            In terms of personality, I would like to be like 
-                            <a href="https://www.youtube.com/watch?v=1qOCckM6hMM">古畑任三郎</a>. He was always kind and had a good sense of humor.
-                        </p>
-                    </article>
-                </section>
+        <!-- Life Goals Section -->
+        <section id="overall_goals" class="major-section">
+            <h3>Life Goals</h3>
+            <div class="lifetime-goals">
+                <p>Before I die, I need to have the following completed (habits are included):</p>
+                <ol>
+                    <li>3 languages to fluency (rn I am thinking English, Japanese, Mandarin)</li>
+                    <li>100 million in investments (every paycheck I deposit about a third into my investments, at this rate I think by at least 40 I should be complete)</li>
+                    <li>Monthly donate to education / charities / space exploration (from the wealth, give back a significant portion. The wealth accumulation is mainly a means of creating a sustainable loop of cashflow to redirect to improve society)</li>
+                </ol>
             </div>
 
-            <!-- Navigation Footer -->
-            <footer class="site-footer">
-                <nav>
-                    <p><a href="index.html">Back to home</a></p>
-                </nav>
-            </footer>
-        </main>
-    </body>
+            <div class="end-goals">
+                <p>At time of death:</p>
+                <ol>
+                    <li>Still be physically and mentally fit. This is why daily exercise, stretching, and eating habits are critical.</li>
+                    <li>At least have some people there. Doesn't have to be a party.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Language Section -->
+        <section id="languages" class="major-section">
+            <h3>Languages</h3>
+            
+            <article id="japanese" class="language-entry">
+                <h4>Japanese</h4>
+                <p>
+                    I am quite interested in learning languages. During my undergrad I learned Japanese 
+                    and then went to 東洋大学 as a regular student. I then gave a 
+                    <a href="pictures/speech.png">speech at graduation</a> as the exchange student 
+                    representative. My favorite class was 
+                    <a href="misc_files/学習心理学　期末レポート.pdf">学習心理学</a>. The professor was 
+                    quite funny, and the content was great.
+                </p>
+            </article>
+
+            <article id="mandarin" class="language-entry">
+                <h4>Mandarin</h4>
+                <p>
+                    By the end of Ph.D, I aim to be of a comparable level in Mandarin as in Japanese. 
+                    In order to do this, I spend about 1.5 hours every day studying Mandarin. This 
+                    consists of 1 hour of <a href="https://en.wikipedia.org/wiki/Input_hypothesis">pure 
+                    immersion</a> and about 30 minutes of 
+                    <a href="https://apps.ankiweb.net/#download">spaced repetition study</a>.
+                    I would like to be able to read 老子 by the end of the degree.
+                </p>
+            </article>
+
+            <article id="language-general" class="language-entry">
+                <h4>Language in General</h4>
+                <p>
+                    When in undergrad, I was quite passionate about language communities. I used to lead the 
+                    Japanese Language Table and the Japanese Cultural Association. This was the most 
+                    fun during undergrad, and I am honored to have met great people from around the world.
+                </p>
+            </article>
+        </section>
+
+        <!-- Personal Interests Sections -->
+        <div class="interests-container">
+            <!-- Music Section -->
+            <section id="music" class="interest-section">
+                <h3>Music</h3>
+                <p>
+                    In general, jazz is my favorite genre. I like Coltrane 
+                    (<a href="https://www.youtube.com/watch?v=ll3CMgiUPuU">this</a> and 
+                    <a href="https://youtu.be/ioPRCwpB1Ak?si=sjB5jiMi8M3XpH4d">this</a>). 
+                    Other than jazz, classical is of course quite good. I also like 
+                    <a href="https://www.youtube.com/watch?v=tJBtztG-xR4">hip-hop</a>.
+                </p>
+            </section>
+
+            <!-- Books Section -->
+            <section id="books" class="interest-section">
+                <h3>Books</h3>
+                <p>
+                    My favorite genre is sci-fi. This may be visible from the 
+                    <a href="books_read.html">books that I read</a>.
+                </p>
+            </section>
+
+            <!-- Exercise Section -->
+            <section id="exercise" class="interest-section">
+                <h3>Exercise</h3>
+                <p>
+                    Sleep, diet and exercise. I believe that motivation and success are not some sort of 
+                    mental thing, but are direct products of how much you sleep, eat, and exercise. This 
+                    is quite important to me. I tend to wake up around ~4:00AM and go to be around ~8:00PM. 
+                    With regards to exercise, as I worry about my joints I enjoy swimming (I never knew they 
+                    had <a href="https://www.swimcloud.com/swimmer/519051/">this</a> online). However, I typically now just do weights.
+                </p>
+            </section>
+
+            <!-- Entertainment Section -->
+            <section id="entertainment" class="interest-section">
+                <h3>Shows, Movies, Characters</h3>
+                <article id="movies" class="media-entry">
+                    <p>
+                        Favorite color movie is probably 
+                        <a href="https://en.wikipedia.org/wiki/Inception">Inception</a>, and favorite 
+                        black and white movie is probably 
+                        <a href="https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)">Twelve Angry Men</a>.
+                    </p>
+                </article>
+                <article id="tv-shows" class="media-entry">
+                    <p>
+                        Favorite TV show is probably 
+                        <a href="https://en.wikipedia.org/wiki/A_Game_of_Pool_(The_Twilight_Zone,_1959)">The Twilight Zone</a> or 
+                        <a href="https://en.wikipedia.org/wiki/Monster_(manga)">Monster</a> (the manga 
+                        is also good).
+                    </p>
+                </article>
+                <article id="characters" class="media-entry">
+                    <p>
+                        In terms of personality, I would like to be like 
+                        <a href="https://www.youtube.com/watch?v=1qOCckM6hMM">古畑任三郎</a>. He was always kind and had a good sense of humor.
+                    </p>
+                </article>
+            </section>
+        </div>
+
+        <!-- Navigation Footer -->
+        <footer>
+            <nav>
+                <a href="index.html">Back to home</a>
+            </nav>
+        </footer>
+    </main>
+</body>
 </html>

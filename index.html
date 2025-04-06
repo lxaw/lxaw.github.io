@@ -3,133 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lex Whalen</title>
+    <title>Lex Whalen | Machine Learning Engineer</title>
     <style>
-        /* Original styles */
+        /* Retro minimalist styles */
+        :root {
+            --text-color: #333;
+            --background: #f8f8f8;
+            --accent: #0074D9;
+            --link-hover: #7FDBFF;
+            --border: #ddd;
+            --code-bg: #eee;
+            --mono-font: 'Courier New', Courier, monospace;
+            --sans-font: 'Helvetica', Arial, sans-serif;
+            --jp-font: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; /* Added Japanese font */
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            color: #333;
+            font-family: var(--mono-font);
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: var(--text-color);
+            background-color: var(--background);
         }
-        .content-wrapper {
-            overflow: hidden;
+        
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
         }
-        .figure-wrapper {
-            float: right;
-            margin: 0 0 1rem 2rem;
-            text-align: center;
-        }
-        .profile-pic {
-            width: 300px;
-            height: auto;
-            margin-bottom: 0.5rem;
-        }
-        figcaption {
-            font-size: 0.9rem;
-            color: #666;
-        }
+        
         h1 {
             font-size: 1.5rem;
-            margin: 1rem 0 0.5rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
         }
-        h1:first-child {
-            margin-top: 0;
+        
+        h2 {
+            font-family: var(--mono-font);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 0.25rem;
         }
+        
         p {
-            margin: 0 0 1rem;
-        }
-        a {
-            color: #4299e1;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        small {
-            color: #666;
-            display: block;
             margin-bottom: 1rem;
         }
-        .bottom-content {
-            clear: both;
-            padding-top: 1rem;
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            padding-bottom: 1px;
+            border-bottom: 1px dotted var(--accent);
         }
-        footer {
-            margin-top: 2rem;
+        
+        a:hover {
+            color: var(--link-hover);
+            border-bottom: 1px solid var(--link-hover);
         }
-
-        /* Language switcher styles */
+        
+        .title {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                gap: 2rem;
+            }
+            
+            .sidebar {
+                flex: 0 0 200px;
+            }
+            
+            .main-content {
+                flex: 1;
+            }
+        }
+        
+        .profile-pic {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 0 1rem 0;
+            border: 1px solid var(--border);
+            padding: 3px;
+        }
+        
+        figcaption {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-links {
+            margin: 1.5rem 0;
+            line-height: 1.7;
+        }
+        
+        .contact-links a {
+            display: block;
+        }
+        
         .lang-switch {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            z-index: 1000;
+            text-align: right;
+            margin-bottom: 1rem;
         }
-
+        
         #lang-toggle {
             position: absolute;
             opacity: 0;
-            pointer-events: none;
-            width: 0;
             height: 0;
+            width: 0;
         }
-
+        
         .lang-switch label {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            background: #4299e1;
-            color: white;
-            border-radius: 9999px;
             cursor: pointer;
-            transition: background-color 0.2s;
-            font-size: 0.875rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 0.25rem 0.5rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.85rem;
         }
-
+        
         .lang-switch label:hover {
-            background: #3182ce;
+            background-color: var(--accent);
+            color: white;
         }
-
+        
         /* Language content switching */
         [lang="ja"] {
             display: none;
+            font-family: var(--jp-font); /* Apply Japanese font */
+            font-weight: normal; /* Ensure normal weight for Japanese text */
         }
-
+        
         #lang-toggle:checked ~ .content-wrapper [lang="en"] {
             display: none;
         }
-
+        
         #lang-toggle:checked ~ .content-wrapper [lang="ja"] {
             display: block;
         }
-
+        
         /* Button text switching */
-        .lang-text-en,
-        .lang-text-ja {
-            transition: opacity 0.2s;
-        }
-
         .lang-text-ja {
             display: none;
+            font-family: var(--jp-font); /* Apply Japanese font */
+            font-weight: normal; /* Ensure normal weight */
         }
-
+        
         #lang-toggle:checked ~ .lang-switch .lang-text-en {
             display: none;
         }
-
+        
         #lang-toggle:checked ~ .lang-switch .lang-text-ja {
             display: inline;
         }
-
-        @media (max-width: 600px) {
-            .figure-wrapper {
-                float: none;
-                margin: 0 auto 1rem;
-                width: 200px;
+        
+        .experience-item, .education-item {
+            margin-bottom: 1.25rem;
+        }
+        
+        .position, .institution {
+            font-weight: bold;
+        }
+        
+        /* Adjust weight for Japanese headings */
+        [lang="ja"] .position, 
+        [lang="ja"] .institution {
+            font-weight: normal;
+        }
+        
+        .period {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .meta {
+            font-size: 0.8rem;
+            font-style: italic;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px dashed var(--border);
+            padding-top: 1rem;
+        }
+        
+        /* Code-like blocks */
+        pre {
+            font-family: var(--mono-font);
+            background: var(--code-bg);
+            padding: 0.5rem;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+        
+        /* Adjust Japanese font in pre blocks */
+        [lang="ja"] pre {
+            font-family: var(--jp-font);
+            font-weight: normal;
+        }
+        
+        .skills-section {
+            font-family: var(--mono-font);
+        }
+        
+        [lang="ja"] .skills-section {
+            font-family: var(--jp-font);
+            font-weight: normal;
+        }
+        
+        @media (max-width: 767px) {
+            body {
+                margin: 1rem auto;
+            }
+            
+            .profile-pic {
+                max-width: 160px;
             }
         }
     </style>
@@ -144,47 +261,196 @@
     </div>
 
     <div class="content-wrapper">
-        <figure class="figure-wrapper">
-            <img src="pictures/myself_nagasaki.png" alt="Lex Whalen" class="profile-pic">
-            <figcaption lang="en">Nagasaki, Dec. 2024</figcaption>
-            <figcaption lang="ja">長崎、2024年12月</figcaption>
-        </figure>
-        
-        <h1 lang="en">Who?</h1>
-        <h1 lang="ja">だれ？</h1>
-        <p lang="en">My name is Lex Whalen. You can see a picture of me <a href="picture.html">here</a>. For more info, my LinkedIn is <a href="https://www.linkedin.com/in/lxaw/">here</a>.</p>
-        <p lang="ja">レックスと申します。写真（右のやつ以外）は<a href="picture.html">こちら</a>で、LinkedInは<a href="https://www.linkedin.com/in/lxaw/">こちら</a>になります。</p>
+        <header>
+            <h1 lang="en">Lex Whalen</h1>
+            <h1 lang="ja">ワレン・レックス</h1>
+            <div class="title" lang="en">Machine Learning Engineer at Georgia Institute of Technology</div>
+            <div class="title" lang="ja">ジョージア工科大学の機械学習エンジニア</div>
+        </header>
 
-        <h1 lang="en">What?</h1>
-        <h1 lang="ja">なに？</h1>
-        <p lang="en">PhD student @ GT. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world. Bonus points if we can vastly improve society as we do it.</p>
-        <p lang="ja">ジョージア工科大学の博士課程の学生です。目標は、手頃な価格で超人工知能を実現し、改善することです。それと同時に、社会を大きく改善できれば更に良いと考えています。</p>
-        <small lang="en">I also claim to have a <a href="personal_interests.html">life outside of research</a>.</small>
-        <small lang="ja">研究以外の<a href="personal_interests.html">生活</a>もあると主張したいと思います。</small>
+        <div class="container">
+            <div class="sidebar">
+                <figure>
+                    <img src="pictures/myself_nagasaki.png" alt="Lex Whalen" class="profile-pic">
+                    <!-- <figcaption lang="en">Nagasaki, Dec. 2024</figcaption>
+                    <figcaption lang="ja">長崎、2024年12月</figcaption> -->
+                </figure>
+                
+                <div class="contact-links" lang="en">
+                    <a href="cv/main.pdf">CV/Resume</a>
+                    <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>
+                    <a href="https://github.com/lxaw">GitHub</a>
+                    <a href="papers_read.html">Papers List</a>
+                    <a href="books_read.html">Reading List</a>
+                    <a href="personal_interests.html">Personal</a>
+                </div>
+                
+                <div class="contact-links" lang="ja">
+                    <a href="cv/main.pdf">履歴書</a>
+                    <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>
+                    <a href="https://github.com/lxaw">GitHub</a>
+                    <a href="papers_read.html">読んだ論文</a>
+                    <a href="books_read.html">読んだ本</a>
+                    <a href="personal_interests.html">趣味など</a>
+                </div>
+            </div>
+            
+            <div class="main-content">
+                <div class="section" lang="en">
+                    <p>Machine Learning Engineer focused on efficient deep learning and model optimization. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world.</p>
+                    
+                    <pre>Current focus:
+- Accelerating language models
+- Accelerating diffusion models
+- TinyML for healthcare applications
+                    </pre>
+                    
+                    <p>I'm fluent in both English and Japanese (JLPT N1 Certified) with intermediate Mandarin skills.</p>
+                </div>
+                
+                <div class="section" lang="ja">
+                    <p>効率的な深層学習とモデル最適化に焦点を当てた機械学習エンジニアです。目標は、手頃な価格で超人工知能を実現し、改善することです。</p>
+                    
+                    <pre>現在の焦点:
+- 言語モデルの効率化
+- 拡散モデルの効率化
+- ヘルスケア応用のためのTinyML</pre>
+                    
+                    <p>英語と日本語（JLPT N1認定）に堪能で、中国語も中級レベルです。</p>
+                </div>
 
-        <h1 lang="en">Why?</h1>
-        <h1 lang="ja">なぜ？</h1>
-        <p lang="en">The purpose of this website is to store <a href="cv/main.pdf">my CV</a>, a <a href="papers_read.html">list of searchable papers</a>, and a list of <a href="books_read.html">books I've read</a>.</p>
-        <p lang="ja">このウェブサイトは<a href="cv/main.pdf">CV</a>、<a href="papers_read.html">検索可能な論文リスト</a>、そして<a href="books_read.html">読んだ本のリスト</a>を保存するためのものです。</p>
+                <div lang="en">
+                    <h2>Experience</h2>
+                    <div class="experience-item">
+                        <div class="position">Deep Learning Researcher with NVIDIA</div>
+                        <div class="period">February 2025 - Present</div>
+                        <p>Working on efficient diffusion language models.</p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="position">Machine Learning Researcher at Georgia Tech</div>
+                        <div class="period">August 2024 - Present</div>
+                        <p>Leading research on reducing diffusion training by up to 5x while maintaining generation quality.</p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="position">TinyML for Healthcare at Georgia Tech</div>
+                        <div class="period">August 2024 - Present</div>
+                        <p>Algorithm lead for ARPA-H's THOR project, reducing sensor degradation by over 70% using tiny PyTorch models.</p>
+                    </div>
 
-        <h1 lang="en">Where?</h1>
-        <h1 lang="ja">どこ？</h1>
-        <p lang="en">You can contact me by emailing at [first letter of first name lowercase][last name lowercase]7@gatech.edu.</p>
-        <p lang="ja">メールでの連絡は[名前の最初の文字（小文字）][苗字（小文字）]7@gatech.eduまでお願いします。</p>
-        <p lang="en">You can also check out my <a href="https://github.com/lxaw">GitHub</a>.</p>
-        <p lang="ja"><a href="https://github.com/lxaw">GitHub</a>もご覧ください。</p>
-        <p lang="en">As long as the project is interesting, I am willing to go anywhere and learn anything.</p>
-        <p lang="ja">面白いプロジェクトであれば、どこへでも行き、何でも学びたいのです。</p>
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <div class="institution">Georgia Institute of Technology</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="institution">University of South Carolina</div>
+                        <div class="period">M.S. in Computer Science | 2024</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="institution">University of South Carolina Honors College</div>
+                        <div class="period">B.S. in Computer Science | 2020-2023</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="institution">Toyo University, Tokyo, Japan</div>
+                        <div class="period">Exchange Program | 2023</div>
+                    </div>
 
-        <h1 lang="en">When?</h1>
-        <h1 lang="ja">いつ？</h1>
-        <p lang="en">Last time this was edited was 2025-04-03 (YYYY/MM/DD).</p>
-        <p lang="ja">最終更新日：2025年04月03日</p>
+                    <h2>Skills</h2>
+                    <div class="skills-section">
+                        <pre>Advanced:
+Python, PyTorch, TensorFlow, Pandas, NumPy
+SciPy, JavaScript, React/Redux, HTML/CSS, Django
+
+Intermediate:
+Rust, C/C++, SQL, PHP
+
+Languages:
+English (Native), Japanese (N1), Mandarin (Int.)</pre>
+                    </div>
+
+                    <h2>Contact</h2>
+                    <p>Email: lwhalen7@gatech.edu</p>
+                </div>
+
+                <div lang="ja">
+                    <h2>経験</h2>
+                    <div class="experience-item">
+                        <div class="position">NVIDIA グラデュエート深層学習研究者</div>
+                        <div class="period">2025年2月 - 現在</div>
+                        <p>テキスト拡散モデルの効率化に取り組んでいます。</p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="position">ジョージア工科大学 機械学習研究者</div>
+                        <div class="period">2024年8月 - 2025一月</div>
+                        <p>生成品質を維持しながら拡散モデルのトレーニングを平均5倍削減する研究をリードしていました。</p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="position">ジョージア工科大学 ヘルスケア向けTinyML</div>
+                        <div class="period">2024年8月 - 現在</div>
+                        <p>ARPA-HのTHORプロジェクトのアルゴリズムリードとして、ちっちゃなPyTorchモデルを使用してセンサー劣化を70%以上削減。</p>
+                    </div>
+
+                    <h2>学歴</h2>
+                    <div class="education-item">
+                        <div class="institution">ジョージア工科大学</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="institution">サウスカロライナ大学</div>
+                        <div class="period">コンピュータサイエンス修士 | 2024</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="institution">サウスカロライナ大学 Honors College</div>
+                        <div class="period">コンピュータサイエンス学士 | 2020-2023</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="institution">東洋大学（東京、日本）</div>
+                        <div class="period">交換留学プログラム | 2023</div>
+                    </div>
+
+                    <h2>スキル</h2>
+                    <div class="skills-section">
+                        <pre>上級:
+Python, PyTorch, TensorFlow, Pandas, NumPy
+SciPy, JavaScript, React/Redux, HTML/CSS, Django
+
+中級:
+Rust, C/C++, SQL, PHP
+
+言語:
+英語（ネイティブ）, 日本語（N1）, 中国語（中級）</pre>
+                    </div>
+
+                    <h2>連絡先</h2>
+                    <p>メール: lwhalen7@gatech.edu</p>
+                </div>
+
+                <div class="meta" lang="en">
+                    <p>Last updated: April 6, 2025</p>
+                </div>
+                
+                <div class="meta" lang="ja">
+                    <p>最終更新日: 2025年4月6日</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div lang="en">
+                <a href="misc.html">Miscellaneous</a>
+            </div>
+            <div lang="ja">
+                <a href="misc.html">その他</a>
+            </div>
+        </footer>
     </div>
-
-    <footer>
-        <small lang="en"><a href="misc.html">misc</a></small>
-        <small lang="ja"><a href="misc.html">その他</a></small>
-    </footer>
 </body>
 </html>
