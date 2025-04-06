@@ -3,49 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miscellaneous Quotes</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Miscellaneous Quotes | Lex Whalen</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    /* Retro minimalist styles to match main page */
+    :root {
+      --text-color: #333;
+      --background: #f8f8f8;
+      --accent: #0074D9;
+      --link-hover: #7FDBFF;
+      --border: #ddd;
+      --code-bg: #eee;
+      --mono-font: 'Courier New', Courier, monospace;
+      --sans-font: 'Helvetica', Arial, sans-serif;
+      --jp-font: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
+      padding: 0;
     }
-    header, footer {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    main {
+    
+    body {
+      font-family: var(--mono-font);
+      line-height: 1.5;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: var(--text-color);
+      background-color: var(--background);
     }
+    
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-bottom: 0.5rem;
+    }
+    
+    h3 {
+      font-family: var(--mono-font);
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      padding-bottom: 1px;
+      border-bottom: 1px dotted var(--accent);
+    }
+    
+    a:hover {
+      color: var(--link-hover);
+      border-bottom: 1px solid var(--link-hover);
+    }
+    
+    main {
+      margin-bottom: 2rem;
+    }
+    
     .quote-group {
-      margin-bottom: 30px;
-      padding: 15px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background-color: white;
     }
+    
     .quote-text {
       font-style: italic;
-      font-size: 1.2em;
-      margin: 10px 0;
-      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.6;
     }
+    
     .quote-author {
-      font-size: 1em;
       text-align: right;
-      color: #555;
+      font-size: 0.9rem;
+      color: var(--text-color);
     }
-    footer a {
-      text-decoration: none;
-      color: #007acc;
+    
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      border-top: 1px dashed var(--border);
+      padding-top: 1rem;
     }
-    footer a:hover {
-      color: #005bb5;
+    
+    /* Special styling for Japanese and Chinese text */
+    .quote-text:lang(ja),
+    .quote-text:lang(zh) {
+      font-family: var(--jp-font);
+      font-weight: normal;
     }
   </style>
 </head>
@@ -53,31 +113,30 @@
   <header>
     <h2>You have discovered the secret page!</h2>
     <p>You weren't supposed to be here! Here's where I store some things.</p>
-    <h3>Quotes I Like</h3>
   </header>
-
+  
   <main>
     <!-- 孫子 Quote -->
     <article class="quote-group">
-      <p class="quote-text">故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。</p>
+      <p class="quote-text" lang="zh">故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。</p>
       <p class="quote-author">- 孫子</p>
     </article>
-
+    
     <!-- 松尾芭蕉 Quote -->
     <article class="quote-group">
-      <p class="quote-text">夏草や 兵どもが 夢の跡。</p>
+      <p class="quote-text" lang="ja">夏草や 兵どもが 夢の跡。</p>
       <p class="quote-author">- 松尾芭蕉</p>
     </article>
-
+    
     <!-- Jacobi Quote -->
     <article class="quote-group">
       <p class="quote-text">Man muss immer umkehren.</p>
       <p class="quote-author">- Carl Gustav Jacob Jacobi</p>
     </article>
-
+    
     <!-- 徳川家康 Quotes -->
     <article class="quote-group">
-      <p class="quote-text">
+      <p class="quote-text" lang="ja">
         人の一生は重荷を負うて遠き道を行くがごとし。急ぐべからず。<br>
         不自由を常と思えば不足なし。こころに望みおこらば困窮したる時を思い出すべし。<br>
         堪忍は無事長久の基、いかりは敵と思え。<br>
@@ -88,7 +147,7 @@
       </p>
       <p class="quote-author">- Various quotes from 徳川家康</p>
     </article>
-
+    
     <!-- Dale Carnegie Quotes -->
     <article class="quote-group">
       <p class="quote-text">First ask yourself: What is the worst that can happen? Then prepare to accept it. Then proceed to improve on the worst.</p>
@@ -99,9 +158,11 @@
       <p class="quote-author">- Various quotes from Dale Carnegie</p>
     </article>
   </main>
-
+  
   <footer>
-    <p><a href="index.html">Back to home</a></p>
+    <nav>
+      <a href="index.html">Back to home</a>
+    </nav>
   </footer>
 </body>
 </html>
