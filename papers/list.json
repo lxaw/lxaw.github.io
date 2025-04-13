@@ -1,5 +1,32 @@
 [
   {
+    "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning",
+    "author": "Siyan Zhao et al",
+    "year": "2025",
+    "topic":"rl, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "Zhao et al. introduce d1, a novel framework that enhances reasoning capabilities in diffusion Large Language Models (dLLMs) through a two-stage post-training approach combining supervised fine-tuning (SFT) and reinforcement learning. While traditional autoregressive models like Claude or GPT generate text left-to-right sequentially, diffusion models like LLaDA generate through iterative denoising from masked tokens in a non-autoregressive manner. The authors' key innovation is diffu-GRPO, a policy gradient algorithm specifically adapted for masked dLLMs that efficiently estimates log-probabilities using a one-step random prompt masking technique. This approach serves as a regularization mechanism, allowing more gradient updates per batch and reducing computational demands. Applied to LLaDA-8B-Instruct, the full d1 pipeline consistently outperforms both the base model and individual SFT or RL approaches across four mathematical and logical reasoning benchmarks, with particularly significant gains on complex tasks like Countdown (+21.5%) and Sudoku (+10.4%). The results demonstrate that masked dLLMs can benefit from RL-based reasoning enhancement techniques previously limited to autoregressive models, opening new directions for improving non-autoregressive language models.",
+    "link": "https://arxiv.org/pdf/2211.16750"
+  },
+  {
+    "title": "Score-Based Continuous-Time Discrete Diffusion Models",
+    "author": "Haoran Sun et al",
+    "year": "2023",
+    "topic":"continuous, llm, diffusion, discrete",
+    "venue": "ICLR",
+    "description": "Sun et al. introduce a breakthrough approach extending score-based diffusion models to discrete categorical data through a continuous-time Markov chain formulation. Their key innovation is developing \"categorical ratio matching,\" a discrete analog to score matching that effectively characterizes how discrete distributions evolve over time without requiring gradients. This theoretical advancement enables the formulation of a coherent stochastic jump process for the reverse (denoising) process with an analytical sampling method as an alternative to numerical simulation. The authors further introduce three architectural approaches—energy-based models, masked models, and a novel \"hollow Transformer\"—to parameterize conditional distributions while avoiding information leakage issues. Their experiments on synthetic data, CIFAR10 images, and music generation demonstrate superior performance compared to previous discrete diffusion approaches, particularly when sampling with fewer steps, highlighting the flexibility advantages of the continuous-time formulation.",
+    "link": "https://arxiv.org/pdf/2211.16750"
+  },
+  {
+    "title": "A Continuous Time Framework for Discrete Denoising Models",
+    "author": "Andrew Campbell et al",
+    "year": "2022",
+    "topic":"continuous, llm, diffusion, discrete",
+    "venue": "NeurIPS",
+    "description": "The paper \"A Continuous Time Framework for Discrete Denoising Models\" presents the first complete theoretical foundation for extending diffusion models to discrete data using continuous time. The authors formulate both the forward noising process and generative reverse process as Continuous Time Markov Chains (CTMCs), providing a mathematically rigorous alternative to previous discrete-time approaches. This continuous framework enables the derivation of a continuous time evidence lower bound (ELBO) for efficient training, and unlocks high-performance sampling strategies like tau-leaping—borrowed from chemical physics—which allows multiple dimensions to change simultaneously in a single simulation step. Particularly innovative is their predictor-corrector scheme that alternates between sampling steps guided by the reverse rate and corrector steps that push the distribution toward the true marginal, significantly improving sample quality on image generation tasks. The authors also contribute a novel theoretical error bound between generated and true data distributions, demonstrating how their approach maintains accuracy even in high-dimensional discrete spaces while offering greater flexibility than discrete time methods.",
+    "link": "https://arxiv.org/pdf/2205.14987"
+  },
+  {
     "title": "PLANNER: Generating Diversified Paragraph via Latent Language Diffusion Model",
     "author": "Yizhe Zhang et al",
     "year": "2023",
