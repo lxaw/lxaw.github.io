@@ -1,5 +1,68 @@
 [
   {
+    "title": "Packing Input Frame Context in Next-Frame Prediction Models for Video Generation",
+    "author": "Lvmin Zhang et al",
+    "year": "2025",
+    "topic":"video",
+    "venue": "Arxiv",
+    "description": "This paper introduces FramePack, a neural network structure that compresses input frames to maintain fixed transformer context length regardless of video length, enabling processing of numerous frames with computational requirements similar to image diffusion. This approach tackles the competing challenges of \"forgetting\" (fading memory of earlier content) and \"drifting\" (quality degradation from error accumulation) by using variable transformer patchify kernel sizes that prioritize frames based on importance, typically temporal proximity. Complementing this architecture, the authors propose anti-drifting sampling methods that generate frames in inverted temporal order with early-established endpoints, avoiding typical error propagation in sequential generation. Experimental results demonstrate significant benefits including greater training batch sizes, more balanced diffusion schedulers, and improved visual quality, particularly with the inverted anti-drifting sampling approach for generating consistent, high-quality long-form videos.",
+    "link": "https://arxiv.org/pdf/2504.09858"
+  },
+  {
+    "title": "Sleep-time Compute: Beyond Inference Scaling at Test-time",
+    "author": "Kevin Lin et al",
+    "year": "2025",
+    "topic":"test-time compute",
+    "venue": "Arxiv",
+    "description": "Sleep-time compute leverages the inherently stateful nature of many LLM applications by having models \"think\" offline about existing contexts (like documents, codebases, or conversation histories) between user interactions, generating enriched representations that can be leveraged at test-time to reduce computational requirements. The authors demonstrate that this approach produces a significant pareto improvement in the test-time compute vs. accuracy curve, reducing the test-time compute needed to achieve the same accuracy by approximately 5× on mathematical reasoning benchmarks like Stateful GSM-Symbolic and Stateful AIME, while further scaling sleep-time compute can shift accuracy upward by 13% and 18% respectively. By amortizing sleep-time compute across multiple related queries about the same context using their Multi-Query GSM-Symbolic dataset, the authors show a 2.5× decrease in average cost per query when handling 10 queries per context. Through careful analysis, the authors find that sleep-time compute is most effective when queries are more predictable from the context, and demonstrate its practical application in a software engineering task where it achieves up to 1.5× reduction in test-time tokens.RetryClaude can make mistakes. Please double-check responses.",
+    "link": "https://arxiv.org/pdf/2504.13171"
+  },
+  {
+    "title": "SpecReason: Fast and Accurate Inference-Time Compute via Speculative Reasoning",
+    "author": "Rui Pan et al",
+    "year": "2025",
+    "topic":"diffusion, ddlm",
+    "venue": "ICLR",
+    "description": "SpecReason exploits the insight that LRM inference is highly tolerant of approximations since complex tasks are broken down into simpler steps where the semantic insights matter more than exact tokens, allowing a lightweight model to speculate on intermediate reasoning steps while reserving the base model for assessment and correction. Unlike speculative decoding which requires token-level equivalence, SpecReason targets semantic-level similarity for thinking tokens, enabling it to accept reasoning steps that carry the same insight even if phrased differently, resulting in 1.5-2.5× speedups over vanilla LRM inference while improving accuracy by 1.0-9.9% across various reasoning benchmarks. The approach employs an efficient verification mechanism where the base model scores each speculated step in a single prefill-only pass that requires only ∼70 new tokens, with adjustable acceptance thresholds to control the aggressiveness of speculation and balance the accuracy-latency tradeoff. Furthermore, SpecReason can be combined with traditional speculative decoding in a hierarchical speculation scheme that provides an additional 19.4-44.2% latency reduction over speculative decoding alone, demonstrating the complementary nature of these two approaches.",
+    "link": "https://arxiv.org/pdf/2504.07891"
+  },
+  {
+    "title": "Think While You Generate: Discrete Diffusion with Planned Denoising",
+    "author": "Sulin Liu et al",
+    "year": "2025",
+    "topic":"diffusion, ddlm",
+    "venue": "ICLR",
+    "description": "The authors propose decomposing the generative rate of discrete diffusion into two components: a planner that identifies which positions are corrupted and need denoising, and a denoiser that predicts values for those positions, enabling a more flexible and adaptive sampling procedure that can correct errors during generation. This plan-and-denoise approach allows for adaptive time discretization and error correction, as the planner can identify when the sequence is noisier than expected or when errors were introduced in earlier steps, adjusting sampling to ensure all corrupted tokens are accurately reconstructed. The authors derive simple and effective training objectives for both planner and denoiser models grounded in the Evidence Lower Bound (ELBO) for discrete diffusion processes, enabling independent training of each component. Experimental results on language modeling tasks (text8, OpenWebText) and token-based image generation (ImageNet 256×256) demonstrate that DDPD significantly outperforms traditional mask diffusion methods, reducing the performance gap between diffusion-based and autoregressive approaches especially in terms of generative perplexity, while also showing that a planner can enhance generation quality even when using a smaller or weaker denoiser model compared to baseline methods.",
+    "link": "https://arxiv.org/pdf/2410.06264"
+  },
+  {
+    "title": "Simplified and Generalized Masked Diffusion for Discrete Data",
+    "author": "Jiaxin Shi et al",
+    "year": "2025",
+    "topic":"diffusion, ddlm",
+    "venue": "Arxiv",
+    "description": "The authors develop a simplified masked diffusion framework that provides a remarkably clear expression of the Evidence Lower Bound (ELBO), showing it corresponds to a weighted integral over time of cross-entropy losses, which improves our understanding of this model class and leads to more effective training. Based on this simplified formulation, they propose a generalized masked diffusion model (GenMD4) that allows for state-dependent masking schedules, where the probability of unmasking tokens depends not only on time but also on token values, further improving predictive performance. The authors demonstrate superior performance across several benchmarks, with their models surpassing prior diffusion language models at GPT-2 scale on 4 out of 5 zero-shot language modeling tasks and vastly outperforming previous discrete diffusion models on pixel-level image modeling, achieving 2.75 and 3.40 bits per dimension on CIFAR-10 and ImageNet 64×64, respectively. Through detailed analysis, they unify and clarify the relationships between different approaches to masked diffusion, revealing how previous complex formulations led to suboptimal parameterization, training objectives, and ad hoc adjustments that their framework addresses effectively.",
+    "link": "https://arxiv.org/pdf/2406.04329"
+  },
+  {
+    "title": "SimpleRL-Zoo: Investigating and Taming Zero Reinforcement Learning for Open Base Models in the Wild",
+    "author": "Weihao Zeng et al",
+    "year": "2025",
+    "topic":"rl, zoo",
+    "venue": "Arxiv",
+    "description": "This paper introduces SCATTERED FOREST SEARCH (SFS), a novel approach for code generation that frames the task as a black-box optimization problem within the code space, employing optimization-inspired techniques to enhance inference scaling. SFS incorporates three key techniques: SCATTERING (which generates diverse search directions to improve exploration), FORESTING (which initializes multiple random seed solutions for broader search coverage), and SCOUTING (which shares feedback across search branches to improve exploitation). The authors provide theoretical analysis showing how these techniques help avoid local optima and experimental results across multiple benchmarks (HumanEval, MBPP, APPS, CodeContests, and Leetcode) demonstrate significant performance gains, with SFS achieving a pass@1 rate of 67.1% on HumanEval+ using GPT-3.5, marking an 8.6% improvement over state-of-the-art while halving the iterations needed to find correct solutions. Furthermore, the approach scales more efficiently than existing search techniques such as tree search, line search, and repeated sampling, with the authors demonstrating that weaker models benefit disproportionately more from their inference scaling method.",
+    "link": "https://arxiv.org/pdf/2503.18892"
+  },
+  {
+    "title": "SFS: Smarter Code Space Optimization Improves LLM Inference Scaling",
+    "author": "Johnathan Light et al",
+    "year": "2025",
+    "topic":"code generation, search",
+    "venue": "ICLR",
+    "description": "This paper introduces SCATTERED FOREST SEARCH (SFS), a novel approach for code generation that frames the task as a black-box optimization problem within the code space, employing optimization-inspired techniques to enhance inference scaling. SFS incorporates three key techniques: SCATTERING (which generates diverse search directions to improve exploration), FORESTING (which initializes multiple random seed solutions for broader search coverage), and SCOUTING (which shares feedback across search branches to improve exploitation). The authors provide theoretical analysis showing how these techniques help avoid local optima and experimental results across multiple benchmarks (HumanEval, MBPP, APPS, CodeContests, and Leetcode) demonstrate significant performance gains, with SFS achieving a pass@1 rate of 67.1% on HumanEval+ using GPT-3.5, marking an 8.6% improvement over state-of-the-art while halving the iterations needed to find correct solutions. Furthermore, the approach scales more efficiently than existing search techniques such as tree search, line search, and repeated sampling, with the authors demonstrating that weaker models benefit disproportionately more from their inference scaling method.",
+    "link": "https://openreview.net/pdf?id=MCHuGOkExF"
+  },
+  {
     "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning",
     "author": "Siyan Zhao et al",
     "year": "2025",
