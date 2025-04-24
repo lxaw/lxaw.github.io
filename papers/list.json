@@ -1,5 +1,77 @@
 [
   {
+    "title": "Autoregressive Diffusion Models",
+    "author": "Emiel Hoogeboom et al",
+    "year": "2022",
+    "topic":"llm, diffusion, autoregression",
+    "venue": "ICLR",
+    "description": "Autoregressive Diffusion Models (ARDMs) introduce a novel framework that unifies order-agnostic autoregressive models and discrete diffusion processes, allowing generation in any arbitrary order without requiring causal masking in the neural network architecture. ARDMs employ a training objective that optimizes only a single step of the generation process at a time (similar to diffusion models), using varying mask probabilities and implementing generation through iterative mask replacement with predicted tokens, which enables more efficient training while preserving bidirectional context. The authors develop parallelized inference and generation processes using dynamic programming that can adaptively determine which steps to parallelize, creating a flexible tradeoff between generation speed and model quality while requiring significantly fewer steps than discrete diffusion models to achieve equivalent performance. ARDMs are also extended with \"depth upscaling\" capabilities that structure the generation process into multiple stages of progressive refinement (such as bit-by-bit generation), which proves particularly effective for lossless compression tasks where ARDMs outperform competing approaches, especially in single-image compression scenarios.",
+    "link": "https://arxiv.org/pdf/2110.02037"
+  },
+  {
+    "title": "FiLM: Fill-In Language Models for Any-Order Generation",
+    "author": "Tianxiao Shen et al",
+    "year": "2023",
+    "topic":"llm, order",
+    "venue": "Arxiv",
+    "description": "FiLM introduces a flexible language modeling approach that enables generation at any position without adhering to a specific order, extending the masked language modeling objective by adopting varying mask probabilities sampled from the Beta distribution to enhance its generative capabilities. Unlike traditional left-to-right language models, FiLM can seamlessly insert missing phrases, sentences, or paragraphs by considering both preceding and subsequent context, making it particularly effective for text infilling tasks that involve filling text in the middle. FiLM's training methodology is inspired by both Masked Language Models and text diffusion models, drawing a mask probability from the Beta distribution for each training sequence and masking tokens with this probability, which significantly enhances its generative capacity compared to MLMs trained with fixed mask ratios. During decoding, FiLM progressively replaces one mask with a predicted token at each step using various strategies, with the left-to-right and minimum entropy approaches proving most effective, while its perplexity approaches that of comparable Causal Language Models as model size increases.",
+    "link": "https://arxiv.org/pdf/2310.09930"
+  },
+  {
+    "title": "Sketch-of-Thought: Efficient LLM Reasoning with Adaptive Cognitive-Inspired Sketching",
+    "author": "Simon A. Aytes et al",
+    "year": "2024",
+    "topic":"sketch, llm",
+    "venue": "Arxiv",
+    "description": "Sketch-of-Thought introduces a novel prompting framework that significantly reduces token usage in large language model reasoning while maintaining accuracy. The paper presents three cognitive science-inspired paradigms—Conceptual Chaining, Chunked Symbolism, and Expert Lexicons—each designed for different reasoning tasks and selected dynamically by a lightweight routing model. Conceptual Chaining creates concise logical sequences between key concepts for commonsense reasoning, Chunked Symbolism organizes mathematical reasoning into compact symbolic representations, and Expert Lexicons leverages domain-specific shorthand for technical disciplines. Through evaluation across 15 reasoning datasets spanning multiple domains, languages, and modalities, SoT achieves token reductions of 76% with minimal accuracy impact, and sometimes even improves performance in mathematical and multi-hop reasoning tasks.",
+    "link": "https://arxiv.org/pdf/2503.05179"
+  },
+  {
+    "title": "PHI-S: Distribution Balancing for Label-Free Multi-Teacher Distillation",
+    "author": "Mike Ranzinger et al",
+    "year": "2024",
+    "topic":"distillation, teacher",
+    "venue": "Arxiv",
+    "description": "PHI-S introduces a novel distribution balancing technique for label-free multi-teacher knowledge distillation that addresses the significant variance disparities among heterogeneous teacher models (like CLIP, DINOv2, SigLIP, and SAM). The method leverages Hadamard matrices in an innovative way to create an isotropic standardization approach that uniformly distributes error magnitudes across all feature dimensions, preventing any single dimension from having disproportionate influence in the loss function. Unlike previous whitening or standardization techniques that distort the feature space unevenly, PHI-S first rotates the distribution using a combination of PCA and Hadamard matrices to achieve equal variance in all dimensions, then applies a uniform scalar normalization factor that maintains better numerical stability even with rank-deficient distributions. The authors prove PHI-S's mathematical properties and empirically demonstrate its superiority over other normalization methods, achieving improved distillation performance while requiring significantly less computation than competing approaches when training a student model to simultaneously match multiple visual foundation model teachers.",
+    "link": "https://arxiv.org/pdf/2410.01680"
+  },
+  {
+    "title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Models",
+    "author": "Shizhe Diao et al",
+    "year": "2025",
+    "topic":"data",
+    "venue": "ICLR",
+    "description": "CLIMB introduces a novel framework that automates the search for optimal data mixtures during pre-training by first embedding and clustering large-scale datasets in a semantic space, then constructing mixture-performance pairs by sampling and pruning data mixtures while training proxy models, and finally fitting a predictor that treats data mixture as input features and performance metrics as target labels. The method frames data mixture construction as a search problem and solves it through a bootstrapping strategy where candidate mixtures are iteratively proposed, pruned, and refined to optimize diversity and domain relevance. Unlike static mixing strategies, CLIMB dynamically adjusts data mixtures throughout training using a weak predictor approach, integrating multiple predictors iteratively to discover effective configurations for domain adaptation without relying on predefined domain labels. The technique actively learns to refine and optimize data mixtures based on real-world feedback from environment verifications rather than passively relying on predefined heuristics or human-annotated domain labels, while also prioritizing computational efficiency through lightweight proxy models to evaluate mixture quality and reduce the search space by pruning progressively.",
+    "link": "https://arxiv.org/pdf/2504.13161"
+  },
+  {
+    "title": "Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation",
+    "author": "Xuefei Ning et al",
+    "year": "2024",
+    "topic":"LLM",
+    "venue": "ICLR",
+    "description": "SoT is a novel prompting approach that decreases generation latency by guiding LLMs to first produce a skeleton outline of key points, then expand those points in parallel rather than generating the entire response sequentially. The technique leverages batched decoding for open-source models or parallel API calls for proprietary models to complete multiple skeleton points simultaneously, addressing a fundamental bottleneck in LLM inference without requiring model, system, or hardware changes. SoT introduces a \"data-centric\" optimization pathway by having the LLM organize its output content in a way that enables parallelization, rather than relying on model-level or system-level optimizations. The authors also develop SoT-R (SoT with router), which employs a classifier to selectively apply SoT only for suitable question types, achieving both significant speed-ups (up to 2.4×) while maintaining or even improving answer quality across various LLMs.",
+    "link": "https://arxiv.org/pdf/2307.15337"
+  },
+  {
+    "title": "Learning Adaptive Parallel Reasoning with Language Models",
+    "author": "Jiayi Pan et al",
+    "year": "2025",
+    "topic":"LLM",
+    "venue": "Arxiv",
+    "description": "APR introduces a novel reasoning framework that enables language models to dynamically orchestrate both serialized and parallel computations through a parent-child threading mechanism where parent inference threads can delegate subtasks to multiple child threads using spawn() operations. The key innovation is an end-to-end reinforcement learning strategy that optimizes both parent and child inference threads without requiring predefined reasoning structures, allowing models to adaptively allocate computation between serial and parallel paths for maximum efficiency. APR implements this parent-child threading mechanism using a standard model serving framework to perform inference in child threads simultaneously through batching, which significantly reduces real-time latency compared to traditional serialized approaches. This approach demonstrates superior performance over serialized chain-of-thought methods in three dimensions: higher success rates within the same context window constraints, better scaling behavior when increasing compute budgets, and improved accuracy at equivalent latency when evaluated on complex reasoning tasks.",
+    "link": "https://arxiv.org/pdf/2504.15466"
+  },
+  {
+    "title": "LLaMAFlex: Many-in-one LLMs Via Generalized Pruning and Weight Sharing",
+    "author": "Ruisi Cai et al",
+    "year": "2025",
+    "topic":"LLM",
+    "venue": "ICLR",
+    "description": "LLamaFlex introduces a novel nested weight-shared architecture that can be pruned across both width (attention heads, hidden dimensions, MLP sizes) and depth (layers) dimensions in a zero-shot manner, enabling instant generation of multiple compressed models from a single trained model. The approach differs from traditional pruning methods by requiring only a single continued training phase of approximately 60 billion tokens to train the elastic network alongside an end-to-end Gumbel Softmax-based router that smoothly interpolates across model sizes. LLamaFlex enhances nested architectures through a \"policy-aware modulation\" technique inspired by diffusion models, which introduces additional parameters for each nesting level to increase model expressivity beyond what pure weight sharing allows. Unlike previous elastic frameworks, LLamaFlex produces uniform architectures (consistent configurations across all layers) that are optimized for deployment in common frameworks like TensorRT-LLM, while achieving accuracy on par with or better than state-of-the-art pruned models, elastic/flexible models, and models trained from scratch.",
+    "link": "https://openreview.net/pdf?id=AyC4uxx2HW"
+  },
+  {
     "title": "Packing Input Frame Context in Next-Frame Prediction Models for Video Generation",
     "author": "Lvmin Zhang et al",
     "year": "2025",
