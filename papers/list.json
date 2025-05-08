@@ -1,5 +1,41 @@
 [
   {
+    "title": "Continual Diffusion for Categorical Data",
+    "author": "Sander Dieleman et al",
+    "year": "2025",
+    "topic":"llm, diffusion",
+    "venue": "Arxiv",
+    "description": "Continuous diffusion for categorical data (CDCD) is a framework for applying continuous diffusion models to discrete categorical data like language by embedding tokens in Euclidean space, enabling generative modeling through iterative refinement. The authors propose score interpolation as an alternative to score matching for diffusion model training, which allows using the familiar cross-entropy loss function and enables end-to-end training of both the diffusion model and the Euclidean embeddings with a single loss function. Time warping is introduced as an active learning strategy that automatically adapts the distribution of noise levels during training to maximize efficiency by ensuring the entropy of model predictions increases linearly. While autoregressive models currently dominate language modeling research, diffusion-based approaches offer advantages including architectural flexibility, adaptivity of the denoising procedure to trade off computational cost and sample quality, and the ability to perform arbitrary text infilling.",
+    "link": "https://arxiv.org/pdf/2211.15089"
+  },
+  {
+    "title": "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning",
+    "author": "Jiasheng Ye et al",
+    "year": "2025",
+    "topic":"llm, diffusion",
+    "venue": "Arxiv",
+    "description": "Diffusion Language Models (DIFFUSION-LLMs) demonstrate that scaling in data, model size, and task diversity enables them to perform competently across various language tasks, challenging the dominance of autoregressive models in the discrete domain. The authors establish a connection between masked language modeling and discrete diffusion models, allowing them to repurpose pre-trained masked LMs into DIFFUSION-LLMs through \"diffusive adaptation\" without expensive pre-training from scratch. Experiments across translation, summarization, and instruction-following tasks show that these models consistently improve as they scale up, exhibiting zero-shot and few-shot capabilities comparable to autoregressive counterparts. Notably, DIFFUSION-LLMs demonstrate unique advantages in their bidirectional receptive field and flexible generation order, enabling them to excel in tasks requiring implicit planning and structured reasoning where fixed left-to-right generation is suboptimal.",
+    "link": "https://arxiv.org/pdf/2308.12219"
+  },
+  {
+    "title": "LLM Processes: Numerical Predictive Distributions Conditioned on Natural Language",
+    "author": "James Requeima et al",
+    "year": "2024",
+    "topic":"llm",
+    "venue": "NeurIPS",
+    "description": "LLM Processes provide a framework for eliciting coherent numerical predictive distributions from large language models without any fine-tuning, allowing users to incorporate domain knowledge through natural language descriptions. The authors develop two approaches—independent marginal sampling and autoregressive sampling—with the latter capturing dependencies between outputs for superior performance by maintaining information across predictions. Through extensive experiments, they demonstrate LLMPs perform competitively with specialized statistical methods like Gaussian Processes across diverse tasks including forecasting, multi-dimensional regression, image reconstruction, and black-box optimization. Most significantly, the research shows how conditioning on textual information meaningfully alters predictive distributions to create forecasts that incorporate real-world knowledge not explicitly present in numerical data, such as seasonal patterns or domain-specific constraints.",
+    "link": "https://proceedings.neurips.cc/paper_files/paper/2024/file/c5ec22711f3a4a2f4a0a8ffd92167190-Paper-Conference.pdf"
+  },
+  {
+    "title": "Large Language Models to Diffusion Finetuning",
+    "author": "Edoardo Cetin et al",
+    "year": "2025",
+    "topic":"llm, diffusion, autoregression",
+    "venue": "Arxiv",
+    "description": "L2D introduces a finetuning method that gives pre-trained language models the scaling properties of diffusion models, enabling them to improve performance by increasing computation at inference time. The approach adds a parallel diffusion path to existing models that processes diffusion tokens separately, preserving original capabilities while enabling multi-step reasoning. Unlike traditional finetuning which risks knowledge loss, L2D augments models with new capabilities such as adaptive computation and domain-specific expertise through classifier-free guidance. This innovation effectively bridges the autoregressive and diffusion paradigms, creating models that combine the training efficiency of language models with the compute-scaling advantages of diffusion.",
+    "link": "https://arxiv.org/pdf/2501.15781"
+  },
+  {
     "title": "Autoregressive Diffusion Models",
     "author": "Emiel Hoogeboom et al",
     "year": "2022",
