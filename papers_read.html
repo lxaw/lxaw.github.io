@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 284 papers. Let's keep it up!
+        So far, we have read 289 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 284 papers. Nice! 
+        Your search returned 289 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,56 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Unpacking Tokenization: Evaluating Text Compression and its Correlation with Model Performance</td>
+                <td>Omer Goldman et al</td>
+                <td>2024</td>
+                <td>llm</td>
+                <td>Arxiv</td>
+                <td>This paper investigates the relationship between tokenization quality and language model performance by focusing on compression as a key metric. The researchers demonstrate both theoretically and empirically that better-compressing tokenizers lead to improved downstream model performance, particularly for generation tasks and smaller models.</td>
+                <td><a href="https://arxiv.org/pdf/2403.06265v1" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On the Transformer Growth for Progressive BERT Training</td>
+                <td>Fabian Gloeckle et al</td>
+                <td>2024</td>
+                <td>llm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces a simple yet effective training method that enhances large language models (LLMs) by having them predict multiple future tokens simultaneously during training. The key innovation is training LLMs with multiple independent output heads operating on a shared model trunk, with each head responsible for predicting a different future token. Unlike conventional next-token prediction where models only predict one token ahead, multi-token prediction creates models that are both more powerful and faster at inference.</td>
+                <td><a href="https://arxiv.org/pdf/2404.19737" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>On the Transformer Growth for Progressive BERT Training</td>
+                <td>Xiaotao Gu et al</td>
+                <td>2024</td>
+                <td>llm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces CompoundGrow, a novel approach for progressive BERT training that applies compound growth operators across multiple model dimensions simultaneously. Unlike previous methods that grow models in only a single dimension (either depth, width, or input length), CompoundGrow balances growth across all three dimensions, significantly accelerating training without sacrificing model performance. The researchers discovered that compound scaling principles from network architecture search also apply to Transformer growth during progressive training - growing the network from multiple dimensions creates greater potential for achieving better performance with fewer resources. Through comprehensive experiments and analyses, the authors determined the most effective growth operators for each dimension: embedding pooling for length, parameter sharing for width, and progressive stacking for depth. </td>
+                <td><a href="https://arxiv.org/pdf/2312.15166" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>SOLAR 10.7B: Scaling Large Language Models with Simple yet Effective Depth Up-Scaling</td>
+                <td>Dahyun Kim et al</td>
+                <td>2024</td>
+                <td>llm</td>
+                <td>Arxiv</td>
+                <td>SOLAR 10.7B introduces depth up-scaling (DUS), a novel method for efficiently scaling large language models by combining depthwise scaling with continued pretraining. Unlike mixture-of-experts approaches, DUS maintains structural simplicity by removing layers from each end of a base model, joining the resulting portions, and then continuing pretraining to recover and enhance performance.</td>
+                <td><a href="https://arxiv.org/pdf/2312.15166" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LLAMA PRO: Progressive LLaMA with Block Expansion</td>
+                <td>Chengyue Wu et al</td>
+                <td>2024</td>
+                <td>llm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces LLAMA PRO, a novel post-pretraining method that expands Transformer blocks to enhance Large Language Models (LLMs) with new capabilities while preserving their original skills. The main innovation is a &quot;block expansion&quot; technique that adds new Transformer blocks to an existing LLM, initializing them as identity blocks, and then fine-tuning only these new blocks on domain-specific data while keeping the original blocks frozen.</td>
+                <td><a href="https://arxiv.org/pdf/2401.02415" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Continual Diffusion for Categorical Data</td>

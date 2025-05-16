@@ -1,5 +1,50 @@
 [
   {
+    "title": "Unpacking Tokenization: Evaluating Text Compression and its Correlation with Model Performance",
+    "author": "Omer Goldman et al",
+    "year": "2024",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "This paper investigates the relationship between tokenization quality and language model performance by focusing on compression as a key metric. The researchers demonstrate both theoretically and empirically that better-compressing tokenizers lead to improved downstream model performance, particularly for generation tasks and smaller models.",
+    "link": "https://arxiv.org/pdf/2403.06265v1"
+  },
+  {
+    "title": "On the Transformer Growth for Progressive BERT Training",
+    "author": "Fabian Gloeckle et al",
+    "year": "2024",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces a simple yet effective training method that enhances large language models (LLMs) by having them predict multiple future tokens simultaneously during training. The key innovation is training LLMs with multiple independent output heads operating on a shared model trunk, with each head responsible for predicting a different future token. Unlike conventional next-token prediction where models only predict one token ahead, multi-token prediction creates models that are both more powerful and faster at inference.",
+    "link": "https://arxiv.org/pdf/2404.19737"
+  },
+  {
+    "title": "On the Transformer Growth for Progressive BERT Training",
+    "author": "Xiaotao Gu et al",
+    "year": "2024",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces CompoundGrow, a novel approach for progressive BERT training that applies compound growth operators across multiple model dimensions simultaneously. Unlike previous methods that grow models in only a single dimension (either depth, width, or input length), CompoundGrow balances growth across all three dimensions, significantly accelerating training without sacrificing model performance. The researchers discovered that compound scaling principles from network architecture search also apply to Transformer growth during progressive training - growing the network from multiple dimensions creates greater potential for achieving better performance with fewer resources. Through comprehensive experiments and analyses, the authors determined the most effective growth operators for each dimension: embedding pooling for length, parameter sharing for width, and progressive stacking for depth. ",
+    "link": "https://arxiv.org/pdf/2312.15166"
+  },
+  {
+    "title": "SOLAR 10.7B: Scaling Large Language Models with Simple yet Effective Depth Up-Scaling",
+    "author": "Dahyun Kim et al",
+    "year": "2024",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "SOLAR 10.7B introduces depth up-scaling (DUS), a novel method for efficiently scaling large language models by combining depthwise scaling with continued pretraining. Unlike mixture-of-experts approaches, DUS maintains structural simplicity by removing layers from each end of a base model, joining the resulting portions, and then continuing pretraining to recover and enhance performance.",
+    "link": "https://arxiv.org/pdf/2312.15166"
+  },
+  {
+    "title": "LLAMA PRO: Progressive LLaMA with Block Expansion",
+    "author": "Chengyue Wu et al",
+    "year": "2024",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces LLAMA PRO, a novel post-pretraining method that expands Transformer blocks to enhance Large Language Models (LLMs) with new capabilities while preserving their original skills. The main innovation is a \"block expansion\" technique that adds new Transformer blocks to an existing LLM, initializing them as identity blocks, and then fine-tuning only these new blocks on domain-specific data while keeping the original blocks frozen.",
+    "link": "https://arxiv.org/pdf/2401.02415"
+  },
+  {
     "title": "Continual Diffusion for Categorical Data",
     "author": "Sander Dieleman et al",
     "year": "2025",
