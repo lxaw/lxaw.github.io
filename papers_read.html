@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 289 papers. Let's keep it up!
+        So far, we have read 297 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 289 papers. Nice! 
+        Your search returned 297 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,86 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Parallel Scaling Law for Language Models</td>
+                <td>Mouxiang Chen et al</td>
+                <td>2025</td>
+                <td>llm, scaling</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Parallel Scaling (PARSCALE), a novel scaling paradigm that increases model capability by scaling parallel computation rather than parameters or inference tokens. The core technique involves applying P diverse learnable transformations (using prefix tuning) to the input, executing forward passes in parallel through the same model, and dynamically aggregating the outputs using learnable weights to produce a single prediction. The authors theoretically demonstrate that scaling P parallel streams is equivalent to scaling parameters by O(log P), establishing a new scaling law that generalizes the Chinchilla scaling law to include computational scaling alongside parameter scaling. The method offers superior inference efficiency compared to parameter scaling, using significantly less memory and latency while achieving comparable performance improvements, making it particularly suitable for edge deployment scenarios.</td>
+                <td><a href="https://arxiv.org/pdf/2505.10475" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Why Does the Effective Context Length of LLMs Fall Short?</td>
+                <td>Chenxin An et al</td>
+                <td>2024</td>
+                <td>llm, context length</td>
+                <td>Arxiv</td>
+                <td>This paper introduces STRING (ShifTed Rotary position embeddING), a training-free method that addresses the fundamental issue of left-skewed position frequency distribution in LLM pretraining, where distant position indices are severely undertrained compared to nearby ones. The key insight is that well-trained frequent position indices can be strategically shifted to replace undertrained distant positions during inference, allowing models to leverage their existing positional knowledge for long-range dependencies. STRING is implemented by manipulating the position matrix through three steps: dropping infrequent positions beyond a threshold, shifting frequent positions from the main diagonal to fill the empty bottom-left triangle, and restoring locality with a small window to maintain neighboring token relationships. The method can be efficiently implemented using FlashAttention by combining sliding window attention around the diagonal with shifted self-attention in the bottom-left triangle, requiring no additional training while dramatically improving long-context performance within existing training lengths.</td>
+                <td><a href="https://arxiv.org/pdf/2410.18745" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Exploring the Limits of Domain-Adaptive Training for Detoxifying Large-Scale Language Models</td>
+                <td>Boxin Wang et al</td>
+                <td>2022</td>
+                <td>llm, detoxify</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces Self-Generation Enabled domain-Adaptive Training (SGEAT), which leverages the language model&#x27;s own generative capabilities to create training data for detoxification rather than relying on pre-existing filtered corpora. The key insight is that self-generated data better captures the high-density regions of the model&#x27;s output space and mitigates exposure bias between training and inference, leading to more data-efficient detoxification. The authors demonstrate that adapter-based parameter-efficient training provides a better trade-off between toxicity reduction and model quality preservation compared to full model fine-tuning, especially for large-scale models. The paper also reveals that model toxicity primarily stems from training data rather than model size, as larger models show similar toxicity levels to smaller ones when trained on the same corpus, though they require more effort to detoxify effectively.</td>
+                <td><a href="https://arxiv.org/pdf/2202.04173" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>LLaDA-V: Large Language Diffusion Models with Visual Instruction Tuning</td>
+                <td>Zebin You et al</td>
+                <td>2025</td>
+                <td>llm, multimodal</td>
+                <td>Arxiv</td>
+                <td>This paper introduces LLaDA-V, the first purely diffusion-based multimodal large language model that extends masked diffusion language models to handle visual inputs through a standard visual instruction tuning framework with a vision encoder and MLP connector. The key innovation is adapting the masked diffusion training objective to multimodal dialogues by keeping image features and prompts unmasked while randomly masking only the response tokens, enabling the model to predict masked tokens using bidirectional context from both visual and textual information. During inference, the model generates responses iteratively through the reverse diffusion process, starting with fully masked responses and progressively unmasking high-confidence predictions while re-masking low-confidence ones. The paper demonstrates that bidirectional attention (allowing tokens to attend to all other tokens) works better than causal attention patterns for multimodal understanding tasks, suggesting that the inherent bidirectional nature of diffusion models provides advantages over autoregressive approaches for capturing global context in multimodal scenarios.</td>
+                <td><a href="https://www.arxiv.org/pdf/2505.16933" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion vs. Autoregressive Language Models: A Text Embedding Perspective</td>
+                <td>Siyue Zhang et al</td>
+                <td>2025</td>
+                <td>llm, embedding</td>
+                <td>Arxiv</td>
+                <td>This paper proposes using diffusion language models instead of autoregressive LLMs for text embedding tasks, motivated by the fundamental mismatch between LLMs&#x27; unidirectional attention and the bidirectional context understanding required for embeddings. The key insight is that diffusion models are inherently trained with bidirectional attention through their masked token prediction objective, making them naturally suited for capturing global context without requiring additional adaptations like LLM2Vec. The authors introduce REASONAUG, a novel training dataset constructed using LLMs that creates logically related positive-negative pairs for reasoning-intensive retrieval tasks, addressing the lack of effective training data for such scenarios. Their analysis reveals that bidirectional attention (both causal and reverse directions) is crucial for encoding long and complex documents, with reverse attention having a particularly significant impact on diffusion models compared to LLM-based approaches.</td>
+                <td><a href="https://arxiv.org/pdf/2505.15045" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>MaskGIT: Masked Generative Image Transformer</td>
+                <td>Huiwen Chen et al</td>
+                <td>2022</td>
+                <td>image generation</td>
+                <td>CVPR</td>
+                <td>MaskGIT introduces a bidirectional transformer that replaces autoregressive sequence generation with parallel token prediction using masked visual token modeling (MVTM), where random subsets of image tokens are masked during training and the model learns to predict them using context from all directions. The key innovation is an iterative decoding strategy that starts with all tokens masked and progressively unmasks the most confident predictions at each step, using a mask scheduling function that determines how many tokens to reveal per iteration. The paper demonstrates that cosine mask scheduling works best, following a &quot;less-to-more&quot; information flow where the model makes fewer confident predictions initially and gradually fills in more details. This approach enables natural extension to image editing tasks like inpainting and outpainting by simply initializing the iterative process with different mask patterns, making it inherently more flexible than autoregressive models that are constrained by sequential ordering.</td>
+                <td><a href="https://arxiv.org/pdf/2202.04200" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Show-O: One Single Transformer To Unify Multimodal Understanding and Generation</td>
+                <td>Jinheng Xie et al</td>
+                <td>2024</td>
+                <td>llm, multimodal</td>
+                <td>Arxiv</td>
+                <td>The paper introduces Show-o, a unified transformer that combines autoregressive modeling for text with discrete diffusion modeling for images, using an &quot;omni-attention&quot; mechanism that applies causal attention to text tokens and full attention to image tokens within the same sequence. It employs a unified prompting strategy with special task tokens to format multimodal inputs into structured sequences, enabling seamless handling of understanding and generation tasks. The model uses discrete image tokenization (via MAGVIT-v2) to create a shared vocabulary space for both text and image tokens, allowing unified training with combined next-token prediction and mask-token prediction objectives. A three-stage training pipeline progressively learns image token embeddings, cross-modal alignment, and high-quality generation capabilities, demonstrating that diffusion-based approaches can be more efficient than autoregressive methods for visual generation while maintaining competitive understanding performance.</td>
+                <td><a href="https://arxiv.org/pdf/2505.15809" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>MMaDA: Multimodal Large Diffusion Language Models</td>
+                <td>Ling Yang et al</td>
+                <td>2025</td>
+                <td>llm multimodal</td>
+                <td>Arxiv</td>
+                <td>The paper introduces MMaDA, a unified multimodal diffusion foundation model with three key innovations. First, it employs a modality-agnostic diffusion architecture that uses discrete tokenization for both text and images, enabling unified training under a single probabilistic formulation rather than requiring separate components for different modalities. Second, it implements Mixed Long-CoT fine-tuning that creates a unified chain-of-thought format across textual reasoning, multimodal understanding, and text-to-image generation tasks, facilitating cross-modal knowledge transfer and enabling cold-start training for reinforcement learning. Third, it develops UniGRPO, a novel reinforcement learning algorithm specifically designed for diffusion models that uses structured masking strategies and diversified reward modeling to optimize performance across reasoning and generation tasks while avoiding the computational inefficiencies of prior approaches. The framework demonstrates that diffusion models can serve as effective general-purpose foundation models by systematically bridging pretraining and post-training methodologies in a unified architecture.</td>
+                <td><a href="https://arxiv.org/pdf/2505.15809" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Unpacking Tokenization: Evaluating Text Compression and its Correlation with Model Performance</td>
