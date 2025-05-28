@@ -1,5 +1,14 @@
 [
   {
+    "title": "LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models",
+    "author": "Fengxi Zhu et al",
+    "year": "2025",
+    "topic":"llm, dpo",
+    "venue": "Arxiv",
+    "description": "LLaDA 1.5 addresses the challenge of applying Direct Preference Optimization (DPO) to Masked Diffusion Models (MDMs), where exact log-likelihoods must be approximated using Evidence Lower Bound (ELBO) estimates that introduce significant variance. The authors provide a theoretical analysis showing that both the bias and variance introduced by this approximation are governed by the variance of the preference score estimator—a linear combination of four ELBO terms. They propose Variance-Reduced Preference Optimization (VRPO), which employs three unbiased variance reduction techniques: increasing the Monte Carlo sampling budget for ELBOs, optimally allocating the sampling budget across distinct diffusion timesteps with one masked sample per timestep, and applying antithetic sampling by sharing the same random samples between current and reference policy ELBO estimates. The framework provides formal theoretical guarantees that these techniques reduce variance while maintaining unbiasedness, and extends beyond DPO to other alignment algorithms that involve ELBO estimation or correlated ELBO differences.",
+    "link": "https://arxiv.org/pdf/2505.19223"
+  },
+  {
     "title": "Parallel Scaling Law for Language Models",
     "author": "Mouxiang Chen et al",
     "year": "2025",
