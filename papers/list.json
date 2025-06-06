@@ -1,5 +1,32 @@
 [
   {
+    "title": "Esoteric Language Models",
+    "author": "Subham Sekhar Sahoo et al",
+    "year": "2025",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces Esoteric Language Models (Eso-LMs), which fuse autoregressive and masked diffusion paradigms through a hybrid training objective that combines AR and MDM losses, enabling smooth interpolation between the two approaches via a hyperparameter α₀ that controls the masking probability during training. The core technical innovation is a unified attention mechanism using attention bias matrices that allows a single transformer to dynamically switch between causal (AR-style) and bidirectional (MDM-style) attention patterns, with two variants: Eso-LM (A) that sparsifies attention over mask tokens, and Eso-LM (B) that enforces causal attention among clean tokens to enable KV caching. The method employs a two-phase sampling strategy where tokens are first generated in parallel via diffusion (with custom denoising schedules that avoid processing unnecessary mask tokens), followed by sequential left-to-right completion of remaining masked positions, with Eso-LM (B) uniquely supporting KV caching throughout both phases. Empirically, Eso-LMs achieve state-of-the-art perplexity among diffusion models while delivering substantial speedups (up to 65× faster than standard MDMs and 4× faster than block diffusion approaches), establishing a new Pareto frontier for the speed-quality tradeoff in non-autoregressive language generation.",
+    "link": "https://arxiv.org/pdf/2506.01928"
+  },
+  {
+    "title": "Accelerating Diffusion LLMs via Adaptive Parallel Decoding",
+    "author": "Daniel Israel",
+    "year": "2025",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "This paper addresses the fundamental challenge that diffusion language models (dLLMs), while theoretically capable of parallel token generation, fail to achieve competitive speed-quality tradeoffs compared to autoregressive models when generating multiple tokens simultaneously due to poor intra-token dependency modeling. The core contribution is Adaptive Parallel Decoding (APD), which inverts the speculative decoding paradigm by using a small auxiliary autoregressive model to verify parallel samples from a larger diffusion model, employing a multiplicative mixture of the dLLM's marginal probabilities and the autoregressive model's joint probabilities to determine how many tokens to accept in each iteration. The method incorporates several practical optimizations including KV caching for diffusion models (despite their bidirectional attention), masked input size limiting, and universal coupling via the Gumbel-Softmax trick to ensure valid sampling, resulting in three tunable hyperparameters that enable flexible speed-quality tradeoffs. Empirically, APD achieves Pareto-optimal performance by generating 5+ tokens per iteration while maintaining high accuracy on reasoning benchmarks, demonstrating that dynamic parallel sampling can overcome the sharp tradeoff between parallelization and quality that plagues naive approaches.",
+    "link": "https://arxiv.org/pdf/2506.00413"
+  },
+  {
+    "title": "Qwen3 Technical Report",
+    "author": "Qwen Team",
+    "year": "2025",
+    "topic":"llm",
+    "venue": "Arxiv",
+    "description": "Qwen3 introduces a unified architecture that seamlessly integrates thinking and non-thinking modes within a single model, eliminating the need for separate reasoning and chat-optimized models through a novel chat template design with /think and /no_think flags that enable dynamic mode switching based on user queries. The system implements a thinking budget mechanism that allows adaptive computational resource allocation during inference by truncating the reasoning process at user-defined token limits, naturally emerging from the thinking mode fusion training without explicit optimization. The authors develop a highly efficient strong-to-weak distillation pipeline that leverages both off-policy and on-policy knowledge transfer from larger teacher models, achieving superior performance compared to traditional reinforcement learning while requiring only 1/10th the computational resources and enabling lightweight models to match the reasoning capabilities of much larger counterparts. The training methodology employs a sophisticated four-stage post-training process (long-CoT cold start, reasoning RL, thinking mode fusion, general RL) combined with three-stage pre-training on 36 trillion tokens across 119 languages, utilizing architectural innovations like fine-grained expert segmentation in MoE models with global-batch load balancing and QK-normalization for training stability.",
+    "link": "https://arxiv.org/pdf/2505.09388"
+  },
+  {
     "title": "LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models",
     "author": "Fengxi Zhu et al",
     "year": "2025",
