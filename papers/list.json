@@ -1,5 +1,23 @@
 [
   {
+    "title": "DLM-One: Diffusion Language Models for One-Step Sequence Generation",
+    "author": "Tianqi Chen et al",
+    "year": "2025",
+    "topic":"diffusion llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces DLM-One, a score distillation framework that enables one-step sequence generation with continuous diffusion language models (DLMs), eliminating the need for iterative refinement during inference. The key contribution is adapting vision-domain diffusion acceleration techniques to language modeling by aligning the scores of a student model's outputs with a pretrained teacher DLM's score function in the continuous token embedding space. To address training instability and prevent degenerate solutions common in data-free distillation of language models, the authors propose an adversarial regularization approach that combines score matching loss with adversarial training, using the same network for both score estimation and GAN discrimination. The framework includes a two-stage training strategy where the first stage produces a reasonably good student model, and the second stage reinitializes the score estimator with teacher parameters to provide better learning signals for continued improvement, achieving up to 500× speedup over iterative diffusion methods while maintaining competitive performance on benchmark text generation tasks.",
+    "link": "https://arxiv.org/pdf/2506.00290"
+  },
+  {
+    "title": "Post-Training Quantization for Diffusion Transformer via Hierarchical Timestep Grouping",
+    "author": "Ning Ding et al",
+    "year": "2025",
+    "topic":"dit",
+    "venue": "Arxiv",
+    "description": "This paper introduces Hierarchical Timestep Grouping (HTG), a post-training quantization framework specifically designed for Diffusion Transformers (DiT) to enable efficient deployment without requiring retraining. The key contribution is identifying that DiT quantization difficulties stem from time-dependent, channel-specific activation outliers that vary across denoising timesteps, making traditional static quantization approaches ineffective. The authors propose a two-pronged solution: (1) temporally-grouped channel-wise shifting that uses hierarchical clustering to group similar timesteps and applies channel-wise shifts to center asymmetric outlier distributions, and (2) temporally-aggregated channel-wise scaling that transfers quantization difficulty from activations to weights using exponential moving averages of outlier magnitudes across timesteps. The framework includes a re-parameterization scheme that absorbs the shifting and scaling operations into existing AdaLN modules, eliminating additional computational overhead while achieving state-of-the-art quantization performance for both W8A8 and W4A8 configurations.",
+    "link": "https://arxiv.org/pdf/2503.06930"
+  },
+  {
     "title": "Esoteric Language Models",
     "author": "Subham Sekhar Sahoo et al",
     "year": "2025",
