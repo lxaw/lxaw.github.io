@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 301 papers. Let's keep it up!
+        So far, we have read 303 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 301 papers. Nice! 
+        Your search returned 303 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>DLM-One: Diffusion Language Models for One-Step Sequence Generation</td>
+                <td>Tianqi Chen et al</td>
+                <td>2025</td>
+                <td>diffusion llm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces DLM-One, a score distillation framework that enables one-step sequence generation with continuous diffusion language models (DLMs), eliminating the need for iterative refinement during inference. The key contribution is adapting vision-domain diffusion acceleration techniques to language modeling by aligning the scores of a student model&#x27;s outputs with a pretrained teacher DLM&#x27;s score function in the continuous token embedding space. To address training instability and prevent degenerate solutions common in data-free distillation of language models, the authors propose an adversarial regularization approach that combines score matching loss with adversarial training, using the same network for both score estimation and GAN discrimination. The framework includes a two-stage training strategy where the first stage produces a reasonably good student model, and the second stage reinitializes the score estimator with teacher parameters to provide better learning signals for continued improvement, achieving up to 500× speedup over iterative diffusion methods while maintaining competitive performance on benchmark text generation tasks.</td>
+                <td><a href="https://arxiv.org/pdf/2506.00290" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Post-Training Quantization for Diffusion Transformer via Hierarchical Timestep Grouping</td>
+                <td>Ning Ding et al</td>
+                <td>2025</td>
+                <td>dit</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Hierarchical Timestep Grouping (HTG), a post-training quantization framework specifically designed for Diffusion Transformers (DiT) to enable efficient deployment without requiring retraining. The key contribution is identifying that DiT quantization difficulties stem from time-dependent, channel-specific activation outliers that vary across denoising timesteps, making traditional static quantization approaches ineffective. The authors propose a two-pronged solution: (1) temporally-grouped channel-wise shifting that uses hierarchical clustering to group similar timesteps and applies channel-wise shifts to center asymmetric outlier distributions, and (2) temporally-aggregated channel-wise scaling that transfers quantization difficulty from activations to weights using exponential moving averages of outlier magnitudes across timesteps. The framework includes a re-parameterization scheme that absorbs the shifting and scaling operations into existing AdaLN modules, eliminating additional computational overhead while achieving state-of-the-art quantization performance for both W8A8 and W4A8 configurations.</td>
+                <td><a href="https://arxiv.org/pdf/2503.06930" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Esoteric Language Models</td>
