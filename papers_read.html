@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 303 papers. Let's keep it up!
+        So far, we have read 306 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 303 papers. Nice! 
+        Your search returned 306 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,36 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles</td>
+                <td>Qingyan Wei et al</td>
+                <td>2025</td>
+                <td>llm, diffusion</td>
+                <td>Arxiv</td>
+                <td>This paper proposes SlowFast Sampling to accelerate diffusion-based large language models (dLLMs) by addressing the static, inefficient nature of existing sampling strategies that suffer from suboptimal parallel token generation. The authors identify three &quot;Golden Principles&quot; governing effective dLLM sampling: the Certainty Principle (high-confidence tokens are more stable), the Convergence Principle (token confidences stabilize over iterations), and the Positional Principle (high-confidence tokens cluster in contiguous regions). Based on these principles, they design a dynamic two-stage approach that alternates between an Exploratory Stage (cautious decoding to identify stable regions) and an Accelerated Decoding Stage (aggressive parallel decoding within identified stable spans). Experiments show SlowFast Sampling achieves up to 15.63× speedup on LLaDA alone and up to 34.22× when combined with dLLM-Cache, while maintaining generation quality and even outperforming autoregressive models like LLaMA3 8B in throughput.</td>
+                <td><a href="https://arxiv.org/pdf/2506.10848" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs</td>
+                <td>Tengxuan Liu et al</td>
+                <td>2025</td>
+                <td>llm, cot, quantization</td>
+                <td>Arxiv</td>
+                <td>This paper addresses the memory bottleneck in long Chain-of-Thought (CoT) reasoning LLMs by proposing Progressive Mixed-precision KV Cache Quantization (PM-KVQ), which tackles two key issues with existing KV cache quantization methods. The authors identify that existing methods cause large cumulative quantization errors and fail to properly calibrate on long-context data due to Rotary Positional Embedding (RoPE) characteristics. PM-KVQ introduces progressive quantization that gradually reduces bit-width as memory fills up and block-wise memory allocation that assigns higher precision to more sensitive transformer blocks. To address calibration issues, they propose using short-context data with positional interpolation to approximate long-context distributions without additional computational overhead. Experiments on 7B-70B long-CoT LLMs demonstrate up to 8% improvement in reasoning benchmark performance compared to state-of-the-art baselines under the same memory constraints.</td>
+                <td><a href="https://arxiv.org/pdf/2505.18610" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Rethinking the Outlier Distribution in Large Language Models: An In-depth Study</td>
+                <td>Rahul Raman et al</td>
+                <td>2025</td>
+                <td>llm, quantization</td>
+                <td>Arxiv</td>
+                <td>This paper investigates the root causes of two types of outliers in large language models (LLMs): massive activations (MAs) and channel-wise outliers, which significantly impact quantization performance. The authors find that most massive activations are propagated through residual connections rather than being newly generated, and these &quot;fake&quot; MAs can be safely removed without affecting model accuracy. They discover that channel-wise outliers primarily emerge from normalization operations, specifically the rescaling step within LayerNorm/RMSNorm layers. Based on these insights, they propose efficient methods to eliminate the majority of both types of outliers with minimal impact on model performance, simplifying subsequent quantization processes.</td>
+                <td><a href="https://arxiv.org/pdf/2505.21670" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>DLM-One: Diffusion Language Models for One-Step Sequence Generation</td>

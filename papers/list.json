@@ -1,5 +1,32 @@
 [
   {
+    "title": "Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles",
+    "author": "Qingyan Wei et al",
+    "year": "2025",
+    "topic":"llm, diffusion",
+    "venue": "Arxiv",
+    "description": "This paper proposes SlowFast Sampling to accelerate diffusion-based large language models (dLLMs) by addressing the static, inefficient nature of existing sampling strategies that suffer from suboptimal parallel token generation. The authors identify three \"Golden Principles\" governing effective dLLM sampling: the Certainty Principle (high-confidence tokens are more stable), the Convergence Principle (token confidences stabilize over iterations), and the Positional Principle (high-confidence tokens cluster in contiguous regions). Based on these principles, they design a dynamic two-stage approach that alternates between an Exploratory Stage (cautious decoding to identify stable regions) and an Accelerated Decoding Stage (aggressive parallel decoding within identified stable spans). Experiments show SlowFast Sampling achieves up to 15.63× speedup on LLaDA alone and up to 34.22× when combined with dLLM-Cache, while maintaining generation quality and even outperforming autoregressive models like LLaMA3 8B in throughput.",
+    "link": "https://arxiv.org/pdf/2506.10848"
+  },
+  {
+    "title": "PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs",
+    "author": "Tengxuan Liu et al",
+    "year": "2025",
+    "topic":"llm, cot, quantization",
+    "venue": "Arxiv",
+    "description": "This paper addresses the memory bottleneck in long Chain-of-Thought (CoT) reasoning LLMs by proposing Progressive Mixed-precision KV Cache Quantization (PM-KVQ), which tackles two key issues with existing KV cache quantization methods. The authors identify that existing methods cause large cumulative quantization errors and fail to properly calibrate on long-context data due to Rotary Positional Embedding (RoPE) characteristics. PM-KVQ introduces progressive quantization that gradually reduces bit-width as memory fills up and block-wise memory allocation that assigns higher precision to more sensitive transformer blocks. To address calibration issues, they propose using short-context data with positional interpolation to approximate long-context distributions without additional computational overhead. Experiments on 7B-70B long-CoT LLMs demonstrate up to 8% improvement in reasoning benchmark performance compared to state-of-the-art baselines under the same memory constraints.",
+    "link": "https://arxiv.org/pdf/2505.18610"
+  },
+  {
+    "title": "Rethinking the Outlier Distribution in Large Language Models: An In-depth Study",
+    "author": "Rahul Raman et al",
+    "year": "2025",
+    "topic":"llm, quantization",
+    "venue": "Arxiv",
+    "description": "This paper investigates the root causes of two types of outliers in large language models (LLMs): massive activations (MAs) and channel-wise outliers, which significantly impact quantization performance. The authors find that most massive activations are propagated through residual connections rather than being newly generated, and these \"fake\" MAs can be safely removed without affecting model accuracy. They discover that channel-wise outliers primarily emerge from normalization operations, specifically the rescaling step within LayerNorm/RMSNorm layers. Based on these insights, they propose efficient methods to eliminate the majority of both types of outliers with minimal impact on model performance, simplifying subsequent quantization processes.",
+    "link": "https://arxiv.org/pdf/2505.21670"
+  },
+  {
     "title": "DLM-One: Diffusion Language Models for One-Step Sequence Generation",
     "author": "Tianqi Chen et al",
     "year": "2025",
