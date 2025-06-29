@@ -1,5 +1,41 @@
 [
   {
+    "title": "SpanBERT: Improving Pre-Training by Representing and Predicting Spans",
+    "author": "Mandar Joshi et al",
+    "year": "2020",
+    "topic":"llm, bert",
+    "venue": "Arxiv",
+    "description": "This paper introduces SpanBERT, a pre-training method that improves upon BERT by focusing on span-level representations rather than individual tokens. The key innovations are: (1) masking contiguous random spans of text rather than individual tokens, using a geometric distribution to sample span lengths; and (2) introducing a Span Boundary Objective (SBO) that trains the model to predict the entire content of masked spans using only the representations of tokens at the span boundaries, plus position embeddings. Additionally, SpanBERT uses single-sequence training without BERT's Next Sentence Prediction objective, which proves more effective than bi-sequence training. The method achieves substantial improvements on span selection tasks like question answering (94.6% F1 on SQuAD 1.1, 88.7% on SQuAD 2.0) and coreference resolution (79.6% F1 on OntoNotes), demonstrating that span-focused pre-training objectives can significantly enhance performance on tasks requiring span-level reasoning.",
+    "link": "https://arxiv.org/pdf/1907.10529"
+  },
+  {
+    "title": "Unified Language Model Pre-Training for Natural Language Understanding and Generation",
+    "author": "Li Dong et al",
+    "year": "2019",
+    "topic":"llm, bert",
+    "venue": "NeurIPS",
+    "description": "This paper introduces UNILM (UNIfied pre-trained Language Model), a single Transformer model that can be fine-tuned for both natural language understanding and generation tasks by using different self-attention masks during pre-training. The model is jointly trained on three language modeling objectives: unidirectional (left-to-right and right-to-left), bidirectional, and sequence-to-sequence prediction, with the key innovation being the use of specific attention masks to control what context each token can access during prediction. UNILM achieves competitive performance with BERT on understanding tasks like GLUE and question answering, while establishing new state-of-the-art results on five generation tasks including CNN/DailyMail summarization, question generation, and dialog response generation. The unified approach eliminates the need for separate models for different tasks while enabling parameter sharing that leads to more general text representations and better performance across both understanding and generation applications.",
+    "link": "https://arxiv.org/pdf/1905.03197"
+  },
+  {
+    "title": "Flow Matching for Generative Modeling",
+    "author": "Yaron Lipman et al",
+    "year": "2023",
+    "topic":"llm, flow matching",
+    "venue": "Arxiv",
+    "description": "This paper introduces Flow Matching (FM), a simulation-free framework for training Continuous Normalizing Flows (CNFs) that breaks away from the limitations of diffusion-based generative models. The key innovation is constructing target probability paths and vector fields through conditional formulations per data sample, then showing that optimizing a Conditional Flow Matching objective (which is tractable) provides identical gradients to the intractable Flow Matching objective. The framework supports a general family of Gaussian probability paths, including both existing diffusion paths and a novel Optimal Transport (OT) path that creates straight-line trajectories with constant direction, making it simpler to learn than curved diffusion paths. Experimental results on ImageNet demonstrate that FM with OT paths achieves superior performance in likelihood estimation and sample quality while requiring fewer function evaluations for sampling, offering faster training and generation compared to traditional diffusion methods.",
+    "link": "https://arxiv.org/pdf/2210.02747"
+  },
+  {
+    "title": "Discrete Flow Matching",
+    "author": "Itai Gat et al",
+    "year": "2024",
+    "topic":"llm, flow matching",
+    "venue": "Arxiv",
+    "description": "This paper introduces Discrete Flow Matching, a novel generative framework that extends continuous flow matching to discrete data like text and code. The method uses continuous-time discrete Markov chains to define probability paths between source (masked) and target distributions, with generating probability velocities that have identical forms to continuous flow matching when using denoiser or noise-prediction parameterizations. Key practical contributions include a general family of probability paths with different schedulers, unified corrector sampling techniques, and the ability to scale to large models (1.7B parameters) that achieve competitive results on coding benchmarks like HumanEval (6.7% Pass@1) and text generation tasks. The approach significantly closes the performance gap between autoregressive models and discrete flow models while enabling non-autoregressive generation, though it still requires more function evaluations than continuous flow matching.",
+    "link": "https://arxiv.org/pdf/2407.15595"
+  },
+  {
     "title": "Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles",
     "author": "Qingyan Wei et al",
     "year": "2025",

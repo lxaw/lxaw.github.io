@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 306 papers. Let's keep it up!
+        So far, we have read 310 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 306 papers. Nice! 
+        Your search returned 310 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,46 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>SpanBERT: Improving Pre-Training by Representing and Predicting Spans</td>
+                <td>Mandar Joshi et al</td>
+                <td>2020</td>
+                <td>llm, bert</td>
+                <td>Arxiv</td>
+                <td>This paper introduces SpanBERT, a pre-training method that improves upon BERT by focusing on span-level representations rather than individual tokens. The key innovations are: (1) masking contiguous random spans of text rather than individual tokens, using a geometric distribution to sample span lengths; and (2) introducing a Span Boundary Objective (SBO) that trains the model to predict the entire content of masked spans using only the representations of tokens at the span boundaries, plus position embeddings. Additionally, SpanBERT uses single-sequence training without BERT&#x27;s Next Sentence Prediction objective, which proves more effective than bi-sequence training. The method achieves substantial improvements on span selection tasks like question answering (94.6% F1 on SQuAD 1.1, 88.7% on SQuAD 2.0) and coreference resolution (79.6% F1 on OntoNotes), demonstrating that span-focused pre-training objectives can significantly enhance performance on tasks requiring span-level reasoning.</td>
+                <td><a href="https://arxiv.org/pdf/1907.10529" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Unified Language Model Pre-Training for Natural Language Understanding and Generation</td>
+                <td>Li Dong et al</td>
+                <td>2019</td>
+                <td>llm, bert</td>
+                <td>NeurIPS</td>
+                <td>This paper introduces UNILM (UNIfied pre-trained Language Model), a single Transformer model that can be fine-tuned for both natural language understanding and generation tasks by using different self-attention masks during pre-training. The model is jointly trained on three language modeling objectives: unidirectional (left-to-right and right-to-left), bidirectional, and sequence-to-sequence prediction, with the key innovation being the use of specific attention masks to control what context each token can access during prediction. UNILM achieves competitive performance with BERT on understanding tasks like GLUE and question answering, while establishing new state-of-the-art results on five generation tasks including CNN/DailyMail summarization, question generation, and dialog response generation. The unified approach eliminates the need for separate models for different tasks while enabling parameter sharing that leads to more general text representations and better performance across both understanding and generation applications.</td>
+                <td><a href="https://arxiv.org/pdf/1905.03197" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Flow Matching for Generative Modeling</td>
+                <td>Yaron Lipman et al</td>
+                <td>2023</td>
+                <td>llm, flow matching</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Flow Matching (FM), a simulation-free framework for training Continuous Normalizing Flows (CNFs) that breaks away from the limitations of diffusion-based generative models. The key innovation is constructing target probability paths and vector fields through conditional formulations per data sample, then showing that optimizing a Conditional Flow Matching objective (which is tractable) provides identical gradients to the intractable Flow Matching objective. The framework supports a general family of Gaussian probability paths, including both existing diffusion paths and a novel Optimal Transport (OT) path that creates straight-line trajectories with constant direction, making it simpler to learn than curved diffusion paths. Experimental results on ImageNet demonstrate that FM with OT paths achieves superior performance in likelihood estimation and sample quality while requiring fewer function evaluations for sampling, offering faster training and generation compared to traditional diffusion methods.</td>
+                <td><a href="https://arxiv.org/pdf/2210.02747" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Discrete Flow Matching</td>
+                <td>Itai Gat et al</td>
+                <td>2024</td>
+                <td>llm, flow matching</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Discrete Flow Matching, a novel generative framework that extends continuous flow matching to discrete data like text and code. The method uses continuous-time discrete Markov chains to define probability paths between source (masked) and target distributions, with generating probability velocities that have identical forms to continuous flow matching when using denoiser or noise-prediction parameterizations. Key practical contributions include a general family of probability paths with different schedulers, unified corrector sampling techniques, and the ability to scale to large models (1.7B parameters) that achieve competitive results on coding benchmarks like HumanEval (6.7% Pass@1) and text generation tasks. The approach significantly closes the performance gap between autoregressive models and discrete flow models while enabling non-autoregressive generation, though it still requires more function evaluations than continuous flow matching.</td>
+                <td><a href="https://arxiv.org/pdf/2407.15595" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles</td>
