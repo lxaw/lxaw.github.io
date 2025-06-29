@@ -3,46 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searchable book list</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Searchable Book List | Lex Whalen</title>
+    <style>
+        :root {
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: var(--text-primary);
+            background-color: var(--background);
+        }
+        
+        /* Top Navigation */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-hover);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0.5rem;
+            z-index: 1000;
+            position: relative;
+        }
+        
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            min-width: 200px;
+            display: none;
+            z-index: 999;
+        }
+        
+        .dropdown-menu.active {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-menu a:hover {
+            color: var(--accent);
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .book-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: var(--surface);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Search Section */
+        .search-section {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+        
+        .search-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--text-primary);
+        }
+        
+        .search-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .search-inputs input {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            background: var(--background);
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+        
+        .search-inputs input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+        }
+        
+        .search-inputs input::placeholder {
+            color: var(--text-secondary);
+        }
+        
+        .clear-button {
+            grid-column: 1 / -1;
+            justify-self: center;
+            padding: 0.75rem 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: fit-content;
+        }
+        
+        .clear-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        
+        /* Table Styles */
+        .table-container {
+            background: var(--surface);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background: var(--accent);
+            color: white;
+        }
+        
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            position: relative;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        th:hover {
+            background: var(--accent-hover);
+        }
+        
+        th:after {
+            content: '↕';
+            position: absolute;
+            right: 0.5rem;
+            opacity: 0.6;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+        
+        tbody tr:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Responsive table */
+        @media (max-width: 768px) {
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            table {
+                min-width: 800px;
+            }
+            
+            th, td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.875rem;
+            }
+            
+            .search-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .book-stats {
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                min-width: 120px;
+                padding: 0.75rem 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                margin: 1rem auto;
+                padding: 0 1rem;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .search-section {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Here's where I keep a list of books I have read.</h1>
-    This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.
-    
-    I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.
+    <nav class="top-nav">
+        <a href="index.html" class="back-link">
+            ← Back to Home
+        </a>
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="cv/main.pdf">CV/Resume</a>
+                <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>
+                <a href="https://github.com/lxaw">GitHub</a>
+                <a href="papers_read.html">Papers List</a>
+                <a href="books_read.html">Reading List</a>
+                <a href="personal_interests.html">Personal</a>
+            </div>
+        </div>
+    </nav>
 
-    <p id="bookCount">So far, we have read 0 books.</p>
-    <small id = "searchCount">
-        Your search returned 0 books. Nice!
-    </small>
-    
-    <div class="search-inputs">
-        <input type="text" id="titleSearch" placeholder="Search title...">
-        <input type="text" id="authorSearch" placeholder="Search author...">
-        <input type="text" id="dateCompleteSearch" placeholder="Search date complete...">
-        <input type="text" id="pageCountSearch" placeholder="Search page count...">
-        <input type="text" id="ratingSearch" placeholder="Search rating...">
-        <input type="text" id="descriptionSearch" placeholder="Search description...">
-        <button id="clearSearch">Clear Search</button>
-    </div>
-    
-    <table id="bookTable">
-        <thead>
-            <tr>
-                <th data-sort="title">Title</th>
-                <th data-sort="author">Author</th>
-                <th data-sort="date-complete">Date Complete</th>
-                <th data-sort="page-count">Page Count</th>
-                <th data-sort="rating">Rating</th>
-                <th data-sort="description">Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Table body will be populated by JavaScript -->
-        </tbody>
-    </table>
+    <header>
+        <h1>Reading List</h1>
+        <p class="description">
+            Here's where I keep a list of books I have read. This list was curated by 
+            <a href="index.html">myself</a>, beginning from around February 2023 to now.
+            I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.
+        </p>
+        
+        <div class="book-stats">
+            <div class="stat-item">
+                <span class="stat-number" id="bookCount">0</span>
+                <span class="stat-label">Total Books</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="searchCount">0</span>
+                <span class="stat-label">Search Results</span>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="search-section">
+            <h2 class="search-title">Search & Filter Books</h2>
+            <div class="search-inputs">
+                <input type="text" id="titleSearch" placeholder="Search title...">
+                <input type="text" id="authorSearch" placeholder="Search author...">
+                <input type="text" id="dateCompleteSearch" placeholder="Search date complete...">
+                <input type="text" id="pageCountSearch" placeholder="Search page count...">
+                <input type="text" id="ratingSearch" placeholder="Search rating...">
+                <input type="text" id="descriptionSearch" placeholder="Search description...">
+                <button id="clearSearch" class="clear-button">Clear All Filters</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="bookTable">
+                <thead>
+                    <tr>
+                        <th data-sort="title">Title</th>
+                        <th data-sort="author">Author</th>
+                        <th data-sort="date-complete">Date Complete</th>
+                        <th data-sort="page-count">Page Count</th>
+                        <th data-sort="rating">Rating</th>
+                        <th data-sort="description">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="loading">Loading books...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
     <script>
         const table = document.getElementById('bookTable');
@@ -57,24 +458,63 @@
             description: document.getElementById('descriptionSearch')
         };
         const bookCountElement = document.getElementById('bookCount');
+        const searchCountElement = document.getElementById('searchCount');
         let sortOrder = {};
+        let allBooks = [];
+
+        // Hamburger menu functionality
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const dropdown = document.getElementById('dropdownMenu');
+            
+            hamburger.classList.toggle('active');
+            dropdown.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const hamburger = document.querySelector('.hamburger');
+            const dropdown = document.getElementById('dropdownMenu');
+            
+            if (!hamburger.contains(event.target) && !dropdown.contains(event.target)) {
+                hamburger.classList.remove('active');
+                dropdown.classList.remove('active');
+            }
+        });
 
         // Load books from JSON file
         fetch('books/list.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load books');
+                }
+                return response.json();
+            })
             .then(books => {
+                allBooks = books;
                 populateTable(books);
                 updateBookCount(books.length);
+                updateSearchCount(books.length);
                 setupEventListeners();
             })
-            .catch(error => console.error('Error loading books:', error));
+            .catch(error => {
+                console.error('Error loading books:', error);
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Error loading books. Please try again later.</td></tr>';
+            });
 
         function populateTable(books) {
+            tbody.innerHTML = '';
+            
+            if (books.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No books found matching your search criteria.</td></tr>';
+                return;
+            }
+
             books.forEach(book => {
                 const row = document.createElement('tr');
                 for (let key in searchInputs) {
                     const cell = document.createElement('td');
-                    cell.textContent = book[key];
+                    cell.textContent = book[key] || '';
                     row.appendChild(cell);
                 }
                 tbody.appendChild(row);
@@ -82,8 +522,11 @@
         }
 
         function updateBookCount(count) {
-            bookCountElement.textContent = `So far, we have read ${count} books. Let's keep it up!`;
-            searchCountElement.textContent = `Your search returned ${count} books. Nice!`
+            bookCountElement.textContent = count;
+        }
+
+        function updateSearchCount(count) {
+            searchCountElement.textContent = count;
         }
 
         function setupEventListeners() {
@@ -109,30 +552,19 @@
         }
 
         function searchTable() {
-            const rows = tbody.getElementsByTagName('tr');
-            let numRowsMatch = 0;
-
-            for (let i = 0; i < rows.length; i++) {
-                const row = rows[i];
-                const cells = row.getElementsByTagName('td');
-                let foundMatch = true;
-
+            const filteredBooks = allBooks.filter(book => {
                 for (let key in searchInputs) {
-                    const cellText = cells[Object.keys(searchInputs).indexOf(key)].textContent.toLowerCase();
+                    const bookValue = (book[key] || '').toString().toLowerCase();
                     const searchTerm = searchInputs[key].value.toLowerCase();
-                    if (searchTerm && !cellText.includes(searchTerm)) {
-                        foundMatch = false;
-                        break;
+                    if (searchTerm && !bookValue.includes(searchTerm)) {
+                        return false;
                     }
                 }
-                if(foundMatch){
-                    row.style.display = '';
-                    numRowsMatch++;
-                }else{
-                    row.style.display='none';
-                }
-            }
-            updateSearchCount(numRowsMatch);
+                return true;
+            });
+
+            populateTable(filteredBooks);
+            updateSearchCount(filteredBooks.length);
         }
 
         function sortTable(column, dataType, order) {
@@ -155,11 +587,6 @@
             });
 
             tbody.append(...rows);
-        }
-        // for getting number of found results
-        const searchCountElement = document.getElementById('searchCount');
-        function updateSearchCount(count) {
-            searchCountElement.textContent = `Your search returned ${count} books. Nice!`;
         }
     </script>
 </body>
