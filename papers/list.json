@@ -1,5 +1,41 @@
 [
   {
+    "title": "Multiverse: Your Language Model Secretely Decide How to Parallelize and Merge Generation",
+    "author": "Xinyu Yang et al",
+    "year": "2024",
+    "topic":"llm, attention",
+    "venue": "Arxiv",
+    "description": "This paper introduces Multiverse, a novel generative modeling framework that enables natively parallel generation through an internalized MapReduce paradigm, contrasting with traditional autoregressive models that are limited to sequential token generation. The framework operates through three stages: a Map stage for adaptive task decomposition, a Process stage for parallel subtask execution, and a Reduce stage for lossless result synthesis, allowing models to dynamically adjust parallelism during generation. To build real-world Multiverse models, the authors co-design three components: Multiverse Curator (an automated pipeline that transforms sequential reasoning chains into parallel structures), Multiverse Attention (a modified attention mechanism that enables parallel generation while maintaining training efficiency), and Multiverse Engine (a specialized inference system supporting dynamic switching between sequential and parallel modes). After fine-tuning Qwen-2.5-32B-Instruct on just 1,000 examples for 3 hours, Multiverse-32B achieves performance comparable to leading autoregressive models on reasoning tasks (AIME24: 54%, AIME25: 46%) while demonstrating superior scaling efficiency within fixed context lengths and achieving up to 2× wall-clock speedup through parallel generation capabilities.",
+    "link": "https://arxiv.org/pdf/2506.09991"
+  },
+  {
+    "title": "Tell Your Model Where to Attend: Post-Hoc Attention Steering for LLMs",
+    "author": "Qingru Zhang et al",
+    "year": "2024",
+    "topic":"llm, attention",
+    "venue": "ICLR",
+    "description": "This paper introduces PASTA (Post-hoc Attention Steering Approach), a novel method that enables Large Language Models to process text with user-specified emphasis marks, similar to how humans use bold and italics to guide reader attention. PASTA works by identifying a small subset of attention heads through multi-task model profiling and applying precise attention reweighting during inference, scaling down attention scores for non-emphasized tokens while preserving the relative importance of highlighted content. The method requires no parameter updates and only needs to be profiled once per model, making it applicable at inference time across various tasks including complex instruction following, lengthy context interpretation, and knowledge conflict resolution. Experimental results on GPT-J-6B and LLaMA-7B demonstrate substantial improvements, with PASTA achieving an average 22% accuracy improvement over few-shot prompting for LLaMA-7B across four challenging tasks, while also reducing sensitivity to prompt variations and maintaining text generation quality.",
+    "link": "https://arxiv.org/pdf/2311.02262"
+  },
+  {
+    "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+    "author": "Yuhui Li et al",
+    "year": "2024",
+    "topic":"llm, speculative sampling",
+    "venue": "Arxiv",
+    "description": "This paper presents EAGLE-2, an improved speculative sampling method that introduces dynamic draft trees to accelerate Large Language Model inference beyond the capabilities of its predecessor EAGLE. The key insight is that draft token acceptance rates are not only position-dependent but also context-dependent, challenging the static tree assumption used by existing methods like EAGLE and Medusa. EAGLE-2 leverages the well-calibrated confidence scores from EAGLE's draft model to approximate acceptance rates and dynamically adjusts the draft tree structure accordingly, using a value-based expansion phase and reranking strategy to optimize token selection. Comprehensive experiments across six tasks (dialogue, code generation, math reasoning, instruction following, summarization, and QA) on three LLM series demonstrate that EAGLE-2 achieves 3.05x-4.26x speedup ratios, representing 20%-40% improvement over EAGLE while maintaining lossless acceleration and requiring no additional training beyond the base EAGLE model.",
+    "link": "https://arxiv.org/pdf/2406.16858"
+  },
+  {
+    "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty in Large Language Models",
+    "author": "Yuhui Li et al",
+    "year": "2024",
+    "topic":"llm, speculative sampling",
+    "venue": "Arxiv",
+    "description": "This paper introduces EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency), a speculative sampling framework designed to accelerate Large Language Model (LLM) inference by addressing key limitations in existing approaches. The authors identify two critical insights: first, that autoregression at the feature level (second-to-top-layer) is more straightforward than at the token level, and second, that uncertainty in feature-level prediction significantly constrains performance. EAGLE resolves the uncertainty problem by incorporating a token sequence advanced by one time step into the draft model, enabling more precise feature prediction with minimal computational overhead. Comprehensive experiments across dialogue, code generation, mathematical reasoning, and instruction following tasks demonstrate that EAGLE achieves 2.7x-3.5x speedup for LLaMA2-Chat 70B while maintaining the original text distribution, outperforming existing methods like Lookahead (1.7x-2.1x faster) and Medusa (1.5x-1.6x faster) with low training costs and broad applicability to autoregressive LLMs.",
+    "link": "https://arxiv.org/pdf/2401.15077"
+  },
+  {
     "title": "SpanBERT: Improving Pre-Training by Representing and Predicting Spans",
     "author": "Mandar Joshi et al",
     "year": "2020",
