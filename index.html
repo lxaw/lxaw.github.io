@@ -3,710 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lex Whalen | Machine Learning Researcher</title>
+    <title>Lex Whalen</title>
     <style>
-        :root {
-            --text-primary: #0f172a;
-            --text-secondary: #64748b;
-            --accent: #3b82f6;
-            --accent-hover: #2563eb;
-            --background: #ffffff;
-            --surface: #f8fafc;
-            --border: #e2e8f0;
-            --banner-bg: #fef3c7;
-            --banner-border: #f59e0b;
-            --banner-text: #92400e;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            color: var(--text-primary);
-            background-color: var(--background);
-        }
-        
-        /* Top Navigation */
-        .top-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .lang-switch label {
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 20px;
-            transition: all 0.2s ease;
-            display: inline-block;
-        }
-        
-        .lang-switch label:hover {
-            background-color: var(--accent);
-            color: white;
-            transform: translateY(-1px);
-            box-shadow: var(--shadow);
-        }
-        
-        #lang-toggle {
-            position: absolute;
-            opacity: 0;
-            height: 0;
-            width: 0;
-        }
-        
-        /* Hamburger Menu */
-        .hamburger {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            padding: 0.5rem;
-            z-index: 1000;
-            position: relative;
-        }
-        
-        .hamburger-line {
-            width: 25px;
-            height: 3px;
-            background-color: var(--accent);
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-        
-        .hamburger.active .hamburger-line:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .hamburger.active .hamburger-line:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active .hamburger-line:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-        
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            padding: 1rem;
-            min-width: 200px;
-            display: none;
-            z-index: 999;
-        }
-        
-        .dropdown-menu.active {
-            display: block;
-        }
-        
-        .dropdown-menu a {
-            display: block;
-            padding: 0.75rem 0;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s ease;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .dropdown-menu a:last-child {
-            border-bottom: none;
-        }
-        
-        .dropdown-menu a:hover {
-            color: var(--accent);
-        }
-        
-        .linkedin-banner {
-            background: linear-gradient(135deg, var(--banner-bg), #fde68a);
-            border: 1px solid var(--banner-border);
-            border-left: 4px solid var(--accent);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-            color: var(--banner-text);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .linkedin-banner a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s ease;
-        }
-        
-        .linkedin-banner a:hover {
-            color: var(--accent-hover);
-            border-bottom-color: var(--accent-hover);
-        }
-        
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1.5rem;
-            display: block;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s ease;
-        }
-        
-        .profile-pic:hover {
-            transform: scale(1.05);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.025em;
-        }
-        
-        .title {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-        
-        .bio-section {
-            background: var(--surface);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin-bottom: 1.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .bio-section p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            text-align: center;
-        }
-
-        .bio-section p:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* Focus areas section */
-        pre {
-            background: var(--surface);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            overflow-x: auto;
-            margin: 1.5rem auto;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: var(--text-primary);
-            max-width: 500px;
-            text-align: center;
-        }
-        
-        /* Two Column Layout */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        @media (max-width: 768px) {
-            .two-column {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-        
-        h2 {
-            font-size: 1.5rem;
-            margin: 0 0 2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 0.5rem;
-            text-align: center;
-        }
-        
-        .experience-item, .education-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--surface);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
-        }
-        
-        .education-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .experience-item:hover, .education-item:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-            border-color: var(--accent);
-        }
-
-        .education-logo {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            border-radius: 8px;
-            background: white;
-            padding: 4px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-        }
-
-        .education-content {
-            flex: 1;
-        }
-        
-        .position, .institution {
-            font-weight: 600;
-            font-size: 1.125rem;
-            color: var(--text-primary);
-            margin-bottom: 0.25rem;
-        }
-        
-        .period {
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        .experience-item p, .education-item p {
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Skills and Contact sections */
-        .bottom-section {
-            margin-top: 3rem;
-            text-align: center;
-        }
-        
-        .skills-section {
-            background: var(--surface);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .skills-section pre {
-            background: transparent;
-            border: none;
-            padding: 0;
-            margin: 0;
-            max-width: none;
-        }
-        
-        .contact-section {
-            margin-bottom: 2rem;
-        }
-        
-        footer {
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            border-top: 2px solid var(--border);
-            padding-top: 1.5rem;
-            text-align: center;
-        }
-        
-        /* Language content switching */
-        [lang="ja"] {
-            display: none;
-        }
-        
-        #lang-toggle:checked ~ .content-wrapper [lang="en"] {
-            display: none;
-        }
-        
-        #lang-toggle:checked ~ .content-wrapper [lang="ja"] {
-            display: block;
-        }
-        
-        /* Button text switching */
-        .lang-text-ja {
-            display: none;
-        }
-        
-        #lang-toggle:checked ~ .lang-switch .lang-text-en {
-            display: none;
-        }
-        
-        #lang-toggle:checked ~ .lang-switch .lang-text-ja {
-            display: inline;
-        }
-        
-        @media (max-width: 767px) {
-            body {
-                margin: 1rem auto;
-                padding: 0 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .profile-pic {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .bio-section {
-                padding: 1.5rem;
-            }
-        }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
     </style>
 </head>
 <body>
-    <input type="checkbox" id="lang-toggle">
-    
-    <div class="content-wrapper">
-        <nav class="top-nav">
-            <div class="lang-switch">
-                <label for="lang-toggle">
-                    <span class="lang-text-en">日本語</span>
-                    <span class="lang-text-ja">English</span>
-                </label>
-            </div>
+    <center>
+        <p>
+            <a href="#" onclick="showLang('en')">[English]</a> | 
+            <a href="#" onclick="showLang('ja')">[日本語]</a>
+        </p>
+        
+        <div id="en-content" class="lang-content active">
+            <h1>Lex Whalen</h1>
             
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="dropdown-menu" id="dropdownMenu">
-                    <div lang="en">
-                        <a href="cv/main.pdf">CV/Resume</a>
-                        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>
-                        <a href="https://github.com/lxaw">GitHub</a>
-                        <a href="papers_read.html">Papers List</a>
-                        <a href="books_read.html">Reading List</a>
-                        <a href="personal_interests.html">Personal</a>
-                    </div>
-                    <div lang="ja">
-                        <a href="cv/main.pdf">履歴書</a>
-                        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>
-                        <a href="https://github.com/lxaw">GitHub</a>
-                        <a href="papers_read.html">読んだ論文</a>
-                        <a href="books_read.html">読んだ本</a>
-                        <a href="personal_interests.html">趣味など</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="linkedin-banner" lang="en">
-            Note: My <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> is more updated than my website.
+            <p>Machine Learning Researcher at Georgia Institute of Technology.</p>
+            
+            <p>I work on efficient deep learning and model optimization to achieve super-human intelligence at an affordable price.</p>
+            
+            <p>Currently interning at <a href="https://www.nvidia.com/">NVIDIA</a> on efficient deep learning.</p>
+            
+            <p>Concurrently, I am a researcher at the <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>.</p>
+            
+            <p>And before that, I was a software developer at the <a href="https://www.sc.edu/">University of South Carolina</a>.</p>
+            
+            <p>I studied at <a href="https://www.gatech.edu/">Georgia Tech</a>, <a href="https://www.sc.edu/">University of South Carolina</a>, and <a href="https://www.toyo.ac.jp/en/">Toyo University</a> in Japan.</p>
+            
+            <br><br>
+            
+            <p><a href="cv/main.pdf">CV/Resume</a></p>
+            
+            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
+            
+            <p><a href="https://github.com/lxaw">GitHub</a></p>
+            
+            <p><a href="papers_read.html">Papers List</a></p>
+            
+            <p><a href="books_read.html">Reading List</a></p>
+            
+            <p><a href="personal_interests.html">Personal</a></p>
+            
+            <br>
+            
+            <p>Email: lwhalen7@gatech.edu</p>
         </div>
         
-        <div class="linkedin-banner" lang="ja">
-            注意: <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>の方がウェブサイトより最新の情報です。
+        <div id="ja-content" class="lang-content">
+            <h1>ワレン・レックス</h1>
+            
+            <p>ジョージア工科大学の機械学習研究者。</p>
+            
+            <p>世界にも財布にもやさしい超人的知能の実現を目指し、効率的な深層学習とモデル最適化の研究をしています。</p>
+            
+            <p>現在、<a href="https://www.nvidia.com/">NVIDIA</a>で効率的深層学習のインターンをしています。</p>
+            
+            <p>同時に、<a href="https://www.gatech.edu/">ジョージア工科大学</a>で研究者として活動しています。</p>
+            
+            <p>その前は、<a href="https://www.sc.edu/">サウスカロライナ大学</a>でソフトウェア開発者として働いていました。</p>
+            
+            <p><a href="https://www.gatech.edu/">ジョージア工科大学</a>、<a href="https://www.sc.edu/">サウスカロライナ大学</a>、そして日本の<a href="https://www.toyo.ac.jp/en/">東洋大学</a>で学びました。</p>
+            
+            <br><br>
+            
+            <p><a href="cv/main.pdf">履歴書</a></p>
+            
+            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
+            
+            <p><a href="https://github.com/lxaw">GitHub</a></p>
+            
+            <p><a href="papers_read.html">読んだ論文</a></p>
+            
+            <p><a href="books_read.html">読んだ本</a></p>
+            
+            <p><a href="personal_interests.html">趣味など</a></p>
+            
+            <br>
+            
+            <p>メール: lwhalen7@gatech.edu</p>
         </div>
-
-        <header>
-            <img src="pictures/myself_nagasaki.png" alt="Lex Whalen" class="profile-pic">
-            
-            <h1 lang="en">Lex Whalen</h1>
-            <h1 lang="ja">ワレン・レックス</h1>
-            
-            <div class="title" lang="en">Machine Learning Researcher at Georgia Institute of Technology</div>
-            <div class="title" lang="ja">機械学習研究者@ジョージア工科大学</div>
-
-            <div class="bio-section" lang="en">
-                <p>Machine Learning Researcher focused on efficient deep learning and model optimization. My goal is to help us achieve and improve super-human intelligence at an affordable price, both to our pockets and to our world.</p>
-                <p>I'm fluent in both English and Japanese (JLPT N1 Certified) with intermediate Mandarin skills.</p>
-            </div>
-            
-            <div class="bio-section" lang="ja">
-                <p>モデル効率化向けのアルゴリズムを開発する機械学習の研究者です。ゴールは、世界にも財布にもやさしい人工知能を作ることです。</p>
-                <p>英語と日本語（JLPT N1取得）に堪能で、中国語も中級レベルです。</p>
-            </div>
-            
-            <pre lang="en">Current focus:
-- Accelerating language models
-- Accelerating diffusion models
-- TinyML for healthcare applications</pre>
-            
-            <pre lang="ja">現在の注力分野:
-- 言語モデルの効率化
-- 拡散モデルの効率化
-- ヘルスケア応用のためのTinyML</pre>
-        </header>
-
-        <div class="two-column">
-            <!-- Left Column: Experience -->
-            <div lang="en">
-                <h2>Experience</h2>
-                <div class="experience-item">
-                    <div class="position">Efficient Deep Learning Intern at NVIDIA</div>
-                    <div class="period">March 2025 - Present</div>
-                    <p>Profiling text diffusion language models to identify critical latency bottlenecks during training and inference phases.</p>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="position">Website Lead at NVIDIA</div>
-                    <div class="period">December 2024 - Present</div>
-                    <p>Leading development and management of challenge website utilizing Google Analytics to track engagement. Profiled initial 400M parameter baseline models for participants and assisted in evaluation based on model performance after fine-tuning with 10B token datasets.</p>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="position">Machine Learning Researcher at Georgia Tech</div>
-                    <div class="period">August 2024 - Present</div>
-                    <p>Led team of 3 Ph.D. and Masters students to design innovative methods of reducing diffusion model training time by up to 5x on average while maintaining generation quality. Algorithm lead for United States' ARPA-H THOR healthcare initiative, reducing cancer detection sensor degradation by over 70%, improving the lifetime of the sensors from only a few hours to several days (over a 10x improvement).</p>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="position">Software Developer at University of South Carolina</div>
-                    <div class="period">January 2021 - August 2024</div>
-                    <p>Led design and implementation of three full-stack research study websites using PHP/Django/React/SQL, managing databases of thousands of participant entries. Led development of competitive grants, winning $20,000+ in funding. Developed automated language similarity analysis system that reduced document comparison time by 99% (from 2-3 days to under 10 minutes).</p>
-                </div>
-            </div>
-
-            <!-- Right Column: Education -->
-            <div lang="en">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <img src="images/georgia-tech-logo.jpg" alt="Georgia Tech" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">Georgia Institute of Technology</div>
-                        <div class="period">Graduate Machine Learning Researcher | 2024-Present</div>
-                        <p>NSF Graduate Research Fellowship recipient ($150,000 value)</p>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/uofsc-logo.jpg" alt="University of South Carolina" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">University of South Carolina</div>
-                        <div class="period">Accelerated Master's in Computer Science | 2024</div>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/toyo-uni-logo.PNG" alt="Toyo University" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">Toyo University</div>
-                        <div class="period">Exchange Student Representative | 2023</div>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/uofsc-logo.jpg" alt="University of South Carolina" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">University of South Carolina</div>
-                        <div class="period">Bachelor's in Computer Science | 2021-2023</div>
-                        <p>Top Scholar Award ($100,000+ value) • Outstanding Senior Award</p>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/dept-state-logo.png" alt="U.S. Department of State" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">Critical Language Scholar - Japanese</div>
-                        <div class="period">U.S. Department of State | Selected among 5000+ applicants</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Japanese Version -->
-        <div class="two-column" lang="ja">
-            <!-- Left Column: Experience -->
-            <div>
-                <h2>職歴</h2>
-                <div class="experience-item">
-                    <div class="position">NVIDIA 深層学習インターン</div>
-                    <div class="period">2025年3月 - 現在</div>
-                    <p>テキスト拡散言語モデルのトレーニングおよび推論フェーズにおける重要なレイテンシーのボトルネックをプロファイリング。</p>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="position">NVIDIA ウェブサイトリード</div>
-                    <div class="period">2024年12月 - 現在</div>
-                    <p>Google Analyticsを活用してエンゲージメントを追跡するチャレンジウェブサイトの開発と管理をリード。参加者向けに初期の4億パラメータのベースラインモデルを設計・プロファイリングし、100億トークンのデータセットによる微調整後のモデル性能に基づく評価フレームワークを開発しました。</p>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="position">ジョージア工科大学 機械学習研究者</div>
-                    <div class="period">2024年8月 - 現在</div>
-                    <p>3名の博士課程および修士課程の学生チームをリードし、生成品質を維持しながら拡散モデルのトレーニング時間を最大5倍短縮する革新的手法を設計。米国ARPA-H THORヘルスケアイニシアチブのアルゴリズムリードとして、がん検出センサーの劣化を70％以上削減し、センサーの寿命を数時間から数日間へと10倍以上改善しました。</p>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="position">サウスカロライナ大学 ソフトウェア開発者</div>
-                    <div class="period">2021年1月 - 2024年8月</div>
-                    <p>PHP/Django/React/SQLを使用した3つの研究調査用フルスタックウェブサイトの設計と実装をリードし、数千の参加者エントリーのデータベースを管理。競争的助成金の開発をリードし、2万ドル以上の資金調達に成功。文書比較時間を99％削減する自動言語類似性分析システムを開発（2〜3日かかっていた作業が10分未満に短縮）。</p>
-                </div>
-            </div>
-
-            <!-- Right Column: Education -->
-            <div>
-                <h2>学歴</h2>
-                <div class="education-item">
-                    <img src="images/georgia-tech-logo.jpg" alt="ジョージア工科大学" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">ジョージア工科大学</div>
-                        <div class="period">機械学習の研究者 | 2024年-現在</div>
-                        <p>NSF大学院研究フェローシップ（15万ドル相当）</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <img src="images/uofsc-logo.jpg" alt="サウスカロライナ大学" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">サウスカロライナ大学</div>
-                        <div class="period">コンピュータサイエンス 短期修士課程 | 2024年</div>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/toyo-uni-logo.PNG" alt="東洋大学" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">東洋大学</div>
-                        <div class="period">交換留学生代表 | 2023年</div>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/uofsc-logo.jpg" alt="サウスカロライナ大学" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">サウスカロライナ大学</div>
-                        <div class="period">コンピュータサイエンス学士課程 | 2021年-2023年</div>
-                        <p>トップスカラー賞（10万ドル以上相当）• 優秀卒業生賞</p>
-                    </div>
-                </div>
-                
-                <div class="education-item">
-                    <img src="images/dept-state-logo.png" alt="米国国務省" class="education-logo">
-                    <div class="education-content">
-                        <div class="institution">重要言語奨学生 - 日本語</div>
-                        <div class="period">米国国務省 | 5000人以上の応募者から選抜</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Sections -->
-        <div class="bottom-section">
-            <div lang="en">
-                <h2>Skills</h2>
-                <div class="skills-section">
-                    <pre>Programming:
-Python, Java, JavaScript, HTML/CSS, C/C++, R, PHP, Rust
-
-Machine Learning:
-PyTorch, TensorFlow, DeepSpeed, Weights & Biases
-
-Web & Data:
-React, Node, Django, Symfony, SQL, MongoDB
-NumPy, Pandas, Scikit-learn, Matplotlib
-
-Languages:
-English (Native), Japanese (N1), Mandarin (Intermediate)</pre>
-                </div>
-
-                <div class="contact-section">
-                    <h2>Contact</h2>
-                    <p>Email: lwhalen7@gatech.edu</p>
-                </div>
-            </div>
-
-            <div lang="ja">
-                <h2>スキル</h2>
-                <div class="skills-section">
-                    <pre>プログラミング:
-Python, Java, JavaScript, HTML/CSS, C/C++, R, PHP, Rust
-
-機械学習:
-PyTorch, TensorFlow, DeepSpeed, Weights & Biases
-
-Web・データ:
-React, Node, Django, Symfony, SQL, MongoDB
-NumPy, Pandas, Scikit-learn, Matplotlib
-
-言語:
-英語（ネイティブ）, 日本語（N1）, 中国語（中級）</pre>
-                </div>
-
-                <div class="contact-section">
-                    <h2>連絡先</h2>
-                    <p>メール: lwhalen7@gatech.edu</p>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <div lang="en">
-                <a href="misc.html">Miscellaneous</a>
-            </div>
-            <div lang="ja">
-                <a href="misc.html">その他</a>
-            </div>
-        </footer>
-    </div>
-
+    </center>
+    
     <script>
-        function toggleMenu() {
-            const hamburger = document.querySelector('.hamburger');
-            const dropdown = document.getElementById('dropdownMenu');
-            
-            hamburger.classList.toggle('active');
-            dropdown.classList.toggle('active');
+        function showLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang + '-content').classList.add('active');
         }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const hamburger = document.querySelector('.hamburger');
-            const dropdown = document.getElementById('dropdownMenu');
-            
-            if (!hamburger.contains(event.target) && !dropdown.contains(event.target)) {
-                hamburger.classList.remove('active');
-                dropdown.classList.remove('active');
-            }
-        });
     </script>
 </body>
 </html>

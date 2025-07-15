@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 314 papers. Let's keep it up!
+        So far, we have read 320 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 314 papers. Nice! 
+        Your search returned 320 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,66 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models</td>
+                <td>Zhengfu He et al</td>
+                <td>2022</td>
+                <td>llm, dllm</td>
+                <td>Arxiv</td>
+                <td>This paper introduces DiffusionBERT, which combines discrete diffusion models with pre-trained language models like BERT for text generation. The authors propose using BERT to learn the reverse diffusion process, where text is gradually denoised from a fully masked state back to coherent text, leveraging the shared denoising objective between diffusion models and masked language models. They introduce a novel &quot;spindle&quot; noise schedule that masks tokens based on their information content (high-information tokens first) and demonstrate that &quot;time-agnostic decoding&quot; works best, where the model doesn&#x27;t explicitly use time step information during generation.</td>
+                <td><a href="https://arxiv.org/pdf/2211.15029" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Understanding and Improving Layer Normalization</td>
+                <td>Jingjing Xu et al</td>
+                <td>2019</td>
+                <td>llm, dllm</td>
+                <td>NeurIPS</td>
+                <td>This paper investigates how Layer Normalization (LayerNorm) works and finds that its effectiveness comes primarily from the derivatives of mean and variance that re-center and re-scale backward gradients, rather than from forward normalization as commonly believed. The authors show that LayerNorm&#x27;s bias and gain parameters often cause overfitting and don&#x27;t improve performance in most cases - a simplified version without these parameters (LayerNorm-simple) actually outperforms standard LayerNorm on four out of eight datasets. To address the overfitting issue, they propose Adaptive Normalization (AdaNorm), which replaces the fixed bias and gain with an adaptive transformation function that adjusts scaling weights based on input values. AdaNorm outperforms LayerNorm on seven out of eight datasets across machine translation, language modeling, text classification, image classification, and dependency parsing tasks.</td>
+                <td><a href="https://arxiv.org/pdf/1911.07013" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Improved Variational Autoencoders for Text Modeling using Dilated Convolutions</td>
+                <td>Zichao Yang et al</td>
+                <td>2017</td>
+                <td>llm, dllm</td>
+                <td>ICML</td>
+                <td>This paper addresses the problem of poor performance in variational autoencoders (VAEs) for text modeling, where LSTM-based VAE decoders typically perform worse than simple LSTM language models due to their tendency to ignore the latent representation. The authors propose using dilated convolutional neural networks (CNNs) as decoders instead of LSTMs, which allows them to control the contextual capacity of the decoder by adjusting dilation parameters - ranging from bag-of-words behavior (small context) to LSTM-like behavior (large context).</td>
+                <td><a href="https://arxiv.org/pdf/1702.08139" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Energy-Based Diffusion Language Models for Text Generation</td>
+                <td>Minkai Xu et al</td>
+                <td>2025</td>
+                <td>llm, dllm</td>
+                <td>ICLR</td>
+                <td>This paper introduces Energy-based Diffusion Language Models (EDLM), which address a fundamental limitation in existing discrete diffusion models for text generation. The core problem is that current diffusion models factorize the denoising distribution into independent token predictions, ignoring sequence-level correlations and leading to accumulated errors during parallel generation. EDLM solves this by introducing an energy-based model that operates at the full sequence level, using a residual formulation that combines pretrained diffusion models with an energy function to better capture token dependencies. The energy function can be implemented either by leveraging pretrained autoregressive models (enabling parallel sampling from AR models using diffusion as a proposal distribution) or by fine-tuning bidirectional transformers via noise contrastive estimation.</td>
+                <td><a href="https://arxiv.org/pdf/2410.21357" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Energy-Based Diffusion Language Models for Text Generation</td>
+                <td>Minkai Xu et al</td>
+                <td>2025</td>
+                <td>llm, dllm</td>
+                <td>ICLR</td>
+                <td>This paper introduces Energy-based Diffusion Language Models (EDLM), which address a fundamental limitation in existing discrete diffusion models for text generation. The core problem is that current diffusion models factorize the denoising distribution into independent token predictions, ignoring sequence-level correlations and leading to accumulated errors during parallel generation. EDLM solves this by introducing an energy-based model that operates at the full sequence level, using a residual formulation that combines pretrained diffusion models with an energy function to better capture token dependencies. The energy function can be implemented either by leveraging pretrained autoregressive models (enabling parallel sampling from AR models using diffusion as a proposal distribution) or by fine-tuning bidirectional transformers via noise contrastive estimation.</td>
+                <td><a href="https://arxiv.org/pdf/2410.21357" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Variational Autoencoding Discrete Diffusion with Enhanced Dimensional Correlations Modeling</td>
+                <td>Tianyu Xie et al</td>
+                <td>2025</td>
+                <td>llm, vae, dllm</td>
+                <td>Arxiv</td>
+                <td>This research paper introduces Variational Autoencoding Discrete Diffusion (VADD), a novel framework that enhances masked diffusion models (MDMs) by incorporating latent variable modeling to better capture correlations between dimensions during the denoising process. The key innovation is replacing the dimension-independent denoising distribution in traditional MDMs with a latent variable structure that can implicitly model inter-dimensional dependencies, which is particularly beneficial when using few denoising steps. The authors jointly optimize both a denoising model and an auxiliary recognition model using a variational autoencoding framework with a &quot;Double Evidence Lower Bound&quot; (DELBO), and introduce a consistency sampler that fixes the latent variable throughout the entire reverse process.</td>
+                <td><a href="https://arxiv.org/pdf/2505.17384v1" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Multiverse: Your Language Model Secretely Decide How to Parallelize and Merge Generation</td>

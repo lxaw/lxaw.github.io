@@ -1,5 +1,59 @@
 [
   {
+    "title": "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models",
+    "author": "Zhengfu He et al",
+    "year": "2022",
+    "topic":"llm, dllm",
+    "venue": "Arxiv",
+    "description": "This paper introduces DiffusionBERT, which combines discrete diffusion models with pre-trained language models like BERT for text generation. The authors propose using BERT to learn the reverse diffusion process, where text is gradually denoised from a fully masked state back to coherent text, leveraging the shared denoising objective between diffusion models and masked language models. They introduce a novel \"spindle\" noise schedule that masks tokens based on their information content (high-information tokens first) and demonstrate that \"time-agnostic decoding\" works best, where the model doesn't explicitly use time step information during generation.",
+    "link": "https://arxiv.org/pdf/2211.15029"
+  },
+  {
+    "title": "Understanding and Improving Layer Normalization",
+    "author": "Jingjing Xu et al",
+    "year": "2019",
+    "topic":"llm, dllm",
+    "venue": "NeurIPS",
+    "description": "This paper investigates how Layer Normalization (LayerNorm) works and finds that its effectiveness comes primarily from the derivatives of mean and variance that re-center and re-scale backward gradients, rather than from forward normalization as commonly believed. The authors show that LayerNorm's bias and gain parameters often cause overfitting and don't improve performance in most cases - a simplified version without these parameters (LayerNorm-simple) actually outperforms standard LayerNorm on four out of eight datasets. To address the overfitting issue, they propose Adaptive Normalization (AdaNorm), which replaces the fixed bias and gain with an adaptive transformation function that adjusts scaling weights based on input values. AdaNorm outperforms LayerNorm on seven out of eight datasets across machine translation, language modeling, text classification, image classification, and dependency parsing tasks.",
+    "link": "https://arxiv.org/pdf/1911.07013"
+  },
+  {
+    "title": "Improved Variational Autoencoders for Text Modeling using Dilated Convolutions",
+    "author": "Zichao Yang et al",
+    "year": "2017",
+    "topic":"llm, dllm",
+    "venue": "ICML",
+    "description": "This paper addresses the problem of poor performance in variational autoencoders (VAEs) for text modeling, where LSTM-based VAE decoders typically perform worse than simple LSTM language models due to their tendency to ignore the latent representation. The authors propose using dilated convolutional neural networks (CNNs) as decoders instead of LSTMs, which allows them to control the contextual capacity of the decoder by adjusting dilation parameters - ranging from bag-of-words behavior (small context) to LSTM-like behavior (large context).",
+    "link": "https://arxiv.org/pdf/1702.08139"
+  },
+  {
+    "title": "Energy-Based Diffusion Language Models for Text Generation",
+    "author": "Minkai Xu et al",
+    "year": "2025",
+    "topic":"llm, dllm",
+    "venue": "ICLR",
+    "description": "This paper introduces Energy-based Diffusion Language Models (EDLM), which address a fundamental limitation in existing discrete diffusion models for text generation. The core problem is that current diffusion models factorize the denoising distribution into independent token predictions, ignoring sequence-level correlations and leading to accumulated errors during parallel generation. EDLM solves this by introducing an energy-based model that operates at the full sequence level, using a residual formulation that combines pretrained diffusion models with an energy function to better capture token dependencies. The energy function can be implemented either by leveraging pretrained autoregressive models (enabling parallel sampling from AR models using diffusion as a proposal distribution) or by fine-tuning bidirectional transformers via noise contrastive estimation.",
+    "link": "https://arxiv.org/pdf/2410.21357"
+  },
+  {
+    "title": "Energy-Based Diffusion Language Models for Text Generation",
+    "author": "Minkai Xu et al",
+    "year": "2025",
+    "topic":"llm, dllm",
+    "venue": "ICLR",
+    "description": "This paper introduces Energy-based Diffusion Language Models (EDLM), which address a fundamental limitation in existing discrete diffusion models for text generation. The core problem is that current diffusion models factorize the denoising distribution into independent token predictions, ignoring sequence-level correlations and leading to accumulated errors during parallel generation. EDLM solves this by introducing an energy-based model that operates at the full sequence level, using a residual formulation that combines pretrained diffusion models with an energy function to better capture token dependencies. The energy function can be implemented either by leveraging pretrained autoregressive models (enabling parallel sampling from AR models using diffusion as a proposal distribution) or by fine-tuning bidirectional transformers via noise contrastive estimation.",
+    "link": "https://arxiv.org/pdf/2410.21357"
+  },
+  {
+    "title": "Variational Autoencoding Discrete Diffusion with Enhanced Dimensional Correlations Modeling",
+    "author": "Tianyu Xie et al",
+    "year": "2025",
+    "topic":"llm, vae, dllm",
+    "venue": "Arxiv",
+    "description": "This research paper introduces Variational Autoencoding Discrete Diffusion (VADD), a novel framework that enhances masked diffusion models (MDMs) by incorporating latent variable modeling to better capture correlations between dimensions during the denoising process. The key innovation is replacing the dimension-independent denoising distribution in traditional MDMs with a latent variable structure that can implicitly model inter-dimensional dependencies, which is particularly beneficial when using few denoising steps. The authors jointly optimize both a denoising model and an auxiliary recognition model using a variational autoencoding framework with a \"Double Evidence Lower Bound\" (DELBO), and introduce a consistency sampler that fixes the latent variable throughout the entire reverse process.",
+    "link": "https://arxiv.org/pdf/2505.17384v1"
+  },
+  {
     "title": "Multiverse: Your Language Model Secretely Decide How to Parallelize and Merge Generation",
     "author": "Xinyu Yang et al",
     "year": "2024",
