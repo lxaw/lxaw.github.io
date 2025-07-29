@@ -1,5 +1,23 @@
 [
   {
+    "title": "Deep Researcher with Test-Time Diffusion",
+    "author": "Rujun Han et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "The paper introduces Test-Time Diffusion Deep Researcher (TTD-DR), a novel framework that conceptualizes research report generation as a diffusion process, where an initial draft is iteratively refined through a \"denoising\" mechanism guided by retrieval of external information. The framework incorporates two key mechanisms: report-level refinement via denoising with retrieval, where the entire draft evolves dynamically, and component-wise optimization via self-evolution, which enhances the quality of each step in the research workflow. TTD-DR addresses limitations of existing deep research agents by maintaining global context and coherence throughout the research process, mimicking the iterative nature of human research through cycles of planning, drafting, searching, and revision.",
+    "link": "https://arxiv.org/pdf/2507.16075"
+  },
+  {
+    "title": "KNN-Diffusion: Image Generation via Large-Scale Retrieval",
+    "author": "Shelly Sheynin et al",
+    "year": "2022",
+    "topic":"diffusion",
+    "venue": "Arxiv",
+    "description": "The paper introduces kNN-Diffusion, a novel text-to-image generation model that leverages large-scale k-Nearest-Neighbors retrieval to train diffusion models without requiring paired text-image datasets, addressing the significant limitation of existing models that need extensive labeled data. The method conditions the diffusion process on both CLIP embeddings and k nearest neighbor image embeddings from a retrieval database, which helps bridge the distribution gap between text and image embeddings while enabling the model to learn from actual samples in the target distribution.",
+    "link": "https://arxiv.org/pdf/2204.02849"
+  },
+  {
     "title": "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models",
     "author": "Zhengfu He et al",
     "year": "2022",
