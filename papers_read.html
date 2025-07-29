@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 322 papers. Let's keep it up!
+        So far, we have read 325 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 322 papers. Nice! 
+        Your search returned 325 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,36 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Train for the Worst, Plan for the Best: Understaning Token Ordering in Masked Diffusion Models</td>
+                <td>Jaeyeon Kim et al</td>
+                <td>2025</td>
+                <td>dllm, diffusion, llm</td>
+                <td>Arxiv</td>
+                <td>This paper examines the trade-off between training complexity and inference flexibility in Masked Diffusion Models (MDMs) compared to autoregressive models (ARMs). The key novelty is demonstrating that while MDMs must learn exponentially more difficult masking subproblems during training (many of which are computationally intractable), they can strategically avoid these hard problems at inference time through adaptive token ordering strategies. The authors prove that for certain benign data distributions, a large fraction of MDM&#x27;s training subproblems are computationally hard, yet show that simple adaptive inference methods like &quot;Top-K probability margin&quot; can sidestep these difficulties without retraining. On logic puzzles like Sudoku, this approach dramatically improves MDM performance from &lt;7% to ~90% accuracy, even outperforming autoregressive models that were explicitly trained with supervised teacher forcing to learn the correct decoding order.</td>
+                <td><a href="https://arxiv.org/pdf/2502.06768" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Highly Compressed Tokenizer Can Generate Without Training</td>
+                <td>Lukas Lao Beyer et al</td>
+                <td>2025</td>
+                <td>tokenizer</td>
+                <td>ICML</td>
+                <td>This paper demonstrates that highly compressed 1D image tokenizers like TiTok can generate images without training any dedicated generative model, using only gradient-based test-time optimization of tokens. The key novelty is showing that extreme compression (down to just 32 discrete tokens per image) creates a highly semantic latent space where simple token manipulations enable sophisticated image editing - for example, copying a single token between images can transfer global attributes like lighting or blur. The authors introduce a gradient-based framework that optimizes tokens directly using plug-and-play objectives like CLIP similarity for text-guided editing or reconstruction loss for inpainting, achieving competitive generation quality (FID of 8.2) compared to methods that require training full generative models. This work reveals that the tokenizer&#x27;s decoder in highly compressed representations essentially functions as a generative model itself, enabling training-free image generation through straightforward optimization in the compact token space.</td>
+                <td><a href="https://arxiv.org/pdf/2506.08257" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Highly Compressed Tokenizer Can Generate Without Training</td>
+                <td>Lukas Lao Beyer et al</td>
+                <td>2025</td>
+                <td>tokenizer</td>
+                <td>ICML</td>
+                <td>This paper demonstrates that highly compressed 1D image tokenizers like TiTok can generate images without training any dedicated generative model, using only gradient-based test-time optimization of tokens. The key novelty is showing that extreme compression (down to just 32 discrete tokens per image) creates a highly semantic latent space where simple token manipulations enable sophisticated image editing - for example, copying a single token between images can transfer global attributes like lighting or blur. The authors introduce a gradient-based framework that optimizes tokens directly using plug-and-play objectives like CLIP similarity for text-guided editing or reconstruction loss for inpainting, achieving competitive generation quality (FID of 8.2) compared to methods that require training full generative models. This work reveals that the tokenizer&#x27;s decoder in highly compressed representations essentially functions as a generative model itself, enabling training-free image generation through straightforward optimization in the compact token space.</td>
+                <td><a href="https://arxiv.org/pdf/2506.08257" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Deep Researcher with Test-Time Diffusion</td>

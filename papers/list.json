@@ -1,5 +1,32 @@
 [
   {
+    "title": "Train for the Worst, Plan for the Best: Understaning Token Ordering in Masked Diffusion Models",
+    "author": "Jaeyeon Kim et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This paper examines the trade-off between training complexity and inference flexibility in Masked Diffusion Models (MDMs) compared to autoregressive models (ARMs). The key novelty is demonstrating that while MDMs must learn exponentially more difficult masking subproblems during training (many of which are computationally intractable), they can strategically avoid these hard problems at inference time through adaptive token ordering strategies. The authors prove that for certain benign data distributions, a large fraction of MDM's training subproblems are computationally hard, yet show that simple adaptive inference methods like \"Top-K probability margin\" can sidestep these difficulties without retraining. On logic puzzles like Sudoku, this approach dramatically improves MDM performance from <7% to ~90% accuracy, even outperforming autoregressive models that were explicitly trained with supervised teacher forcing to learn the correct decoding order.",
+    "link": "https://arxiv.org/pdf/2502.06768"
+  },
+  {
+    "title": "Highly Compressed Tokenizer Can Generate Without Training",
+    "author": "Lukas Lao Beyer et al",
+    "year": "2025",
+    "topic":"tokenizer",
+    "venue": "ICML",
+    "description": "This paper demonstrates that highly compressed 1D image tokenizers like TiTok can generate images without training any dedicated generative model, using only gradient-based test-time optimization of tokens. The key novelty is showing that extreme compression (down to just 32 discrete tokens per image) creates a highly semantic latent space where simple token manipulations enable sophisticated image editing - for example, copying a single token between images can transfer global attributes like lighting or blur. The authors introduce a gradient-based framework that optimizes tokens directly using plug-and-play objectives like CLIP similarity for text-guided editing or reconstruction loss for inpainting, achieving competitive generation quality (FID of 8.2) compared to methods that require training full generative models. This work reveals that the tokenizer's decoder in highly compressed representations essentially functions as a generative model itself, enabling training-free image generation through straightforward optimization in the compact token space.",
+    "link": "https://arxiv.org/pdf/2506.08257"
+  },
+  {
+    "title": "Highly Compressed Tokenizer Can Generate Without Training",
+    "author": "Lukas Lao Beyer et al",
+    "year": "2025",
+    "topic":"tokenizer",
+    "venue": "ICML",
+    "description": "This paper demonstrates that highly compressed 1D image tokenizers like TiTok can generate images without training any dedicated generative model, using only gradient-based test-time optimization of tokens. The key novelty is showing that extreme compression (down to just 32 discrete tokens per image) creates a highly semantic latent space where simple token manipulations enable sophisticated image editing - for example, copying a single token between images can transfer global attributes like lighting or blur. The authors introduce a gradient-based framework that optimizes tokens directly using plug-and-play objectives like CLIP similarity for text-guided editing or reconstruction loss for inpainting, achieving competitive generation quality (FID of 8.2) compared to methods that require training full generative models. This work reveals that the tokenizer's decoder in highly compressed representations essentially functions as a generative model itself, enabling training-free image generation through straightforward optimization in the compact token space.",
+    "link": "https://arxiv.org/pdf/2506.08257"
+  },
+  {
     "title": "Deep Researcher with Test-Time Diffusion",
     "author": "Rujun Han et al",
     "year": "2025",
