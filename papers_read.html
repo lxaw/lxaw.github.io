@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 328 papers. Let's keep it up!
+        So far, we have read 337 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 328 papers. Nice! 
+        Your search returned 337 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,96 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Rotational Equilibrium: How Weight Decay Balances Learning Across Neural Networks</td>
+                <td>Atli Kosson et al</td>
+                <td>2019</td>
+                <td>rotation, weight decay, regularization</td>
+                <td>ICML</td>
+                <td>This paper investigates how weight decay affects the optimization dynamics of individual neurons in neural networks, revealing that it creates &quot;rotational equilibrium&quot; - a steady state where the expected magnitude and angular updates of weight vectors stabilize. The key insight is that weight decay causes neurons to reach an equilibrium where gradient updates (increasing weight norms) balance against weight decay (decreasing norms), resulting in consistent angular rotation rates across different network components. The authors demonstrate that this balanced rotation is crucial for effective training. They show how weight decay acts differently from traditional L2 regularization by creating two distinct &quot;effective step sizes&quot; - one for weight rotations (ηr) and another for bias updates (ηg). Their analysis reveals why techniques like AdamW outperform Adam with L2 regularization: AdamW produces balanced rotation across layers while Adam+L2 creates imbalanced rotation that depends on gradient magnitudes. The paper introduces &quot;Rotational Variants&quot; (RVs) of standard optimizers that directly control angular updates without relying on weight decay, demonstrating that explicit rotation control can achieve similar benefits while reducing the need for learning rate warmup.</td>
+                <td><a href="https://arxiv.org/pdf/2305.17212" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>A Study of BFLOAT16 for Deep Learning Training</td>
+                <td>Dhiraj Kalamkar et al</td>
+                <td>2019</td>
+                <td>sgd, features</td>
+                <td>ICML</td>
+                <td>BFLOAT16 uses 8 bits for the exponent (same as FP32) and 7 bits for the mantissa, providing the same dynamic range as FP32 while using only 16 bits of storage. The key advantage of BFLOAT16 over IEEE FP16 is that it eliminates the need for loss scaling and hyperparameter tuning since it maintains FP32&#x27;s dynamic range, avoiding the gradient underflow problems that plague FP16 training. The authors implemented an emulation library called Quantlib that converts FP32 tensors to BFLOAT16 precision by zeroing out the lower 16 bits and applying round-to-nearest-even rounding.</td>
+                <td><a href="https://arxiv.org/pdf/1905.12322" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>SGD with Large Step Sizes Learn Sparse Features</td>
+                <td>Maksym Adriuschenko et al</td>
+                <td>2023</td>
+                <td>sgd, features</td>
+                <td>ICML</td>
+                <td>The authors identify that large step sizes cause &quot;loss stabilization&quot; - where the training loss plateaus at a high level while hidden beneficial dynamics occur in parameter space. They model this phenomenon using stochastic differential equations, showing that the combination of gradient descent with multiplicative noise (proportional to the neural tangent kernel features) drives networks toward sparser representations. The key insight is that SGD with large step sizes creates a three-phase training process: (1) initial loss reduction, (2) loss stabilization with hidden sparsification dynamics, and (3) final fitting when step size is decayed. During phase 2, the multiplicative noise structure biases the optimization toward solutions that minimize the norm of Jacobian columns, effectively learning sparse features. The authors validate this across multiple architectures from diagonal linear networks to deep CNNs, consistently observing that longer loss stabilization phases lead to better generalization and sparser learned features.</td>
+                <td><a href="https://arxiv.org/pdf/2210.05337" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Understanding Decoupled and Early Weight Decay</td>
+                <td>Lukas Balles et al</td>
+                <td>2018</td>
+                <td>adam</td>
+                <td>ICML</td>
+                <td>This paper provides a novel decomposition of the Adam optimizer, arguing that it can be understood as combining two distinct mechanisms: taking the sign of gradients (determining update direction) and variance adaptation (determining update magnitude based on gradient reliability). The authors demonstrate that the sign aspect dominates Adam&#x27;s behavior and is responsible for both its successes and its reported generalization problems, while variance adaptation can be beneficially applied to other optimizers like SGD. Through theoretical analysis on quadratic problems and experiments across multiple domains, they show that sign-based methods work best for noisy, ill-conditioned, axis-aligned problems, and introduce M-SVAG (momentum stochastic variance-adapted gradient) as an alternative that applies variance adaptation without the potentially harmful sign component. The work challenges the conventional understanding of adaptive optimizers by isolating these two mechanisms and showing that generalization issues stem specifically from the sign aspect rather than adaptivity itself.</td>
+                <td><a href="https://arxiv.org/pdf/1705.07774" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Understanding Decoupled and Early Weight Decay</td>
+                <td>Johan Bjorck et al</td>
+                <td>2020</td>
+                <td>decouple, weight decay, regularization</td>
+                <td>NeurIPS</td>
+                <td>The authors show that applying weight decay only early in training works because it keeps network weights small throughout optimization, effectively increasing the relative gradient update size (Δw/w) which has a regularizing effect similar to using larger learning rates. For the second observation about decoupled weight decay outperforming standard L2 regularization with adaptive optimizers, they demonstrate that the key issue is not adaptivity itself but rather the mixing of gradients from the objective function and L2 penalty in Adam&#x27;s momentum buffers, where gradients can &quot;drown out&quot; each other and make hyperparameter tuning difficult.</td>
+                <td><a href="https://arxiv.org/pdf/2012.13841" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Why Do We Need Weight Decay in Modern Deep Learning?</td>
+                <td>Francesco D&#x27;Angelo et al</td>
+                <td>2024</td>
+                <td>weight decay, regularization</td>
+                <td>NeurIPS</td>
+                <td>This paper examines why weight decay is so widely used in modern deep learning, arguing that its role differs significantly from traditional regularization theory. The authors demonstrate that weight decay serves different purposes in over-training versus under-training regimes: in over-training scenarios (like ResNets on vision tasks), it enhances SGD&#x27;s implicit regularization through loss stabilization, while in under-training regimes (like LLM training), it improves optimization by modulating the bias-variance tradeoff and ensuring training stability. The research challenges the conventional view of weight decay as primarily an explicit regularizer, instead showing that it beneficially modifies training dynamics across different learning scenarios. The work provides both empirical evidence and theoretical insights to explain weight decay&#x27;s effectiveness, concluding that it&#x27;s valuable not for direct regularization but for creating more favorable optimization trajectories.</td>
+                <td><a href="https://arxiv.org/pdf/2310.04415" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Simple linear attention language models balance the recall-throughput tradeoff</td>
+                <td>Arora et al</td>
+                <td>2024</td>
+                <td>llm, attention, linear</td>
+                <td>ICML</td>
+                <td>This paper introduces BASED, a language model architecture that combines linear attention (using a 2nd-order Taylor approximation of softmax) with small sliding window attention (64-128 tokens) to balance recall ability and computational efficiency. The authors demonstrate through theory and experiments that there exists a fundamental tradeoff between a model&#x27;s memory consumption during inference and its capacity to perform associative recall tasks. BASED expands the Pareto frontier of this tradeoff by using linear attention for global context and precise sliding window attention for local token interactions, achieving up to 24× higher throughput than FlashAttention-2 while maintaining competitive recall performance. The work includes custom IO-aware CUDA implementations that make the hybrid architecture practically efficient, addressing the gap between theoretical and real-world performance of linear attention methods.</td>
+                <td><a href="https://arxiv.org/pdf/2407.05483" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Just Read Twice: Closing the Recall Gap for Recurrent Language Models</td>
+                <td>Simran Arora et al</td>
+                <td>2024</td>
+                <td>llm</td>
+                <td>Arxiv</td>
+                <td>Just Read Twice introduces two complementary approaches to address recurrent language models&#x27; brittleness in recall-intensive tasks by exploiting data ordering effects. The first innovation, JRT-Prompt, simply repeats context information twice in the input, allowing the model to see all possible data orders and make better memory selection decisions during the second pass. The second innovation, JRT-RNN, uses a non-causal encoder-decoder architecture with &quot;Prefix Linear Attention&quot; that processes prompts bidirectionally while maintaining causal decoding, combined with a mixed training objective using both next-token prediction and masked language modeling. The key theoretical insight is formalizing how recall difficulty reduces to the set disjointness problem from communication complexity, showing that memory requirements depend critically on which set (smaller vs larger) appears first in the sequence, and that non-causal processing can achieve optimal O(min(|A|,|B|)) space complexity regardless of ordering.</td>
+                <td><a href="https://arxiv.org/pdf/2407.05483" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Gated Delta Networks: Improving Mamba2 With Delta Rule</td>
+                <td>Songlin Yang et al</td>
+                <td>2025</td>
+                <td>mamba, llm, gating, delta</td>
+                <td>ICLR</td>
+                <td>Gated Delta Networks introduces a unified &quot;gated delta rule&quot; that combines two previously separate memory management mechanisms - gating (for rapid memory erasure) and the delta rule (for precise memory updates) - into a single framework that enables both adaptive forgetting and targeted memory modifications. The key technical contribution is extending the hardware-efficient chunkwise parallel training algorithm to support this combined approach, preserving the computational benefits while gaining the complementary strengths of both mechanisms. Unlike Mamba2 which uniformly decays all memory associations or DeltaNet which can only update one key-value pair at a time, Gated DeltaNet can selectively clear irrelevant information while precisely updating specific associations based on the gating parameter α. The paper also develops hybrid architectures that strategically combine Gated DeltaNet layers with sliding window attention or Mamba2 layers, achieving better performance than pure recurrent models while maintaining training efficiency.</td>
+                <td><a href="https://arxiv.org/pdf/2412.06464" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Bridging the Gap for Tokenizer-Free Language Models</td>
