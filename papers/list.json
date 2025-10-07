@@ -1,4 +1,40 @@
 [
+    {
+    "title": "A Spectral Condition for Feature Learning",
+    "author": "Greg Yang et al",
+    "year": "2024",
+    "topic":"spectral, feature learning",
+    "venue": "Arxiv",
+    "description": "The paper introduces a spectral scaling condition that ensures feature learning in neural networks at large width by requiring the spectral norms of weight matrices and their updates to scale like √(fan-out/fan-in). This condition provides a simpler explanation and implementation of maximal update parametrization (µP), contrasting with heuristic Frobenius- or entry-based scalings that can fail to preserve feature learning. The authors show through linear algebra arguments, extensions to nonlinear and minibatch settings, and empirical results that spectral scaling preserves nontrivial feature evolution, whereas standard and neural tangent parameterizations do not. Overall, the work gives a unifying principle for hyperparameter scaling that applies across architectures and optimizers, making feature learning analysis more transparent.",
+    "link": "https://arxiv.org/pdf/2310.17813"
+  },
+    {
+    "title": "Scalable Second Order Optimization for Deep Learning",
+    "author": "Rohan Anil et al",
+    "year": "2021",
+    "topic":"second order, optimization, scalability",
+    "venue": "Arxiv",
+    "description": "The paper addresses the challenge of making second-order optimization practical for deep learning, focusing on a scalable implementation of the Shampoo algorithm (a Kronecker-factored full-matrix AdaGrad variant). The authors propose several system-level and algorithmic improvements, including pipelining computations across CPUs and accelerators, efficient iterative methods for computing matrix inverse roots, block-wise preconditioning for large layers, and delayed preconditioner updates.",
+    "link": "https://arxiv.org/pdf/2002.09018"
+  },
+    {
+    "title": "Scalable Optimization in the Modular Norm",
+    "author": "Tim Large et al",
+    "year": "2024",
+    "topic":"modular norm, lipschitz",
+    "venue": "Arxiv",
+    "description": "The paper introduces the modular norm, a recursive architecture-aware norm that generalizes “natural norms” for layers to the entire neural network. By normalizing weight updates in this norm, optimizers like Adam and SGD achieve scale-invariant learning rates across width and depth, eliminating the need for optimizer-specific correction factors. Theoretically, the authors prove that gradients of networks built from well-behaved modules are Lipschitz-continuous in the modular norm, with sharpness constants admitting simple recursive formulas.",
+    "link": "https://arxiv.org/pdf/2405.14813"
+  },
+  {
+    "title": "On the distance between two neural networks and the stability of learning",
+    "author": "Jeremy Bernstein et al",
+    "year": "2020",
+    "topic":"distance, gradients, parameters",
+    "venue": "NeurIPS",
+    "description": "The paper proposes a \"deep relative trust\" distance that upper-bounds relative changes in a network’s function and layer-to-output Jacobians by a product of layerwise relative parameter perturbations, explaining quasi-exponential breakdown with depth. Using this model, the authors derive a descent lemma and the Frobenius-matched gradient descent optimizer (Fromage), which scales each layer’s step to a fixed relative change and adds a norm-preserving prefactor (unlike LARS). Empirically, they show gradient/loss sensitivity grows quasi-exponentially with perturbation size in deep MLPs, and that Fromage trains very deep MLPs and performs competitively on CIFAR-10, ImageNet, GANs, and a Transformer with minimal LR tuning (often η=0.01). Overall, the work argues that layerwise relative updates—rather than Euclidean trust regions—better capture deep nets’ geometry and can reduce learning-rate sensitivity in practice.",
+    "link": "https://arxiv.org/pdf/2002.03432"
+  },
   {
     "title": "Rotational Equilibrium: How Weight Decay Balances Learning Across Neural Networks",
     "author": "Atli Kosson et al",
@@ -34,15 +70,6 @@
     "venue": "ICML",
     "description": "This paper provides a novel decomposition of the Adam optimizer, arguing that it can be understood as combining two distinct mechanisms: taking the sign of gradients (determining update direction) and variance adaptation (determining update magnitude based on gradient reliability). The authors demonstrate that the sign aspect dominates Adam's behavior and is responsible for both its successes and its reported generalization problems, while variance adaptation can be beneficially applied to other optimizers like SGD. Through theoretical analysis on quadratic problems and experiments across multiple domains, they show that sign-based methods work best for noisy, ill-conditioned, axis-aligned problems, and introduce M-SVAG (momentum stochastic variance-adapted gradient) as an alternative that applies variance adaptation without the potentially harmful sign component. The work challenges the conventional understanding of adaptive optimizers by isolating these two mechanisms and showing that generalization issues stem specifically from the sign aspect rather than adaptivity itself.",
     "link": "https://arxiv.org/pdf/1705.07774"
-  },
-  {
-    "title": "Understanding Decoupled and Early Weight Decay",
-    "author": "Johan Bjorck et al",
-    "year": "2020",
-    "topic":"decouple, weight decay, regularization",
-    "venue": "NeurIPS",
-    "description": "The authors show that applying weight decay only early in training works because it keeps network weights small throughout optimization, effectively increasing the relative gradient update size (Δw/w) which has a regularizing effect similar to using larger learning rates. For the second observation about decoupled weight decay outperforming standard L2 regularization with adaptive optimizers, they demonstrate that the key issue is not adaptivity itself but rather the mixing of gradients from the objective function and L2 penalty in Adam's momentum buffers, where gradients can \"drown out\" each other and make hyperparameter tuning difficult.",
-    "link": "https://arxiv.org/pdf/2012.13841"
   },
   {
     "title": "Why Do We Need Weight Decay in Modern Deep Learning?",
