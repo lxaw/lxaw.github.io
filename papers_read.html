@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 340 papers. Let's keep it up!
+        So far, we have read 342 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 340 papers. Nice! 
+        Your search returned 342 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning</td>
+                <td>Shih-Yang Liu et al</td>
+                <td>2025</td>
+                <td>RL, reinforcement learning, penalty</td>
+                <td>Arxiv</td>
+                <td>DLER re-examines length penalties for reasoning LMs and shows that the accuracy loss seen with simple truncation comes from optimization, not the penalty itself. They identify three culprits—biased advantage estimates under GRPO (from high reward variance), entropy collapse, and sparse signals—and fix them with a recipe: batch-wise reward normalization, higher/decoupled clipping, dynamic sampling (curriculum), plus the plain truncation penalty. This yields state-of-the-art accuracy–efficiency trade-offs—~70% shorter outputs while matching or improving accuracy—and enables superior test-time parallel scaling (higher Pass@K at lower latency). They also add Difficulty-Aware DLER (adaptive truncation by problem hardness) and an update-selective weight-merging method that preserves baseline accuracy while retaining concise reasoning when full RL data isn’t available. Awesome work Shih-Yang! Glad to see it out!</td>
+                <td><a href="https://arxiv.org/pdf/2510.15110" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models</td>
+                <td>Mingjie Liu et al</td>
+                <td>2025</td>
+                <td>RL, reinforcement learning, GRPO</td>
+                <td>Arxiv</td>
+                <td>The ProRL paper proposes Prolonged Reinforcement Learning (ProRL) as a method to expand reasoning abilities in large language models beyond what is accessible via supervised training or short RL runs. Instead of relying only on reward-model alignment, ProRL uses verifiable rewards (e.g., correctness in math/code), Group Relative Policy Optimization (GRPO) with entropy-preserving techniques, KL-regularization with periodic reference policy resets, and a diverse multi-domain training set (math, code, STEM, logic, instruction following). The authors show that extended RL (over 2k+ steps) continues to yield improvements, avoids entropy collapse, and enables models to discover new reasoning strategies not present in the base distribution. Their resulting model, Nemotron-Research-Reasoning-Qwen-1.5B, significantly outperforms both its base model and larger specialized models across a broad set of reasoning benchmarks.</td>
+                <td><a href="https://arxiv.org/pdf/2505.24864" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>A Spectral Condition for Feature Learning</td>
