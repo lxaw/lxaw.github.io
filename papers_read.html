@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 342 papers. Let's keep it up!
+        So far, we have read 344 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 342 papers. Nice! 
+        Your search returned 344 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,26 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Set Block Decoding is a Language Model Inference Accelerator</td>
+                <td>Itai Gat et al</td>
+                <td>2025</td>
+                <td>dllm, diffusion, llm</td>
+                <td>Arxiv</td>
+                <td>This paper proposes Set Block Decoding (SBD), a decoding paradigm that unifies next-token prediction and masked token prediction within a single transformer, enabling parallel sampling of non-consecutive future tokens. It shows how to train SBD by fine-tuning standard NTP models—without architectural changes or extra training hyperparameters—so the model retains AR capability while gaining set-parallel decoding. For inference, SBD integrates entropy-bounded set selection (e.g., EB-Sampler) and remains compatible with exact KV-caching, letting blocks be decoded in arbitrary order and then cached. The authors analyze latency with a roofline model and argue that reductions in function evaluations translate closely to wall-clock gains, providing a practical, solver-agnostic route to accelerate LM decoding without sacrificing baseline behavior.</td>
+                <td><a href="https://arxiv.org/pdf/2509.04185" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Accelerated Sampling from Masked Diffusion Models via Entropy Bounded Unmasking</td>
+                <td>Heli Ben-Hamu et al</td>
+                <td>2025</td>
+                <td>dllm, diffusion, llm, sampling</td>
+                <td>Arxiv</td>
+                <td>This paper introduces EB-Sampler (Entropy Bounded Sampler), an adaptive sampling method for masked diffusion models (MDMs) that improves efficiency without degrading generation quality. It builds on the observation that multiple masked tokens can often be predicted with low entropy and unmasked simultaneously with minimal error. EB-Sampler dynamically determines how many tokens to unmask per step by bounding the joint dependence among token predictions through an entropy-based criterion. The authors provide theoretical grounding showing how EB-Sampler fits within a broader family of adaptive multi-token samplers and demonstrate that it yields 2–3× faster sampling on language, coding, and reasoning benchmarks compared to standard MDM samplers.</td>
+                <td><a href="https://arxiv.org/pdf/2505.24857" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning</td>
