@@ -1,5 +1,32 @@
 [
     {
+    "title": "CANDI: Hybrid Discrete-Continuous Diffusion Models",
+    "author": "Patrick Pynadeth et al",
+    "year": "2025",
+    "topic":"diffusion, discrete, continuous",
+    "venue": "Arxiv",
+    "description": "CANDI explains why continuous diffusion struggles on discrete data by introducing token identifiability, splitting Gaussian corruption into (i) discrete identity corruption (argmax flips) and (ii) continuous rank degradation (how often incorrect tokens outrank the true one), and showing these two scales mismatch badly as vocabulary size grows (\"temporal dissonance\"). It then proposes a hybrid noising kernel that decouples discrete masking and continuous Gaussian noise, so both forms of corruption follow controlled, roughly linear schedules and the model can learn discrete conditional structure and a continuous score function at the same time. This hybrid design enables practical benefits: better low-NFE text generation frontiers than masked diffusion and straightforward classifier guidance via gradient addition using off-the-shelf classifiers, without diffusion-specific heads. Compared to CADD, which augments a masked diffusion LM with a continuous latent channel mainly to fix the [MASK] information void and improve mode coverage/quality in a largely discrete-first framework, CANDI is more theory-driven, explicitly targets the Gaussian-vs-discrete mismatch at large vocabularies, and uses that analysis to design a hybrid process whose corruption schedules and inference algorithm are built around token identifiability rather than just semantic hinting.",
+    "link": "https://arxiv.org/pdf/2510.22510"
+  },
+    {
+    "title": "Continuously Augmented Discrete Diffusion model for Categorical Generative Modeling",
+    "author": "Huangjie Zheng et al",
+    "year": "2025",
+    "topic":"diffusion, discrete, continuous",
+    "venue": "Arxiv",
+    "description": "Continuously Augmented Discrete Diffusion (CADD) extends masked discrete diffusion by giving every masked token a paired continuous latent that decays gradually instead of collapsing immediately to the absorbing [MASK] state. This continuous trajectory preserves graded semantic information about the original token, removing the “information void” that standard discrete diffusion models suffer from. At inference, the model can draw one or more continuous samples to trade off between mode-seeking (precise) and mode-covering (diverse) behavior—something masked diffusion cannot do. Overall, CADD keeps the same architecture and training simplicity as standard DLMs but adds a continuous augmentation that yields more stable scaling with steps and consistently higher quality across text, image, and code generation.",
+    "link": "https://arxiv.org/pdf/2510.01329"
+  },
+    {
+    "title": "Test-Time Scaling of Diffusion Models via Noise Trajectory Search",
+    "author": "Vignav Ramesh et al",
+    "year": "2025",
+    "topic":"diffusion, noise, sampler",
+    "venue": "Arxiv",
+    "description": "They reframe diffusion sampling as a control problem, where each timestep’s injected noise is treated as an action that can be optimized rather than drawn randomly. To approximate this high-dimensional search efficiently, they replace the full Markov decision process with a sequence of independent contextual bandits. They then introduce an ε-greedy noise-trajectory search algorithm that mixes global exploration of the Gaussian noise space with local hill-climbing around promising noise candidates, using Tweedie’s formula to score each candidate without running a full rollout. This produces a practical, gradient-free method for optimizing arbitrary test-time rewards by selectively choosing per-step noise during inference.",
+    "link": "https://arxiv.org/pdf/2506.03164"
+  },
+    {
     "title": "Set Block Decoding is a Language Model Inference Accelerator",
     "author": "Itai Gat et al",
     "year": "2025",
