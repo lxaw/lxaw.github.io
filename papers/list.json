@@ -1,5 +1,86 @@
 [
     {
+    "title": "Training Compute-Optimal Large Language Models",
+    "author": "Jordan Hoffman et al",
+    "year": "2022",
+    "topic":"scaling, llm",
+    "venue": "Arxiv",
+    "description": "Kaplan et al. (2020) empirically demonstrate that Transformer language-model cross-entropy loss follows simple power-law scaling with non-embedding model parameters, dataset size, and training compute across many orders of magnitude. They show that performance depends primarily on scale rather than architectural details, and that overfitting behavior collapses to a predictable function of the ratio between model size and data size. By modeling learning curves and batch-size effects, they derive a unified framework relating loss to model size and training time. Using this framework, they argue that compute-efficient training favors very large models trained on comparatively modest amounts of data and stopped well before full convergence.",
+    "link": "https://arxiv.org/pdf/2203.15556"
+  },
+    {
+    "title": "Scaling Laws for Neural Language Models",
+    "author": "Jared Kaplan et al",
+    "year": "2020",
+    "topic":"scaling, llm",
+    "venue": "Arxiv",
+    "description": "Kaplan et al. (2020) empirically demonstrate that Transformer language-model cross-entropy loss follows simple power-law scaling with non-embedding model parameters, dataset size, and training compute across many orders of magnitude. They show that performance depends primarily on scale rather than architectural details, and that overfitting behavior collapses to a predictable function of the ratio between model size and data size. By modeling learning curves and batch-size effects, they derive a unified framework relating loss to model size and training time. Using this framework, they argue that compute-efficient training favors very large models trained on comparatively modest amounts of data and stopped well before full convergence.",
+    "link": "https://arxiv.org/pdf/2001.08361"
+  },
+    {
+    "title": "BroRL: Scaling Reinforcement Learning via Broadened Exploration",
+    "author": "Jian Hu et al",
+    "year": "2025",
+    "topic":"RL, reinforcement learning, GRPO",
+    "venue": "Arxiv",
+    "description": "BRORL introduces rollout-size scaling as a new axis for RLVR by broadening exploration per prompt, arguing that step-based scaling saturates due to insufficient coverage of the action space rather than fundamental limits of RL. Its main theoretical contribution is a mass-balance analysis of a single RL update, which decomposes the change in total correct-token probability mass into (i) two always-nonnegative sampled terms—rewarding sampled correct tokens and penalizing sampled incorrect ones—and (ii) an unsampled coupling term that can be negative but provably vanishes as the number of rollouts increases, guaranteeing monotonic expansion of correct probability mass at large rollout sizes. On the algorithmic side, BroRL is implemented on top of a clipped PPO-style RLVR objective, using decoupled advantage normalization (group-level baselining followed by batch normalization) and dynamic sampling, with the key change being a large per-prompt rollout count that stabilizes PPO updates by reducing variance and suppressing harmful unsampled effects.",
+    "link": "https://arxiv.org/pdf/2503.20853"
+  },
+    {
+    "title": "Unified Multimodal Discrete Diffusion",
+    "author": "Alexander Swerdlow et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm, multimodal",
+    "venue": "Arxiv",
+    "description": "UniDisc is the first unified multimodal discrete diffusion model that jointly generates text and images by randomly masking tokens and iteratively denoising them through a shared vocabulary, rather than using fixed autoregressive token ordering. The model unifies previously disparate design choices across text and image domains by applying an absorbing transition matrix with masked tokens, discrete noise schedules, and weighted cross-entropy loss uniformly across both modalities. UniDisc incorporates classifier-free guidance by randomly masking entire modalities during training and uses confidence-based sampling during inference to iteratively unmask the most confident predictions across diffusion steps. The framework naturally supports joint image-text inpainting without fine-tuning, demonstrates superior performance on multimodal retrieval tasks through variable denoising steps, and enables zero-shot image editing by denoising corrupted image-text pairs using the model's likelihood as a scoring function.",
+    "link": "https://arxiv.org/pdf/2503.20853"
+  },
+    {
+    "title": "dInfer: An Efficient Inference Framework for Diffusion Language Models",
+    "author": "Yuxin Ma et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This framework proposes several algorithmic innovations to improve inference efficiency. Iteration smoothing retains token representations from the previous denoising iteration and fuses them with the next iteration's embeddings, enabling cross-iteration information flow that enriches contextual cues available to the model and improves token confidence predictions while mitigating performance degradation from KV-cache deployment. Hierarchical decoding is a novel decoding strategy that recursively partitions masked token spans while ensuring at least one token is decoded per region, reducing local dependencies between tokens and improving decoding efficiency without requiring model retraining. Credit decoding serves as an alternative strategy that accumulates historical confidence scores as \"credits\" and preferentially commits tokens with consistently stable predictions across iterations, enhancing reliability by favoring tokens with proven stability rather than single-iteration confidence thresholds. The vicinity KV-cache refresh method addresses the challenge of bidirectional attention by selectively updating a small window of tokens adjacent to the current decoding block while reusing cache for distant tokens, then performing a full cache update once a block is fully decoded to ensure global consistency, thereby balancing computational cost with accuracy.",
+    "link": "https://arxiv.org/pdf/2510.08666"
+  },
+    {
+    "title": "Scaling Data-Constrained Language Models",
+    "author": "Niklas Muennighoff et al",
+    "year": "2023",
+    "topic":"llm, scaling, data",
+    "venue": "NeurIPS",
+    "description": "This paper investigates scaling language models when unique training data is limited, a critical concern as high-quality internet text approaches exhaustion. The authors conduct over 400 training runs to empirically study how repeated data affects model performance and propose a new data-constrained scaling law that extends the Chinchilla scaling framework by accounting for the diminishing value of repeated tokens through exponential decay formulations. They demonstrate that training for up to 4 epochs of repeated data incurs negligible performance penalties compared to unique data, but returns diminish rapidly beyond that point, with an estimated half-life of approximately 15 epochs. Finally, they explore complementary strategies including code augmentation and relaxed data filtering, finding that mixing in code can effectively double the available training tokens while maintaining performance on natural language tasks.",
+    "link": "https://arxiv.org/pdf/2305.16264"
+  },
+    {
+    "title": "Diffusion Beats Autoregressive in Data-Constrained Settings",
+    "author": "Mihir Prabhudesai et al",
+    "year": "2025",
+    "topic":"diffusion, llm",
+    "venue": "NeurIPS",
+    "description": "The paper systematically demonstrates that masked diffusion models substantially outperform autoregressive models in data-constrained settings where training involves repeated passes over limited data, contrary to prior work suggesting diffusion requires 16× more compute. Through fitting scaling laws across hundreds of models, the authors show diffusion models exhibit an effective epoch half-life (R*_D) of ~500 compared to ~30 for AR models, enabling them to benefit from repeated data for far longer without overfitting. The paper derives a closed-form power-law expression (Ccrit(U) ∝ U^2.174) that predicts the critical compute threshold at which diffusion begins to outperform AR as a function of dataset size, providing practitioners with actionable guidance on when to use each paradigm. The authors attribute diffusion's superior sample efficiency to its implicit training over diverse token orderings acting as data augmentation, which they validate experimentally by showing AR models trained on multiple random permutations approach diffusion performance.",
+    "link": "https://arxiv.org/pdf/2507.15857"
+  },
+    {
+    "title": "Training Diffusion Language Models at Scale using Autoregressive Models",
+    "author": "Radical Numerics Inc.",
+    "year": "2025",
+    "topic":"diffusion, llm",
+    "venue": "Arxiv",
+    "description": "RND1-Base introduces a simple, single-stage continual pretraining (SCP) recipe for converting autoregressive models into large-scale diffusion language models without complex attention-mask annealing strategies, achieving a 30B-parameter MoE model trained on 500B tokens that outperforms smaller diffusion models. The paper demonstrates that critical batch size for diffusion models extends beyond 8M tokens, indicating diffusion models can effectively utilize larger batches than previously thought. To preserve autoregressive knowledge during conversion, the authors employ layer-specific learning rates—maintaining higher rates for attention parameters while using near-zero rates for non-attention (FFN/embedding) parameters—which empirically prevents catastrophic forgetting of pretrained knowledge. RND1-Base achieves state-of-the-art performance among diffusion language models on reasoning, math, and coding benchmarks while establishing a foundation for scalable diffusion model training.",
+    "link": "https://www.radicalnumerics.ai/assets/rnd1_report.pdf"
+  },
+    {
+    "title": "LLaDA2.0: Scaling Up Diffusion Language Models to 100B",
+    "author": "Tiwei Bei et al",
+    "year": "2025",
+    "topic":"diffusion, llm",
+    "venue": "Arxiv",
+    "description": "LLaDA2.0 introduces a scalable method for converting pre-trained auto-regressive models into discrete diffusion language models at frontier scale (up to 100B parameters), avoiding costly training from scratch while preserving linguistic knowledge. The paper proposes a novel Warmup-Stable-Decay (WSD) training strategy that progressively expands block sizes during continual pre-training, enabling smooth transition from left-to-right generation to bidirectional denoising while improving data efficiency. To address practical deployment, the authors develop post-training techniques including complementary masking for data utilization, confidence-aware parallel training for efficient inference, and a reformulated DPO objective adapted for diffusion models. The resulting models (LLaDA2.0-mini at 16B and LLaDA2.0-flash at 100B) achieve competitive performance with auto-regressive baselines while demonstrating particular strengths in structured generation tasks like code and tool use.",
+    "link": "https://github.com/inclusionAI/LLaDA2.0/blob/main/tech_report.pdf"
+  },
+    {
     "title": "CANDI: Hybrid Discrete-Continuous Diffusion Models",
     "author": "Patrick Pynadeth et al",
     "year": "2025",
