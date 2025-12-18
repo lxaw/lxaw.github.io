@@ -16,10 +16,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 356 papers. Let's keep it up!
+        So far, we have read 359 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 356 papers. Nice! 
+        Your search returned 359 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -45,6 +45,36 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Open Thoughts: Data Recipes for Reasoning Models</td>
+                <td>Etash Guha et al</td>
+                <td>2025</td>
+                <td>data, data recipes</td>
+                <td>Arxiv</td>
+                <td>OpenThoughts (v3) is an open-data recipe for reasoning SFT: they run 1,000+ controlled ablations over a data-generation pipeline (question sourcing → mixing top sources → LLM-based question filtering → dedup + multi-sample teacher answers → teacher choice) and then scale the best choices to OpenThoughts3-1.2M (850k math / 250k code / 100k science). Implementation-wise, the strongest recipe surprisingly keeps few high-quality sources (often top 1–2), uses LLM-based filters like difficulty/response-length rather than embeddings/fastText, scales mainly by sampling multiple teacher answers per question (e.g., up to 16×), and largely skips answer filtering because it didn’t beat “keep everything” in their compute-controlled tests. A notable finding is teacher selection: QwQ-32B works better as a distillation teacher than DeepSeek-R1 for their pipeline even though it can score worse on some target benchmarks, so they use QwQ-32B to annotate the final dataset. The benefit is a reproducible, public alternative to proprietary reasoning corpora: fine-tuning Qwen2.5-7B-Instruct on OpenThoughts3-1.2M yields OpenThinker3-7B, reported at about 53% AIME 2025, 51% LiveCodeBench (06/24–01/25), and 54% GPQA Diamond, substantially ahead of DeepSeek-R1-Distill-Qwen-7B, with datasets/models released on openthoughts.ai</td>
+                <td><a href="https://arxiv.org/pdf/2506.04178" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Decoupled Weight Decay Regularization</td>
+                <td>Ilya Loshchilov et al</td>
+                <td>2019</td>
+                <td>optimization, weight decay</td>
+                <td>ICLR</td>
+                <td>Decoupled Weight Decay (the “AdamW/SGDW” paper) shows that L2 regularization is only equivalent to weight decay for plain SGD (up to a learning-rate rescaling), but not for adaptive optimizers like Adam because Adam’s per-parameter normalization also rescales the L2 gradient, making regularization uneven across parameters with different historical gradient magnitudes. Their implementation fix is simple: apply weight decay as a separate parameter shrink step (e.g., θ ← θ − α * update_from_loss and independently θ ← θ * (1 − αλ)), rather than adding λθ into the loss gradient—this yields AdamW (and SGDW) with essentially the same compute as the original optimizer. A key benefit is that this decouples the best weight-decay setting from the learning-rate setting, making hyperparameter tuning less entangled and improving training stability across schedules (they particularly highlight cosine annealing / warm restarts as helpful). Empirically, this decoupling substantially improves Adam’s generalization, often closing much of the gap to SGD+momentum on image classification (e.g., CIFAR/ImageNet32x32), which is why “AdamW” became the default in many modern training recipes.</td>
+                <td><a href="https://arxiv.org/pdf/1711.05101" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>RLP: Reinforcement as a Pretraining Objective</td>
+                <td>Ali Hatamizadeh et al</td>
+                <td>2025</td>
+                <td>reinforcement, rl, pretraining</td>
+                <td>Arxiv</td>
+                <td>RLP (“Reinforcement Learning Pre-training”) changes pretraining by sampling a short chain-of-thought as an action before each next-token prediction, then rewarding that thought by its information gain: the log-likelihood improvement on the observed next token when conditioning on (context + thought) versus a no-think EMA teacher baseline (computed under teacher forcing). Implementation-wise, they use multiple thought rollouts per context, form group-relative advantages, and apply a PPO/GRPO-like clipped surrogate update that updates only the thought tokens (treating the reward as a stop-grad), while the EMA baseline is updated slowly (e.g., τ≈0.999) to stabilize training and reduce reward hacking. The key benefit is a verifier-free, dense, position-wise reward that works on ordinary web-scale text (no task-specific graders, no sparse success signals), encouraging “think-then-predict” behavior during pretraining rather than relegating RL to post-training. Empirically, they report sizable and persistent reasoning gains: on Qwen3-1.7B-Base, RLP lifts an 8-benchmark math+science average by about +19% and the improvements compound after identical post-training, and scaling to Nemotron-Nano-12B-v2 raises overall average from 42.81% to 61.32% with especially large science-reasoning boosts.</td>
+                <td><a href="https://arxiv.org/pdf/2510.01265" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Training Compute-Optimal Large Language Models</td>
