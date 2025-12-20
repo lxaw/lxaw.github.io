@@ -1,5 +1,59 @@
 [
     {
+    "title": "Any-Order GPT as Masked Diffusion Model: Decoupling Formulation and Architecture",
+    "author": "Shuchen Xue et al",
+    "year": "2025",
+    "topic":"gpt, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "Any-Order GPT as Masked Diffusion Model argues that prior AR vs masked-diffusion comparisons are confounded because AR is usually decoder-only with causal attention while masked diffusion is usually encoder-only with full attention, so they implement masked diffusion (equivalently any-order autoregression) inside a decoder-only GPT-style model (“AO-GPT”) to separate formulation from architecture. Holding architecture fixed, they show uniform any-order training converges slower than standard left-to-right, and that many random permutations are weak learning signals for language; mixing in a small amount of left-to-right orders (e.g., 10%) substantially improves both left-to-right and any-order performance, suggesting the objective should weight orders non-uniformly toward language’s natural structure. Holding formulation fixed (MDM/AO-AR), they analyze the architectural trade-off: encoder-only models predict order-invariant conditionals over token subsets (a smaller conditional space) and achieve better perplexity, while decoder-only any-order models must model many more order-dependent conditionals but can close the perplexity gap via context-order ensembling. Crucially, decoder-only MDMs enable much faster sampling because causal attention plus KV-cache and efficient unmasking let generation scale linearly in sequence length, yielding large practical speedups (reported ~25×) with comparable generation quality when using appropriate temperature/top-p annealing.",
+    "link": "https://arxiv.org/pdf/2506.19935"
+  },
+    {
+    "title": "Diffusion-LM Improves Controllable Text Generation",
+    "author": "Xiang Lisa Li et al",
+    "year": "2022",
+    "topic":"diffusion, llm",
+    "venue": "Arxiv",
+    "description": "Diffusion-LM is a non-autoregressive language model that generates text by iteratively denoising a sequence of continuous latent vectors into word embeddings, producing a hierarchy of intermediate representations. The model is trained end-to-end with learned token embeddings and a modified diffusion objective that predicts clean representations directly, combined with rounding and clamping techniques to reliably map continuous vectors back to discrete words. For controllable generation, Diffusion-LM applies gradient-based guidance from external classifiers directly to the continuous latent variables at each diffusion step, explicitly balancing fluency and control. This allows effective fine-grained and global controls—such as syntactic structure, part-of-speech patterns, length, and infilling—that are difficult to achieve with left-to-right autoregressive decoding.",
+    "link": "https://arxiv.org/pdf/2205.14217"
+  },
+    {
+    "title": "Ssd LM: Semi-autoregressive Simplex-based Diffusion Language Model for Text Generation and Modular Control",
+    "author": "Xiaochuang Han et al",
+    "year": "2023",
+    "topic":"diffusion, llm",
+    "venue": "Arxiv",
+    "description": "SSD-LM proposes a diffusion language model that generates text semi-autoregressively: it produces the next block of B tokens left-to-right, but within each block it denoises iteratively so tokens can be refined using bidirectional context, which also lets decoding stop at any length by generating more blocks as needed. The second key technique is simplex-based diffusion: instead of diffusing in an embedding/latent space, each token is mapped to a fixed “almost one-hot” logit vector over the vocabulary (a simplex after softmax), Gaussian noise is added to these logits across timesteps, and a Transformer is trained with an NLL objective to recover the original tokens given the noisy simplex and the left context. At inference, SSD-LM starts from pure Gaussian noise for a block and repeatedly predicts token distributions, then applies a logits-projection step (greedy / top-p sample / multi-hot nucleus) to convert the predicted distribution back into an “almost one-hot” logit representation before continuing reverse diffusion, which the authors found works better for simplex diffusion than vanilla DDPM updates. Because the model’s state is always a vocabulary-level distribution using standard subword tokenization, SSD-LM enables modular classifier guidance: at each denoising step it adds a gradient from any off-the-shelf attribute classifier that shares the tokenizer to steer generation (e.g., sentiment) without retraining the classifier or the LM.",
+    "link": "https://arxiv.org/pdf/2210.17432"
+  },
+    {
+    "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
+    "author": "Xu Wang et al",
+    "year": "2025",
+    "topic":"diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces Discrete Diffusion Forcing (D2F), an AR–diffusion hybrid training and decoding paradigm that enables faster-than-autoregressive inference for diffusion LLMs by combining block-wise causal generation (for exact KV cache reuse) with inter-block parallel decoding. The key technical idea is to train dLLMs to denoise blocks with monotonically increasing mask ratios, so later blocks can be predicted from partially denoised prefixes, implemented via an asymmetric distillation objective from a bidirectional dLLM teacher to a block-causal student. At inference time, a pipelined parallel decoding algorithm with dynamic block activation and confidence-based token admission trades off speed and quality while preserving cache correctness. Empirically, D2F turns existing dLLMs (LLaDA, Dream) into the first open-source diffusion models that outperform similarly sized AR LLMs in throughput (up to 2.5× faster than LLaMA-3/Qwen-2.5 and >50× over vanilla dLLMs) while maintaining comparable performance on math and code benchmarks.",
+    "link": "https://arxiv.org/pdf/2508.09192"
+  },
+    {
+    "title": "DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models",
+    "author": "Shansan Gong et al",
+    "year": "2023",
+    "topic":"diffusion, llm",
+    "venue": "Arxiv",
+    "description": "DIFFUSEQ introduces a classifier-free diffusion framework for sequence-to-sequence conditional text generation by embedding source+target tokens into a continuous space and applying a partial noising forward process that corrupts only the target portion while keeping the source as an anchor/condition. In the reverse process, a Transformer denoiser predicts the clean target representations using full-context attention, plus an anchoring + rounding procedure during sampling (round to nearby token embeddings and explicitly re-insert the original source embedding each step) to keep conditioning stable. The paper adds practical training/inference tricks—importance sampling over diffusion timesteps (to focus learning where loss is large), DDIM-style step reduction for faster sampling, and Minimum Bayes Risk (MBR) reranking that leverages diffusion’s naturally diverse candidates to improve final quality. Empirically on multiple Seq2Seq tasks (dialogue, question generation, simplification, paraphrase), DIFFUSEQ matches or beats strong AR/NAR and even fine-tuned PLM baselines while producing higher sentence-level diversity, and it provides a theoretical connection framing DIFFUSEQ as a continuous-space extension of iterative non-autoregressive generation (helping explain its quality/diversity behavior).",
+    "link": "https://arxiv.org/pdf/2210.08933"
+  },
+    {
+    "title": "Rewriting Pre-Training Data Boosts LLM Performance in Math and Code",
+    "author": "Kazuki Fujii et al",
+    "year": "2025",
+    "topic":"data, data recipes",
+    "venue": "Arxiv",
+    "description": "The SwallowCode paper. This paper argues that LLM performance in math and code is bottlenecked by pre-training data quality and shows that rewriting public corpora is more effective than filtering alone. It introduces SwallowCode (16.1B tokens) and SwallowMath (2.3B tokens), constructed via a transform-and-retain pipeline that combines rule-based cleaning with large-scale LLM-driven rewriting to enforce style, self-containment, and semantic quality. For code, the pipeline applies syntax checks, pylint filtering, then two LLM stages—Style-Guided Code Rewriting (SGCR) and Self-Contained Optimization Rewriting (SCOR)—which together deliver the largest gains by improving readability, resolving dependencies, and upgrading algorithms. With a fixed 50B-token continual pre-training budget on Llama-3.1-8B, the rewritten datasets yield large improvements (e.g., +17 pass@1 on HumanEval, +12.4 on GSM8K), demonstrating that systematic rewriting of existing data can outperform exclusionary filtering and synthetic-only approaches.",
+    "link": "https://arxiv.org/pdf/2505.02881"
+  },
+    {
     "title": "Open Thoughts: Data Recipes for Reasoning Models",
     "author": "Etash Guha et al",
     "year": "2025",
