@@ -5,19 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lex Whalen</title>
     <style>
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            margin: 40px;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin: 0 0 30px 0;
+        }
+        p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+        .lang-switch {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .lang-content { 
+            display: none; 
+        }
+        .lang-content.active { 
+            display: block; 
+        }
     </style>
 </head>
 <body>
-    <center>
-        <p>
-            <a href="#" onclick="showLang('en')">[English]</a> | 
-            <a href="#" onclick="showLang('ja')">[日本語]</a>
-        </p>
-        
+    <div class="container">
         <div id="en-content" class="lang-content active">
-            <h1>Lex Whalen</h1>
+            <div class="lang-switch">
+                <a href="#" onclick="showLang('en')">[English]</a> | 
+                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
+                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
+                <a href="#" onclick="showLang('zh')">[中文]</a>
+            </div>
             
             <p>Machine Learning Researcher at Georgia Institute of Technology.</p>
             
@@ -51,7 +81,12 @@
         </div>
         
         <div id="ja-content" class="lang-content">
-            <h1>ワレン・レックス</h1>
+            <div class="lang-switch">
+                <a href="#" onclick="showLang('en')">[English]</a> | 
+                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
+                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
+                <a href="#" onclick="showLang('zh')">[中文]</a>
+            </div>
             
             <p>ジョージア工科大学の機械学習研究者。</p>
             
@@ -83,7 +118,85 @@
             
             <p>メール: lwhalen7@gatech.edu</p>
         </div>
-    </center>
+        
+        <div id="de-content" class="lang-content">
+            <div class="lang-switch">
+                <a href="#" onclick="showLang('en')">[English]</a> | 
+                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
+                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
+                <a href="#" onclick="showLang('zh')">[中文]</a>
+            </div>
+            
+            <p>Machine-Learning-Forscher am Georgia Institute of Technology.</p>
+            
+            <p>Ich arbeite an effizientem Deep Learning und Modelloptimierung.</p>
+            
+            <p>Derzeit arbeite ich mit <a href="https://www.nvidia.com/">NVIDIA</a> an Diffusions-Sprachmodellen.</p>
+            
+            <p>Gleichzeitig bin ich Forscher am <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>, wo ich an effizienter Bilddiffusion und Tiny ML für das Gesundheitswesen gearbeitet habe.</p>
+            
+            <p>Davor war ich Softwareentwickler an der <a href="https://www.sc.edu/">University of South Carolina</a>.</p>
+            
+            <p>Ich habe an der <a href="https://www.gatech.edu/">Georgia Tech</a>, der <a href="https://www.sc.edu/">University of South Carolina</a> und der <a href="https://www.toyo.ac.jp/en/">Toyo University</a> studiert</p>
+            
+            <br><br>
+            
+            <p><a href="cv/main.pdf">Lebenslauf</a></p>
+            
+            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
+            
+            <p><a href="https://github.com/lxaw">GitHub</a></p>
+            
+            <p><a href="papers_read.html">Gelesene Paper</a></p>
+            
+            <p><a href="books_read.html">Leseliste</a></p>
+            
+            <p><a href="personal_interests.html">Persönliches</a></p>
+            
+            <br>
+            
+            <p>E-Mail: lwhalen7@gatech.edu</p>
+        </div>
+        
+        <div id="zh-content" class="lang-content">
+            <div class="lang-switch">
+                <a href="#" onclick="showLang('en')">[English]</a> | 
+                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
+                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
+                <a href="#" onclick="showLang('zh')">[中文]</a>
+            </div>
+            
+            <p>佐治亚理工学院机器学习研究员。</p>
+            
+            <p>我从事高效深度学习和模型优化的研究。</p>
+            
+            <p>目前在<a href="https://www.nvidia.com/">NVIDIA</a>从事扩散语言模型的工作。</p>
+            
+            <p>同时，我是<a href="https://www.gatech.edu/">佐治亚理工学院</a>的研究员，在那里我从事高效图像扩散和医疗保健微型机器学习的研究。</p>
+            
+            <p>在此之前，我是<a href="https://www.sc.edu/">南卡罗来纳大学</a>的软件开发人员。</p>
+            
+            <p>我曾在<a href="https://www.gatech.edu/">佐治亚理工学院</a>、<a href="https://www.sc.edu/">南卡罗来纳大学</a>和<a href="https://www.toyo.ac.jp/en/">东洋大学</a>学习</p>
+            
+            <br><br>
+            
+            <p><a href="cv/main.pdf">简历</a></p>
+            
+            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
+            
+            <p><a href="https://github.com/lxaw">GitHub</a></p>
+            
+            <p><a href="papers_read.html">论文列表</a></p>
+            
+            <p><a href="books_read.html">阅读列表</a></p>
+            
+            <p><a href="personal_interests.html">个人信息</a></p>
+            
+            <br>
+            
+            <p>电子邮件: lwhalen7@gatech.edu</p>
+        </div>
+    </div>
     
     <script>
         function showLang(lang) {

@@ -1,66 +1,80 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #f4f4f4;
-    cursor: pointer;
-}
-
-tr:hover {
-    background-color: #f9f9f9;
-}
 body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    padding: 0;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: none;
 }
 
 .center {
-    margin: 0 auto;
-    max-width: 1000px;
+    max-width: none;
 }
 
 h1 {
+    font-size: 48px;
+    font-weight: 400;
     color: #000;
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
 
 section {
     margin-bottom: 20px;
 }
 
+p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
 a {
-    color: #0000EE;
-    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-p {
-    margin: 10px 0;
-}
-
 footer {
     margin-top: 40px;
-    border-top: 1px solid #eee;
     padding-top: 10px;
 }
 
 small {
     color: #666;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #fafafa;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+td {
+    line-height: 1.5;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Make description column wrap nicely */
+td:nth-child(6) {
+    max-width: 400px;
+    word-wrap: break-word;
 }

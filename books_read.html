@@ -4,73 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading List | Lex Whalen</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            color: #000;
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        small {
+            color: #666;
+            font-size: 12px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #999;
+        }
+
+        #globalSearch {
+            width: 300px;
+        }
+
+        .search-inputs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .search-inputs input {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        #advancedFilters {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        #advancedFilters label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        #advancedFilters input[type="number"] {
+            width: 80px;
+        }
+
+        #advancedFilters input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 16px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #fafafa;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 2px solid #e0e0e0;
+            user-select: none;
+        }
+
+        th:hover {
+            background-color: #f0f0f0;
+        }
+
+        td {
+            line-height: 1.5;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        td:last-child {
+            max-width: 400px;
+            word-wrap: break-word;
+        }
+
+        #bookCount {
+            font-weight: 500;
+            margin: 20px 0 5px 0;
+        }
+
+        #searchCount {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <h1>Reading List</h1>
-        <p>Here's where I keep a list of books I have read. This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
-        <p>I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.</p>
+    <h1>Here is where I keep the books I've read.</h1>
+    <small><a href="index.html">Back to home</a></small>
+    <p>This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
+    <p>I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.</p>
+    
+    <!-- Statistics -->
+    <p id="bookCount">So far, we have read XXX books. Let's keep it up!</p>
+    <p id="pageCount">Total pages read: XXX</p>
+    <small id="searchCount">Your search returned YYY books. Nice!</small>
+    
+    <!-- Individual Search Fields -->
+    <div class="search-inputs">
+        <input type="text" id="titleSearch" placeholder="Search title..." onkeyup="applyFilters()">
+        <input type="text" id="authorSearch" placeholder="Search author..." onkeyup="applyFilters()">
+        <input type="text" id="yearSearch" placeholder="Search year..." onkeyup="applyFilters()">
+        <input type="text" id="descriptionSearch" placeholder="Search description..." onkeyup="applyFilters()">
+        <button onclick="clearAllFilters()">Clear Search</button>
+    </div>
+    
+    <!-- Advanced Filters -->
+    <div id="advancedFilters">
+        <label>Min Pages: <input type="number" id="minPages" placeholder="Min" onchange="applyFilters()"></label>
+        <label>Max Pages: <input type="number" id="maxPages" placeholder="Max" onchange="applyFilters()"></label>
         
-        <br>
+        <label>Year From: <input type="number" id="yearFrom" placeholder="2023" min="2020" max="2025" onchange="applyFilters()"></label>
+        <label>Year To: <input type="number" id="yearTo" placeholder="2024" min="2020" max="2025" onchange="applyFilters()"></label>
         
-        <!-- Basic Search -->
-        <p>Search: <input type="text" id="globalSearch" placeholder="Search books..." onkeyup="applyFilters()"></p>
-        
-        <br>
-        
-        <!-- Statistics -->
-        <p id="bookCount">So far, we have read XXX books. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned YYY books. Nice!</small>
-        
-        <br>
-        
-        <!-- Individual Search Fields -->
-        <div class="search-inputs">
-            <input type="text" id="titleSearch" placeholder="Search title..." onkeyup="applyFilters()">
-            <input type="text" id="authorSearch" placeholder="Search author..." onkeyup="applyFilters()">
-            <input type="text" id="yearSearch" placeholder="Search year..." onkeyup="applyFilters()">
-            <input type="text" id="descriptionSearch" placeholder="Search description..." onkeyup="applyFilters()">
-            <button onclick="clearAllFilters()">Clear Search</button>
-        </div>
-        
-        <br>
-        
-        <!-- Advanced Filters -->
-        <div id="advancedFilters">
-            <label>Min Pages: <input type="number" id="minPages" placeholder="Min" onchange="applyFilters()"></label>
-            <label>Max Pages: <input type="number" id="maxPages" placeholder="Max" onchange="applyFilters()"></label>
-            
-            <label>Year From: <input type="number" id="yearFrom" placeholder="2023" min="2020" max="2025" onchange="applyFilters()"></label>
-            <label>Year To: <input type="number" id="yearTo" placeholder="2024" min="2020" max="2025" onchange="applyFilters()"></label>
-            
-            <label><input type="checkbox" id="exactMatch" onchange="applyFilters()"> Exact Match</label>
-            <label><input type="checkbox" id="caseSensitive" onchange="applyFilters()"> Case Sensitive</label>
-        </div>
-        
-        <br>
-        
-        <table id="bookTable" border="1" cellpadding="5" cellspacing="0">
-            <thead>
-                <tr>
-                    <th onclick="sortTable(0)">Title</th>
-                    <th onclick="sortTable(1)">Author</th>
-                    <th onclick="sortTable(2)">Date Complete</th>
-                    <th onclick="sortTable(3)">Page Count</th>
-                    <th onclick="sortTable(4)">Rating</th>
-                    <th onclick="sortTable(5)">Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="6">Loading books...</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <br>
-        
-        <p><a href="index.html">Back to home</a></p>
-    </center>
+        <label><input type="checkbox" id="exactMatch" onchange="applyFilters()"> Exact Match</label>
+        <label><input type="checkbox" id="caseSensitive" onchange="applyFilters()"> Case Sensitive</label>
+    </div>
+    
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Title</th>
+                <th onclick="sortTable(1)">Author</th>
+                <th onclick="sortTable(2)">Date Complete</th>
+                <th onclick="sortTable(3)">Page Count</th>
+                <th onclick="sortTable(4)">Rating</th>
+                <th onclick="sortTable(5)">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="6">Loading books...</td>
+            </tr>
+        </tbody>
+    </table>
+    
 
     <script>
         let allBooks = [];
@@ -191,7 +328,6 @@
             document.getElementById('authorSearch').value = '';
             document.getElementById('yearSearch').value = '';
             document.getElementById('descriptionSearch').value = '';
-            document.getElementById('ratingFilter').value = '';
             document.getElementById('minPages').value = '';
             document.getElementById('maxPages').value = '';
             document.getElementById('yearFrom').value = '';
@@ -208,12 +344,24 @@
             const totalBooks = allBooks.length;
             const displayedBooks = filteredBooks.length;
             
+            // Calculate total pages
+            const totalPages = allBooks.reduce((sum, book) => {
+                const pages = parseInt(book['page-count']) || 0;
+                return sum + pages;
+            }, 0);
+            
+            const displayedPages = filteredBooks.reduce((sum, book) => {
+                const pages = parseInt(book['page-count']) || 0;
+                return sum + pages;
+            }, 0);
+            
             document.getElementById('bookCount').textContent = `So far, we have read ${totalBooks} books. Let's keep it up!`;
+            document.getElementById('pageCount').textContent = `Total pages read: ${totalPages.toLocaleString()}`;
             
             if (displayedBooks === totalBooks) {
                 document.getElementById('searchCount').textContent = '';
             } else {
-                document.getElementById('searchCount').textContent = `Your search returned ${displayedBooks} books. Nice!`;
+                document.getElementById('searchCount').textContent = `Your search returned ${displayedBooks} books (${displayedPages.toLocaleString()} pages). Nice!`;
             }
         }
 
