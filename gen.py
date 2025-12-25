@@ -17,7 +17,6 @@ def generate_html(json_file_path, output_file_path):
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Here's where I keep a list of papers I have read.</h1>
     <p>
         This list was curated by <a href="index.html">myself</a>, beginning from about May 2024 to now.
     </p>
