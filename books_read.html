@@ -4,159 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading List | Lex Whalen</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 400;
-            color: #000;
-        }
-
-        p {
-            margin: 8px 0;
-            font-size: 16px;
-        }
-
-        a {
-            color: #000;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        small {
-            color: #666;
-            font-size: 12px;
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            font-family: inherit;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus {
-            outline: none;
-            border-color: #999;
-        }
-
-        #globalSearch {
-            width: 300px;
-        }
-
-        .search-inputs {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-
-        .search-inputs input {
-            flex: 1;
-            min-width: 150px;
-        }
-
-        button {
-            padding: 8px 16px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            font-family: inherit;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        #advancedFilters {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            align-items: center;
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 4px;
-        }
-
-        #advancedFilters label {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 14px;
-        }
-
-        #advancedFilters input[type="number"] {
-            width: 80px;
-        }
-
-        #advancedFilters input[type="checkbox"] {
-            cursor: pointer;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            font-size: 14px;
-        }
-
-        th, td {
-            padding: 16px;
-            border: 1px solid #e0e0e0;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            background-color: #fafafa;
-            cursor: pointer;
-            font-weight: 500;
-            border-bottom: 2px solid #e0e0e0;
-            user-select: none;
-        }
-
-        th:hover {
-            background-color: #f0f0f0;
-        }
-
-        td {
-            line-height: 1.5;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        td:last-child {
-            max-width: 400px;
-            word-wrap: break-word;
-        }
-
-        #bookCount {
-            font-weight: 500;
-            margin: 20px 0 5px 0;
-        }
-
-        #searchCount {
-            display: block;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <p>This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
@@ -164,7 +12,6 @@
     
     <!-- Statistics -->
     <p id="bookCount">So far, we have read XXX books. Let's keep it up!</p>
-    <p id="pageCount">Total pages read: XXX</p>
     <small id="searchCount">Your search returned YYY books. Nice!</small>
     
     <!-- Individual Search Fields -->
@@ -173,7 +20,6 @@
         <input type="text" id="authorSearch" placeholder="Search author..." onkeyup="applyFilters()">
         <input type="text" id="yearSearch" placeholder="Search year..." onkeyup="applyFilters()">
         <input type="text" id="descriptionSearch" placeholder="Search description..." onkeyup="applyFilters()">
-        <button onclick="clearAllFilters()">Clear Search</button>
     </div>
     
     <!-- Advanced Filters -->
@@ -296,16 +142,6 @@
                     if (!matchText(dateText, yearSearch)) return false;
                 }
 
-                // Page count filters
-                if (minPages) {
-                    const pageCount = book['page-count'] ? parseInt(book['page-count']) : 0;
-                    if (pageCount < parseInt(minPages)) return false;
-                }
-                if (maxPages) {
-                    const pageCount = book['page-count'] ? parseInt(book['page-count']) : 0;
-                    if (pageCount > parseInt(maxPages)) return false;
-                }
-
                 // Year range filters
                 if (yearFrom || yearTo) {
                     const bookYear = book['date-complete'] ? new Date(book['date-complete']).getFullYear() : 0;
@@ -354,7 +190,6 @@
             }, 0);
             
             document.getElementById('bookCount').textContent = `So far, we have read ${totalBooks} books. Let's keep it up!`;
-            document.getElementById('pageCount').textContent = `Total pages read: ${totalPages.toLocaleString()}`;
             
             if (displayedBooks === totalBooks) {
                 document.getElementById('searchCount').textContent = '';
