@@ -4,7 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading List | Lex Whalen</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .search-inputs {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .search-inputs input {
+            flex: 1;
+            min-width: 150px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #advancedFilters {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #advancedFilters label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        #advancedFilters input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover {
+            background-color: #e0e0e0;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #bookCount {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        #searchCount {
+            display: block;
+            color: #666;
+            font-style: italic;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <p>This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
@@ -101,7 +170,6 @@
         }
 
         function applyFilters() {
-            const globalSearch = document.getElementById('globalSearch').value;
             const titleSearch = document.getElementById('titleSearch').value;
             const authorSearch = document.getElementById('authorSearch').value;
             const yearSearch = document.getElementById('yearSearch').value;
@@ -125,12 +193,6 @@
                     return exactMatch ? textToSearch === termToSearch : textToSearch.includes(termToSearch);
                 };
 
-                // Global search across all fields
-                if (globalSearch) {
-                    const allText = Object.values(book).join(' ');
-                    if (!matchText(allText, globalSearch)) return false;
-                }
-
                 // Individual field searches
                 if (!matchText(book.title, titleSearch)) return false;
                 if (!matchText(book.author, authorSearch)) return false;
@@ -140,6 +202,13 @@
                 if (yearSearch) {
                     const dateText = book['date-complete'] || '';
                     if (!matchText(dateText, yearSearch)) return false;
+                }
+
+                // Page range filters
+                if (minPages || maxPages) {
+                    const pageCount = parseInt(book['page-count']) || 0;
+                    if (minPages && pageCount < parseInt(minPages)) return false;
+                    if (maxPages && pageCount > parseInt(maxPages)) return false;
                 }
 
                 // Year range filters
@@ -157,7 +226,6 @@
         }
 
         function clearAllFilters() {
-            document.getElementById('globalSearch').value = '';
             document.getElementById('titleSearch').value = '';
             document.getElementById('authorSearch').value = '';
             document.getElementById('yearSearch').value = '';
