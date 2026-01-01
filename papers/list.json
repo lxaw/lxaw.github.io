@@ -1,5 +1,14 @@
 [
     {
+    "title": "Training and Inference on Any-Order Autoregressive Models the Right Way",
+    "author": "Andy Shih et al",
+    "year": "2022",
+    "topic":"gpt, any-order, llm",
+    "venue": "NeurIPS",
+    "description": "This paper improves Any-Order Autoregressive Models (AO-ARMs) by addressing two key deficiencies in their training. First, the authors show that previous AO-ARMs redundantly define the same distribution multiple ways by training on all possible variable orderings, so they propose training on a smaller set of univariate conditionals that still supports efficient arbitrary conditional inference. Second, they align the training objective with inference by upweighting univariate conditionals that are evaluated more frequently during inference, based on analyzing the recursive decomposition of marginal queries through a binary lattice structure. Their method MAC (Mask-tuned Arbitrary Conditional Models) achieves state-of-the-art likelihoods across text, image, and tabular domains by reducing redundancy while maintaining tractability. The key insight is reinterpreting AO-ARMs as recursive decomposition over masks rather than ensembles of orderings, enabling a more efficient decomposition protocol that concentrates training on frequently-used conditionals.",
+    "link": "https://arxiv.org/pdf/2205.13554"
+  },
+    {
     "title": "Any-Order GPT as Masked Diffusion Model: Decoupling Formulation and Architecture",
     "author": "Shuchen Xue et al",
     "year": "2025",

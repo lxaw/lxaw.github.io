@@ -15,10 +15,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 365 papers. Let's keep it up!
+        So far, we have read 366 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 365 papers. Nice! 
+        Your search returned 366 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -44,6 +44,16 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Training and Inference on Any-Order Autoregressive Models the Right Way</td>
+                <td>Andy Shih et al</td>
+                <td>2022</td>
+                <td>gpt, any-order, llm</td>
+                <td>NeurIPS</td>
+                <td>This paper improves Any-Order Autoregressive Models (AO-ARMs) by addressing two key deficiencies in their training. First, the authors show that previous AO-ARMs redundantly define the same distribution multiple ways by training on all possible variable orderings, so they propose training on a smaller set of univariate conditionals that still supports efficient arbitrary conditional inference. Second, they align the training objective with inference by upweighting univariate conditionals that are evaluated more frequently during inference, based on analyzing the recursive decomposition of marginal queries through a binary lattice structure. Their method MAC (Mask-tuned Arbitrary Conditional Models) achieves state-of-the-art likelihoods across text, image, and tabular domains by reducing redundancy while maintaining tractability. The key insight is reinterpreting AO-ARMs as recursive decomposition over masks rather than ensembles of orderings, enabling a more efficient decomposition protocol that concentrates training on frequently-used conditionals.</td>
+                <td><a href="https://arxiv.org/pdf/2205.13554" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Any-Order GPT as Masked Diffusion Model: Decoupling Formulation and Architecture</td>
