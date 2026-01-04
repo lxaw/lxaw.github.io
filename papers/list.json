@@ -1,5 +1,50 @@
 [
     {
+    "title": "How much do language models memorize?",
+    "author": "John X. Morris et al",
+    "year": "2025",
+    "topic":"llm, memorization",
+    "venue": "Arxiv",
+    "description": "This paper introduces a novel method for quantifying language model memorization by separating it into unintended memorization (dataset-specific information) and generalization (learned patterns about the data-generating process). The authors use Kolmogorov complexity approximated through compression rates to measure memorization at the instance level, estimating that GPT-family models have a capacity of approximately 3.6 bits-per-parameter. Through experiments on both synthetic random data and real text, they demonstrate that models memorize until reaching capacity, after which they begin generalizing—a transition point that coincides with the double descent phenomenon. The work produces scaling laws relating model capacity and dataset size to membership inference success, predicting that modern large language models trained on massive datasets are largely immune to membership inference attacks on average datapoints.",
+    "link": "https://arxiv.org/pdf/2505.24832"
+  },
+    {
+    "title": "Diffusion Models with Learned Adaptive Noise",
+    "author": "Subham Sekhar Sahoo et al",
+    "year": "2024",
+    "topic":"gan",
+    "venue": "NeurIPS",
+    "description": "This paper introduces MULAN (Multivariate Learned Adaptive Noise), a method that learns the diffusion process in diffusion models rather than using a fixed noise schedule. The key technical innovation is a multivariate noise schedule that applies different noise rates to each pixel and adapts based on input context through auxiliary latent variables, which the authors show makes the ELBO objective non-invariant to the noise process choice. By jointly optimizing both the forward diffusion process and reverse denoising model, MULAN achieves state-of-the-art density estimation on CIFAR-10 (2.55 BPD) and ImageNet-32 (3.67 BPD). The method also reduces training time by 50% compared to previous approaches while maintaining or improving sample quality.",
+    "link": "https://proceedings.neurips.cc/paper_files/paper/2024/file/bee43378b65ec195a67f24709469dcaf-Paper-Conference.pdf"
+  },
+    {
+    "title": "The GAN is dead; long live the GAN! A Modern Baseline GAN",
+    "author": "Yiwen Huang et al",
+    "year": "2025",
+    "topic":"gan",
+    "venue": "NeurIPS",
+    "description": "This paper introduces R3GAN, a simplified GAN baseline that addresses training instability and mode collapse through a regularized relativistic loss function. The authors prove that combining relativistic pairing GAN (RpGAN) with R1 and R2 gradient penalties provides local convergence guarantees, eliminating the need for ad-hoc training tricks. With this stable loss, they modernize the network architecture by replacing StyleGAN2's outdated backbone with a clean ResNet-based design incorporating ConvNeXt principles like grouped convolutions and inverted bottlenecks. The resulting model achieves competitive or superior FID scores compared to StyleGAN2 and recent diffusion models across FFHQ, ImageNet, CIFAR-10, and Stacked MNIST datasets, while requiring only a single forward pass for generation.",
+    "link": "https://proceedings.neurips.cc/paper_files/paper/2024/file/4e2acb1e1c8e297d394ae29ed9535172-Paper-Conference.pdf"
+  },
+    {
+    "title": "Encoder-Decoder Diffusion Language Models for Efficient Training and Inference",
+    "author": "Marianne Arriola et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "E2D2 proposes an encoder-decoder architecture for discrete diffusion models that separates the computation of representing clean tokens (encoder) from denoising corrupted tokens (lightweight decoder), enabling the expensive encoder to be called once per block while the cheap decoder is called T times for iterative denoising. For inference, this architecture achieves significantly faster generation than decoder-only diffusion models (e.g., ~75% speedup on summarization) while maintaining or improving sample quality. For training block diffusion models, E2D2 halves the computational cost compared to decoder-only BD3-LMs by processing clean tokens through the encoder and noisy tokens through the decoder in parallel, rather than processing 2L tokens through the full model. The paper demonstrates state-of-the-art quality-throughput trade-offs on summarization, translation, and mathematical reasoning tasks, extending the Pareto frontier beyond existing diffusion models.",
+    "link": "https://arxiv.org/pdf/2510.22852"
+  },
+    {
+    "title": "DiRL: An Efficient Post-Training Framework for Diffusion Language Models",
+    "author": "Ying Zhu et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm, grpo, rl",
+    "venue": "Arxiv",
+    "description": "DiRL introduces an efficient post-training framework for diffusion language models by tightly integrating FlexAttention-accelerated blockwise training with LMDeploy-optimized inference, enabling fast online model updates without repeated checkpoint loading. The framework implements DiPO, the first unbiased GRPO (Group Relative Policy Optimization) for diffusion models, which computes token-level importance sampling ratios using the efficient blockwise structure where generation is autoregressive between blocks but parallel within blocks. FlexAttention handles the complex attention masks required by blockwise models (where both prompts and outputs are repeated blockwise) more efficiently than standard FlashAttention, achieving nearly 6× training speedup. The system eliminates I/O bottlenecks by deploying models in an API server with in-place parameter updates instead of repeatedly saving/loading checkpoints, reducing per-step latency by 2.5× overall and enabling practical RL training on diffusion language models.",
+    "link": "https://arxiv.org/pdf/2512.22234"
+  },
+    {
     "title": "Janus: Decoupling Visual Encoding for Unified Multimodel Understanding and Generation",
     "author": "Chengyue Wu et al",
     "year": "2024",
