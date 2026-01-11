@@ -1,5 +1,32 @@
 [
     {
+    "title": "Chain of Though Empowers Transformers to Solve Inherently Serial Problems",
+    "author": "Zhiyuan Li et al",
+    "year": "2025",
+    "topic":"cot, chain-of-thought, llm",
+    "venue": "Arxiv",
+    "description": "This paper investigates why chain-of-thought (CoT) prompting improves the reasoning capabilities of decoder-only transformers through the lens of computational expressiveness. The authors prove that constant-depth transformers with constant-bit precision can only solve AC⁰ problems without CoT, but with T steps of CoT and O(log n) embedding size, they can solve any problem computable by boolean circuits of size T. They demonstrate this theoretically by showing CoT allows transformers to perform inherently serial computations that bypass the depth limitations, essentially using each CoT step to simulate one gate operation in a target circuit. Empirically, they validate these findings on four tasks (modular addition, permutation composition, iterated squaring, and circuit value problems), showing that CoT dramatically improves accuracy on problems requiring serial computation, especially for shallow transformers.",
+    "link": "https://arxiv.org/pdf/2402.12875"
+  },
+    {
+    "title": "SpecDiff-2: Scaling Diffusion Drafter Alignment for Faster Speculative Decoding",
+    "author": "Jameson Sandler et al",
+    "year": "2025",
+    "topic":"dllm, speculative decoding",
+    "venue": "Arxiv",
+    "description": "This paper introduces SpecDiff-2, which addresses two fundamental bottlenecks in speculative decoding by using discrete diffusion models as non-autoregressive drafters and developing novel alignment techniques. The key methodological contributions are: (1) Streak-distillation, a train-time alignment objective that directly optimizes the expected number of accepted tokens across the full draft window by maximizing the product of position-wise acceptance probabilities computed along verifier-generated trajectories. (2) Self-selection acceptance, a test-time mechanism that generates multiple candidate drafts from a single diffusion forward pass (exploiting parallel sampling from position-wise marginals) and uses the verifier to select the draft with highest expected throughput before applying lossless verification. Together, these methods achieve state-of-the-art speedups of up to 5.5× over standard decoding by simultaneously reducing draft latency through parallelism and improving drafter-verifier alignment through theoretically-motivated training and inference procedures.",
+    "link": "https://arxiv.org/pdf/2511.00606"
+  },
+    {
+    "title": "Diffusion Language Models are Provably Optimal Parallel Samplers",
+    "author": "Haozhe Jiang et al",
+    "year": "2025",
+    "topic":"dllm, dlm, llm, diffusion",
+    "venue": "Arxiv",
+    "description": "This paper establishes a rigorous theoretical foundation for diffusion language models (DLMs) as optimal parallel samplers by using circuit complexity theory, where circuit depth and width abstract sequential steps and memory requirements. The authors prove that DLMs with chain-of-thought (CoT) can simulate any parallel sampling algorithm using the minimum number of sequential steps (matching circuit depth), while autoregressive models require steps linear in circuit size. They demonstrate that enabling remasking (re-masking unmasked tokens) or revision (changing unmasked tokens) allows DLMs to also achieve optimal space complexity (matching circuit width), and prove these mechanisms strictly expand expressivity through a separation result on sampling zero-parity strings. The methodology frames DLMs as boolean circuits operating on encoded token sequences, formally modeling the predictor, masking policies, and generation process to derive time and space complexity bounds.",
+    "link": "https://arxiv.org/pdf/2512.25014"
+  },
+    {
     "title": "How much do language models memorize?",
     "author": "John X. Morris et al",
     "year": "2025",
