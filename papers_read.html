@@ -15,10 +15,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 374 papers. Let's keep it up!
+        So far, we have read 377 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 374 papers. Nice! 
+        Your search returned 377 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -44,6 +44,36 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>Chain of Though Empowers Transformers to Solve Inherently Serial Problems</td>
+                <td>Zhiyuan Li et al</td>
+                <td>2025</td>
+                <td>cot, chain-of-thought, llm</td>
+                <td>Arxiv</td>
+                <td>This paper investigates why chain-of-thought (CoT) prompting improves the reasoning capabilities of decoder-only transformers through the lens of computational expressiveness. The authors prove that constant-depth transformers with constant-bit precision can only solve AC⁰ problems without CoT, but with T steps of CoT and O(log n) embedding size, they can solve any problem computable by boolean circuits of size T. They demonstrate this theoretically by showing CoT allows transformers to perform inherently serial computations that bypass the depth limitations, essentially using each CoT step to simulate one gate operation in a target circuit. Empirically, they validate these findings on four tasks (modular addition, permutation composition, iterated squaring, and circuit value problems), showing that CoT dramatically improves accuracy on problems requiring serial computation, especially for shallow transformers.</td>
+                <td><a href="https://arxiv.org/pdf/2402.12875" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>SpecDiff-2: Scaling Diffusion Drafter Alignment for Faster Speculative Decoding</td>
+                <td>Jameson Sandler et al</td>
+                <td>2025</td>
+                <td>dllm, speculative decoding</td>
+                <td>Arxiv</td>
+                <td>This paper introduces SpecDiff-2, which addresses two fundamental bottlenecks in speculative decoding by using discrete diffusion models as non-autoregressive drafters and developing novel alignment techniques. The key methodological contributions are: (1) Streak-distillation, a train-time alignment objective that directly optimizes the expected number of accepted tokens across the full draft window by maximizing the product of position-wise acceptance probabilities computed along verifier-generated trajectories. (2) Self-selection acceptance, a test-time mechanism that generates multiple candidate drafts from a single diffusion forward pass (exploiting parallel sampling from position-wise marginals) and uses the verifier to select the draft with highest expected throughput before applying lossless verification. Together, these methods achieve state-of-the-art speedups of up to 5.5× over standard decoding by simultaneously reducing draft latency through parallelism and improving drafter-verifier alignment through theoretically-motivated training and inference procedures.</td>
+                <td><a href="https://arxiv.org/pdf/2511.00606" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion Language Models are Provably Optimal Parallel Samplers</td>
+                <td>Haozhe Jiang et al</td>
+                <td>2025</td>
+                <td>dllm, dlm, llm, diffusion</td>
+                <td>Arxiv</td>
+                <td>This paper establishes a rigorous theoretical foundation for diffusion language models (DLMs) as optimal parallel samplers by using circuit complexity theory, where circuit depth and width abstract sequential steps and memory requirements. The authors prove that DLMs with chain-of-thought (CoT) can simulate any parallel sampling algorithm using the minimum number of sequential steps (matching circuit depth), while autoregressive models require steps linear in circuit size. They demonstrate that enabling remasking (re-masking unmasked tokens) or revision (changing unmasked tokens) allows DLMs to also achieve optimal space complexity (matching circuit width), and prove these mechanisms strictly expand expressivity through a separation result on sampling zero-parity strings. The methodology frames DLMs as boolean circuits operating on encoded token sequences, formally modeling the predictor, masking policies, and generation process to derive time and space complexity bounds.</td>
+                <td><a href="https://arxiv.org/pdf/2512.25014" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>How much do language models memorize?</td>
