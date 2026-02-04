@@ -15,10 +15,10 @@
         I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
     </p>
     <p id="paperCount">
-        So far, we have read 377 papers. Let's keep it up!
+        So far, we have read 381 papers. Let's keep it up!
     </p> 
     <small id="searchCount">
-        Your search returned 377 papers. Nice! 
+        Your search returned 381 papers. Nice! 
     </small>
     
     <div class="search-inputs">
@@ -44,6 +44,46 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td>The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models</td>
+                <td>Zanlin Ni et al</td>
+                <td>2026</td>
+                <td>dllm, diffusion, llm</td>
+                <td>Arxiv</td>
+                <td>This paper reveals &quot;The Flexibility Trap&quot;—a counter-intuitive finding that diffusion language models&#x27; ability to generate tokens in arbitrary order actually narrows rather than expands their reasoning capabilities, as measured by Pass@k metrics showing autoregressive (left-to-right) decoding achieves higher solution space coverage. The authors identify &quot;entropy degradation&quot; as the mechanism: arbitrary-order models bypass high-uncertainty &quot;forking tokens&quot; (logical connectives like &quot;Therefore&quot;) that represent critical reasoning branch points, prematurely collapsing the solution space by resolving easier tokens first and then filling in connectors to match pre-generated conclusions rather than genuinely exploring logical paths. Based on this insight, they propose JustGRPO, which simply applies standard Group Relative Policy Optimization by treating diffusion models as autoregressive during training (eliminating the complexity of handling combinatorial trajectory spaces and intractable likelihoods), achieving state-of-the-art results like 89.1% on GSM8K while fully preserving parallel decoding at inference time. The work challenges the assumption that arbitrary-order generation is beneficial for reasoning, demonstrating that the autoregressive constraint acts as an effective training scaffold that forces confrontation with uncertainty at logical forks, thereby maintaining broader reasoning potential.</td>
+                <td><a href="https://arxiv.org/pdf/2601.15165" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Diffusion Language Models Know the Answer Before Decoding</td>
+                <td>Pengxiang Li et al</td>
+                <td>2025</td>
+                <td>dllm, diffusion, llm</td>
+                <td>Arxiv</td>
+                <td>Prophet accelerates diffusion language models by exploiting &quot;early answer convergence&quot;—the observation that correct answers often emerge as top-1 predictions at intermediate steps, with up to 99% of instances converging by halfway through decoding. The method monitors the confidence gap (difference between top-2 logits) and uses adaptive thresholds that become more permissive as decoding progresses, allowing the model to commit all remaining tokens and terminate early when predictions stabilize. Experiments on LLaDA-8B and Dream-7B show 1.2-3.4× speedups across diverse tasks while maintaining accuracy within ±1%, demonstrating that the method automatically allocates more steps to complex problems and fewer to simpler ones. This reframes DLM decoding as an optimal stopping problem and provides a training-free, plug-and-play acceleration technique complementary to existing optimization methods.</td>
+                <td><a href="https://arxiv.org/pdf/2508.19982" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>Fast-dLLM v2: Efficient Block-Diffusion LLM</td>
+                <td>Chengyue Wu et al</td>
+                <td>2025</td>
+                <td>dllm, diffusion, llm</td>
+                <td>Arxiv</td>
+                <td>This paper presents Fast-dLLM v2, which achieves 2.5× speedup over autoregressive LLMs by dividing text generation into blocks that use diffusion-based parallel decoding. The key technique is a block diffusion mechanism where tokens within each block can be predicted and refined simultaneously through bidirectional attention, while blocks themselves are generated sequentially using cached autoregressive dependencies. During inference, the model employs confidence-based parallel decoding that finalizes multiple high-confidence tokens simultaneously within a block, avoiding the sequential one-token-at-a-time bottleneck of traditional models. A hierarchical caching system further accelerates generation by storing completed block representations (block-level cache) and maintaining separate prefix/suffix caches for partially decoded blocks (DualCache), enabling efficient parallel refinement without redundant computation.</td>
+                <td><a href="https://arxiv.org/pdf/2509.26328" target="_blank">Link</a></td>
+            </tr>
+        
+            <tr>
+                <td>d3LLM: Ultra-Fast dLLM using Pseudo-Trajectory Distillation</td>
+                <td>Yu-Yang Qian et al</td>
+                <td>2026</td>
+                <td>dllm, diffusion, llm, distillation</td>
+                <td>Arxiv</td>
+                <td>This paper introduces d3LLM, a framework that balances accuracy and parallelism in diffusion language models through innovations in both training and inference. During training, they propose pseudo-trajectory distillation, which uses the teacher model&#x27;s own decoding trajectory (even when it differs from ground truth) to teach the student which tokens can be confidently decoded earlier, combined with curriculum learning that progressively increases mask ratios and window sizes. During inference, they introduce entropy-based multi-block decoding that simultaneously decodes across multiple blocks by prioritizing low-entropy (high-confidence) tokens, coupled with a KV-cache refresh mechanism that periodically recomputes cached states to prevent quality degradation from error propagation. They also propose AUP (Accuracy Under Parallelism), a new evaluation metric that measures the weighted area under the accuracy-parallelism curve, penalizing methods that sacrifice accuracy for speed while rewarding those that maintain both.</td>
+                <td><a href="https://arxiv.org/pdf/2601.07568" target="_blank">Link</a></td>
+            </tr>
         
             <tr>
                 <td>Chain of Though Empowers Transformers to Solve Inherently Serial Problems</td>

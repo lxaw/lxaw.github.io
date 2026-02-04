@@ -1,5 +1,41 @@
 [
     {
+    "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+    "author": "Zanlin Ni et al",
+    "year": "2026",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This paper reveals \"The Flexibility Trap\"—a counter-intuitive finding that diffusion language models' ability to generate tokens in arbitrary order actually narrows rather than expands their reasoning capabilities, as measured by Pass@k metrics showing autoregressive (left-to-right) decoding achieves higher solution space coverage. The authors identify \"entropy degradation\" as the mechanism: arbitrary-order models bypass high-uncertainty \"forking tokens\" (logical connectives like \"Therefore\") that represent critical reasoning branch points, prematurely collapsing the solution space by resolving easier tokens first and then filling in connectors to match pre-generated conclusions rather than genuinely exploring logical paths. Based on this insight, they propose JustGRPO, which simply applies standard Group Relative Policy Optimization by treating diffusion models as autoregressive during training (eliminating the complexity of handling combinatorial trajectory spaces and intractable likelihoods), achieving state-of-the-art results like 89.1% on GSM8K while fully preserving parallel decoding at inference time. The work challenges the assumption that arbitrary-order generation is beneficial for reasoning, demonstrating that the autoregressive constraint acts as an effective training scaffold that forces confrontation with uncertainty at logical forks, thereby maintaining broader reasoning potential.",
+    "link": "https://arxiv.org/pdf/2601.15165"
+  },
+    {
+    "title": "Diffusion Language Models Know the Answer Before Decoding",
+    "author": "Pengxiang Li et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "Prophet accelerates diffusion language models by exploiting \"early answer convergence\"—the observation that correct answers often emerge as top-1 predictions at intermediate steps, with up to 99% of instances converging by halfway through decoding. The method monitors the confidence gap (difference between top-2 logits) and uses adaptive thresholds that become more permissive as decoding progresses, allowing the model to commit all remaining tokens and terminate early when predictions stabilize. Experiments on LLaDA-8B and Dream-7B show 1.2-3.4× speedups across diverse tasks while maintaining accuracy within ±1%, demonstrating that the method automatically allocates more steps to complex problems and fewer to simpler ones. This reframes DLM decoding as an optimal stopping problem and provides a training-free, plug-and-play acceleration technique complementary to existing optimization methods.",
+    "link": "https://arxiv.org/pdf/2508.19982"
+  },
+    {
+    "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+    "author": "Chengyue Wu et al",
+    "year": "2025",
+    "topic":"dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This paper presents Fast-dLLM v2, which achieves 2.5× speedup over autoregressive LLMs by dividing text generation into blocks that use diffusion-based parallel decoding. The key technique is a block diffusion mechanism where tokens within each block can be predicted and refined simultaneously through bidirectional attention, while blocks themselves are generated sequentially using cached autoregressive dependencies. During inference, the model employs confidence-based parallel decoding that finalizes multiple high-confidence tokens simultaneously within a block, avoiding the sequential one-token-at-a-time bottleneck of traditional models. A hierarchical caching system further accelerates generation by storing completed block representations (block-level cache) and maintaining separate prefix/suffix caches for partially decoded blocks (DualCache), enabling efficient parallel refinement without redundant computation.",
+    "link": "https://arxiv.org/pdf/2509.26328"
+  },
+    {
+    "title": "d3LLM: Ultra-Fast dLLM using Pseudo-Trajectory Distillation",
+    "author": "Yu-Yang Qian et al",
+    "year": "2026",
+    "topic":"dllm, diffusion, llm, distillation",
+    "venue": "Arxiv",
+    "description": "This paper introduces d3LLM, a framework that balances accuracy and parallelism in diffusion language models through innovations in both training and inference. During training, they propose pseudo-trajectory distillation, which uses the teacher model's own decoding trajectory (even when it differs from ground truth) to teach the student which tokens can be confidently decoded earlier, combined with curriculum learning that progressively increases mask ratios and window sizes. During inference, they introduce entropy-based multi-block decoding that simultaneously decodes across multiple blocks by prioritizing low-entropy (high-confidence) tokens, coupled with a KV-cache refresh mechanism that periodically recomputes cached states to prevent quality degradation from error propagation. They also propose AUP (Accuracy Under Parallelism), a new evaluation metric that measures the weighted area under the accuracy-parallelism curve, penalizing methods that sacrifice accuracy for speed while rewarding those that maintain both.",
+    "link": "https://arxiv.org/pdf/2601.07568"
+  },
+    {
     "title": "Chain of Though Empowers Transformers to Solve Inherently Serial Problems",
     "author": "Zhiyuan Li et al",
     "year": "2025",
