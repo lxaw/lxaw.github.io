@@ -1,5 +1,23 @@
 [
     {
+    "title": "The Crystal Ball Hypothesis in Diffusion Models: Anticipating Object Positions from Initial Noise",
+    "author": "Yuanhao Ban et al",
+    "year": "2025",
+    "topic":"diffusion, image, noise",
+    "venue": "ICLR",
+    "description": "This paper discovers \"trigger patches\"—specific regions within the initial Gaussian noise of diffusion models that consistently determine where objects will appear in generated images, regardless of the text prompt. The authors develop both a posterior analysis method (measuring \"trigger entropy\" based on object position variance) and train a detector that can identify these patches directly from noise with 0.325 mAP50, demonstrating that trigger patches are statistical outliers in the Gaussian distribution rather than random noise. Through two-sample tests and experiments with handcrafted patches (shifted Gaussians and sinusoidal signals), they confirm that patches deviating from standard Gaussian distributions are more effective triggers, with injection success rates reaching 81% for certain synthetic patches. The findings enable two practical applications: removing trigger patches to increase positional diversity of generated objects (achieving entropy of 171.84 vs 135.97 baseline), and strategically placing trigger patches to improve prompt adherence for positional instructions (boosting success rate from 57% to 84%).",
+    "link": "https://arxiv.org/pdf/2406.01970"
+  },
+    {
+    "title": "How Many Samples are Needed to Train a Deep Neural Network?",
+    "author": "Pega Golestaneh et al",
+    "year": "2025",
+    "topic":"theory, data, scaling",
+    "venue": "ICLR",
+    "description": "This paper establishes a fundamental limit on how many training samples are needed for deep ReLU neural networks, proving that the generalization error decreases at a rate of 1/√n rather than the faster 1/n rate seen in classical methods like linear regression. Using information theory (Fano's inequality), the authors prove that achieving a prediction error of ε² requires approximately 1/ε⁴ training samples—significantly more than the 1/ε² samples needed by traditional statistical methods. Their theoretical lower bound matches existing upper bounds and shows the error depends logarithmically on input dimension and involves a sparsity factor based on ℓ1-norm constraints on network weights. Extensive experiments on MNIST, Fashion-MNIST, CIFAR10, and regression datasets confirm this 1/√n scaling holds in practice for both feedforward networks and CNNs, providing rigorous mathematical support for practitioners' belief that deep learning requires \"many\" training samples.",
+    "link": "https://proceedings.iclr.cc/paper_files/paper/2025/file/a0709efe5139939ab69902884ecad9c1-Paper-Conference.pdf"
+  },
+    {
     "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
     "author": "Zanlin Ni et al",
     "year": "2026",
