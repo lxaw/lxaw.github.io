@@ -25,21 +25,39 @@
         a:hover {
             text-decoration: underline;
         }
+        /* Tighter header block */
         .lang-switch {
-            font-size: 12px;
-            margin-bottom: 16px;
-            opacity: 0.8;
-        }
-        .links {
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-        .email {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-            font-size: 13px;
+            font-size:12px;
+            margin-bottom: -1px;
+            font-weight: bold;
             opacity: 0.65;
-            margin-bottom: 20px;
         }
+
+        .links {
+            font-size: 13px;
+            margin-top: -0.5px;
+            margin-bottom: -0.5px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+
+        /* Muted socials */
+        .links a {
+            opacity: 0.65;
+        }
+
+        .links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Email: tighter + closer */
+        .email {
+            font-size: 10px;
+            margin-bottom: -0.5px;
+            opacity: 0.55;
+        }
+
         .lang-content {
             display: none;
         }
@@ -52,6 +70,7 @@
     <div class="container">
         <!-- English -->
         <div id="en-content" class="lang-content active">
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
             <div class="lang-switch">
                 <a href="#" onclick="showLang('en')">EN</a> /
                 <a href="#" onclick="showLang('ja')">JP</a> /
@@ -68,13 +87,13 @@
                 <a href="personal_interests.html">Personal</a>
             </p>
 
-            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
 
             <p>I work on and with large models.</p>
         </div>
 
         <!-- Japanese -->
         <div id="ja-content" class="lang-content">
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
             <div class="lang-switch">
                 <a href="#" onclick="showLang('en')">EN</a> /
                 <a href="#" onclick="showLang('ja')">JP</a> /
@@ -91,13 +110,12 @@
                 <a href="personal_interests.html">個人</a>
             </p>
 
-            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
-
             <p>大規模なモデルをメインにしています。</p>
         </div>
 
         <!-- German -->
         <div id="de-content" class="lang-content">
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
             <div class="lang-switch">
                 <a href="#" onclick="showLang('en')">EN</a> /
                 <a href="#" onclick="showLang('ja')">JP</a> /
@@ -114,13 +132,12 @@
                 <a href="personal_interests.html">Persönlich</a>
             </p>
 
-            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
-
             <p>Ich arbeite an großen Modellen.</p>
         </div>
 
         <!-- Chinese -->
         <div id="zh-content" class="lang-content">
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
             <div class="lang-switch">
                 <a href="#" onclick="showLang('en')">EN</a> /
                 <a href="#" onclick="showLang('ja')">JP</a> /
@@ -137,13 +154,11 @@
                 <a href="personal_interests.html">个人</a>
             </p>
 
-            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
-
             <p>我主要从事大规模模型相关的工作。</p>
         </div>
     </div>
 
-    <small style="padding: 40px; display: block; text-align: right;">
+    <small>
         <a href="gineiden.html">_</a>
     </small>
 
