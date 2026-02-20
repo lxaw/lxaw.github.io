@@ -49,7 +49,6 @@ def generate_html(json_file_path, output_file_path):
                 <th data-sort="topic">Topic</th>
                 <th data-sort="venue">Venue</th>
                 <th data-sort="description">Description</th>
-                <th>Link</th>
             </tr>
         </thead>
         <tbody>
@@ -157,18 +156,28 @@ def generate_html(json_file_path, output_file_path):
 def generate_table_rows(papers):
     rows = []
     for paper in papers:
+        title_html = escape(paper['title'])
+
+        # Embed link into title if it exists
+        if paper.get('link'):
+            title_html = (
+                f'<a href="{escape(paper["link"])}" '
+                f'target="_blank" rel="noopener noreferrer">'
+                f'{title_html}</a>'
+            )
+
         row = f"""
             <tr>
-                <td>{escape(paper['title'])}</td>
+                <td>{title_html}</td>
                 <td>{escape(paper['author'])}</td>
                 <td>{escape(str(paper['year']))}</td>
                 <td>{escape(paper['topic'])}</td>
                 <td>{escape(paper['venue'])}</td>
                 <td>{escape(paper['description'])}</td>
-                <td>{'<a href="' + escape(paper['link']) + '" target="_blank">Link</a>' if paper.get('link') else 'N/A'}</td>
             </tr>
         """
         rows.append(row)
+
     return ''.join(rows)
 
 if __name__ == "__main__":

@@ -14,197 +14,145 @@
         .container {
             max-width: 800px;
         }
-        h1 {
-            font-size: 48px;
-            font-weight: 400;
-            margin: 0 0 30px 0;
-        }
         p {
-            margin: 8px 0;
+            margin: 10px 0;
             font-size: 16px;
         }
         a {
             color: #000;
+            text-decoration: none;
+        }
+        a:hover {
             text-decoration: underline;
         }
         .lang-switch {
-            margin-top: 20px;
             font-size: 12px;
+            margin-bottom: 16px;
+            opacity: 0.8;
         }
-        .lang-content { 
-            display: none; 
+        .links {
+            font-size: 14px;
+            margin-bottom: 12px;
         }
-        .lang-content.active { 
-            display: block; 
+        .email {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 13px;
+            opacity: 0.65;
+            margin-bottom: 20px;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- English -->
         <div id="en-content" class="lang-content active">
             <div class="lang-switch">
-                <a href="#" onclick="showLang('en')">[English]</a> | 
-                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
-                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
-                <a href="#" onclick="showLang('zh')">[中文]</a>
+                <a href="#" onclick="showLang('en')">EN</a> /
+                <a href="#" onclick="showLang('ja')">JP</a> /
+                <a href="#" onclick="showLang('de')">DE</a> /
+                <a href="#" onclick="showLang('zh')">中</a>
             </div>
-            
-            <p>Machine Learning Researcher at Georgia Institute of Technology.</p>
-            
-            <p>I work on efficient deep learning and model optimization.</p>
-            
-            <p>Currently working with <a href="https://www.nvidia.com/">NVIDIA</a> on diffusion language models.</p>
-            
-            <p>Concurrently, I am a researcher at <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>, where I worked on efficient image diffusion and tiny ML for healthcare.</p>
-            
-            <p>And before that, I was a software developer at the <a href="https://www.sc.edu/">University of South Carolina</a>.</p>
-            
-            <p>I studied at <a href="https://www.gatech.edu/">Georgia Tech</a>, <a href="https://www.sc.edu/">University of South Carolina</a>, and <a href="https://www.toyo.ac.jp/en/">Toyo University</a></p>
-            
-            <br><br>
-            
-            <p><a href="cv/main.pdf">CV/Resume</a></p>
-            
-            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
-            
-            <p><a href="https://github.com/lxaw">GitHub</a></p>
-            
-            <p><a href="papers_read.html">Papers List</a></p>
-            
-            <p><a href="books_read.html">Reading List</a></p>
-            
-            <p><a href="personal_interests.html">Personal</a></p>
-            
-            <br>
-            
-            <p>Email: lwhalen7@gatech.edu</p>
+
+            <p class="links">
+                <a href="cv/main.pdf">CV</a> ·
+                <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
+                <a href="https://github.com/lxaw">GitHub</a> ·
+                <a href="papers_read.html">Papers</a> ·
+                <a href="books_read.html">Books</a> ·
+                <a href="personal_interests.html">Personal</a>
+            </p>
+
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
+
+            <p>I work on and with large models.</p>
         </div>
-        
+
+        <!-- Japanese -->
         <div id="ja-content" class="lang-content">
             <div class="lang-switch">
-                <a href="#" onclick="showLang('en')">[English]</a> | 
-                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
-                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
-                <a href="#" onclick="showLang('zh')">[中文]</a>
+                <a href="#" onclick="showLang('en')">EN</a> /
+                <a href="#" onclick="showLang('ja')">JP</a> /
+                <a href="#" onclick="showLang('de')">DE</a> /
+                <a href="#" onclick="showLang('zh')">中</a>
             </div>
-            
-            <p>ジョージア工科大学の機械学習研究者。</p>
-            
-            <p>世界にも財布にもやさしい超人的知能の実現を目指し、効率的な深層学習とモデル最適化の研究をしています。</p>
-            
-            <p>現在、<a href="https://www.nvidia.com/">NVIDIA</a>で効率的深層学習のインターンをしています。</p>
-            
-            <p>同時に、<a href="https://www.gatech.edu/">ジョージア工科大学</a>で研究者として活動しています。</p>
-            
-            <p>その前は、<a href="https://www.sc.edu/">サウスカロライナ大学</a>でソフトウェア開発者として働いていました。</p>
-            
-            <p><a href="https://www.gatech.edu/">ジョージア工科大学</a>、<a href="https://www.sc.edu/">サウスカロライナ大学</a>、そして日本の<a href="https://www.toyo.ac.jp/en/">東洋大学</a>で学びました。</p>
-            
-            <br><br>
-            
-            <p><a href="cv/main.pdf">履歴書</a></p>
-            
-            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
-            
-            <p><a href="https://github.com/lxaw">GitHub</a></p>
-            
-            <p><a href="papers_read.html">読んだ論文</a></p>
-            
-            <p><a href="books_read.html">読んだ本</a></p>
-            
-            <p><a href="personal_interests.html">趣味など</a></p>
-            
-            <br>
-            
-            <p>メール: lwhalen7@gatech.edu</p>
+
+            <p class="links">
+                <a href="cv/main.pdf">履歴書</a> ·
+                <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
+                <a href="https://github.com/lxaw">GitHub</a> ·
+                <a href="papers_read.html">論文</a> ·
+                <a href="books_read.html">書籍</a> ·
+                <a href="personal_interests.html">個人</a>
+            </p>
+
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
+
+            <p>大規模なモデルをメインにしています。</p>
         </div>
-        
+
+        <!-- German -->
         <div id="de-content" class="lang-content">
             <div class="lang-switch">
-                <a href="#" onclick="showLang('en')">[English]</a> | 
-                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
-                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
-                <a href="#" onclick="showLang('zh')">[中文]</a>
+                <a href="#" onclick="showLang('en')">EN</a> /
+                <a href="#" onclick="showLang('ja')">JP</a> /
+                <a href="#" onclick="showLang('de')">DE</a> /
+                <a href="#" onclick="showLang('zh')">中</a>
             </div>
-            
-            <p>Machine-Learning-Forscher am Georgia Institute of Technology.</p>
-            
-            <p>Ich arbeite an effizientem Deep Learning und Modelloptimierung.</p>
-            
-            <p>Derzeit arbeite ich mit <a href="https://www.nvidia.com/">NVIDIA</a> an Diffusions-Sprachmodellen.</p>
-            
-            <p>Gleichzeitig bin ich Forscher am <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>, wo ich an effizienter Bilddiffusion und Tiny ML für das Gesundheitswesen gearbeitet habe.</p>
-            
-            <p>Davor war ich Softwareentwickler an der <a href="https://www.sc.edu/">University of South Carolina</a>.</p>
-            
-            <p>Ich habe an der <a href="https://www.gatech.edu/">Georgia Tech</a>, der <a href="https://www.sc.edu/">University of South Carolina</a> und der <a href="https://www.toyo.ac.jp/en/">Toyo University</a> studiert</p>
-            
-            <br><br>
-            
-            <p><a href="cv/main.pdf">Lebenslauf</a></p>
-            
-            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
-            
-            <p><a href="https://github.com/lxaw">GitHub</a></p>
-            
-            <p><a href="papers_read.html">Gelesene Paper</a></p>
-            
-            <p><a href="books_read.html">Leseliste</a></p>
-            
-            <p><a href="personal_interests.html">Persönliches</a></p>
-            
-            <br>
-            
-            <p>E-Mail: lwhalen7@gatech.edu</p>
+
+            <p class="links">
+                <a href="cv/main.pdf">CV</a> ·
+                <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
+                <a href="https://github.com/lxaw">GitHub</a> ·
+                <a href="papers_read.html">Paper</a> ·
+                <a href="books_read.html">Bücher</a> ·
+                <a href="personal_interests.html">Persönlich</a>
+            </p>
+
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
+
+            <p>Ich arbeite an großen Modellen.</p>
         </div>
-        
+
+        <!-- Chinese -->
         <div id="zh-content" class="lang-content">
             <div class="lang-switch">
-                <a href="#" onclick="showLang('en')">[English]</a> | 
-                <a href="#" onclick="showLang('ja')">[日本語]</a> | 
-                <a href="#" onclick="showLang('de')">[Deutsch]</a> | 
-                <a href="#" onclick="showLang('zh')">[中文]</a>
+                <a href="#" onclick="showLang('en')">EN</a> /
+                <a href="#" onclick="showLang('ja')">JP</a> /
+                <a href="#" onclick="showLang('de')">DE</a> /
+                <a href="#" onclick="showLang('zh')">中</a>
             </div>
-            
-            <p>佐治亚理工学院机器学习研究员。</p>
-            
-            <p>我从事高效深度学习和模型优化的研究。</p>
-            
-            <p>目前在<a href="https://www.nvidia.com/">NVIDIA</a>从事扩散语言模型的工作。</p>
-            
-            <p>同时，我是<a href="https://www.gatech.edu/">佐治亚理工学院</a>的研究员，在那里我从事高效图像扩散和医疗保健微型机器学习的研究。</p>
-            
-            <p>在此之前，我是<a href="https://www.sc.edu/">南卡罗来纳大学</a>的软件开发人员。</p>
-            
-            <p>我曾在<a href="https://www.gatech.edu/">佐治亚理工学院</a>、<a href="https://www.sc.edu/">南卡罗来纳大学</a>和<a href="https://www.toyo.ac.jp/en/">东洋大学</a>学习</p>
-            
-            <br><br>
-            
-            <p><a href="cv/main.pdf">简历</a></p>
-            
-            <p><a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a></p>
-            
-            <p><a href="https://github.com/lxaw">GitHub</a></p>
-            
-            <p><a href="papers_read.html">论文列表</a></p>
-            
-            <p><a href="books_read.html">阅读列表</a></p>
-            
-            <p><a href="personal_interests.html">个人信息</a></p>
-            
-            <br>
-            
-            <p>电子邮件: lwhalen7@gatech.edu</p>
+
+            <p class="links">
+                <a href="cv/main.pdf">简历</a> ·
+                <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
+                <a href="https://github.com/lxaw">GitHub</a> ·
+                <a href="papers_read.html">论文</a> ·
+                <a href="books_read.html">书籍</a> ·
+                <a href="personal_interests.html">个人</a>
+            </p>
+
+            <p class="email">[lastname][first 3 letters of first name]@gmail.com</p>
+
+            <p>我主要从事大规模模型相关的工作。</p>
         </div>
     </div>
-    <small style="padding: 40px; display: block; text-align: right; position: relative; bottom: 0; width: 100%;">
+
+    <small style="padding: 40px; display: block; text-align: right;">
         <a href="gineiden.html">_</a>
     </small>
-    
+
     <script>
         function showLang(lang) {
-            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-            document.getElementById(lang + '-content').classList.add('active');
+            document.querySelectorAll('.lang-content')
+                .forEach(el => el.classList.remove('active'));
+            document.getElementById(lang + '-content')
+                .classList.add('active');
         }
     </script>
 </body>

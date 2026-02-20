@@ -1,5 +1,113 @@
 [
     {
+    "title": "Training trajectories, mini-batch losses and the curious role of the learning rate",
+    "author": "Mark Sandler et al",
+    "year": "2023",
+    "topic":"stochastic gradient descent, learning rate schedules, weight averaging",
+    "venue": "Arxiv",
+    "description": "This paper investigates the curious behavior of stochastic gradient descent by analyzing how the loss function behaves differently on fixed training batches versus held-out batches, revealing that loss on a training batch can reach remarkably low values in a single gradient step while loss on unseen batches shows opposite behavior. The authors propose a simple quadratic model of the loss landscape that explains key phenomena and demonstrates a novel equivalence: weight averaging techniques (stochastic weight averaging, exponential moving average, and two-point averaging) are mathematically equivalent to specific learning rate schedules. This theoretical insight connects to practical findings showing that averaging improves performance by moving trajectories inside loss basins, and helps explain why weight averaging and learning rate decay achieve similar effects in training dynamics.", 
+    "link": "https://arxiv.org/pdf/2301.02312"
+  },
+    {
+    "title": "Scaling Laws and Compute-Optimal Training Beyong Fixed Training Durations",
+    "author": "Alexander Hagele et al",
+    "year": "2024",
+    "topic":"learning rate schedules, language model training, scaling laws",
+    "venue": "Arxiv",
+    "description": "This paper challenges the ubiquitous use of cosine learning rate schedules in large language model training by demonstrating that a simpler alternative—constant learning rate followed by a short cooldown phase—achieves comparable performance without requiring the training duration to be specified in advance. The authors show that a (1-sqrt) cooldown function outperforms linear decay, and that stochastic weight averaging can further improve performance along the training trajectory. Critically, they demonstrate that this approach enables significantly cheaper scaling law experiments by requiring only a single long training run per model size followed by retrospective cooldowns at desired checkpoints, reducing compute costs by approximately half compared to the standard practice of retraining models from scratch with length-matched cosine schedules.", 
+    "link": "https://arxiv.org/pdf/2405.18392"
+  },
+    {
+    "title": "A Closer Look at Deep Learning Heuristics: Learning Rate Restarts, Warmup, and Distillation",
+    "author": "Akhilesh Gotmare et al",
+    "year": "2018",
+    "topic":"deep learning optimization, learning rate schedules, knowledge distillation",
+    "venue": "Arxiv",
+    "description": "This paper empirically analyzes three common deep learning heuristics—cosine annealing with restarts (SGDR), learning rate warmup, and knowledge distillation—using mode connectivity and canonical correlation analysis (CCA) to understand their mechanisms. The authors find that the conventional explanation for cosine annealing's success (escaping local minima) is oversimplified, as iterates move over loss barriers but don't necessarily escape distinct minima; learning rate warmup primarily prevents instability in deeper layers during large-batch training, an effect that can be replicated by freezing those layers; and knowledge distillation primarily transfers dark knowledge to deeper (discriminative) layers rather than shallow feature-extraction layers. This work advances understanding of deep learning training dynamics through empirical analysis tools rather than relying on linear interpolation or intuitive explanations.", 
+    "link": "https://arxiv.org/pdf/1810.13243"
+  },
+    {
+    "title": "The Road Less Scheduled",
+    "author": "Aaron Defazio et al",
+    "year": "2024",
+    "topic":"optimization, learning rate schedules, stochastic gradient descent, iterate averaging",
+    "venue": "Arxiv",
+    "description": "This paper introduces Schedule-Free learning, an optimization method that eliminates the need to pre-specify a stopping time T while achieving state-of-the-art performance compared to traditional learning rate schedules. The key innovation is a new form of momentum based on interpolation between sequences (z for base updates and x for averaging) that unifies iterate averaging with scheduling theory. The authors develop a novel online-to-batch conversion theorem (Theorem 2) that explains why their approach works and generalizes several existing optimization techniques. Extensive experiments across 28 diverse problems—from convex optimization to large-scale deep learning—demonstrate that Schedule-Free AdamW matches or exceeds heavily-tuned cosine schedules without introducing additional hyperparameters, and the method won Meta's entry to the MLCommons 2024 AlgoPerf challenge.", 
+    "link": "https://arxiv.org/pdf/2405.15682"
+  },
+    {
+    "title": "Efficient Training of Language Models to Fill in the Middle",
+    "author": "Mohammad Bavarian et al",
+    "year": "2022",
+    "topic":"fill-in-the-middle, fim, llm, autoregressive",
+    "venue": "Arxiv",
+    "description": "The paper demonstrates that autoregressive language models can efficiently learn fill-in-the-middle (FIM) infilling capabilities by applying a straightforward data transformation that moves a middle span of text to the end of documents, without compromising left-to-right generative performance—a phenomenon termed the \"FIM-for-free\" property. Extensive scaling studies across code and natural language domains show that models trained with up to 90% FIM rate maintain identical autoregressive test loss and downstream benchmark performance as baseline models, while simultaneously learning robust infilling capabilities. Through comprehensive ablations on key hyperparameters, the authors identify optimal practices including context-level FIM application, character-level span selection, and joint SPM+PSM training modes, with SPM showing slight performance advantages due to improved key-value caching during inference. In contrast to pretraining efficiency, the paper reveals that learning FIM through finetuning requires substantial additional compute (50B tokens at 90% FIM rate with high learning rates), suggesting fundamental differences in how models acquire this capability at different training stages.", 
+    "link": "https://arxiv.org/pdf/2207.14255"
+  },
+    {
+    "title": "Muon is Scalable for LLM Training",
+    "author": "Jingyuan Liu et al",
+    "year": "2025",
+    "topic":"optimizer, muon, matrix orthogonalization, llm training",
+    "venue": "Arxiv",
+    "description": "The paper demonstrates that Muon, a matrix orthogonalization-based optimizer, can be effectively scaled to large language models through two key techniques: incorporating weight decay and carefully adjusting per-parameter update scales to maintain consistent update magnitudes across different matrix shapes. The authors develop a distributed implementation of Muon compatible with ZeRO-1 that achieves optimal memory efficiency and reduced communication overhead while preserving the algorithm's mathematical properties. Scaling law experiments show that Muon achieves approximately 2× computational efficiency compared to AdamW under compute-optimal training, requiring only 52% of the FLOPs to match AdamW's performance. The authors introduce Moonlight, a 3B/16B-parameter Mixture-of-Expert model trained with 5.7T tokens using Muon, which advances the Pareto frontier of model performance versus training FLOPs and demonstrates particularly strong improvements on mathematical reasoning and code generation tasks.", 
+    "link": "https://arxiv.org/pdf/2502.16982"
+  },
+    {
+    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+    "author": "Shih-Yang Liu et al",
+    "year": "2026",
+    "topic":"multi-reward rl, policy optimization, grpo, reward normalization, reinforcement learning",
+    "venue": "Arxiv",
+    "description": "The paper identifies that directly applying Group Relative Policy Optimization (GRPO) to multi-reward reinforcement learning causes distinct reward combinations to collapse into identical advantage values, which diminishes the precision of the training signal and leads to suboptimal convergence. To address this problem, the authors propose Group reward-Decoupled Normalization Policy Optimization (GDPO), which normalizes each individual reward separately before aggregation, then applies batch-wise advantage normalization to preserve cross-reward distinctions while maintaining stable numerical ranges. The method is systematically evaluated across three diverse tasks—tool calling, mathematical reasoning, and coding reasoning—each optimizing multiple heterogeneous rewards including correctness, format compliance, length constraints, and code quality. Empirical results demonstrate that GDPO consistently outperforms GRPO across all settings, with particularly significant improvements on complex reasoning tasks (e.g., 6.3% accuracy gain on AIME for DeepSeek-R1-1.5B) while maintaining better adherence to constraints.", 
+    "link": "https://arxiv.org/pdf/2601.05242"
+  },
+    {
+    "title": "Post-LayerNorm is Back: Stable, Expressive, and Deep",
+    "author": "Chen Chen et al",
+    "year": "2026",
+    "topic":"layernorm, ln, stability, deep, expressivity",
+    "venue": "Arxiv",
+    "description": "The paper identifies that Post-LayerNorm (Post-LN) instability in deep networks stems from ResNet-style residual connections causing gradient vanishing, not from normalization itself. To address this, the authors introduce Keel, which replaces the ResNet residual path with a Highway-style gated connection scaled by α = L (number of layers), preserving gradient flow through deep networks without requiring specialized initialization. They provide formal gradient flow analysis proving that Keel's modification maintains consistent gradient magnitudes across depths, enabling training stability at extreme depths (1000+ layers). Empirically, the method demonstrates superior performance across all depths with +10 point improvements on reasoning tasks like GSM-8K at 1024 layers, while maintaining stability at 50% higher learning rates than Pre-LN baselines.", 
+    "link": "https://arxiv.org/pdf/2601.19895"
+  },
+    {
+    "title": "One Token is Enough: Improving Diffusion Language Models with a Sink Token",
+    "author": "Zihou Zhang et al",
+    "year": "2026",
+    "topic":"dllm, diffusion, llm, sink token",
+    "venue": "Arxiv",
+    "description": "This paper identifies the \"moving sink\" phenomenon in diffusion language models: unlike autoregressive models where causal masking naturally anchors attention sinks to the fixed initial token, DLMs lack this structural constraint, causing sink positions to shift erratically across denoising steps as the masked token set changes dynamically. Through value-space analysis, the authors show that sink tokens in DLMs consistently exhibit significantly lower L2 norms than other tokens, functioning as an implicit protective mechanism against excessive information mixing—but their instability undermines inference robustness. The proposed solution is remarkably minimal: prepend a single extra [SINK] token constrained by a modified attention mask to attend only to itself while remaining globally visible, providing a stable, semantically neutral anchor that the model learns to use for attention offloading. Ablation studies confirm the effectiveness is position-invariant (front or end of sequence performs similarly), saturates at a single token (adding more yields negligible gains), and holds even when the sink token's value states are forced to zero vectors—validating that low-norm structure rather than semantic content is the operative mechanism, with consistent benchmark improvements across both AR-initialized and scratch-trained DLMs.", 
+    "link": "https://arxiv.org/pdf/2601.19657"
+  },
+    {
+    "title": "Residual Context Diffusion Language Models",
+    "author": "Yuezhoe Hu et al",
+    "year": "2026",
+    "topic":"dllm, diffusion, llm, soft-embedding, remasking",
+    "venue": "Arxiv",
+    "description": "This paper identifies that block-wise diffusion LLMs waste computation during inference because the remasking step discards low-confidence token representations that actually contain useful contextual information, as evidenced by high token recall in early denoising steps. The core contribution is Residual Context Diffusion (RCD), which recycles these discarded representations by converting them into entropy-weighted residual vectors—using normalized Shannon entropy to weight tokens by their uncertainty—and injecting them as soft token embeddings into the input of the next denoising step. To avoid the prohibitive memory cost of backpropagation-through-time through this recursive loop, the authors propose a decoupled two-stage training pipeline where a frozen lightweight reference model generates stable proxy residuals to supervise a separate trainable target model, along with a temperature-scaled entropy alignment mechanism to bridge the train-test distribution gap. RCD consistently improves frontier dLLMs by 5–10 accuracy points across benchmarks, nearly doubles accuracy on AIME24/25, and achieves 4–5× fewer denoising steps at equivalent accuracy, all while adding minimal computational overhead and converging efficiently with only ~1B training tokens.", 
+    "link": "https://arxiv.org/pdf/2601.22954"
+  },
+    {
+    "title": "Enabling Approximate Joint Sampling in Diffusion LMs",
+    "author": "Parikshit Bansal et al",
+    "year": "2026",
+    "topic":"sampling, dlm, diffusion, llm, marginal, joint, kl-divergence",
+    "venue": "Arxiv",
+    "description": "This paper identifies that parallel token generation in masked diffusion language models is fundamentally flawed because it samples from the product of independent marginal distributions rather than the true joint distribution the model encodes, causing well-documented accuracy drops at higher parallelism. The main contribution is ADJUST, a lightweight single-layer transformer trained on top of a frozen diffusion model that enables approximate joint sampling: after one full model forward pass, ADJUST runs K−1 additional cheap forward passes, each conditioning on previously sampled tokens to sequentially unmask multiple tokens in a dependency-aware manner. The authors establish a formal probabilistic framework connecting parallel sampling's failure to marginal-vs-joint distribution mismatch, and develop a specialized training methodology using the base model's own denoising trajectories as training data, minimizing KL divergence between ADJUST's output and true joint sampling. Empirically, ADJUST achieves dramatic improvements over naive parallel decoding—for example, +16 percentage points on GSM8K and +0.5 MAUVE at K=4—while adding only 20–25% latency overhead compared to naive parallel sampling, since ADJUST has just 200M parameters versus 7B for the base model.",
+    "link": "https://arxiv.org/pdf/2509.22738"
+  },
+    {
+    "title": "WSM: Decay-Free Learning Rate Schedule via Checkpoint Merging for LLM Pre-training",
+    "author": "Changxin Tian et al",
+    "year": "2025",
+    "topic":"llm, schedule, training, learning-rate, lr, lr-schedule",
+    "venue": "Arxiv",
+    "description": "WSM (Warmup-Stable and Merge) is a decay-free learning rate scheduling framework that replaces the traditional decay phase with checkpoint merging, establishing a formal theoretical connection between the two: merging checkpoints with specific weights is mathematically equivalent to applying a synthetic decay schedule to accumulated gradients. This theoretical foundation allows WSM to emulate any decay strategy (cosine, linear, inverse square root) as a principled model averaging scheme, without modifying the live training process. Through extensive experiments, the authors identify merge duration—the training window covered by merged checkpoints—as the single most critical hyperparameter, more impactful than checkpoint interval or number of merged models. WSM consistently outperforms the widely-used WSD baseline, with gains of +3.5% on MATH, +2.9% on HumanEval, and +5.5% on MMLU-Pro, with benefits extending to supervised fine-tuning as well.",
+    "link": "https://arxiv.org/pdf/2507.17634"
+  },
+    {
     "title": "The Crystal Ball Hypothesis in Diffusion Models: Anticipating Object Positions from Initial Noise",
     "author": "Yuanhao Ban et al",
     "year": "2025",

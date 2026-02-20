@@ -5,134 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading List | Lex Whalen</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
+        :root{
+            --text:#111;
+            --muted: rgba(0,0,0,.62);
+            --hair: rgba(0,0,0,.10);
+            --hair-2: rgba(0,0,0,.06);
         }
-        .search-inputs {
+
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            max-width: 980px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.55;
+            color: var(--text);
+        }
+
+        a{ color: var(--text); text-decoration: none; }
+        a:hover{ text-decoration: underline; }
+
+        .intro p{ margin: 6px 0; }
+        .muted{ color: var(--muted); }
+
+        /* Controls */
+        .controls{
+            margin: 18px 0 6px 0;
+            padding: 10px 0 0 0;
+            border-top: 1px solid var(--hair);
+        }
+
+        .counts{
+            margin: 10px 0 14px 0;
+        }
+        #bookCount{
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0;
+        }
+        #searchCount{
+            display: block;
+            margin-top: 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .search-row{
             display: flex;
             gap: 10px;
-            margin: 20px 0;
+            align-items: center;
             flex-wrap: wrap;
+            margin: 10px 0 10px 0;
         }
-        .search-inputs input {
+
+        .search-row input{
             flex: 1;
-            min-width: 150px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            min-width: 240px;
+            padding: 10px 10px;
+            border: 1px solid var(--hair);
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: transparent;
         }
-        #advancedFilters {
-            display: flex;
-            gap: 15px;
-            margin: 15px 0;
+        .search-row input:focus{
+            border-color: rgba(0,0,0,.25);
+        }
+
+        .btn{
+            border: 1px solid var(--hair);
+            background: transparent;
+            padding: 9px 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--text);
+        }
+        .btn:hover{
+            border-color: rgba(0,0,0,.25);
+        }
+
+        /* Advanced filters: hidden by default */
+        #advancedFilters{
+            display: none;
+            gap: 12px;
+            margin: 10px 0 0 0;
             flex-wrap: wrap;
             align-items: center;
+            padding: 10px 0 2px 0;
         }
-        #advancedFilters label {
+        #advancedFilters.show{ display: flex; }
+
+        #advancedFilters label{
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--muted);
         }
-        #advancedFilters input[type="number"] {
-            width: 80px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+
+        #advancedFilters input[type="number"]{
+            width: 90px;
+            padding: 8px 8px;
+            border: 1px solid var(--hair);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text);
+            outline: none;
         }
-        table {
+        #advancedFilters input[type="number"]:focus{
+            border-color: rgba(0,0,0,.25);
+        }
+        #advancedFilters input[type="checkbox"]{
+            transform: translateY(1px);
+        }
+
+        /* Table */
+        table{
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 14px;
+            font-size: 14px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
+        thead th{
             text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--muted);
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--hair);
             cursor: pointer;
             user-select: none;
+            white-space: nowrap;
         }
-        th:hover {
-            background-color: #e0e0e0;
+        thead th:hover{
+            color: var(--text);
         }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+
+        tbody td{
+            padding: 12px 8px;
+            border-bottom: 1px solid var(--hair-2);
+            vertical-align: top;
         }
-        #bookCount {
-            font-weight: bold;
-            font-size: 1.1em;
+
+        /* Keep description readable */
+        td.desc{
+            color: rgba(0,0,0,.78);
         }
-        #searchCount {
-            display: block;
-            color: #666;
-            font-style: italic;
-            margin: 5px 0;
+
+        /* Slightly tighter on small screens */
+        @media (max-width: 720px){
+            body{ margin: 24px auto; }
+            .search-row input{ min-width: 100%; }
         }
     </style>
 </head>
 <body>
-    <p>This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
-    <p>I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.</p>
-    
-    <!-- Statistics -->
-    <p id="bookCount">So far, we have read XXX books. Let's keep it up!</p>
-    <small id="searchCount">Your search returned YYY books. Nice!</small>
-    
-    <!-- Individual Search Fields -->
-    <div class="search-inputs">
-        <input type="text" id="titleSearch" placeholder="Search title..." onkeyup="applyFilters()">
-        <input type="text" id="authorSearch" placeholder="Search author..." onkeyup="applyFilters()">
-        <input type="text" id="yearSearch" placeholder="Search year..." onkeyup="applyFilters()">
-        <input type="text" id="descriptionSearch" placeholder="Search description..." onkeyup="applyFilters()">
+    <div class="intro">
+        <p>This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
+        <p class="muted">I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.</p>
     </div>
-    
-    <!-- Advanced Filters -->
-    <div id="advancedFilters">
-        <label>Min Pages: <input type="number" id="minPages" placeholder="Min" onchange="applyFilters()"></label>
-        <label>Max Pages: <input type="number" id="maxPages" placeholder="Max" onchange="applyFilters()"></label>
-        
-        <label>Year From: <input type="number" id="yearFrom" placeholder="2023" min="2020" max="2025" onchange="applyFilters()"></label>
-        <label>Year To: <input type="number" id="yearTo" placeholder="2024" min="2020" max="2025" onchange="applyFilters()"></label>
-        
-        <label><input type="checkbox" id="exactMatch" onchange="applyFilters()"> Exact Match</label>
-        <label><input type="checkbox" id="caseSensitive" onchange="applyFilters()"> Case Sensitive</label>
+
+    <div class="controls">
+        <div class="counts">
+            <p id="bookCount">So far, we have read XXX books. Let's keep it up!</p>
+            <small id="searchCount"></small>
+        </div>
+
+        <!-- Minimal search row -->
+        <div class="search-row">
+            <!-- Keep your individual fields, but make them minimal. If you want ONE search box only, tell me and I’ll simplify the JS. -->
+            <input type="text" id="titleSearch" placeholder="Title" onkeyup="applyFilters()">
+            <input type="text" id="authorSearch" placeholder="Author" onkeyup="applyFilters()">
+            <input type="text" id="yearSearch" placeholder="Year" onkeyup="applyFilters()">
+            <input type="text" id="descriptionSearch" placeholder="Description" onkeyup="applyFilters()">
+
+            <button class="btn" type="button" onclick="toggleFilters()">Filters</button>
+            <button class="btn" type="button" onclick="clearAllFilters()">Clear</button>
+        </div>
+
+        <!-- Advanced filters -->
+        <div id="advancedFilters">
+            <label>Min pages <input type="number" id="minPages" placeholder="0" onchange="applyFilters()"></label>
+            <label>Max pages <input type="number" id="maxPages" placeholder="∞" onchange="applyFilters()"></label>
+
+            <label>From <input type="number" id="yearFrom" placeholder="2023" min="1900" max="2100" onchange="applyFilters()"></label>
+            <label>To <input type="number" id="yearTo" placeholder="2026" min="1900" max="2100" onchange="applyFilters()"></label>
+
+            <label><input type="checkbox" id="exactMatch" onchange="applyFilters()"> exact</label>
+            <label><input type="checkbox" id="caseSensitive" onchange="applyFilters()"> case</label>
+        </div>
     </div>
-    
+
     <table id="bookTable">
         <thead>
             <tr>
                 <th onclick="sortTable(0)">Title</th>
                 <th onclick="sortTable(1)">Author</th>
-                <th onclick="sortTable(2)">Date Complete</th>
-                <th onclick="sortTable(3)">Page Count</th>
+                <th onclick="sortTable(2)">Date</th>
+                <th onclick="sortTable(3)">Pages</th>
                 <th onclick="sortTable(4)">Rating</th>
-                <th onclick="sortTable(5)">Description</th>
+                <th onclick="sortTable(5)">Notes</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td colspan="6">Loading books...</td>
-            </tr>
+            <tr><td colspan="6">Loading books...</td></tr>
         </tbody>
     </table>
-    
 
     <script>
         let allBooks = [];
         let filteredBooks = [];
         let sortDirection = {};
 
-        // Load books from JSON file
         fetch('books/list.json')
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to load books');
-                }
+                if (!response.ok) throw new Error('Failed to load books');
                 return response.json();
             })
             .then(books => {
@@ -143,13 +230,14 @@
             })
             .catch(error => {
                 console.error('Error loading books:', error);
-                document.querySelector('#bookTable tbody').innerHTML = '<tr><td colspan="6">Error loading books. Please try again later.</td></tr>';
+                document.querySelector('#bookTable tbody').innerHTML =
+                    '<tr><td colspan="6">Error loading books. Please try again later.</td></tr>';
             });
 
         function displayBooks(books) {
             const tbody = document.querySelector('#bookTable tbody');
             tbody.innerHTML = '';
-            
+
             if (books.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="6">No books found.</td></tr>';
                 return;
@@ -163,7 +251,7 @@
                     <td>${book['date-complete'] || ''}</td>
                     <td>${book['page-count'] || ''}</td>
                     <td>${book.rating || ''}</td>
-                    <td>${book.description || ''}</td>
+                    <td class="desc">${book.description || ''}</td>
                 `;
                 tbody.appendChild(row);
             });
@@ -182,36 +270,31 @@
             const caseSensitive = document.getElementById('caseSensitive').checked;
 
             filteredBooks = allBooks.filter(book => {
-                // Helper function for text matching
                 const matchText = (text, searchTerm) => {
                     if (!searchTerm) return true;
                     if (!text) return false;
-                    
+
                     const textToSearch = caseSensitive ? text : text.toLowerCase();
                     const termToSearch = caseSensitive ? searchTerm : searchTerm.toLowerCase();
-                    
+
                     return exactMatch ? textToSearch === termToSearch : textToSearch.includes(termToSearch);
                 };
 
-                // Individual field searches
                 if (!matchText(book.title, titleSearch)) return false;
                 if (!matchText(book.author, authorSearch)) return false;
                 if (!matchText(book.description, descriptionSearch)) return false;
 
-                // Year search in date field
                 if (yearSearch) {
                     const dateText = book['date-complete'] || '';
                     if (!matchText(dateText, yearSearch)) return false;
                 }
 
-                // Page range filters
                 if (minPages || maxPages) {
                     const pageCount = parseInt(book['page-count']) || 0;
                     if (minPages && pageCount < parseInt(minPages)) return false;
                     if (maxPages && pageCount > parseInt(maxPages)) return false;
                 }
 
-                // Year range filters
                 if (yearFrom || yearTo) {
                     const bookYear = book['date-complete'] ? new Date(book['date-complete']).getFullYear() : 0;
                     if (yearFrom && bookYear < parseInt(yearFrom)) return false;
@@ -236,7 +319,7 @@
             document.getElementById('yearTo').value = '';
             document.getElementById('exactMatch').checked = false;
             document.getElementById('caseSensitive').checked = false;
-            
+
             filteredBooks = [...allBooks];
             displayBooks(filteredBooks);
             updateCounts();
@@ -245,31 +328,24 @@
         function updateCounts() {
             const totalBooks = allBooks.length;
             const displayedBooks = filteredBooks.length;
-            
-            // Calculate total pages
-            const totalPages = allBooks.reduce((sum, book) => {
-                const pages = parseInt(book['page-count']) || 0;
-                return sum + pages;
-            }, 0);
-            
+
             const displayedPages = filteredBooks.reduce((sum, book) => {
                 const pages = parseInt(book['page-count']) || 0;
                 return sum + pages;
             }, 0);
-            
-            document.getElementById('bookCount').textContent = `So far, we have read ${totalBooks} books. Let's keep it up!`;
-            
+
+            document.getElementById('bookCount').textContent =
+                `So far, we have read ${totalBooks} books.`;
+
             if (displayedBooks === totalBooks) {
                 document.getElementById('searchCount').textContent = '';
             } else {
-                document.getElementById('searchCount').textContent = `Your search returned ${displayedBooks} books (${displayedPages.toLocaleString()} pages). Nice!`;
+                document.getElementById('searchCount').textContent =
+                    `${displayedBooks} shown (${displayedPages.toLocaleString()} pages).`;
             }
         }
 
         function sortTable(columnIndex) {
-            const table = document.getElementById('bookTable');
-            const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.rows);
             const isAsc = sortDirection[columnIndex] !== 'asc';
             sortDirection[columnIndex] = isAsc ? 'asc' : 'desc';
 
@@ -279,41 +355,38 @@
             filteredBooks.sort((a, b) => {
                 let aValue = a[sortKey] || '';
                 let bValue = b[sortKey] || '';
-                
-                // Handle numeric columns
-                if (columnIndex === 3) { // Page count
+
+                if (columnIndex === 3) { // pages
                     aValue = parseInt(aValue) || 0;
                     bValue = parseInt(bValue) || 0;
                     return isAsc ? aValue - bValue : bValue - aValue;
                 }
-                
-                // Handle date column
-                if (columnIndex === 2) { // Date complete
+
+                if (columnIndex === 2) { // date
                     aValue = new Date(aValue || 0);
                     bValue = new Date(bValue || 0);
                     return isAsc ? aValue - bValue : bValue - aValue;
                 }
-                
-                // Handle rating column
-                if (columnIndex === 4) { // Rating
+
+                if (columnIndex === 4) { // rating
                     aValue = aValue ? parseInt(aValue.split('/')[0]) : 0;
                     bValue = bValue ? parseInt(bValue.split('/')[0]) : 0;
                     return isAsc ? aValue - bValue : bValue - aValue;
                 }
-                
-                // Handle text columns
-                return isAsc ? 
-                    aValue.toString().localeCompare(bValue.toString()) : 
-                    bValue.toString().localeCompare(aValue.toString());
+
+                return isAsc
+                    ? aValue.toString().localeCompare(bValue.toString())
+                    : bValue.toString().localeCompare(aValue.toString());
             });
 
             displayBooks(filteredBooks);
         }
 
-        // Legacy function for backward compatibility
-        function searchBooks() {
-            applyFilters();
+        function toggleFilters(){
+            document.getElementById('advancedFilters').classList.toggle('show');
         }
+
+        function searchBooks() { applyFilters(); } // legacy
     </script>
 </body>
 </html>

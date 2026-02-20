@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Interests | Lex Whalen</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal | Lex Whalen</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Safe minimal defaults if styles.css is sparse */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    main { max-width: 760px; }
+    a { color: #000; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { font-size: 14px; margin-bottom: 24px; opacity: 0.85; }
+    h1 { font-size: 18px; font-weight: 600; margin: 0 0 18px 0; }
+    h2 { font-size: 14px; font-weight: 600; margin: 22px 0 8px 0; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; }
+    .muted { opacity: 0.75; }
+  </style>
 </head>
 <body>
-    <b>What else is there?</b>
-    <p>Before I die, I need to have the following completed:</p>
-    <p>1. 4 languages to fluency (English, Japanese, Mandarin, German)</p>
-    <p>2. 100 million in investments (depositing about a third of each paycheck)</p>
-    <p>3. Monthly donate to education/charities/space exploration</p>
-    <p>At time of death:</p>
-    <p>1. Still be physically and mentally fit</p>
-    <p>2. At least have some people there</p>
-    <b>Languages</b>
-    <br>
-    <i>Japanese</i>
-    <p>My grandfather was Fukuokan (なので僕は一応形式上日系三世かな？）. I gave a <a href="pictures/speech.png">speech at graduation</a> as the exchange student representative. My favorite class was 学習心理学.</p>
-    <i>Mandarin</i>
-    <p>By the end of my 20s, I aim to be fluent in Mandarin. Chinese literature is really interesting, and the history is quite rich. Would be great to know more. </p>
-    <i>German</i>
-    <p>I started learning German recently. My sister lives over there, and I like the place.</p>
-    <b>Music</b>
-    <p>Jazz is my favorite genre. I like Coltrane (<a href="https://www.youtube.com/watch?v=ll3CMgiUPuU">this</a> and <a href="https://youtu.be/ioPRCwpB1Ak?si=sjB5jiMi8M3XpH4d">this</a>). I also like classical and <a href="https://www.youtube.com/watch?v=tJBtztG-xR4">hip-hop</a>.</p>
-    <b>Books</b>
-    <p>My favorite genre is sci-fi. You can see the <a href="books_read.html">books that I read</a>.</p>
-    <b>Exercise</b>
-    <p>Sleep, diet and exercise are critical. I believe motivation and success are direct products of how much you sleep, eat, and exercise. I used to wake up around 4:00AM and go to bed around 8:00PM. However, since I am still young I try to go out more, so its more like 5/6 AM to 9/10PM.</p>
-    <b>Shows, Movies, Characters</b>
-    <p>Favorite color movie is <a href="https://en.wikipedia.org/wiki/Inception">Inception</a>. Favorite black and white movie is <a href="https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)">Twelve Angry Men</a>.</p>
-    <p>Favorite TV show is <a href="https://en.wikipedia.org/wiki/A_Game_of_Pool_(The_Twilight_Zone,_1959)">The Twilight Zone</a> or <a href="https://ja.wikipedia.org/wiki/%E9%8A%80%E6%B2%B3%E8%8B%B1%E9%9B%84%E4%BC%9D%E8%AA%AC">Legend of the Galactic Heroes</a>.</p>
-    <p>In terms of personality, I would like to be like <a href="https://www.youtube.com/watch?v=1qOCckM6hMM">古畑任三郎</a>. He was always kind and had a good sense of humor.</p>
-    <p><a href="index.html">Back to home</a></p>
+  <main>
+    <nav>
+      <a href="index.html">Home</a> ·
+      <a href="books_read.html">Books</a> ·
+      <a href="papers_read.html">Papers</a>
+    </nav>
+
+    <h1>Personal</h1>
+
+    <h2>Goals</h2>
+    <p class="muted">Before I die:</p>
+    <ul>
+      <li>Four languages to fluency (English, Japanese, Mandarin, German)</li>
+      <li>100 million in investments (depositing about a third of each paycheck)</li>
+      <li>Monthly donations to education / charities / space exploration</li>
+    </ul>
+
+    <p class="muted" style="margin-top:14px;">At time of death:</p>
+    <ul>
+      <li>Still physically and mentally fit</li>
+      <li>At least have some people there</li>
+    </ul>
+
+    <h2>Languages</h2>
+    <ul>
+      <li><i>Japanese</i> — My grandfather was Fukuokan (なので僕は一応形式上日系三世かな？）. I gave a <a href="pictures/speech.png">speech at graduation</a> as the exchange student representative. My favorite class was 学習心理学.</li>
+      <li><i>Mandarin</i> — By the end of my 20s, I aim to be fluent. Chinese literature is really interesting, and the history is quite rich.</li>
+      <li><i>German</i> — I started recently. My sister lives there, and I like the place.</li>
+    </ul>
+
+    <h2>Music</h2>
+    <p>
+      Jazz is my favorite genre. I like Coltrane (<a href="https://www.youtube.com/watch?v=ll3CMgiUPuU">this</a> and
+      <a href="https://youtu.be/ioPRCwpB1Ak?si=sjB5jiMi8M3XpH4d">this</a>). I also like classical and
+      <a href="https://www.youtube.com/watch?v=tJBtztG-xR4">hip-hop</a>.
+    </p>
+
+    <h2>Books</h2>
+    <p>
+      My favorite genre is sci-fi. See <a href="books_read.html">books I read</a>.
+    </p>
+
+    <h2>Exercise</h2>
+    <p>
+      Sleep, diet, and exercise are critical. I think motivation and success are direct products of how much you sleep,
+      eat, and exercise. I used to wake up around 4:00AM and go to bed around 8:00PM. Recently it’s more like 5/6AM to
+      9/10PM.
+    </p>
+
+    <h2>Shows / movies / characters</h2>
+    <ul>
+      <li>Favorite color movie: <a href="https://en.wikipedia.org/wiki/Inception">Inception</a></li>
+      <li>Favorite black and white movie: <a href="https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)">Twelve Angry Men</a></li>
+      <li>Favorite TV show: <a href="https://en.wikipedia.org/wiki/A_Game_of_Pool_(The_Twilight_Zone,_1959)">The Twilight Zone</a> or <a href="https://ja.wikipedia.org/wiki/%E9%8A%80%E6%B2%B3%E8%8B%B1%E9%9B%84%E4%BC%9D%E8%AA%AC">Legend of the Galactic Heroes</a></li>
+      <li>Personality: <a href="https://www.youtube.com/watch?v=1qOCckM6hMM">古畑任三郎</a> — kind, good sense of humor</li>
+    </ul>
+  </main>
 </body>
 </html>
