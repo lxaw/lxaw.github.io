@@ -13,32 +13,143 @@ def generate_html(json_file_path, output_file_path):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searchable paper list</title>
+    <title>Papers</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        main {{
+            padding-top: 0;
+        }}
+
+        nav {{
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }}
+
+        .intro p {{
+            margin: 6px 0;
+        }}
+
+        .search-inputs {{
+            display: flex;
+            gap: 10px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }}
+
+        .search-inputs input {{
+            flex: 1;
+            min-width: 180px;
+            padding: 10px;
+            border: 1px solid var(--hair);
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: transparent;
+            color: var(--text);
+        }}
+
+        .search-inputs input:focus {{
+            border-color: rgba(0, 0, 0, 0.25);
+        }}
+
+        .search-inputs button {{
+            border: 1px solid var(--hair);
+            background: transparent;
+            padding: 9px 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--text);
+        }}
+
+        .search-inputs button:hover {{
+            border-color: rgba(0, 0, 0, 0.25);
+        }}
+
+        #paperCount {{
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0;
+        }}
+
+        #searchCount {{
+            display: block;
+            margin-top: 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }}
+
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            font-size: 14px;
+        }}
+
+        thead th {{
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--muted);
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--hair);
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }}
+
+        thead th:hover {{
+            color: var(--text);
+        }}
+
+        tbody td {{
+            padding: 12px 8px;
+            border-bottom: 1px solid var(--hair2);
+            vertical-align: top;
+        }}
+
+        @media (max-width: 720px) {{
+            body {{
+                margin: 0;
+                padding: 0;
+            }}
+            main {{
+                padding: 0 20px;
+                margin: 24px auto;
+            }}
+            .search-inputs input {{
+                min-width: 100%;
+            }}
+        }}
+    </style>
 </head>
 <body>
-    <p>
-        This list was curated by <a href="index.html">myself</a>, beginning from about May 2024 to now.
-    </p>
-    <p>
-        I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
-    </p>
-    <p id="paperCount">
-        So far, we have read {len(papers)} papers. Let's keep it up!
-    </p> 
-    <small id="searchCount">
-        Your search returned {len(papers)} papers. Nice! 
-    </small>
-    
-    <div class="search-inputs">
-        <input type="text" id="titleSearch" placeholder="Search title...">
-        <input type="text" id="authorSearch" placeholder="Search author...">
-        <input type="text" id="yearSearch" placeholder="Search year...">
-        <input type="text" id="topicSearch" placeholder="Search topic...">
-        <input type="text" id="venueSearch" placeholder="Search venue...">
-        <input type="text" id="descriptionSearch" placeholder="Search description...">
-        <button id="clearSearch">Clear Search</button>
-    </div>
+    <nav>
+        <a href="index.html">Home</a> ·
+        <a href="books_read.html">Books</a> ·
+        <a href="papers_read.html">Papers</a> ·
+        <a href="personal_interests.html">Personal</a>
+    </nav>
+    <main>
+        <div class="intro">
+            <p>This list was curated by <a href="index.html">myself</a>, beginning from about May 2024 to now.</p>
+            <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
+        </div>
+        
+        <p id="paperCount">So far, we have read {len(papers)} papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned {len(papers)} papers. Nice!</small>
+        
+        <div class="search-inputs">
+            <input type="text" id="titleSearch" placeholder="Search title...">
+            <input type="text" id="authorSearch" placeholder="Search author...">
+            <input type="text" id="yearSearch" placeholder="Search year...">
+            <input type="text" id="topicSearch" placeholder="Search topic...">
+            <input type="text" id="venueSearch" placeholder="Search venue...">
+            <input type="text" id="descriptionSearch" placeholder="Search description...">
+            <button id="clearSearch">Clear Search</button>
+        </div>
     
     <table id="paperTable">
         <thead>
@@ -145,6 +256,7 @@ def generate_html(json_file_path, output_file_path):
 
         setupEventListeners();
     </script>
+    </main>
 </body>
 </html>
     """

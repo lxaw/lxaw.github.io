@@ -3,119 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miscellaneous Quotes | Lex Whalen</title>
+  <title>Miscellaneous</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
-    /* Retro minimalist styles to match main page */
-    :root {
-      --text-color: #333;
-      --background: #f8f8f8;
-      --accent: #0074D9;
-      --link-hover: #7FDBFF;
-      --border: #ddd;
-      --code-bg: #eee;
-      --mono-font: 'Courier New', Courier, monospace;
-      --sans-font: 'Helvetica', Arial, sans-serif;
-      --jp-font: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-    }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: var(--mono-font);
-      line-height: 1.5;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      color: var(--text-color);
-      background-color: var(--background);
-    }
-    
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-    }
-    
-    h2 {
-      font-size: 1.5rem;
-      font-weight: normal;
-      margin-bottom: 0.5rem;
-    }
-    
-    h3 {
-      font-family: var(--mono-font);
-      font-size: 1.2rem;
-      margin: 1rem 0;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    
-    p {
-      margin-bottom: 1rem;
-    }
-    
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      padding-bottom: 1px;
-      border-bottom: 1px dotted var(--accent);
-    }
-    
-    a:hover {
-      color: var(--link-hover);
-      border-bottom: 1px solid var(--link-hover);
-    }
-    
+    /* Minimal styling for quotes */
     main {
-      margin-bottom: 2rem;
+      max-width: 980px;
     }
-    
+
+    h2 {
+      font-size: 16px;
+      margin: 20px 0 12px 0;
+    }
+
     .quote-group {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      background-color: white;
+      margin: 24px 0;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--hair);
     }
-    
+
+    .quote-group:last-child {
+      border-bottom: none;
+    }
+
     .quote-text {
       font-style: italic;
-      margin-bottom: 1rem;
+      margin-bottom: 8px;
       line-height: 1.6;
+      color: var(--text);
     }
-    
+
     .quote-author {
       text-align: right;
-      font-size: 0.9rem;
-      color: var(--text-color);
+      font-size: 13px;
+      color: var(--muted);
+      font-style: normal;
     }
-    
+
     footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      border-top: 1px dashed var(--border);
-      padding-top: 1rem;
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--hair);
     }
-    
-    /* Special styling for Japanese and Chinese text */
-    .quote-text:lang(ja),
-    .quote-text:lang(zh) {
-      font-family: var(--jp-font);
-      font-weight: normal;
+
+    footer nav {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer nav a {
+      opacity: 0.85;
+      margin-right: 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h2>You have discovered the secret page!</h2>
-    <p>You weren't supposed to be here! Here's where I store some things.</p>
-  </header>
+  <nav>
+    <a href="index.html">Home</a> ·
+    <a href="books_read.html">Books</a> ·
+    <a href="papers_read.html">Papers</a> ·
+    <a href="personal_interests.html">Personal</a>
+  </nav>
   
   <main>
+    <h2>You have discovered the secret page!</h2>
+    <p>You weren't supposed to be here! Here's where I store some things.</p>
     <!-- 孫子 Quote -->
     <article class="quote-group">
       <p class="quote-text" lang="zh">故舉秋毫，不為多力；見日月，不為明目；聞雷霆，不為聰耳。</p>

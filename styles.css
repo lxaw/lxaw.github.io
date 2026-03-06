@@ -9,18 +9,43 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   line-height: 1.55;
   color: var(--text);
   background: var(--bg);
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 20px;
   max-width: 980px;
 }
 
-/* If you use a wrapper like .center, keep it aligned */
-.center {
-  max-width: 980px;
-  margin: 0 auto;
+/* Navbar styling */
+nav {
+  border-bottom: 1px solid var(--hair);
+  padding: 16px 0;
+  margin-bottom: 32px;
+  font-size: 14px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.85;
+  margin: 0 8px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+nav .separator {
+  opacity: 0.5;
+  margin: 0 4px;
 }
 
 h1 {
