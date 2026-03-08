@@ -20,12 +20,6 @@ def generate_html(json_file_path, output_file_path):
             padding-top: 0;
         }}
 
-        nav {{
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }}
-
         .intro p {{
             margin: 6px 0;
         }}
