@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papers</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            padding-top: 0;
+        }
+
+        nav {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .intro p {
+            margin: 6px 0;
+        }
+
+        .search-inputs {
+            display: flex;
+            gap: 10px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-inputs input {
+            flex: 1;
+            min-width: 180px;
+            padding: 10px;
+            border: 1px solid var(--hair);
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: transparent;
+            color: var(--text);
+        }
+
+        .search-inputs input:focus {
+            border-color: rgba(0, 0, 0, 0.25);
+        }
+
+        .search-inputs button {
+            border: 1px solid var(--hair);
+            background: transparent;
+            padding: 9px 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .search-inputs button:hover {
+            border-color: rgba(0, 0, 0, 0.25);
+        }
+
+        #paperCount {
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        #searchCount {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+
+        thead th {
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--muted);
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--hair);
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        thead th:hover {
+            color: var(--text);
+        }
+
+        tbody td {
+            padding: 12px 8px;
+            border-bottom: 1px solid var(--hair2);
+            vertical-align: top;
+        }
+
+        @media (max-width: 720px) {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            main {
+                padding: 0 20px;
+                margin: 24px auto;
+            }
+            .search-inputs input {
+                min-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -14,28 +124,23 @@
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
-    <p>
-        This list was curated by <a href="index.html">myself</a>, beginning from about May 2024 to now.
-    </p>
-    <p>
-        I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.
-    </p>
-    <p id="paperCount">
-        So far, we have read 395 papers. Let's keep it up!
-    </p> 
-    <small id="searchCount">
-        Your search returned 395 papers. Nice! 
-    </small>
-    
-    <div class="search-inputs">
-        <input type="text" id="titleSearch" placeholder="Search title...">
-        <input type="text" id="authorSearch" placeholder="Search author...">
-        <input type="text" id="yearSearch" placeholder="Search year...">
-        <input type="text" id="topicSearch" placeholder="Search topic...">
-        <input type="text" id="venueSearch" placeholder="Search venue...">
-        <input type="text" id="descriptionSearch" placeholder="Search description...">
-        <button id="clearSearch">Clear Search</button>
-    </div>
+        <div class="intro">
+            <p>This list was curated by <a href="index.html">myself</a>, beginning from about May 2024 to now.</p>
+            <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
+        </div>
+        
+        <p id="paperCount">So far, we have read 405 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 405 papers. Nice!</small>
+        
+        <div class="search-inputs">
+            <input type="text" id="titleSearch" placeholder="Search title...">
+            <input type="text" id="authorSearch" placeholder="Search author...">
+            <input type="text" id="yearSearch" placeholder="Search year...">
+            <input type="text" id="topicSearch" placeholder="Search topic...">
+            <input type="text" id="venueSearch" placeholder="Search venue...">
+            <input type="text" id="descriptionSearch" placeholder="Search description...">
+            <button id="clearSearch">Clear Search</button>
+        </div>
     
     <table id="paperTable">
         <thead>
@@ -49,6 +154,96 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://thinkingmachines.ai/blog/modular-manifolds/" target="_blank" rel="noopener noreferrer">Modular Manifolds</a></td>
+                <td>Jeremy Bernstein et al</td>
+                <td>2025</td>
+                <td>manifold, optimizer, muon</td>
+                <td>blog</td>
+                <td>Neural network training benefits from keeping tensors &quot;healthy&quot; in size, and while normalization is standard for activations and gradients, constraining weight matrices to manifolds — curved surfaces defined by geometric properties — is a promising but underexplored approach. The article derives a &quot;Manifold Muon&quot; optimizer that keeps weight matrices on the Stiefel manifold (matrices whose singular values are all exactly 1), meaning the weights never stretch or shrink input vectors unevenly, which is achieved by framing the optimization step as a convex dual problem solved via gradient ascent. The deeper insight is that geometry shapes the optimal update direction: by choosing a non-Euclidean distance measure (like the spectral norm), the best gradient step is no longer simply &quot;follow the gradient&quot; — it&#x27;s a spectrally normalized direction that maximally reduces the loss within a constrained step size. The post concludes with the concept of modular manifolds, a composable framework where individual layers each carry their own manifold constraint and norm, and combining layers automatically propagates Lipschitz sensitivity bounds that intelligently budget learning rates across the whole network — making optimizer design as principled and automatic as the forward pass itself.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/" target="_blank" rel="noopener noreferrer">Defeating Nondeterminisim in LLM Inference</a></td>
+                <td>Horace He et al</td>
+                <td>2025</td>
+                <td>evaluation, llm, nondeterminism</td>
+                <td>blog</td>
+                <td>LLM inference nondeterminism is widely attributed to concurrent GPU threads and floating-point arithmetic, but the real culprit is actually batch non-invariance — the mathematical result for a single user&#x27;s request silently changes depending on how many other users are being served simultaneously. Since floating-point addition is non-associative, changing the batch size changes the reduction order, which changes the numerical output — and because server load is unpredictable, results become nondeterministic from the user&#x27;s perspective even though the server itself is technically deterministic given fixed inputs. The authors resolve this by engineering batch-invariant kernels for the three key operations (RMSNorm, matrix multiplication, and attention), ensuring each element&#x27;s reduction order is identical regardless of batch size, at a ~60% latency cost that can be partially recovered with kernel optimization. The most striking practical implication is for reinforcement learning: because training and inference normally produce different logprobs for the same sequence, on-policy RL is silently off-policy — but with bitwise-identical deterministic inference, true on-policy RL becomes achievable, eliminating the need for importance weighting corrections entirely.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://thinkingmachines.ai/blog/lora/" target="_blank" rel="noopener noreferrer">LoRA Without Regret</a></td>
+                <td>John Schulman et al</td>
+                <td>2025</td>
+                <td>lora, regret</td>
+                <td>blog</td>
+                <td>This paper from Thinking Machines finds that LoRA can match full fine-tuning (FullFT) performance when applied to all network layers — especially MLP/MoE layers — rather than just attention layers, which consistently underperform even when given equivalent parameter counts. LoRA&#x27;s effectiveness holds as long as its trainable parameter count exceeds the information content of the training data, a condition easily met for most post-training scenarios. For reinforcement learning specifically, even rank-1 LoRA fully matches FullFT because policy gradient methods absorb only ~1 bit of information per episode, making LoRA&#x27;s capacity more than sufficient. Practically, the optimal learning rate for LoRA is consistently ~10x higher than for FullFT, and LoRA also uses only ~⅔ the compute FLOPs per pass, giving it a meaningful efficiency advantage.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/1707.06347" target="_blank" rel="noopener noreferrer">Proximal Policy Optimization Algorithms</a></td>
+                <td>John Schulman et al</td>
+                <td>2017</td>
+                <td>policy optimization, rl</td>
+                <td>Arxiv</td>
+                <td>Standard policy gradient methods can only safely take one gradient step per data sample, since larger updates risk destructively large policy changes, while the principled fix (TRPO) requires expensive second-order optimization and is incompatible with parameter sharing or dropout. PPO&#x27;s key insight is that clipping the probability ratio r(θ) = π_θ/π_θ_old into [1-ε, 1+ε] and taking the minimum of the clipped and unclipped objectives creates a simple, first-order pessimistic lower bound on policy performance — the clip removes the incentive to move too far from the old policy, and the min ensures the bound is never optimistic. This allows multiple epochs of minibatch SGD on the same rollout data without catastrophic policy degradation, achieving TRPO-like stability with only a few lines of code change over vanilla policy gradient. Empirically PPO outperforms TRPO, A2C, and other baselines on continuous control benchmarks while being far simpler to implement, making it the practical default that later work like GRPO directly builds upon.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2507.18071" target="_blank" rel="noopener noreferrer">Group Sequence Policy Optimization</a></td>
+                <td>Chujie Zheng et al</td>
+                <td>2025</td>
+                <td>embedding, chunking, context, llm</td>
+                <td>Arxiv</td>
+                <td>GRPO&#x27;s instability — especially severe in long-response and MoE training — stems from a fundamental misapplication of importance sampling: applying per-token importance ratios to single samples from each next-token distribution doesn&#x27;t perform valid distribution correction, it just introduces high-variance noise that accumulates over sequence length and compounds through the clipping mechanism. GSPO fixes this by defining the importance ratio at the sequence level as the geometric mean of per-token likelihood ratios, which is theoretically grounded, length-normalized, and naturally aligned with the fact that rewards are granted to whole sequences rather than individual tokens. A key insight from the gradient analysis is that GRPO&#x27;s instability comes from unequal per-token weighting that can vary wildly, whereas GSPO weights all tokens in a response equally, eliminating this source of noise. A particularly valuable downstream benefit is that sequence-level importance ratios are insensitive to MoE expert-routing volatility between gradient updates, eliminating the need for Routing Replay workarounds and enabling the full model capacity to be utilized — which directly contributed to the Qwen3 model improvements.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2409.04701" target="_blank" rel="noopener noreferrer">Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models</a></td>
+                <td>Michael Gunther et al</td>
+                <td>2025</td>
+                <td>embedding, chunking, context, llm</td>
+                <td>Arxiv</td>
+                <td>Standard RAG chunking loses contextual information because chunks are embedded independently, meaning pronouns and references like &quot;its&quot; or &quot;the city&quot; get separated from the entities they refer to, degrading retrieval quality. Late chunking fixes this by running the full document through the transformer first to get contextualized token embeddings, and only then applying mean pooling over chunk-boundary segments — so each chunk embedding inherits context from the entire document without any modification to the model itself. For documents exceeding the model&#x27;s context window, the paper extends this with &quot;long late chunking,&quot; which processes overlapping macro-chunks and stitches together the resulting token embeddings before pooling. They also propose a &quot;span pooling&quot; fine-tuning method that trains the model to specifically encode relevant span information into token embeddings, yielding modest additional gains, and show the approach matches LLM-based contextual embedding methods (like Anthropic&#x27;s Claude-based chunk augmentation) at a fraction of the computational cost.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://openreview.net/pdf?id=18j5Q49GwN" target="_blank" rel="noopener noreferrer">SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models</a></td>
+                <td>Chenyu Wang et al</td>
+                <td>2025</td>
+                <td>diffusion, dlm, policy optimization</td>
+                <td>Arxiv</td>
+                <td>Applying RL to diffusion language models is complicated by the fact that the true log-likelihood is intractable, and prior work&#x27;s use of the ELBO as a surrogate introduces asymmetric bias — it&#x27;s a lower bound, so minimizing it for bad outputs doesn&#x27;t reliably reduce their true likelihood. SPG resolves this by &quot;sandwiching&quot; the log-likelihood: maximizing the ELBO for positive-reward outputs while minimizing a tractable Evidence Upper Bound (EUBO), derived from a Rényi variational bound, for negative-reward ones, making the overall policy gradient a valid proxy for the true objective in both directions. In practice, the negative-reward term uses a mixture of ELBO and EUBO rather than EUBO alone, which is shown both theoretically and empirically to reduce gradient variance and stabilize training. SPG also introduces a block-wise masking strategy for Monte Carlo estimation that aligns the training distribution with the semi-autoregressive inference strategy used at generation time, yielding especially large gains on structured reasoning tasks like Countdown (+18.4%) and Sudoku (+27%) over prior state-of-the-art RL methods.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2603.00045" target="_blank" rel="noopener noreferrer">Breaking the Factorization Barrier in Diffusion Language Models</a></td>
+                <td>Ian Li et al</td>
+                <td>2025</td>
+                <td>diffusion, dlm, factorization</td>
+                <td>Arxiv</td>
+                <td>CoDD identifies that the core limitation in diffusion language models isn&#x27;t backbone capacity but a structural misspecification: forcing the output distribution to be fully factorized makes parallel token prediction inherently incoherent, since the model cannot capture how simultaneously predicted tokens depend on each other. The key technical insight is that replacing this factorized output with a product of the neural network&#x27;s logits and a learned Probabilistic Circuit (PC) yields a distribution that is both expressive enough to capture complex inter-token dependencies and compact enough to avoid exponential parameter scaling. The PC&#x27;s decomposability property makes the otherwise intractable partition function computable in a single feedforward pass, and because the Transformer backbone can be frozen, the PC is trained as a lightweight plug-in requiring only ~3 GPU hours. Empirically, this approach consistently improves reasoning benchmarks across architectures and is especially impactful in low-step generation regimes, recovering GSM8K accuracy from 34% to 56.4% at 64 steps while adding less than 6% inference latency overhead.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2602.11151" target="_blank" rel="noopener noreferrer">Diffusion-Pretrained Dense and Contextual Embeddings</a></td>
+                <td>Sedigheh Eslami et al</td>
+                <td>2025</td>
+                <td>diffusion, dlm, embedding, context</td>
+                <td>Arxiv</td>
+                <td>pplx-embed introduces a family of multilingual embedding models built on diffusion-pretrained language model backbones, converting causal decoder-only LLMs (Qwen3) into bidirectional encoders via continued diffusion pretraining to better capture global document context. The key technical contributions are a multi-stage contrastive training pipeline (pair → contextual → triplet training with model merging) and a novel quantization-aware mean pooling strategy that natively outputs INT8 and binary embeddings, dramatically improving storage efficiency (up to 4× over comparable models). They release two model variants — pplx-embed-v1 for standard retrieval and pplx-embed-context-v1 for chunk-level contextual retrieval using late chunking — at both 0.6B and 4B scales, with the contextual variant achieving state-of-the-art on ConTEB (81.96% nDCG@10), surpassing voyage-context-3 and Anthropic Contextual. Evaluation on internal web-scale benchmarks (up to 1B production web pages) further validates real-world deployment effectiveness, with pplx-embed-v1-0.6B notably outperforming the larger Qwen3-Embedding-4B on several tasks.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.03929" target="_blank" rel="noopener noreferrer">Self-Speculative Masked Diffusions</a></td>
+                <td>Andrew Campbell et al</td>
+                <td>2025</td>
+                <td>diffusion, dlm, speculative decoding</td>
+                <td>Arxiv</td>
+                <td>Self-Speculative Masked Diffusions proposes a new class of masked diffusion models (MDMs) that reduces the number of neural network forward passes needed for high-quality discrete data generation. The core contribution is a hybrid transformer architecture combining non-causal layers (for draft token generation) with a small causal layer (following the σ-GPT design), enabling speculative sampling entirely within a single model without needing a separate draft network. By using the non-causal factorized distribution as a draft and the causal autoregressive distribution as a target, the method produces non-factorized predictions over masked positions, achieving roughly 2× fewer function evaluations on text and protein sequence benchmarks. The authors also provide theoretical analysis characterizing the output distribution of their sampling algorithm and derive a log-likelihood lower bound for this model class. Key difference from TiDAR: Both papers combine diffusion and autoregressive mechanisms in a single model, but their goals and orientations differ significantly. Self-Speculative Masked Diffusions is built on top of MDMs — it targets any-order generation (not left-to-right) and is particularly suited for domains like protein sequences where no natural ordering exists. TiDAR, by contrast, is fundamentally AR-first: it uses diffusion only as a parallelizable drafting mechanism while the final sampling is strictly left-to-right autoregressive, preserving AR-quality guarantees. TiDAR also explicitly targets wall-clock throughput speedups (4-6×) and KV-cache compatibility, whereas the MDM paper focuses on reducing NFEs in a compute-agnostic sense without claiming AR-level quality parity.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2301.02312" target="_blank" rel="noopener noreferrer">Training trajectories, mini-batch losses and the curious role of the learning rate</a></td>
