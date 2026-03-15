@@ -1,5 +1,41 @@
 [
     {
+    "title": "Latent-Augmented Discrete Diffusion Models",
+    "author": "Dario Shariatian et al",
+    "year": "2026",
+    "topic":"dlm, latent, masking, factorization, dependency",
+    "venue": "Arxiv",
+    "description": "The core insight is that masked discrete diffusion models are fundamentally bottlenecked by their factorized reverse transitions, which treat each token independently — a tolerable assumption when denoising one token at a time, but increasingly damaging when many tokens must be unmasked simultaneously, since independent commitments can produce globally incoherent sequences. LADD addresses this by introducing an auxiliary latent channel that runs alongside the token channel, carrying cross-token structural information and providing a secondary conditioning signal that makes the per-token factorization a better approximation of the true joint reverse distribution. The framework is instantiated in two flavors — continuous latents (Co-LADD) and discrete latents (Di-LADD) — each combinable with either a joint denoising strategy (tokens and latents co-evolve together) or a sequential strategy (latents are resolved first, then condition the entire token unmasking pass), with principled ELBO objectives derived for all combinations. The key practical finding is that discrete latents with joint co-evolution tend to perform best at moderate-to-large sampling budgets, while sequential inference offers the most benefit at very small step counts by eliminating early-stage ambiguity before aggressive multi-token unmasking begins.", 
+    "link": "https://arxiv.org/pdf/2510.18114"
+  },
+    {
+    "title": "Soft Thinking: Unlocking the Reasoning Potential of LLMs in Continuous Concept Space",
+    "author": "Zhen Zhang et al",
+    "year": "2025",
+    "topic":"dlm, reasoning",
+    "venue": "Arxiv",
+    "description": "Soft Thinking challenges the assumption that LLMs must reason through discrete language tokens, instead proposing that each reasoning step produce a \"concept token\" — a probability-weighted mixture of all token embeddings — allowing the model to inhabit a continuous concept space rather than committing to a single word at each step. This preserves the full probability distribution across the vocabulary at every intermediate step, which theoretically approximates marginalizing over all possible reasoning paths simultaneously, rather than greedily sampling one trajectory. To prevent the model from drifting into out-of-distribution collapse (since it was never trained on these continuous inputs), the authors introduce a \"Cold Stop\" mechanism that monitors output entropy and terminates reasoning early when the model becomes consistently confident. The result is a training-free method that plugs into any existing CoT pipeline, improves reasoning by enabling implicit parallel path exploration, and produces more concise outputs because richer per-token semantics reduce the number of steps needed to reach a conclusion.", 
+    "link": "https://arxiv.org/pdf/2505.15778"
+  },
+    {
+    "title": "Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner",
+    "author": "Cai Zhou et al",
+    "year": "2025",
+    "topic":"dlm, masking, latent reasoning",
+    "venue": "Arxiv",
+    "description": "CCDD is motivated by a theoretical proof that continuous diffusion is strictly more expressive than discrete diffusion (and can even simulate looped transformers), yet historically underperforms in practice — a contradiction the paper attributes to three trainability failures: a large and poorly structured decision space, atomic non-smooth generation targets, and combinatorial decoding ambiguity when mapping continuous representations back to tokens. The core insight resolving this tension is that discrete and continuous modalities are complementary: the discrete masked diffusion path anchors decoding and reduces input uncertainty, while the continuous path (operating over contextualized embeddings from a pretrained encoder like Qwen3-Embedding) preserves rich semantic history across denoising steps that would otherwise be discarded. Implementation runs a factored joint forward process — independent Gaussian noise on the continuous side and CTMC masking on the discrete side — with a single shared transformer receiving both modalities as input and optimizing a weighted sum of MSE and cross-entropy losses, with extras like asynchronous noise schedules (continuous decays slower, acting as implicit planning guidance for discrete decoding) and classifier-free guidance treating the continuous stream as self-generated conditioning. The result is a model that generalizes CDMs, DDMs, and looped transformers under one framework, achieving over 25% perplexity reduction versus a same-scale MDLM baseline on LM1B — suggesting that grounding continuous latent reasoning in parallel discrete tokens is a principled path to closing the gap between theoretical expressivity and practical performance in diffusion language models.", 
+    "link": "https://arxiv.org/pdf/2510.03206"
+  },
+    {
+    "title": "Soft-Masked Diffusion Language Models",
+    "author": "Michael Hersche et al",
+    "year": "2026",
+    "topic":"dlm, masking, soft-masking, llm",
+    "venue": "ICLR",
+    "description": "The paper introduces soft-masking (SM), a mechanism that replaces the binary mask-or-unmask decision in masked diffusion language models with a confidence-weighted blend of the [MASK] token and the top-k predicted tokens, allowing partial information to propagate across decoding steps rather than being discarded. Implementation is lightweight, requiring only three additional trainable parameters and a two-pass training procedure — a gradient-free first pass to generate soft-masked representations, followed by a second pass that updates both the backbone and SM parameters — preserving full parallelism across sequence length. A key conceptual insight is that SM can be understood as a smooth interpolation between standard masked diffusion and uniform diffusion in embedding space, and that retaining a portion of the mask token is itself useful since many models are pretrained to recognize it as a structural signal. Crucially, SM is modular and composable — it integrates cleanly with existing efficiency techniques like advanced unmasking schedulers and blockwise caching, and can be grafted onto already-pretrained models via short continued training rather than requiring a full retraining run.", 
+    "link": "https://openreview.net/pdf?id=Gba02UMvrG"
+  },
+    {
     "title": "Modular Manifolds",
     "author": "Jeremy Bernstein et al",
     "year": "2025",
