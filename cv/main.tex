@@ -9,6 +9,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{parskip}
+\usepackage{microtype}
 
 % Colors
 \definecolor{heading}{HTML}{2E3B4E}
@@ -44,6 +45,9 @@
   \noindent\textbf{#1} \hfill \textbf{#2}%
 }
 
+\tolerance=400
+\emergencystretch=2em
+
 \begin{document}
 
 %----------HEADER----------
@@ -55,7 +59,7 @@
 %----------SUMMARY----------
 \section{Summary}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item \textbf{Machine Learning Research Leadership:} Co-led the development of flagship diffusion language models at NVIDIA, designing novel training and inference infrastructure for models of 1B to 8B parameters. Team scaled from 2 people to multiple teams. Work was presented directly to CEO Jensen Huang and training/inference recipes used by 5+ internal research teams. Design led to ${\sim}$10x higher speed and ${\sim}$10\% improvements in accuracy as compared to leading models at the time.
+  \item \textbf{Machine Learning Research Leadership:} Co-led the development of flagship diffusion language models at NVIDIA, designing novel training and inference infrastructure for models of 1B to 14B parameters. Team scaled from 2 people to multiple teams. Work was presented directly to CEO Jensen Huang and training/inference recipes used by 5+ internal research teams. Design led to ${\sim}$10x higher speed and ${\sim}$10\% improvements in accuracy as compared to leading models at the time.
 
   \item \textbf{Research Impact:} Led interdisciplinary teams of Ph.D.\ and Masters students in pioneering diffusion model research, achieving 5x training efficiency improvements while preserving model quality. Published at premier computer vision conferences, with research methodologies adopted by NVIDIA for internal development. Demonstrated expertise in optimizing training and inference strategies for both state-space and transformer architectures.
 
@@ -80,7 +84,7 @@
 \medskip
 \entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern}{Mar.\ 2025 -- Mar.\ 2026}
 \begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item Trained, finetuned, and evaluated the flagship series of NV Research 1--14B diffusion language models. Built the evaluation and inference infrastructure, used internally by NV Research (5+ research teams) with over 1 million internal downloads.
+  \item Trained, finetuned, and evaluated the flagship series of NV Research 1--14B diffusion language models across base, instruct, and RL variants. Built the evaluation and inference infrastructure, adopted by 5+ internal research teams for vision-language models, embeddings, and latent reasoning, with over 1 million internal downloads.
   \item Worked on model distillation, efficient training recipes, and efficient inference recipes.
   \item Specialized in diffusion models on high-performance computing infrastructure utilizing clusters of thousands of NVIDIA GPUs on SLURM-managed servers.
   \item Presented weekly progress reports and technical findings to audiences of 20+ senior researchers and cross-functional engineering teams.
@@ -111,7 +115,7 @@
 \medskip
 \entry{University of South Carolina}{Columbia, SC}{Software Developer}{Jan.\ 2021 -- Aug.\ 2024}
 \begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item Led the design and implementation of three full-stack research study websites using PHP/Django/React/SQL, enabling efficient data collection and analysis for research studies.
+  \item Designed and built three full-stack research study websites using PHP, Django, React, and SQL.
   \item Architected and managed SQL databases of thousands of participant entries, ensuring data integrity, security compliance, and optimized query performance.
   \item Led the development of competitive federal and state grant applications, winning \$20,000+ in funding.
   \item Led teams of 4+ developers, providing mentorship and technical guidance while meeting KPIs and performance targets.
@@ -127,6 +131,8 @@
   \item \textbf{L.\ Whalen*}, Z.\ Du*, H.\ You*, C.\ Li, S.\ Li, Y.\ (Celine) Lin. ``Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training.'' \textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2025. [Georgia Tech]
 
   \item Z.\ Ye, Z.\ Wang, K.\ Xia, J.\ Hong, L.\ Li, \textbf{L.\ A.\ Whalen}, C.\ Wan, H.\ You, C.\ Lin, S.\ Kundu. ``LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering.'' \textit{Association for Computational Linguistics (ACL)}, 2025. [Georgia Tech]
+
+  \item A.\ Murphy, \textbf{L.\ Whalen}, S.\ Dubinsky, M.\ Gavin, J.\ F.\ Bailyn, J.\ Ginn. ``On `historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change.'' \textit{Linguistic Society of America (LSA)}, Apr.\ 2023. [University of South Carolina]
 \end{itemize}
 
 %----------EDUCATION----------
@@ -148,6 +154,7 @@
   \item Toyo University Exchange Student Representative \hfill Jul.\ 2023
   \item University of South Carolina Outstanding Senior, Class of 2023 \hfill Feb.\ 2023
   \item U.S.\ Department of State Critical Language Scholar of Japanese \hfill Jan.\ 2023
+  \item University of South Carolina Top Scholar (\$100,000+ value) \hfill Aug.\ 2020
 \end{itemize}
 
 %----------QUALIFICATIONS----------
