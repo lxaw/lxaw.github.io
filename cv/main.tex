@@ -1,0 +1,168 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[top=0.7in,bottom=0.7in,left=0.75in,right=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+% Colors
+\definecolor{heading}{HTML}{2E3B4E}
+\definecolor{accent}{HTML}{3A7CA5}
+\definecolor{lightgray}{HTML}{888888}
+
+% Hyperlink style
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdftitle={Lexington Whalen - CV},
+    pdfauthor={Lexington Whalen}
+}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries\color{heading}\scshape}
+  {}{0em}{}
+  [\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom commands
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}%
+}
+
+\newcommand{\entrynosubtitle}[2]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}%
+}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+  {\LARGE\bfseries Lexington Whalen}\\[4pt]
+  \href{https://www.linkedin.com/in/lxaw/}{\faLinkedin\ linkedin.com/in/lxaw}
+\end{center}
+
+%----------SUMMARY----------
+\section{Summary}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item \textbf{Machine Learning Research Leadership:} Co-led the development of flagship diffusion language models at NVIDIA, designing novel training and inference infrastructure for models of 1B to 8B parameters. Team scaled from 2 people to multiple teams. Work was presented directly to CEO Jensen Huang and training/inference recipes used by 5+ internal research teams. Design led to ${\sim}$10x higher speed and ${\sim}$10\% improvements in accuracy as compared to leading models at the time.
+
+  \item \textbf{Research Impact:} Led interdisciplinary teams of Ph.D.\ and Masters students in pioneering diffusion model research, achieving 5x training efficiency improvements while preserving model quality. Published at premier computer vision conferences, with research methodologies adopted by NVIDIA for internal development. Demonstrated expertise in optimizing training and inference strategies for both state-space and transformer architectures.
+
+  \item \textbf{Machine Learning Engineering:} Developed comprehensive evaluation and training pipelines for NVIDIA's internal diffusion-LLM projects, scaling model training from millions to billions of parameters across billions to trillions of tokens. Experience with distributed training systems leveraging thousands of GPUs with advanced parallelization strategies.
+
+  \item \textbf{Healthcare AI:} Technical Lead on United States' THOR healthcare initiative, developing innovative tiny PyTorch models that reduced cancer detection sensor degradation by over 70\%. Collaborate with researchers at top institutions like Carnegie Mellon University, Stanford, Purdue, Georgia Tech, et cetera.
+
+  \item \textbf{Recognition:} NSF Graduate Research Fellowship recipient (\$150,000 value), University of South Carolina Top Scholar Award (\$100,000+ value), and Critical Language Scholar of Japanese (U.S.\ Department of State, only 500 selected among 5,000+ applicants).
+
+  \item \textbf{Technical Development:} Full-stack developer for research study websites using Django/React/SQL, managing databases with thousands of participant entries. Developed and won grants totaling \$20,000+, leading teams of developers.
+\end{itemize}
+
+%----------EXPERIENCE----------
+\section{Experience}
+
+\entry{SoftBank -- SB Intuitions}{Tokyo, Japan}{R\&D Engineer, Team Lead (L/P Grade 3)}{Apr.\ 2026 --}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+  \item Lead large-scale language model research and development at SoftBank's SB Intuitions R\&D Division, driving technical strategy and team direction.
+  \item Selected as SoftBank Group Representative for the 2026 Entrance Ceremony, chosen to represent the incoming cohort across SoftBank Group companies.
+\end{itemize}
+
+\medskip
+\entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern}{Mar.\ 2025 -- Mar.\ 2026}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+  \item Trained, finetuned, and evaluated the flagship series of NV Research 1--14B diffusion language models. Built the evaluation and inference infrastructure, used internally by NV Research (5+ research teams) with over 1 million internal downloads.
+  \item Worked on model distillation, efficient training recipes, and efficient inference recipes.
+  \item Specialized in diffusion models on high-performance computing infrastructure utilizing clusters of thousands of NVIDIA GPUs on SLURM-managed servers.
+  \item Presented weekly progress reports and technical findings to audiences of 20+ senior researchers and cross-functional engineering teams.
+  \item Developed EfficientDLM series of diffusion language models that outperform Qwen3 autoregressive series in both accuracy and speed. Over 1M internal downloads.
+  \item Worked with vision team to release Nemotron series of diffusion language models; expected release in March of 2026.
+\end{itemize}
+
+\medskip
+\entry{NVIDIA}{Atlanta, GA}{Data Filtering Challenge Lead}{Dec.\ 2024 -- Dec.\ 2025}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+  \item Led development and management of challenge website utilizing Google Analytics to track engagement and optimize user experience across 30+ participating university research teams and companies.
+  \item Assisted in profiling of initial 400M parameter baseline model for participants, creating standardized benchmarks to evaluate submission quality.
+  \item Designed and implemented a comprehensive evaluation framework leveraging 10B token fine-tuning datasets to ensure consistent, fair assessment of model submissions.
+  \item Promoted challenge at International Conference on Machine Learning, ranked in the top 3 machine learning conferences globally with ${\sim}$9,000 attendees and $<$25\% paper acceptance rate.
+  \item Coordinated with corporate sponsors including Lambda Labs and Turing to secure GPU resources, evaluating team submissions and managing the end-to-end competition workflow.
+\end{itemize}
+
+\medskip
+\entry{Georgia Institute of Technology}{Atlanta, GA}{Machine Learning Engineer}{Aug.\ 2024 -- Dec.\ 2025}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+  \item Led team of 3 Ph.D.\ and Masters students to design innovative methods of reducing diffusion model training time by up to 5x on average while maintaining generation quality. Method was accepted to Computer Vision and Pattern Recognition (CVPR) 2025.
+  \item Algorithm lead for United States' ARPA-H THOR healthcare initiative. Spearheaded effort to reduce cancer detection sensor degradation by over 70\%, improving the lifetime of the sensors from only a few hours to several days (over a 10x improvement).
+  \item Engineered resource-efficient machine learning architectures designed to be powered by energy from the human body.
+  \item Collaborated with 5+ teams from top universities like Stanford, Northwestern, Carnegie Mellon, and MIT, representing Georgia Tech.
+  \item Traveled nationally to present technical progress to federal sponsors and healthcare stakeholders, effectively communicating complex technical concepts to diverse audiences.
+\end{itemize}
+
+\medskip
+\entry{University of South Carolina}{Columbia, SC}{Software Developer}{Jan.\ 2021 -- Aug.\ 2024}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+  \item Led the design and implementation of three full-stack research study websites using PHP/Django/React/SQL, enabling efficient data collection and analysis for research studies.
+  \item Architected and managed SQL databases of thousands of participant entries, ensuring data integrity, security compliance, and optimized query performance.
+  \item Led the development of competitive federal and state grant applications, winning \$20,000+ in funding.
+  \item Led teams of 4+ developers, providing mentorship and technical guidance while meeting KPIs and performance targets.
+  \item Implemented advanced machine learning techniques including clustering algorithms, random forests, and neural networks to analyze patient data, identify patterns, and develop predictive models.
+  \item Developed an innovative automated language similarity analysis system using numpy and pandas that reduced document comparison time by approximately 99\% (from 2--3 days to under 10 minutes). Published in Linguistic Society of America.
+\end{itemize}
+
+%----------PUBLICATIONS----------
+\section{Selected Works}
+\begin{itemize}[leftmargin=*, nosep, itemsep=4pt]
+  \item Y.\ Fu*, \textbf{L.\ Whalen*}, Z.\ Ye, X.\ Dong, S.\ Diao, J.\ Liu, C.\ Wu, H.\ Zhang, E.\ Xie, S.\ Han, M.\ Khadkevich, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. ``Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed.'' \textit{arXiv preprint arXiv:2512.14067}, Dec.\ 2025. [NVIDIA]
+
+  \item \textbf{L.\ Whalen*}, Z.\ Du*, H.\ You*, C.\ Li, S.\ Li, Y.\ (Celine) Lin. ``Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training.'' \textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2025. [Georgia Tech]
+
+  \item Z.\ Ye, Z.\ Wang, K.\ Xia, J.\ Hong, L.\ Li, \textbf{L.\ A.\ Whalen}, C.\ Wan, H.\ You, C.\ Lin, S.\ Kundu. ``LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering.'' \textit{Association for Computational Linguistics (ACL)}, 2025. [Georgia Tech]
+\end{itemize}
+
+%----------EDUCATION----------
+\section{Education}
+
+\entry{Georgia Institute of Technology}{Atlanta, GA}{Graduate Researcher -- Efficient Machine Learning Systems}{Aug.\ 2024 -- Dec.\ 2025}
+
+\medskip
+\entry{University of South Carolina}{Columbia, SC}{Accelerated Master's in Computer Science}{Jan.\ 2024 -- Aug.\ 2024}
+
+\medskip
+\entry{University of South Carolina}{Columbia, SC}{Bachelor's in Computer Science}{Jan.\ 2021 -- Dec.\ 2023}
+
+%----------AWARDS----------
+\section{Awards \& Recognition}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+  \item SoftBank Group Representative for Entrance Ceremony 2026 \hfill Mar.\ 2026
+  \item NSF GRFP Awardee \hfill Apr.\ 2024
+  \item Toyo University Exchange Student Representative \hfill Jul.\ 2023
+  \item University of South Carolina Outstanding Senior, Class of 2023 \hfill Feb.\ 2023
+  \item U.S.\ Department of State Critical Language Scholar of Japanese \hfill Jan.\ 2023
+\end{itemize}
+
+%----------QUALIFICATIONS----------
+\section{Qualifications}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+  \item Japanese Language Proficiency Test (N1)
+\end{itemize}
+
+%----------LANGUAGES----------
+\section{Language Skills}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+  \item English -- Native Level
+  \item Japanese -- Native Level (N1 Certified)
+  \item Mandarin -- Intermediate Level
+  \item German -- Beginner
+\end{itemize}
+
+\end{document}
