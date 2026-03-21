@@ -177,6 +177,7 @@ td:nth-child(7) {
 @media (max-width: 720px) {
   body { margin: 24px auto; }
   .search-inputs input { min-width: 100%; }
+  nav { font-size: 12px; line-height: 2; }
 }
 /* Compact non-description columns */
 th:nth-child(1), td:nth-child(1) { max-width: 240px; } /* title */

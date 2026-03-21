@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lex</title>
+    <title>Tags</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         main {
@@ -11,16 +11,6 @@
             flex-direction: column;
             align-items: center;
             padding-top: 10px;
-        }
-
-        .intro {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .intro p {
-            margin: 4px 0;
-            font-size: 14px;
         }
 
         .cloud-wrap {
@@ -145,17 +135,8 @@
 
         @media (max-width: 660px) {
             .cloud-wrap {
-                width: 90vw;
-                height: 90vw;
-                max-width: 400px;
-                max-height: 400px;
-            }
-            .panel {
-                max-width: 95%;
-                padding: 18px 16px;
-            }
-            nav {
-                font-size: 12px;
+                width: 320px;
+                height: 320px;
             }
         }
     </style>
@@ -171,9 +152,6 @@
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
-        <div class="intro">
-            <p>I work on and with large models.</p>
-        </div>
         <div class="cloud-wrap" id="cloud"></div>
     </main>
 
@@ -186,10 +164,6 @@
         </div>
     </div>
 
-    <small style="display:block;text-align:center;margin:10px 0;">
-        <a href="gineiden.html" style="opacity:0.35;">_</a>
-    </small>
-
     <script>
         const cloud = document.getElementById('cloud');
         const tooltip = document.getElementById('tooltip');
@@ -201,13 +175,13 @@
         let rotX = 0, rotY = 0;
         let autoRotX = 0.002, autoRotY = 0.004;
         let dragging = false, dragStartX = 0, dragStartY = 0;
-        let velX = 0, velY = 0;
-        let lastDragTime = 0;
+        let velX = 0, velY = 0;  // angular velocity (radians per frame)
         let items = [];
 
         fetch('papers/list.json')
             .then(r => r.json())
             .then(papers => {
+                // Build tag -> papers map
                 const tagMap = {};
                 papers.forEach(p => {
                     if (!p.topic) return;
@@ -219,7 +193,8 @@
 
                 const tags = Object.keys(tagMap);
 
-                // Semantic clustering via co-occurrence
+                // --- Semantic clustering via co-occurrence ---
+                // Build co-occurrence counts between tags
                 const cooccur = {};
                 tags.forEach(t => { cooccur[t] = {}; });
                 papers.forEach(p => {
@@ -233,9 +208,10 @@
                     }
                 });
 
-                // Greedy nearest-neighbor ordering for clustering
+                // Greedy nearest-neighbor ordering so co-occurring tags are adjacent
                 const ordered = [];
                 const used = new Set();
+                // Start with the most frequent tag
                 let current = tags.reduce((a, b) => tagMap[a].length >= tagMap[b].length ? a : b);
                 ordered.push(current);
                 used.add(current);
@@ -250,13 +226,16 @@
                             bestScore = score;
                         }
                     }
-                    if (!best) best = tags.find(t => !used.has(t));
+                    if (!best) {
+                        // Pick any remaining
+                        best = tags.find(t => !used.has(t));
+                    }
                     ordered.push(best);
                     used.add(best);
                     current = best;
                 }
 
-                // Distribute on sphere via golden spiral
+                // Distribute ordered tags on sphere via golden spiral
                 const total = ordered.length;
                 const maxCount = Math.max(...ordered.map(t => tagMap[t].length));
                 const minCount = Math.min(...ordered.map(t => tagMap[t].length));
@@ -302,22 +281,17 @@
             dragStartY = e.clientY;
             velX = 0;
             velY = 0;
-            lastDragTime = performance.now();
             cloud.classList.add('dragging');
         });
 
         window.addEventListener('mousemove', e => {
             if (!dragging) return;
-            const now = performance.now();
-            const dt = Math.max(now - lastDragTime, 1);
             const dx = e.clientX - dragStartX;
             const dy = e.clientY - dragStartY;
-            // Scale rotation by delta and time for responsiveness
-            velY = (dx / dt) * 0.8;
-            velX = (-dy / dt) * 0.8;
+            velY = dx * 0.005;
+            velX = -dy * 0.005;
             dragStartX = e.clientX;
             dragStartY = e.clientY;
-            lastDragTime = now;
         });
 
         window.addEventListener('mouseup', () => {
@@ -335,35 +309,33 @@
                 dragStartY = e.touches[0].clientY;
                 velX = 0;
                 velY = 0;
-                lastDragTime = performance.now();
             }
-        }, { passive: false });
+        }, { passive: true });
 
-        cloud.addEventListener('touchmove', e => {
+        window.addEventListener('touchmove', e => {
             if (!dragging || e.touches.length !== 1) return;
-            e.preventDefault(); // prevent page scroll while dragging cloud
-            const now = performance.now();
-            const dt = Math.max(now - lastDragTime, 1);
             const dx = e.touches[0].clientX - dragStartX;
             const dy = e.touches[0].clientY - dragStartY;
-            velY = (dx / dt) * 0.8;
-            velX = (-dy / dt) * 0.8;
+            velY = dx * 0.005;
+            velX = -dy * 0.005;
             dragStartX = e.touches[0].clientX;
             dragStartY = e.touches[0].clientY;
-            lastDragTime = now;
-        }, { passive: false });
+        }, { passive: true });
 
         window.addEventListener('touchend', () => { dragging = false; });
 
         // --- Animation ---
         function animate() {
             if (dragging) {
+                // Directly use drag velocity
                 rotX = velX;
                 rotY = velY;
             } else {
+                // Decay drag velocity
                 velX *= 0.95;
                 velY *= 0.95;
 
+                // Blend: use remaining momentum, fall back to gentle auto-rotate
                 const speed = Math.abs(velX) + Math.abs(velY);
                 if (speed > 0.001) {
                     rotX = velX;
@@ -382,8 +354,10 @@
             const r = Math.min(w, h) * radius;
 
             items.forEach(item => {
+                // Rotate around X axis
                 const y1 = item.y * cosX - item.z * sinX;
                 const z1 = item.y * sinX + item.z * cosX;
+                // Rotate around Y axis
                 const x2 = item.x * cosY + z1 * sinY;
                 const z2 = -item.x * sinY + z1 * cosY;
 
@@ -404,7 +378,7 @@
             requestAnimationFrame(animate);
         }
 
-        // --- Tooltip ---
+        // --- Tooltip (hover) ---
         function showTooltip(e, tag, papers) {
             if (panelOverlay.classList.contains('open')) return;
             const n = papers.length;
@@ -427,7 +401,7 @@
             tooltip.style.display = 'none';
         }
 
-        // --- Panel ---
+        // --- Panel (click) ---
         function openPanel(tag, papers) {
             hideTooltip();
             let html = `<p class="panel-title">${tag}</p>`;
