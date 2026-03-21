@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .intro p {
+            margin: 6px 0;
+        }
+
+        .controls {
+            margin: 18px 0 6px 0;
+            padding: 10px 0 0 0;
+            border-top: 1px solid var(--hair);
+        }
+
+        .search-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .search-row input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+            border: 1px solid var(--hair);
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: transparent;
+            color: var(--text);
+        }
+
+        .search-row input:focus {
+            border-color: rgba(0, 0, 0, 0.25);
+        }
+
+        .btn {
+            border: 1px solid var(--hair);
+            background: transparent;
+            padding: 9px 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .btn:hover {
+            border-color: rgba(0, 0, 0, 0.25);
+        }
+
+        #studyCount {
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0 0 14px 0;
+        }
+
+        /* Tag filter pills */
+        .tag-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 12px 0;
+        }
+
+        .tag-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid var(--hair);
+            border-radius: 14px;
+            font-size: 12px;
+            cursor: pointer;
+            color: var(--muted);
+            background: transparent;
+            transition: all 0.15s;
+        }
+
+        .tag-pill:hover {
+            border-color: rgba(0, 0, 0, 0.25);
+            color: var(--text);
+        }
+
+        .tag-pill.active {
+            background: var(--text);
+            color: #fff;
+            border-color: var(--text);
+        }
+
+        /* Post list */
+        .post-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--hair2);
+        }
+
+        .post-item:last-child {
+            border-bottom: none;
+        }
+
+        .post-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+
+        .post-title a {
+            color: var(--text);
+        }
+
+        .post-meta {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0 0 6px 0;
+        }
+
+        .post-summary {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .post-tags {
+            margin-top: 6px;
+        }
+
+        .post-tags span {
+            display: inline-block;
+            font-size: 11px;
+            color: var(--muted);
+            margin-right: 8px;
+        }
+
+        @media (max-width: 720px) {
+            .search-row input {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> ·
+        <a href="cv/main.pdf">CV</a> ·
+        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
+        <a href="https://github.com/lxaw">GitHub</a> ·
+        <a href="books_read.html">Books</a> ·
+        <a href="papers_read.html">Papers</a> ·
+        <a href="posts.html">Posts</a> ·
+        <a href="personal_interests.html">Personal</a>
+    </nav>
+    <main>
+        <div class="intro">
+            <p>Longer form writing on various topics.</p>
+        </div>
+
+        <div class="controls">
+            <p id="studyCount"></p>
+
+            <div class="search-row">
+                <input type="text" id="searchInput" placeholder="Search title or summary..." onkeyup="applyFilters()">
+                <button class="btn" type="button" onclick="clearFilters()">Clear</button>
+            </div>
+
+            <div class="tag-filters" id="tagFilters"></div>
+        </div>
+
+        <ul class="post-list" id="postList">
+            <li class="post-item">Loading...</li>
+        </ul>
+    </main>
+
+    <script>
+        let allStudies = [];
+        let activeTag = null;
+
+        fetch('posts/list.json')
+            .then(r => {
+                if (!r.ok) throw new Error('Failed to load posts');
+                return r.json();
+            })
+            .then(studies => {
+                allStudies = studies;
+                buildTagFilters();
+                applyFilters();
+            })
+            .catch(err => {
+                document.getElementById('postList').innerHTML =
+                    '<li class="post-item">Error loading posts.</li>';
+            });
+
+        function buildTagFilters() {
+            const tagSet = {};
+            allStudies.forEach(s => {
+                (s.tags || []).forEach(t => {
+                    tagSet[t] = (tagSet[t] || 0) + 1;
+                });
+            });
+
+            const container = document.getElementById('tagFilters');
+            container.innerHTML = '';
+
+            Object.keys(tagSet).sort().forEach(tag => {
+                const pill = document.createElement('button');
+                pill.className = 'tag-pill';
+                pill.textContent = tag;
+                pill.addEventListener('click', () => {
+                    if (activeTag === tag) {
+                        activeTag = null;
+                        pill.classList.remove('active');
+                    } else {
+                        activeTag = tag;
+                        container.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
+                        pill.classList.add('active');
+                    }
+                    applyFilters();
+                });
+                container.appendChild(pill);
+            });
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = allStudies.filter(s => {
+                if (activeTag && !(s.tags || []).includes(activeTag)) return false;
+                if (query) {
+                    const haystack = ((s.title || '') + ' ' + (s.summary || '')).toLowerCase();
+                    if (!haystack.includes(query)) return false;
+                }
+                return true;
+            });
+
+            renderList(filtered);
+        }
+
+        function renderList(studies) {
+            const list = document.getElementById('postList');
+            document.getElementById('studyCount').textContent =
+                `${studies.length} ${studies.length === 1 ? 'post' : 'posts'}`;
+
+            if (studies.length === 0) {
+                list.innerHTML = '<li class="post-item" style="color:var(--muted);">No posts found.</li>';
+                return;
+            }
+
+            list.innerHTML = studies.map(s => {
+                const tags = (s.tags || []).map(t => `<span>${t}</span>`).join('');
+                return `
+                    <li class="post-item">
+                        <p class="post-title"><a href="post.html?slug=${encodeURIComponent(s.slug)}">${s.title}</a></p>
+                        <p class="post-meta">${s.date || ''}</p>
+                        <p class="post-summary">${s.summary || ''}</p>
+                        <div class="post-tags">${tags}</div>
+                    </li>
+                `;
+            }).join('');
+        }
+
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            activeTag = null;
+            document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
+            applyFilters();
+        }
+    </script>
+</body>
+</html>
