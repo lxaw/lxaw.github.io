@@ -48,6 +48,46 @@ nav .separator {
   margin: 0 4px;
 }
 
+/* CV dropdown */
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.cv-dropdown > a {
+  cursor: pointer;
+}
+
+.cv-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid var(--hair);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 300;
+  white-space: nowrap;
+  padding: 4px 0;
+  margin-top: 2px;
+}
+
+.cv-dropdown-menu a {
+  display: block;
+  padding: 4px 14px;
+  font-size: 13px;
+}
+
+.cv-dropdown-menu a:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+.cv-dropdown:hover .cv-dropdown-menu,
+.cv-dropdown:focus-within .cv-dropdown-menu {
+  display: block;
+}
+
 h1 {
   font-size: 18px;
   font-weight: 600;
