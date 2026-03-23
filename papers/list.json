@@ -1,5 +1,50 @@
 [
     {
+    "title": "Stochastic Rounding for LLM Training: Theory and Practice",
+    "author": "Kaan Ozkara et al",
+    "year": "2025",
+    "topic":"rounding, stochastic",
+    "venue": "AISTATS",
+    "description": "This paper uses stochastic rounding to address numerical errors when training using low-precision, and analyze the convergence and regularization when using Adam optimizer + stochastic rounding.", 
+    "link": "https://proceedings.mlr.press/v258/ozkara25b.html"
+  },
+    {
+    "title": "RL Squeezes, SFT Expands: A Comparive Study of Reasoning LLMs",
+    "author": "Kohsei Matsutani et al",
+    "year": "2025",
+    "topic":"rl, sft",
+    "venue": "Arxiv",
+    "description": "This paper investigates the trajectory-level (looking at complete reasoning outputs) and step-level (looking a reasoning graphs whose nodes correspond to individual reasoning steps), and see that RL compresses incorrect trajectories, while SFT expands the correct ones. Basically, RL will concentrate the reasoning into a small subset of steps, while SFT will homogenize it across multiple steps.", 
+    "link": "https://arxiv.org/pdf/2510.04988"
+  },
+    {
+    "title": "Adaptive Memory Momentum via a Model-Based Framework for Deep Learning Optimization",
+    "author": "Kristi Topollai et al",
+    "year": "2025",
+    "topic":"adam, lr, optimizer",
+    "venue": "Arxiv",
+    "description": "Most optimizers are first-order momentum-based. Oftentimes optimizers like AdamW rely on momentum coefficients like beta=0.9 that are kept constant during training. The authors introduce an adaptive memory that makes this momentum coefficient dynamic and adjusted online during the optimization, based on the gradient at current iteration and the other from the past memory.", 
+    "link": "https://arxiv.org/pdf/2510.04988"
+  },
+    {
+    "title": "Adam-Mini: Use Fewer Learning Rates to Gain More",
+    "author": "Yushun Zhang et al",
+    "year": "2025",
+    "topic":"adam, lr, optimizer",
+    "venue": "Arxiv",
+    "description": "The authors propose an optimizer (AdamMini) that cutes down the learning rate resources used in memory, by partitioning the parameters of v into blocks based on the Hessian. They then assign a good lr to each block.", 
+    "link": "https://arxiv.org/pdf/2406.16793"
+  },
+    {
+    "title": "A Theory on Adam Instability in Large-Scale Machine Learning",
+    "author": "Igor Molybog et al",
+    "year": "2023",
+    "topic":"adam, instability, optimizer",
+    "venue": "Arxiv",
+    "description": "Authors see that Adam sometimes suffers from a large norm in the parameter update vector, becoming uncorrelated with the direction of descent, and note that this is more likely to be seen when training deep models with large batch sizes. They argue that teh instabilities are associated with time-domain correlation between grad estimates of earlier layers.", 
+    "link": "https://arxiv.org/pdf/2304.09871"
+  },
+    {
     "title": "Latent-Augmented Discrete Diffusion Models",
     "author": "Dario Shariatian et al",
     "year": "2026",

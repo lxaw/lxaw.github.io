@@ -113,12 +113,8 @@
 <body>
     <nav>
         <a href="index.html">Home</a> ·
-        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span> ·
-        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
-        <a href="https://github.com/lxaw">GitHub</a> ·
         <a href="books_read.html">Books</a> ·
         <a href="papers_read.html">Papers</a> ·
-        <a href="posts.html">Posts</a> ·
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
@@ -127,8 +123,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 409 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 409 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 414 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 414 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -152,6 +148,51 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.04988" target="_blank" rel="noopener noreferrer">Stochastic Rounding for LLM Training: Theory and Practice</a></td>
+                <td>Kaan Ozkara et al</td>
+                <td>2025</td>
+                <td>rounding, stochastic</td>
+                <td>AISTATS</td>
+                <td>This paper investigates the trajectory-level (looking at complete reasoning outputs) and step-level (looking a reasoning graphs whose nodes correspond to individual reasoning steps), and see that RL compresses incorrect trajectories, while SFT expands the correct ones. Basically, RL will concentrate the reasoning into a small subset of steps, while SFT will homogenize it across multiple steps.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.04988" target="_blank" rel="noopener noreferrer">RL Squeezes, SFT Expands: A Comparive Study of Reasoning LLMs</a></td>
+                <td>Kohsei Matsutani et al</td>
+                <td>2025</td>
+                <td>rl, sft</td>
+                <td>Arxiv</td>
+                <td>This paper investigates the trajectory-level (looking at complete reasoning outputs) and step-level (looking a reasoning graphs whose nodes correspond to individual reasoning steps), and see that RL compresses incorrect trajectories, while SFT expands the correct ones. Basically, RL will concentrate the reasoning into a small subset of steps, while SFT will homogenize it across multiple steps.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.04988" target="_blank" rel="noopener noreferrer">Adaptive Memory Momentum via a Model-Based Framework for Deep Learning Optimization</a></td>
+                <td>Kristi Topollai et al</td>
+                <td>2025</td>
+                <td>adam, lr, optimizer</td>
+                <td>Arxiv</td>
+                <td>Most optimizers are first-order momentum-based. Oftentimes optimizers like AdamW rely on momentum coefficients like beta=0.9 that are kept constant during training. The authors introduce an adaptive memory that makes this momentum coefficient dynamic and adjusted online during the optimization, based on the gradient at current iteration and the other from the past memory.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2406.16793" target="_blank" rel="noopener noreferrer">Adam-Mini: Use Fewer Learning Rates to Gain More</a></td>
+                <td>Yushun Zhang et al</td>
+                <td>2025</td>
+                <td>adam, lr, optimizer</td>
+                <td>Arxiv</td>
+                <td>The authors propose an optimizer (AdamMini) that cutes down the learning rate resources used in memory, by partitioning the parameters of v into blocks based on the Hessian. They then assign a good lr to each block.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2304.09871" target="_blank" rel="noopener noreferrer">A Theory on Adam Instability in Large-Scale Machine Learning</a></td>
+                <td>Igor Molybog et al</td>
+                <td>2023</td>
+                <td>adam, instability, optimizer</td>
+                <td>Arxiv</td>
+                <td>Authors see that Adam sometimes suffers from a large norm in the parameter update vector, becoming uncorrelated with the direction of descent, and note that this is more likely to be seen when training deep models with large batch sizes. They argue that teh instabilities are associated with time-domain correlation between grad estimates of earlier layers.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2510.18114" target="_blank" rel="noopener noreferrer">Latent-Augmented Discrete Diffusion Models</a></td>
