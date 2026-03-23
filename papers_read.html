@@ -113,8 +113,12 @@
 <body>
     <nav>
         <a href="index.html">Home</a> ·
+        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span> ·
+        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
+        <a href="https://github.com/lxaw">GitHub</a> ·
         <a href="books_read.html">Books</a> ·
         <a href="papers_read.html">Papers</a> ·
+        <a href="posts.html">Posts</a> ·
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
@@ -150,16 +154,16 @@
         <tbody>
         
             <tr>
-                <td><a href="https://arxiv.org/pdf/2510.04988" target="_blank" rel="noopener noreferrer">Stochastic Rounding for LLM Training: Theory and Practice</a></td>
+                <td><a href="https://proceedings.mlr.press/v258/ozkara25b.html" target="_blank" rel="noopener noreferrer">Stochastic Rounding for LLM Training: Theory and Practice</a></td>
                 <td>Kaan Ozkara et al</td>
                 <td>2025</td>
                 <td>rounding, stochastic</td>
                 <td>AISTATS</td>
-                <td>This paper investigates the trajectory-level (looking at complete reasoning outputs) and step-level (looking a reasoning graphs whose nodes correspond to individual reasoning steps), and see that RL compresses incorrect trajectories, while SFT expands the correct ones. Basically, RL will concentrate the reasoning into a small subset of steps, while SFT will homogenize it across multiple steps.</td>
+                <td>This paper uses stochastic rounding to address numerical errors when training using low-precision, and analyze the convergence and regularization when using Adam optimizer + stochastic rounding.</td>
             </tr>
         
             <tr>
-                <td><a href="https://arxiv.org/pdf/2510.04988" target="_blank" rel="noopener noreferrer">RL Squeezes, SFT Expands: A Comparive Study of Reasoning LLMs</a></td>
+                <td><a href="https://arxiv.org/pdf/2510.04988" target="_blank" rel="noopener noreferrer">RL Squeezes, SFT Expands: A Comparative Study of Reasoning LLMs</a></td>
                 <td>Kohsei Matsutani et al</td>
                 <td>2025</td>
                 <td>rl, sft</td>
