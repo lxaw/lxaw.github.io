@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  23 MAR 2026 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  28 MAR 2026 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -483,21 +483,15 @@ al/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: EB5CC6AB8B4E7181D582A47966781406;761
-(rerunfilecheck)             After:  E9D986F0E7988EC21D2699FCBB4D069C;855.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E9D986F0E7988EC21D2699FCBB4D069C;855.
  ) 
 Here is how much of TeX's memory you used:
- 15192 strings out of 476025
- 262605 string characters out of 5790017
+ 15194 strings out of 476025
+ 262625 string characters out of 5790017
  1867388 words of memory out of 5000000
  35378 multiletter control sequences out of 15000+600000
- 554436 words of font info for 100 fonts, out of 8000000 for 9000
+ 554519 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,5n,76p,1193b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
@@ -507,7 +501,7 @@ b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive
 /2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texm
 f-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (3 pages, 148015 bytes).
+Output written on main.pdf (3 pages, 148328 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream
