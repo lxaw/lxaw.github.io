@@ -1,5 +1,95 @@
 [
     {
+    "title": "Neural network learns low-dimensional polynomials with SGD near the information-theoretic limit",
+    "author": "Jason D. Lee et al",
+    "year": "2024",
+    "topic": "sgd, optimization, sample complexity",
+    "venue": "Arxiv",
+    "description": "The paper shows that two-layer neural networks trained with SGD can learn single-index functions with sample complexity governed by the generative exponent 𝑝 ∗ p ∗ , rather than the larger information exponent 𝑝 p, by exploiting minibatch reuse during training. The key mechanism is that reusing the same data across gradient steps induces implicit nonlinear (polynomial) transformations of the labels, allowing SGD to access higher-order information beyond standard correlational statistical queries. This enables SGD to effectively simulate richer statistical query algorithms and reduce the effective learning difficulty, achieving near-optimal 𝑛 ∼ 𝑑 n∼d scaling for polynomial targets where 𝑝 ∗ ≤ 2 p ∗ ≤2. The analysis further shows that with appropriate training dynamics (layer-wise updates and normalization), SGD can progress from weak to strong feature recovery and ultimately learn both the latent direction and link function with near information-theoretic efficiency.", 
+    "link": "https://arxiv.org/pdf/2406.01581"
+  },
+    {
+    "title": "Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Expert Language Models",
+    "author": "Tianwen Wei et al",
+    "year": "2024",
+    "topic": "moe, training, optimization",
+    "venue": "Arxiv",
+    "description": "The paper studies how to effectively train Mixture-of-Experts (MoE) language models, focusing on the tradeoff between upcycling (initializing from dense checkpoints) and training from scratch, showing that the optimal choice depends on relative training budget and that large budgets favor scratch training due to better expert diversification. It identifies expert similarity as a key failure mode in upcycled MoEs, where identical initialization limits specialization, and proposes monitoring and encouraging diversification during training. To improve routing quality, it introduces gating logit normalization, which sharpens the softmax distribution of the router and prevents experts from behaving like uniform averages. Finally, it proposes adaptive auxiliary loss coefficients, dynamically adjusting load-balancing regularization per layer based on token routing statistics, so that load balancing does not overly constrain the main language modeling objective.", 
+    "link": "https://arxiv.org/pdf/2406.06563"
+  },
+    {
+    "title": "Pruning is Optimal for Learning Sparse Features in High-Dimensions",
+    "author": "Nuri Mert Vural et al",
+    "year": "2024",
+    "topic": "pruning",
+    "venue": "ICML",
+    "description": "The paper studies neural networks for learning sparse high-dimensional feature models and introduces a prune-then-train procedure, where gradients at initialization are used to identify important input coordinates, reduce dimensionality, and then run gradient-based learning on the pruned subspace. It proves that when the true model directions are (soft) sparse, this pruning step aligns the network with the relevant features and enables gradient descent to achieve optimal sample complexity, matching sparsity-aware CSQ lower bounds. In contrast, standard “basis-independent” methods (e.g., randomly initialized dense networks) cannot exploit sparsity and therefore require strictly more samples, showing a formal separation. The key insight is that pruning is not just compression but a mechanism for feature selection via gradient signals, which reduces the effective dimension of the learning problem and makes otherwise hard high-dimensional estimation statistically optimal.", 
+    "link": "https://arxiv.org/pdf/2406.08658"
+  },
+    {
+    "title": "Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning",
+    "author": "Ryotaro Kawata et al",
+    "year": "2025",
+    "topic": "moe, cluster, optimization",
+    "venue": "ICML",
+    "description": "The paper provides a theoretical analysis of Mixture of Experts (MoE) trained with SGD on nonlinear regression tasks that have an underlying latent cluster structure, introducing a multi-phase training procedure where experts first weakly specialize, a router learns to partition data based on these signals, and experts then refine both local and global components. It proves that standard (single) neural networks fail in this setting because gradient interference cancels signals associated with shared structure, effectively increasing the problem’s information exponent and preventing recovery of certain features. In contrast, MoE succeeds by decomposing the task: individual experts weakly recover simpler cluster-specific functions, enabling the router to separate data and reduce interference, after which each expert can learn its assigned subproblem efficiently. The key insight is that MoE reduces effective learning complexity by aligning optimization with the latent data structure, turning a hard global problem into multiple easier local ones with favorable sample and runtime scaling.", 
+    "link": "https://arxiv.org/pdf/2506.01656"
+  },
+    {
+    "title": "A Convergence Analysis of Adaptive Optimizers under Floating-point Quantization",
+    "author": "Xuan Tang et al",
+    "year": "2026",
+    "topic": "quantization, adam",
+    "venue": "Arxiv",
+    "description": "The authors introduce a theoretical framework for analyzing convergence of adaptive optimizers such as Adam and Muon under floating-point quantization of gradients, weights, optimizer states. They show that such algorithms are able to maintain rates near their full-precision counterparts (as long as mantissa length scales logarithmically with number of iters). They note that Adam is highly sensitive to weights and second-moment quantization due to reliance on beta2 -> 1, while Muon does not have such constraints, thus being potentially more robust to quantization.", 
+    "link": "https://arxiv.org/pdf/2510.21314"
+  },
+    {
+    "title": "EM Distillation for One-Step Diffusion Models",
+    "author": "Sirui Xi et al",
+    "year": "2024",
+    "topic":"diffusion, dlm, distillation",
+    "venue": "NeurIPS",
+    "description": "The authors propose a maximum likelihood-based approach (EM Distillation, EMD) that distills a diffusion model to a one-step generator. Generator parameters are updated via Expectation-Maximization (EM), using samples from joint distribution of diffusion teacher prior and inferred generator latents. They alternate between an Expectation step that estimates the learning gradients with Monte Carlo samples and a Maximization-step that updates the student via gradient descent.", 
+    "link": "https://arxiv.org/pdf/2405.16852"
+  },
+    {
+    "title": "Pushing the Limits of Low-Bit Optimizers: A Focus on EMA Dynamics",
+    "author": "Cong Xu et al",
+    "year": "2025",
+    "topic":"optimizer, adam, low-bit",
+    "venue": "Arxiv",
+    "description": "The authors present a method (SOLO) that enables Adam-style optimizers to maintain quantized states with precision as low as 3 or 2 bits. They are able to do this by resolving two problems: the \"signal swamping problem\" (the state may keep unchanged regardless of gap between newly received signal and current state value; this becomes a big problem when using a large momentum, beta->1, where the added value of (1-beta)_{z_{t}+1}} becomes very small and thus is easily swamped)in unsigned quantization, and the increased gradient variance in signed quantization that leads to incorrect descent directions. For the former, they suggest a logarithmic quantization, and for the later a precision-specific momentum hyperparam. SOLO can be applied to any Adam-style optimizer.", 
+    "link": "https://arxiv.org/pdf/2505.00347"
+  },
+    {
+    "title": "Scheduled Restart Momentum for Accelerated Stochastic Gradient Descent",
+    "author": "Bao Wang et al",
+    "year": "2020",
+    "topic":"sgd, momentum, optimization",
+    "venue": "Arxiv",
+    "description": "This paper proposes scheduled restart sgd (SRSGD) that replaces the constant momentum in SGD by the increasing momentum in nesterov accelerated gradient (NAG) but stabilies the iterations by resetting the momentum to zero on a schedule.", 
+    "link": "https://arxiv.org/pdf/2002.10583"
+  },
+    {
+    "title": "SOAP: Improving and Stabilizing Shampoo using Adam",
+    "author": "Nikhil Vyas et al",
+    "year": "2025",
+    "topic":"optimizer, adam, shampoo",
+    "venue": "Arxiv",
+    "description": "Shampoo has a drawback in that it includes additional hyperparams and computational overhead when compared to Adam. The authors show a connection between Shampoo and Adafactor, showing that Shampoo is equivalent to running Adafactor in the eigenbasis of Shampoo's preconditioner, and then present a simpler algorithm, ShampoO with Adam in the Preconditioner's ", 
+    "link": "https://arxiv.org/pdf/2409.11321"
+  },
+    {
+    "title": "SPAM: Spike-Aware Adam with Momentum Reset for Stable LLM Training",
+    "author": "Tianjin Haung et al",
+    "year": "2025",
+    "topic":"adam, instability, optimizer",
+    "venue": "ICLR",
+    "description": "A big problem in instability is from gradient and loss spikes, which lead to interventions like checkpoint recovery and experiment restarts. The authors present a comprehensive investigation into gradient spikes, and propose a spike-aware adam with momentum reset (SPAM), combatting gradient spikes via momentum reset and spike-aware gradient clipping.", 
+    "link": "https://arxiv.org/pdf/2501.06842"
+  },
+    {
     "title": "Stochastic Rounding for LLM Training: Theory and Practice",
     "author": "Kaan Ozkara et al",
     "year": "2025",
