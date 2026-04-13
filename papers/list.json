@@ -1,5 +1,41 @@
 [
     {
+    "title": "DUEL: Exact Likelihood for Masked Diffusion via Deterministic Unmasking",
+    "author": "Gilad Turok et al",
+    "year": "2026",
+    "topic": "",
+    "venue": "Arxiv",
+    "description": "DUEL reframes masked diffusion models (MDMs) as any-order autoregressive models with a deterministic unmasking policy, showing that a model is defined jointly by a denoiser and a position-selection rule. The key theoretical result is that when the unmasking policy is deterministic, the intractable marginalization over all generation orders collapses to a single trajectory, enabling exact likelihood computation under the test-time distribution. This yields a proper notion of perplexity for MDMs—directly analogous to autoregressive models—resolving fundamental issues with ELBO-based and sample-based evaluation. More broadly, the framework formalizes how different unmasking strategies induce distinct distributions and provides a unified way to analyze and compare them via exact likelihood.", 
+    "link": "https://arxiv.org/pdf/2603.01367v2"
+  },
+    {
+    "title": "L3: Large Lookup Layers",
+    "author": "Albert Tseng et al",
+    "year": "2026",
+    "topic": "embedding, moe, sparse, routing",
+    "venue": "Arxiv",
+    "description": "This paper introduces the Large Lookup Layer (L3), a new sparse architectural component that generalizes token embedding tables into intermediate transformer layers, enabling context-dependent computation via attention over token-specific embeddings. Unlike Mixture-of-Experts, L3 uses static token-based routing, eliminating the need for learned routers and enabling more hardware-friendly training, inference, and parameter offloading. The authors propose an information-theoretic embedding allocation method based on LZW-style compression to assign varying numbers of embeddings per token, approximating context-dependent routing using frequency of token patterns. Overall, L3 defines a new axis of sparsity that separates routing from computation, allowing models to cache and reuse information efficiently within learned embedding tables.", 
+    "link": "https://arxiv.org/pdf/2601.21461"
+  },
+    {
+    "title": "Learn from Your Mistakes: Self-Correcting Masked Diffusion Models",
+    "author": "Yair Schiff et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, llm, sampling, revision",
+    "venue": "Arxiv",
+    "description": "The paper introduces Progressive Self-Correction (ProSeCo), a framework that augments masked diffusion models (MDMs) with the ability to both generate (unmask) and revise (correct) tokens within the same model. It formulates model predictions as noisy samples of the true data and adds a self-correction cross-entropy objective that trains the model to recover from its own errors, with shared parameters between denoising and correction. The method provides a minimal modification to standard MDM training by incorporating an additional forward pass using sampled model outputs, along with a principled weighting scheme aligned with the diffusion objective. At inference time, it proposes an interleaved predictor–corrector sampling procedure that iteratively refines entire sequences, including already generated tokens, enabling dynamic error correction during generation.", 
+    "link": "https://arxiv.org/pdf/2602.11590"
+  },
+    {
+    "title": "Diffusion Models are Minimax Optimal Distribution Estimators",
+    "author": "Kazusato Oko et al",
+    "year": "2023",
+    "topic": "diffusion, minimax, estimation, theory",
+    "venue": "Arxiv",
+    "description": "This paper provides a statistical learning theory for diffusion models by analyzing how well neural networks trained via score matching approximate the data distribution. Assuming the true density lies in a Besov space (a general class of functions that captures smoothness and includes Sobolev/Hölder spaces), the authors prove that diffusion models achieve nearly minimax-optimal estimation rates—i.e., they are statistically as efficient as possible up to constants—in both total variation distance (a measure of global distribution difference) and Wasserstein-1 distance (a transportation-based metric measuring the cost of moving mass between distributions). A key contribution is a construction that connects neural network approximation of time-dependent score functions (gradients of log-density) to final distribution error bounds, yielding explicit rates that depend on smoothness and sample size. The theory also shows that under a manifold (low intrinsic dimension) assumption, these rates depend on intrinsic rather than ambient dimension, meaning diffusion models can avoid the curse of dimensionality in such settings.", 
+    "link": "https://arxiv.org/pdf/2303.01861"
+  },
+    {
     "title": "Neural network learns low-dimensional polynomials with SGD near the information-theoretic limit",
     "author": "Jason D. Lee et al",
     "year": "2024",
