@@ -166,6 +166,27 @@
     </div>
 
     <script>
+        // Loads a list.json. If it's a manifest of the form
+        // {"parts": ["list_0000001.json", ...]} (produced by split_list.py),
+        // fetches all parts and concatenates them in order. Otherwise returns
+        // the parsed JSON as-is.
+        async function loadList(path) {
+            const res = await fetch(path);
+            if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+            const data = await res.json();
+            if (data && !Array.isArray(data) && Array.isArray(data.parts)) {
+                const dir = path.substring(0, path.lastIndexOf('/') + 1);
+                const chunks = await Promise.all(
+                    data.parts.map(p => fetch(dir + p).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load ${dir + p}: ${r.status}`);
+                        return r.json();
+                    }))
+                );
+                return chunks.flat();
+            }
+            return data;
+        }
+
         const cloud = document.getElementById('cloud');
         const tooltip = document.getElementById('tooltip');
         const panelOverlay = document.getElementById('panelOverlay');
@@ -179,8 +200,7 @@
         let velX = 0, velY = 0;  // angular velocity (radians per frame)
         let items = [];
 
-        fetch('papers/list.json')
-            .then(r => r.json())
+        loadList('papers/list.json')
             .then(papers => {
                 // Build tag -> papers map
                 const tagMap = {};

@@ -1,10 +1,27 @@
 import json
+import os
 from html import escape
 
-def generate_html(json_file_path, output_file_path):
-    # Read the JSON file
+
+def load_list(json_file_path):
+    """Read a list.json. If it's a manifest of the form
+    {"parts": ["list_0000001.json", ...]} (produced by split_list.py),
+    load all parts and concatenate them. Otherwise return the JSON as-is."""
     with open(json_file_path, 'r') as file:
-        papers = json.load(file)
+        data = json.load(file)
+    if isinstance(data, dict) and isinstance(data.get("parts"), list):
+        base_dir = os.path.dirname(json_file_path)
+        entries = []
+        for part_name in data["parts"]:
+            with open(os.path.join(base_dir, part_name), 'r') as pf:
+                entries.extend(json.load(pf))
+        return entries
+    return data
+
+
+def generate_html(json_file_path, output_file_path):
+    # Read the JSON file (may be a manifest of split parts)
+    papers = load_list(json_file_path)
 
     # Generate the HTML content
     html_content = f"""

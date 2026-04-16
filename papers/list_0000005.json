@@ -1,0 +1,497 @@
+[
+  {
+    "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+    "author": "Jie Huang et al",
+    "year": "2024",
+    "topic": "self-correction",
+    "venue": "Arxiv",
+    "description": "This paper demonstrates that large language models cannot effectively self-correct their reasoning without external feedback, showing that existing self-correction methods either rely on oracle labels, perform worse than simpler alternatives, or benefit mainly from improved prompting rather than actual self-correction.",
+    "link": "https://arxiv.org/pdf/2310.01798"
+  },
+  {
+    "title": "Think Before You Speak: Training Language Models with Pause Tokens",
+    "author": "Sachin Goyal et al",
+    "year": "2024",
+    "topic": "test-time compute, meta-tokens",
+    "venue": "Arxiv",
+    "description": "This paper introduces \"Pause Tokens\" which are a way of appending a sequence of tokens to the input prefix, and then delaying the output until the last pause token is seen.",
+    "link": "https://arxiv.org/pdf/2310.02226"
+  },
+  {
+    "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+    "author": "Charlie Snell et al",
+    "year": "2024",
+    "topic": "test-time compute",
+    "venue": "Arxiv",
+    "description": "This paper explores the question of \"If an LLM is allowed to use a fixed but non-trivial amount of inference-time compute, how much can it improve its performance on a challenge prompt?\". Good for references on various test-time compute strategies.",
+    "link": "https://arxiv.org/pdf/2408.03314"
+  },
+  {
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "author": "Tianle Cai et al",
+    "year": "2024",
+    "topic": "speculative decoding, drafting, llm",
+    "venue": "ICML",
+    "description": "This paper presents Medusa which augments LLM inference by adding extra decoding heads to predict multiple subsequent tokens in parallel. They also introduce a form of tree-based attention to process candidates. Through the Medusa heads, they obtain probability predictions for the subsequent K+1 tokens. These predictions enable them to create length-K+1 continuations as the candidates. In order to process multiple cnadidates concurrently, they structure their attention such that only tokens from the same continuation are regarded as historical data.For instance, they have in Figure 2 an example where the first Medusa head and generates some top two predictions while the second medusa head generates a top three for each of the top two from the first head. Instead of filling the entire attention mask, they only consider the mask from these 2*3 = 6 tokens, plus the standard identity line.",
+    "link": "https://arxiv.org/pdf/2401.10774"
+  },
+  {
+    "title": "Recurrent Drafter for Fast Speculative Decoding in Large Language Models",
+    "author": "Yunfei Cheng et al",
+    "year": "2024",
+    "topic": "speculative decoding, drafting, llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces ReDrafter (Recurrent Drafter) that uses an RNN as the draft model and conditions on the LLM's hidden states. They use a beam search to explore the candidate seqeunces and then apply a dynamic tree attention alg to remove duplicated prefixes among the candidates to improve the speedup. They also train via knowledge distillation from LLMs to improve the alignment of the draft model's predictions with those of the LLM.",
+    "link": "https://arxiv.org/pdf/2403.09919"
+  },
+  {
+    "title": "QuIP: 2-Bit Quantization of Large Language Models With Guarantees",
+    "author": "Jerry Chee et al",
+    "year": "2024",
+    "topic": "quantization, block-wise",
+    "venue": "Arxiv",
+    "description": "QuIP (quantization with incoherence processing) is a method based on the insight that quantization benefits from incoherent weight and Hessian mats, meaning that they benefit from the weights being even in magnitude and benefit from having the directions in whcih they are rounded to being unaligned with the coordinate axes. ",
+    "link": "https://arxiv.org/pdf/2307.13304"
+  },
+  {
+    "title": "BlockDialect: Block-wise Fine-grained Mixed Format for Energy-Efficient LLM Inference",
+    "author": "Wonsuk Jang et al",
+    "year": "2024",
+    "topic": "quantization, block-wise",
+    "venue": "Arxiv",
+    "description": "This paper introduces a block-wise quantization scheme that assigns a per-block optimal number format from a format book (they make their own format book called \"DialectFP4\"). \"Focusing on how to represent over how to scale\".",
+    "link": "https://arxiv.org/pdf/2501.01144v2"
+  },
+  {
+    "title": "SpinQuant: LLM Quantization with Learned Rotations",
+    "author": "Zechun Liu et al",
+    "year": "2024",
+    "topic": "quantization, spins, rotation",
+    "venue": "Arxiv",
+    "description": "This paper uses two mergeable rotation matrices (R1, R2) that make rotationally invariant full-precision networks, and then apply two online Hadamard rotations (G3, R4) to further reduce the outliers so they can quantize activations and KV-cache quantizations. They then show how one can optimize these rotation matrices on Stiefel manifolds (orthogonal manifolds) using Cayley SGD. The reason for Cayley SGD and Stiefel manifolds is bc they need to optimize rotation matrices (R1, R2) such that they stay orthogonal during optimization. Regular SGD would break this constraint. By optimizing on Stiefel manifolds (space of all orthonormal matrices), they can specifc that the optimizations stays on a specific surface that only contains rotation matrices.",
+    "link": "https://arxiv.org/pdf/2405.16406"
+  },
+  {
+    "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+    "author": "Yuhong Li et al",
+    "year": "2024",
+    "topic": "llm, kv cache",
+    "venue": "Arxiv",
+    "description": "This paper identifies and selects the most important features per head to create compressed KV cache. It works in two stages: 1) vote for important previous features by taking the last segment of the prompt (\"observation window\") and uses this window to analyze which parts of the earlier text (prefix) are most important. For each attn head, we aggregate the attn weights from queries in the observation window. Then we select the top-k positions based on the aggregated weights (k=p*L_prefix, where p is the compression weight) 2) then cluster and perform context preservation: we then use a pooling layer to cluster the selected important features. The last part of the prompt is kept as the observation window because they note that the attention patterns observed in the last window of the input sequence have high overlap rates (~80-90%) with the actual attention patterns used during generation.",
+    "link": "https://arxiv.org/pdf/2404.14469"
+  },
+  {
+    "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+    "author": "Angelos Katharopoulos et al",
+    "year": "2020",
+    "topic": "attention, transformer",
+    "venue": "ICML",
+    "description": "This paper rephrases transformers as RNNs (title). They express the self-attention mechanism as a linear dot-product of kernel feature maps to make the complexity go from O(N^2) to O(N). Personal note: this is the 200th paper recorded on here, and the last of 2024! Summer of 2024 was when I began studying machine learning. Let's keep it up!",
+    "link": "https://arxiv.org/pdf/2006.16236"
+  },
+  {
+    "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+    "author": "Xiang Lisa Li et al",
+    "year": "2021",
+    "topic": "prefix-tuning, prompting, llm",
+    "venue": "Arxiv",
+    "description": "This paper proposes prefix-tuning, which keeps language model params frozen but optimizes a continuous task-specific vector (prefix).",
+    "link": "https://arxiv.org/pdf/2101.00190"
+  },
+  {
+    "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+    "author": "Brian Lester et al",
+    "year": "2021",
+    "topic": "prompting, llm",
+    "venue": "Arxiv",
+    "description": "This paper explores adding soft prompts to condition frozen language models. Basically, soft prompts are learned through back-propagation and can be used to finetune language models without fully retraining. They also introduce the idea of \"prompt ensembling\" which is basically using multiple soft prompts on a model and ensembling their outputs.",
+    "link": "https://arxiv.org/pdf/2104.08691"
+  },
+  {
+    "title": "Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs",
+    "author": "Nguyen Nhat Minh et al",
+    "year": "2024",
+    "topic": "sampling, llm",
+    "venue": "Arxiv",
+    "description": "This paper introduces a neat trick to sample the next token. Min-p sampling basically adjusts the sampling threshold based on the model's confidence. It does so by scaling according to the top token's probability. This is a compelling alternative to other common sampling methods, like nucleus sampling.",
+    "link": "https://arxiv.org/pdf/2407.01082"
+  },
+  {
+    "title": "LASER: Attention with Exponential Transformation",
+    "author": "Sai Surya Duvvuri et al",
+    "year": "2024",
+    "topic": "attention, gradients",
+    "venue": "Arxiv",
+    "description": "This paper identifies that gradients backpropagated through the softmax operation often can be quite small. To mitigate this, they propose doing a dot-product attention with an exp()-transformed value matrix V (meaning, they do the attention calculation on exp(V)), which allows for a larger Jacobian (mitigating the small gradient issue).",
+    "link": "https://arxiv.org/pdf/2411.03493"
+  },
+  {
+    "title": "Hyper-Connections",
+    "author": "Defa Zhu et al",
+    "year": "2024",
+    "topic": "residual connections, hyper-connections",
+    "venue": "Arxiv",
+    "description": "This paper introduces hyper-connections, which is a novel alternative to residual connections. Basically, they introduce learnable depth and width connections.",
+    "link": "https://arxiv.org/pdf/2409.19606"
+  },
+  {
+    "title": "Remix-DiT: Mixing Diffusion Transformers for Multi-Expert Denoising",
+    "author": "Gongfan Fang et al",
+    "year": "2024",
+    "topic": "dit, diffusion, moe",
+    "venue": "NeurIPS",
+    "description": "This paper introduces a method of mixing diffusion models for multi-expert denoising. Basically, they increase the width of the linear layers by a factor of K, and then modify the forward pass to support it. This allows for K experts that are initialized from the original weights. ",
+    "link": "https://arxiv.org/pdf/2412.05628"
+  },
+  {
+    "title": "Hymba: A Hybrid-head Architecture for Small Language Models",
+    "author": "Xin Dong et al",
+    "year": "2024",
+    "topic": "llm, hybrid, meta-tokens",
+    "venue": "Arxiv",
+    "description": "This paper introduces a family of small language models that have a hybrid attention-ssm head parallel architecture. There are many interesting architectural designs to note here, but my favoriate is the use of \"meta tokens\", learnable tokens that are prepended to prompts. These tokens help reduce the entropy of attention and ssm heads, and can be seen as a good initialization for KV cache and the SSM state.",
+    "link": "https://arxiv.org/pdf/2411.13676"
+  },
+  {
+    "title": "All are Worth Words: A ViT Backbone for Diffusion Models",
+    "author": "Fan Bao et al",
+    "year": "2023",
+    "topic": "diffusion, vit",
+    "venue": "Arxiv",
+    "description": "This paper designs a general ViT-based architecture for diffusion models. Notably, it treats all inputs (time, condition, noisy image patches) as tokens and uses long skip connections between the shallow and deep layers.",
+    "link": "https://arxiv.org/pdf/2209.12152"
+  },
+  {
+    "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+    "author": "Saleh Ashkboos et al",
+    "year": "2024",
+    "topic": "pruning, llm",
+    "venue": "ICLR",
+    "description": "The authors propose a method of slicing off entire rows or columns of weight matrices. They do this by applying a transformation that leaves the predictions invariant prior to the slice. The authors also introduce the notion of \"computational invariance\", AKA that one can apply orthogonal matrix transformations to each weight matrix in the transformer without changing the model, which they use to edit the blocks in a transformer to project the activation matrix between blocks onto its principal components, and then slice. They make the key insight that if you insert linear layers with the orthogonal matrix Q before RMSNorm and Q^{T} after, the network remains unchanged, i.e. RMSNorm(XQ)Q^{T} = RMSNorm(X). They also note that since LayerNorm can be converted to RMSNorm, LayerNorm is the same story. To find the Qs they use a calibration dataset from the training set and run it thru the model. They then use the output of the network to find the orthogonal matrices of the next layers by computing the covariance matrix and then getting the eigenvalues (read the paper for more).",
+    "link": "https://arxiv.org/pdf/2401.15024"
+  },
+  {
+    "title": "Visual Autoregressive Modeling: Scaling Image Generation via Next-Scale Prediction",
+    "author": "Key Tian et al",
+    "year": "2024",
+    "topic": "tokens, reference model",
+    "venue": "NeurIPS",
+    "description": "The paper proposes Visual AutoRegressive (VAR) modeling, which shifts the paradigm of autoregressive learning for image generation from sequential \"next-token prediction\" to \"next-scale prediction.\" This approach treats entire token maps at progressively finer resolutions as the autoregressive units, reflecting the coarse-to-fine manner in which humans perceive images. Unlike traditional models that flatten 2D spatial structures into 1D sequences, VAR preserves spatial locality and leverages multi-scale visual representations to reduce computational inefficiencies. By adopting hierarchical generation aligned with natural image structures, VAR overcomes the limitations of standard autoregressive models, such as mathematical premise violations and loss of spatial coherence. Its design integrates autoregressive transformers with multi-scale tokenization, creating a framework that is theoretically scalable and generalizable across diverse visual generation tasks.",
+    "link": "https://openreview.net/pdf?id=gojL67CfS8"
+  },
+  {
+    "title": "Rho-1: Not All Tokens Are What You Need",
+    "author": "Zhenghao Lin et al",
+    "year": "2024",
+    "topic": "tokens, reference model",
+    "venue": "NeurIPS",
+    "description": "This paper scores tokens using a reference model and then trains a language model to focus on the tokens with higher scores. They find that they can improve performance while training on less tokens.",
+    "link": "https://arxiv.org/pdf/2404.07965"
+  },
+  {
+    "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+    "author": "Saleh Ashkboos et al",
+    "year": "2024",
+    "topic": "quantization, rotation",
+    "venue": "NeurIPS",
+    "description": "This paper introduces a quantization scheme based on rotations, that allows quantization of down to 4-bits for weights, activations, and KV cache. They rotate LLMs in such a way that removes outliers from hidden state w/o changing the output. In particular, they use randomized Hadamard transformations on the weight matrices to remove outlier features and make activations easier to quantize. They then extend this to apply online Hadamard transformations to attention model to remove outlier features in keys and values, which allows the KV cache to be quantized.",
+    "link": "https://arxiv.org/pdf/2404.00456"
+  },
+  {
+    "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch",
+    "author": "Le Yu et al",
+    "year": "2024",
+    "topic": "model merging",
+    "venue": "ICML",
+    "description": "This paper shows that language models (LMs) can get new abilities via assimilating params from homologous models. They also note that LMs after Supervised Fine-Tuning (SFT) have many redundant delta parameters (i.e, the alteration of the model params before and after SFT). They then present DARE (Drop And REscale) as a means of setting delta parameters to zero with drop rate of p and then rescaling the remaining ones by a factor of 1/(1-p). They then use DARE to remove redundant delta parameters in each model prior to merging, which they find can help mitigate the interference of params among multiple models. Then they use standard model merging techniqes to merge the models.",
+    "link": "https://arxiv.org/pdf/2311.03099"
+  },
+  {
+    "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch",
+    "author": "Le Yu et al",
+    "year": "2024",
+    "topic": "model merging",
+    "venue": "ICML",
+    "description": "This paper shows that language models (LMs) can get new abilities via assimilating params from homologous models. They also note that LMs after Supervised Fine-Tuning (SFT) have many redundant delta parameters (i.e, the alteration of the model params before and after SFT). They then present DARE (Drop And REscale) as a means of setting delta parameters to zero with drop rate of p and then rescaling the remaining ones by a factor of 1/(1-p). They then use DARE to remove redundant delta parameters in each model prior to merging, which they find can help mitigate the interference of params among multiple models. Then they use standard model merging techniqes to merge the models.",
+    "link": "https://arxiv.org/pdf/2311.03099"
+  },
+  {
+    "title": "Training-Free Pretrained Model Merging",
+    "author": "Zhengqi Xu et al",
+    "year": "2024",
+    "topic": "model merging",
+    "venue": "CVPR",
+    "description": "This paper introduces Merging under Dual-Space Constraints (MuDSC), a novel framework for merging pretrained neural network models without additional training or requiring the same pretraining initialization. Unlike prior approaches that operate solely in either the weight space or the activation space, MuDSC addresses inconsistencies between these two spaces by combining their similarity measures into a unified objective using a weighted linear combination. This approach ensures that merged units are similar in both their structure and behavior, leading to more consistent and effective merging outcomes. The framework also adapts to networks with group structures, such as those using multi-head attention or group normalization, by proposing modifications to unit-matching algorithms. Overall, MuDSC simplifies model merging while enhancing performance across diverse architectures and tasks, enabling merged models to achieve balanced and overlapping multi-task performance.",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Training-Free_Pretrained_Model_Merging_CVPR_2024_paper.pdf"
+  },
+  {
+    "title": "Similarity of Neural Network Representations Revisited",
+    "author": "Simon Kornblith et al",
+    "year": "2019",
+    "topic": "network similarity",
+    "venue": "ICML",
+    "description": "This paper examines methods for comparing neural network representations and proposes Centered Kernel Alignment (CKA) as a more effective similarity measure. The authors provide key theoretical insights about what properties a similarity metric should have - arguing it should be invariant to orthogonal transformations and isotropic scaling, but not to arbitrary invertible linear transformations, as neural network training itself isn't invariant to such transformations. They show that for representations with more dimensions than training examples, any metric invariant to arbitrary invertible transformations will give meaningless results. CKA works by first measuring the similarity between every pair of examples in each representation separately (creating representational similarity matrices), then comparing these similarity structures - when using inner products, this reduces to computing normalized Hilbert-Schmidt Independence Criterion between the representations. They demonstrate theoretically that CKA is closely related to canonical correlation analysis (CCA) and regression, but incorporates feature scale information that CCA discards. Finally, they show that unlike previous methods like CCA and SVCCA, CKA can reliably identify corresponding layers between networks trained from different initializations and reveal meaningful relationships between different architectures.",
+    "link": "https://arxiv.org/pdf/1905.00414"
+  },
+  {
+    "title": "What is being transferred in transfer learning?",
+    "author": "Behnam Neyshabur et al",
+    "year": "2020",
+    "topic": "transfer learning",
+    "venue": "NeurIPS",
+    "description": "This paper investigated what exactly gets transferred during transfer learning in neural networks through a comprehensive series of analyses. Through experiments with block-shuffled images, the researchers demonstrated that successful transfer learning relies on both feature reuse and low-level statistics of the data, showing that even when visual features are disrupted, transfer learning still provides benefits. The study revealed that models fine-tuned from pre-trained weights tend to stay in the same basin in the loss landscape, make similar mistakes, and remain close to each other in parameter space, while models trained from scratch end up in different basins with more diverse behaviors. By analyzing module criticality, they found that lower layers handle more general features while higher layers become more specialized, confirming previous theories about feature hierarchy in neural networks. Finally, they showed that transfer learning can begin from earlier checkpoints of the pre-trained model without losing accuracy, suggesting that the benefits of pre-training emerge before the model fully converges on the source task.",
+    "link": "https://arxiv.org/pdf/2008.11687"
+  },
+  {
+    "title": "ZipIt! Merging Models from Different Tasks without Training",
+    "author": "George Stoica et al",
+    "year": "2024",
+    "topic": "model merging",
+    "venue": "ICLR",
+    "description": "This paper presents a novel approach to model merging that significantly improves upon previous methods by recognizing that similar features can exist within the same model, not just across different models. The key insight is that when merging models trained on different tasks, it's often better to combine similar features within each model first, rather than forcing dissimilar features from different models to merge, as these features may have developed to solve fundamentally different problems. Their method first concatenates the feature spaces of both models and computes a comprehensive correlation matrix between all features (both within and across models), using these correlations to guide intelligent feature merging decisions. To handle the multi-layer nature of neural networks, they introduce an \"unmerge\" operation that allows the merged features to remain compatible with later layers in both original networks, essentially decompressing the merged features before they're processed by subsequent layers. Theoretically, they prove that this approach provides better guarantees than traditional cross-model merging, showing that when models have internal redundancy (which is common in practice), their method can achieve perfect merging with zero performance loss.",
+    "link": "https://arxiv.org/pdf/2305.03053"
+  },
+  {
+    "title": "TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts",
+    "author": "Ruida Wang et al",
+    "year": "2024",
+    "topic": "llm, llm agent",
+    "venue": "Arxiv",
+    "description": "This research introduces TheoremLlama, a framework that transforms general-purpose Large Language Models (LLMs) into expert theorem provers for the Lean4 formal mathematics language, addressing a significant challenge in automated theorem proving. The key innovation is their \"NL-FL bootstrapping\" method, which integrates natural language reasoning steps directly into formal mathematical proofs as comments during training, helping LLMs bridge the gap between natural language understanding and formal mathematical reasoning. The researchers also contribute the Open Bootstrapped Theorems (OBT) dataset, containing over 100,000 theorem-proof pairs with aligned natural and formal language, helping address the scarcity of training data in this field. The framework introduces specialized training techniques like block training and curriculum learning that help LLMs gradually build theorem-proving capabilities, potentially offering a blueprint for adapting LLMs to other specialized domains that lack extensive training data.",
+    "link": "https://arxiv.org/pdf/2407.03203"
+  },
+  {
+    "title": "A Simple Early Exiting Framework for Accelerating Sampling in Diffusion Models",
+    "author": "Taehong Moon et al",
+    "year": "2024",
+    "topic": "diffusion, early exit",
+    "venue": "ICML",
+    "description": "This paper presents Adaptive Score Estimation (ASE), a novel framework that accelerates diffusion model sampling by adaptively allocating computational resources based on the time step being processed. The authors observe that score estimation near the noise distribution (t→1) requires less computational power than estimation near the data distribution (t→0), leading them to develop a time-dependent early-exiting scheme where more neural network blocks are skipped during the noise-phase sampling steps. Their approach differs between architectures - for DiT models they skip entire blocks, while for U-ViT models they preserve the linear layers connected to skip connections while dropping other block components to maintain the residual pathway information. The authors fine-tune their models using a specially designed training procedure that employs exponential moving averages and weighted coefficients to ensure minimal information updates near t→0 while allowing more updates near t→1.",
+    "link": "https://arxiv.org/pdf/2408.05927"
+  },
+  {
+    "title": "Active Prompting with Chain-of-Thought for Large Language Models",
+    "author": "Shizhe Diao et al",
+    "year": "2023",
+    "topic": "prompting, cot",
+    "venue": "Arxiv",
+    "description": "The paper introduces Active-Prompt, a novel method that improves chain-of-thought (CoT) prompting by strategically selecting which examples to use as demonstrations for large language models. Rather than using randomly selected or manually crafted examples, Active-Prompt identifies the most informative examples by measuring the model's uncertainty on different potential prompts through metrics like disagreement and entropy across multiple model outputs. The key insight is that by systematically choosing examples where the model shows high uncertainty, and then having humans provide detailed reasoning chains for those specific cases, the resulting prompts will be more effective at teaching the model how to approach challenging problems. This approach shifts the human effort from trying to intuitively guess good examples to a more principled selection process guided by the model's own uncertainty signals.",
+    "link": "https://arxiv.org/pdf/2302.12246"
+  },
+  {
+    "title": "RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment",
+    "author": "Hanze Dong et al",
+    "year": "2023",
+    "topic": "watermark, offset learning",
+    "venue": "TMLR",
+    "description": "The paper introduces RAFT (Reward rAnked FineTuning), a simpler alternative to RLHF for aligning generative models with human preferences. The key insight is decoupling the data generation and model fine-tuning steps - instead of using complex reinforcement learning, RAFT generates multiple samples for each prompt, ranks them by reward, and then fine-tunes the model on only the highest-scoring samples in an iterative process. This approach is more stable and efficient than RLHF because it uses standard supervised learning techniques rather than RL, while being less sensitive to reward scaling issues since it only uses relative rankings rather than absolute reward values. Additionally, the decoupled nature of RAFT means it requires less memory (only needs to load one model at a time vs multiple for RLHF) and allows more flexibility in data collection and processing.",
+    "link": "https://arxiv.org/pdf/2304.06767"
+  },
+  {
+    "title": "Finding needles in a haystack: A Black-Box Approach to Invisible Watermark Detection",
+    "author": "Minzhou Pan et al",
+    "year": "2024",
+    "topic": "watermark, offset learning",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper centers on using \"offset learning\" to detect invisible watermarks in images. The intuition is that by having a clean reference dataset of similar images, you can effectively \"cancel out\" the normal image features that are common between clean and watermarked images, leaving only the watermark perturbations. They design an asymmetric loss function where clean images use exponential/softmax loss (to focus on hard examples) while detection dataset uses linear loss (to give equal weight to all examples), helping isolate the watermark signal. This is combined with an iterative pruning strategy that gradually removes likely-clean images from the detection set, allowing the model to better focus on and learn the watermark patterns. By formulating watermark detection this way, they avoid needing any prior knowledge of watermarking techniques or labeled data, making it a truly black-box approach.",
+    "link": "https://arxiv.org/pdf/2403.15955"
+  },
+  {
+    "title": "Mitigating the Alignment Tax of RLHF",
+    "author": "Yong Lin et al",
+    "year": "2024",
+    "topic": "rlhf, alignment",
+    "venue": "Arxiv",
+    "description": "This paper investigates the \"alignment tax\" problem where large language models lose some of their pre-trained abilities when aligned with human preferences through RLHF. The key insight is that model averaging (interpolating between pre-RLHF and post-RLHF model weights) is surprisingly effective at mitigating this trade-off because tasks share overlapping feature spaces, particularly in lower layers of the model. Building on this understanding, they propose Heterogeneous Model Averaging (HMA) which applies different averaging ratios to different layers of the transformer model, allowing optimization of the alignment-forgetting trade-off. The intuition is that since different layers capture different levels of features and task similarities, they should not be averaged equally, and finding optimal layer-specific averaging ratios can better preserve both alignment and pre-trained capabilities.",
+    "link": "https://arxiv.org/pdf/2309.06256"
+  },
+  {
+    "title": "AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising",
+    "author": "Zigeng Chen et al",
+    "year": "2024",
+    "topic": "diffusion, parallelization, denoising",
+    "venue": "Arxiv",
+    "description": "This paper introduces AsyncDiff, a novel approach to accelerate diffusion models through parallel processing across multiple devices. The key insight is that hidden states between consecutive diffusion steps are highly similar, which allows them to break the traditional sequential dependency chain of the denoising process by transforming it into an asynchronous one. They execute this by dividing the denoising model into multiple components distributed across different devices, where each component uses the output from the previous component's prior step as an approximation of its input, enabling parallel computation. To further enhance efficiency, they introduce stride denoising, which completes multiple denoising steps simultaneously through a single parallel computation batch and reduces the frequency of communication between devices. This solution is particularly elegant because it's universal and plug-and-play, requiring no model retraining or architectural changes to achieve significant speedups while maintaining generation quality.",
+    "link": "https://arxiv.org/pdf/2406.06911"
+  },
+  {
+    "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+    "author": "Shih-Yang Liu et al",
+    "year": "2024",
+    "topic": "peft, lora",
+    "venue": "Arxiv",
+    "description": "This paper introduces DoRA (Weight-Decomposed Low-Rank Adaptation), a novel parameter-efficient fine-tuning method that decomposes pre-trained weights into magnitude and direction components for separate optimization. Through a detailed weight decomposition analysis, the authors reveal that LoRA and full fine-tuning exhibit distinct learning patterns, with LoRA showing proportional changes in magnitude and direction while full fine-tuning demonstrates more nuanced, independent adjustments between these components. Based on this insight, DoRA uses LoRA specifically for directional updates while allowing independent magnitude optimization, which simplifies the learning task compared to having LoRA learn both components simultaneously. The authors also provide theoretical analysis showing how this decomposition benefits optimization by aligning the gradient's covariance matrix more closely with the identity matrix and demonstrate mathematically why DoRA's learning pattern more closely resembles full fine-tuning.",
+    "link": "https://arxiv.org/pdf/2402.09353"
+  },
+  {
+    "title": "SphereFed: Hyperspherical Federated Learning",
+    "author": "Xin Dong et al",
+    "year": "2022",
+    "topic": "federated learning",
+    "venue": "Arxiv",
+    "description": "This paper presents a novel approach to addressing the non-i.i.d. (non-independent and identically distributed) data challenge in federated learning by introducing hyperspherical federated learning (SphereFed). The key insight is that instead of letting clients independently learn their classifiers, which leads to inconsistent learning targets across clients, they should share a fixed classifier whose weights span a unit hypersphere, ensuring all clients work toward the same learning objectives. The approach normalizes features to project them onto this same hypersphere and uses mean squared error loss instead of cross-entropy to avoid scaling issues that arise when working with normalized features. Finally, after federated training is complete, they propose a computationally efficient way to calibrate the classifier using a closed-form solution that can be computed in a distributed manner without requiring direct access to private client data.",
+    "link": "https://arxiv.org/pdf/2207.09413"
+  },
+  {
+    "title": "A deeper look at depth pruning of LLMs",
+    "author": "Shoaib Ahmed Siddiqui et al",
+    "year": "2024",
+    "topic": "pruning, depth pruning, llm",
+    "venue": "ICML",
+    "description": "This paper explored different approaches to pruning large language models, revealing that while static metrics like cosine similarity work well for maintaining MMLU performance, adaptive metrics like Shapley values show interesting trade-offs between different tasks. A key insight was that self-attention layers are significantly more amenable to pruning compared to feed-forward layers, suggesting that models can maintain performance even with substantial attention layer reduction. The paper also demonstrated that simple performance recovery techniques, like applying an average update in place of removed layers, can be as effective or better than more complex approaches like low-rank adapters. Finally, the work highlighted how pruning affects different tasks unequally - while some metrics preserve performance on certain tasks like MMLU, they may significantly degrade performance on others like mathematical reasoning tasks.",
+    "link": "https://www.arxiv.org/pdf/2407.16286"
+  },
+  {
+    "title": "Editing Models with Task Arithmetic",
+    "author": "Gabriel Ilharco et al",
+    "year": "2023",
+    "topic": "task arithmetic, finetuning, task",
+    "venue": "ICLR",
+    "description": "This paper introduces a novel method for model editing called task arithmetic, where \"task vectors\" represent specific tasks by capturing the difference between pre-trained and fine-tuned model weights. Task vectors can be manipulated mathematically, such as being negated to unlearn tasks or added together to enable multi-tasking or improve performance in novel settings. A standout finding is the ability to create new task capabilities through analogies (e.g., \"A is to B as C is to D\"), which allows performance improvement on tasks with little or no data. This method is computationally efficient, leveraging linear operations on model weights without incurring extra inference costs, providing a flexible and modular framework for modifying models post-training. The approach highlights significant advantages in adapting existing models while bypassing costly re-training or data access constraints.",
+    "link": "https://arxiv.org/pdf/2212.04089"
+  },
+  {
+    "title": "SaySelf: Teaching LLMs to Express Confidence with Self-Reflective Rationales",
+    "author": "Tianyang Xu et al",
+    "year": "2024",
+    "topic": "confidence estimation, llm",
+    "venue": "Arxiv",
+    "description": "The SaySelf framework trains large language models (LLMs) to produce fine-grained confidence estimates and self-reflective rationales by focusing on internal uncertainties. It consists of two stages: supervised fine-tuning and reinforcement learning (RL). In the first stage, multiple reasoning chains are sampled from the LLM, clustered for semantic similarity, and analyzed by an advanced LLM to generate rationales summarizing uncertainties. The model is fine-tuned on a dataset that pairs questions with reasoning chains, rationales, and confidence estimates, using a loss function that optimizes the generation of all three outputs. In the second stage, RL refines the confidence predictions using a reward function that encourages accurate, high-confidence outputs while penalizing overconfidence in incorrect responses. The framework ensures that LLMs not only generate confidence scores but also provide explanations for their uncertainty, making their outputs more interpretable and calibrated.",
+    "link": "https://arxiv.org/pdf/2405.20974"
+  },
+  {
+    "title": "Deep Reinforcement Learning from Human Preferences",
+    "author": "Paul F Christiano et al",
+    "year": "2016",
+    "topic": "rl, rlhf",
+    "venue": "Arxiv",
+    "description": "This paper introduces a method to train reinforcement learning (RL) systems using human preferences over trajectory segments rather than traditional reward functions. The approach allows agents to learn tasks that are hard to define programmatically, enabling non-expert users to provide feedback on agent behavior through comparisons of short video clips. By learning a reward model from these preferences, the method dramatically reduces the need for human oversight while maintaining adaptability to large-scale and complex RL environments. This paradigm bridges the gap between human-defined objectives and scalable RL systems, addressing challenges in alignment and usability for real-world applications.",
+    "link": "https://arxiv.org/pdf/1706.03741"
+  },
+  {
+    "title": "The Cost of Down-Scaling Language Models: Fact Recall Deteriorates before In-Context Learning",
+    "author": "Tian Jin et al",
+    "year": "2023",
+    "topic": "pruning, icl",
+    "venue": "Arxiv",
+    "description": "This paper explores the effects of scaling the parameter count of large language models (LLMs) on two distinct capabilities: fact recall from pre-training and in-context learning (ICL). By investigating both dense scaling (training models of varying sizes) and pruning (removing weights), the authors identify that these approaches disproportionately affect fact recall while preserving ICL abilities. They demonstrate that a model's ability to learn from in-context information remains robust under significant parameter reductions, whereas the ability to recall pre-trained facts degrades with even moderate scaling down. This dichotomy highlights a fundamental difference in how these capabilities rely on model size and opens avenues for more efficient model design and deployment, emphasizing trade-offs between memory augmentation and parameter efficiency.",
+    "link": "https://arxiv.org/pdf/2310.04680"
+  },
+  {
+    "title": "Fine-Tuning Language Models with Just Forward Passes",
+    "author": "Sadhika Malladi et al",
+    "year": "2024",
+    "topic": "finetuning, zo, optimization",
+    "venue": "Arxiv",
+    "description": "The paper introduces MeZO, a memory-efficient zeroth-order optimization method, to fine-tune large language models using forward passes alone. Classical zeroth-order methods scale poorly with model size, but MeZO adapts these approaches to leverage structured pre-trained model landscapes, avoiding catastrophic slowdown even with billions of parameters. The authors theoretically show that MeZO’s convergence depends on the local effective rank of the Hessian, not the number of parameters, enabling efficient optimization despite prior bounds suggesting otherwise. Furthermore, MeZO’s flexibility allows optimization of non-differentiable objectives (e.g., accuracy or F1 score) and compatibility with parameter-efficient tuning methods like LoRA and prefix-tuning.",
+    "link": "https://arxiv.org/pdf/2305.17333"
+  },
+  {
+    "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
+    "author": "Hanshi Sun et al",
+    "year": "2024",
+    "topic": "kv cache",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper lies in optimizing long-context large language model  inference by addressing the memory and latency bottlenecks associated with managing the key-value (KV) cache. The authors observe that pre-Rotary Position Embedding (RoPE) keys exhibit a low-rank structure, allowing them to be compressed without accuracy loss, while value caches lack this property and are therefore offloaded to the CPU to reduce GPU memory usage. To minimize decoding latency, they leverage landmarks—compact representations of the low-rank key cache—and identify a small set of outliers to be retained on the GPU, enabling efficient reconstruction of sparse KV pairs on-the-fly. This approach allows the system to handle significantly longer contexts and larger batch sizes while maintaining inference throughput and accuracy.",
+    "link": "https://arxiv.org/pdf/2410.21465"
+  },
+  {
+    "title": "LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning",
+    "author": "Rui Pan et al",
+    "year": "2024",
+    "topic": "peft, finetuning, sampling",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper is the discovery of a skewed weight-norm distribution across layers during LoRA fine-tuning, where the majority of updates occur in the bottom (embedding) and top (language modeling head) layers, leaving middle layers underutilized. This highlights that different layers have varied importance and suggests that selectively updating layers could improve efficiency without sacrificing performance. Building on this, the authors propose Layerwise Importance Sampling AdamW (LISA), which randomly freezes most middle layers during training, using importance sampling to emulate LoRA’s fast learning pattern while avoiding its low-rank constraints. This approach achieves significant memory savings, faster convergence, and superior performance compared to LoRA and full-parameter fine-tuning, particularly in large-scale and domain-specific tasks.",
+    "link": "https://arxiv.org/pdf/2403.17919"
+  },
+  {
+    "title": "SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion",
+    "author": "Muyang Li et al",
+    "year": "2024",
+    "topic": "quantization, diffusion",
+    "venue": "Arxiv",
+    "description": "SVDQuant introduces a novel approach to 4-bit quantization of diffusion models by using a low-rank branch to absorb outliers in both weights and activations, making quantization more feasible at such aggressive bit reduction. The method first consolidates outliers from activations to weights through smoothing, then decomposes the weights using Singular Value Decomposition (SVD) to separate the dominant components into a 16-bit low-rank branch while keeping the residual in 4 bits. To make this practical, they developed an inference engine called Nunchaku that fuses the low-rank and low-bit branch kernels together, eliminating redundant memory access that would otherwise negate the performance benefits. The approach is designed to work across different diffusion model architectures and can seamlessly integrate with existing low-rank adapters (LoRAs) without requiring re-quantization.",
+    "link": "https://arxiv.org/pdf/2411.05007"
+  },
+  {
+    "title": "One Weight Bitwidth to Rule Them All",
+    "author": "Ting-Wu Chin et al",
+    "year": "2020",
+    "topic": "quantization, bitwidth",
+    "venue": "Arxiv",
+    "description": "This paper examines weight quantization in deep neural networks and challenges the common assumption that using the lowest possible bitwidth without accuracy loss is optimal. The key insight is that when considering model size as a constraint and allowing network width to vary, some bitwidths consistently outperform others - specifically, networks with standard convolutions work better with binary weights while networks with depthwise convolutions prefer higher bitwidths. The authors discover that this difference is related to the number of input channels (fan-in) per convolutional kernel, with higher fan-in making networks more resilient to aggressive quantization. Most surprisingly, they demonstrate that using a single well-chosen bitwidth throughout the network can outperform more complex mixed-precision quantization approaches when comparing networks of equal size, suggesting that the traditional focus on minimizing bitwidth without considering network width may be suboptimal.",
+    "link": "https://arxiv.org/pdf/2008.09916"
+  },
+  {
+    "title": "Consistency Models",
+    "author": "Yang Song et al",
+    "year": "2023",
+    "topic": "diffusion, ode, consistency",
+    "venue": "ICML",
+    "description": "This paper introduces consistency models, a new family of generative models that can generate high-quality samples in a single step while preserving the ability to trade compute for quality through multi-step sampling. The key innovation is training models to map any point on a probability flow ODE trajectory to its origin point, enforcing consistency across different time steps through either distillation from pre-trained diffusion models or direct training. The models support zero-shot data editing capabilities like inpainting, colorization, and super-resolution without requiring explicit training on these tasks, similar to diffusion models. The authors provide two training approaches - consistency distillation which leverages existing diffusion models, and consistency training which allows training from scratch without any pre-trained models, establishing consistency models as an independent class of generative models.",
+    "link": "https://arxiv.org/pdf/2303.01469"
+  },
+  {
+    "title": "One Step Diffusion via ShortCut Models",
+    "author": "Kevin Frans et al",
+    "year": "2024",
+    "topic": "diffusion, ode, flow-matching",
+    "venue": "Arxiv",
+    "description": "This paper introduces shortcut models, a new type of diffusion model that enables high-quality image generation in a single forward pass by conditioning the model not only on the timestep but also on the desired step size, allowing it to learn larger jumps during the denoising process. Unlike previous approaches that require multiple training phases or complex scheduling, shortcut models can be trained end-to-end in a single phase by leveraging a self-consistency property where one large step should equal two consecutive smaller steps, combined with flow-matching loss as a base case. The key insight is that by conditioning on step size, the model can account for future curvature in the denoising path and jump directly to the correct next point rather than following the curved path naively, which would lead to errors with large steps. The approach simplifies the training pipeline while maintaining flexibility in inference budget, as the same model can generate samples using either single or multiple steps after training.",
+    "link": "https://arxiv.org/abs/2410.12557"
+  },
+  {
+    "title": "Attention-Driven Training-Free Efficiency Enhancement of Diffusion Models",
+    "author": "Hongjie Wang et al",
+    "year": "2024",
+    "topic": "diffusion, training-free, attention, token pruning",
+    "venue": "CVPR",
+    "description": "This paper introduces AT-EDM, a training-free framework to accelerate diffusion models by pruning redundant tokens during inference without requiring model retraining. The key innovation is a Generalized Weighted PageRank (G-WPR) algorithm that uses attention maps to identify and prune less important tokens, along with a novel similarity-based token recovery method that fills in pruned tokens based on attention patterns to maintain compatibility with convolutional layers. The authors also propose a Denoising-Steps-Aware Pruning (DSAP) schedule that prunes fewer tokens in early denoising steps when attention maps are more chaotic and less informative, and more tokens in later steps when attention patterns are better established. The overall approach focuses on making diffusion models more efficient by leveraging the rich information contained in attention maps to guide token pruning decisions while maintaining image generation quality.",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Attention-Driven_Training-Free_Efficiency_Enhancement_of_Diffusion_Models_CVPR_2024_paper.pdf"
+  },
+  {
+    "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
+    "author": "Tim Salimans et al",
+    "year": "2016",
+    "topic": "normalization, gradient descent",
+    "venue": "Arxiv",
+    "description": "This paper introduces weight normalization, a simple reparameterization technique that decouples a neural network's weight vectors into their direction and magnitude by expressing w = (g/||v||)v, where g is a scalar and v is a vector. The key insight is that this decoupling improves optimization by making the conditioning of the gradient better - the direction and scale of weight updates can be learned somewhat independently, which helps avoid problems with pathological curvature in the optimization landscape. While inspired by batch normalization, weight normalization is deterministic and doesn't add noise to gradients or create dependencies between minibatch examples, making it well-suited for scenarios like reinforcement learning and RNNs where batch normalization is problematic. The authors also propose a data-dependent initialization scheme where g and bias terms are initialized to normalize the initial pre-activations of neurons, helping ensure good scaling of activations across layers at the start of training.",
+    "link": "https://arxiv.org/pdf/1602.07868"
+  },
+  {
+    "title": "Applying Guidance in a Limited Interval Improves Sample and Distribution Quality in Diffusion Models",
+    "author": "Tuomas Kynkäänniemi et al",
+    "year": "2024",
+    "topic": "diffusion, cfg, guidance",
+    "venue": "Arxiv",
+    "description": "This paper's key insight is that classifier-free guidance (CFG) in diffusion models should only be applied during a specific interval of noise levels in the middle of the sampling process, rather than throughout the entire sampling chain as traditionally done. The intuition is that guidance is harmful at high noise levels (where it causes mode collapse and template-like outputs), largely unnecessary at low noise levels, and only truly beneficial in the middle range. They demonstrate this theoretically using a 1D synthetic example where they can visualize how guidance at high noise levels causes sampling trajectories to drift far from the smoothed data distribution, leading to mode dropping. Beyond this theoretical demonstration, they propose a simple solution of making the guidance weight a piecewise function that only applies guidance within a specific noise level interval.",
+    "link": "https://arxiv.org/pdf/2404.07724"
+  },
+  {
+    "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching",
+    "author": "Felix Wimbauer et al",
+    "year": "2024",
+    "topic": "diffusion, caching, distillation",
+    "venue": "Arxiv",
+    "description": "This paper introduces \"block caching\" to accelerate diffusion models by reusing computations across denoising steps. The key insight is that many layer blocks (particularly attention blocks) in diffusion models change very gradually during the denoising process, making their repeated computation redundant. The authors propose automatically determining which blocks to cache and when to refresh them based on measuring the relative changes in block outputs across timesteps. They also introduce a lightweight scale-shift adjustment mechanism that uses a student-teacher setup, where the student (cached model) learns additional scale and shift parameters to better align its cached block outputs with those of the teacher (uncached model), while keeping the original model weights frozen.",
+    "link": "https://arxiv.org/pdf/2312.03209"
+  },
+  {
+    "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
+    "author": "Guangxuan Xiao et al",
+    "year": "2024",
+    "topic": "llm, kv cache, attention",
+    "venue": "Arxiv",
+    "description": "The key insight of DuoAttention is the observation that attention heads in LLMs naturally fall into two distinct categories: retrieval heads that need to access the full context to make connections across long distances, and streaming heads that mainly focus on recent tokens and attention sinks. This dichotomy makes intuitive sense because not all parts of language processing require long-range dependencies - while some aspects like fact recall or logical reasoning need broad context, others like local grammar or immediate context processing can work with nearby tokens. The paper's approach of using optimization to identify these heads (rather than just looking at attention patterns) is clever because it directly measures the impact on model outputs, capturing the true functional role of each head rather than just its surface behavior. Finally, the insight to maintain two separate KV caches (full for retrieval heads, minimal for streaming heads) is an elegant way to preserve the model's capabilities while reducing memory usage, since it aligns the memory allocation with each head's actual needs.",
+    "link": "https://arxiv.org/pdf/2410.10819"
+  },
+  {
+    "title": "Efficient Streaming Language Models with Attention Sinks",
+    "author": "Guangxuan Xiao et al",
+    "year": "2024",
+    "topic": "llm, kv cache, attention",
+    "venue": "ICLR",
+    "description": "This paper introduces StreamingLLM, a framework that enables large language models to process infinitely long text sequences efficiently without fine-tuning, based on a key insight about \"attention sinks.\" The authors discover that LLMs allocate surprisingly high attention scores to initial tokens regardless of their semantic relevance, which they explain is due to the softmax operation requiring attention scores to sum to one - even when a token has no strong matches in context, the model must distribute attention somewhere, and initial tokens become natural \"sinks\" since they're visible to all subsequent tokens during autoregressive training. Building on this insight, StreamingLLM maintains just a few initial tokens (as attention sinks) along with a sliding window of recent tokens, achieving up to 22.2x speedup compared to baselines while maintaining performance on sequences up to 4 million tokens long. Additionally, they show that incorporating a dedicated learnable \"sink token\" during model pre-training can further improve streaming capabilities by providing an explicit token for collecting excess attention.",
+    "link": "https://arxiv.org/pdf/2309.17453"
+  }
+]

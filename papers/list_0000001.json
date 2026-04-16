@@ -1,0 +1,569 @@
+[
+  {
+    "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding",
+    "author": "Guanghan Wang et al",
+    "year": "2026",
+    "topic": "xlnet, autoregressive, permutation, attention",
+    "venue": "Arxiv",
+    "description": "In standard autoregressive models, causal attention fixes a single left-to-right order, so each token only attends to earlier tokens. XLNet instead samples a random permutation of token indices and treats that permutation as the factorization order, meaning “earlier” and “later” are defined by the permutation, not the original position. During training, attention masks are constructed so that a token can only attend to tokens that come before it in the sampled permutation, even though the underlying sequence order and positional encodings remain unchanged. Because different permutations place different tokens before or after a given position, the same token will sometimes see tokens to its left and sometimes to its right across training. In expectation over many permutations, each token learns to incorporate information from all other positions, effectively capturing bidirectional context while still using a causal (masked) attention mechanism. This works because causality is enforced with respect to the sampled permutation order, not the natural left-to-right order, so the model remains autoregressive but no longer tied to a single directional context.",
+    "link": "https://arxiv.org/pdf/1906.08237"
+  },
+  {
+    "title": "d2: Improved Techniques for Training Reasoning Diffusion Language Models",
+    "author": "Guanghan Wang et al",
+    "year": "2026",
+    "topic": "dllm, rl",
+    "venue": "Arxiv",
+    "description": "The paper derives a policy gradient objective for masked diffusion language models (DLMs), emphasizing that reinforcement learning requires computing likelihood ratios of generated outputs, which in turn depend on the model’s true probability structure. Unlike autoregressive models that factorize sequence likelihoods into per-token terms, DLMs define probabilities over entire denoising trajectories, where each token depends on intermediate noisy states across multiple steps. As a result, using per-token likelihoods (as in AR RL) produces biased gradients, since it does not match the model’s actual generative process, making trajectory likelihood estimation necessary for correct RL updates. To address this, the paper introduces d2-AnyOrder, an exact estimator that recovers a tractable factorization via any-order decoding and computes trajectory likelihoods in a single forward pass. Because most existing DLMs do not satisfy the assumptions required for this decoding scheme, the paper also proposes d2-StepMerge, which approximates trajectory likelihoods by grouping diffusion steps and trading off compute for bias with a theoretical error bound. Together, these contributions provide a principled RL framework for DLMs that replaces prior biased or intractable likelihood estimators with exact or controllably approximate trajectory-based methods.",
+    "link": "https://arxiv.org/pdf/2509.21474"
+  },
+  {
+    "title": "Large Language Models are not Fair Evaluators",
+    "author": "Peiyi Wang et al",
+    "year": "2025",
+    "topic": "llm, bias, evaluation, position",
+    "venue": "Arxiv",
+    "description": "The paper shows that using large language models (e.g., GPT-4) as evaluators introduces a strong positional bias, where simply changing the order (some models prefer first positions - GPT4, other prefer second ChatGPT) of candidate responses can flip evaluation outcomes. To mitigate this, it proposes Multiple Evidence Calibration (MEC), which forces the model to generate multiple pieces of evaluation reasoning before assigning scores, reducing reliance on a single biased judgment. It further introduces Balanced Position Calibration (BPC), which evaluates responses in both possible orders and averages the results to cancel out position effects. Finally, it adds Human-in-the-Loop Calibration (HITLC), which uses an entropy-based criterion to selectively involve humans on uncertain or biased cases, improving reliability while minimizing annotation cost.",
+    "link": "https://arxiv.org/pdf/2305.17926"
+  },
+  {
+    "title": "Information-Theoretic Discrete Diffusion",
+    "author": "Moongyu Jeon et al",
+    "year": "2025",
+    "topic": "dllm, information, likelihood, diffusion",
+    "venue": "Arxiv",
+    "description": "This paper gives an information-theoretic view of discrete diffusion by introducing Information–Minimum Denoising Score Entropy (I-MDSE) and Information–Minimum Denoising Cross-Entropy (I-MDCE), which formalize how information is lost during the forward noising process: as noise increases, the mutual information (I(x_0; x_t)) between the original data (x_0) and its corrupted version (x_t) decreases, and these identities show that the rate of this decrease is exactly given by the optimal denoising loss (DSE or DCE). Using this, they derive that the data log-likelihood (i.e., (log p(x_0)), the model’s assigned probability to a data point) can be written as an integral over noise levels of these optimal denoising losses, meaning likelihood is fully determined by how well the model can denoise at each step. This proves that common training losses (DSE for general discrete diffusion and DCE for masked diffusion) are not loose bounds but exact, principled estimators of likelihood when optimized. The framework also shows equivalence between score-based and masked diffusion via reparameterization and derives practical estimators such as a time-free likelihood formula, conditional likelihood decomposition, and low-variance coupled estimators for likelihood ratios.",
+    "link": "https://arxiv.org/pdf/2510.24088"
+  },
+  {
+    "title": "Learning Unmasking Policies for Diffusion Language Models",
+    "author": "Metod Jazbec et al",
+    "year": "2026",
+    "topic": "dllm, markov, rl, grpo, unmasking",
+    "venue": "Arxiv",
+    "description": "The paper formulates masked diffusion sampling as a Markov Decision Process, where unmasking decisions are treated as actions and the diffusion model acts as the environment. It introduces a lightweight transformer-based policy that takes token confidence scores as input and outputs Bernoulli decisions over which positions to unmask, avoiding direct dependence on model hidden states. The policy is trained with Group Relative Policy Optimization using a reward that jointly captures correctness and computational efficiency via a multiplicative design. Overall, the work replaces handcrafted confidence-based heuristics with a learned, adaptive unmasking strategy that dynamically decides both the order and number of tokens to reveal during generation.",
+    "link": "https://arxiv.org/pdf/2512.09106"
+  },
+  {
+    "title": "Demystifying MaskGit Sampler and Beyond: Adaptive Order Selection in Masked Diffusion",
+    "author": "Satoshi Hayakawa et al",
+    "year": "2025",
+    "topic": "maskgit, sampling, temperature",
+    "venue": "Arxiv",
+    "description": "The paper shows that the MaskGIT sampler implicitly performs temperature sampling, since its Gumbel-top-k selection makes positions and tokens behave as if drawn from sharpened distributions (p_i^beta) with (beta = 1 + 1/alpha), explaining both its effectiveness and its degradation with many steps. It introduces the moment sampler, which makes this explicit by first selecting positions based on expected confidence ((|p_i|_beta^beta)) and then sampling tokens directly from the temperature-scaled distribution (p_i^beta). This reformulation turns MaskGIT’s implicit “sample-then-choose” procedure into a clearer choose-then-sample (CTS) framework with separated index selection and token sampling. Building on this, the paper proposes partial transformer caching and a hybrid exploration–exploitation unmasking strategy to improve efficiency within the CTS view.",
+    "link": "https://arxiv.org/pdf/2510.04525"
+  },
+  {
+    "title": "Distillation of Discrete Diffusion through Dimensional Correlations",
+    "author": "Satoshi Hayakawa et al",
+    "year": "2025",
+    "topic": "dllm, distillation, marginalization",
+    "venue": "Arxiv",
+    "description": "The paper identifies that standard discrete diffusion uses product-form denoisers (factorized over dimensions), which are scalable but cannot capture joint dependencies, forcing accurate modeling to rely on many sampling steps. To address this, it introduces a mixture-of-products model, where the denoiser is an expectation over multiple product distributions indexed by a latent variable 𝜆; although each component is factorized, the mixture is expressive enough to represent arbitrary joint distributions and thus capture dimensional correlations with minimal extra cost. For distillation, the method trains a student to match a multi-step teacher using a distillation loss (KL divergence between teacher and student one-step denoisers at small noise levels) combined with a consistency loss, which enforces that applying the student after a teacher step matches applying the student directly—thereby transferring the correlations implicitly formed by multi-step composition. Together, this setup learns to approximate the teacher’s composed multi-step distribution in a few steps, with theoretical guarantees that the loss functions upper-bound the discrepancy between student and teacher distributions.",
+    "link": "https://arxiv.org/pdf/2410.08709"
+  },
+  {
+    "title": "Likelihood-Based Diffusion Language Models",
+    "author": "Ishaan Gulrajani et al",
+    "year": "2023",
+    "topic": "dllm, diffusion, plaid",
+    "venue": "Arxiv",
+    "description": "One of the earlier works on scaling diffusion llms. They trained the Plaid model.",
+    "link": "https://arxiv.org/pdf/2305.18619"
+  },
+  {
+    "title": "dUltra: Ultra-Fast Diffusion Language Models via Reinforcement Learning",
+    "author": "Shirui Chen et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, rl, unmasking, policy, grpo",
+    "venue": "Arxiv",
+    "description": "Basically this paper uses GRPO to learn unmasking strategies that allow for more parallelization during decoding. Basically they add a head (takes last layer representations) that can plan how to denoise, and jointly optimize with GRPO. The main reason for RL is that the training data only includes greedily sampled trajectories, so we want some method that can explore teacher model modes while training on samlpes generated by student; this can be achieved by on-policy RL bc it trains on trajectories generated by the current policy, avoids distribution mismatch that occurs with offline distillation, and can explore via RL better unmasking strategies.",
+    "link": "https://arxiv.org/pdf/2512.21446"
+  },
+  {
+    "title": "DUEL: Exact Likelihood for Masked Diffusion via Deterministic Unmasking",
+    "author": "Gilad Turok et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, likelihood, marginal",
+    "venue": "Arxiv",
+    "description": "DUEL reframes masked diffusion models (MDMs) as any-order autoregressive models with a deterministic unmasking policy, showing that a model is defined jointly by a denoiser and a position-selection rule. The key theoretical result is that when the unmasking policy is deterministic, the intractable marginalization over all generation orders collapses to a single trajectory, enabling exact likelihood computation under the test-time distribution. This yields a proper notion of perplexity for MDMs—directly analogous to autoregressive models—resolving fundamental issues with ELBO-based and sample-based evaluation. More broadly, the framework formalizes how different unmasking strategies induce distinct distributions and provides a unified way to analyze and compare them via exact likelihood.",
+    "link": "https://arxiv.org/pdf/2603.01367v2"
+  },
+  {
+    "title": "L3: Large Lookup Layers",
+    "author": "Albert Tseng et al",
+    "year": "2026",
+    "topic": "embedding, moe, sparse, routing",
+    "venue": "Arxiv",
+    "description": "This paper introduces the Large Lookup Layer (L3), a new sparse architectural component that generalizes token embedding tables into intermediate transformer layers, enabling context-dependent computation via attention over token-specific embeddings. Unlike Mixture-of-Experts, L3 uses static token-based routing, eliminating the need for learned routers and enabling more hardware-friendly training, inference, and parameter offloading. The authors propose an information-theoretic embedding allocation method based on LZW-style compression to assign varying numbers of embeddings per token, approximating context-dependent routing using frequency of token patterns. Overall, L3 defines a new axis of sparsity that separates routing from computation, allowing models to cache and reuse information efficiently within learned embedding tables.",
+    "link": "https://arxiv.org/pdf/2601.21461"
+  },
+  {
+    "title": "Learn from Your Mistakes: Self-Correcting Masked Diffusion Models",
+    "author": "Yair Schiff et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, llm, sampling, revision",
+    "venue": "Arxiv",
+    "description": "The paper introduces Progressive Self-Correction (ProSeCo), a framework that augments masked diffusion models (MDMs) with the ability to both generate (unmask) and revise (correct) tokens within the same model. It formulates model predictions as noisy samples of the true data and adds a self-correction cross-entropy objective that trains the model to recover from its own errors, with shared parameters between denoising and correction. The method provides a minimal modification to standard MDM training by incorporating an additional forward pass using sampled model outputs, along with a principled weighting scheme aligned with the diffusion objective. At inference time, it proposes an interleaved predictor–corrector sampling procedure that iteratively refines entire sequences, including already generated tokens, enabling dynamic error correction during generation.",
+    "link": "https://arxiv.org/pdf/2602.11590"
+  },
+  {
+    "title": "Diffusion Models are Minimax Optimal Distribution Estimators",
+    "author": "Kazusato Oko et al",
+    "year": "2023",
+    "topic": "diffusion, minimax, estimation, theory",
+    "venue": "Arxiv",
+    "description": "This paper provides a statistical learning theory for diffusion models by analyzing how well neural networks trained via score matching approximate the data distribution. Assuming the true density lies in a Besov space (a general class of functions that captures smoothness and includes Sobolev/Hölder spaces), the authors prove that diffusion models achieve nearly minimax-optimal estimation rates—i.e., they are statistically as efficient as possible up to constants—in both total variation distance (a measure of global distribution difference) and Wasserstein-1 distance (a transportation-based metric measuring the cost of moving mass between distributions). A key contribution is a construction that connects neural network approximation of time-dependent score functions (gradients of log-density) to final distribution error bounds, yielding explicit rates that depend on smoothness and sample size. The theory also shows that under a manifold (low intrinsic dimension) assumption, these rates depend on intrinsic rather than ambient dimension, meaning diffusion models can avoid the curse of dimensionality in such settings.",
+    "link": "https://arxiv.org/pdf/2303.01861"
+  },
+  {
+    "title": "Neural network learns low-dimensional polynomials with SGD near the information-theoretic limit",
+    "author": "Jason D. Lee et al",
+    "year": "2024",
+    "topic": "sgd, optimization, sample complexity",
+    "venue": "Arxiv",
+    "description": "The paper shows that two-layer neural networks trained with SGD can learn single-index functions with sample complexity governed by the generative exponent 𝑝 ∗ p ∗ , rather than the larger information exponent 𝑝 p, by exploiting minibatch reuse during training. The key mechanism is that reusing the same data across gradient steps induces implicit nonlinear (polynomial) transformations of the labels, allowing SGD to access higher-order information beyond standard correlational statistical queries. This enables SGD to effectively simulate richer statistical query algorithms and reduce the effective learning difficulty, achieving near-optimal 𝑛 ∼ 𝑑 n∼d scaling for polynomial targets where 𝑝 ∗ ≤ 2 p ∗ ≤2. The analysis further shows that with appropriate training dynamics (layer-wise updates and normalization), SGD can progress from weak to strong feature recovery and ultimately learn both the latent direction and link function with near information-theoretic efficiency.",
+    "link": "https://arxiv.org/pdf/2406.01581"
+  },
+  {
+    "title": "Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Expert Language Models",
+    "author": "Tianwen Wei et al",
+    "year": "2024",
+    "topic": "moe, training, optimization",
+    "venue": "Arxiv",
+    "description": "The paper studies how to effectively train Mixture-of-Experts (MoE) language models, focusing on the tradeoff between upcycling (initializing from dense checkpoints) and training from scratch, showing that the optimal choice depends on relative training budget and that large budgets favor scratch training due to better expert diversification. It identifies expert similarity as a key failure mode in upcycled MoEs, where identical initialization limits specialization, and proposes monitoring and encouraging diversification during training. To improve routing quality, it introduces gating logit normalization, which sharpens the softmax distribution of the router and prevents experts from behaving like uniform averages. Finally, it proposes adaptive auxiliary loss coefficients, dynamically adjusting load-balancing regularization per layer based on token routing statistics, so that load balancing does not overly constrain the main language modeling objective.",
+    "link": "https://arxiv.org/pdf/2406.06563"
+  },
+  {
+    "title": "Pruning is Optimal for Learning Sparse Features in High-Dimensions",
+    "author": "Nuri Mert Vural et al",
+    "year": "2024",
+    "topic": "pruning",
+    "venue": "ICML",
+    "description": "The paper studies neural networks for learning sparse high-dimensional feature models and introduces a prune-then-train procedure, where gradients at initialization are used to identify important input coordinates, reduce dimensionality, and then run gradient-based learning on the pruned subspace. It proves that when the true model directions are (soft) sparse, this pruning step aligns the network with the relevant features and enables gradient descent to achieve optimal sample complexity, matching sparsity-aware CSQ lower bounds. In contrast, standard “basis-independent” methods (e.g., randomly initialized dense networks) cannot exploit sparsity and therefore require strictly more samples, showing a formal separation. The key insight is that pruning is not just compression but a mechanism for feature selection via gradient signals, which reduces the effective dimension of the learning problem and makes otherwise hard high-dimensional estimation statistically optimal.",
+    "link": "https://arxiv.org/pdf/2406.08658"
+  },
+  {
+    "title": "Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning",
+    "author": "Ryotaro Kawata et al",
+    "year": "2025",
+    "topic": "moe, cluster, optimization",
+    "venue": "ICML",
+    "description": "The paper provides a theoretical analysis of Mixture of Experts (MoE) trained with SGD on nonlinear regression tasks that have an underlying latent cluster structure, introducing a multi-phase training procedure where experts first weakly specialize, a router learns to partition data based on these signals, and experts then refine both local and global components. It proves that standard (single) neural networks fail in this setting because gradient interference cancels signals associated with shared structure, effectively increasing the problem’s information exponent and preventing recovery of certain features. In contrast, MoE succeeds by decomposing the task: individual experts weakly recover simpler cluster-specific functions, enabling the router to separate data and reduce interference, after which each expert can learn its assigned subproblem efficiently. The key insight is that MoE reduces effective learning complexity by aligning optimization with the latent data structure, turning a hard global problem into multiple easier local ones with favorable sample and runtime scaling.",
+    "link": "https://arxiv.org/pdf/2506.01656"
+  },
+  {
+    "title": "A Convergence Analysis of Adaptive Optimizers under Floating-point Quantization",
+    "author": "Xuan Tang et al",
+    "year": "2026",
+    "topic": "quantization, adam",
+    "venue": "Arxiv",
+    "description": "The authors introduce a theoretical framework for analyzing convergence of adaptive optimizers such as Adam and Muon under floating-point quantization of gradients, weights, optimizer states. They show that such algorithms are able to maintain rates near their full-precision counterparts (as long as mantissa length scales logarithmically with number of iters). They note that Adam is highly sensitive to weights and second-moment quantization due to reliance on beta2 -> 1, while Muon does not have such constraints, thus being potentially more robust to quantization.",
+    "link": "https://arxiv.org/pdf/2510.21314"
+  },
+  {
+    "title": "EM Distillation for One-Step Diffusion Models",
+    "author": "Sirui Xi et al",
+    "year": "2024",
+    "topic": "diffusion, dlm, distillation",
+    "venue": "NeurIPS",
+    "description": "The authors propose a maximum likelihood-based approach (EM Distillation, EMD) that distills a diffusion model to a one-step generator. Generator parameters are updated via Expectation-Maximization (EM), using samples from joint distribution of diffusion teacher prior and inferred generator latents. They alternate between an Expectation step that estimates the learning gradients with Monte Carlo samples and a Maximization-step that updates the student via gradient descent.",
+    "link": "https://arxiv.org/pdf/2405.16852"
+  },
+  {
+    "title": "Pushing the Limits of Low-Bit Optimizers: A Focus on EMA Dynamics",
+    "author": "Cong Xu et al",
+    "year": "2025",
+    "topic": "optimizer, adam, low-bit",
+    "venue": "Arxiv",
+    "description": "The authors present a method (SOLO) that enables Adam-style optimizers to maintain quantized states with precision as low as 3 or 2 bits. They are able to do this by resolving two problems: the \"signal swamping problem\" (the state may keep unchanged regardless of gap between newly received signal and current state value; this becomes a big problem when using a large momentum, beta->1, where the added value of (1-beta)_{z_{t}+1}} becomes very small and thus is easily swamped)in unsigned quantization, and the increased gradient variance in signed quantization that leads to incorrect descent directions. For the former, they suggest a logarithmic quantization, and for the later a precision-specific momentum hyperparam. SOLO can be applied to any Adam-style optimizer.",
+    "link": "https://arxiv.org/pdf/2505.00347"
+  },
+  {
+    "title": "Scheduled Restart Momentum for Accelerated Stochastic Gradient Descent",
+    "author": "Bao Wang et al",
+    "year": "2020",
+    "topic": "sgd, momentum, optimization",
+    "venue": "Arxiv",
+    "description": "This paper proposes scheduled restart sgd (SRSGD) that replaces the constant momentum in SGD by the increasing momentum in nesterov accelerated gradient (NAG) but stabilies the iterations by resetting the momentum to zero on a schedule.",
+    "link": "https://arxiv.org/pdf/2002.10583"
+  },
+  {
+    "title": "SOAP: Improving and Stabilizing Shampoo using Adam",
+    "author": "Nikhil Vyas et al",
+    "year": "2025",
+    "topic": "optimizer, adam, shampoo",
+    "venue": "Arxiv",
+    "description": "Shampoo has a drawback in that it includes additional hyperparams and computational overhead when compared to Adam. The authors show a connection between Shampoo and Adafactor, showing that Shampoo is equivalent to running Adafactor in the eigenbasis of Shampoo's preconditioner, and then present a simpler algorithm, ShampoO with Adam in the Preconditioner's ",
+    "link": "https://arxiv.org/pdf/2409.11321"
+  },
+  {
+    "title": "SPAM: Spike-Aware Adam with Momentum Reset for Stable LLM Training",
+    "author": "Tianjin Haung et al",
+    "year": "2025",
+    "topic": "adam, instability, optimizer",
+    "venue": "ICLR",
+    "description": "A big problem in instability is from gradient and loss spikes, which lead to interventions like checkpoint recovery and experiment restarts. The authors present a comprehensive investigation into gradient spikes, and propose a spike-aware adam with momentum reset (SPAM), combatting gradient spikes via momentum reset and spike-aware gradient clipping.",
+    "link": "https://arxiv.org/pdf/2501.06842"
+  },
+  {
+    "title": "Stochastic Rounding for LLM Training: Theory and Practice",
+    "author": "Kaan Ozkara et al",
+    "year": "2025",
+    "topic": "rounding, stochastic",
+    "venue": "AISTATS",
+    "description": "This paper uses stochastic rounding to address numerical errors when training using low-precision, and analyze the convergence and regularization when using Adam optimizer + stochastic rounding.",
+    "link": "https://proceedings.mlr.press/v258/ozkara25b.html"
+  },
+  {
+    "title": "RL Squeezes, SFT Expands: A Comparative Study of Reasoning LLMs",
+    "author": "Kohsei Matsutani et al",
+    "year": "2025",
+    "topic": "rl, sft",
+    "venue": "Arxiv",
+    "description": "This paper investigates the trajectory-level (looking at complete reasoning outputs) and step-level (looking a reasoning graphs whose nodes correspond to individual reasoning steps), and see that RL compresses incorrect trajectories, while SFT expands the correct ones. Basically, RL will concentrate the reasoning into a small subset of steps, while SFT will homogenize it across multiple steps.",
+    "link": "https://arxiv.org/pdf/2510.04988"
+  },
+  {
+    "title": "Adaptive Memory Momentum via a Model-Based Framework for Deep Learning Optimization",
+    "author": "Kristi Topollai et al",
+    "year": "2025",
+    "topic": "adam, lr, optimizer",
+    "venue": "Arxiv",
+    "description": "Most optimizers are first-order momentum-based. Oftentimes optimizers like AdamW rely on momentum coefficients like beta=0.9 that are kept constant during training. The authors introduce an adaptive memory that makes this momentum coefficient dynamic and adjusted online during the optimization, based on the gradient at current iteration and the other from the past memory.",
+    "link": "https://arxiv.org/pdf/2510.04988"
+  },
+  {
+    "title": "Adam-Mini: Use Fewer Learning Rates to Gain More",
+    "author": "Yushun Zhang et al",
+    "year": "2025",
+    "topic": "adam, lr, optimizer",
+    "venue": "Arxiv",
+    "description": "The authors propose an optimizer (AdamMini) that cutes down the learning rate resources used in memory, by partitioning the parameters of v into blocks based on the Hessian. They then assign a good lr to each block.",
+    "link": "https://arxiv.org/pdf/2406.16793"
+  },
+  {
+    "title": "A Theory on Adam Instability in Large-Scale Machine Learning",
+    "author": "Igor Molybog et al",
+    "year": "2023",
+    "topic": "adam, instability, optimizer",
+    "venue": "Arxiv",
+    "description": "Authors see that Adam sometimes suffers from a large norm in the parameter update vector, becoming uncorrelated with the direction of descent, and note that this is more likely to be seen when training deep models with large batch sizes. They argue that teh instabilities are associated with time-domain correlation between grad estimates of earlier layers.",
+    "link": "https://arxiv.org/pdf/2304.09871"
+  },
+  {
+    "title": "Latent-Augmented Discrete Diffusion Models",
+    "author": "Dario Shariatian et al",
+    "year": "2026",
+    "topic": "dlm, latent, masking, factorization, dependency",
+    "venue": "Arxiv",
+    "description": "The core insight is that masked discrete diffusion models are fundamentally bottlenecked by their factorized reverse transitions, which treat each token independently — a tolerable assumption when denoising one token at a time, but increasingly damaging when many tokens must be unmasked simultaneously, since independent commitments can produce globally incoherent sequences. LADD addresses this by introducing an auxiliary latent channel that runs alongside the token channel, carrying cross-token structural information and providing a secondary conditioning signal that makes the per-token factorization a better approximation of the true joint reverse distribution. The framework is instantiated in two flavors — continuous latents (Co-LADD) and discrete latents (Di-LADD) — each combinable with either a joint denoising strategy (tokens and latents co-evolve together) or a sequential strategy (latents are resolved first, then condition the entire token unmasking pass), with principled ELBO objectives derived for all combinations. The key practical finding is that discrete latents with joint co-evolution tend to perform best at moderate-to-large sampling budgets, while sequential inference offers the most benefit at very small step counts by eliminating early-stage ambiguity before aggressive multi-token unmasking begins.",
+    "link": "https://arxiv.org/pdf/2510.18114"
+  },
+  {
+    "title": "Soft Thinking: Unlocking the Reasoning Potential of LLMs in Continuous Concept Space",
+    "author": "Zhen Zhang et al",
+    "year": "2025",
+    "topic": "dlm, reasoning",
+    "venue": "Arxiv",
+    "description": "Soft Thinking challenges the assumption that LLMs must reason through discrete language tokens, instead proposing that each reasoning step produce a \"concept token\" — a probability-weighted mixture of all token embeddings — allowing the model to inhabit a continuous concept space rather than committing to a single word at each step. This preserves the full probability distribution across the vocabulary at every intermediate step, which theoretically approximates marginalizing over all possible reasoning paths simultaneously, rather than greedily sampling one trajectory. To prevent the model from drifting into out-of-distribution collapse (since it was never trained on these continuous inputs), the authors introduce a \"Cold Stop\" mechanism that monitors output entropy and terminates reasoning early when the model becomes consistently confident. The result is a training-free method that plugs into any existing CoT pipeline, improves reasoning by enabling implicit parallel path exploration, and produces more concise outputs because richer per-token semantics reduce the number of steps needed to reach a conclusion.",
+    "link": "https://arxiv.org/pdf/2505.15778"
+  },
+  {
+    "title": "Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner",
+    "author": "Cai Zhou et al",
+    "year": "2025",
+    "topic": "dlm, masking, latent reasoning",
+    "venue": "Arxiv",
+    "description": "CCDD is motivated by a theoretical proof that continuous diffusion is strictly more expressive than discrete diffusion (and can even simulate looped transformers), yet historically underperforms in practice — a contradiction the paper attributes to three trainability failures: a large and poorly structured decision space, atomic non-smooth generation targets, and combinatorial decoding ambiguity when mapping continuous representations back to tokens. The core insight resolving this tension is that discrete and continuous modalities are complementary: the discrete masked diffusion path anchors decoding and reduces input uncertainty, while the continuous path (operating over contextualized embeddings from a pretrained encoder like Qwen3-Embedding) preserves rich semantic history across denoising steps that would otherwise be discarded. Implementation runs a factored joint forward process — independent Gaussian noise on the continuous side and CTMC masking on the discrete side — with a single shared transformer receiving both modalities as input and optimizing a weighted sum of MSE and cross-entropy losses, with extras like asynchronous noise schedules (continuous decays slower, acting as implicit planning guidance for discrete decoding) and classifier-free guidance treating the continuous stream as self-generated conditioning. The result is a model that generalizes CDMs, DDMs, and looped transformers under one framework, achieving over 25% perplexity reduction versus a same-scale MDLM baseline on LM1B — suggesting that grounding continuous latent reasoning in parallel discrete tokens is a principled path to closing the gap between theoretical expressivity and practical performance in diffusion language models.",
+    "link": "https://arxiv.org/pdf/2510.03206"
+  },
+  {
+    "title": "Soft-Masked Diffusion Language Models",
+    "author": "Michael Hersche et al",
+    "year": "2026",
+    "topic": "dlm, masking, soft-masking, llm",
+    "venue": "ICLR",
+    "description": "The paper introduces soft-masking (SM), a mechanism that replaces the binary mask-or-unmask decision in masked diffusion language models with a confidence-weighted blend of the [MASK] token and the top-k predicted tokens, allowing partial information to propagate across decoding steps rather than being discarded. Implementation is lightweight, requiring only three additional trainable parameters and a two-pass training procedure — a gradient-free first pass to generate soft-masked representations, followed by a second pass that updates both the backbone and SM parameters — preserving full parallelism across sequence length. A key conceptual insight is that SM can be understood as a smooth interpolation between standard masked diffusion and uniform diffusion in embedding space, and that retaining a portion of the mask token is itself useful since many models are pretrained to recognize it as a structural signal. Crucially, SM is modular and composable — it integrates cleanly with existing efficiency techniques like advanced unmasking schedulers and blockwise caching, and can be grafted onto already-pretrained models via short continued training rather than requiring a full retraining run.",
+    "link": "https://openreview.net/pdf?id=Gba02UMvrG"
+  },
+  {
+    "title": "Modular Manifolds",
+    "author": "Jeremy Bernstein et al",
+    "year": "2025",
+    "topic": "manifold, optimizer, muon",
+    "venue": "blog",
+    "description": "Neural network training benefits from keeping tensors \"healthy\" in size, and while normalization is standard for activations and gradients, constraining weight matrices to manifolds — curved surfaces defined by geometric properties — is a promising but underexplored approach. The article derives a \"Manifold Muon\" optimizer that keeps weight matrices on the Stiefel manifold (matrices whose singular values are all exactly 1), meaning the weights never stretch or shrink input vectors unevenly, which is achieved by framing the optimization step as a convex dual problem solved via gradient ascent. The deeper insight is that geometry shapes the optimal update direction: by choosing a non-Euclidean distance measure (like the spectral norm), the best gradient step is no longer simply \"follow the gradient\" — it's a spectrally normalized direction that maximally reduces the loss within a constrained step size. The post concludes with the concept of modular manifolds, a composable framework where individual layers each carry their own manifold constraint and norm, and combining layers automatically propagates Lipschitz sensitivity bounds that intelligently budget learning rates across the whole network — making optimizer design as principled and automatic as the forward pass itself.",
+    "link": "https://thinkingmachines.ai/blog/modular-manifolds/"
+  },
+  {
+    "title": "Defeating Nondeterminisim in LLM Inference",
+    "author": "Horace He et al",
+    "year": "2025",
+    "topic": "evaluation, llm, nondeterminism",
+    "venue": "blog",
+    "description": "LLM inference nondeterminism is widely attributed to concurrent GPU threads and floating-point arithmetic, but the real culprit is actually batch non-invariance — the mathematical result for a single user's request silently changes depending on how many other users are being served simultaneously. Since floating-point addition is non-associative, changing the batch size changes the reduction order, which changes the numerical output — and because server load is unpredictable, results become nondeterministic from the user's perspective even though the server itself is technically deterministic given fixed inputs. The authors resolve this by engineering batch-invariant kernels for the three key operations (RMSNorm, matrix multiplication, and attention), ensuring each element's reduction order is identical regardless of batch size, at a ~60% latency cost that can be partially recovered with kernel optimization. The most striking practical implication is for reinforcement learning: because training and inference normally produce different logprobs for the same sequence, on-policy RL is silently off-policy — but with bitwise-identical deterministic inference, true on-policy RL becomes achievable, eliminating the need for importance weighting corrections entirely.",
+    "link": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/"
+  },
+  {
+    "title": "LoRA Without Regret",
+    "author": "John Schulman et al",
+    "year": "2025",
+    "topic": "lora, regret",
+    "venue": "blog",
+    "description": "This paper from Thinking Machines finds that LoRA can match full fine-tuning (FullFT) performance when applied to all network layers — especially MLP/MoE layers — rather than just attention layers, which consistently underperform even when given equivalent parameter counts. LoRA's effectiveness holds as long as its trainable parameter count exceeds the information content of the training data, a condition easily met for most post-training scenarios. For reinforcement learning specifically, even rank-1 LoRA fully matches FullFT because policy gradient methods absorb only ~1 bit of information per episode, making LoRA's capacity more than sufficient. Practically, the optimal learning rate for LoRA is consistently ~10x higher than for FullFT, and LoRA also uses only ~⅔ the compute FLOPs per pass, giving it a meaningful efficiency advantage.",
+    "link": "https://thinkingmachines.ai/blog/lora/"
+  },
+  {
+    "title": "Proximal Policy Optimization Algorithms",
+    "author": "John Schulman et al",
+    "year": "2017",
+    "topic": "policy optimization, rl",
+    "venue": "Arxiv",
+    "description": "Standard policy gradient methods can only safely take one gradient step per data sample, since larger updates risk destructively large policy changes, while the principled fix (TRPO) requires expensive second-order optimization and is incompatible with parameter sharing or dropout. PPO's key insight is that clipping the probability ratio r(θ) = π_θ/π_θ_old into [1-ε, 1+ε] and taking the minimum of the clipped and unclipped objectives creates a simple, first-order pessimistic lower bound on policy performance — the clip removes the incentive to move too far from the old policy, and the min ensures the bound is never optimistic. This allows multiple epochs of minibatch SGD on the same rollout data without catastrophic policy degradation, achieving TRPO-like stability with only a few lines of code change over vanilla policy gradient. Empirically PPO outperforms TRPO, A2C, and other baselines on continuous control benchmarks while being far simpler to implement, making it the practical default that later work like GRPO directly builds upon.",
+    "link": "https://arxiv.org/pdf/1707.06347"
+  },
+  {
+    "title": "Group Sequence Policy Optimization",
+    "author": "Chujie Zheng et al",
+    "year": "2025",
+    "topic": "embedding, chunking, context, llm",
+    "venue": "Arxiv",
+    "description": "GRPO's instability — especially severe in long-response and MoE training — stems from a fundamental misapplication of importance sampling: applying per-token importance ratios to single samples from each next-token distribution doesn't perform valid distribution correction, it just introduces high-variance noise that accumulates over sequence length and compounds through the clipping mechanism. GSPO fixes this by defining the importance ratio at the sequence level as the geometric mean of per-token likelihood ratios, which is theoretically grounded, length-normalized, and naturally aligned with the fact that rewards are granted to whole sequences rather than individual tokens. A key insight from the gradient analysis is that GRPO's instability comes from unequal per-token weighting that can vary wildly, whereas GSPO weights all tokens in a response equally, eliminating this source of noise. A particularly valuable downstream benefit is that sequence-level importance ratios are insensitive to MoE expert-routing volatility between gradient updates, eliminating the need for Routing Replay workarounds and enabling the full model capacity to be utilized — which directly contributed to the Qwen3 model improvements.",
+    "link": "https://arxiv.org/pdf/2507.18071"
+  },
+  {
+    "title": "Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models",
+    "author": "Michael Gunther et al",
+    "year": "2025",
+    "topic": "embedding, chunking, context, llm",
+    "venue": "Arxiv",
+    "description": "Standard RAG chunking loses contextual information because chunks are embedded independently, meaning pronouns and references like \"its\" or \"the city\" get separated from the entities they refer to, degrading retrieval quality. Late chunking fixes this by running the full document through the transformer first to get contextualized token embeddings, and only then applying mean pooling over chunk-boundary segments — so each chunk embedding inherits context from the entire document without any modification to the model itself. For documents exceeding the model's context window, the paper extends this with \"long late chunking,\" which processes overlapping macro-chunks and stitches together the resulting token embeddings before pooling. They also propose a \"span pooling\" fine-tuning method that trains the model to specifically encode relevant span information into token embeddings, yielding modest additional gains, and show the approach matches LLM-based contextual embedding methods (like Anthropic's Claude-based chunk augmentation) at a fraction of the computational cost.",
+    "link": "https://arxiv.org/pdf/2409.04701"
+  },
+  {
+    "title": "SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models",
+    "author": "Chenyu Wang et al",
+    "year": "2025",
+    "topic": "diffusion, dlm, policy optimization",
+    "venue": "Arxiv",
+    "description": "Applying RL to diffusion language models is complicated by the fact that the true log-likelihood is intractable, and prior work's use of the ELBO as a surrogate introduces asymmetric bias — it's a lower bound, so minimizing it for bad outputs doesn't reliably reduce their true likelihood. SPG resolves this by \"sandwiching\" the log-likelihood: maximizing the ELBO for positive-reward outputs while minimizing a tractable Evidence Upper Bound (EUBO), derived from a Rényi variational bound, for negative-reward ones, making the overall policy gradient a valid proxy for the true objective in both directions. In practice, the negative-reward term uses a mixture of ELBO and EUBO rather than EUBO alone, which is shown both theoretically and empirically to reduce gradient variance and stabilize training. SPG also introduces a block-wise masking strategy for Monte Carlo estimation that aligns the training distribution with the semi-autoregressive inference strategy used at generation time, yielding especially large gains on structured reasoning tasks like Countdown (+18.4%) and Sudoku (+27%) over prior state-of-the-art RL methods.",
+    "link": "https://openreview.net/pdf?id=18j5Q49GwN"
+  },
+  {
+    "title": "Breaking the Factorization Barrier in Diffusion Language Models",
+    "author": "Ian Li et al",
+    "year": "2025",
+    "topic": "diffusion, dlm, factorization",
+    "venue": "Arxiv",
+    "description": "CoDD identifies that the core limitation in diffusion language models isn't backbone capacity but a structural misspecification: forcing the output distribution to be fully factorized makes parallel token prediction inherently incoherent, since the model cannot capture how simultaneously predicted tokens depend on each other. The key technical insight is that replacing this factorized output with a product of the neural network's logits and a learned Probabilistic Circuit (PC) yields a distribution that is both expressive enough to capture complex inter-token dependencies and compact enough to avoid exponential parameter scaling. The PC's decomposability property makes the otherwise intractable partition function computable in a single feedforward pass, and because the Transformer backbone can be frozen, the PC is trained as a lightweight plug-in requiring only ~3 GPU hours. Empirically, this approach consistently improves reasoning benchmarks across architectures and is especially impactful in low-step generation regimes, recovering GSM8K accuracy from 34% to 56.4% at 64 steps while adding less than 6% inference latency overhead.",
+    "link": "https://arxiv.org/pdf/2603.00045"
+  },
+  {
+    "title": "Diffusion-Pretrained Dense and Contextual Embeddings",
+    "author": "Sedigheh Eslami et al",
+    "year": "2025",
+    "topic": "diffusion, dlm, embedding, context",
+    "venue": "Arxiv",
+    "description": "pplx-embed introduces a family of multilingual embedding models built on diffusion-pretrained language model backbones, converting causal decoder-only LLMs (Qwen3) into bidirectional encoders via continued diffusion pretraining to better capture global document context. The key technical contributions are a multi-stage contrastive training pipeline (pair → contextual → triplet training with model merging) and a novel quantization-aware mean pooling strategy that natively outputs INT8 and binary embeddings, dramatically improving storage efficiency (up to 4× over comparable models). They release two model variants — pplx-embed-v1 for standard retrieval and pplx-embed-context-v1 for chunk-level contextual retrieval using late chunking — at both 0.6B and 4B scales, with the contextual variant achieving state-of-the-art on ConTEB (81.96% nDCG@10), surpassing voyage-context-3 and Anthropic Contextual. Evaluation on internal web-scale benchmarks (up to 1B production web pages) further validates real-world deployment effectiveness, with pplx-embed-v1-0.6B notably outperforming the larger Qwen3-Embedding-4B on several tasks.",
+    "link": "https://arxiv.org/pdf/2602.11151"
+  },
+  {
+    "title": "Self-Speculative Masked Diffusions",
+    "author": "Andrew Campbell et al",
+    "year": "2025",
+    "topic": "diffusion, dlm, speculative decoding",
+    "venue": "Arxiv",
+    "description": "Self-Speculative Masked Diffusions proposes a new class of masked diffusion models (MDMs) that reduces the number of neural network forward passes needed for high-quality discrete data generation. The core contribution is a hybrid transformer architecture combining non-causal layers (for draft token generation) with a small causal layer (following the σ-GPT design), enabling speculative sampling entirely within a single model without needing a separate draft network. By using the non-causal factorized distribution as a draft and the causal autoregressive distribution as a target, the method produces non-factorized predictions over masked positions, achieving roughly 2× fewer function evaluations on text and protein sequence benchmarks. The authors also provide theoretical analysis characterizing the output distribution of their sampling algorithm and derive a log-likelihood lower bound for this model class. Key difference from TiDAR: Both papers combine diffusion and autoregressive mechanisms in a single model, but their goals and orientations differ significantly. Self-Speculative Masked Diffusions is built on top of MDMs — it targets any-order generation (not left-to-right) and is particularly suited for domains like protein sequences where no natural ordering exists. TiDAR, by contrast, is fundamentally AR-first: it uses diffusion only as a parallelizable drafting mechanism while the final sampling is strictly left-to-right autoregressive, preserving AR-quality guarantees. TiDAR also explicitly targets wall-clock throughput speedups (4-6×) and KV-cache compatibility, whereas the MDM paper focuses on reducing NFEs in a compute-agnostic sense without claiming AR-level quality parity.",
+    "link": "https://arxiv.org/pdf/2510.03929"
+  },
+  {
+    "title": "Training trajectories, mini-batch losses and the curious role of the learning rate",
+    "author": "Mark Sandler et al",
+    "year": "2023",
+    "topic": "stochastic gradient descent, learning rate schedules, weight averaging",
+    "venue": "Arxiv",
+    "description": "This paper investigates the curious behavior of stochastic gradient descent by analyzing how the loss function behaves differently on fixed training batches versus held-out batches, revealing that loss on a training batch can reach remarkably low values in a single gradient step while loss on unseen batches shows opposite behavior. The authors propose a simple quadratic model of the loss landscape that explains key phenomena and demonstrates a novel equivalence: weight averaging techniques (stochastic weight averaging, exponential moving average, and two-point averaging) are mathematically equivalent to specific learning rate schedules. This theoretical insight connects to practical findings showing that averaging improves performance by moving trajectories inside loss basins, and helps explain why weight averaging and learning rate decay achieve similar effects in training dynamics.",
+    "link": "https://arxiv.org/pdf/2301.02312"
+  },
+  {
+    "title": "Scaling Laws and Compute-Optimal Training Beyong Fixed Training Durations",
+    "author": "Alexander Hagele et al",
+    "year": "2024",
+    "topic": "learning rate schedules, language model training, scaling laws",
+    "venue": "Arxiv",
+    "description": "This paper challenges the ubiquitous use of cosine learning rate schedules in large language model training by demonstrating that a simpler alternative—constant learning rate followed by a short cooldown phase—achieves comparable performance without requiring the training duration to be specified in advance. The authors show that a (1-sqrt) cooldown function outperforms linear decay, and that stochastic weight averaging can further improve performance along the training trajectory. Critically, they demonstrate that this approach enables significantly cheaper scaling law experiments by requiring only a single long training run per model size followed by retrospective cooldowns at desired checkpoints, reducing compute costs by approximately half compared to the standard practice of retraining models from scratch with length-matched cosine schedules.",
+    "link": "https://arxiv.org/pdf/2405.18392"
+  },
+  {
+    "title": "A Closer Look at Deep Learning Heuristics: Learning Rate Restarts, Warmup, and Distillation",
+    "author": "Akhilesh Gotmare et al",
+    "year": "2018",
+    "topic": "deep learning optimization, learning rate schedules, knowledge distillation",
+    "venue": "Arxiv",
+    "description": "This paper empirically analyzes three common deep learning heuristics—cosine annealing with restarts (SGDR), learning rate warmup, and knowledge distillation—using mode connectivity and canonical correlation analysis (CCA) to understand their mechanisms. The authors find that the conventional explanation for cosine annealing's success (escaping local minima) is oversimplified, as iterates move over loss barriers but don't necessarily escape distinct minima; learning rate warmup primarily prevents instability in deeper layers during large-batch training, an effect that can be replicated by freezing those layers; and knowledge distillation primarily transfers dark knowledge to deeper (discriminative) layers rather than shallow feature-extraction layers. This work advances understanding of deep learning training dynamics through empirical analysis tools rather than relying on linear interpolation or intuitive explanations.",
+    "link": "https://arxiv.org/pdf/1810.13243"
+  },
+  {
+    "title": "The Road Less Scheduled",
+    "author": "Aaron Defazio et al",
+    "year": "2024",
+    "topic": "optimization, learning rate schedules, stochastic gradient descent, iterate averaging",
+    "venue": "Arxiv",
+    "description": "This paper introduces Schedule-Free learning, an optimization method that eliminates the need to pre-specify a stopping time T while achieving state-of-the-art performance compared to traditional learning rate schedules. The key innovation is a new form of momentum based on interpolation between sequences (z for base updates and x for averaging) that unifies iterate averaging with scheduling theory. The authors develop a novel online-to-batch conversion theorem (Theorem 2) that explains why their approach works and generalizes several existing optimization techniques. Extensive experiments across 28 diverse problems—from convex optimization to large-scale deep learning—demonstrate that Schedule-Free AdamW matches or exceeds heavily-tuned cosine schedules without introducing additional hyperparameters, and the method won Meta's entry to the MLCommons 2024 AlgoPerf challenge.",
+    "link": "https://arxiv.org/pdf/2405.15682"
+  },
+  {
+    "title": "Efficient Training of Language Models to Fill in the Middle",
+    "author": "Mohammad Bavarian et al",
+    "year": "2022",
+    "topic": "fill-in-the-middle, fim, llm, autoregressive",
+    "venue": "Arxiv",
+    "description": "The paper demonstrates that autoregressive language models can efficiently learn fill-in-the-middle (FIM) infilling capabilities by applying a straightforward data transformation that moves a middle span of text to the end of documents, without compromising left-to-right generative performance—a phenomenon termed the \"FIM-for-free\" property. Extensive scaling studies across code and natural language domains show that models trained with up to 90% FIM rate maintain identical autoregressive test loss and downstream benchmark performance as baseline models, while simultaneously learning robust infilling capabilities. Through comprehensive ablations on key hyperparameters, the authors identify optimal practices including context-level FIM application, character-level span selection, and joint SPM+PSM training modes, with SPM showing slight performance advantages due to improved key-value caching during inference. In contrast to pretraining efficiency, the paper reveals that learning FIM through finetuning requires substantial additional compute (50B tokens at 90% FIM rate with high learning rates), suggesting fundamental differences in how models acquire this capability at different training stages.",
+    "link": "https://arxiv.org/pdf/2207.14255"
+  },
+  {
+    "title": "Muon is Scalable for LLM Training",
+    "author": "Jingyuan Liu et al",
+    "year": "2025",
+    "topic": "optimizer, muon, matrix orthogonalization, llm training",
+    "venue": "Arxiv",
+    "description": "The paper demonstrates that Muon, a matrix orthogonalization-based optimizer, can be effectively scaled to large language models through two key techniques: incorporating weight decay and carefully adjusting per-parameter update scales to maintain consistent update magnitudes across different matrix shapes. The authors develop a distributed implementation of Muon compatible with ZeRO-1 that achieves optimal memory efficiency and reduced communication overhead while preserving the algorithm's mathematical properties. Scaling law experiments show that Muon achieves approximately 2× computational efficiency compared to AdamW under compute-optimal training, requiring only 52% of the FLOPs to match AdamW's performance. The authors introduce Moonlight, a 3B/16B-parameter Mixture-of-Expert model trained with 5.7T tokens using Muon, which advances the Pareto frontier of model performance versus training FLOPs and demonstrates particularly strong improvements on mathematical reasoning and code generation tasks.",
+    "link": "https://arxiv.org/pdf/2502.16982"
+  },
+  {
+    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+    "author": "Shih-Yang Liu et al",
+    "year": "2026",
+    "topic": "multi-reward rl, policy optimization, grpo, reward normalization, reinforcement learning",
+    "venue": "Arxiv",
+    "description": "The paper identifies that directly applying Group Relative Policy Optimization (GRPO) to multi-reward reinforcement learning causes distinct reward combinations to collapse into identical advantage values, which diminishes the precision of the training signal and leads to suboptimal convergence. To address this problem, the authors propose Group reward-Decoupled Normalization Policy Optimization (GDPO), which normalizes each individual reward separately before aggregation, then applies batch-wise advantage normalization to preserve cross-reward distinctions while maintaining stable numerical ranges. The method is systematically evaluated across three diverse tasks—tool calling, mathematical reasoning, and coding reasoning—each optimizing multiple heterogeneous rewards including correctness, format compliance, length constraints, and code quality. Empirical results demonstrate that GDPO consistently outperforms GRPO across all settings, with particularly significant improvements on complex reasoning tasks (e.g., 6.3% accuracy gain on AIME for DeepSeek-R1-1.5B) while maintaining better adherence to constraints.",
+    "link": "https://arxiv.org/pdf/2601.05242"
+  },
+  {
+    "title": "Post-LayerNorm is Back: Stable, Expressive, and Deep",
+    "author": "Chen Chen et al",
+    "year": "2026",
+    "topic": "layernorm, ln, stability, deep, expressivity",
+    "venue": "Arxiv",
+    "description": "The paper identifies that Post-LayerNorm (Post-LN) instability in deep networks stems from ResNet-style residual connections causing gradient vanishing, not from normalization itself. To address this, the authors introduce Keel, which replaces the ResNet residual path with a Highway-style gated connection scaled by α = L (number of layers), preserving gradient flow through deep networks without requiring specialized initialization. They provide formal gradient flow analysis proving that Keel's modification maintains consistent gradient magnitudes across depths, enabling training stability at extreme depths (1000+ layers). Empirically, the method demonstrates superior performance across all depths with +10 point improvements on reasoning tasks like GSM-8K at 1024 layers, while maintaining stability at 50% higher learning rates than Pre-LN baselines.",
+    "link": "https://arxiv.org/pdf/2601.19895"
+  },
+  {
+    "title": "One Token is Enough: Improving Diffusion Language Models with a Sink Token",
+    "author": "Zihou Zhang et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, llm, sink token",
+    "venue": "Arxiv",
+    "description": "This paper identifies the \"moving sink\" phenomenon in diffusion language models: unlike autoregressive models where causal masking naturally anchors attention sinks to the fixed initial token, DLMs lack this structural constraint, causing sink positions to shift erratically across denoising steps as the masked token set changes dynamically. Through value-space analysis, the authors show that sink tokens in DLMs consistently exhibit significantly lower L2 norms than other tokens, functioning as an implicit protective mechanism against excessive information mixing—but their instability undermines inference robustness. The proposed solution is remarkably minimal: prepend a single extra [SINK] token constrained by a modified attention mask to attend only to itself while remaining globally visible, providing a stable, semantically neutral anchor that the model learns to use for attention offloading. Ablation studies confirm the effectiveness is position-invariant (front or end of sequence performs similarly), saturates at a single token (adding more yields negligible gains), and holds even when the sink token's value states are forced to zero vectors—validating that low-norm structure rather than semantic content is the operative mechanism, with consistent benchmark improvements across both AR-initialized and scratch-trained DLMs.",
+    "link": "https://arxiv.org/pdf/2601.19657"
+  },
+  {
+    "title": "Residual Context Diffusion Language Models",
+    "author": "Yuezhoe Hu et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, llm, soft-embedding, remasking",
+    "venue": "Arxiv",
+    "description": "This paper identifies that block-wise diffusion LLMs waste computation during inference because the remasking step discards low-confidence token representations that actually contain useful contextual information, as evidenced by high token recall in early denoising steps. The core contribution is Residual Context Diffusion (RCD), which recycles these discarded representations by converting them into entropy-weighted residual vectors—using normalized Shannon entropy to weight tokens by their uncertainty—and injecting them as soft token embeddings into the input of the next denoising step. To avoid the prohibitive memory cost of backpropagation-through-time through this recursive loop, the authors propose a decoupled two-stage training pipeline where a frozen lightweight reference model generates stable proxy residuals to supervise a separate trainable target model, along with a temperature-scaled entropy alignment mechanism to bridge the train-test distribution gap. RCD consistently improves frontier dLLMs by 5–10 accuracy points across benchmarks, nearly doubles accuracy on AIME24/25, and achieves 4–5× fewer denoising steps at equivalent accuracy, all while adding minimal computational overhead and converging efficiently with only ~1B training tokens.",
+    "link": "https://arxiv.org/pdf/2601.22954"
+  },
+  {
+    "title": "Enabling Approximate Joint Sampling in Diffusion LMs",
+    "author": "Parikshit Bansal et al",
+    "year": "2026",
+    "topic": "sampling, dlm, diffusion, llm, marginal, joint, kl-divergence",
+    "venue": "Arxiv",
+    "description": "This paper identifies that parallel token generation in masked diffusion language models is fundamentally flawed because it samples from the product of independent marginal distributions rather than the true joint distribution the model encodes, causing well-documented accuracy drops at higher parallelism. The main contribution is ADJUST, a lightweight single-layer transformer trained on top of a frozen diffusion model that enables approximate joint sampling: after one full model forward pass, ADJUST runs K−1 additional cheap forward passes, each conditioning on previously sampled tokens to sequentially unmask multiple tokens in a dependency-aware manner. The authors establish a formal probabilistic framework connecting parallel sampling's failure to marginal-vs-joint distribution mismatch, and develop a specialized training methodology using the base model's own denoising trajectories as training data, minimizing KL divergence between ADJUST's output and true joint sampling. Empirically, ADJUST achieves dramatic improvements over naive parallel decoding—for example, +16 percentage points on GSM8K and +0.5 MAUVE at K=4—while adding only 20–25% latency overhead compared to naive parallel sampling, since ADJUST has just 200M parameters versus 7B for the base model.",
+    "link": "https://arxiv.org/pdf/2509.22738"
+  },
+  {
+    "title": "WSM: Decay-Free Learning Rate Schedule via Checkpoint Merging for LLM Pre-training",
+    "author": "Changxin Tian et al",
+    "year": "2025",
+    "topic": "llm, schedule, training, learning-rate, lr, lr-schedule",
+    "venue": "Arxiv",
+    "description": "WSM (Warmup-Stable and Merge) is a decay-free learning rate scheduling framework that replaces the traditional decay phase with checkpoint merging, establishing a formal theoretical connection between the two: merging checkpoints with specific weights is mathematically equivalent to applying a synthetic decay schedule to accumulated gradients. This theoretical foundation allows WSM to emulate any decay strategy (cosine, linear, inverse square root) as a principled model averaging scheme, without modifying the live training process. Through extensive experiments, the authors identify merge duration—the training window covered by merged checkpoints—as the single most critical hyperparameter, more impactful than checkpoint interval or number of merged models. WSM consistently outperforms the widely-used WSD baseline, with gains of +3.5% on MATH, +2.9% on HumanEval, and +5.5% on MMLU-Pro, with benefits extending to supervised fine-tuning as well.",
+    "link": "https://arxiv.org/pdf/2507.17634"
+  },
+  {
+    "title": "The Crystal Ball Hypothesis in Diffusion Models: Anticipating Object Positions from Initial Noise",
+    "author": "Yuanhao Ban et al",
+    "year": "2025",
+    "topic": "diffusion, image, noise",
+    "venue": "ICLR",
+    "description": "This paper discovers \"trigger patches\"—specific regions within the initial Gaussian noise of diffusion models that consistently determine where objects will appear in generated images, regardless of the text prompt. The authors develop both a posterior analysis method (measuring \"trigger entropy\" based on object position variance) and train a detector that can identify these patches directly from noise with 0.325 mAP50, demonstrating that trigger patches are statistical outliers in the Gaussian distribution rather than random noise. Through two-sample tests and experiments with handcrafted patches (shifted Gaussians and sinusoidal signals), they confirm that patches deviating from standard Gaussian distributions are more effective triggers, with injection success rates reaching 81% for certain synthetic patches. The findings enable two practical applications: removing trigger patches to increase positional diversity of generated objects (achieving entropy of 171.84 vs 135.97 baseline), and strategically placing trigger patches to improve prompt adherence for positional instructions (boosting success rate from 57% to 84%).",
+    "link": "https://arxiv.org/pdf/2406.01970"
+  },
+  {
+    "title": "How Many Samples are Needed to Train a Deep Neural Network?",
+    "author": "Pega Golestaneh et al",
+    "year": "2025",
+    "topic": "theory, data, scaling",
+    "venue": "ICLR",
+    "description": "This paper establishes a fundamental limit on how many training samples are needed for deep ReLU neural networks, proving that the generalization error decreases at a rate of 1/√n rather than the faster 1/n rate seen in classical methods like linear regression. Using information theory (Fano's inequality), the authors prove that achieving a prediction error of ε² requires approximately 1/ε⁴ training samples—significantly more than the 1/ε² samples needed by traditional statistical methods. Their theoretical lower bound matches existing upper bounds and shows the error depends logarithmically on input dimension and involves a sparsity factor based on ℓ1-norm constraints on network weights. Extensive experiments on MNIST, Fashion-MNIST, CIFAR10, and regression datasets confirm this 1/√n scaling holds in practice for both feedforward networks and CNNs, providing rigorous mathematical support for practitioners' belief that deep learning requires \"many\" training samples.",
+    "link": "https://proceedings.iclr.cc/paper_files/paper/2025/file/a0709efe5139939ab69902884ecad9c1-Paper-Conference.pdf"
+  },
+  {
+    "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+    "author": "Zanlin Ni et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This paper reveals \"The Flexibility Trap\"—a counter-intuitive finding that diffusion language models' ability to generate tokens in arbitrary order actually narrows rather than expands their reasoning capabilities, as measured by Pass@k metrics showing autoregressive (left-to-right) decoding achieves higher solution space coverage. The authors identify \"entropy degradation\" as the mechanism: arbitrary-order models bypass high-uncertainty \"forking tokens\" (logical connectives like \"Therefore\") that represent critical reasoning branch points, prematurely collapsing the solution space by resolving easier tokens first and then filling in connectors to match pre-generated conclusions rather than genuinely exploring logical paths. Based on this insight, they propose JustGRPO, which simply applies standard Group Relative Policy Optimization by treating diffusion models as autoregressive during training (eliminating the complexity of handling combinatorial trajectory spaces and intractable likelihoods), achieving state-of-the-art results like 89.1% on GSM8K while fully preserving parallel decoding at inference time. The work challenges the assumption that arbitrary-order generation is beneficial for reasoning, demonstrating that the autoregressive constraint acts as an effective training scaffold that forces confrontation with uncertainty at logical forks, thereby maintaining broader reasoning potential.",
+    "link": "https://arxiv.org/pdf/2601.15165"
+  },
+  {
+    "title": "Diffusion Language Models Know the Answer Before Decoding",
+    "author": "Pengxiang Li et al",
+    "year": "2025",
+    "topic": "dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "Prophet accelerates diffusion language models by exploiting \"early answer convergence\"—the observation that correct answers often emerge as top-1 predictions at intermediate steps, with up to 99% of instances converging by halfway through decoding. The method monitors the confidence gap (difference between top-2 logits) and uses adaptive thresholds that become more permissive as decoding progresses, allowing the model to commit all remaining tokens and terminate early when predictions stabilize. Experiments on LLaDA-8B and Dream-7B show 1.2-3.4× speedups across diverse tasks while maintaining accuracy within ±1%, demonstrating that the method automatically allocates more steps to complex problems and fewer to simpler ones. This reframes DLM decoding as an optimal stopping problem and provides a training-free, plug-and-play acceleration technique complementary to existing optimization methods.",
+    "link": "https://arxiv.org/pdf/2508.19982"
+  },
+  {
+    "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+    "author": "Chengyue Wu et al",
+    "year": "2025",
+    "topic": "dllm, diffusion, llm",
+    "venue": "Arxiv",
+    "description": "This paper presents Fast-dLLM v2, which achieves 2.5× speedup over autoregressive LLMs by dividing text generation into blocks that use diffusion-based parallel decoding. The key technique is a block diffusion mechanism where tokens within each block can be predicted and refined simultaneously through bidirectional attention, while blocks themselves are generated sequentially using cached autoregressive dependencies. During inference, the model employs confidence-based parallel decoding that finalizes multiple high-confidence tokens simultaneously within a block, avoiding the sequential one-token-at-a-time bottleneck of traditional models. A hierarchical caching system further accelerates generation by storing completed block representations (block-level cache) and maintaining separate prefix/suffix caches for partially decoded blocks (DualCache), enabling efficient parallel refinement without redundant computation.",
+    "link": "https://arxiv.org/pdf/2509.26328"
+  },
+  {
+    "title": "d3LLM: Ultra-Fast dLLM using Pseudo-Trajectory Distillation",
+    "author": "Yu-Yang Qian et al",
+    "year": "2026",
+    "topic": "dllm, diffusion, llm, distillation",
+    "venue": "Arxiv",
+    "description": "This paper introduces d3LLM, a framework that balances accuracy and parallelism in diffusion language models through innovations in both training and inference. During training, they propose pseudo-trajectory distillation, which uses the teacher model's own decoding trajectory (even when it differs from ground truth) to teach the student which tokens can be confidently decoded earlier, combined with curriculum learning that progressively increases mask ratios and window sizes. During inference, they introduce entropy-based multi-block decoding that simultaneously decodes across multiple blocks by prioritizing low-entropy (high-confidence) tokens, coupled with a KV-cache refresh mechanism that periodically recomputes cached states to prevent quality degradation from error propagation. They also propose AUP (Accuracy Under Parallelism), a new evaluation metric that measures the weighted area under the accuracy-parallelism curve, penalizing methods that sacrifice accuracy for speed while rewarding those that maintain both.",
+    "link": "https://arxiv.org/pdf/2601.07568"
+  },
+  {
+    "title": "Chain of Though Empowers Transformers to Solve Inherently Serial Problems",
+    "author": "Zhiyuan Li et al",
+    "year": "2025",
+    "topic": "cot, chain-of-thought, llm",
+    "venue": "Arxiv",
+    "description": "This paper investigates why chain-of-thought (CoT) prompting improves the reasoning capabilities of decoder-only transformers through the lens of computational expressiveness. The authors prove that constant-depth transformers with constant-bit precision can only solve AC⁰ problems without CoT, but with T steps of CoT and O(log n) embedding size, they can solve any problem computable by boolean circuits of size T. They demonstrate this theoretically by showing CoT allows transformers to perform inherently serial computations that bypass the depth limitations, essentially using each CoT step to simulate one gate operation in a target circuit. Empirically, they validate these findings on four tasks (modular addition, permutation composition, iterated squaring, and circuit value problems), showing that CoT dramatically improves accuracy on problems requiring serial computation, especially for shallow transformers.",
+    "link": "https://arxiv.org/pdf/2402.12875"
+  },
+  {
+    "title": "SpecDiff-2: Scaling Diffusion Drafter Alignment for Faster Speculative Decoding",
+    "author": "Jameson Sandler et al",
+    "year": "2025",
+    "topic": "dllm, speculative decoding",
+    "venue": "Arxiv",
+    "description": "This paper introduces SpecDiff-2, which addresses two fundamental bottlenecks in speculative decoding by using discrete diffusion models as non-autoregressive drafters and developing novel alignment techniques. The key methodological contributions are: (1) Streak-distillation, a train-time alignment objective that directly optimizes the expected number of accepted tokens across the full draft window by maximizing the product of position-wise acceptance probabilities computed along verifier-generated trajectories. (2) Self-selection acceptance, a test-time mechanism that generates multiple candidate drafts from a single diffusion forward pass (exploiting parallel sampling from position-wise marginals) and uses the verifier to select the draft with highest expected throughput before applying lossless verification. Together, these methods achieve state-of-the-art speedups of up to 5.5× over standard decoding by simultaneously reducing draft latency through parallelism and improving drafter-verifier alignment through theoretically-motivated training and inference procedures.",
+    "link": "https://arxiv.org/pdf/2511.00606"
+  },
+  {
+    "title": "Diffusion Language Models are Provably Optimal Parallel Samplers",
+    "author": "Haozhe Jiang et al",
+    "year": "2025",
+    "topic": "dllm, dlm, llm, diffusion",
+    "venue": "Arxiv",
+    "description": "This paper establishes a rigorous theoretical foundation for diffusion language models (DLMs) as optimal parallel samplers by using circuit complexity theory, where circuit depth and width abstract sequential steps and memory requirements. The authors prove that DLMs with chain-of-thought (CoT) can simulate any parallel sampling algorithm using the minimum number of sequential steps (matching circuit depth), while autoregressive models require steps linear in circuit size. They demonstrate that enabling remasking (re-masking unmasked tokens) or revision (changing unmasked tokens) allows DLMs to also achieve optimal space complexity (matching circuit width), and prove these mechanisms strictly expand expressivity through a separation result on sampling zero-parity strings. The methodology frames DLMs as boolean circuits operating on encoded token sequences, formally modeling the predictor, masking policies, and generation process to derive time and space complexity bounds.",
+    "link": "https://arxiv.org/pdf/2512.25014"
+  }
+]

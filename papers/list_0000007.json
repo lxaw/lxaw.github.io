@@ -1,0 +1,497 @@
+[
+  {
+    "title": "MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification",
+    "author": "Sivan Doveh et al",
+    "year": "2020",
+    "topic": "NAS, meta-learning, few-shot, fsl",
+    "venue": "Arxiv",
+    "description": "The authors propose a method using a DARTS-like search for FSL architectures. \"Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.\". Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.",
+    "link": "https://arxiv.org/pdf/1912.00412"
+  },
+  {
+    "title": "Distilling the Knowledge in a Neural Network",
+    "author": "Geoffry Hinton et al",
+    "year": "2015",
+    "topic": "distillation, ensemble, MoE",
+    "venue": "Arxiv",
+    "description": "The first proposal of knowledge distillation. The main interesting point I found was that they change the temperature of the softmax to be higher to allow for softer targets. This allows for understanding what 2's look like 3's (in an MNIST example). Basically, adds a sort of regularization since more information can be carried in these softer targets compared to a single 0 or 1. They also propose the idea of having an ensemble of models, and then learning a distilled model that is smaller. The biological example of having a clumsy larvae that then becomes a more specialized bug was good.",
+    "link": "https://arxiv.org/pdf/1503.02531"
+  },
+  {
+    "title": "HyperTuning: Toward Adapting Large Language Models without Back-propagation",
+    "author": "Jason Phang et al",
+    "year": "2023",
+    "topic": "hypernetworks, adaptation, tuning, LoRA, LLMs",
+    "venue": "ICML",
+    "description": "The authors show that we can a hypernetwork for model adaptation in order to generate task-specific parameters. They try two approaches: generating prefixs and generating LoRA parameters for a frozen T5 model using few-shot examples. They also note the importance of hyperpretraining, i.e., an additional stage to adapt the hypernet to generate parameters for the downstream model. They also propose a scheme for this. NOTE! \"We also observe a consistent trend where HyperT5-Prefix outperforms HyperT5-LoRA. We speculate that it is easier for hypermodels to learn to generate soft prefixes as compared to LoRA weights...\"",
+    "link": "https://arxiv.org/pdf/2211.12485"
+  },
+  {
+    "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
+    "author": "Armen Aghajanyan et al",
+    "year": "2020",
+    "topic": "fine-tuning, intrinsic dimension, lora",
+    "venue": "Arxiv",
+    "description": "Large models with billions of parameters can be fine-tuned using only a few hundred examples. Why is this? Furthermore, large models often allow for significant sparsification, which implies that there is much redundancy. This paper targets both of these ideas, by showing that many common models have an \"intrinsic dimension\" much less than the full parameterization.",
+    "link": "https://arxiv.org/pdf/2012.13255"
+  },
+  {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "author": "Edward Hu et al",
+    "year": "2021",
+    "topic": "low rank adaptation, lora, llm, fine-tuning",
+    "venue": "Arxiv",
+    "description": "Fine-tuning large models is expensive, because we update all the original parameters. LoRA, taking inspiration from Aghajanyan et al, 2020 (pre-trained language models have a low \"intrinsic dimension\"), the authors thought that the weight updates would also have low intrinsic rank. Thus, they decompose Delta W = BA, where B and A are lower rank. The A and B are trainable. They initialize A with Gaussian, and B as zero, so Delta W = BA is zero initialy. They then optimize and find this method to be more efficient in terms of both time and space.",
+    "link": "https://arxiv.org/pdf/2106.09685"
+  },
+  {
+    "title": "Learning to Compress Prompts with Gist Tokens",
+    "author": "Jesse Mu et al",
+    "year": "2023",
+    "topic": "llms, prompting, compression, tokens",
+    "venue": "NeurIPS",
+    "description": "The authors describe a method of using a distilling function G (similar to a hypernet) that is able to compress LM prompts into a smaller set of \"gist\" tokens. These tokens can then be cached and reused. The neat trick is that they reuse the LM itself as G, so gisting itself incurs no additional training cost. Note that in their \"Failure Cases\" section, they mention \"... While it is unclear why only the gist models exhibit this behavior (i.e. the fail example behavior), these issues can likely be mitigated with more careful sampling techniques.",
+    "link": "https://arxiv.org/pdf/2304.08467"
+  },
+  {
+    "title": "Once-For-All: Train One Network and Specialize it For Efficient Deployment",
+    "author": "Han Cai et al",
+    "year": "2020",
+    "topic": "nas, supernets",
+    "venue": "ICLR",
+    "description": "The authors proposed training one large supernetwork and then sampling subnetworks as an approach for NAS. This method allows for the simultaneous generation of many different subnetworks that could satisfy different constraints (i.e. hardware, latency, accuracy, etc). The authors also propose a progressive shrinking method to train the net (start by training the big supernet, then progressively shrink down), which can be seen as a generalized pruning method. Furthermore, they introduce an idea of training a twin neural network to help estimate latency / accuracy given some architecture, which allows for fast feedback when conducting the search for subnetworks.",
+    "link": "https://arxiv.org/abs/1908.09791"
+  },
+  {
+    "title": "Dataless Knowledge Fusion by Merging Weights",
+    "author": "Xisen Jin et al",
+    "year": "2023",
+    "topic": "knowledge fusion, weight merging",
+    "venue": "ICLR",
+    "description": "The paper introduces RegMean, a method for merging pre-trained language models from different datasets by solving a linear optimization problem, which improves generalization across domains without requiring the original training data. Compared to existing methods like Simple Averaging and Fisher Averaging, RegMean offers higher computational efficiency and comparable memory overhead, while achieving better or equivalent performance across various natural language tasks, including out-of-domain generalization. The method is evaluated using GLUE datasets and demonstrates superior performance in most tasks, outperforming traditional model ensembling and multi-task learning approaches.",
+    "link": "https://arxiv.org/pdf/2212.09849"
+  },
+  {
+    "title": "Superposition of Many Models into One",
+    "author": "Cheung et al",
+    "year": "2019",
+    "topic": "superposition, online learning, tasks, continual learning",
+    "venue": "NeurIPS",
+    "description": "A method of storing multiple models using only one set of parameters via parameter superposition is provided; it shares similarities to superposition in the fourier analysis for signal processing.",
+    "link": "https://arxiv.org/pdf/1902.05522"
+  },
+  {
+    "title": "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation",
+    "author": "Yoshua Bengio et al",
+    "year": "2013",
+    "topic": "gradients, stochasticy, backpropagation",
+    "venue": "Arxiv",
+    "description": "The authors introduce a several methods of estimation / propagation for networks that have stochastic neurons. This is used often in networks that are quantization-aware, as they sometimes have decision-boundaries in the neurons that are not differentiable regularly. The paper also introduces the \"Straight Through Estimator\", which was actually first introduced in one of Hinton's lectures. One interesting idea they present (that I think may have also been introduced in Kingma's VAE paper?) is that we can model the output h_{i} of some stochastic neuron as the application of a deterministic function that also depends on some noise source z_{i}: h_{i} = f(a_{i},z_{i}). TLDR: Straight through units are typically the go-to due to ease of use and good performance.",
+    "link": "https://arxiv.org/pdf/1308.3432"
+  },
+  {
+    "title": "DoReFaNet: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients",
+    "author": "Shuchang Zhou et al",
+    "year": "2018",
+    "topic": "quantization, cnn, gradients",
+    "venue": "Arxiv",
+    "description": "The authors introduce a method to train CNNs with low bitwidth weights and activations using low bitwidth param gradients. They use deterministic quantization for weights and activations, while stochastically quantizing gradients. Note that they do not quantize the weights of the first CNN layer for the most part, as they noted that it would often degrade performance (Han et al. 2015 also notes a similar thing). Another interesting thing they do is add noise to the gradient after quantization to increase performance. This paper also uses the straight through estimator (Bengio et al 2013) for propagating gradients when using their quantization scheme.",
+    "link": "https://arxiv.org/pdf/1606.06160"
+  },
+  {
+    "title": "Training Deep Neural Networks with 8-bit Floating Point Numbers",
+    "author": "Naigang Wang et al",
+    "year": "2018",
+    "topic": "quantization, floating-point, precision",
+    "venue": "NeurIPS",
+    "description": "The authors show that it is possible to train DNNs with 8-bit fp values while maintaining decent accuracy. To do this, they make a new FP8 format, develop a technique \"chunk-based computations\" that allow matrix and convolution ops to be computed using 8-bit multiplications and 16 bit additions, and use fp stochastic rounding in weight updates. One interesting point they make is that swamping (the issue of truncation in large-to-small number addition) is a serious problem in DNN bit-precision reduction.",
+    "link": "https://arxiv.org/pdf/1812.08011"
+  },
+  {
+    "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+    "author": "Benoit Jacob et al",
+    "year": "2017",
+    "topic": "quantization, quantization schemes, efficient inference, floating-point",
+    "venue": "Arxiv",
+    "description": "The authors propose a quantization scheme that allows us to only use integer arithmetic to approximate fp computations in a neural network. They also describe a training approach that simulates the effect of quantization in the forward pass. Backprop still occurs, but all weights and biases are stored in fp. The forward prop pass then simulates quantized inference by rounding off using the quantization scheme they describe that changes fp to int.",
+    "link": "https://arxiv.org/pdf/1712.05877"
+  },
+  {
+    "title": "PACT: Parameterized Clipping Activation for Quantized Neural Networks",
+    "author": "Jungwook Choi et al",
+    "year": "2018",
+    "topic": "quantization, clipping, activations",
+    "venue": "ICLR",
+    "description": "The authors present a method of quantization by clipping activations using a learnable parameter, alpha. They show that this can lead to lower decreases in accuracy compared to other quantization methods. They also note that activations have been hard to quantize compared to weights in the past. They also prove that PACT is as expressive as ReLU, by showing it can reach the same solution as ReLU if SGD is used. They also describe the hardware benefits that can be incurred.",
+    "link": "https://arxiv.org/pdf/1805.06085"
+  },
+  {
+    "title": "SMASH: One-Shot Model Architecture Search through Hypernetworks",
+    "author": "Andrew Brock et al",
+    "year": "2017",
+    "topic": "hypernetworks, nas, one-shot, few-shot",
+    "venue": "Arxiv",
+    "description": "The authors propose a technique to speed up NAS by using a hypernet. Basically, they train a hypernet to generate weights of a main model that has variable architecure. The input to the hypernet is a binarized representation of model architecture. The hypernet takes this representation in, and then outputs weights. They then train only for a few epochs, and compare the validation scores obtained across different representations. Then, they fully train the model that had the best validation score.",
+    "link": "https://arxiv.org/abs/1708.05344"
+  },
+  {
+    "title": "Example-based Hypernetworks for Multi-source Adaptation to Unseen Domains",
+    "author": "Tomer Volk et al",
+    "year": "2023",
+    "topic": "hypernetworks, multi-source adaptation, unseen domains, NLP",
+    "venue": "EMNLP",
+    "description": "The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain's semantic space. The signature is then used by a hypernet to generate the task classifier's weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. ",
+    "link": "https://aclanthology.org/2023.findings-emnlp.610.pdf"
+  },
+  {
+    "title": "Meta-Learning via Hypernetworks",
+    "author": "Dominic Zhao et al",
+    "year": "2020",
+    "topic": "hypernetworks, meta-learning",
+    "venue": "NeurIPS",
+    "description": "The authors propose a soft weight-sharing hypernet architecture that performs well on meta-learning tasks. A good paper to show efforts in meta-learning with regards to hypernets, and comparing them to SOTA methods like Model-Agnostic Meta-Learning (MAML).",
+    "link": "https://neurips.cc/virtual/2020/20189"
+  },
+  {
+    "title": "HyperDynamics: Meta-Learning Object and Agent Dynamics with Hypernetworks",
+    "author": "Zhou Xian et al",
+    "year": "2021",
+    "topic": "hypernetworks, meta-learning, dynamics",
+    "venue": "ICLR",
+    "description": "The authors present a dynamics meta-learning framework which conditions on an agent's interations w/ env and (optionally) the visual input from it. From this, they can generate params of a neural dynamics model. The three modules they use are 1) an encoding module that encodes a few agent-env interations / agent's visual observations into a feature code, 2) a hypernet that conditions on the latent feature code to generate params of a dynamic model dedicated to this observed system, and 3) a target dynamics model that is made using the generated parameters, and takes input as a low-dim system state / agent action and outputs the prediction of next system state.",
+    "link": "https://arxiv.org/pdf/2103.09439"
+  },
+  {
+    "title": "Principled Weight Initialization for Hypernetworks",
+    "author": "Oscar Chang et al",
+    "year": "2020",
+    "topic": "hypernetworks, weight initialization",
+    "venue": "ICLR",
+    "description": "Classical weight initialization techniques don't really work on hypernets, because they fail to produce weights for the mainnet in the correct scale. The authors derive formulas for hyperfan-out and hyperfan-in weight initialization, and show that it works well for the mainnet.",
+    "link": "https://arxiv.org/pdf/2312.08399"
+  },
+  {
+    "title": "Continual Learning with Hypernetworks",
+    "author": "Johannes von Oswald et al",
+    "year": "2020",
+    "topic": "hypernetworks, continual learning, meta learning",
+    "venue": "ICLR",
+    "description": "The authors present a method of preventing catastrophic forgetting, by using task-conditioned hypernets (i.e., hypernets that generate weights of target model based on some task embedding). Thus, rather than memorizing many data characteristics, we can split the problem into just learning a single point per task, given the task embedding.",
+    "link": "https://arxiv.org/pdf/1906.00695"
+  },
+  {
+    "title": "Stochastic Hyperparameter Optimization through Hypernetworks",
+    "author": "Jonathan Lorraine et al",
+    "year": "2018",
+    "topic": "hypernetworks, hyperparameters",
+    "venue": "ICLR",
+    "description": "Using hypernetworks to learn hyperparameters. They replace the training optimization loop in favor of a differentiable hypernetwork to allow for tuning of hyperparameters using grad descent.",
+    "link": "https://arxiv.org/pdf/1802.09419"
+  },
+  {
+    "title": "Playing Atari with Deep Reinforcement Learning",
+    "author": "Volodymyr Mnih et al",
+    "year": "2013",
+    "topic": "q-learning, reinforcement learning",
+    "venue": "Arxiv",
+    "description": "The authors present the first deep learning model that can learn complex control policies, and they teach it to play Atari 2600 games using Q-learning. Their goal was to create one net that can play as many games as possible.",
+    "link": "https://arxiv.org/pdf/1312.5602"
+  },
+  {
+    "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Encoding",
+    "author": "Song Han et al",
+    "year": "2016",
+    "topic": "quantization, encoding, pruning",
+    "venue": "ICML",
+    "description": "A three-pronged approach to compressing nets. They prune networks, then quantize and share weights, and then apply Huffman encoding.",
+    "link": "https://arxiv.org/pdf/1510.00149"
+  },
+  {
+    "title": "Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or -1",
+    "author": "Matthieu Courbariaux et al",
+    "year": "2016",
+    "topic": "quantization, efficiency, binary",
+    "venue": "Arxiv",
+    "description": "Introduction of training Binary Neural Networks, or nets with binary weights and activations. They also present experiments on deterministic vs stochastic binarization. They use the deterministic one for the most part, except for activations.",
+    "link": "https://arxiv.org/pdf/1602.02830"
+  },
+  {
+    "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+    "author": "Mingxing Tan et al",
+    "year": "2020",
+    "topic": "efficiency, scaling",
+    "venue": "ICML",
+    "description": "A study of model scaling is presented. They propose a novel scaling method to uniformly scale all dimensions of depth/width/resolution using a compound coefficient. This paper presents a method for scaling width/depth/resolution; for instance, if you want to use 2^{N} more compute resources, then you can scale by their coefficients to do so. They also quantify the relationship between width, depth, and resolution.",
+    "link": "https://arxiv.org/pdf/1905.11946"
+  },
+  {
+    "title": "The wake-sleep algorithm for unsupervised neural networks",
+    "author": "Geoffry Hinton et al",
+    "year": "1995",
+    "topic": "representation, generative",
+    "venue": "Arxiv",
+    "description": "One of the first generative neural networks that kind of resembles diffusion.",
+    "link": "https://www.cs.toronto.edu/~hinton/csc2535/readings/ws.pdf"
+  },
+  {
+    "title": "ViTCoD: Vision Transformer Acceleration via Dedicated Algorithm and Accelerator Co-Design",
+    "author": "Haoran You et al",
+    "year": "2022",
+    "topic": "vit, accelerator, attention",
+    "venue": "Arxiv",
+    "description": "Co-deisng for ViTs. Prunes and polarizes attention maps to have denser/sparser patterns. Development of hardware accelerator as well.",
+    "link": "https://arxiv.org/pdf/2210.09573"
+  },
+  {
+    "title": "Evolving Neural Networks through Augmenting Topologies",
+    "author": "Kenneth O. Stanley et al",
+    "year": "2002",
+    "topic": "nas, evolution",
+    "venue": "Arxiv",
+    "description": "Evolution for NAS.",
+    "link": "https://www.cse.unr.edu/~sushil/class/gas/papers/NEAT.pdf"
+  },
+  {
+    "title": "A Brief Review of Hypernetworks in Deep Learning",
+    "author": "Vinod Kumar Chauhan et al",
+    "year": "2024",
+    "topic": "hypernetwork",
+    "venue": "Arxiv",
+    "description": "Review of hypernets.",
+    "link": "https://arxiv.org/pdf/2306.06955"
+  },
+  {
+    "title": "HyperNetworks",
+    "author": "David Ha et al",
+    "year": "2016",
+    "topic": "hypernetwork",
+    "venue": "Arxiv",
+    "description": "Looking at HyperNetworks: networks that generate weights for other networks.",
+    "link": "https://arxiv.org/pdf/1609.09106"
+  },
+  {
+    "title": "Deep Learners Benefit More from Out-of-Distribution Examples",
+    "author": "Yoshio Bengio et al",
+    "year": "2024",
+    "topic": "ood",
+    "venue": "ICML",
+    "description": "Evidence that ood samples can help learning. They also argue that intermediate levels of representation can benefit the models in multi-task settings.",
+    "link": "http://proceedings.mlr.press/v15/bengio11b/bengio11b.pdf"
+  },
+  {
+    "title": "Balanced Data, Imbalanced Spectra: Unveiling Class Disparities with Spectral Imbalance",
+    "author": "Chiraag Kaushik et al",
+    "year": "2024",
+    "topic": "spectra, class imbalance",
+    "venue": "ICML",
+    "description": "Introduction of the idea of \"spectral imbalance\", which can affect classification accuracy even when classes are balanced. Basically, they look at how the distributions of eigenvalues in different classes affect classification accuracy.",
+    "link": "https://arxiv.org/pdf/2402.11742"
+  },
+  {
+    "title": "DeepArchitect: Automatically Designing and Training Deep Architectures",
+    "author": "Renato Negrinho et al",
+    "year": "2017",
+    "topic": "nas",
+    "venue": "Arxiv",
+    "description": "Proposal of a language to describe neural networks architectures. Can then describe them as trees to search through. Show different search methods for going through the trees (Monte Carlo tree search, random, use of surrogate function, etc.).",
+    "link": "https://arxiv.org/pdf/1704.08792"
+  },
+  {
+    "title": "Graph neural networks: A review of methods and applications",
+    "author": "Jie Zhou et al",
+    "year": "2020",
+    "topic": "gnn",
+    "venue": "AI Open",
+    "description": "What graph neural networks are, what they are made of, how to train them. And examples. They describe a general design pipeline (Find graph structure, specify graph type and scale, design loss function) and explain the main modules in GNNs (propagation to propagate information between notes, sampling module to conduct the propagation, pooling module to extract information from notes).",
+    "link": "https://arxiv.org/pdf/1812.08434"
+  },
+  {
+    "title": "1D convolution neural networks and applications: A survey",
+    "author": "Serkan Kiranyaz et al",
+    "year": "2020",
+    "topic": "cnn, survey",
+    "venue": "Mechanical Systems and Signal Processing",
+    "description": "A brief overview of applications of 1D CNNs is performed. It is largely focused on medicine (for instance, ECG) and fault detection (for instance, vibration based structural damage).",
+    "link": "https://arxiv.org/pdf/1905.03554"
+  },
+  {
+    "title": "2 in 1 Accelerator: Enabling Random Precision Switch for Winning Both Adversarial Robustness and Efficiency",
+    "author": "Yonggan Fu et al",
+    "year": "2021",
+    "topic": "quantization, accelerator",
+    "venue": "ACM",
+    "description": "The most interesting point of this paper (among many things!) is the smart idea to use quantization as a way to boost DNN robustness. Cool!",
+    "link": "https://arxiv.org/pdf/2109.05223"
+  },
+  {
+    "title": "Token Picker: Accelerating Attention in Text Generation with Minimized Memory Transfer via Probability Estimation",
+    "author": "Junyoung Park et al",
+    "year": "2024",
+    "topic": "efficiency, hardware, accelerator, attention",
+    "venue": "DAC",
+    "description": "In autoregressive models with attention, off chip memory accesses need to be minimized. The authors note that there have been efforts to prune unimportant tokens, but these do not do much for removing tokens with attention scores near zero. The authors (smartly!) notice this issue, and provide a fast method of estimating the decision to prune or not based on estimation of the probability if a token is or is not important. An architecture for this is also provided.",
+    "link": "https://arxiv.org/pdf/2407.15131"
+  },
+  {
+    "title": "Maxout Networks",
+    "author": "Ian Goodfellow et al",
+    "year": "2013",
+    "topic": "dropout, maxout",
+    "venue": "ICML",
+    "description": "The authors note that dropout is \"most effective when taking relatively large steps in parameter space. In this regime, each update can be seen as making a significat update to a different model on a different subset of the training set\". I really liked that quote. They then develop the maxout unit, which iessentially takes the maxmimum across some number of affine transformations, allowing for learning of piecewise linear approximations of nonlinear functions.",
+    "link": "https://arxiv.org/pdf/1302.4389"
+  },
+  {
+    "title": "Geometric deep learning: Going beyond Euclidean data",
+    "author": "Michael Bronstein et al",
+    "year": "2017",
+    "topic": "geometric deep learning",
+    "venue": "IEEE SIG",
+    "description": "Provides an overview of geometric deep learning, which are methods of generalizing DNNs to non Euclidean domains (graphs, manifolds, etc).",
+    "link": "https://arxiv.org/pdf/1611.08097"
+  },
+  {
+    "title": "Sampling in Constrained Domains with Orthogonal Space Variational Gradient Descent",
+    "author": "Ruqi Zhang et al",
+    "year": "2022",
+    "topic": "variational gradient descent, gradient flow",
+    "venue": "NeurIPS",
+    "description": "The authors propose a new variational framework called O Gradient for sampling in implicitly defined constrained domains, using two orthogonal directions to drive the sampler towards the domain and explore it by decreasing a KL divergence. They prove the convergence of O Gradient and apply it to both Langevin dynamics and Stein Variational Gradient Descent (SVGD), demonstrating its effectiveness on various machine learning tasks.",
+    "link": "https://arxiv.org/pdf/2210.06447"
+  },
+  {
+    "title": "Entropy MCMC: Sampling from Flat Basins with Ease",
+    "author": "Bolian Li et al",
+    "year": "2024",
+    "topic": "sampling, bayesian, flat basins",
+    "venue": "ICML",
+    "description": "The authors propose a practical MCMC algorithm for sampling from flat basins of DNN posterior distributions, using a guiding variable based on local entropy to steer the sampler. They prove the fast convergence rate of their method compared to existing flatness aware methods and demonstrate its superior performance on various tasks through comprehensive experiments. The method is mathematically simple and computationally efficient, making it suitable as a drop in replacement for standard sampling methods like SGLD.",
+    "link": "https://arxiv.org/pdf/2310.05401"
+  },
+  {
+    "title": "AdderNet: Do We Really Need Multiplications in Deep Learning?",
+    "author": "Hanting Chen et al",
+    "year": "2021",
+    "topic": "multiplication-less, efficiency",
+    "venue": "CVPR",
+    "description": "The authors show that with a cost of accuracy you can use additions instead of multiplications. They mainly tested CNNs.",
+    "link": "https://arxiv.org/pdf/1912.13200"
+  },
+  {
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "author": "Ian Goodfellow et al",
+    "year": "2015",
+    "topic": "adversarial examples",
+    "venue": "ICLR",
+    "description": "Adversarial examples (adding \"small but intentially worst case perturbations to examples from the dataset\") proves to be an interesting method to train models. The authors also (smartly!) describe a method to generate adversarial examples by a linear method.",
+    "link": "https://arxiv.org/pdf/1412.6572"
+  },
+  {
+    "title": "Identifying and attacking the saddle point problem in high dimensional non convex optimization",
+    "author": "Yann Dauphin et al",
+    "year": "2014",
+    "topic": "saddle points, optimization",
+    "venue": "NeurIPS",
+    "description": "The authors argue that saddle points, rather than local minima, are the primary challenge in minimizing non convex error functions in high dimensional spaces, based on insights from various scientific fields and empirical evidence. They explain that saddle points surrounded by high error plateaus can significantly slow down learning and create the illusion of local minima, particularly in high dimensional problems of practical interest. To address this challenge, the authors propose a new approach called the saddle free Newton method, designed to quickly escape high dimensional saddle points, unlike traditional gradient descent and quasi Newton methods.",
+    "link": "https://arxiv.org/pdf/1406.2572"
+  },
+  {
+    "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+    "author": "Sergey Ioffe et al",
+    "year": "2015",
+    "topic": "batch, normalization",
+    "venue": "PMLR",
+    "description": "The authors identify internal covariate shift as a significant challenge in training deep neural networks, where the distribution of each layer's inputs changes during training due to parameter updates in previous layers. To address this issue, they propose Batch Normalization, a method that normalizes layer inputs as part of the model architecture, performing normalization for each training mini batch. Batch Normalization enables the use of much higher learning rates, reduces sensitivity to initialization, and acts as a regularizer, sometimes eliminating the need for Dropout.|",
+    "link": "https://arxiv.org/pdf/1502.03167"
+  },
+  {
+    "title": "Bayesian Deep Learning and a Probabilistic Perspective of Generalization",
+    "author": "Andrew Wilson et al",
+    "year": "2020",
+    "topic": "bayesian, marginalization",
+    "venue": "NeurIPS",
+    "description": "The authors emphasize that marginalization, rather than using a single set of weights, is the key distinguishing feature of a Bayesian approach, which can significantly improve the accuracy and calibration of modern deep neural networks. They demonstrate that deep ensembles provide an effective mechanism for approximate Bayesian marginalization and propose a related approach that further improves the predictive distribution by marginalizing within basins of attraction. The paper investigates the prior over functions implied by a vague distribution over neural network weights, explaining neural network generalization from a probabilistic perspective and showing that seemingly mysterious results (like fitting random labels) can be reproduced with Gaussian processes. The authors demonstrate that Bayesian model averaging mitigates the double descent phenomenon, leading to monotonic performance improvements as model flexibility increases.",
+    "link": "https://arxiv.org/pdf/2002.08791"
+  },
+  {
+    "title": "A Practical Bayesian Framework for Backpropagation Networks",
+    "author": "David MacKay et al",
+    "year": "1992",
+    "topic": "bayesian",
+    "venue": "Neural Computation",
+    "description": "The authors present a quantitative and practical Bayesian framework for learning mappings in feedforward networks, enabling objective comparisons between different network architectures and providing stopping rules for network pruning or growing procedures. This framework allows for objective selection of weight decay terms or regularizers, measures the effective number of well determined parameters in a model, and provides quantified estimates of error bars on network parameters and outputs. The approach helps detect poor underlying assumptions in learning models and demonstrates a good correlation between generalization ability and Bayesian evidence for well matched learning models.",
+    "link": "https://ieeexplore.ieee.org/document/6796869"
+  },
+  {
+    "title": "Bayesian Neural Network Priors Revisited",
+    "author": "Vincent Fortuin et al",
+    "year": "2022",
+    "topic": "bayesian, priors",
+    "venue": "ICLR",
+    "description": "Isotropic Gaussian priors are the standard for modern Bayesian neural network inference, but their accuracy and optimal performance are uncertain. By studying summary statistics of neural network weights trained with stochastic gradient descent (SGD), the authors find that CNN and ResNet weights exhibit strong spatial correlations, while FCNNs display heavy tailed weight distributions. Incorporating these observations into priors improves performance on various image classification datasets, mitigating the cold posterior effect in FCNNs but slightly increasing it in ResNets.",
+    "link": "https://arxiv.org/pdf/2102.06571"
+  },
+  {
+    "title": "Hands on Bayesian Neural Networks   A Tutorial for Deep Learning Users",
+    "author": "Laurent Jospin et al",
+    "year": "2022",
+    "topic": "bayesian",
+    "venue": "IEEE",
+    "description": "A good summary / tutorial for using Bayesian Nets. Also provides some good paper references within.",
+    "link": "https://arxiv.org/pdf/2007.06823"
+  },
+  {
+    "title": "Position Paper: Bayesian Deep Learning in the Age of Large Scale AI",
+    "author": "Theodore Papamarkou et al",
+    "year": "2024",
+    "topic": "bayesian, mcmc",
+    "venue": "ICML",
+    "description": "A good summary of strengths of BDL (Bayesian Deep Learning) with regards to modern deep learning, while also addressing some weaknesses. A good paper if need to do an overview of modern challenges (as of 2024).|",
+    "link": "https://arxiv.org/pdf/2402.00809"
+  },
+  {
+    "title": "A Neural Probabilistic Language Model",
+    "author": "Bengio et al",
+    "year": "2003",
+    "topic": "statistical language modeling",
+    "venue": "JMLR",
+    "description": "One of the first papers about modern methods in using neural systems to estimate probability functions of word sequences. They show that MLPs can model better than the SOTA (at that time). A classic.|",
+    "link": "https://jmlr.org/papers/volume3/bengio03a/bengio03a.pdf"
+  },
+  {
+    "title": "Bit Fusion: Bit Level Dynamically Composable Architecture for Accelerating Deep Neural Networks",
+    "author": "Hardik Sharma et al",
+    "year": "2018",
+    "topic": "accelerator, quantization, bit fusion",
+    "venue": "ISCA",
+    "description": "Hardware acceleration of Deep Neural Networks (DNNs) aims to address their high compute intensity, with the paper focusing on the potential of reducing bitwidth in operations without compromising classification accuracy. To prevent accuracy loss, the bitwidth varies significantly across DNNs, and a fixed bitwidth accelerator may lead to limited benefits or degraded accuracy. The authors introduce Bit Fusion, a bit flexible accelerator that dynamically adjusts bitwidth for individual DNN layers, resulting in significant speedup and energy savings compared to state of the art accelerators, Eyeriss and Stripes, and achieving performance close to a 250 Watt Titan Xp GPU while consuming much less power.",
+    "link": "https://arxiv.org/pdf/1712.01507"
+  },
+  {
+    "title": "A Framework for the Cooperation of Learning Algorithms",
+    "author": "Leon Bottou et al",
+    "year": "1990",
+    "topic": "learning algorithms, modules",
+    "venue": "NeurIPS",
+    "description": "Cooperative training of modular systems offers a unified approach to many learning algorithms and hybrid systems, allowing the design and implementation of complex learning systems that incorporate structural a priori knowledge about tasks. The authors introduce a framework using a statistical formulation of learning systems to define and combine modules into cooperative systems, enabling the creation of hybrid systems that combine the advantages of connectionist and other learning algorithms. By decomposing complex tasks into simpler subtasks, modular architectures can be built, where each module corresponds to a subtask, facilitating easier achievement of the learning goal by introducing a modular decomposition of the global task.",
+    "link": "https://proceedings.neurips.cc/paper/1990/file/a8c88a0055f636e4a163a5e3d16adab7-Paper.pdf"
+  },
+  {
+    "title": "CNP: An FPGA Based Processor for Convolutional Networks",
+    "author": "Clement Farabet et al",
+    "year": "2009",
+    "topic": "fpga, cnn",
+    "venue": "IEEE",
+    "description": "One of the first attempts (that I have found) at putting a CNN into an FPGA and showing it can be done to perform some task (face detection).",
+    "link": "https://yann.lecun.com/exdb/publis/pdf/farabet-fpl-09.pdf"
+  },
+  {
+    "title": "A Complete Recipe for Stochastic Gradient MCMC",
+    "author": "Yi An Ma et al",
+    "year": "2015",
+    "topic": "hamiltonian, mcmc",
+    "venue": "NeurIPS",
+    "description": "Recent Markov chain Monte Carlo (MCMC) samplers use continuous dynamics and scalable variants with stochastic gradients to efficiently explore target distributions, but proving convergence with stochastic gradient noise remains challenging. The authors provide a general framework for constructing MCMC samplers, including stochastic gradient versions, based on continuous Markov processes defined by two matrices, demonstrating that any such process can be represented within this framework. Using this framework, they propose a new state adaptive sampler, stochastic gradient Riemann Hamiltonian Monte Carlo (SGRHMC), which combines the benefits of Riemann HMC with the scalability of stochastic gradient methods, as shown in experiments with simulated data and a streaming Wikipedia analysis.",
+    "link": "https://arxiv.org/pdf/1506.04696"
+  }
+]

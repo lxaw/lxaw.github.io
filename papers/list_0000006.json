@@ -1,0 +1,497 @@
+[
+  {
+    "title": "MagicPIG: LSH Sampling for Efficient LLM Generation",
+    "author": "Zhuoming Chen et al",
+    "year": "2024",
+    "topic": "llm, kv cache",
+    "venue": "Arxiv",
+    "description": "This paper challenges the common assumption that attention in LLMs is naturally sparse, showing that TopK attention (selecting only the highest attention scores) can significantly degrade performance on tasks that require aggregating information across the full context. The authors demonstrate that sampling-based approaches to attention can be more effective than TopK selection, leading them to develop MagicPIG, a system that uses Locality Sensitive Hashing (LSH) to efficiently sample attention keys and values. A key insight is that the geometry of attention in LLMs has specific patterns - notably that the initial attention sink token remains almost static regardless of input, and that query and key vectors typically lie in opposite directions - which helps explain why simple TopK selection is suboptimal. Their solution involves a heterogeneous system design that leverages both GPU and CPU resources, with hash computations on GPU and attention computation on CPU, allowing for efficient processing of longer contexts while maintaining accuracy.",
+    "link": "https://arxiv.org/pdf/2410.16179"
+  },
+  {
+    "title": "Guiding a Diffusion Model with a Bad Version of Itself",
+    "author": "Tero Karras et al",
+    "year": "2024",
+    "topic": "diffusion, guidance",
+    "venue": "Arxiv",
+    "description": "The paper makes two key contributions: First, they show that Classifier-Free Guidance (CFG) improves image quality not just through better prompt alignment, but because the unconditional model D0 learns a more spread-out distribution than the conditional model D1, causing the guidance term ∇x log(p1/p0) to push samples toward high-probability regions of the data manifold. Second, based on this insight, they introduce \"autoguidance\" - using a smaller, less-trained version of the model itself as the guiding model D0 rather than an unconditional model, which allows for quality improvements without reducing variation and works even for unconditional models.",
+    "link": "https://arxiv.org/pdf/2406.02507"
+  },
+  {
+    "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+    "author": "Xinyin Ma et al",
+    "year": "2023",
+    "topic": "llm, structural pruning",
+    "venue": "Arxiv",
+    "description": "The authors introduce LLM-Pruner, a novel approach for compressing large language models that operates in a task-agnostic manner while requiring minimal access to the original training data. Their key insight is to first automatically identify groups of interdependent neural structures within the LLM by analyzing dependency patterns, ensuring that coupled structures are pruned together to maintain model coherence. The method then estimates the importance of these structural groups using both first-order gradients and approximated Hessian information from a small set of calibration samples, allowing them to selectively remove less critical groups while preserving the model's core functionality. Finally, they employ a rapid recovery phase using low-rank adaptation (LoRA) to fine-tune the pruned model with a limited dataset in just a few hours, enabling efficient compression while maintaining the LLM's general-purpose capabilities.",
+    "link": "https://arxiv.org/pdf/2305.11627"
+  },
+  {
+    "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+    "author": "Guangxuan Xiao et al",
+    "year": "2023",
+    "topic": "llm, quantization, activations",
+    "venue": "ICML",
+    "description": "The key insight of SmoothQuant is that in large language models, while weights are relatively easy to quantize, activations are much harder due to outliers. They observed that these outliers persistently appear in specific channels across different tokens, suggesting that the difficulty could be redistributed. Their solution is to mathematically transform the model by scaling down problematic activation channels while scaling up the corresponding weight channels proportionally, which maintains mathematical equivalence while making both weights and activations easier to quantize. This \"difficulty migration\" approach allows them to balance the quantization challenges between weights and activations using a tunable parameter α, rather than having all the difficulty concentrated in the activation values.",
+    "link": "https://arxiv.org/pdf/2211.10438"
+  },
+  {
+    "title": "ESPACE: Dimensionality Reduction of Activations for Model Compression",
+    "author": "Charbel Sakr et al",
+    "year": "2024",
+    "topic": "llm, dimensionality reduction, activations, compression",
+    "venue": "NeurIPS",
+    "description": "Instead of decomposing weight matrices as done in previous work, ESPACE reduces the dimensionality of activation tensors by projecting them onto a pre-calibrated set of principal components using a static projection matrix P, where for an activation x, its projection is x̃ = PPᵀx. The projection matrix P is carefully constructed (using eigendecomposition of activation statistics) to preserve the most important components while reducing dimensionality, taking advantage of natural redundancies that exist in activation patterns due to properties like the Central Limit Theorem when stacking sequence/batch dimensions. During training, the weights remain uncompressed and fully trainable (maintaining model expressivity), while at inference time, the weight matrices can be pre-multiplied with the projection matrix (PTWᵀ) to achieve compression through matrix multiplication associativity: Y = WᵀX ≈ Wᵀ(PPᵀX) = (PTWᵀ)(PᵀX). This activation-centric approach is fundamentally different from previous methods because it maintains full model expressivity during training while still achieving compression at inference time, and it takes advantage of natural statistical redundancies in activation patterns rather than trying to directly compress weights.",
+    "link": "https://arxiv.org/pdf/2410.05437"
+  },
+  {
+    "title": "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model",
+    "author": "Chunting Zhou et al",
+    "year": "2024",
+    "topic": "diffusion, transformer, multi-modal",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper is that a single transformer model can effectively handle both discrete data (like text) and continuous data (like images) by using different training objectives for each modality within the same model. They introduce \"Transfusion,\" which uses traditional language modeling (next token prediction) for text sequences while simultaneously applying diffusion modeling for image sequences, combining these distinct objectives into a unified training approach. The architecture employs a novel attention pattern that allows for causal attention across the entire sequence while enabling bidirectional attention within individual images, letting image patches attend to each other freely while maintaining proper causality for text generation. This unified approach avoids the need for separate specialized models or complex architectures while still allowing each modality to be processed according to its most effective paradigm.",
+    "link": "https://arxiv.org/pdf/2408.11039"
+  },
+  {
+    "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+    "author": "Jiawei Zhao et al",
+    "year": "2024",
+    "topic": "lora, low-rank projection",
+    "venue": "ICML",
+    "description": "This paper introduces GaLore, a memory-efficient approach for training large language models that exploits the inherent low-rank structure of gradients rather than imposing low-rank constraints on the model weights themselves. The key insight is that while weight matrices may need to be full-rank for optimal performance, their gradients naturally become low-rank during training due to the specific structure of backpropagated gradients in neural networks, particularly in cases where the batch size is smaller than the matrix dimensions or when the gradients follow certain parametric forms. Building on this observation, GaLore projects gradients into low-rank spaces for memory-efficient optimization while still allowing full-parameter learning, contrasting with previous approaches like LoRA that restrict the weight updates to low-rank spaces. By periodically switching between different low-rank subspaces during training, GaLore maintains the flexibility of full-rank training while significantly reducing memory usage, particularly in storing optimizer states.",
+    "link": "https://arxiv.org/pdf/2403.03507"
+  },
+  {
+    "title": "Neural Discrete Representation Learning",
+    "author": "Aaron van der Oord et al",
+    "year": "2017",
+    "topic": "generative models, vae",
+    "venue": "NeurIPS",
+    "description": "The key innovation of this paper is the introduction of the Vector Quantised-Variational AutoEncoder (VQ-VAE), which combines vector quantization with VAEs to learn discrete latent representations instead of continuous ones. Unlike previous approaches to discrete latent variables which struggled with high variance or optimization challenges, VQ-VAE uses a simple but effective nearest-neighbor lookup system in the latent space, along with a straight-through gradient estimator, to learn meaningful discrete codes. This approach allows the model to avoid the common posterior collapse problem where latents are ignored when paired with powerful decoders, while still maintaining good reconstruction quality comparable to continuous VAEs. The discrete nature of the latent space enables the model to focus on capturing important high-level features that span many dimensions in the input space (like objects in images or phonemes in speech) rather than local details, and these discrete latents can then be effectively modeled using powerful autoregressive priors for generation.",
+    "link": "https://arxiv.org/pdf/1711.00937"
+  },
+  {
+    "title": "Improved Precision and Recall Metric for Assessing Generative Models",
+    "author": "Tuomas Kynkaanniemi et al",
+    "year": "2019",
+    "topic": "generative models, precision, recall",
+    "venue": "NeurIPS",
+    "description": "This paper introduces an improved metric for evaluating generative models by separately measuring precision (quality of generated samples) and recall (coverage/diversity of generated distribution) using k-nearest neighbors to construct non-parametric manifold approximations of real and generated data distributions. The authors demonstrate their metric's effectiveness using StyleGAN and BigGAN, showing how it provides more nuanced insights than existing metrics like FID, particularly in revealing tradeoffs between image quality and variation that other metrics obscure. They use their metric to analyze and improve StyleGAN's architecture and training configurations, identifying new variants that achieve state-of-the-art results, and perform the first principled analysis of truncation methods. Finally, they extend their metric to evaluate individual sample quality, enabling quality assessment of interpolations and providing insights into the shape of the latent space that produces realistic images.",
+    "link": "https://arxiv.org/pdf/1904.06991"
+  },
+  {
+    "title": "Generative Pretraining from Pixels",
+    "author": "Mark Chen et al",
+    "year": "2020",
+    "topic": "pretraining, gpt",
+    "venue": "PMLR",
+    "description": "The paper demonstrates that transformer models can learn high-quality image representations by simply predicting pixels in a generative way, without incorporating any knowledge of the 2D structure of images. They show that as the generative models get better at predicting pixels (measured by log probability), they also learn better representations that can be used for downstream image classification tasks. The authors discover that, unlike in supervised learning where the best representations are in the final layers, their generative models learn the best representations in the middle layers - suggesting the model first builds up representations before using them to predict pixels. Finally, while their approach requires significant compute and works best at lower resolutions, it achieves competitive results with other self-supervised methods and shows that generative pre-training can be a promising direction for learning visual representations without labels.",
+    "link": "https://cdn.openai.com/papers/Generative_Pretraining_from_Pixels_V2.pdf"
+  },
+  {
+    "title": "Why Does Unsupervised Pre-Training Help Deep Learning?",
+    "author": "Dumitru Erhan et al",
+    "year": "2010",
+    "topic": "pretraining, unsupervised",
+    "venue": "JMLR",
+    "description": "This paper argues that standard training schemes place parameters in regions of the parameter space that generalize poorly, while greedy layer-wise unsupervised pre-training allows each layer to learn a nonlinear transformation of its input that captures the main variations in the input, which acts as a regularizer: minimizing variance and introducing bias towards good initializations for the parameters. They argue that defining particular initialization points implicitly imposes constraints on the parameters in that it specifies which minima (out of many possible minima) of the cost function are allowed. They further argue that small perturbations in the trajectory of the parameters have a larger effect early on, and hint that early examples have larger influence and may trap model parameters in particular regions of parameter space corresponding to the arbitrary ordering of training examples (similar to the \"critical period\" in developmental psychology).",
+    "link": "https://jmlr.org/papers/volume11/erhan10a/erhan10a.pdf"
+  },
+  {
+    "title": "Improving Language Understanding by Generative Pre-Training",
+    "author": "Alec Radford et al",
+    "year": "2020",
+    "topic": "pretraining",
+    "venue": "Arxiv",
+    "description": "The key insight of this paper is that language models can learn deep linguistic and world knowledge through unsupervised pre-training on large corpora of contiguous text, which can then be effectively transferred to downstream tasks. The authors demonstrate this by using a Transformer architecture that can capture long-range dependencies, pre-training it on a books dataset that contains extended narratives rather than shuffled sentences, making it particularly effective at understanding context. Their innovation extends to how they handle transfer learning - rather than creating complex task-specific architectures, they show that simple input transformations can adapt their pre-trained model to various tasks while preserving its learned capabilities. This elegant approach proves remarkably effective, with their single task-agnostic model outperforming specially-designed architectures across nine different natural language understanding tasks, suggesting that their pre-training method captures fundamental aspects of language understanding.",
+    "link": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+  },
+  {
+    "title": "Learning Transferable Visual Models from Natural Language Supervision",
+    "author": "Alec Radford et al",
+    "year": "2021",
+    "topic": "CLIP",
+    "venue": "Arxiv",
+    "description": "CLIP (Contrastive Language-Image Pre-training) works by simultaneously training two neural networks - one that encodes images and another that encodes text - to project their inputs into a shared multi-dimensional space where similar concepts end up close together. During training, CLIP takes a batch of image-text pairs and learns to identify which text descriptions actually match which images, doing this by maximizing the cosine similarity between embeddings of genuine pairs while minimizing similarity between mismatched pairs. The training data consists of hundreds of millions of (image, text) pairs collected from the internet, which helps CLIP learn broad visual concepts and their relationships to language without requiring hand-labeled data. What makes CLIP particularly powerful is its zero-shot capability - after training, it can make predictions about images it has never seen before by comparing them against any arbitrary text descriptions, rather than being limited to a fixed set of predetermined labels.",
+    "link": "https://arxiv.org/pdf/2103.00020"
+  },
+  {
+    "title": "Adam: A Method for Stochastic Optimization",
+    "author": "Diederik Kingma et al",
+    "year": "2015",
+    "topic": "optimizers",
+    "venue": "ICLR",
+    "description": "Adam combines momentum (through exponential moving average of gradients mt) and adaptive learning rates (through exponential moving average of squared gradients vt) to create an efficient optimizer, where mt captures the direction of updates while vt adapts the step size for each parameter based on its gradient history. The optimizer corrects initialization bias in these moving averages by scaling them with factors 1/(1-β₁ᵗ) and 1/(1-β₂ᵗ) respectively, ensuring unbiased estimates even in early training. The parameter update θt ← θt-1 - α·mt/(√vt + ϵ) is invariant to gradient scaling because it uses the ratio mt/√vt, while the adaptive learning rate 1/√vt approximates the diagonal of the Fisher Information Matrix's square root, making it a more conservative version of natural gradient descent that works well with sparse gradients and non-stationary objectives. The hyperparameters β₁ = 0.9 and β₂ = 0.999 mean the momentum term considers roughly the last 10 steps while the variance term considers the last 1000 steps, allowing Adam to both move quickly in consistent directions while being careful in directions with high historical variance.",
+    "link": "https://arxiv.org/pdf/1412.6980"
+  },
+  {
+    "title": "Simplifying Neural Networks by Soft Weight-Sharing",
+    "author": "Steven Nowlan et al",
+    "year": "1992",
+    "topic": "soft weight sharing, mog",
+    "venue": "Neural Computation",
+    "description": "This paper tackles the challenge of penalizing complexity and preventing overfitting in neural networks. Traditional methods, like L2 regularization, penalize the sum of squared weights but can favor multiple weak connections over a single strong one, leading to suboptimal weight configurations. To address this, the authors propose a mixture of Gaussians (MoG) prior: a narrow Gaussian encourages small weights to shrink to zero, while a broad Gaussian preserves large weights essential for modeling the data accurately. By clustering weights into near-zero and larger groups, this data-driven regularization avoids forcing all weights toward zero equally and demonstrates better generalization on 12 toy tasks compared to early stopping and traditional squared-weight penalties.",
+    "link": "https://www.cs.toronto.edu/~hinton/absps/sunspots.pdf"
+  },
+  {
+    "title": "DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models",
+    "author": "Muyang Li et al",
+    "year": "2024",
+    "topic": "diffusion, distributed inference",
+    "venue": "Arxiv",
+    "description": "DistriFusion introduces *displaced patch parallelism*, where the input image is split into patches, each processed independently by different GPUs. To maintain fidelity and reduce communication costs, the method reuses activations from the previous timestep as context for the current step, ensuring interaction between patches without excessive synchronization. Synchronous communication is only used at the initial step, while subsequent steps leverage asynchronous communication, hiding communication overhead within computation. This technique allows each device to process only a portion of the workload efficiently, avoiding artifacts and achieving scalable parallelism tailored to the sequential nature of diffusion models.",
+    "link": "https://arxiv.org/pdf/2402.19481"
+  },
+  {
+    "title": "Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching",
+    "author": "Xinyin Ma et al",
+    "year": "2024",
+    "topic": "diffusion, caching",
+    "venue": "Arxiv",
+    "description": "This paper proposes interpolation between computationally inexpensive solutions that are suboptimal and optimal solutions that are expensive by training a router the learn how to cache layers of the diffusion transformer.",
+    "link": "https://arxiv.org/pdf/2406.01733"
+  },
+  {
+    "title": "Flash Attention",
+    "author": "Tri Dao et al",
+    "year": "2022",
+    "topic": "attention, transformer",
+    "venue": "Arxiv",
+    "description": "This introduces FlashAttention, which is an IO-aware exact attention algo that uses tiling. Basically, they use tiling to prevent needing to put the large NxN attention matrix on GPU HBM; FlashAttention goes through blocks of the K and V matrices, loads them to on-chip SRAM, which increases speed! Neat!",
+    "link": "https://arxiv.org/pdf/2205.14135"
+  },
+  {
+    "title": "Token Merging for Fast Stable Diffusion",
+    "author": "Daniel Bolya et al",
+    "year": "2023",
+    "topic": "diffusion, token merging",
+    "venue": "Arxiv",
+    "description": "This paper seeks to apply ToMe (https://arxiv.org/pdf/2210.09461) to diffusion models, introducing techniques for token partitioning (by changing the way src and dst is merged) and a token unmerging operation (which is basically just setting the two merged tokens equal to their average, and then resetting back the two tokens with that average). Remarkably, this works very well!",
+    "link": "https://arxiv.org/pdf/2303.17604"
+  },
+  {
+    "title": "DeepCache: Accelerating Diffusion Models for Free",
+    "author": "Xinyin Ma et al",
+    "year": "2023",
+    "topic": "diffusion, cache",
+    "venue": "Arxiv",
+    "description": "Similarly to Faster Diffusion (Senma Li et al, 2024), this paper uses the temporal redundancy in the denoising stages. They then cache features across the UNet by skipping some of the skip branches / paths. Basically, for timesteps t and t+1 that are similar, we can cache some of the high level features between them and directly use them. Also smart!",
+    "link": "https://arxiv.org/pdf/2312.00858"
+  },
+  {
+    "title": "Faster Diffusion: Rethinking the Role of UNet Encoder in Diffusion Models",
+    "author": "Senmao Li et al",
+    "year": "2024",
+    "topic": "diffusion, encoder",
+    "venue": "NeurIPS",
+    "description": "This paper notes that the UNet decoder in diffusion models has similar output between timesteps. Thus, they seek to basically cyclically reuse encoder features for the decoder. Smart!",
+    "link": "https://arxiv.org/pdf/2312.09608"
+  },
+  {
+    "title": "Improved Denoising Diffusion Probabilistic Models",
+    "author": "Alex Nichol et al",
+    "year": "2021",
+    "topic": "diffusion, precision, recall",
+    "venue": "Arxiv",
+    "description": "This paper is the first to show that DDPMs can get competitive log-likelihoods. They use a reparameterization and a hybrid learning objective to more tightly optimize the variational lower bound, and find that their objective has less gradient noise during training. They use learned variances and find that they can get convincing samples using fewer steps. They also use the improved precision and recall metrics (Kynkaanniemi et al 2019) to show that diffusion models have higher recall for similar FID, which suggests they cover a large portion of the target distribution. They focused on optimizing log-likelihood as it is believed that optimizing ll forces the model to capture all models of data distribution (Razavi et al 2019). Heninghan et al 2020 has also shown that small improvements in ll can dramatically impact sample quality / learned feature representations. The authors argue that fixing \\sigma_{t} (as Ho et al 2020 does) is reasonable in terms of sample quality, but does not explain much about the ll. Thus, to improve ll they think of finding a better choice for \\Sigma_{\\theta}(x_{t},t), so they choose to try to learn it. They note that it is better to parameterize the var as an interpolation between \\beta_{t} and \\tilde{\\beta_{t}} in the log domain. Remember that \\beta_{t} is the noise schedule, which is typically a small value that increases over time following some schedule. \\tilde{\\beta is a reparameterization of \\beta_{t} used to simplify calculations. They are related via \\alpha, which is 1-\beta_{t}. Finally, they note that a linear schedule for noise leads to faster destroying of information than is necessary, and propose a different noise scheduler. Lots of insights!",
+    "link": "https://arxiv.org/pdf/2102.09672"
+  },
+  {
+    "title": "Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture",
+    "author": "Huijie Zhang et al",
+    "year": "2024",
+    "topic": "diffusion, multi-stage",
+    "venue": "CVPR",
+    "description": "This paper proposes a multi-stage framework for diffusion models that uses a shared encoder and separate decoders for different timestep intervals, along with an optimal denoiser-based timestep clustering method, to improve training and sampling efficiency while maintaining or enhancing image generation quality.",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Improving_Training_Efficiency_of_Diffusion_Models_via_Multi-Stage_Framework_and_CVPR_2024_paper.pdf"
+  },
+  {
+    "title": "Temporal Dynamic Quantization for Diffusion Models",
+    "author": "Junhyuk So et al",
+    "year": "2023",
+    "topic": "diffusion, quantization",
+    "venue": "NeurIPS",
+    "description": "Temporal Dynamic Quantization (TDQ) addresses the challenge of quantizing diffusion models by dynamically adjusting quantization parameters based on the denoising time step. TDQ employs a trainable module consisting of frequency encoding, a multi-layer perceptron (MLP), and a SoftPlus activation to predict optimal quantization intervals for each time step. This module maps the temporal information to appropriate quantization parameters, allowing the method to adapt to the varying activation distributions across different stages of the diffusion process. By pre-computing these quantization intervals, TDQ avoids the runtime overhead associated with traditional dynamic quantization methods while still providing the necessary flexibility to handle the temporal dynamics of diffusion models.",
+    "link": "https://arxiv.org/pdf/2306.02316v2"
+  },
+  {
+    "title": "Learning Efficient Convolutional Networks through Network Slimming",
+    "author": "Zhuang Liu et al",
+    "year": "2017",
+    "topic": "pruning, importance",
+    "venue": "CVPR",
+    "description": "This paper introduces *network slimming*, a method to reduce the size, memory footprint, and computation of CNNs by enforcing channel-level sparsity without sacrificing accuracy. It works by identifying and pruning insignificant channels during training, leveraging the γ scaling factors in Batch Normalization (BN) layers to effectively determine channel importance. The approach introduces minimal training overhead and is compatible with modern CNN architectures, eliminating the need for specialized hardware or software. Using the BN layer’s built-in scaling properties makes this pruning efficient, avoiding redundant scaling layers or issues that arise from linear transformations in convolution layers.",
+    "link": "https://arxiv.org/pdf/1708.06519"
+  },
+  {
+    "title": "Q-Diffusion: Quantizing Diffusion Models",
+    "author": "Xiuyu Li et al",
+    "year": "2023",
+    "topic": "diffusion, sampling",
+    "venue": "ICCV",
+    "description": "This paper tackles the inefficiencies of diffusion models, such as slow inference and high computational cost, by proposing a post-training quantization (PTQ) method designed specifically for their multi-timestep process. The key innovation includes a *time step-aware calibration data sampling* approach, which uniformly samples inputs across multiple time steps to better reflect real inference data, addressing quantization errors and varying activation distributions without the need for additional data. Additionally, the paper introduces *shortcut-splitting quantization* to handle the bimodal activation distributions caused by the concatenation of deep and shallow feature channels in shortcuts, quantizing them separately before concatenation for improved accuracy with minimal extra resources.",
+    "link": "https://arxiv.org/pdf/2302.04304"
+  },
+  {
+    "title": "Mixture of Efficient Diffusion Experts Through Automatic Interval and Sub-Network Selection",
+    "author": "Alireza Ganjdanesh et al",
+    "year": "2024",
+    "topic": "diffusion, sampling",
+    "venue": "Arxiv",
+    "description": "This paper reduces the cost of sampling via pruning a pretrained diffusion model into a mixture of experts (MoE) for their respective time intervals, via a routing agent that predicts the architecture needed to generate the experts.",
+    "link": "https://arxiv.org/pdf/2409.15557"
+  },
+  {
+    "title": "A Closer Look at Time Steps is Worthy of Triple Speed-Up for Diffusion Model Training",
+    "author": "Kai Wang et al",
+    "year": "2024",
+    "topic": "diffusion, sampling",
+    "venue": "Arxiv",
+    "description": "This paper introduces SpeeD, a novel approach for accelerating the training of diffusion models without compromising performance. The authors analyze the diffusion process and identify three distinct areas: acceleration, deceleration, and convergence, each with different characteristics and importance for model training. Based on these insights, SpeeD implements two key components: asymmetric sampling, which reduces the sampling of less informative time steps in the convergence area, and change-aware weighting, which gives more importance to the rapidly changing areas between acceleration and deceleration. The authors' key insight is that not all time steps in the diffusion process are equally valuable for training, with the convergence area providing limited benefits despite occupying a large proportion of time steps, while the rapidly changing area between acceleration and deceleration is crucial but often undersampled. To address this, SpeeD introduces an asymmetric sampling strategy using a two-step probability function: $P(t) = \\begin{cases} \\frac{k}{T + \\tau(k-1)}, & 0 < t \\leq \\tau \\ \\frac{1}{T + \\tau(k-1)}, & \\tau < t \\leq T \\end{cases}$, where τ is a carefully selected threshold marking the beginning of the convergence area, k is a suppression intensity factor, T is the total number of time steps, and t is the current time step. This function increases sampling probability before τ and suppresses it after. Additionally, SpeeD employs a change-aware weighting scheme based on the gradient of the process increment's variance, assigning higher weights to time steps with faster changes. By combining these strategies, SpeeD aims to focus computational resources on the most informative parts of the diffusion process, potentially leading to significant speedups in training time without sacrificing model quality.",
+    "link": "https://arxiv.org/pdf/2405.17403"
+  },
+  {
+    "title": "HyperGAN: A Generative Model for Diverse, Performant Neural Networks",
+    "author": "Neale Ratzlaff et al",
+    "year": "2019",
+    "topic": "gan, ensemble",
+    "venue": "ICML",
+    "description": "This paper introduces HyperGAN, a novel generative model designed to learn a distribution of neural network parameters, addressing the issue of overconfidence in standard neural networks when faced with out-of-distribution data. Unlike traditional approaches, HyperGAN doesn't require restrictive prior assumptions and can rapidly generate large, diverse ensembles of neural networks. The model employs a unique \"mixer\" component that projects prior samples into a correlated latent space, from which layer-specific generators create weights for a deep neural network. Experimental results show that HyperGAN can achieve competitive performance on datasets like MNIST and CIFAR-10 while providing improved uncertainty estimates for out-of-distribution and adversarial data compared to standard ensembles. NOTE: There has actually been a diffusion variant of this idea: https://arxiv.org/pdf/2402.13144",
+    "link": "https://arxiv.org/pdf/2405.17403"
+  },
+  {
+    "title": "Diffusion Models Already Have a Semantic Latent Space",
+    "author": "Mingi Kwon et al",
+    "year": "2023",
+    "topic": "diffusion, latent space",
+    "venue": "ICLR",
+    "description": "This paper introduces Asymmetric Reverse Process (Asyrp), a method that discovers a semantic latent space (h-space) in pretrained diffusion models, enabling controlled image manipulation with desirable properties such as homogeneity, linearity, and consistency across timesteps, while also proposing a principled design for versatile editing and quality enhancement in the generative process. The authors propose Asymmetric Reverse Process (Asyrp). It modifies only the P_{t} term while preserving the D_{t} term in the reverse process. This makes sense because it a) breaks the destructive interference seen in previous methods, b) allows for controlled modification of the generation process towards target attributes, and c) maintains the overall structure and quality of the diffusion process.",
+    "link": "https://arxiv.org/pdf/2210.10960"
+  },
+  {
+    "title": "One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale",
+    "author": "Fan Bao et al",
+    "year": "2023",
+    "topic": "diffusion, multi-model",
+    "venue": "ICML",
+    "description": "The authors present a method of sampling from joint and conditional distributions using a small modification on diffusion models. UniDiffuser’s proposed method involves handling multiple modalities (such as images and text) within a single diffusion model. Here is in general what they do: 1. Perturb data in all modalities: For a given data point (x0,y0), where x0 is an image and y0 is text, UniDiffuser adds noise to both simultaneously. The noisy versions are represented as xt_{x} and yt_{y}, where t_{x} and t_{y} are the respective timesteps. 2. Use of individual timesteps for different modalities: Instead of using a single timestep t for both modalities, UniDiffuser uses separate timesteps t_{x} and t_{y}. This allows for more flexibility in handling the different characteristics of each modality. 3. Predicting noise for all modalities simultaneously: UniDiffuser uses a joint noise prediction network \\epsilon_{\\theta}(xt_{x},yt_{y},t_{x},t_{y}) that takes in the noisy versions of both modalities and their respective timesteps. The network then outputs predicted noise for both modalities in one forward pass.",
+    "link": "https://arxiv.org/pdf/2303.06555"
+  },
+  {
+    "title": "Diffusion Models as a Representation Learner",
+    "author": "Xingyi Yang et al",
+    "year": "2023",
+    "topic": "diffusion, representation learner",
+    "venue": "ICCV",
+    "description": "This paper (smartly!) notices that one of the major reasons for long training and poor results of diffusion models is the lack of fast learning of relationships. For instance, they remark on the learning of one eye of a dog before both eyes. They propose to mask the input image in the latent space and learn how to predict the masks, and then diffuse these masks. Brilliant!",
+    "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Masked_Diffusion_Transformer_is_a_Strong_Image_Synthesizer_ICCV_2023_paper.pdf"
+  },
+  {
+    "title": "Masked Diffusion Transformer is a Strong Image Synthesizer",
+    "author": "Shanghua Gao et al",
+    "year": "2023",
+    "topic": "diffusion, masking, transformer",
+    "venue": "ICCV",
+    "description": "This paper (smartly!) notices that one of the major reasons for long training and poor results of diffusion models is the lack of fast learning of relationships. For instance, they remark on the learning of one eye of a dog before both eyes. They propose to mask the input image in the latent space and learn how to predict the masks, and then diffuse these masks. Brilliant!",
+    "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Masked_Diffusion_Transformer_is_a_Strong_Image_Synthesizer_ICCV_2023_paper.pdf"
+  },
+  {
+    "title": "Generative Modeling by Estimating Gradients of the Data Distribution",
+    "author": "Yang Song et al",
+    "year": "2019",
+    "topic": "diffusion, score matching",
+    "venue": "NeurIPS",
+    "description": "This paper introduces Noise Conditional Score Networks (NCSNs), a novel approach to generative modeling that learns to estimate the score function of a data distribution at multiple noise levels. NCSNs are trained using score matching, avoiding the need to compute normalizing constants, and generate samples using annealed Langevin dynamics. The method addresses challenges in modeling complex, high-dimensional data distributions, particularly for data lying on or near low-dimensional manifolds.",
+    "link": "https://arxiv.org/pdf/1907.05600"
+  },
+  {
+    "title": "LAPTOP-Diff: Layer Pruning and Normalized Distillation for Compression Diffusion Models",
+    "author": "Dingkun Zhang et al",
+    "year": "2024",
+    "topic": "diffusion, pruning",
+    "venue": "Arxiv",
+    "description": "This paper proposes layer pruning and normalized distillation for pruning diffusion models. They use a surrogate function and show that their surrogate implies a property called \"additivity\", where the output distortion caused by many perturbations approximately equals the sum of the output distortion caused by each single perturbation. They then show that their computation can be formed as a 0-1 Knapsack problem. They then analyze what is the important objective for retraining, and see that there is an imbalance in previous feature distillation approaches employed in the retraining phase. They note that the L2-Norms of feature maps at the end of different stages and the values of different feature loss terms vary significantly, for instance, the highest loss term is ~10k times greater than the lowest one throughout the distillation process, and produces about 1k times larger gradients. This dilutes the gradients of the numerically insignificant feature loss terms. So, they opt to normalize the feature loss.",
+    "link": "https://arxiv.org/pdf/2404.11098"
+  },
+  {
+    "title": "Classifier-Free Diffusion Guidance",
+    "author": "Jonathan Ho et al",
+    "year": "2022",
+    "topic": "diffusion, guidance",
+    "venue": "NeurIPS",
+    "description": "This paper introduces classifier-free guidance, a novel technique for improving sample quality in conditional diffusion models without using a separate classifier. Unlike traditional classifier guidance, which relies on gradients from an additional classifier model, classifier-free guidance achieves similar results by combining score estimates from jointly trained conditional and unconditional diffusion models. The method involves training a single neural network that can produce both conditional and unconditional score estimates, and then using a weighted combination of these estimates during the sampling process. This approach simplifies the training pipeline, avoids potential issues associated with training classifiers on noisy data, and eliminates the need for adversarial attacks on classifiers during sampling. The authors demonstrate that classifier-free guidance can achieve a similar trade-off between Fréchet Inception Distance (FID) and Inception Score (IS) as classifier guidance, effectively boosting sample quality while reducing diversity. The key difference is that classifier-free guidance operates purely within the generative model framework, without relying on external classifier gradients. This method provides an intuitive explanation for how guidance works: it increases conditional likelihood while decreasing unconditional likelihood, pushing generated samples towards more characteristic features of the desired condition.",
+    "link": "https://arxiv.org/pdf/2207.12598"
+  },
+  {
+    "title": "LD-Pruner: Efficient Pruning of Latent Diffusion Models using Task-Agnostic Insights",
+    "author": "Thibault Castells et al",
+    "year": "2024",
+    "topic": "pruning, diffusion, ldm",
+    "venue": "CVPR",
+    "description": "This paper presents LD-Pruner. The main interesting part is how the frame the pruning problem. Basically, they define an \"operator\" (any fundamental building block of a net, like convolutional layers, activation functions, transformer blocks), and try to either 1) remove it or 2) replace it with a less demanding operation. As they operate on the latent space, this work can be applied to any generation that uses diffusion (task agnostic). It is interesting to note their limitations: the approach does not extend to pruning the decoder, and their approach does not consider dependencies between operators (which is a big deal I think). Finally, their score function seems a bit arbitrary (maybe this could be learned?).",
+    "link": "https://openaccess.thecvf.com/content/CVPR2024W/EDGE/papers/Castells_LD-Pruner_Efficient_Pruning_of_Latent_Diffusion_Models_using_Task-Agnostic_Insights_CVPRW_2024_paper.pdf"
+  },
+  {
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "author": "Jianlin Su et al",
+    "year": "2021",
+    "topic": "attention, positional embedding",
+    "venue": "Arxiv",
+    "description": "This paper introduces Rotary Position Embedding (RoPE), a method for integrating positional information into transformer models by using a rotation matrix to encode absolute positions and incorporating relative position dependencies.",
+    "link": "https://arxiv.org/pdf/2104.09864"
+  },
+  {
+    "title": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+    "author": "Alex Nichol et al",
+    "year": "2022",
+    "topic": "text-conditioned diffusion, inpainting",
+    "venue": "Arxiv",
+    "description": "This paper explores text-conditional image synthesis using diffusion models, comparing CLIP guidance and classifier-free guidance, and finds that classifier-free guidance produces more photorealistic and caption-aligned images.",
+    "link": "https://arxiv.org/pdf/2112.10741"
+  },
+  {
+    "title": "LLM Inference Unveiled: Survey and Roofline Model Insights",
+    "author": "Roger Waleffe et al",
+    "year": "2024",
+    "topic": "llms, survey",
+    "venue": "Arxiv",
+    "description": "This paper surveys some recent advancements in LLC inference, like speculative decoding or operator fusion. They also analyze the findings using the Roofline model, which is likely the first paper to do such a thing for LLM inference. Good for checking out other papers that have recently been published.",
+    "link": "https://arxiv.org/pdf/2402.16363"
+  },
+  {
+    "title": "An Empirical Study of Mamba-based Language Models",
+    "author": "Roger Waleffe et al",
+    "year": "2024",
+    "topic": "mamba, llms, transformer",
+    "venue": "Arxiv",
+    "description": "This paper compares Mamba-based, Transformer-based, and hybrid-based language models in a controlled setting where sizes and datasets are larger than the past (8B-params / 3.5T tokens). They find that Mamba and Mamba-2 lag behind Transformer models on copying and in-context learning tasks. They then see that a hybrid architecture of 43% Mamba, 7% self attention, and 50% MLP layers performs better than all others.",
+    "link": "https://arxiv.org/pdf/2406.07887"
+  },
+  {
+    "title": "Diffusion Models Beat GANs on Image Synthesis",
+    "author": "Prafulla Dhariwal et al",
+    "year": "2021",
+    "topic": "diffusion, gan",
+    "venue": "Arxiv",
+    "description": "This work demonstrates that diffusion models surpass the current state-of-the-art generative models in image quality, achieved through architecture improvements and classifier guidance, which balances diversity and fidelity. The model attains FID scores of 2.97 on ImageNet 128×128 and 4.59 on ImageNet 256×256, matching BigGAN-deep with as few as 25 forward passes while maintaining better distribution coverage. Additionally, combining classifier guidance with upsampling diffusion models further enhances FID scores to 3.94 on ImageNet 256×256 and 3.85 on ImageNet 512×512.",
+    "link": "https://arxiv.org/pdf/2105.05233"
+  },
+  {
+    "title": "Progressive Distillation for Fast Sampling of Diffusion Models",
+    "author": "Tim Salimans et al",
+    "year": "2022",
+    "topic": "diffusion, distillation, sampling",
+    "venue": "ICLR",
+    "description": "Diffusion models excel in generative modeling, surpassing GANs in perceptual quality and autoregressive models in density estimation, but they suffer from slow sampling times. This paper introduces two key contributions: new parameterizations that improve stability with fewer sampling steps and a distillation method that progressively reduces the number of required steps by half each time. Applied to benchmarks like CIFAR-10 and ImageNet, the approach distills models from 8192 steps down to as few as 4 steps, maintaining high image quality while offering a more efficient solution for both training and inference.",
+    "link": "https://arxiv.org/pdf/2202.00512"
+  },
+  {
+    "title": "On Distillation of Guided Diffusion Models",
+    "author": "Chenlin Meng et al",
+    "year": "2023",
+    "topic": "diffusion, classifier-free guidance",
+    "venue": "Arxiv",
+    "description": "Classifier-free guided diffusion models are effective for high-resolution image generation but are computationally expensive during inference due to the need to evaluate both conditional and unconditional models many times. This paper proposes a method to distill these models into faster ones by learning a single model that approximates the combined outputs, then progressively reducing the number of sampling steps. The approach significantly accelerates inference, generating images with comparable quality to the original model using as few as 1-4 denoising steps, achieving up to 256× speedup on datasets like ImageNet and LAION.",
+    "link": "https://arxiv.org/pdf/2210.03142"
+  },
+  {
+    "title": "Diffusion Probabilistic Models Made Slim",
+    "author": "Xingyi Yang et al",
+    "year": "2022",
+    "topic": "diffusion, dpms, spectral diffusion",
+    "venue": "Arxiv",
+    "description": "Diffusion Probabilistic Models (DPMs) produce impressive visual results but suffer from high computational costs, limiting their use on resource-limited platforms. This paper introduces Spectral Diffusion (SD), a lightweight model designed to address DPMs' bias against high-frequency generation, which smaller networks struggle to capture. SD incorporates wavelet gating for frequency dynamics and spectrum-aware distillation to enhance high-frequency recovery, achieving 8-18× computational efficiency while maintaining competitive image fidelity.",
+    "link": "https://arxiv.org/pdf/2211.17106"
+  },
+  {
+    "title": "Structural Pruning for Diffusion Models",
+    "author": "Gongfan Fang et al",
+    "year": "2023",
+    "topic": "diffusion, pruning",
+    "venue": "NeurIPS",
+    "description": "Generative modeling has advanced significantly with Diffusion Probabilistic Models (DPMs), but these models often require substantial computational resources. To address this, Diff-Pruning is introduced as a compression method that reduces the computational load by pruning unnecessary diffusion steps, using a Taylor expansion to identify key weights without extensive re-training. Empirical results show that Diff-Pruning can cut FLOPs by around 50%, while maintaining consistent generative performance at only 10-20% of the original training cost.",
+    "link": "https://arxiv.org/pdf/2305.10924"
+  },
+  {
+    "title": "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+    "author": "Ling Yang et al",
+    "year": "2024",
+    "topic": "diffusion, survey",
+    "venue": "ACM",
+    "description": "Diffusion models are a powerful class of deep generative models known for their success in tasks like image synthesis, video generation, and molecule design. This survey categorizes diffusion model research into efficient sampling, improved likelihood estimation, and handling specialized data structures, while also discussing the potential for combining them with other generative models. The review highlights their broad applications across fields such as computer vision, NLP, temporal data modeling, and interdisciplinary sciences, suggesting areas for further exploration.",
+    "link": "https://arxiv.org/pdf/2209.00796"
+  },
+  {
+    "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium",
+    "author": "Martin Heusel et al",
+    "year": "2017",
+    "topic": "gan, equilibrium, fid, is",
+    "venue": "NeurIPS",
+    "description": "This paper introduces a two time-scale update rule (TTUR) for GANs, and proves that this makes GANs converge to a local Nash equilibrium. More cited is the FID score introduced here. FID improves on IS by comparing the distributions of real and generated images directly. This is done by using the Inception model to extract features from images and then assuming these features follow a multidimensional Gaussian distribution. FID measures the difference between the Gaussians (representing the real and generated images) using the Frechet distance, which effectively captures differences in the mean and covariance (the first two moments) of the distributions. FID makes sense as it directly compares the distributions of real and generated images by using the extracted features from Inception. These features are assumed to follow some multidimensional Gaussian, which simplifies the comparison. The Guassian is chosen as it is the maximum entropy distribution for a given mean and covariance (proof: https://medium.com/mathematical-musings/how-gaussian-distribution-maximizes-entropy-the-proof-7f7dcb2caf4d) -- maximum entropy is important, because this means that the Gaussian makes the fewest additional assumptions about the data, making sure the model is as non-committal as possible given the available information. Then, we calculate the statistics between the real and generated image features, like their mean and covariances. Finally, we compute the FID score using Frechet AKA Wasserstein-2 distance.",
+    "link": "https://arxiv.org/pdf/2212.09748"
+  },
+  {
+    "title": "Scalable Diffusion Models with Transformers",
+    "author": "William Peebles et al",
+    "year": "2023",
+    "topic": "diffusion,ddpm, dit",
+    "venue": "CVPR",
+    "description": "The authors explore using transformers in the latent space, rather than U-Nets. They find that their methods can lead to lower FID scores compared to prior SOTA. In this paper, their image generation pipeline is roughly: 1) Input high resolution image x 2) Encoder z = E(x), where E is a pre-trained frozen VAE encoder, and z is the latent representation 3) The DiT model operates on z 4) New latent representation z’ is sampled from the diffusion model 5) We then decode the z’ using the pre-trained frozen VAE decoder D, and x’ is now the generated high resolution image.",
+    "link": "https://arxiv.org/pdf/2212.09748"
+  },
+  {
+    "title": "Max-Affine Spline Insights Into Deep Network Pruning",
+    "author": "Haoran You et al",
+    "year": "2022",
+    "topic": "early-bird, lottery-hypothesis, pruning, low-precision",
+    "venue": "TMLR",
+    "description": "The authors make connections from spline-theory (AKA, consdering DNNs as a continuous piecewise affline mapping) and pruning. Basically, they say that pruning removes redundant decision boundaries in layers that are pruned, and that we can compare the decision boundaries of unpruned networks to their pruned counterparts to show this (they have some nice visualizations). They also note that the final decision boundary often does not always depend on existing subdivision lines. Finally, they demonstrate another way of finding EB tickets using this spline formulation.",
+    "link": "https://arxiv.org/pdf/2101.02338"
+  },
+  {
+    "title": "Drawing Early-Bird Tickets: Towards More Efficient Training of Deep Networks",
+    "author": "Haoran You et al",
+    "year": "2020",
+    "topic": "early-bird, lottery-hypothesis, pruning, low-precision",
+    "venue": "ICLR",
+    "description": "The authors show that there exist early-bird (EB) tickets: small, but critical subnetworks for dense randomly intialized networks, that can be found using low-cost training schemes (low precision, early stopping). They also design a practical low compute method for finding these. They use mask distance. Basically, for each pruning iteration, a binary mask is created. This mask represents which parts of the network are kept (the \"ticket\", or pruned subnet) and which parts are removed. They then consider the scaling factor \"r\" in BN layers as indicators of significance. This r is learned during training and is used to scale normalized activations. The magnitude of r is an indicator of how important the channel is to the network's performance. After deciding which channels to prune based on r, the binary mask is created. If the channel is kept (not pruned), marked as 1 in the mask. Else, 0. For any two subnets, they then compute the \"mask distance\" (AKA Hamming distance) between the two ticketmasks. They measure the mask distance between consequtive epochs and draw EB tickets when such distance is smaller than some threshold.",
+    "link": "https://arxiv.org/pdf/1909.11957"
+  },
+  {
+    "title": "Learning both Weights and Connections for Efficient Neural Networks",
+    "author": "Song Han et al",
+    "year": "2015",
+    "topic": "pruning, compression, regularization",
+    "venue": "NeurIPS",
+    "description": "The authors show a method of pruning neural networks in three steps: 1) train the network to learn what connections are important, 2) prune unimportant connections, 3) retrain and fine-tune. In order to train for learning what connections are important, they do not focus on learning the final weight values, but rather just focus on the importance of connections. They don't explicitly mention how this is done, but one could look at the Hessian of the loss or the magnitude of the weights. I'd imagine you could do this within only a few training iterations. In their \"Regularization\" section, it is interesting to note that L1 regularization (penalizes non-zero params resulting in more params near zero) gave better accuracy after pruning, but before retraining. But, these remaining connections are not as good as with using L2. The authors also present a discussion of what dropout rate to use.",
+    "link": "https://arxiv.org/pdf/1506.02626"
+  },
+  {
+    "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+    "author": "Jiaming Tang et al",
+    "year": "2024",
+    "topic": "KV cache, sparsity, LLM",
+    "venue": "ICML",
+    "description": "Long context LLM inference is slow and the speed decreases significantly as sequence lengths grow. This is mainly due to needing to load a big KV cache during self-attention. Prior works have use methods to evict tokens in the attention maps to promote sparsity, but the Han lab (smartly!) found that the criticality of tokens strongly correlates with the current query token. Thus, they employ a KV Cache eviction method that retains all KV cache (since past evicted tokens may be needed to handle future queries), while being able to select the top K relevant tokens to a particular query. This allows for speedups in self-attention at low cost to accuracy.",
+    "link": "https://arxiv.org/pdf/2406.10774"
+  },
+  {
+    "title": "BigNAS: Scaling Up Neural Architecture Search with Big Single-Stage Models",
+    "author": "Jiahui Yu et al",
+    "year": "2020",
+    "topic": "NAS, one-shot",
+    "venue": "Arxiv",
+    "description": "Most NAS frameworks train some one-shot model to rank the quality of different child architectures. However, these rankings often are different than reality, so frameworks typically finetune architecture after finding them. BigNAS proposes that this fine-tuning / post-processing is not necessary. They find some interesting points, such as that \"big models converge faster while small child models converge slower\". Thus, at some training step t when the performance of a big model peaks, the small child models are not yet fully-trained, and at a t' where the child models are fully trained, the big model is overfitting. Thus, they use an exponentially decaying with constant ending learning rate scheduler, which has constant learning rate at the end of training when it reaches 5% of initial learning rate. Another point they bring up is a \"coarse-to-fine\" strategy where one first finds a rough sketch of promising network candidates, and then samples multiple finer grained variations around the sketch of interest.",
+    "link": "https://arxiv.org/pdf/2003.11142"
+  },
+  {
+    "title": "Meta-Learning of Neural Architectures for Few-Shot Learning",
+    "author": "Thomas Elsken et al",
+    "year": "2021",
+    "topic": "NAS, meta-learning, few-shot, fsl",
+    "venue": "Arxiv",
+    "description": "The authors propose MetaNAS, which is the first method that fully integrates NAS with gradient-based meta-learning. Basically, they learn a method of joint learning gradient-based NAS methods like DARTS and meta-learning the architecture itself. Their goal is thus: meta-learn an architecture \\alpha_{meta} with corresponding meta-learned weights w_{meta}. When given a new task \\mathcal{T}_{i}, both \\alpha_{meta} and w_{meta} adapt quickly to \\mathcal{T}_{i} based on a few samples. One interesting technique they do is add a temperature term that is annealed to 0 over the course of task training; this is to help with sparsity of the mixture weights of the operations when using the DARTS search.",
+    "link": "https://arxiv.org/pdf/1911.11090"
+  }
+]
