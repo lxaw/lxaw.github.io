@@ -127,8 +127,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 428 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 428 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 437 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 437 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -154,10 +154,91 @@
         <tbody>
         
             <tr>
+                <td><a href="https://arxiv.org/pdf/1906.08237" target="_blank" rel="noopener noreferrer">XLNet: Generalized Autoregressive Pretraining for Language Understanding</a></td>
+                <td>Guanghan Wang et al</td>
+                <td>2026</td>
+                <td>xlnet, autoregressive, permutation, attention</td>
+                <td>Arxiv</td>
+                <td>In standard autoregressive models, causal attention fixes a single left-to-right order, so each token only attends to earlier tokens. XLNet instead samples a random permutation of token indices and treats that permutation as the factorization order, meaning “earlier” and “later” are defined by the permutation, not the original position. During training, attention masks are constructed so that a token can only attend to tokens that come before it in the sampled permutation, even though the underlying sequence order and positional encodings remain unchanged. Because different permutations place different tokens before or after a given position, the same token will sometimes see tokens to its left and sometimes to its right across training. In expectation over many permutations, each token learns to incorporate information from all other positions, effectively capturing bidirectional context while still using a causal (masked) attention mechanism. This works because causality is enforced with respect to the sampled permutation order, not the natural left-to-right order, so the model remains autoregressive but no longer tied to a single directional context.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2509.21474" target="_blank" rel="noopener noreferrer">d2: Improved Techniques for Training Reasoning Diffusion Language Models</a></td>
+                <td>Guanghan Wang et al</td>
+                <td>2026</td>
+                <td>dllm, rl</td>
+                <td>Arxiv</td>
+                <td>The paper derives a policy gradient objective for masked diffusion language models (DLMs), emphasizing that reinforcement learning requires computing likelihood ratios of generated outputs, which in turn depend on the model’s true probability structure. Unlike autoregressive models that factorize sequence likelihoods into per-token terms, DLMs define probabilities over entire denoising trajectories, where each token depends on intermediate noisy states across multiple steps. As a result, using per-token likelihoods (as in AR RL) produces biased gradients, since it does not match the model’s actual generative process, making trajectory likelihood estimation necessary for correct RL updates. To address this, the paper introduces d2-AnyOrder, an exact estimator that recovers a tractable factorization via any-order decoding and computes trajectory likelihoods in a single forward pass. Because most existing DLMs do not satisfy the assumptions required for this decoding scheme, the paper also proposes d2-StepMerge, which approximates trajectory likelihoods by grouping diffusion steps and trading off compute for bias with a theoretical error bound. Together, these contributions provide a principled RL framework for DLMs that replaces prior biased or intractable likelihood estimators with exact or controllably approximate trajectory-based methods.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2305.17926" target="_blank" rel="noopener noreferrer">Large Language Models are not Fair Evaluators</a></td>
+                <td>Peiyi Wang et al</td>
+                <td>2025</td>
+                <td>llm, bias, evaluation, position</td>
+                <td>Arxiv</td>
+                <td>The paper shows that using large language models (e.g., GPT-4) as evaluators introduces a strong positional bias, where simply changing the order (some models prefer first positions - GPT4, other prefer second ChatGPT) of candidate responses can flip evaluation outcomes. To mitigate this, it proposes Multiple Evidence Calibration (MEC), which forces the model to generate multiple pieces of evaluation reasoning before assigning scores, reducing reliance on a single biased judgment. It further introduces Balanced Position Calibration (BPC), which evaluates responses in both possible orders and averages the results to cancel out position effects. Finally, it adds Human-in-the-Loop Calibration (HITLC), which uses an entropy-based criterion to selectively involve humans on uncertain or biased cases, improving reliability while minimizing annotation cost.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.24088" target="_blank" rel="noopener noreferrer">Information-Theoretic Discrete Diffusion</a></td>
+                <td>Moongyu Jeon et al</td>
+                <td>2025</td>
+                <td>dllm, information, likelihood, diffusion</td>
+                <td>Arxiv</td>
+                <td>This paper gives an information-theoretic view of discrete diffusion by introducing Information–Minimum Denoising Score Entropy (I-MDSE) and Information–Minimum Denoising Cross-Entropy (I-MDCE), which formalize how information is lost during the forward noising process: as noise increases, the mutual information (I(x_0; x_t)) between the original data (x_0) and its corrupted version (x_t) decreases, and these identities show that the rate of this decrease is exactly given by the optimal denoising loss (DSE or DCE). Using this, they derive that the data log-likelihood (i.e., (log p(x_0)), the model’s assigned probability to a data point) can be written as an integral over noise levels of these optimal denoising losses, meaning likelihood is fully determined by how well the model can denoise at each step. This proves that common training losses (DSE for general discrete diffusion and DCE for masked diffusion) are not loose bounds but exact, principled estimators of likelihood when optimized. The framework also shows equivalence between score-based and masked diffusion via reparameterization and derives practical estimators such as a time-free likelihood formula, conditional likelihood decomposition, and low-variance coupled estimators for likelihood ratios.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2512.09106" target="_blank" rel="noopener noreferrer">Learning Unmasking Policies for Diffusion Language Models</a></td>
+                <td>Metod Jazbec et al</td>
+                <td>2026</td>
+                <td>dllm, markov, rl, grpo, unmasking</td>
+                <td>Arxiv</td>
+                <td>The paper formulates masked diffusion sampling as a Markov Decision Process, where unmasking decisions are treated as actions and the diffusion model acts as the environment. It introduces a lightweight transformer-based policy that takes token confidence scores as input and outputs Bernoulli decisions over which positions to unmask, avoiding direct dependence on model hidden states. The policy is trained with Group Relative Policy Optimization using a reward that jointly captures correctness and computational efficiency via a multiplicative design. Overall, the work replaces handcrafted confidence-based heuristics with a learned, adaptive unmasking strategy that dynamically decides both the order and number of tokens to reveal during generation.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.04525" target="_blank" rel="noopener noreferrer">Demystifying MaskGit Sampler and Beyond: Adaptive Order Selection in Masked Diffusion</a></td>
+                <td>Satoshi Hayakawa et al</td>
+                <td>2025</td>
+                <td>maskgit, sampling, temperature</td>
+                <td>Arxiv</td>
+                <td>The paper shows that the MaskGIT sampler implicitly performs temperature sampling, since its Gumbel-top-k selection makes positions and tokens behave as if drawn from sharpened distributions (p_i^beta) with (beta = 1 + 1/alpha), explaining both its effectiveness and its degradation with many steps. It introduces the moment sampler, which makes this explicit by first selecting positions based on expected confidence ((|p_i|_beta^beta)) and then sampling tokens directly from the temperature-scaled distribution (p_i^beta). This reformulation turns MaskGIT’s implicit “sample-then-choose” procedure into a clearer choose-then-sample (CTS) framework with separated index selection and token sampling. Building on this, the paper proposes partial transformer caching and a hybrid exploration–exploitation unmasking strategy to improve efficiency within the CTS view.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2410.08709" target="_blank" rel="noopener noreferrer">Distillation of Discrete Diffusion through Dimensional Correlations</a></td>
+                <td>Satoshi Hayakawa et al</td>
+                <td>2025</td>
+                <td>dllm, distillation, marginalization</td>
+                <td>Arxiv</td>
+                <td>The paper identifies that standard discrete diffusion uses product-form denoisers (factorized over dimensions), which are scalable but cannot capture joint dependencies, forcing accurate modeling to rely on many sampling steps. To address this, it introduces a mixture-of-products model, where the denoiser is an expectation over multiple product distributions indexed by a latent variable 𝜆; although each component is factorized, the mixture is expressive enough to represent arbitrary joint distributions and thus capture dimensional correlations with minimal extra cost. For distillation, the method trains a student to match a multi-step teacher using a distillation loss (KL divergence between teacher and student one-step denoisers at small noise levels) combined with a consistency loss, which enforces that applying the student after a teacher step matches applying the student directly—thereby transferring the correlations implicitly formed by multi-step composition. Together, this setup learns to approximate the teacher’s composed multi-step distribution in a few steps, with theoretical guarantees that the loss functions upper-bound the discrepancy between student and teacher distributions.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2305.18619" target="_blank" rel="noopener noreferrer">Likelihood-Based Diffusion Language Models</a></td>
+                <td>Ishaan Gulrajani et al</td>
+                <td>2023</td>
+                <td>dllm, diffusion, plaid</td>
+                <td>Arxiv</td>
+                <td>One of the earlier works on scaling diffusion llms. They trained the Plaid model.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2512.21446" target="_blank" rel="noopener noreferrer">dUltra: Ultra-Fast Diffusion Language Models via Reinforcement Learning</a></td>
+                <td>Shirui Chen et al</td>
+                <td>2026</td>
+                <td>dllm, diffusion, rl, unmasking, policy, grpo</td>
+                <td>Arxiv</td>
+                <td>Basically this paper uses GRPO to learn unmasking strategies that allow for more parallelization during decoding. Basically they add a head (takes last layer representations) that can plan how to denoise, and jointly optimize with GRPO. The main reason for RL is that the training data only includes greedily sampled trajectories, so we want some method that can explore teacher model modes while training on samlpes generated by student; this can be achieved by on-policy RL bc it trains on trajectories generated by the current policy, avoids distribution mismatch that occurs with offline distillation, and can explore via RL better unmasking strategies.</td>
+            </tr>
+        
+            <tr>
                 <td><a href="https://arxiv.org/pdf/2603.01367v2" target="_blank" rel="noopener noreferrer">DUEL: Exact Likelihood for Masked Diffusion via Deterministic Unmasking</a></td>
                 <td>Gilad Turok et al</td>
                 <td>2026</td>
-                <td></td>
+                <td>dllm, diffusion, likelihood, marginal</td>
                 <td>Arxiv</td>
                 <td>DUEL reframes masked diffusion models (MDMs) as any-order autoregressive models with a deterministic unmasking policy, showing that a model is defined jointly by a denoiser and a position-selection rule. The key theoretical result is that when the unmasking policy is deterministic, the intractable marginalization over all generation orders collapses to a single trajectory, enabling exact likelihood computation under the test-time distribution. This yields a proper notion of perplexity for MDMs—directly analogous to autoregressive models—resolving fundamental issues with ELBO-based and sample-based evaluation. More broadly, the framework formalizes how different unmasking strategies induce distinct distributions and provides a unified way to analyze and compare them via exact likelihood.</td>
             </tr>
