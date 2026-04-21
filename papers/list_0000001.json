@@ -1,9 +1,36 @@
 [
   {
+    "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model",
+    "author": "Chenghao Fan et al",
+    "year": "2026",
+    "topic": "dllm, block diffusion, training, masking, warmup, noise schedule",
+    "venue": "Arxiv",
+    "description": "The paper addresses the gap that diffusion language models for code have not matched autoregressive models in capability under equal data and compute, despite offering advantages like parallel generation and data reuse through masking. The authors argue the core issue is inefficient knowledge learning caused by random masking producing many weak or misleading contexts, where the correct token is underdetermined or noisy, reducing the ability to learn clear reasoning rules. To fix this, they propose a training pipeline that starts from an autoregressive checkpoint to efficiently compress “token reasoning knowledge,” then applies small-block diffusion continual pretraining so the model learns multi-token prediction while preserving strong, well-aligned contexts. Technically, their block diffusion masks only short contiguous spans (e.g., size 4) while keeping surrounding tokens clean, ensuring the conditional prediction problem remains well-constrained and aligned with inference-time block decoding. They further stabilize training with a warmup strategy that gradually increases masking ratio and removes diffusion loss reweighting early on, and introduce a block-wise clipped noise schedule that enforces at least one masked token per block to avoid zero-signal updates. Overall, the solution reframes diffusion training as a controlled data augmentation process that balances context diversity with learnability, ensuring that additional masking patterns improve rather than degrade knowledge acquisition.",
+    "link": "https://arxiv.org/pdf/2601.15892"
+  },
+  {
+    "title": "DMax: Aggressive Parallel Decoding for dLLMs",
+    "author": "Zigeng Chen et al",
+    "year": "2026",
+    "topic": "dllm, parallel decoding, self-refinement",
+    "venue": "Arxiv",
+    "description": "The paper identifies that diffusion language models fail under aggressive parallel decoding because they use a one-way mask-to-token process, where early incorrect predictions are fixed and then propagate, causing error accumulation without any mechanism for revision. To address this, the authors reformulate decoding as a self-refinement process in embedding space, where tokens are not immediately committed but can be iteratively updated. Their first key component, On-Policy Uniform Training, converts a masked diffusion model into a self-correcting model by training it not only on masked inputs but also on its own sampled predictions, using on-policy rollouts to reduce the mismatch between training and inference distributions. Concretely, they generate noisy sequences by sampling model predictions at masked positions, run two forward passes on masked and predicted sequences, and optimize both with cross-entropy against the clean target so the model learns to denoise its own mistakes. The second component, Soft Parallel Decoding, replaces discrete token states during inference with hybrid embeddings that interpolate between the predicted token embedding and the mask embedding based on prediction confidence, preserving uncertainty and enabling iterative correction. Combined with a block-wise decoding scheme that promotes tokens based on confidence thresholds and re-evaluates all positions until convergence, this allows the model to revise earlier predictions and maintain stability even under highly parallel updates.",
+    "link": "https://arxiv.org/pdf/2604.08302"
+  },
+  {
+    "title": "Introspective Diffusion Language Models",
+    "author": "Yifan Yu et al",
+    "year": "2026",
+    "topic": "dllm, introspection, consistency, verification",
+    "venue": "Arxiv",
+    "description": "The paper identifies a core weakness in diffusion language models: they lack introspective consistency, meaning the tokens they generate are often not supported when the model later re-evaluates them under a standard causal prediction rule. Formally, a token is sampled from a generation distribution q, but when the model computes the corresponding causal distribution p, the same token may have low probability, so the model does not “agree with itself.” In contrast, autoregressive models inherently enforce p = q because both generation and evaluation use the same next-token objective, which leads to stable and self-consistent reasoning. The authors argue that this mismatch in diffusion models causes error accumulation and weak long-horizon coherence, since the model cannot reliably validate its own intermediate outputs. To fix this, they propose Introspective Diffusion Language Models, which align q and p through causal masking, logit shifting, and a training objective that jointly enforces generation and verification consistency. At inference time, their decoding algorithm generates multiple tokens in parallel while verifying them against the causal distribution, ensuring that accepted tokens are consistent with what the model itself would predict.",
+    "link": "https://arxiv.org/pdf/2604.11035"
+  },
+  {
     "title": "dInfer: An Efficient Inference Framework for Diffusion Language Models",
     "author": "Yuxin Ma et al",
     "year": "2025",
-    "topic": "dllm, ",
+    "topic": "dllm, framework, inference",
     "venue": "Arxiv",
     "description": "The paper introduces dInfer, a modular inference framework for diffusion language models that decomposes inference into four components: model, diffusion iteration manager, decoding strategy, and KV-cache manager. It proposes an iteration smoothing algorithm that carries forward token representations across denoising steps to improve contextual consistency and mitigate degradation from caching. For decoding, it adds hierarchical decoding to recursively partition spans and ensure progress, and credit decoding to accumulate confidence across iterations and prioritize stable token predictions. To address the incompatibility of standard KV caching with bidirectional attention, it introduces a vicinity KV-cache refresh strategy that selectively recomputes keys and values for tokens near the active decoding region while keeping others cached. The framework also incorporates system-level optimizations including combined tensor and expert parallelism, CUDA graph execution, and loop unrolling to eliminate kernel launch overhead across diffusion steps. Additionally, it supports trajectory distillation to train models using effective decoding trajectories, improving their ability to exploit parallel decoding during inference.",
     "link": "https://arxiv.org/pdf/2510.08666"
