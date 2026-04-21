@@ -3,7 +3,7 @@
     "title": "MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification",
     "author": "Sivan Doveh et al",
     "year": "2020",
-    "topic": "NAS, meta-learning, few-shot, fsl",
+    "topic": "nas, meta-learning, few-shot",
     "venue": "Arxiv",
     "description": "The authors propose a method using a DARTS-like search for FSL architectures. \"Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.\". Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.",
     "link": "https://arxiv.org/pdf/1912.00412"
@@ -12,7 +12,7 @@
     "title": "Distilling the Knowledge in a Neural Network",
     "author": "Geoffry Hinton et al",
     "year": "2015",
-    "topic": "distillation, ensemble, MoE",
+    "topic": "knowledge distillation, ensemble, moe",
     "venue": "Arxiv",
     "description": "The first proposal of knowledge distillation. The main interesting point I found was that they change the temperature of the softmax to be higher to allow for softer targets. This allows for understanding what 2's look like 3's (in an MNIST example). Basically, adds a sort of regularization since more information can be carried in these softer targets compared to a single 0 or 1. They also propose the idea of having an ensemble of models, and then learning a distilled model that is smaller. The biological example of having a clumsy larvae that then becomes a more specialized bug was good.",
     "link": "https://arxiv.org/pdf/1503.02531"
@@ -21,7 +21,7 @@
     "title": "HyperTuning: Toward Adapting Large Language Models without Back-propagation",
     "author": "Jason Phang et al",
     "year": "2023",
-    "topic": "hypernetworks, adaptation, tuning, LoRA, LLMs",
+    "topic": "hypernetworks, adaptation, tuning, lora, llm",
     "venue": "ICML",
     "description": "The authors show that we can a hypernetwork for model adaptation in order to generate task-specific parameters. They try two approaches: generating prefixs and generating LoRA parameters for a frozen T5 model using few-shot examples. They also note the importance of hyperpretraining, i.e., an additional stage to adapt the hypernet to generate parameters for the downstream model. They also propose a scheme for this. NOTE! \"We also observe a consistent trend where HyperT5-Prefix outperforms HyperT5-LoRA. We speculate that it is easier for hypermodels to learn to generate soft prefixes as compared to LoRA weights...\"",
     "link": "https://arxiv.org/pdf/2211.12485"
@@ -30,7 +30,7 @@
     "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
     "author": "Armen Aghajanyan et al",
     "year": "2020",
-    "topic": "fine-tuning, intrinsic dimension, lora",
+    "topic": "finetuning, intrinsic dimension, lora",
     "venue": "Arxiv",
     "description": "Large models with billions of parameters can be fine-tuned using only a few hundred examples. Why is this? Furthermore, large models often allow for significant sparsification, which implies that there is much redundancy. This paper targets both of these ideas, by showing that many common models have an \"intrinsic dimension\" much less than the full parameterization.",
     "link": "https://arxiv.org/pdf/2012.13255"
@@ -39,7 +39,7 @@
     "title": "LoRA: Low-Rank Adaptation of Large Language Models",
     "author": "Edward Hu et al",
     "year": "2021",
-    "topic": "low rank adaptation, lora, llm, fine-tuning",
+    "topic": "lora, llm, finetuning",
     "venue": "Arxiv",
     "description": "Fine-tuning large models is expensive, because we update all the original parameters. LoRA, taking inspiration from Aghajanyan et al, 2020 (pre-trained language models have a low \"intrinsic dimension\"), the authors thought that the weight updates would also have low intrinsic rank. Thus, they decompose Delta W = BA, where B and A are lower rank. The A and B are trainable. They initialize A with Gaussian, and B as zero, so Delta W = BA is zero initialy. They then optimize and find this method to be more efficient in terms of both time and space.",
     "link": "https://arxiv.org/pdf/2106.09685"
@@ -48,7 +48,7 @@
     "title": "Learning to Compress Prompts with Gist Tokens",
     "author": "Jesse Mu et al",
     "year": "2023",
-    "topic": "llms, prompting, compression, tokens",
+    "topic": "llm, prompting, compression, token",
     "venue": "NeurIPS",
     "description": "The authors describe a method of using a distilling function G (similar to a hypernet) that is able to compress LM prompts into a smaller set of \"gist\" tokens. These tokens can then be cached and reused. The neat trick is that they reuse the LM itself as G, so gisting itself incurs no additional training cost. Note that in their \"Failure Cases\" section, they mention \"... While it is unclear why only the gist models exhibit this behavior (i.e. the fail example behavior), these issues can likely be mitigated with more careful sampling techniques.",
     "link": "https://arxiv.org/pdf/2304.08467"
@@ -111,7 +111,7 @@
     "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
     "author": "Benoit Jacob et al",
     "year": "2017",
-    "topic": "quantization, quantization schemes, efficient inference, floating-point",
+    "topic": "quantization, quantization schemes, efficiency, floating-point",
     "venue": "Arxiv",
     "description": "The authors propose a quantization scheme that allows us to only use integer arithmetic to approximate fp computations in a neural network. They also describe a training approach that simulates the effect of quantization in the forward pass. Backprop still occurs, but all weights and biases are stored in fp. The forward prop pass then simulates quantized inference by rounding off using the quantization scheme they describe that changes fp to int.",
     "link": "https://arxiv.org/pdf/1712.05877"
@@ -138,7 +138,7 @@
     "title": "Example-based Hypernetworks for Multi-source Adaptation to Unseen Domains",
     "author": "Tomer Volk et al",
     "year": "2023",
-    "topic": "hypernetworks, multi-source adaptation, unseen domains, NLP",
+    "topic": "hypernetworks, multi-source adaptation, unseen domains, nlp",
     "venue": "EMNLP",
     "description": "The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain's semantic space. The signature is then used by a hypernet to generate the task classifier's weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. ",
     "link": "https://aclanthology.org/2023.findings-emnlp.610.pdf"
@@ -174,7 +174,7 @@
     "title": "Continual Learning with Hypernetworks",
     "author": "Johannes von Oswald et al",
     "year": "2020",
-    "topic": "hypernetworks, continual learning, meta learning",
+    "topic": "hypernetworks, continual learning, meta-learning",
     "venue": "ICLR",
     "description": "The authors present a method of preventing catastrophic forgetting, by using task-conditioned hypernets (i.e., hypernets that generate weights of target model based on some task embedding). Thus, rather than memorizing many data characteristics, we can split the problem into just learning a single point per task, given the task embedding.",
     "link": "https://arxiv.org/pdf/1906.00695"
@@ -192,7 +192,7 @@
     "title": "Playing Atari with Deep Reinforcement Learning",
     "author": "Volodymyr Mnih et al",
     "year": "2013",
-    "topic": "q-learning, reinforcement learning",
+    "topic": "q-learning, rl",
     "venue": "Arxiv",
     "description": "The authors present the first deep learning model that can learn complex control policies, and they teach it to play Atari 2600 games using Q-learning. Their goal was to create one net that can play as many games as possible.",
     "link": "https://arxiv.org/pdf/1312.5602"
@@ -228,7 +228,7 @@
     "title": "The wake-sleep algorithm for unsupervised neural networks",
     "author": "Geoffry Hinton et al",
     "year": "1995",
-    "topic": "representation, generative",
+    "topic": "representation, generative models",
     "venue": "Arxiv",
     "description": "One of the first generative neural networks that kind of resembles diffusion.",
     "link": "https://www.cs.toronto.edu/~hinton/csc2535/readings/ws.pdf"
@@ -255,7 +255,7 @@
     "title": "A Brief Review of Hypernetworks in Deep Learning",
     "author": "Vinod Kumar Chauhan et al",
     "year": "2024",
-    "topic": "hypernetwork",
+    "topic": "hypernetworks",
     "venue": "Arxiv",
     "description": "Review of hypernets.",
     "link": "https://arxiv.org/pdf/2306.06955"
@@ -264,7 +264,7 @@
     "title": "HyperNetworks",
     "author": "David Ha et al",
     "year": "2016",
-    "topic": "hypernetwork",
+    "topic": "hypernetworks",
     "venue": "Arxiv",
     "description": "Looking at HyperNetworks: networks that generate weights for other networks.",
     "link": "https://arxiv.org/pdf/1609.09106"

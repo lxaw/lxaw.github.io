@@ -12,7 +12,7 @@
     "title": "Approximation by Superpositions of a Sigmoidal Function",
     "author": "G. Cybenko",
     "year": "universal approximator, completeness",
-    "topic": "TODO",
+    "topic": "todo",
     "venue": "Mathematics of Control, Signals, and Systems",
     "description": "This paper demonstrates that finite linear combinations of compositions of a fixed univariate function and a set of affine functionals can uniformly approximate any continuous function of nn real variables within the unit hypercube, under mild conditions on the univariate function. These findings resolve an open question about the representability of functions by single hidden layer neural networks, specifically showing that arbitrary decision regions can be well approximated by continuous feedforward neural networks with a single hidden layer and any continuous sigmoidal nonlinearity.",
     "link": "https://cognitivemedium.com/magic_paper/assets/Cybenko.pdf"
@@ -57,7 +57,7 @@
     "title": "Deep Image Prior",
     "author": "Dmitry Ulyanov et al",
     "year": "2020",
-    "topic": "inpatining, super-resolution, denoising",
+    "topic": "inpainting, super-resolution, denoising",
     "venue": "IEEE",
     "description": "This paper challenges the conventional wisdom by demonstrating that the structure of a generator network, even when randomly initialized, can effectively capture low level image statistics without any specific training on example images. The authors show that this randomly initialized neural network can serve as a powerful handcrafted prior, yielding excellent results in standard image processing tasks such as denoising, super resolution, and inpainting. Furthermore, the same network structure can invert deep neural representations for diagnostic purposes and restore images based on input pairs like flash and no flash conditions, showcasing its versatility and effectiveness across various image restoration applications.",
     "link": "https://arxiv.org/pdf/1711.10925"
@@ -102,7 +102,7 @@
     "title": "Disentangling Trainability and Generalization in Deep Neural Networks",
     "author": "Lechao Xiao et al",
     "year": "2020",
-    "topic": "neural tangent kernel, ntk",
+    "topic": "ntk",
     "venue": "ICML",
     "description": "This study focuses on characterizing the trainability and generalization of deep neural networks, particularly under conditions of very wide and very deep architectures, leveraging insights from the Neural Tangent Kernel (NTK). By analyzing the NTK's spectrum, the study formulates necessary conditions for both memorization and generalization across architectures like Fully Connected Networks (FCNs) and Convolutional Neural Networks (CNNs). The research identifies key spectral quantities such as λmax, λbulk, κ, and P(Θ(l)) that critically influence the performance of deep networks, providing a precise theoretical framework validated by extensive experiments on CIFAR10. It highlights distinctions in generalization behavior between CNNs with and without global average pooling.",
     "link": "https://arxiv.org/pdf/1912.13053"
@@ -309,7 +309,7 @@
     "title": "Language Models are Unsupervised Multitask Learners",
     "author": "Alec Radford et al",
     "year": "2018",
-    "topic": "unsupervised, GPT",
+    "topic": "unsupervised, gpt",
     "venue": "Arxiv",
     "description": "Demonstrates that language models, specifically GPT 2, trained on the WebText dataset, start to learn various natural language processing tasks (question answering, machine translation, reading comprehension, summarization) without explicit task specific supervision. For instance, when conditioned on a document and questions, the model achieves an F1 score of 55 on the CoQA dataset, matching or exceeding several baseline systems that were trained with over 127,000 examples.",
     "link": "https://cdn.openai.com/better language models/language_models_are_unsupervised_multitask_learners.pdf"
@@ -345,7 +345,7 @@
     "title": "A Simple Baseline for Bayesian Uncertainty in Deep Learning",
     "author": "Wesley Maddox et al",
     "year": "2019",
-    "topic": "bayesian, uncertainty, guassian",
+    "topic": "bayesian, uncertainty, gaussian",
     "venue": "NeurIPS",
     "description": "SWAG combines Stochastic Weight Averaging (SWA) with Gaussian fitting to provide an approximate posterior distribution over neural network weights. SWA computes the first moment of SGD iterates using a modified learning rate schedule. SWAG extends this by fitting a Gaussian distribution using SWA's solution as the first moment and incorporating a low rank plus diagonal covariance derived from SGD iterates.",
     "link": "https://arxiv.org/pdf/1902.02476"

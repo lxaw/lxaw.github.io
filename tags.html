@@ -212,7 +212,11 @@
                     });
                 });
 
-                const tags = Object.keys(tagMap);
+                // Cap to top MAX_TAGS by paper count
+                const MAX_TAGS = 500;
+                const tags = Object.keys(tagMap)
+                    .sort((a, b) => tagMap[b].length - tagMap[a].length)
+                    .slice(0, MAX_TAGS);
 
                 // --- Semantic clustering via co-occurrence ---
                 // Build co-occurrence counts between tags

@@ -66,7 +66,7 @@
     "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
     "author": "Yuhui Li et al",
     "year": "2024",
-    "topic": "llm, speculative sampling",
+    "topic": "llm, speculative decoding",
     "venue": "Arxiv",
     "description": "This paper presents EAGLE-2, an improved speculative sampling method that introduces dynamic draft trees to accelerate Large Language Model inference beyond the capabilities of its predecessor EAGLE. The key insight is that draft token acceptance rates are not only position-dependent but also context-dependent, challenging the static tree assumption used by existing methods like EAGLE and Medusa. EAGLE-2 leverages the well-calibrated confidence scores from EAGLE's draft model to approximate acceptance rates and dynamically adjusts the draft tree structure accordingly, using a value-based expansion phase and reranking strategy to optimize token selection. Comprehensive experiments across six tasks (dialogue, code generation, math reasoning, instruction following, summarization, and QA) on three LLM series demonstrate that EAGLE-2 achieves 3.05x-4.26x speedup ratios, representing 20%-40% improvement over EAGLE while maintaining lossless acceleration and requiring no additional training beyond the base EAGLE model.",
     "link": "https://arxiv.org/pdf/2406.16858"
@@ -75,7 +75,7 @@
     "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty in Large Language Models",
     "author": "Yuhui Li et al",
     "year": "2024",
-    "topic": "llm, speculative sampling",
+    "topic": "llm, speculative decoding",
     "venue": "Arxiv",
     "description": "This paper introduces EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency), a speculative sampling framework designed to accelerate Large Language Model (LLM) inference by addressing key limitations in existing approaches. The authors identify two critical insights: first, that autoregression at the feature level (second-to-top-layer) is more straightforward than at the token level, and second, that uncertainty in feature-level prediction significantly constrains performance. EAGLE resolves the uncertainty problem by incorporating a token sequence advanced by one time step into the draft model, enabling more precise feature prediction with minimal computational overhead. Comprehensive experiments across dialogue, code generation, mathematical reasoning, and instruction following tasks demonstrate that EAGLE achieves 2.7x-3.5x speedup for LLaMA2-Chat 70B while maintaining the original text distribution, outperforming existing methods like Lookahead (1.7x-2.1x faster) and Medusa (1.5x-1.6x faster) with low training costs and broad applicability to autoregressive LLMs.",
     "link": "https://arxiv.org/pdf/2401.15077"
@@ -147,7 +147,7 @@
     "title": "DLM-One: Diffusion Language Models for One-Step Sequence Generation",
     "author": "Tianqi Chen et al",
     "year": "2025",
-    "topic": "diffusion llm",
+    "topic": "dllm",
     "venue": "Arxiv",
     "description": "This paper introduces DLM-One, a score distillation framework that enables one-step sequence generation with continuous diffusion language models (DLMs), eliminating the need for iterative refinement during inference. The key contribution is adapting vision-domain diffusion acceleration techniques to language modeling by aligning the scores of a student model's outputs with a pretrained teacher DLM's score function in the continuous token embedding space. To address training instability and prevent degenerate solutions common in data-free distillation of language models, the authors propose an adversarial regularization approach that combines score matching loss with adversarial training, using the same network for both score estimation and GAN discrimination. The framework includes a two-stage training strategy where the first stage produces a reasonably good student model, and the second stage reinitializes the score estimator with teacher parameters to provide better learning signals for continued improvement, achieving up to 500× speedup over iterative diffusion methods while maintaining competitive performance on benchmark text generation tasks.",
     "link": "https://arxiv.org/pdf/2506.00290"
@@ -345,7 +345,7 @@
     "title": "Large Language Models to Diffusion Finetuning",
     "author": "Edoardo Cetin et al",
     "year": "2025",
-    "topic": "llm, diffusion, autoregression",
+    "topic": "llm, diffusion, autoregressive",
     "venue": "Arxiv",
     "description": "L2D introduces a finetuning method that gives pre-trained language models the scaling properties of diffusion models, enabling them to improve performance by increasing computation at inference time. The approach adds a parallel diffusion path to existing models that processes diffusion tokens separately, preserving original capabilities while enabling multi-step reasoning. Unlike traditional finetuning which risks knowledge loss, L2D augments models with new capabilities such as adaptive computation and domain-specific expertise through classifier-free guidance. This innovation effectively bridges the autoregressive and diffusion paradigms, creating models that combine the training efficiency of language models with the compute-scaling advantages of diffusion.",
     "link": "https://arxiv.org/pdf/2501.15781"
@@ -354,7 +354,7 @@
     "title": "Autoregressive Diffusion Models",
     "author": "Emiel Hoogeboom et al",
     "year": "2022",
-    "topic": "llm, diffusion, autoregression",
+    "topic": "llm, diffusion, autoregressive",
     "venue": "ICLR",
     "description": "Autoregressive Diffusion Models (ARDMs) introduce a novel framework that unifies order-agnostic autoregressive models and discrete diffusion processes, allowing generation in any arbitrary order without requiring causal masking in the neural network architecture. ARDMs employ a training objective that optimizes only a single step of the generation process at a time (similar to diffusion models), using varying mask probabilities and implementing generation through iterative mask replacement with predicted tokens, which enables more efficient training while preserving bidirectional context. The authors develop parallelized inference and generation processes using dynamic programming that can adaptively determine which steps to parallelize, creating a flexible tradeoff between generation speed and model quality while requiring significantly fewer steps than discrete diffusion models to achieve equivalent performance. ARDMs are also extended with \"depth upscaling\" capabilities that structure the generation process into multiple stages of progressive refinement (such as bit-by-bit generation), which proves particularly effective for lossless compression tasks where ARDMs outperform competing approaches, especially in single-image compression scenarios.",
     "link": "https://arxiv.org/pdf/2110.02037"
@@ -381,7 +381,7 @@
     "title": "PHI-S: Distribution Balancing for Label-Free Multi-Teacher Distillation",
     "author": "Mike Ranzinger et al",
     "year": "2024",
-    "topic": "distillation, teacher",
+    "topic": "knowledge distillation, teacher",
     "venue": "Arxiv",
     "description": "PHI-S introduces a novel distribution balancing technique for label-free multi-teacher knowledge distillation that addresses the significant variance disparities among heterogeneous teacher models (like CLIP, DINOv2, SigLIP, and SAM). The method leverages Hadamard matrices in an innovative way to create an isotropic standardization approach that uniformly distributes error magnitudes across all feature dimensions, preventing any single dimension from having disproportionate influence in the loss function. Unlike previous whitening or standardization techniques that distort the feature space unevenly, PHI-S first rotates the distribution using a combination of PCA and Hadamard matrices to achieve equal variance in all dimensions, then applies a uniform scalar normalization factor that maintains better numerical stability even with rank-deficient distributions. The authors prove PHI-S's mathematical properties and empirically demonstrate its superiority over other normalization methods, achieving improved distillation performance while requiring significantly less computation than competing approaches when training a student model to simultaneously match multiple visual foundation model teachers.",
     "link": "https://arxiv.org/pdf/2410.01680"
@@ -399,7 +399,7 @@
     "title": "Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation",
     "author": "Xuefei Ning et al",
     "year": "2024",
-    "topic": "LLM",
+    "topic": "llm",
     "venue": "ICLR",
     "description": "SoT is a novel prompting approach that decreases generation latency by guiding LLMs to first produce a skeleton outline of key points, then expand those points in parallel rather than generating the entire response sequentially. The technique leverages batched decoding for open-source models or parallel API calls for proprietary models to complete multiple skeleton points simultaneously, addressing a fundamental bottleneck in LLM inference without requiring model, system, or hardware changes. SoT introduces a \"data-centric\" optimization pathway by having the LLM organize its output content in a way that enables parallelization, rather than relying on model-level or system-level optimizations. The authors also develop SoT-R (SoT with router), which employs a classifier to selectively apply SoT only for suitable question types, achieving both significant speed-ups (up to 2.4×) while maintaining or even improving answer quality across various LLMs.",
     "link": "https://arxiv.org/pdf/2307.15337"
@@ -408,7 +408,7 @@
     "title": "Learning Adaptive Parallel Reasoning with Language Models",
     "author": "Jiayi Pan et al",
     "year": "2025",
-    "topic": "LLM",
+    "topic": "llm",
     "venue": "Arxiv",
     "description": "APR introduces a novel reasoning framework that enables language models to dynamically orchestrate both serialized and parallel computations through a parent-child threading mechanism where parent inference threads can delegate subtasks to multiple child threads using spawn() operations. The key innovation is an end-to-end reinforcement learning strategy that optimizes both parent and child inference threads without requiring predefined reasoning structures, allowing models to adaptively allocate computation between serial and parallel paths for maximum efficiency. APR implements this parent-child threading mechanism using a standard model serving framework to perform inference in child threads simultaneously through batching, which significantly reduces real-time latency compared to traditional serialized approaches. This approach demonstrates superior performance over serialized chain-of-thought methods in three dimensions: higher success rates within the same context window constraints, better scaling behavior when increasing compute budgets, and improved accuracy at equivalent latency when evaluated on complex reasoning tasks.",
     "link": "https://arxiv.org/pdf/2504.15466"
@@ -417,7 +417,7 @@
     "title": "LLaMAFlex: Many-in-one LLMs Via Generalized Pruning and Weight Sharing",
     "author": "Ruisi Cai et al",
     "year": "2025",
-    "topic": "LLM",
+    "topic": "llm",
     "venue": "ICLR",
     "description": "LLamaFlex introduces a novel nested weight-shared architecture that can be pruned across both width (attention heads, hidden dimensions, MLP sizes) and depth (layers) dimensions in a zero-shot manner, enabling instant generation of multiple compressed models from a single trained model. The approach differs from traditional pruning methods by requiring only a single continued training phase of approximately 60 billion tokens to train the elastic network alongside an end-to-end Gumbel Softmax-based router that smoothly interpolates across model sizes. LLamaFlex enhances nested architectures through a \"policy-aware modulation\" technique inspired by diffusion models, which introduces additional parameters for each nesting level to increase model expressivity beyond what pure weight sharing allows. Unlike previous elastic frameworks, LLamaFlex produces uniform architectures (consistent configurations across all layers) that are optimized for deployment in common frameworks like TensorRT-LLM, while achieving accuracy on par with or better than state-of-the-art pruned models, elastic/flexible models, and models trained from scratch.",
     "link": "https://openreview.net/pdf?id=AyC4uxx2HW"

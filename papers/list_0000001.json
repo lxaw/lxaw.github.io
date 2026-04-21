@@ -12,7 +12,7 @@
     "title": "DMax: Aggressive Parallel Decoding for dLLMs",
     "author": "Zigeng Chen et al",
     "year": "2026",
-    "topic": "dllm, parallel decoding, self-refinement",
+    "topic": "dllm, parallel decoding, self-correction",
     "venue": "Arxiv",
     "description": "The paper identifies that diffusion language models fail under aggressive parallel decoding because they use a one-way mask-to-token process, where early incorrect predictions are fixed and then propagate, causing error accumulation without any mechanism for revision. To address this, the authors reformulate decoding as a self-refinement process in embedding space, where tokens are not immediately committed but can be iteratively updated. Their first key component, On-Policy Uniform Training, converts a masked diffusion model into a self-correcting model by training it not only on masked inputs but also on its own sampled predictions, using on-policy rollouts to reduce the mismatch between training and inference distributions. Concretely, they generate noisy sequences by sampling model predictions at masked positions, run two forward passes on masked and predicted sequences, and optimize both with cross-entropy against the clean target so the model learns to denoise its own mistakes. The second component, Soft Parallel Decoding, replaces discrete token states during inference with hybrid embeddings that interpolate between the predicted token embedding and the mask embedding based on prediction confidence, preserving uncertainty and enabling iterative correction. Combined with a block-wise decoding scheme that promotes tokens based on confidence thresholds and re-evaluates all positions until convergence, this allows the model to revise earlier predictions and maintain stability even under highly parallel updates.",
     "link": "https://arxiv.org/pdf/2604.08302"
@@ -39,7 +39,7 @@
     "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
     "author": "Yuerong Song et al",
     "year": "2025",
-    "topic": "dllm, sparsity, cache, eviction",
+    "topic": "dllm, sparsity, caching, eviction",
     "venue": "Arxiv",
     "description": "The paper identifies that diffusion LLMs exhibit persistent attention sparsity and stable token saliency across decoding steps, meaning only a small subset of tokens consistently receives high attention. Based on this, it proposes Sparse-dLLM, a training-free inference framework that selectively evicts low-importance KV cache entries instead of storing full states. The method introduces dynamic bidirectional cache eviction, which prunes both prefix and suffix tokens outside the current decoding block using attention scores computed between current queries and cached keys. It further incorporates a delayed cache update mechanism, postponing KV caching by one step to avoid instability in early decoding states. The approach uses attention pooling and top-k selection with a retention ratio to identify and preserve salient tokens, enabling structured sparsification of the cache. Overall, the contribution is a plug-and-play inference strategy that exploits temporal consistency in attention to reduce computation while maintaining effective context representation.",
     "link": "https://arxiv.org/pdf/2508.02558"
@@ -138,7 +138,7 @@
     "title": "Distillation of Discrete Diffusion through Dimensional Correlations",
     "author": "Satoshi Hayakawa et al",
     "year": "2025",
-    "topic": "dllm, distillation, marginalization",
+    "topic": "dllm, knowledge distillation, marginalization",
     "venue": "Arxiv",
     "description": "The paper identifies that standard discrete diffusion uses product-form denoisers (factorized over dimensions), which are scalable but cannot capture joint dependencies, forcing accurate modeling to rely on many sampling steps. To address this, it introduces a mixture-of-products model, where the denoiser is an expectation over multiple product distributions indexed by a latent variable 𝜆; although each component is factorized, the mixture is expressive enough to represent arbitrary joint distributions and thus capture dimensional correlations with minimal extra cost. For distillation, the method trains a student to match a multi-step teacher using a distillation loss (KL divergence between teacher and student one-step denoisers at small noise levels) combined with a consistency loss, which enforces that applying the student after a teacher step matches applying the student directly—thereby transferring the correlations implicitly formed by multi-step composition. Together, this setup learns to approximate the teacher’s composed multi-step distribution in a few steps, with theoretical guarantees that the loss functions upper-bound the discrepancy between student and teacher distributions.",
     "link": "https://arxiv.org/pdf/2410.08709"
@@ -246,7 +246,7 @@
     "title": "EM Distillation for One-Step Diffusion Models",
     "author": "Sirui Xi et al",
     "year": "2024",
-    "topic": "diffusion, dlm, distillation",
+    "topic": "diffusion, dlm, knowledge distillation",
     "venue": "NeurIPS",
     "description": "The authors propose a maximum likelihood-based approach (EM Distillation, EMD) that distills a diffusion model to a one-step generator. Generator parameters are updated via Expectation-Maximization (EM), using samples from joint distribution of diffusion teacher prior and inferred generator latents. They alternate between an Expectation step that estimates the learning gradients with Monte Carlo samples and a Maximization-step that updates the student via gradient descent.",
     "link": "https://arxiv.org/pdf/2405.16852"
@@ -462,7 +462,7 @@
     "title": "Training trajectories, mini-batch losses and the curious role of the learning rate",
     "author": "Mark Sandler et al",
     "year": "2023",
-    "topic": "stochastic gradient descent, learning rate schedules, weight averaging",
+    "topic": "sgd, learning rate schedules, weight averaging",
     "venue": "Arxiv",
     "description": "This paper investigates the curious behavior of stochastic gradient descent by analyzing how the loss function behaves differently on fixed training batches versus held-out batches, revealing that loss on a training batch can reach remarkably low values in a single gradient step while loss on unseen batches shows opposite behavior. The authors propose a simple quadratic model of the loss landscape that explains key phenomena and demonstrates a novel equivalence: weight averaging techniques (stochastic weight averaging, exponential moving average, and two-point averaging) are mathematically equivalent to specific learning rate schedules. This theoretical insight connects to practical findings showing that averaging improves performance by moving trajectories inside loss basins, and helps explain why weight averaging and learning rate decay achieve similar effects in training dynamics.",
     "link": "https://arxiv.org/pdf/2301.02312"
@@ -489,7 +489,7 @@
     "title": "The Road Less Scheduled",
     "author": "Aaron Defazio et al",
     "year": "2024",
-    "topic": "optimization, learning rate schedules, stochastic gradient descent, iterate averaging",
+    "topic": "optimization, learning rate schedules, sgd, iterate averaging",
     "venue": "Arxiv",
     "description": "This paper introduces Schedule-Free learning, an optimization method that eliminates the need to pre-specify a stopping time T while achieving state-of-the-art performance compared to traditional learning rate schedules. The key innovation is a new form of momentum based on interpolation between sequences (z for base updates and x for averaging) that unifies iterate averaging with scheduling theory. The authors develop a novel online-to-batch conversion theorem (Theorem 2) that explains why their approach works and generalizes several existing optimization techniques. Extensive experiments across 28 diverse problems—from convex optimization to large-scale deep learning—demonstrate that Schedule-Free AdamW matches or exceeds heavily-tuned cosine schedules without introducing additional hyperparameters, and the method won Meta's entry to the MLCommons 2024 AlgoPerf challenge.",
     "link": "https://arxiv.org/pdf/2405.15682"
@@ -516,7 +516,7 @@
     "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
     "author": "Shih-Yang Liu et al",
     "year": "2026",
-    "topic": "multi-reward rl, policy optimization, grpo, reward normalization, reinforcement learning",
+    "topic": "multi-reward rl, policy optimization, grpo, reward normalization, rl",
     "venue": "Arxiv",
     "description": "The paper identifies that directly applying Group Relative Policy Optimization (GRPO) to multi-reward reinforcement learning causes distinct reward combinations to collapse into identical advantage values, which diminishes the precision of the training signal and leads to suboptimal convergence. To address this problem, the authors propose Group reward-Decoupled Normalization Policy Optimization (GDPO), which normalizes each individual reward separately before aggregation, then applies batch-wise advantage normalization to preserve cross-reward distinctions while maintaining stable numerical ranges. The method is systematically evaluated across three diverse tasks—tool calling, mathematical reasoning, and coding reasoning—each optimizing multiple heterogeneous rewards including correctness, format compliance, length constraints, and code quality. Empirical results demonstrate that GDPO consistently outperforms GRPO across all settings, with particularly significant improvements on complex reasoning tasks (e.g., 6.3% accuracy gain on AIME for DeepSeek-R1-1.5B) while maintaining better adherence to constraints.",
     "link": "https://arxiv.org/pdf/2601.05242"
@@ -615,7 +615,7 @@
     "title": "d3LLM: Ultra-Fast dLLM using Pseudo-Trajectory Distillation",
     "author": "Yu-Yang Qian et al",
     "year": "2026",
-    "topic": "dllm, diffusion, llm, distillation",
+    "topic": "dllm, diffusion, llm, knowledge distillation",
     "venue": "Arxiv",
     "description": "This paper introduces d3LLM, a framework that balances accuracy and parallelism in diffusion language models through innovations in both training and inference. During training, they propose pseudo-trajectory distillation, which uses the teacher model's own decoding trajectory (even when it differs from ground truth) to teach the student which tokens can be confidently decoded earlier, combined with curriculum learning that progressively increases mask ratios and window sizes. During inference, they introduce entropy-based multi-block decoding that simultaneously decodes across multiple blocks by prioritizing low-entropy (high-confidence) tokens, coupled with a KV-cache refresh mechanism that periodically recomputes cached states to prevent quality degradation from error propagation. They also propose AUP (Accuracy Under Parallelism), a new evaluation metric that measures the weighted area under the accuracy-parallelism curve, penalizing methods that sacrifice accuracy for speed while rewarding those that maintain both.",
     "link": "https://arxiv.org/pdf/2601.07568"

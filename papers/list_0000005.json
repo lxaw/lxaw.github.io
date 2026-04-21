@@ -174,7 +174,7 @@
     "title": "Visual Autoregressive Modeling: Scaling Image Generation via Next-Scale Prediction",
     "author": "Key Tian et al",
     "year": "2024",
-    "topic": "tokens, reference model",
+    "topic": "token, reference model",
     "venue": "NeurIPS",
     "description": "The paper proposes Visual AutoRegressive (VAR) modeling, which shifts the paradigm of autoregressive learning for image generation from sequential \"next-token prediction\" to \"next-scale prediction.\" This approach treats entire token maps at progressively finer resolutions as the autoregressive units, reflecting the coarse-to-fine manner in which humans perceive images. Unlike traditional models that flatten 2D spatial structures into 1D sequences, VAR preserves spatial locality and leverages multi-scale visual representations to reduce computational inefficiencies. By adopting hierarchical generation aligned with natural image structures, VAR overcomes the limitations of standard autoregressive models, such as mathematical premise violations and loss of spatial coherence. Its design integrates autoregressive transformers with multi-scale tokenization, creating a framework that is theoretically scalable and generalizable across diverse visual generation tasks.",
     "link": "https://openreview.net/pdf?id=gojL67CfS8"
@@ -183,7 +183,7 @@
     "title": "Rho-1: Not All Tokens Are What You Need",
     "author": "Zhenghao Lin et al",
     "year": "2024",
-    "topic": "tokens, reference model",
+    "topic": "token, reference model",
     "venue": "NeurIPS",
     "description": "This paper scores tokens using a reference model and then trains a language model to focus on the tokens with higher scores. They find that they can improve performance while training on less tokens.",
     "link": "https://arxiv.org/pdf/2404.07965"
@@ -435,7 +435,7 @@
     "title": "One Step Diffusion via ShortCut Models",
     "author": "Kevin Frans et al",
     "year": "2024",
-    "topic": "diffusion, ode, flow-matching",
+    "topic": "diffusion, ode, flow matching",
     "venue": "Arxiv",
     "description": "This paper introduces shortcut models, a new type of diffusion model that enables high-quality image generation in a single forward pass by conditioning the model not only on the timestep but also on the desired step size, allowing it to learn larger jumps during the denoising process. Unlike previous approaches that require multiple training phases or complex scheduling, shortcut models can be trained end-to-end in a single phase by leveraging a self-consistency property where one large step should equal two consecutive smaller steps, combined with flow-matching loss as a base case. The key insight is that by conditioning on step size, the model can account for future curvature in the denoising path and jump directly to the correct next point rather than following the curved path naively, which would lead to errors with large steps. The approach simplifies the training pipeline while maintaining flexibility in inference budget, as the same model can generate samples using either single or multiple steps after training.",
     "link": "https://arxiv.org/abs/2410.12557"
@@ -471,7 +471,7 @@
     "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching",
     "author": "Felix Wimbauer et al",
     "year": "2024",
-    "topic": "diffusion, caching, distillation",
+    "topic": "diffusion, caching, knowledge distillation",
     "venue": "Arxiv",
     "description": "This paper introduces \"block caching\" to accelerate diffusion models by reusing computations across denoising steps. The key insight is that many layer blocks (particularly attention blocks) in diffusion models change very gradually during the denoising process, making their repeated computation redundant. The authors propose automatically determining which blocks to cache and when to refresh them based on measuring the relative changes in block outputs across timesteps. They also introduce a lightweight scale-shift adjustment mechanism that uses a student-teacher setup, where the student (cached model) learns additional scale and shift parameters to better align its cached block outputs with those of the teacher (uncached model), while keeping the original model weights frozen.",
     "link": "https://arxiv.org/pdf/2312.03209"

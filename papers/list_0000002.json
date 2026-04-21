@@ -66,7 +66,7 @@
     "title": "Let the Expert Stick to His Last: Expert-Specialized Fine-Tuning for Sparse Architectural Large Language Models",
     "author": "Zihan Wang et al",
     "year": "2024",
-    "topic": "lora, fine-tuning, moe, sparse",
+    "topic": "lora, finetuning, moe, sparse",
     "venue": "Arxiv",
     "description": "The paper observes that in MoE LLMs, a given downstream task routes tokens to a highly concentrated subset of experts, and different tasks concentrate on different expert subsets, implying strong task-specific expert specialization. Based on this, they propose Expert-Specialized Fine-Tuning (ESFT): estimate per-layer expert relevance from a small probe sample of task data using either average gate value or token selection ratio, then fine-tune only the experts whose cumulative relevance exceeds a threshold 𝑝 while freezing all other experts and (optionally) other modules. The reasoning is that updating only task-relevant (non-shared) experts preserves the MoE system’s specialization and reduces interference/forgetting that happens when unrelated experts and shared parameters are trained, so you keep general ability while still improving the target task. They further argue ESFT works best with fine-grained expert segmentation (many small experts), because it makes it easier to select a task-appropriate expert combination at fixed compute, whereas coarser experts blur specialization and weaken the benefit of selective tuning.",
     "link": "https://arxiv.org/pdf/2407.01906"
@@ -156,7 +156,7 @@
     "title": "RLP: Reinforcement as a Pretraining Objective",
     "author": "Ali Hatamizadeh et al",
     "year": "2025",
-    "topic": "reinforcement, rl, pretraining",
+    "topic": "rl, pretraining",
     "venue": "Arxiv",
     "description": "RLP (“Reinforcement Learning Pre-training”) changes pretraining by sampling a short chain-of-thought as an action before each next-token prediction, then rewarding that thought by its information gain: the log-likelihood improvement on the observed next token when conditioning on (context + thought) versus a no-think EMA teacher baseline (computed under teacher forcing). Implementation-wise, they use multiple thought rollouts per context, form group-relative advantages, and apply a PPO/GRPO-like clipped surrogate update that updates only the thought tokens (treating the reward as a stop-grad), while the EMA baseline is updated slowly (e.g., τ≈0.999) to stabilize training and reduce reward hacking. The key benefit is a verifier-free, dense, position-wise reward that works on ordinary web-scale text (no task-specific graders, no sparse success signals), encouraging “think-then-predict” behavior during pretraining rather than relegating RL to post-training. Empirically, they report sizable and persistent reasoning gains: on Qwen3-1.7B-Base, RLP lifts an 8-benchmark math+science average by about +19% and the improvements compound after identical post-training, and scaling to Nemotron-Nano-12B-v2 raises overall average from 42.81% to 61.32% with especially large science-reasoning boosts.",
     "link": "https://arxiv.org/pdf/2510.01265"
@@ -183,7 +183,7 @@
     "title": "BroRL: Scaling Reinforcement Learning via Broadened Exploration",
     "author": "Jian Hu et al",
     "year": "2025",
-    "topic": "RL, reinforcement learning, GRPO",
+    "topic": "rl, grpo",
     "venue": "Arxiv",
     "description": "BRORL introduces rollout-size scaling as a new axis for RLVR by broadening exploration per prompt, arguing that step-based scaling saturates due to insufficient coverage of the action space rather than fundamental limits of RL. Its main theoretical contribution is a mass-balance analysis of a single RL update, which decomposes the change in total correct-token probability mass into (i) two always-nonnegative sampled terms—rewarding sampled correct tokens and penalizing sampled incorrect ones—and (ii) an unsampled coupling term that can be negative but provably vanishes as the number of rollouts increases, guaranteeing monotonic expansion of correct probability mass at large rollout sizes. On the algorithmic side, BroRL is implemented on top of a clipped PPO-style RLVR objective, using decoupled advantage normalization (group-level baselining followed by batch normalization) and dynamic sampling, with the key change being a large per-prompt rollout count that stabilizes PPO updates by reducing variance and suppressing harmful unsampled effects.",
     "link": "https://arxiv.org/pdf/2503.20853"
@@ -291,7 +291,7 @@
     "title": "DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning",
     "author": "Shih-Yang Liu et al",
     "year": "2025",
-    "topic": "RL, reinforcement learning, penalty",
+    "topic": "rl, penalty",
     "venue": "Arxiv",
     "description": "DLER re-examines length penalties for reasoning LMs and shows that the accuracy loss seen with simple truncation comes from optimization, not the penalty itself. They identify three culprits—biased advantage estimates under GRPO (from high reward variance), entropy collapse, and sparse signals—and fix them with a recipe: batch-wise reward normalization, higher/decoupled clipping, dynamic sampling (curriculum), plus the plain truncation penalty. This yields state-of-the-art accuracy–efficiency trade-offs—~70% shorter outputs while matching or improving accuracy—and enables superior test-time parallel scaling (higher Pass@K at lower latency). They also add Difficulty-Aware DLER (adaptive truncation by problem hardness) and an update-selective weight-merging method that preserves baseline accuracy while retaining concise reasoning when full RL data isn’t available. Awesome work Shih-Yang! Glad to see it out!",
     "link": "https://arxiv.org/pdf/2510.15110"
@@ -300,7 +300,7 @@
     "title": "ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models",
     "author": "Mingjie Liu et al",
     "year": "2025",
-    "topic": "RL, reinforcement learning, GRPO",
+    "topic": "rl, grpo",
     "venue": "Arxiv",
     "description": "The ProRL paper proposes Prolonged Reinforcement Learning (ProRL) as a method to expand reasoning abilities in large language models beyond what is accessible via supervised training or short RL runs. Instead of relying only on reward-model alignment, ProRL uses verifiable rewards (e.g., correctness in math/code), Group Relative Policy Optimization (GRPO) with entropy-preserving techniques, KL-regularization with periodic reference policy resets, and a diverse multi-domain training set (math, code, STEM, logic, instruction following). The authors show that extended RL (over 2k+ steps) continues to yield improvements, avoids entropy collapse, and enables models to discover new reasoning strategies not present in the base distribution. Their resulting model, Nemotron-Research-Reasoning-Qwen-1.5B, significantly outperforms both its base model and larger specialized models across a broad set of reasoning benchmarks.",
     "link": "https://arxiv.org/pdf/2505.24864"

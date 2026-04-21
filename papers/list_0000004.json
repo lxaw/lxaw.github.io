@@ -93,7 +93,7 @@
     "title": "Recurrent Memory Transformer",
     "author": "Aydar Bulatov et al",
     "year": "2022",
-    "topic": "meta tokens, memory",
+    "topic": "meta-tokens, memory",
     "venue": "NeurIPS",
     "description": "This paper introduces the Recurrent Memory Transformer (RMT), a novel architecture that combines memory tokens with segment-level recurrence to address two key limitations of standard Transformer models: the difficulty of storing global information across a sequence and the quadratic computational complexity that limits input sequence length. RMT works by adding special memory tokens to both the beginning and end of each input segment, with the end tokens capturing information as \"write memory\" and then being passed to the next segment as \"read memory\" creating a recurrent connection between segments. The key innovation is that both the memory mechanism and recurrence are implemented without modifying the core Transformer architecture - only the input and output sequences are changed by adding special tokens. This makes RMT compatible with any Transformer-based model.",
     "link": "https://arxiv.org/pdf/2207.06881"
@@ -111,7 +111,7 @@
     "title": "Enabling Autoregressive Models to Fill in Masked Tokens",
     "author": "Daniel Israel et al",
     "year": "2025",
-    "topic": "autoregression, mlm",
+    "topic": "autoregressive, mlm",
     "venue": "Arxiv",
     "description": "This paper introduces MARIA (Masked and Autoregressive Infilling Architecture), a novel approach that combines the strengths of both autoregressive (AR) and masked language modeling (MLM) paradigms. The method addresses a fundamental limitation of AR models, which cannot effectively perform masked infilling (predicting tokens between past and future context) despite their dominance in the field due to superior training and inference efficiency. MARIA works by taking a pre-trained MLM model (which can naturally handle infilling but is computationally inefficient) and an AR model, then training a simple linear decoder that operates on their concatenated hidden states. This minimal architectural modification enables the resulting model to perform masked infilling while retaining the computational benefits of AR models, particularly KV caching during inference.",
     "link": "https://arxiv.org/pdf/2502.06901"
@@ -147,7 +147,7 @@
     "title": "Faith and Fate: Limits of Transformers on Compositionality",
     "author": "Nouha Dziri et al",
     "year": "2023",
-    "topic": "transformers, compositionality",
+    "topic": "transformer, compositionality",
     "venue": "Arxiv",
     "description": "The paper reveals that transformer large language models (LLMs) struggle with seemingly simple compositional problems requiring multi-step reasoning, despite their impressive performance on complex tasks. Using a computation graph framework to measure task complexity across multi-digit multiplication, logic puzzles, and dynamic programming problems, the authors demonstrate that LLMs solve compositional tasks through pattern matching rather than systematic reasoning, performing well on in-distribution examples but failing dramatically on out-of-distribution cases even after extensive fine-tuning with explicit reasoning steps. Their error analysis shows that while models can perform single-step operations correctly, they fail to compose these steps into correct reasoning paths, with errors propagating through the computation graph because the autoregressive nature of transformers forces them to tackle problems sequentially through a greedy process of producing the next token without developing a global understanding of the task. Both empirical findings and mathematical analysis reveal a fundamental limitation where error probability increases exponentially with task complexity, suggesting transformers may be inherently limited in solving complex compositional tasks without additional mechanisms. The paper concludes that transformers are best suited for tasks with few reasoning steps, tasks allowing approximate solutions, or when combined with planning modules or refinement methods to overcome the limitations of their autoregressive architecture.",
     "link": "https://arxiv.org/pdf/2305.18654"
@@ -219,7 +219,7 @@
     "title": "CLLMs: Consistency Large Language Models",
     "author": "Siqi Kou et al",
     "year": "2024",
-    "topic": "llms, consistency models",
+    "topic": "llm, consistency models",
     "venue": "ICML",
     "description": "This paper introduces Consistency Large Language Models (CLLMs), a new approach that significantly improves the efficiency of Jacobi decoding for language model inference. The key innovation is training language models to consistently predict the fixed point of a Jacobi trajectory in fewer steps, addressing the main limitation of standard Jacobi decoding which typically predicts only one correct token per iteration. By fine-tuning target LLMs using a consistency loss that maps arbitrary points on the Jacobi trajectory to the fixed point, CLLMs achieve 2.4× to 3.4× improvements in generation speed while maintaining quality across both domain-specific and open-domain tasks. Unlike alternative approaches like speculative decoding or Medusa, CLLMs don't require auxiliary model components or architectural modifications, making them memory-efficient and highly adaptable. The authors identify two key acceleration mechanisms in CLLMs: \"fast forwarding,\" where multiple consecutive tokens are correctly predicted in a single step, and \"stationary tokens,\" which remain correct despite being preceded by inaccurate tokens. These phenomena are especially prominent in domain-specific tasks where text contains predictable collocations and syntactic structures.",
     "link": "https://arxiv.org/pdf/2403.00835"
@@ -264,7 +264,7 @@
     "title": "Born Again Networks",
     "author": "Tommaso Furlanello et al",
     "year": "2018",
-    "topic": "knowledge distillation, self distillation",
+    "topic": "knowledge distillation",
     "venue": "ICML",
     "description": "This paper introduces Born-Again Neural Networks (BANs), a novel approach where knowledge distillation is applied to train student models with identical architectures to their teachers. Surprisingly, these student models consistently outperform their teachers on both computer vision and language modeling tasks, even when the student and teacher have the exact same architecture and capacity. The authors experiment with multiple generations of BANs, showing that performance continues to improve (though with diminishing returns), and explore the effect of \"dark knowledge\" by testing variations where they either weight examples by teacher confidence or permute non-argmax outputs. Their framework also allows for cross-architecture knowledge transfer, such as training ResNet students from DenseNet teachers, resulting in state-of-the-art performance on CIFAR datasets and demonstrating that the benefits of knowledge distillation extend beyond model compression.",
     "link": "https://arxiv.org/pdf/1805.04770"
@@ -381,7 +381,7 @@
     "title": "LLM Pruning and Distillation in Practice: The Minitron Approach",
     "author": "Sharath Turuvekere Sreenivas et al",
     "year": "2024",
-    "topic": "llm, pruning, distillation",
+    "topic": "llm, pruning, knowledge distillation",
     "venue": "Arxiv",
     "description": "The paper introduces an improved approach to LLM model compression by combining structured pruning with knowledge distillation, notably adding a \"teacher correction\" phase that allows the teacher model to adapt to new data distributions when the original pretraining dataset is unavailable. The authors explore two distinct pruning strategies - depth pruning (removing entire layers) and width pruning (reducing hidden/attention/MLP dimensions), along with a new task-based saliency criteria for depth pruning. They demonstrate this approach by successfully compressing Mistral NeMo 12B and Llama 3.1 8B models to 8B and 4B parameters respectively, using significantly fewer training tokens than training from scratch. The methodology is particularly valuable because it removes the dependency on accessing the original pretraining dataset, making it more practical for compressing proprietary models.",
     "link": "https://arxiv.org/pdf/2408.11796"
@@ -480,7 +480,7 @@
     "title": "Training Language Models to Self-Correct via Reinforcement Learning",
     "author": "Aviral Kumar et al",
     "year": "2024",
-    "topic": "self-correct, reinforcement learning",
+    "topic": "self-correction, rl",
     "venue": "Arxiv",
     "description": "The paper introduces SCoRe, a novel multi-turn reinforcement learning approach that successfully teaches language models to self-correct their own mistakes without external feedback by addressing two key failure modes of previous methods: distribution shift and behavior collapse.",
     "link": "https://arxiv.org/pdf/2409.12917"
