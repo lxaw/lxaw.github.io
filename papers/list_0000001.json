@@ -1,5 +1,41 @@
 [
   {
+    "title": "Coupling Experts and Routers in Mixture-of-Experts via an Auxiliary Loss",
+    "author": "Ang Lv et al",
+    "year": "2026",
+    "topic": "moe, router, expert specialization, auxiliary loss",
+    "venue": "Arxiv",
+    "description": "The paper identifies a core limitation in Mixture-of-Experts models: the router is trained without explicit constraints to align its decisions with the true capabilities of experts, leading to suboptimal routing and weak specialization. It proposes an expert-router coupling (ERC) loss that treats router embeddings as cluster centers and uses perturbed versions of these embeddings as proxy tokens representing the distribution of inputs assigned to each expert. These proxy tokens are fed through all experts, and the L2 norms of intermediate activations are collected into an n by n matrix that measures how strongly each expert responds to each proxy. The ERC loss enforces two asymmetric constraints: each expert must respond most strongly to its own proxy compared to others, and each proxy must activate its corresponding expert more than any other, effectively coupling routing representations with expert functionality. This is implemented as a hinge-style penalty over off-diagonal activation entries relative to scaled diagonal terms, with a hyperparameter controlling the strictness of specialization. To ensure proxies remain representative of their assigned token clusters, bounded multiplicative noise is applied to router embeddings, with the bound derived from distances between cluster centers to avoid crossing decision boundaries. The method has constant computational cost in the number of experts rather than tokens, preserving sparse MoE efficiency while providing an explicit and tunable mechanism for aligning routing behavior with expert specialization.",
+    "link": "https://arxiv.org/pdf/2512.23447"
+  },
+  {
+    "title": "Seedance 2.0: Advancing Video Generation for World Complexity",
+    "author": "Bytedance Seed et al",
+    "year": "2026",
+    "topic": "video, multimodal, audio-visual",
+    "venue": "Arxiv",
+    "description": "The paper introduces Seedance 2.0, a unified multimodal audio-video generation model that shifts the paradigm from short, weakly controlled video synthesis to highly controllable generation conditioned on text, images, audio, and video. The core contribution is a single large-scale architecture for joint audio-video generation that integrates multimodal reference inputs and editing operations, enabling both generation and transformation tasks within one framework. The model is designed to explicitly handle real-world complexity by improving temporal coherence, motion stability, and physical plausibility through better modeling of dynamics across frames. It incorporates structured multimodal conditioning that allows fine-grained control over subject identity, motion, style, cinematography, and narrative sequencing, effectively embedding a form of implicit “directorial reasoning” into the generation process. A key technical aspect is the integration of synchronized audio generation, including multi-track and binaural audio, with strict temporal alignment to visual content, treating audio-visual generation as a single coupled problem rather than separate modules. Additionally, the system supports compositional workflows such as reference-based generation, targeted editing, and video continuation, reflecting a design that unifies generation and editing under consistent conditioning and alignment mechanisms.",
+    "link": "https://arxiv.org/pdf/2604.14148"
+  },
+  {
+    "title": "Rethinking Video Generation Model for the Embodied World",
+    "author": "Yufan Deng et al",
+    "year": "2026",
+    "topic": "video, evaluation, dataset",
+    "venue": "Arxiv",
+    "description": "The paper identifies a core limitation in current video generation models for embodied AI: existing evaluation frameworks focus on perceptual quality and fail to capture task correctness and physical realism in robotic scenarios. To address this, it introduces RBench, a benchmark that formalizes robotic video evaluation along two axes, task completion and visual quality, with fine-grained sub-metrics such as physical-semantic plausibility, task adherence consistency, motion amplitude, robot-subject stability, and motion smoothness, many of which are implemented via MLLM-based VQA protocols over temporally sampled frames. The benchmark is constructed from 650 curated image-text pairs spanning five task categories and four robot embodiments, with careful design to avoid data leakage and ensure alignment with realistic robotic action semantics. The evaluation methodology explicitly models common physical failure modes such as non-contact motion, object drift, and action omission, thereby operationalizing physical realism as measurable criteria rather than relying on proxy visual metrics. Complementing evaluation, the paper proposes RoVid-X, a large-scale dataset built through a four-stage pipeline consisting of large-scale video collection, quality filtering, task segmentation with automated captioning, and physical property annotation including optical flow and depth estimation. The overall contribution is a coupled framework where benchmark design defines the target notion of physical intelligence and the dataset construction pipeline injects the corresponding inductive biases, enabling scalable training and rigorous assessment of video models for embodied robotic behavior.",
+    "link": "https://arxiv.org/pdf/2601.15282"
+  },
+  {
+    "title": "In-Place Test-Time Training",
+    "author": "Guhao Feng et al",
+    "year": "2026",
+    "topic": "tts, fast weights, mlp, chunk-wise updates, learning objective",
+    "venue": "Arxiv",
+    "description": "The paper introduces In-Place Test-Time Training, a method that allows large language models to adapt during inference by updating a subset of parameters called fast weights instead of remaining fully static. The key design is to reuse the existing MLP block by treating its final projection matrix as fast weights, updating it in-place while keeping the rest of the model frozen, which enables compatibility with pretrained models without architectural changes. To address inefficiency, the method replaces sequential per-token updates with chunk-wise updates, where tokens are processed in blocks and each block produces a single gradient-based update to the fast weights, allowing parallel computation. The core methodological contribution is a new learning objective aligned with next-token prediction, where targets incorporate future token information using a shifted convolution over embeddings instead of reconstructing the current token. Theoretical analysis shows that this objective increases the logit of the correct next token while leaving other logits mostly unchanged under standard assumptions, whereas reconstruction objectives do not improve predictive accuracy. Overall, the work formulates test-time training as a scalable and theoretically grounded mechanism for embedding a dynamic memory into existing transformers through localized weight updates.",
+    "link": "https://arxiv.org/pdf/2604.06169"
+  },
+  {
     "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model",
     "author": "Chenghao Fan et al",
     "year": "2026",

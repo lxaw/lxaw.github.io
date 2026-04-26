@@ -127,8 +127,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 446 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 446 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 450 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 450 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -154,6 +154,42 @@
         <tbody>
         
             <tr>
+                <td><a href="https://arxiv.org/pdf/2512.23447" target="_blank" rel="noopener noreferrer">Coupling Experts and Routers in Mixture-of-Experts via an Auxiliary Loss</a></td>
+                <td>Ang Lv et al</td>
+                <td>2026</td>
+                <td>moe, router, expert specialization, auxiliary loss</td>
+                <td>Arxiv</td>
+                <td>The paper identifies a core limitation in Mixture-of-Experts models: the router is trained without explicit constraints to align its decisions with the true capabilities of experts, leading to suboptimal routing and weak specialization. It proposes an expert-router coupling (ERC) loss that treats router embeddings as cluster centers and uses perturbed versions of these embeddings as proxy tokens representing the distribution of inputs assigned to each expert. These proxy tokens are fed through all experts, and the L2 norms of intermediate activations are collected into an n by n matrix that measures how strongly each expert responds to each proxy. The ERC loss enforces two asymmetric constraints: each expert must respond most strongly to its own proxy compared to others, and each proxy must activate its corresponding expert more than any other, effectively coupling routing representations with expert functionality. This is implemented as a hinge-style penalty over off-diagonal activation entries relative to scaled diagonal terms, with a hyperparameter controlling the strictness of specialization. To ensure proxies remain representative of their assigned token clusters, bounded multiplicative noise is applied to router embeddings, with the bound derived from distances between cluster centers to avoid crossing decision boundaries. The method has constant computational cost in the number of experts rather than tokens, preserving sparse MoE efficiency while providing an explicit and tunable mechanism for aligning routing behavior with expert specialization.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2604.14148" target="_blank" rel="noopener noreferrer">Seedance 2.0: Advancing Video Generation for World Complexity</a></td>
+                <td>Bytedance Seed et al</td>
+                <td>2026</td>
+                <td>video, multimodal, audio-visual</td>
+                <td>Arxiv</td>
+                <td>The paper introduces Seedance 2.0, a unified multimodal audio-video generation model that shifts the paradigm from short, weakly controlled video synthesis to highly controllable generation conditioned on text, images, audio, and video. The core contribution is a single large-scale architecture for joint audio-video generation that integrates multimodal reference inputs and editing operations, enabling both generation and transformation tasks within one framework. The model is designed to explicitly handle real-world complexity by improving temporal coherence, motion stability, and physical plausibility through better modeling of dynamics across frames. It incorporates structured multimodal conditioning that allows fine-grained control over subject identity, motion, style, cinematography, and narrative sequencing, effectively embedding a form of implicit “directorial reasoning” into the generation process. A key technical aspect is the integration of synchronized audio generation, including multi-track and binaural audio, with strict temporal alignment to visual content, treating audio-visual generation as a single coupled problem rather than separate modules. Additionally, the system supports compositional workflows such as reference-based generation, targeted editing, and video continuation, reflecting a design that unifies generation and editing under consistent conditioning and alignment mechanisms.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2601.15282" target="_blank" rel="noopener noreferrer">Rethinking Video Generation Model for the Embodied World</a></td>
+                <td>Yufan Deng et al</td>
+                <td>2026</td>
+                <td>video, evaluation, dataset</td>
+                <td>Arxiv</td>
+                <td>The paper identifies a core limitation in current video generation models for embodied AI: existing evaluation frameworks focus on perceptual quality and fail to capture task correctness and physical realism in robotic scenarios. To address this, it introduces RBench, a benchmark that formalizes robotic video evaluation along two axes, task completion and visual quality, with fine-grained sub-metrics such as physical-semantic plausibility, task adherence consistency, motion amplitude, robot-subject stability, and motion smoothness, many of which are implemented via MLLM-based VQA protocols over temporally sampled frames. The benchmark is constructed from 650 curated image-text pairs spanning five task categories and four robot embodiments, with careful design to avoid data leakage and ensure alignment with realistic robotic action semantics. The evaluation methodology explicitly models common physical failure modes such as non-contact motion, object drift, and action omission, thereby operationalizing physical realism as measurable criteria rather than relying on proxy visual metrics. Complementing evaluation, the paper proposes RoVid-X, a large-scale dataset built through a four-stage pipeline consisting of large-scale video collection, quality filtering, task segmentation with automated captioning, and physical property annotation including optical flow and depth estimation. The overall contribution is a coupled framework where benchmark design defines the target notion of physical intelligence and the dataset construction pipeline injects the corresponding inductive biases, enabling scalable training and rigorous assessment of video models for embodied robotic behavior.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2604.06169" target="_blank" rel="noopener noreferrer">In-Place Test-Time Training</a></td>
+                <td>Guhao Feng et al</td>
+                <td>2026</td>
+                <td>tts, fast weights, mlp, chunk-wise updates, learning objective</td>
+                <td>Arxiv</td>
+                <td>The paper introduces In-Place Test-Time Training, a method that allows large language models to adapt during inference by updating a subset of parameters called fast weights instead of remaining fully static. The key design is to reuse the existing MLP block by treating its final projection matrix as fast weights, updating it in-place while keeping the rest of the model frozen, which enables compatibility with pretrained models without architectural changes. To address inefficiency, the method replaces sequential per-token updates with chunk-wise updates, where tokens are processed in blocks and each block produces a single gradient-based update to the fast weights, allowing parallel computation. The core methodological contribution is a new learning objective aligned with next-token prediction, where targets incorporate future token information using a shifted convolution over embeddings instead of reconstructing the current token. Theoretical analysis shows that this objective increases the logit of the correct next token while leaving other logits mostly unchanged under standard assumptions, whereas reconstruction objectives do not improve predictive accuracy. Overall, the work formulates test-time training as a scalable and theoretically grounded mechanism for embedding a dynamic memory into existing transformers through localized weight updates.</td>
+            </tr>
+        
+            <tr>
                 <td><a href="https://arxiv.org/pdf/2601.15892" target="_blank" rel="noopener noreferrer">Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model</a></td>
                 <td>Chenghao Fan et al</td>
                 <td>2026</td>
@@ -166,7 +202,7 @@
                 <td><a href="https://arxiv.org/pdf/2604.08302" target="_blank" rel="noopener noreferrer">DMax: Aggressive Parallel Decoding for dLLMs</a></td>
                 <td>Zigeng Chen et al</td>
                 <td>2026</td>
-                <td>dllm, parallel decoding, self-refinement</td>
+                <td>dllm, parallel decoding, self-correction</td>
                 <td>Arxiv</td>
                 <td>The paper identifies that diffusion language models fail under aggressive parallel decoding because they use a one-way mask-to-token process, where early incorrect predictions are fixed and then propagate, causing error accumulation without any mechanism for revision. To address this, the authors reformulate decoding as a self-refinement process in embedding space, where tokens are not immediately committed but can be iteratively updated. Their first key component, On-Policy Uniform Training, converts a masked diffusion model into a self-correcting model by training it not only on masked inputs but also on its own sampled predictions, using on-policy rollouts to reduce the mismatch between training and inference distributions. Concretely, they generate noisy sequences by sampling model predictions at masked positions, run two forward passes on masked and predicted sequences, and optimize both with cross-entropy against the clean target so the model learns to denoise its own mistakes. The second component, Soft Parallel Decoding, replaces discrete token states during inference with hybrid embeddings that interpolate between the predicted token embedding and the mask embedding based on prediction confidence, preserving uncertainty and enabling iterative correction. Combined with a block-wise decoding scheme that promotes tokens based on confidence thresholds and re-evaluates all positions until convergence, this allows the model to revise earlier predictions and maintain stability even under highly parallel updates.</td>
             </tr>
@@ -193,7 +229,7 @@
                 <td><a href="https://arxiv.org/pdf/2508.02558" target="_blank" rel="noopener noreferrer">Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction</a></td>
                 <td>Yuerong Song et al</td>
                 <td>2025</td>
-                <td>dllm, sparsity, cache, eviction</td>
+                <td>dllm, sparsity, caching, eviction</td>
                 <td>Arxiv</td>
                 <td>The paper identifies that diffusion LLMs exhibit persistent attention sparsity and stable token saliency across decoding steps, meaning only a small subset of tokens consistently receives high attention. Based on this, it proposes Sparse-dLLM, a training-free inference framework that selectively evicts low-importance KV cache entries instead of storing full states. The method introduces dynamic bidirectional cache eviction, which prunes both prefix and suffix tokens outside the current decoding block using attention scores computed between current queries and cached keys. It further incorporates a delayed cache update mechanism, postponing KV caching by one step to avoid instability in early decoding states. The approach uses attention pooling and top-k selection with a retention ratio to identify and preserve salient tokens, enabling structured sparsification of the cache. Overall, the contribution is a plug-and-play inference strategy that exploits temporal consistency in attention to reduce computation while maintaining effective context representation.</td>
             </tr>
@@ -294,7 +330,7 @@
                 <td><a href="https://arxiv.org/pdf/2410.08709" target="_blank" rel="noopener noreferrer">Distillation of Discrete Diffusion through Dimensional Correlations</a></td>
                 <td>Satoshi Hayakawa et al</td>
                 <td>2025</td>
-                <td>dllm, distillation, marginalization</td>
+                <td>dllm, knowledge distillation, marginalization</td>
                 <td>Arxiv</td>
                 <td>The paper identifies that standard discrete diffusion uses product-form denoisers (factorized over dimensions), which are scalable but cannot capture joint dependencies, forcing accurate modeling to rely on many sampling steps. To address this, it introduces a mixture-of-products model, where the denoiser is an expectation over multiple product distributions indexed by a latent variable 𝜆; although each component is factorized, the mixture is expressive enough to represent arbitrary joint distributions and thus capture dimensional correlations with minimal extra cost. For distillation, the method trains a student to match a multi-step teacher using a distillation loss (KL divergence between teacher and student one-step denoisers at small noise levels) combined with a consistency loss, which enforces that applying the student after a teacher step matches applying the student directly—thereby transferring the correlations implicitly formed by multi-step composition. Together, this setup learns to approximate the teacher’s composed multi-step distribution in a few steps, with theoretical guarantees that the loss functions upper-bound the discrepancy between student and teacher distributions.</td>
             </tr>
@@ -402,7 +438,7 @@
                 <td><a href="https://arxiv.org/pdf/2405.16852" target="_blank" rel="noopener noreferrer">EM Distillation for One-Step Diffusion Models</a></td>
                 <td>Sirui Xi et al</td>
                 <td>2024</td>
-                <td>diffusion, dlm, distillation</td>
+                <td>diffusion, dlm, knowledge distillation</td>
                 <td>NeurIPS</td>
                 <td>The authors propose a maximum likelihood-based approach (EM Distillation, EMD) that distills a diffusion model to a one-step generator. Generator parameters are updated via Expectation-Maximization (EM), using samples from joint distribution of diffusion teacher prior and inferred generator latents. They alternate between an Expectation step that estimates the learning gradients with Monte Carlo samples and a Maximization-step that updates the student via gradient descent.</td>
             </tr>
@@ -618,7 +654,7 @@
                 <td><a href="https://arxiv.org/pdf/2301.02312" target="_blank" rel="noopener noreferrer">Training trajectories, mini-batch losses and the curious role of the learning rate</a></td>
                 <td>Mark Sandler et al</td>
                 <td>2023</td>
-                <td>stochastic gradient descent, learning rate schedules, weight averaging</td>
+                <td>sgd, learning rate schedules, weight averaging</td>
                 <td>Arxiv</td>
                 <td>This paper investigates the curious behavior of stochastic gradient descent by analyzing how the loss function behaves differently on fixed training batches versus held-out batches, revealing that loss on a training batch can reach remarkably low values in a single gradient step while loss on unseen batches shows opposite behavior. The authors propose a simple quadratic model of the loss landscape that explains key phenomena and demonstrates a novel equivalence: weight averaging techniques (stochastic weight averaging, exponential moving average, and two-point averaging) are mathematically equivalent to specific learning rate schedules. This theoretical insight connects to practical findings showing that averaging improves performance by moving trajectories inside loss basins, and helps explain why weight averaging and learning rate decay achieve similar effects in training dynamics.</td>
             </tr>
@@ -645,7 +681,7 @@
                 <td><a href="https://arxiv.org/pdf/2405.15682" target="_blank" rel="noopener noreferrer">The Road Less Scheduled</a></td>
                 <td>Aaron Defazio et al</td>
                 <td>2024</td>
-                <td>optimization, learning rate schedules, stochastic gradient descent, iterate averaging</td>
+                <td>optimization, learning rate schedules, sgd, iterate averaging</td>
                 <td>Arxiv</td>
                 <td>This paper introduces Schedule-Free learning, an optimization method that eliminates the need to pre-specify a stopping time T while achieving state-of-the-art performance compared to traditional learning rate schedules. The key innovation is a new form of momentum based on interpolation between sequences (z for base updates and x for averaging) that unifies iterate averaging with scheduling theory. The authors develop a novel online-to-batch conversion theorem (Theorem 2) that explains why their approach works and generalizes several existing optimization techniques. Extensive experiments across 28 diverse problems—from convex optimization to large-scale deep learning—demonstrate that Schedule-Free AdamW matches or exceeds heavily-tuned cosine schedules without introducing additional hyperparameters, and the method won Meta&#x27;s entry to the MLCommons 2024 AlgoPerf challenge.</td>
             </tr>
@@ -672,7 +708,7 @@
                 <td><a href="https://arxiv.org/pdf/2601.05242" target="_blank" rel="noopener noreferrer">GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization</a></td>
                 <td>Shih-Yang Liu et al</td>
                 <td>2026</td>
-                <td>multi-reward rl, policy optimization, grpo, reward normalization, reinforcement learning</td>
+                <td>multi-reward rl, policy optimization, grpo, reward normalization, rl</td>
                 <td>Arxiv</td>
                 <td>The paper identifies that directly applying Group Relative Policy Optimization (GRPO) to multi-reward reinforcement learning causes distinct reward combinations to collapse into identical advantage values, which diminishes the precision of the training signal and leads to suboptimal convergence. To address this problem, the authors propose Group reward-Decoupled Normalization Policy Optimization (GDPO), which normalizes each individual reward separately before aggregation, then applies batch-wise advantage normalization to preserve cross-reward distinctions while maintaining stable numerical ranges. The method is systematically evaluated across three diverse tasks—tool calling, mathematical reasoning, and coding reasoning—each optimizing multiple heterogeneous rewards including correctness, format compliance, length constraints, and code quality. Empirical results demonstrate that GDPO consistently outperforms GRPO across all settings, with particularly significant improvements on complex reasoning tasks (e.g., 6.3% accuracy gain on AIME for DeepSeek-R1-1.5B) while maintaining better adherence to constraints.</td>
             </tr>
@@ -771,7 +807,7 @@
                 <td><a href="https://arxiv.org/pdf/2601.07568" target="_blank" rel="noopener noreferrer">d3LLM: Ultra-Fast dLLM using Pseudo-Trajectory Distillation</a></td>
                 <td>Yu-Yang Qian et al</td>
                 <td>2026</td>
-                <td>dllm, diffusion, llm, distillation</td>
+                <td>dllm, diffusion, llm, knowledge distillation</td>
                 <td>Arxiv</td>
                 <td>This paper introduces d3LLM, a framework that balances accuracy and parallelism in diffusion language models through innovations in both training and inference. During training, they propose pseudo-trajectory distillation, which uses the teacher model&#x27;s own decoding trajectory (even when it differs from ground truth) to teach the student which tokens can be confidently decoded earlier, combined with curriculum learning that progressively increases mask ratios and window sizes. During inference, they introduce entropy-based multi-block decoding that simultaneously decodes across multiple blocks by prioritizing low-entropy (high-confidence) tokens, coupled with a KV-cache refresh mechanism that periodically recomputes cached states to prevent quality degradation from error propagation. They also propose AUP (Accuracy Under Parallelism), a new evaluation metric that measures the weighted area under the accuracy-parallelism curve, penalizing methods that sacrifice accuracy for speed while rewarding those that maintain both.</td>
             </tr>
@@ -870,7 +906,7 @@
                 <td><a href="https://arxiv.org/pdf/2407.01906" target="_blank" rel="noopener noreferrer">Let the Expert Stick to His Last: Expert-Specialized Fine-Tuning for Sparse Architectural Large Language Models</a></td>
                 <td>Zihan Wang et al</td>
                 <td>2024</td>
-                <td>lora, fine-tuning, moe, sparse</td>
+                <td>lora, finetuning, moe, sparse</td>
                 <td>Arxiv</td>
                 <td>The paper observes that in MoE LLMs, a given downstream task routes tokens to a highly concentrated subset of experts, and different tasks concentrate on different expert subsets, implying strong task-specific expert specialization. Based on this, they propose Expert-Specialized Fine-Tuning (ESFT): estimate per-layer expert relevance from a small probe sample of task data using either average gate value or token selection ratio, then fine-tune only the experts whose cumulative relevance exceeds a threshold 𝑝 while freezing all other experts and (optionally) other modules. The reasoning is that updating only task-relevant (non-shared) experts preserves the MoE system’s specialization and reduces interference/forgetting that happens when unrelated experts and shared parameters are trained, so you keep general ability while still improving the target task. They further argue ESFT works best with fine-grained expert segmentation (many small experts), because it makes it easier to select a task-appropriate expert combination at fixed compute, whereas coarser experts blur specialization and weaken the benefit of selective tuning.</td>
             </tr>
@@ -960,7 +996,7 @@
                 <td><a href="https://arxiv.org/pdf/2510.01265" target="_blank" rel="noopener noreferrer">RLP: Reinforcement as a Pretraining Objective</a></td>
                 <td>Ali Hatamizadeh et al</td>
                 <td>2025</td>
-                <td>reinforcement, rl, pretraining</td>
+                <td>rl, pretraining</td>
                 <td>Arxiv</td>
                 <td>RLP (“Reinforcement Learning Pre-training”) changes pretraining by sampling a short chain-of-thought as an action before each next-token prediction, then rewarding that thought by its information gain: the log-likelihood improvement on the observed next token when conditioning on (context + thought) versus a no-think EMA teacher baseline (computed under teacher forcing). Implementation-wise, they use multiple thought rollouts per context, form group-relative advantages, and apply a PPO/GRPO-like clipped surrogate update that updates only the thought tokens (treating the reward as a stop-grad), while the EMA baseline is updated slowly (e.g., τ≈0.999) to stabilize training and reduce reward hacking. The key benefit is a verifier-free, dense, position-wise reward that works on ordinary web-scale text (no task-specific graders, no sparse success signals), encouraging “think-then-predict” behavior during pretraining rather than relegating RL to post-training. Empirically, they report sizable and persistent reasoning gains: on Qwen3-1.7B-Base, RLP lifts an 8-benchmark math+science average by about +19% and the improvements compound after identical post-training, and scaling to Nemotron-Nano-12B-v2 raises overall average from 42.81% to 61.32% with especially large science-reasoning boosts.</td>
             </tr>
@@ -987,7 +1023,7 @@
                 <td><a href="https://arxiv.org/pdf/2503.20853" target="_blank" rel="noopener noreferrer">BroRL: Scaling Reinforcement Learning via Broadened Exploration</a></td>
                 <td>Jian Hu et al</td>
                 <td>2025</td>
-                <td>RL, reinforcement learning, GRPO</td>
+                <td>rl, grpo</td>
                 <td>Arxiv</td>
                 <td>BRORL introduces rollout-size scaling as a new axis for RLVR by broadening exploration per prompt, arguing that step-based scaling saturates due to insufficient coverage of the action space rather than fundamental limits of RL. Its main theoretical contribution is a mass-balance analysis of a single RL update, which decomposes the change in total correct-token probability mass into (i) two always-nonnegative sampled terms—rewarding sampled correct tokens and penalizing sampled incorrect ones—and (ii) an unsampled coupling term that can be negative but provably vanishes as the number of rollouts increases, guaranteeing monotonic expansion of correct probability mass at large rollout sizes. On the algorithmic side, BroRL is implemented on top of a clipped PPO-style RLVR objective, using decoupled advantage normalization (group-level baselining followed by batch normalization) and dynamic sampling, with the key change being a large per-prompt rollout count that stabilizes PPO updates by reducing variance and suppressing harmful unsampled effects.</td>
             </tr>
@@ -1095,7 +1131,7 @@
                 <td><a href="https://arxiv.org/pdf/2510.15110" target="_blank" rel="noopener noreferrer">DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning</a></td>
                 <td>Shih-Yang Liu et al</td>
                 <td>2025</td>
-                <td>RL, reinforcement learning, penalty</td>
+                <td>rl, penalty</td>
                 <td>Arxiv</td>
                 <td>DLER re-examines length penalties for reasoning LMs and shows that the accuracy loss seen with simple truncation comes from optimization, not the penalty itself. They identify three culprits—biased advantage estimates under GRPO (from high reward variance), entropy collapse, and sparse signals—and fix them with a recipe: batch-wise reward normalization, higher/decoupled clipping, dynamic sampling (curriculum), plus the plain truncation penalty. This yields state-of-the-art accuracy–efficiency trade-offs—~70% shorter outputs while matching or improving accuracy—and enables superior test-time parallel scaling (higher Pass@K at lower latency). They also add Difficulty-Aware DLER (adaptive truncation by problem hardness) and an update-selective weight-merging method that preserves baseline accuracy while retaining concise reasoning when full RL data isn’t available. Awesome work Shih-Yang! Glad to see it out!</td>
             </tr>
@@ -1104,7 +1140,7 @@
                 <td><a href="https://arxiv.org/pdf/2505.24864" target="_blank" rel="noopener noreferrer">ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models</a></td>
                 <td>Mingjie Liu et al</td>
                 <td>2025</td>
-                <td>RL, reinforcement learning, GRPO</td>
+                <td>rl, grpo</td>
                 <td>Arxiv</td>
                 <td>The ProRL paper proposes Prolonged Reinforcement Learning (ProRL) as a method to expand reasoning abilities in large language models beyond what is accessible via supervised training or short RL runs. Instead of relying only on reward-model alignment, ProRL uses verifiable rewards (e.g., correctness in math/code), Group Relative Policy Optimization (GRPO) with entropy-preserving techniques, KL-regularization with periodic reference policy resets, and a diverse multi-domain training set (math, code, STEM, logic, instruction following). The authors show that extended RL (over 2k+ steps) continues to yield improvements, avoids entropy collapse, and enables models to discover new reasoning strategies not present in the base distribution. Their resulting model, Nemotron-Research-Reasoning-Qwen-1.5B, significantly outperforms both its base model and larger specialized models across a broad set of reasoning benchmarks.</td>
             </tr>
@@ -1365,7 +1401,7 @@
                 <td><a href="https://arxiv.org/pdf/2406.16858" target="_blank" rel="noopener noreferrer">EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees</a></td>
                 <td>Yuhui Li et al</td>
                 <td>2024</td>
-                <td>llm, speculative sampling</td>
+                <td>llm, speculative decoding</td>
                 <td>Arxiv</td>
                 <td>This paper presents EAGLE-2, an improved speculative sampling method that introduces dynamic draft trees to accelerate Large Language Model inference beyond the capabilities of its predecessor EAGLE. The key insight is that draft token acceptance rates are not only position-dependent but also context-dependent, challenging the static tree assumption used by existing methods like EAGLE and Medusa. EAGLE-2 leverages the well-calibrated confidence scores from EAGLE&#x27;s draft model to approximate acceptance rates and dynamically adjusts the draft tree structure accordingly, using a value-based expansion phase and reranking strategy to optimize token selection. Comprehensive experiments across six tasks (dialogue, code generation, math reasoning, instruction following, summarization, and QA) on three LLM series demonstrate that EAGLE-2 achieves 3.05x-4.26x speedup ratios, representing 20%-40% improvement over EAGLE while maintaining lossless acceleration and requiring no additional training beyond the base EAGLE model.</td>
             </tr>
@@ -1374,7 +1410,7 @@
                 <td><a href="https://arxiv.org/pdf/2401.15077" target="_blank" rel="noopener noreferrer">EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty in Large Language Models</a></td>
                 <td>Yuhui Li et al</td>
                 <td>2024</td>
-                <td>llm, speculative sampling</td>
+                <td>llm, speculative decoding</td>
                 <td>Arxiv</td>
                 <td>This paper introduces EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency), a speculative sampling framework designed to accelerate Large Language Model (LLM) inference by addressing key limitations in existing approaches. The authors identify two critical insights: first, that autoregression at the feature level (second-to-top-layer) is more straightforward than at the token level, and second, that uncertainty in feature-level prediction significantly constrains performance. EAGLE resolves the uncertainty problem by incorporating a token sequence advanced by one time step into the draft model, enabling more precise feature prediction with minimal computational overhead. Comprehensive experiments across dialogue, code generation, mathematical reasoning, and instruction following tasks demonstrate that EAGLE achieves 2.7x-3.5x speedup for LLaMA2-Chat 70B while maintaining the original text distribution, outperforming existing methods like Lookahead (1.7x-2.1x faster) and Medusa (1.5x-1.6x faster) with low training costs and broad applicability to autoregressive LLMs.</td>
             </tr>
@@ -1446,7 +1482,7 @@
                 <td><a href="https://arxiv.org/pdf/2506.00290" target="_blank" rel="noopener noreferrer">DLM-One: Diffusion Language Models for One-Step Sequence Generation</a></td>
                 <td>Tianqi Chen et al</td>
                 <td>2025</td>
-                <td>diffusion llm</td>
+                <td>dllm</td>
                 <td>Arxiv</td>
                 <td>This paper introduces DLM-One, a score distillation framework that enables one-step sequence generation with continuous diffusion language models (DLMs), eliminating the need for iterative refinement during inference. The key contribution is adapting vision-domain diffusion acceleration techniques to language modeling by aligning the scores of a student model&#x27;s outputs with a pretrained teacher DLM&#x27;s score function in the continuous token embedding space. To address training instability and prevent degenerate solutions common in data-free distillation of language models, the authors propose an adversarial regularization approach that combines score matching loss with adversarial training, using the same network for both score estimation and GAN discrimination. The framework includes a two-stage training strategy where the first stage produces a reasonably good student model, and the second stage reinitializes the score estimator with teacher parameters to provide better learning signals for continued improvement, achieving up to 500× speedup over iterative diffusion methods while maintaining competitive performance on benchmark text generation tasks.</td>
             </tr>
@@ -1644,7 +1680,7 @@
                 <td><a href="https://arxiv.org/pdf/2501.15781" target="_blank" rel="noopener noreferrer">Large Language Models to Diffusion Finetuning</a></td>
                 <td>Edoardo Cetin et al</td>
                 <td>2025</td>
-                <td>llm, diffusion, autoregression</td>
+                <td>llm, diffusion, autoregressive</td>
                 <td>Arxiv</td>
                 <td>L2D introduces a finetuning method that gives pre-trained language models the scaling properties of diffusion models, enabling them to improve performance by increasing computation at inference time. The approach adds a parallel diffusion path to existing models that processes diffusion tokens separately, preserving original capabilities while enabling multi-step reasoning. Unlike traditional finetuning which risks knowledge loss, L2D augments models with new capabilities such as adaptive computation and domain-specific expertise through classifier-free guidance. This innovation effectively bridges the autoregressive and diffusion paradigms, creating models that combine the training efficiency of language models with the compute-scaling advantages of diffusion.</td>
             </tr>
@@ -1653,7 +1689,7 @@
                 <td><a href="https://arxiv.org/pdf/2110.02037" target="_blank" rel="noopener noreferrer">Autoregressive Diffusion Models</a></td>
                 <td>Emiel Hoogeboom et al</td>
                 <td>2022</td>
-                <td>llm, diffusion, autoregression</td>
+                <td>llm, diffusion, autoregressive</td>
                 <td>ICLR</td>
                 <td>Autoregressive Diffusion Models (ARDMs) introduce a novel framework that unifies order-agnostic autoregressive models and discrete diffusion processes, allowing generation in any arbitrary order without requiring causal masking in the neural network architecture. ARDMs employ a training objective that optimizes only a single step of the generation process at a time (similar to diffusion models), using varying mask probabilities and implementing generation through iterative mask replacement with predicted tokens, which enables more efficient training while preserving bidirectional context. The authors develop parallelized inference and generation processes using dynamic programming that can adaptively determine which steps to parallelize, creating a flexible tradeoff between generation speed and model quality while requiring significantly fewer steps than discrete diffusion models to achieve equivalent performance. ARDMs are also extended with &quot;depth upscaling&quot; capabilities that structure the generation process into multiple stages of progressive refinement (such as bit-by-bit generation), which proves particularly effective for lossless compression tasks where ARDMs outperform competing approaches, especially in single-image compression scenarios.</td>
             </tr>
@@ -1680,7 +1716,7 @@
                 <td><a href="https://arxiv.org/pdf/2410.01680" target="_blank" rel="noopener noreferrer">PHI-S: Distribution Balancing for Label-Free Multi-Teacher Distillation</a></td>
                 <td>Mike Ranzinger et al</td>
                 <td>2024</td>
-                <td>distillation, teacher</td>
+                <td>knowledge distillation, teacher</td>
                 <td>Arxiv</td>
                 <td>PHI-S introduces a novel distribution balancing technique for label-free multi-teacher knowledge distillation that addresses the significant variance disparities among heterogeneous teacher models (like CLIP, DINOv2, SigLIP, and SAM). The method leverages Hadamard matrices in an innovative way to create an isotropic standardization approach that uniformly distributes error magnitudes across all feature dimensions, preventing any single dimension from having disproportionate influence in the loss function. Unlike previous whitening or standardization techniques that distort the feature space unevenly, PHI-S first rotates the distribution using a combination of PCA and Hadamard matrices to achieve equal variance in all dimensions, then applies a uniform scalar normalization factor that maintains better numerical stability even with rank-deficient distributions. The authors prove PHI-S&#x27;s mathematical properties and empirically demonstrate its superiority over other normalization methods, achieving improved distillation performance while requiring significantly less computation than competing approaches when training a student model to simultaneously match multiple visual foundation model teachers.</td>
             </tr>
@@ -1698,7 +1734,7 @@
                 <td><a href="https://arxiv.org/pdf/2307.15337" target="_blank" rel="noopener noreferrer">Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation</a></td>
                 <td>Xuefei Ning et al</td>
                 <td>2024</td>
-                <td>LLM</td>
+                <td>llm</td>
                 <td>ICLR</td>
                 <td>SoT is a novel prompting approach that decreases generation latency by guiding LLMs to first produce a skeleton outline of key points, then expand those points in parallel rather than generating the entire response sequentially. The technique leverages batched decoding for open-source models or parallel API calls for proprietary models to complete multiple skeleton points simultaneously, addressing a fundamental bottleneck in LLM inference without requiring model, system, or hardware changes. SoT introduces a &quot;data-centric&quot; optimization pathway by having the LLM organize its output content in a way that enables parallelization, rather than relying on model-level or system-level optimizations. The authors also develop SoT-R (SoT with router), which employs a classifier to selectively apply SoT only for suitable question types, achieving both significant speed-ups (up to 2.4×) while maintaining or even improving answer quality across various LLMs.</td>
             </tr>
@@ -1707,7 +1743,7 @@
                 <td><a href="https://arxiv.org/pdf/2504.15466" target="_blank" rel="noopener noreferrer">Learning Adaptive Parallel Reasoning with Language Models</a></td>
                 <td>Jiayi Pan et al</td>
                 <td>2025</td>
-                <td>LLM</td>
+                <td>llm</td>
                 <td>Arxiv</td>
                 <td>APR introduces a novel reasoning framework that enables language models to dynamically orchestrate both serialized and parallel computations through a parent-child threading mechanism where parent inference threads can delegate subtasks to multiple child threads using spawn() operations. The key innovation is an end-to-end reinforcement learning strategy that optimizes both parent and child inference threads without requiring predefined reasoning structures, allowing models to adaptively allocate computation between serial and parallel paths for maximum efficiency. APR implements this parent-child threading mechanism using a standard model serving framework to perform inference in child threads simultaneously through batching, which significantly reduces real-time latency compared to traditional serialized approaches. This approach demonstrates superior performance over serialized chain-of-thought methods in three dimensions: higher success rates within the same context window constraints, better scaling behavior when increasing compute budgets, and improved accuracy at equivalent latency when evaluated on complex reasoning tasks.</td>
             </tr>
@@ -1716,7 +1752,7 @@
                 <td><a href="https://openreview.net/pdf?id=AyC4uxx2HW" target="_blank" rel="noopener noreferrer">LLaMAFlex: Many-in-one LLMs Via Generalized Pruning and Weight Sharing</a></td>
                 <td>Ruisi Cai et al</td>
                 <td>2025</td>
-                <td>LLM</td>
+                <td>llm</td>
                 <td>ICLR</td>
                 <td>LLamaFlex introduces a novel nested weight-shared architecture that can be pruned across both width (attention heads, hidden dimensions, MLP sizes) and depth (layers) dimensions in a zero-shot manner, enabling instant generation of multiple compressed models from a single trained model. The approach differs from traditional pruning methods by requiring only a single continued training phase of approximately 60 billion tokens to train the elastic network alongside an end-to-end Gumbel Softmax-based router that smoothly interpolates across model sizes. LLamaFlex enhances nested architectures through a &quot;policy-aware modulation&quot; technique inspired by diffusion models, which introduces additional parameters for each nesting level to increase model expressivity beyond what pure weight sharing allows. Unlike previous elastic frameworks, LLamaFlex produces uniform architectures (consistent configurations across all layers) that are optimized for deployment in common frameworks like TensorRT-LLM, while achieving accuracy on par with or better than state-of-the-art pruned models, elastic/flexible models, and models trained from scratch.</td>
             </tr>
@@ -1887,7 +1923,7 @@
                 <td><a href="https://arxiv.org/pdf/2207.06881" target="_blank" rel="noopener noreferrer">Recurrent Memory Transformer</a></td>
                 <td>Aydar Bulatov et al</td>
                 <td>2022</td>
-                <td>meta tokens, memory</td>
+                <td>meta-tokens, memory</td>
                 <td>NeurIPS</td>
                 <td>This paper introduces the Recurrent Memory Transformer (RMT), a novel architecture that combines memory tokens with segment-level recurrence to address two key limitations of standard Transformer models: the difficulty of storing global information across a sequence and the quadratic computational complexity that limits input sequence length. RMT works by adding special memory tokens to both the beginning and end of each input segment, with the end tokens capturing information as &quot;write memory&quot; and then being passed to the next segment as &quot;read memory&quot; creating a recurrent connection between segments. The key innovation is that both the memory mechanism and recurrence are implemented without modifying the core Transformer architecture - only the input and output sequences are changed by adding special tokens. This makes RMT compatible with any Transformer-based model.</td>
             </tr>
@@ -1905,7 +1941,7 @@
                 <td><a href="https://arxiv.org/pdf/2502.06901" target="_blank" rel="noopener noreferrer">Enabling Autoregressive Models to Fill in Masked Tokens</a></td>
                 <td>Daniel Israel et al</td>
                 <td>2025</td>
-                <td>autoregression, mlm</td>
+                <td>autoregressive, mlm</td>
                 <td>Arxiv</td>
                 <td>This paper introduces MARIA (Masked and Autoregressive Infilling Architecture), a novel approach that combines the strengths of both autoregressive (AR) and masked language modeling (MLM) paradigms. The method addresses a fundamental limitation of AR models, which cannot effectively perform masked infilling (predicting tokens between past and future context) despite their dominance in the field due to superior training and inference efficiency. MARIA works by taking a pre-trained MLM model (which can naturally handle infilling but is computationally inefficient) and an AR model, then training a simple linear decoder that operates on their concatenated hidden states. This minimal architectural modification enables the resulting model to perform masked infilling while retaining the computational benefits of AR models, particularly KV caching during inference.</td>
             </tr>
@@ -1941,7 +1977,7 @@
                 <td><a href="https://arxiv.org/pdf/2305.18654" target="_blank" rel="noopener noreferrer">Faith and Fate: Limits of Transformers on Compositionality</a></td>
                 <td>Nouha Dziri et al</td>
                 <td>2023</td>
-                <td>transformers, compositionality</td>
+                <td>transformer, compositionality</td>
                 <td>Arxiv</td>
                 <td>The paper reveals that transformer large language models (LLMs) struggle with seemingly simple compositional problems requiring multi-step reasoning, despite their impressive performance on complex tasks. Using a computation graph framework to measure task complexity across multi-digit multiplication, logic puzzles, and dynamic programming problems, the authors demonstrate that LLMs solve compositional tasks through pattern matching rather than systematic reasoning, performing well on in-distribution examples but failing dramatically on out-of-distribution cases even after extensive fine-tuning with explicit reasoning steps. Their error analysis shows that while models can perform single-step operations correctly, they fail to compose these steps into correct reasoning paths, with errors propagating through the computation graph because the autoregressive nature of transformers forces them to tackle problems sequentially through a greedy process of producing the next token without developing a global understanding of the task. Both empirical findings and mathematical analysis reveal a fundamental limitation where error probability increases exponentially with task complexity, suggesting transformers may be inherently limited in solving complex compositional tasks without additional mechanisms. The paper concludes that transformers are best suited for tasks with few reasoning steps, tasks allowing approximate solutions, or when combined with planning modules or refinement methods to overcome the limitations of their autoregressive architecture.</td>
             </tr>
@@ -2013,7 +2049,7 @@
                 <td><a href="https://arxiv.org/pdf/2403.00835" target="_blank" rel="noopener noreferrer">CLLMs: Consistency Large Language Models</a></td>
                 <td>Siqi Kou et al</td>
                 <td>2024</td>
-                <td>llms, consistency models</td>
+                <td>llm, consistency models</td>
                 <td>ICML</td>
                 <td>This paper introduces Consistency Large Language Models (CLLMs), a new approach that significantly improves the efficiency of Jacobi decoding for language model inference. The key innovation is training language models to consistently predict the fixed point of a Jacobi trajectory in fewer steps, addressing the main limitation of standard Jacobi decoding which typically predicts only one correct token per iteration. By fine-tuning target LLMs using a consistency loss that maps arbitrary points on the Jacobi trajectory to the fixed point, CLLMs achieve 2.4× to 3.4× improvements in generation speed while maintaining quality across both domain-specific and open-domain tasks. Unlike alternative approaches like speculative decoding or Medusa, CLLMs don&#x27;t require auxiliary model components or architectural modifications, making them memory-efficient and highly adaptable. The authors identify two key acceleration mechanisms in CLLMs: &quot;fast forwarding,&quot; where multiple consecutive tokens are correctly predicted in a single step, and &quot;stationary tokens,&quot; which remain correct despite being preceded by inaccurate tokens. These phenomena are especially prominent in domain-specific tasks where text contains predictable collocations and syntactic structures.</td>
             </tr>
@@ -2058,7 +2094,7 @@
                 <td><a href="https://arxiv.org/pdf/1805.04770" target="_blank" rel="noopener noreferrer">Born Again Networks</a></td>
                 <td>Tommaso Furlanello et al</td>
                 <td>2018</td>
-                <td>knowledge distillation, self distillation</td>
+                <td>knowledge distillation</td>
                 <td>ICML</td>
                 <td>This paper introduces Born-Again Neural Networks (BANs), a novel approach where knowledge distillation is applied to train student models with identical architectures to their teachers. Surprisingly, these student models consistently outperform their teachers on both computer vision and language modeling tasks, even when the student and teacher have the exact same architecture and capacity. The authors experiment with multiple generations of BANs, showing that performance continues to improve (though with diminishing returns), and explore the effect of &quot;dark knowledge&quot; by testing variations where they either weight examples by teacher confidence or permute non-argmax outputs. Their framework also allows for cross-architecture knowledge transfer, such as training ResNet students from DenseNet teachers, resulting in state-of-the-art performance on CIFAR datasets and demonstrating that the benefits of knowledge distillation extend beyond model compression.</td>
             </tr>
@@ -2175,7 +2211,7 @@
                 <td><a href="https://arxiv.org/pdf/2408.11796" target="_blank" rel="noopener noreferrer">LLM Pruning and Distillation in Practice: The Minitron Approach</a></td>
                 <td>Sharath Turuvekere Sreenivas et al</td>
                 <td>2024</td>
-                <td>llm, pruning, distillation</td>
+                <td>llm, pruning, knowledge distillation</td>
                 <td>Arxiv</td>
                 <td>The paper introduces an improved approach to LLM model compression by combining structured pruning with knowledge distillation, notably adding a &quot;teacher correction&quot; phase that allows the teacher model to adapt to new data distributions when the original pretraining dataset is unavailable. The authors explore two distinct pruning strategies - depth pruning (removing entire layers) and width pruning (reducing hidden/attention/MLP dimensions), along with a new task-based saliency criteria for depth pruning. They demonstrate this approach by successfully compressing Mistral NeMo 12B and Llama 3.1 8B models to 8B and 4B parameters respectively, using significantly fewer training tokens than training from scratch. The methodology is particularly valuable because it removes the dependency on accessing the original pretraining dataset, making it more practical for compressing proprietary models.</td>
             </tr>
@@ -2274,7 +2310,7 @@
                 <td><a href="https://arxiv.org/pdf/2409.12917" target="_blank" rel="noopener noreferrer">Training Language Models to Self-Correct via Reinforcement Learning</a></td>
                 <td>Aviral Kumar et al</td>
                 <td>2024</td>
-                <td>self-correct, reinforcement learning</td>
+                <td>self-correction, rl</td>
                 <td>Arxiv</td>
                 <td>The paper introduces SCoRe, a novel multi-turn reinforcement learning approach that successfully teaches language models to self-correct their own mistakes without external feedback by addressing two key failure modes of previous methods: distribution shift and behavior collapse.</td>
             </tr>
@@ -2463,7 +2499,7 @@
                 <td><a href="https://openreview.net/pdf?id=gojL67CfS8" target="_blank" rel="noopener noreferrer">Visual Autoregressive Modeling: Scaling Image Generation via Next-Scale Prediction</a></td>
                 <td>Key Tian et al</td>
                 <td>2024</td>
-                <td>tokens, reference model</td>
+                <td>token, reference model</td>
                 <td>NeurIPS</td>
                 <td>The paper proposes Visual AutoRegressive (VAR) modeling, which shifts the paradigm of autoregressive learning for image generation from sequential &quot;next-token prediction&quot; to &quot;next-scale prediction.&quot; This approach treats entire token maps at progressively finer resolutions as the autoregressive units, reflecting the coarse-to-fine manner in which humans perceive images. Unlike traditional models that flatten 2D spatial structures into 1D sequences, VAR preserves spatial locality and leverages multi-scale visual representations to reduce computational inefficiencies. By adopting hierarchical generation aligned with natural image structures, VAR overcomes the limitations of standard autoregressive models, such as mathematical premise violations and loss of spatial coherence. Its design integrates autoregressive transformers with multi-scale tokenization, creating a framework that is theoretically scalable and generalizable across diverse visual generation tasks.</td>
             </tr>
@@ -2472,7 +2508,7 @@
                 <td><a href="https://arxiv.org/pdf/2404.07965" target="_blank" rel="noopener noreferrer">Rho-1: Not All Tokens Are What You Need</a></td>
                 <td>Zhenghao Lin et al</td>
                 <td>2024</td>
-                <td>tokens, reference model</td>
+                <td>token, reference model</td>
                 <td>NeurIPS</td>
                 <td>This paper scores tokens using a reference model and then trains a language model to focus on the tokens with higher scores. They find that they can improve performance while training on less tokens.</td>
             </tr>
@@ -2724,7 +2760,7 @@
                 <td><a href="https://arxiv.org/abs/2410.12557" target="_blank" rel="noopener noreferrer">One Step Diffusion via ShortCut Models</a></td>
                 <td>Kevin Frans et al</td>
                 <td>2024</td>
-                <td>diffusion, ode, flow-matching</td>
+                <td>diffusion, ode, flow matching</td>
                 <td>Arxiv</td>
                 <td>This paper introduces shortcut models, a new type of diffusion model that enables high-quality image generation in a single forward pass by conditioning the model not only on the timestep but also on the desired step size, allowing it to learn larger jumps during the denoising process. Unlike previous approaches that require multiple training phases or complex scheduling, shortcut models can be trained end-to-end in a single phase by leveraging a self-consistency property where one large step should equal two consecutive smaller steps, combined with flow-matching loss as a base case. The key insight is that by conditioning on step size, the model can account for future curvature in the denoising path and jump directly to the correct next point rather than following the curved path naively, which would lead to errors with large steps. The approach simplifies the training pipeline while maintaining flexibility in inference budget, as the same model can generate samples using either single or multiple steps after training.</td>
             </tr>
@@ -2760,7 +2796,7 @@
                 <td><a href="https://arxiv.org/pdf/2312.03209" target="_blank" rel="noopener noreferrer">Cache Me if You Can: Accelerating Diffusion Models through Block Caching</a></td>
                 <td>Felix Wimbauer et al</td>
                 <td>2024</td>
-                <td>diffusion, caching, distillation</td>
+                <td>diffusion, caching, knowledge distillation</td>
                 <td>Arxiv</td>
                 <td>This paper introduces &quot;block caching&quot; to accelerate diffusion models by reusing computations across denoising steps. The key insight is that many layer blocks (particularly attention blocks) in diffusion models change very gradually during the denoising process, making their repeated computation redundant. The authors propose automatically determining which blocks to cache and when to refresh them based on measuring the relative changes in block outputs across timesteps. They also introduce a lightweight scale-shift adjustment mechanism that uses a student-teacher setup, where the student (cached model) learns additional scale and shift parameters to better align its cached block outputs with those of the teacher (uncached model), while keeping the original model weights frozen.</td>
             </tr>
@@ -2832,7 +2868,7 @@
                 <td><a href="https://arxiv.org/pdf/2408.11039" target="_blank" rel="noopener noreferrer">Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model</a></td>
                 <td>Chunting Zhou et al</td>
                 <td>2024</td>
-                <td>diffusion, transformer, multi-modal</td>
+                <td>diffusion, transformer, multimodal</td>
                 <td>Arxiv</td>
                 <td>The key insight of this paper is that a single transformer model can effectively handle both discrete data (like text) and continuous data (like images) by using different training objectives for each modality within the same model. They introduce &quot;Transfusion,&quot; which uses traditional language modeling (next token prediction) for text sequences while simultaneously applying diffusion modeling for image sequences, combining these distinct objectives into a unified training approach. The architecture employs a novel attention pattern that allows for causal attention across the entire sequence while enabling bidirectional attention within individual images, letting image patches attend to each other freely while maintaining proper causality for text generation. This unified approach avoids the need for separate specialized models or complex architectures while still allowing each modality to be processed according to its most effective paradigm.</td>
             </tr>
@@ -2895,7 +2931,7 @@
                 <td><a href="https://arxiv.org/pdf/2103.00020" target="_blank" rel="noopener noreferrer">Learning Transferable Visual Models from Natural Language Supervision</a></td>
                 <td>Alec Radford et al</td>
                 <td>2021</td>
-                <td>CLIP</td>
+                <td>clip</td>
                 <td>Arxiv</td>
                 <td>CLIP (Contrastive Language-Image Pre-training) works by simultaneously training two neural networks - one that encodes images and another that encodes text - to project their inputs into a shared multi-dimensional space where similar concepts end up close together. During training, CLIP takes a batch of image-text pairs and learns to identify which text descriptions actually match which images, doing this by maximizing the cosine similarity between embeddings of genuine pairs while minimizing similarity between mismatched pairs. The training data consists of hundreds of millions of (image, text) pairs collected from the internet, which helps CLIP learn broad visual concepts and their relationships to language without requiring hand-labeled data. What makes CLIP particularly powerful is its zero-shot capability - after training, it can make predictions about images it has never seen before by comparing them against any arbitrary text descriptions, rather than being limited to a fixed set of predetermined labels.</td>
             </tr>
@@ -2904,7 +2940,7 @@
                 <td><a href="https://arxiv.org/pdf/1412.6980" target="_blank" rel="noopener noreferrer">Adam: A Method for Stochastic Optimization</a></td>
                 <td>Diederik Kingma et al</td>
                 <td>2015</td>
-                <td>optimizers</td>
+                <td>optimizer</td>
                 <td>ICLR</td>
                 <td>Adam combines momentum (through exponential moving average of gradients mt) and adaptive learning rates (through exponential moving average of squared gradients vt) to create an efficient optimizer, where mt captures the direction of updates while vt adapts the step size for each parameter based on its gradient history. The optimizer corrects initialization bias in these moving averages by scaling them with factors 1/(1-β₁ᵗ) and 1/(1-β₂ᵗ) respectively, ensuring unbiased estimates even in early training. The parameter update θt ← θt-1 - α·mt/(√vt + ϵ) is invariant to gradient scaling because it uses the ratio mt/√vt, while the adaptive learning rate 1/√vt approximates the diagonal of the Fisher Information Matrix&#x27;s square root, making it a more conservative version of natural gradient descent that works well with sparse gradients and non-stationary objectives. The hyperparameters β₁ = 0.9 and β₂ = 0.999 mean the momentum term considers roughly the last 10 steps while the variance term considers the last 1000 steps, allowing Adam to both move quickly in consistent directions while being careful in directions with high historical variance.</td>
             </tr>
@@ -2958,7 +2994,7 @@
                 <td><a href="https://arxiv.org/pdf/2312.00858" target="_blank" rel="noopener noreferrer">DeepCache: Accelerating Diffusion Models for Free</a></td>
                 <td>Xinyin Ma et al</td>
                 <td>2023</td>
-                <td>diffusion, cache</td>
+                <td>diffusion, caching</td>
                 <td>Arxiv</td>
                 <td>Similarly to Faster Diffusion (Senma Li et al, 2024), this paper uses the temporal redundancy in the denoising stages. They then cache features across the UNet by skipping some of the skip branches / paths. Basically, for timesteps t and t+1 that are similar, we can cache some of the high level features between them and directly use them. Also smart!</td>
             </tr>
@@ -3138,7 +3174,7 @@
                 <td><a href="https://arxiv.org/pdf/2402.16363" target="_blank" rel="noopener noreferrer">LLM Inference Unveiled: Survey and Roofline Model Insights</a></td>
                 <td>Roger Waleffe et al</td>
                 <td>2024</td>
-                <td>llms, survey</td>
+                <td>llm, survey</td>
                 <td>Arxiv</td>
                 <td>This paper surveys some recent advancements in LLC inference, like speculative decoding or operator fusion. They also analyze the findings using the Roofline model, which is likely the first paper to do such a thing for LLM inference. Good for checking out other papers that have recently been published.</td>
             </tr>
@@ -3147,7 +3183,7 @@
                 <td><a href="https://arxiv.org/pdf/2406.07887" target="_blank" rel="noopener noreferrer">An Empirical Study of Mamba-based Language Models</a></td>
                 <td>Roger Waleffe et al</td>
                 <td>2024</td>
-                <td>mamba, llms, transformer</td>
+                <td>mamba, llm, transformer</td>
                 <td>Arxiv</td>
                 <td>This paper compares Mamba-based, Transformer-based, and hybrid-based language models in a controlled setting where sizes and datasets are larger than the past (8B-params / 3.5T tokens). They find that Mamba and Mamba-2 lag behind Transformer models on copying and in-context learning tasks. They then see that a hybrid architecture of 43% Mamba, 7% self attention, and 50% MLP layers performs better than all others.</td>
             </tr>
@@ -3165,7 +3201,7 @@
                 <td><a href="https://arxiv.org/pdf/2202.00512" target="_blank" rel="noopener noreferrer">Progressive Distillation for Fast Sampling of Diffusion Models</a></td>
                 <td>Tim Salimans et al</td>
                 <td>2022</td>
-                <td>diffusion, distillation, sampling</td>
+                <td>diffusion, knowledge distillation, sampling</td>
                 <td>ICLR</td>
                 <td>Diffusion models excel in generative modeling, surpassing GANs in perceptual quality and autoregressive models in density estimation, but they suffer from slow sampling times. This paper introduces two key contributions: new parameterizations that improve stability with fewer sampling steps and a distillation method that progressively reduces the number of required steps by half each time. Applied to benchmarks like CIFAR-10 and ImageNet, the approach distills models from 8192 steps down to as few as 4 steps, maintaining high image quality while offering a more efficient solution for both training and inference.</td>
             </tr>
@@ -3219,7 +3255,7 @@
                 <td><a href="https://arxiv.org/pdf/2212.09748" target="_blank" rel="noopener noreferrer">Scalable Diffusion Models with Transformers</a></td>
                 <td>William Peebles et al</td>
                 <td>2023</td>
-                <td>diffusion,ddpm, dit</td>
+                <td>diffusion, ddpm, dit</td>
                 <td>CVPR</td>
                 <td>The authors explore using transformers in the latent space, rather than U-Nets. They find that their methods can lead to lower FID scores compared to prior SOTA. In this paper, their image generation pipeline is roughly: 1) Input high resolution image x 2) Encoder z = E(x), where E is a pre-trained frozen VAE encoder, and z is the latent representation 3) The DiT model operates on z 4) New latent representation z’ is sampled from the diffusion model 5) We then decode the z’ using the pre-trained frozen VAE decoder D, and x’ is now the generated high resolution image.</td>
             </tr>
@@ -3255,7 +3291,7 @@
                 <td><a href="https://arxiv.org/pdf/2406.10774" target="_blank" rel="noopener noreferrer">Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference</a></td>
                 <td>Jiaming Tang et al</td>
                 <td>2024</td>
-                <td>KV cache, sparsity, LLM</td>
+                <td>kv cache, sparsity, llm</td>
                 <td>ICML</td>
                 <td>Long context LLM inference is slow and the speed decreases significantly as sequence lengths grow. This is mainly due to needing to load a big KV cache during self-attention. Prior works have use methods to evict tokens in the attention maps to promote sparsity, but the Han lab (smartly!) found that the criticality of tokens strongly correlates with the current query token. Thus, they employ a KV Cache eviction method that retains all KV cache (since past evicted tokens may be needed to handle future queries), while being able to select the top K relevant tokens to a particular query. This allows for speedups in self-attention at low cost to accuracy.</td>
             </tr>
@@ -3264,7 +3300,7 @@
                 <td><a href="https://arxiv.org/pdf/2003.11142" target="_blank" rel="noopener noreferrer">BigNAS: Scaling Up Neural Architecture Search with Big Single-Stage Models</a></td>
                 <td>Jiahui Yu et al</td>
                 <td>2020</td>
-                <td>NAS, one-shot</td>
+                <td>nas, one-shot</td>
                 <td>Arxiv</td>
                 <td>Most NAS frameworks train some one-shot model to rank the quality of different child architectures. However, these rankings often are different than reality, so frameworks typically finetune architecture after finding them. BigNAS proposes that this fine-tuning / post-processing is not necessary. They find some interesting points, such as that &quot;big models converge faster while small child models converge slower&quot;. Thus, at some training step t when the performance of a big model peaks, the small child models are not yet fully-trained, and at a t&#x27; where the child models are fully trained, the big model is overfitting. Thus, they use an exponentially decaying with constant ending learning rate scheduler, which has constant learning rate at the end of training when it reaches 5% of initial learning rate. Another point they bring up is a &quot;coarse-to-fine&quot; strategy where one first finds a rough sketch of promising network candidates, and then samples multiple finer grained variations around the sketch of interest.</td>
             </tr>
@@ -3273,7 +3309,7 @@
                 <td><a href="https://arxiv.org/pdf/1911.11090" target="_blank" rel="noopener noreferrer">Meta-Learning of Neural Architectures for Few-Shot Learning</a></td>
                 <td>Thomas Elsken et al</td>
                 <td>2021</td>
-                <td>NAS, meta-learning, few-shot, fsl</td>
+                <td>nas, meta-learning, few-shot</td>
                 <td>Arxiv</td>
                 <td>The authors propose MetaNAS, which is the first method that fully integrates NAS with gradient-based meta-learning. Basically, they learn a method of joint learning gradient-based NAS methods like DARTS and meta-learning the architecture itself. Their goal is thus: meta-learn an architecture \alpha_{meta} with corresponding meta-learned weights w_{meta}. When given a new task \mathcal{T}_{i}, both \alpha_{meta} and w_{meta} adapt quickly to \mathcal{T}_{i} based on a few samples. One interesting technique they do is add a temperature term that is annealed to 0 over the course of task training; this is to help with sparsity of the mixture weights of the operations when using the DARTS search.</td>
             </tr>
@@ -3282,7 +3318,7 @@
                 <td><a href="https://arxiv.org/pdf/1912.00412" target="_blank" rel="noopener noreferrer">MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification</a></td>
                 <td>Sivan Doveh et al</td>
                 <td>2020</td>
-                <td>NAS, meta-learning, few-shot, fsl</td>
+                <td>nas, meta-learning, few-shot</td>
                 <td>Arxiv</td>
                 <td>The authors propose a method using a DARTS-like search for FSL architectures. &quot;Our goal is to learn a neural network where connections are controllable and adapt to the few-shot task with novel categories... However, unlike DARTS, our goal is not to learn a one time architecture to be used for all tasks... we need to make our architecture task adaptive so it would be able to quickly rewire for each new target task.&quot;. Basically, they design a thing called a MetAdapt Controller that changes the connection in the main network according to some given task.</td>
             </tr>
@@ -3291,7 +3327,7 @@
                 <td><a href="https://arxiv.org/pdf/1503.02531" target="_blank" rel="noopener noreferrer">Distilling the Knowledge in a Neural Network</a></td>
                 <td>Geoffry Hinton et al</td>
                 <td>2015</td>
-                <td>distillation, ensemble, MoE</td>
+                <td>knowledge distillation, ensemble, moe</td>
                 <td>Arxiv</td>
                 <td>The first proposal of knowledge distillation. The main interesting point I found was that they change the temperature of the softmax to be higher to allow for softer targets. This allows for understanding what 2&#x27;s look like 3&#x27;s (in an MNIST example). Basically, adds a sort of regularization since more information can be carried in these softer targets compared to a single 0 or 1. They also propose the idea of having an ensemble of models, and then learning a distilled model that is smaller. The biological example of having a clumsy larvae that then becomes a more specialized bug was good.</td>
             </tr>
@@ -3300,7 +3336,7 @@
                 <td><a href="https://arxiv.org/pdf/2211.12485" target="_blank" rel="noopener noreferrer">HyperTuning: Toward Adapting Large Language Models without Back-propagation</a></td>
                 <td>Jason Phang et al</td>
                 <td>2023</td>
-                <td>hypernetworks, adaptation, tuning, LoRA, LLMs</td>
+                <td>hypernetworks, adaptation, tuning, lora, llm</td>
                 <td>ICML</td>
                 <td>The authors show that we can a hypernetwork for model adaptation in order to generate task-specific parameters. They try two approaches: generating prefixs and generating LoRA parameters for a frozen T5 model using few-shot examples. They also note the importance of hyperpretraining, i.e., an additional stage to adapt the hypernet to generate parameters for the downstream model. They also propose a scheme for this. NOTE! &quot;We also observe a consistent trend where HyperT5-Prefix outperforms HyperT5-LoRA. We speculate that it is easier for hypermodels to learn to generate soft prefixes as compared to LoRA weights...&quot;</td>
             </tr>
@@ -3309,7 +3345,7 @@
                 <td><a href="https://arxiv.org/pdf/2012.13255" target="_blank" rel="noopener noreferrer">Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning</a></td>
                 <td>Armen Aghajanyan et al</td>
                 <td>2020</td>
-                <td>fine-tuning, intrinsic dimension, lora</td>
+                <td>finetuning, intrinsic dimension, lora</td>
                 <td>Arxiv</td>
                 <td>Large models with billions of parameters can be fine-tuned using only a few hundred examples. Why is this? Furthermore, large models often allow for significant sparsification, which implies that there is much redundancy. This paper targets both of these ideas, by showing that many common models have an &quot;intrinsic dimension&quot; much less than the full parameterization.</td>
             </tr>
@@ -3318,7 +3354,7 @@
                 <td><a href="https://arxiv.org/pdf/2106.09685" target="_blank" rel="noopener noreferrer">LoRA: Low-Rank Adaptation of Large Language Models</a></td>
                 <td>Edward Hu et al</td>
                 <td>2021</td>
-                <td>low rank adaptation, lora, llm, fine-tuning</td>
+                <td>lora, llm, finetuning</td>
                 <td>Arxiv</td>
                 <td>Fine-tuning large models is expensive, because we update all the original parameters. LoRA, taking inspiration from Aghajanyan et al, 2020 (pre-trained language models have a low &quot;intrinsic dimension&quot;), the authors thought that the weight updates would also have low intrinsic rank. Thus, they decompose Delta W = BA, where B and A are lower rank. The A and B are trainable. They initialize A with Gaussian, and B as zero, so Delta W = BA is zero initialy. They then optimize and find this method to be more efficient in terms of both time and space.</td>
             </tr>
@@ -3327,7 +3363,7 @@
                 <td><a href="https://arxiv.org/pdf/2304.08467" target="_blank" rel="noopener noreferrer">Learning to Compress Prompts with Gist Tokens</a></td>
                 <td>Jesse Mu et al</td>
                 <td>2023</td>
-                <td>llms, prompting, compression, tokens</td>
+                <td>llm, prompting, compression, token</td>
                 <td>NeurIPS</td>
                 <td>The authors describe a method of using a distilling function G (similar to a hypernet) that is able to compress LM prompts into a smaller set of &quot;gist&quot; tokens. These tokens can then be cached and reused. The neat trick is that they reuse the LM itself as G, so gisting itself incurs no additional training cost. Note that in their &quot;Failure Cases&quot; section, they mention &quot;... While it is unclear why only the gist models exhibit this behavior (i.e. the fail example behavior), these issues can likely be mitigated with more careful sampling techniques.</td>
             </tr>
@@ -3390,7 +3426,7 @@
                 <td><a href="https://arxiv.org/pdf/1712.05877" target="_blank" rel="noopener noreferrer">Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference</a></td>
                 <td>Benoit Jacob et al</td>
                 <td>2017</td>
-                <td>quantization, quantization schemes, efficient inference, floating-point</td>
+                <td>quantization, quantization schemes, efficiency, floating-point</td>
                 <td>Arxiv</td>
                 <td>The authors propose a quantization scheme that allows us to only use integer arithmetic to approximate fp computations in a neural network. They also describe a training approach that simulates the effect of quantization in the forward pass. Backprop still occurs, but all weights and biases are stored in fp. The forward prop pass then simulates quantized inference by rounding off using the quantization scheme they describe that changes fp to int.</td>
             </tr>
@@ -3417,7 +3453,7 @@
                 <td><a href="https://aclanthology.org/2023.findings-emnlp.610.pdf" target="_blank" rel="noopener noreferrer">Example-based Hypernetworks for Multi-source Adaptation to Unseen Domains</a></td>
                 <td>Tomer Volk et al</td>
                 <td>2023</td>
-                <td>hypernetworks, multi-source adaptation, unseen domains, NLP</td>
+                <td>hypernetworks, multi-source adaptation, unseen domains, nlp</td>
                 <td>EMNLP</td>
                 <td>The authors apply hypernets to unsupervised domain adaptation in NLP. They use example-based adaptation. The main idea is that they use an encoder-decoder to initially create the unique signatures from an input example, and then they embed it within the source domain&#x27;s semantic space. The signature is then used by a hypernet to generate the task classifier&#x27;s weights. The paper focuses on improving generalization to unseen domains by explicitly modeling the shared and domain specific characteristics of the input. To allow for parameter sharing, they propose modeling based on hypernets, which allow soft weight sharing. </td>
             </tr>
@@ -3453,7 +3489,7 @@
                 <td><a href="https://arxiv.org/pdf/1906.00695" target="_blank" rel="noopener noreferrer">Continual Learning with Hypernetworks</a></td>
                 <td>Johannes von Oswald et al</td>
                 <td>2020</td>
-                <td>hypernetworks, continual learning, meta learning</td>
+                <td>hypernetworks, continual learning, meta-learning</td>
                 <td>ICLR</td>
                 <td>The authors present a method of preventing catastrophic forgetting, by using task-conditioned hypernets (i.e., hypernets that generate weights of target model based on some task embedding). Thus, rather than memorizing many data characteristics, we can split the problem into just learning a single point per task, given the task embedding.</td>
             </tr>
@@ -3471,7 +3507,7 @@
                 <td><a href="https://arxiv.org/pdf/1312.5602" target="_blank" rel="noopener noreferrer">Playing Atari with Deep Reinforcement Learning</a></td>
                 <td>Volodymyr Mnih et al</td>
                 <td>2013</td>
-                <td>q-learning, reinforcement learning</td>
+                <td>q-learning, rl</td>
                 <td>Arxiv</td>
                 <td>The authors present the first deep learning model that can learn complex control policies, and they teach it to play Atari 2600 games using Q-learning. Their goal was to create one net that can play as many games as possible.</td>
             </tr>
@@ -3507,7 +3543,7 @@
                 <td><a href="https://www.cs.toronto.edu/~hinton/csc2535/readings/ws.pdf" target="_blank" rel="noopener noreferrer">The wake-sleep algorithm for unsupervised neural networks</a></td>
                 <td>Geoffry Hinton et al</td>
                 <td>1995</td>
-                <td>representation, generative</td>
+                <td>representation, generative models</td>
                 <td>Arxiv</td>
                 <td>One of the first generative neural networks that kind of resembles diffusion.</td>
             </tr>
@@ -3534,7 +3570,7 @@
                 <td><a href="https://arxiv.org/pdf/2306.06955" target="_blank" rel="noopener noreferrer">A Brief Review of Hypernetworks in Deep Learning</a></td>
                 <td>Vinod Kumar Chauhan et al</td>
                 <td>2024</td>
-                <td>hypernetwork</td>
+                <td>hypernetworks</td>
                 <td>Arxiv</td>
                 <td>Review of hypernets.</td>
             </tr>
@@ -3543,7 +3579,7 @@
                 <td><a href="https://arxiv.org/pdf/1609.09106" target="_blank" rel="noopener noreferrer">HyperNetworks</a></td>
                 <td>David Ha et al</td>
                 <td>2016</td>
-                <td>hypernetwork</td>
+                <td>hypernetworks</td>
                 <td>Arxiv</td>
                 <td>Looking at HyperNetworks: networks that generate weights for other networks.</td>
             </tr>
@@ -3786,7 +3822,7 @@
                 <td><a href="https://cognitivemedium.com/magic_paper/assets/Cybenko.pdf" target="_blank" rel="noopener noreferrer">Approximation by Superpositions of a Sigmoidal Function</a></td>
                 <td>G. Cybenko</td>
                 <td>universal approximator, completeness</td>
-                <td>TODO</td>
+                <td>todo</td>
                 <td>Mathematics of Control, Signals, and Systems</td>
                 <td>This paper demonstrates that finite linear combinations of compositions of a fixed univariate function and a set of affine functionals can uniformly approximate any continuous function of nn real variables within the unit hypercube, under mild conditions on the univariate function. These findings resolve an open question about the representability of functions by single hidden layer neural networks, specifically showing that arbitrary decision regions can be well approximated by continuous feedforward neural networks with a single hidden layer and any continuous sigmoidal nonlinearity.</td>
             </tr>
@@ -3831,7 +3867,7 @@
                 <td><a href="https://arxiv.org/pdf/1711.10925" target="_blank" rel="noopener noreferrer">Deep Image Prior</a></td>
                 <td>Dmitry Ulyanov et al</td>
                 <td>2020</td>
-                <td>inpatining, super-resolution, denoising</td>
+                <td>inpainting, super-resolution, denoising</td>
                 <td>IEEE</td>
                 <td>This paper challenges the conventional wisdom by demonstrating that the structure of a generator network, even when randomly initialized, can effectively capture low level image statistics without any specific training on example images. The authors show that this randomly initialized neural network can serve as a powerful handcrafted prior, yielding excellent results in standard image processing tasks such as denoising, super resolution, and inpainting. Furthermore, the same network structure can invert deep neural representations for diagnostic purposes and restore images based on input pairs like flash and no flash conditions, showcasing its versatility and effectiveness across various image restoration applications.</td>
             </tr>
@@ -3876,7 +3912,7 @@
                 <td><a href="https://arxiv.org/pdf/1912.13053" target="_blank" rel="noopener noreferrer">Disentangling Trainability and Generalization in Deep Neural Networks</a></td>
                 <td>Lechao Xiao et al</td>
                 <td>2020</td>
-                <td>neural tangent kernel, ntk</td>
+                <td>ntk</td>
                 <td>ICML</td>
                 <td>This study focuses on characterizing the trainability and generalization of deep neural networks, particularly under conditions of very wide and very deep architectures, leveraging insights from the Neural Tangent Kernel (NTK). By analyzing the NTK&#x27;s spectrum, the study formulates necessary conditions for both memorization and generalization across architectures like Fully Connected Networks (FCNs) and Convolutional Neural Networks (CNNs). The research identifies key spectral quantities such as λmax, λbulk, κ, and P(Θ(l)) that critically influence the performance of deep networks, providing a precise theoretical framework validated by extensive experiments on CIFAR10. It highlights distinctions in generalization behavior between CNNs with and without global average pooling.</td>
             </tr>
@@ -4083,7 +4119,7 @@
                 <td><a href="https://cdn.openai.com/better language models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank" rel="noopener noreferrer">Language Models are Unsupervised Multitask Learners</a></td>
                 <td>Alec Radford et al</td>
                 <td>2018</td>
-                <td>unsupervised, GPT</td>
+                <td>unsupervised, gpt</td>
                 <td>Arxiv</td>
                 <td>Demonstrates that language models, specifically GPT 2, trained on the WebText dataset, start to learn various natural language processing tasks (question answering, machine translation, reading comprehension, summarization) without explicit task specific supervision. For instance, when conditioned on a document and questions, the model achieves an F1 score of 55 on the CoQA dataset, matching or exceeding several baseline systems that were trained with over 127,000 examples.</td>
             </tr>
@@ -4119,7 +4155,7 @@
                 <td><a href="https://arxiv.org/pdf/1902.02476" target="_blank" rel="noopener noreferrer">A Simple Baseline for Bayesian Uncertainty in Deep Learning</a></td>
                 <td>Wesley Maddox et al</td>
                 <td>2019</td>
-                <td>bayesian, uncertainty, guassian</td>
+                <td>bayesian, uncertainty, gaussian</td>
                 <td>NeurIPS</td>
                 <td>SWAG combines Stochastic Weight Averaging (SWA) with Gaussian fitting to provide an approximate posterior distribution over neural network weights. SWA computes the first moment of SGD iterates using a modified learning rate schedule. SWAG extends this by fitting a Gaussian distribution using SWA&#x27;s solution as the first moment and incorporating a low rank plus diagonal covariance derived from SGD iterates.</td>
             </tr>
