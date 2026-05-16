@@ -1,5 +1,32 @@
 [
   {
+    "title": "Sparser, Faster, Lighter Transformer Language Models",
+    "author": "Edoardo Cetin et al",
+    "year": "2026",
+    "topic": "gpu, sparsity, feedforward layers, custom kernels, activation sparsity",
+    "venue": "Arxiv",
+    "description": "The paper addresses a key inefficiency in Transformer-based language models: most of the computation in feedforward layers is wasted because many neuron activations are effectively zero. Although this sparsity is naturally present, exploiting it has historically been difficult because GPUs are optimized for dense, regular computation patterns rather than irregular sparse operations. To resolve this, the authors introduce a new sparse representation called TwELL (Tile-wise ELLPACK), which organizes non-zero activations in a way that aligns with GPU tiling and avoids costly synchronization or memory overhead. They combine this format with custom CUDA kernels that fuse multiple operations—such as projection, sparsification, and recomputation—into a single execution pipeline, minimizing data movement and kernel launches. During training, sparsity is encouraged using a simple combination of ReLU activations and L1 regularization on intermediate activations, which can push sparsity levels above 99% without significantly degrading model accuracy. To handle the uneven distribution of sparsity across tokens and layers, they also introduce a hybrid format that selectively stores highly active rows in dense form while keeping most others compressed. Empirically, this system achieves meaningful efficiency gains, including roughly 20–30% speed improvements, reduced GPU memory usage, and lower energy consumption, especially at larger model scales. Overall, the paper demonstrates that activation-level sparsity can be a practical and scalable optimization for large language models when both the data representation and compute kernels are co-designed for modern GPU architectures.",
+    "link": "https://arxiv.org/pdf/2603.23198"
+  },
+  {
+    "title": "Back to Basics: Let Denoising Generative Models Denoise",
+    "author": "Tianhong Li et al",
+    "year": "2026",
+    "topic": "diffusion, denoising, x-prediction, manifold assumption, transformers",
+    "venue": "Arxiv",
+    "description": "This paper argues that modern diffusion models deviate from true denoising by predicting noise (ϵ) or mixed quantities (v), and instead proposes to directly predict clean data (x-prediction) as a fundamentally different and more appropriate objective. The core insight is based on the manifold assumption: natural data lie on a low-dimensional manifold, while noise occupies the full high-dimensional space, so predicting noise requires much higher model capacity than predicting clean data. The authors show that when operating in high-dimensional spaces (e.g., large pixel patches), ϵ- and v-prediction fail because the network must model high-dimensional off-manifold structure, whereas x-prediction remains tractable by focusing only on the low-dimensional signal. Building on this, they introduce a minimal architecture called “Just image Transformers” (JiT), where a standard Vision Transformer directly maps noisy images to clean images without tokenizers, latent spaces, or auxiliary losses. They formalize that different prediction targets (x, ϵ, v) are mathematically interchangeable via reparameterization, but empirically not equivalent due to capacity and optimization constraints, making the choice of prediction target critical in practice. Overall, the paper reframes diffusion modeling as a representation learning problem, showing that directly predicting clean data enables simple, self-contained Transformer-based diffusion models to scale to very high-dimensional inputs without architectural complexity.",
+    "link": "https://arxiv.org/pdf/2511.13720"
+  },
+  {
+    "title": "Consistent Diffusion Language Models",
+    "author": "Hasan Amin et al",
+    "year": "2026",
+    "topic": "dlm, diffusion models, consistency, stochastic bridges, multi-path training",
+    "venue": "Arxiv",
+    "description": "This paper introduces Consistent Diffusion Language Models (CDLM), a new framework for accelerating discrete diffusion models by replacing the missing deterministic probability-flow ODE with a stochastic alternative based on exact posterior bridges between noise levels. The key idea is Multi-Path Discrete Consistency (MPDC), which trains a denoiser to produce consistent predictions in expectation across many possible stochastic paths connecting noisy and clean states, rather than along a single trajectory. Concretely, given a noisy state xt, the model is trained so that its direct prediction matches the expected prediction obtained by first sampling an intermediate state xs from the exact posterior bridge q(xs | xt, x0) and then denoising from xs, enforcing path-invariance. This yields a training objective where the model becomes a fixed point of a consistency operator defined over the true reverse process, with an additional “diffusion anchor” term that ties predictions to real data and prevents degenerate solutions. The framework unifies several existing approaches, showing that masked diffusion, continuous consistency models, and distillation methods can all be interpreted as special cases or approximations of the same bridge-based consistency principle. As a result, CDLM learns to decompose long denoising steps into equivalent shorter transitions, enabling reliable few-step generation as an intrinsic property of training rather than requiring multi-stage distillation.",
+    "link": "https://arxiv.org/pdf/2605.00161"
+  },
+  {
     "title": "Statistical physics of deep learning",
     "author": "Jean Barbier et al",
     "year": "2025",
