@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  16 MAY 2026 07:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  20 MAY 2026 07:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,7 +729,8 @@ live/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u81.enc}{/usr/local/texl
 ive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8d.enc}{/usr/local/texli
 ve/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u66.enc}{/usr/local/texliv
 e/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u7e.enc}] [3{/usr/local/tex
-live/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u82.enc}] (./main.aux)
+live/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u82.enc}] [4] (./main.au
+x)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -737,11 +738,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9677316BF8807701EA1B1237CE91A9A9;485.
  ) 
 Here is how much of TeX's memory you used:
- 18917 strings out of 476025
- 319316 string characters out of 5790017
+ 18922 strings out of 476025
+ 319368 string characters out of 5790017
  1915388 words of memory out of 5000000
  38508 multiletter control sequences out of 15000+600000
- 569383 words of font info for 177 fonts, out of 8000000 for 9000
+ 569560 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,5n,76p,1193b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
@@ -849,10 +850,10 @@ local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/t
 exmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/f
 onts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (3 pages, 794042 bytes).
+Output written on main.pdf (4 pages, 795197 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 423 compressed objects within 5 object streams
- 11 named destinations out of 1000 (max. 500000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 426 compressed objects within 5 object streams
+ 12 named destinations out of 1000 (max. 500000)
  18761 words of extra memory for PDF output out of 20736 (max. 10000000)
 
