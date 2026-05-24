@@ -6,19 +6,15 @@ from datetime import date
 def update_html():
     # Get current date in both formats
     current_date = date.today().strftime("%Y-%m-%d")
-    # Convert to Japanese format (YYYY年MM月DD日)
-    japanese_date = date.today().strftime("%Y年%m月%d日")
     
     # Read the content of index.html
     with open('index.html', 'r') as file:
         content = file.readlines()
     
-    # Update both English and Japanese dates
+    # Update last-updated timestamp
     for i, line in enumerate(content):
-        if "Last time this was edited was" in line:
-            content[i] = f"        <p lang=\"en\">Last time this was edited was {current_date} (YYYY/MM/DD).</p>\n"
-        elif "最終更新日：" in line:
-            content[i] = f"        <p lang=\"ja\">最終更新日：{japanese_date}</p>\n"
+        if "Last updated:" in line:
+            content[i] = f"    <small style=\"position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;\">Last updated: {current_date}</small>\n"
     
     # Write the updated content back to index.html
     with open('index.html', 'w') as file:

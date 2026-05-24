@@ -42,8 +42,8 @@
             top: 50%;
             cursor: pointer;
             white-space: nowrap;
-            transition: color 0.12s;
             transform-origin: center center;
+            will-change: transform;
         }
 
         .cloud-wrap .tag:hover {
@@ -190,6 +190,7 @@
     <small style="display:block;text-align:center;margin:10px 0;">
         <a href="gineiden.html" style="opacity:0.35;">_</a>
     </small>
+    <small style="position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;">Last updated: 2026-05-24</small>
 
     <script>
         // Loads a list.json. If it's a manifest of the form
@@ -219,16 +220,26 @@
         const panelContent = document.getElementById('panelContent');
         const panelClose = document.getElementById('panelClose');
 
+        const isMobile = window.innerWidth <= 660;
+        const MAX_TAGS = isMobile ? 120 : 250;
+        const FRAME_MS = isMobile ? 33 : 16; // ~30fps mobile, ~60fps desktop
+
         const radius = 0.42;
         let rotX = 0, rotY = 0;
-        let autoRotX = 0.002, autoRotY = 0.004;
+        let autoRotX = isMobile ? 0.001 : 0.002;
+        let autoRotY = isMobile ? 0.002 : 0.004;
         let dragging = false, dragStartX = 0, dragStartY = 0;
         let velX = 0, velY = 0;
         let lastDragTime = 0;
+        let lastFrameTime = 0;
+        let frameCount = 0;
         let items = [];
+
+        cloud.innerHTML = '<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#999;font-size:13px;pointer-events:none;">loading…</span>';
 
         loadList('papers/list.json')
             .then(papers => {
+                cloud.innerHTML = '';
                 const tagMap = {};
                 papers.forEach(p => {
                     if (!p.topic) return;
@@ -238,8 +249,7 @@
                     });
                 });
 
-                // Cap to top MAX_TAGS by paper count
-                const MAX_TAGS = 500;
+                // Sort by paper count descending, cap to MAX_TAGS
                 const tags = Object.keys(tagMap)
                     .sort((a, b) => tagMap[b].length - tagMap[a].length)
                     .slice(0, MAX_TAGS);
@@ -249,7 +259,7 @@
                 tags.forEach(t => { cooccur[t] = {}; });
                 papers.forEach(p => {
                     if (!p.topic) return;
-                    const pts = p.topic.split(',').map(t => t.trim().toLowerCase()).filter(t => tagMap[t]);
+                    const pts = p.topic.split(',').map(t => t.trim().toLowerCase()).filter(t => cooccur[t]);
                     for (let i = 0; i < pts.length; i++) {
                         for (let j = i + 1; j < pts.length; j++) {
                             cooccur[pts[i]][pts[j]] = (cooccur[pts[i]][pts[j]] || 0) + 1;
@@ -317,7 +327,7 @@
                     });
                 });
 
-                animate();
+                requestAnimationFrame(animate);
             });
 
         // --- Drag to rotate ---
@@ -381,7 +391,12 @@
         window.addEventListener('touchend', () => { dragging = false; });
 
         // --- Animation ---
-        function animate() {
+        function animate(timestamp) {
+            requestAnimationFrame(animate);
+            if (timestamp - lastFrameTime < FRAME_MS) return;
+            lastFrameTime = timestamp;
+            frameCount++;
+
             if (dragging) {
                 rotX = velX;
                 rotY = velY;
@@ -405,6 +420,7 @@
             const w = cloud.clientWidth;
             const h = cloud.clientHeight;
             const r = Math.min(w, h) * radius;
+            const updateZIndex = (frameCount % 4 === 0);
 
             items.forEach(item => {
                 const y1 = item.y * cosX - item.z * sinX;
@@ -420,13 +436,10 @@
                 const px = x2 * r;
                 const py = y1 * r;
 
-                item.el.style.transform = `translate(-50%, -50%) translate(${px}px, ${py}px)`;
-                item.el.style.opacity = 0.2 + scale * 0.8;
-                item.el.style.color = `rgba(0,0,0,${0.15 + scale * 0.85})`;
-                item.el.style.zIndex = Math.round(scale * 100);
+                item.el.style.transform = `translate(-50%,-50%) translate3d(${px}px,${py}px,0)`;
+                item.el.style.opacity = 0.05 + scale * 0.95;
+                if (updateZIndex) item.el.style.zIndex = Math.round(scale * 100);
             });
-
-            requestAnimationFrame(animate);
         }
 
         // --- Tooltip ---
