@@ -12,7 +12,7 @@ def load_list(json_file_path):
     if isinstance(data, dict) and isinstance(data.get("parts"), list):
         base_dir = os.path.dirname(json_file_path)
         entries = []
-        for part_name in data["parts"]:
+        for part_name in reversed(data["parts"]):
             with open(os.path.join(base_dir, part_name), 'r') as pf:
                 entries.extend(json.load(pf))
         return entries
