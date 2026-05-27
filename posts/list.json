@@ -1,9 +1,23 @@
 [
     {
+        "slug": "faustianism",
+        "title": "On the Rise of Faustianism in America",
+        "date": "05/27/2026",
+        "summary": "What I think is behind the philosophy of AI in the US",
+        "tags": ["philosophy", "politics"]
+    },
+    {
+        "slug": "partitioning",
+        "title": "Partitioning",
+        "date": "05/27/2026",
+        "summary": "On naming things",
+        "tags": ["philosophy"]
+    },
+    {
         "slug": "politics",
         "title": "Politics",
         "date": "03/21/2026",
-        "summary": "What else is there to do?",
+        "summary": "What else is there to do",
         "tags": ["philosophy", "ai", "politics"]
     }
 ]
