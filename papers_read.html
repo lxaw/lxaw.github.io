@@ -127,8 +127,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 480 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 480 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 485 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 485 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -152,6 +152,51 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer">Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion</a></td>
+                <td>Xun Huang et al</td>
+                <td>2025</td>
+                <td>autoregressive, image generation, diffusion</td>
+                <td>NeurIPS</td>
+                <td>Self Forcing introduces a training paradigm for autoregressive video diffusion models that explicitly addresses exposure bias arising from the mismatch between training on ground-truth context and inference on self-generated context. Instead of conditioning on real or noise-corrupted frames as in Teacher Forcing or Diffusion Forcing, it performs full autoregressive rollout during training, so each frame is generated from the model’s own previous outputs, aligning the training distribution with the inference distribution. This enables the use of holistic, video-level distribution matching objectives that optimize the joint sequence distribution rather than independent per-frame denoising losses. To make this computationally feasible, the method relies on few-step diffusion along with stochastic gradient truncation, so gradients are only propagated through a limited portion of the denoising and temporal chain. The framework also incorporates KV caching during training, mirroring inference-time computation and allowing efficient sequential generation without specialized masking. Finally, a rolling KV cache mechanism is introduced to support long-horizon generation with constant memory and without recomputation, while additional training constraints ensure stability under this shifting context.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2406.11838" target="_blank" rel="noopener noreferrer">Autoregressive Image Generation without Vector Quantization</a></td>
+                <td>Tianhong Li et al</td>
+                <td>2024</td>
+                <td>autoregressive, image generation, diffusion</td>
+                <td>NeurIPS</td>
+                <td>The paper challenges the assumption that autoregressive image generation requires discrete tokenization, arguing that the essential requirement is modeling a conditional distribution over tokens rather than enforcing categorical structure. It proposes replacing categorical cross-entropy with a diffusion-based loss that models the per-token conditional distribution in continuous space, using a denoising process conditioned on autoregressive features. In this framework, the autoregressive model predicts a latent conditioning vector, and a small diffusion model defines a flexible distribution over the next continuous token, enabling sampling via reverse diffusion. This decouples sequence modeling from the choice of token representation and removes the need for vector quantization, which is known to introduce reconstruction error and training instability. The method also unifies standard autoregressive and masked generative models under a generalized autoregressive formulation, where prediction order can be arbitrary and multiple tokens can be generated simultaneously. Conceptually, the approach separates modeling of inter-token dependencies (handled by autoregression) from modeling of token-level uncertainty (handled by diffusion), providing a more expressive and modular probabilistic framework.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2505.13447" target="_blank" rel="noopener noreferrer">Mean Flows for One-Step Generative Modeling</a></td>
+                <td>Zhengyang Geng et al</td>
+                <td>2025</td>
+                <td>diffusion, flow, one-step, generative modeling</td>
+                <td>Arxiv</td>
+                <td>The paper addresses the difficulty of one-step generative modeling, where existing diffusion and flow-based approaches rely on modeling instantaneous velocity fields and require integrating them over time, which is inherently multi-step and leads to inaccuracies when approximated coarsely. It introduces the concept of average velocity as a fundamental object, defined as the time-averaged integral of the instantaneous velocity, and treats this as a new ground-truth field for learning. The key theoretical contribution is the MeanFlow identity, which establishes an exact relationship between average velocity, instantaneous velocity, and the time derivative of the average velocity, enabling training without explicitly computing integrals. Using this identity, the method constructs a self-consistent training objective where a neural network learns the average velocity field by matching a target derived from instantaneous velocity and a Jacobian-vector product term. This formulation avoids heuristic consistency constraints used in prior work and instead derives consistency properties directly from the underlying definition of average velocity, making the framework principled and model-independent. As a result, the approach enables direct approximation of the full transport in a single evaluation, since the average velocity inherently encodes the integrated effect of the flow over time.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2505.24857" target="_blank" rel="noopener noreferrer">Accelerated Sampling from Masked Diffusion Models via Entropy Bounded Unmasking</a></td>
+                <td>Heli Ben-Hamu et al</td>
+                <td>2025</td>
+                <td>dllm, sampling, entropy</td>
+                <td>Arxiv</td>
+                <td>The paper addresses the inefficiency of sampling in masked diffusion models, where standard methods either unmask one token at a time or unmask multiple tokens independently at the cost of significant error. It observes that model predictions often simultaneously exhibit low entropy and low local error for multiple tokens, implying that some tokens can be safely unmasked in parallel without introducing substantial dependence errors. Based on this, the authors propose EB-Sampler, an adaptive sampling method that dynamically selects both the order and number of tokens to unmask using an entropy-based criterion that bounds joint dependence. The method is grounded in a theoretical decomposition of sampling error into two components: model error from imperfect conditional predictions and joint dependence error from incorrectly assuming independence between tokens. By using entropy as a proxy for dependence, EB-Sampler controls the second error term while leveraging existing heuristics to minimize the first, yielding a principled rule for multi-token unmasking. The approach is further formalized as part of a broader class of adaptive samplers, showing that efficient and correct sampling can be achieved without retraining the underlying model by appropriately designing the unmasking policy.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2508.14148" target="_blank" rel="noopener noreferrer">DPad: Efficient Diffusion Language Models with Suffix Dropout</a></td>
+                <td>Xinhua Chen et al</td>
+                <td>2025</td>
+                <td>dllm, diffusion, llm, sampling, efficiency</td>
+                <td>Arxiv</td>
+                <td>Diffusion language models achieve parallel generation by predicting all suffix tokens at each denoising step, but this introduces a fundamental inefficiency because most suffix computations are discarded and contribute little to the final output. The paper identifies that suffix tokens primarily act as a scratchpad: an information reservoir that aggregates signals from prefix and current tokens across layers and feeds them back in a write–store–read cycle, rather than carrying meaningful standalone semantics. From this perspective, the authors argue that suffix attention is inherently sparse and dominated by nearby tokens, with distant tokens being redundant and largely position-insensitive. Based on this, they propose DPad, a training-free method that enforces structured sparsity via a fixed-length sliding window and a distance-decay dropout that removes far suffix tokens before attention is computed, thereby reducing complexity without altering model parameters. The method is theoretically motivated by the observation that the scratchpad behaves like a low-rank residual pathway, implying that only a small subset of suffix tokens is sufficient to preserve the necessary contextual information for denoising. Finally, they formalize this intuition through the Diffusion Lottery Tickets hypothesis, which posits that a sparse, dynamically selected subset of suffix tokens can act as “winning tickets” that maintain generation quality, making aggressive pruning both feasible and principled.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2507.18071" target="_blank" rel="noopener noreferrer">Group Sequence Policy Optimization</a></td>
