@@ -1,6 +1,6 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
-\usepackage[top=0.7in,bottom=0.7in,left=0.75in,right=0.75in]{geometry}
+\usepackage[top=0.6in,bottom=0.6in,left=0.7in,right=0.7in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -13,8 +13,8 @@
 \usepackage[whole]{bxcjkjatype}
 
 % Colors
-\definecolor{heading}{HTML}{2E3B4E}
-\definecolor{accent}{HTML}{3A7CA5}
+\definecolor{heading}{HTML}{000000}
+\definecolor{accent}{HTML}{1B3A5C}
 \definecolor{lightgray}{HTML}{888888}
 
 % Hyperlink style
@@ -28,10 +28,13 @@
 
 % Section formatting
 \titleformat{\section}
-  {\large\bfseries\color{heading}\scshape}
+  {\large\scshape}
   {}{0em}{}
-  [\titlerule]
-\titlespacing{\section}{0pt}{10pt}{6pt}
+  [{\titlerule[0.5pt]}]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Slightly more open line spacing
+\linespread{1.06}
 
 % Remove page numbers
 \pagestyle{empty}
@@ -53,84 +56,49 @@
 
 %----------HEADER----------
 \begin{center}
-  {\LARGE\bfseries ワレン・レックス（Lexington Whalen）}\\[4pt]
-  \href{https://www.linkedin.com/in/lxaw/}{\faLinkedin\ linkedin.com/in/lxaw}
+  {\LARGE\scshape ワレン・レックス（Lexington Whalen）}\\[5pt]
+  \faEnvelope\ whalenlex[@]gmail.com \,\textperiodcentered\,
+  \faGlobe\ \href{https://lxaw.github.io}{lxaw.github.io} \,\textperiodcentered\,
+  \faLinkedin\ \href{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw}\\[6pt]
+  \rule{\textwidth}{0.8pt}
 \end{center}
 
 %----------SUMMARY----------
 \section{概要}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item \textbf{機械学習研究リーダーシップ：} ソフトバンクSB IntuitionsにてSB Intuitions初となる投機的デコーディング（Speculative Decoding）の実装を主導し、日本最大の大規模言語モデルシリーズに対する推論アルゴリズム最適化をリード。NVIDIAにてフラッグシップとなる拡散言語モデルの開発を共同リード。1Bから14Bパラメータ規模のモデルに対する新しい学習・推論インフラストラクチャを設計。チームは2名から複数チームへと拡大。成果はCEOジェンスン・ファン氏に直接報告され、学習・推論手法は社内5つ以上の研究チームで採用。従来の主要モデルと比較して速度約10倍、精度約10\%の向上を達成。
-
-  \item \textbf{研究インパクト：} 博士課程・修士課程の学生からなる学際的チームをリードし、モデル品質を維持しつつ学習効率を5倍向上させる先駆的な拡散モデル研究を実施。トップレベルのコンピュータビジョン国際会議で論文を発表。研究手法はNVIDIAの社内開発に採用。状態空間モデルおよびTransformerアーキテクチャ双方における学習・推論最適化の専門性を実証。
-
-  \item \textbf{機械学習エンジニアリング：} NVIDIAの社内拡散言語モデルプロジェクト向けに包括的な評価・学習パイプラインを開発。数百万から数十億パラメータ、数十億から数兆トークンに及ぶモデル学習をスケール。高度な並列化戦略を活用し、数千基のGPUを用いた分散学習システムの経験を有する。
-
-  \item \textbf{ヘルスケアAI：} 米国ARPA-HのTHORヘルスケアイニシアチブのテクニカルリードとして、がん検知センサーの劣化を70\%以上低減する革新的な小型PyTorchモデルを開発。カーネギーメロン大学、スタンフォード大学、パデュー大学、ジョージア工科大学等のトップ研究機関の研究者と協働。
-
-  \item \textbf{受賞歴：} NSF大学院研究フェローシップ受賞（150,000ドル相当）、サウスカロライナ大学トップスカラー賞（100,000ドル以上相当）、米国務省日本語クリティカル・ランゲージ・スカラー（5,000名以上の応募者から500名のみ選出）。
-
-  \item \textbf{技術開発：} Django/React/SQLを用いた研究用フルスタックWebサイトの開発者。数千件の参加者エントリーを管理するデータベースを運用。総額20,000ドル以上の助成金を獲得し、開発チームをリード。
-\end{itemize}
+大規模言語モデルの効率的な学習・推論を専門とする機械学習研究者。現在、ソフトバンクのSB Intuitionsにて日本最大の大規模言語モデル「Sarashina」シリーズの事前学習・推論最適化研究を共同リード。前職ではNVIDIAのフラッグシップ拡散言語モデル（1--14Bパラメータ）の開発を共同リードし、社内5つ以上の研究チームに採用された学習・推論インフラを構築。ICML、CVPR、ACLにて論文発表。NSF大学院研究フェロー。日米両国において研究チームをリードしてきた実績を有する。
 
 %----------EXPERIENCE----------
 \section{職歴}
 
-\entry{ソフトバンク -- SB Intuitions}{東京}{R\&Dエンジニア、リーダーシップ＆プロフェッショナルトラック（L/Pグレード3）}{2026年4月 --}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item ソフトバンクのSB Intuitions R\&D部門にて、Sarashinaシリーズの大規模言語モデルに対する事前学習・事後学習の最適化研究を共同リード。
-  \item SB Intuitions初となる\href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{投機的デコーディング（Speculative Decoding）}を活用した推論最適化をリード。Sarashinaシリーズの大規模言語モデルのスループットを大幅に向上。
-  \item Sarashinaモデルファミリー全体のサービング効率改善および低遅延化を実現する推論アルゴリズム最適化をリード。
-  \item 事前学習・事後学習・推論最適化に関する社内横断的な技術議論に積極的に貢献（日本語でね）。研究チームとエンジニアリングチームの連携を促進。
+\entry{ソフトバンク -- SB Intuitions}{東京}{事前学習・推論最適化研究リード}{2026年4月 --}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+  \item ソフトバンクのSB Intuitions R\&D部門にて、日本最大の大規模言語モデル「Sarashina」シリーズの事前学習・事後学習最適化研究を共同リード。
+  \item SB Intuitions初となる\href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{投機的デコーディング（Speculative Decoding）}による推論最適化を構築し、Sarashinaモデルファミリー全体のスループット向上・低遅延化を実現。
+  \item 事前学習・事後学習・推論最適化に関する社内横断的な技術議論において中心的な役割を担い、研究チームとエンジニアリングチームの連携を促進。
   \item 大規模モデル学習に向けたGPUリソースの評価および長期的なコンピュート戦略の共同策定において、国内外の主要テクノロジー企業と協働。
-  \item 2026年入社式におけるソフトバンクグループ代表に選出。ソフトバンクグループ各社の新入社員を代表。
 \end{itemize}
 
 \medskip
-\entry{NVIDIA}{アトランタ, GA \& サンタクララ, CA}{効率的深層学習インターン}{2025年3月 -- 2026年3月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item NV Research 1--14Bフラッグシップ拡散言語モデルシリーズのベース・指示・RLバリアントの学習、ファインチューニング、評価を実施。評価・推論インフラストラクチャを構築し、ビジョン言語モデル、エンベディング、潜在推論に関する5つ以上の社内研究チームに採用。社内ダウンロード数100万以上。
-  \item モデル蒸留、効率的学習レシピ、効率的推論レシピに従事。
-  \item SLURMで管理されたサーバー上の数千基のNVIDIA GPUクラスターを活用した高性能コンピューティングインフラストラクチャ上での拡散モデルに特化。
-  \item 20名以上のシニア研究者およびクロスファンクショナルエンジニアリングチームに対し、毎週の進捗報告および技術的知見を発表。
-  \item Qwen3自己回帰シリーズを精度・速度の両面で上回る\href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{EfficientDLMシリーズ}の拡散言語モデルを開発。社内ダウンロード数100万以上。
-  \item ビジョンチームと協力し、\href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotronシリーズ}の拡散言語モデルをリリース。2026年3月公開予定。
-\end{itemize}
-
-\medskip
-\entry{NVIDIA}{アトランタ, GA}{データフィルタリングチャレンジリード}{2024年12月 -- 2025年12月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item Google Analyticsを活用してエンゲージメントを追跡し、30以上の大学研究チームおよび企業におけるユーザー体験を最適化するチャレンジWebサイトの開発・管理をリード。
-  \item 参加者向けに初期4億パラメータのベースラインモデルのプロファイリングを支援し、提出物の品質評価のための標準化ベンチマークを作成。
-  \item 100億トークンのファインチューニングデータセットを活用し、モデル提出物の一貫した公正な評価を保証する包括的な評価フレームワークを設計・実装。
-  \item 世界トップ3の機械学習国際会議であるICML（参加者約9,000名、論文採択率25\%未満）にてチャレンジをプロモーション。
-  \item Lambda LabsやTuring等のスポンサー企業と連携しGPUリソースを確保。チーム提出物の評価およびコンペティション全体のワークフローを管理。
+\entry{NVIDIA}{アトランタ, GA \& サンタクララ, CA}{効率的深層学習インターン 兼 データフィルタリングチャレンジリード}{2024年12月 -- 2026年3月}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+  \item \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotronシリーズ}の拡散言語モデルの開発を共同リード。2026年3月公開予定。
+  \item 1--14Bパラメータの拡散言語モデル（ベース・指示・RLバリアント）\href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{EfficientDLMシリーズ}を共同開発し、Qwen3自己回帰シリーズを精度・速度の両面で上回る成果を達成（ICML 2026）。成果はCEOジェンスン・ファン氏に直接報告。
+  \item ビジョン言語モデル、エンベディング、潜在推論に関する5つ以上の社内研究チームに採用された学習・評価・推論インフラストラクチャを構築。社内ダウンロード数100万以上。
+  \item 30以上の大学・企業チームが参加するNVIDIAの国際データフィルタリングチャレンジを運営し、Lambda LabsやTuring等のスポンサー企業とGPUリソースの配分を調整。
 \end{itemize}
 
 \medskip
 \entry{ジョージア工科大学}{アトランタ, GA}{機械学習エンジニア}{2024年8月 -- 2025年12月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item 博士課程・修士課程の3名のチームをリードし、生成品質を維持しつつ拡散モデルの学習時間を平均最大5倍短縮する革新的手法を設計。手法は\href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}に採択。
-  \item 米国ARPA-HのTHORヘルスケアイニシアチブのアルゴリズムリード。がん検知センサーの劣化を70\%以上低減し、センサー寿命を数時間から数日へと10倍以上改善する取り組みを主導。
-  \item 人体のエネルギーで駆動可能なリソース効率の高い機械学習アーキテクチャを設計。
-  \item スタンフォード大学、ノースウェスタン大学、カーネギーメロン大学、MIT等のトップ大学の5つ以上のチームと協働し、ジョージア工科大学を代表。
-  \item 連邦スポンサーおよびヘルスケア関係者への技術的進捗を発表するため全国を巡回し、多様な聴衆に対して複雑な技術概念を効果的に伝達。
-\end{itemize}
-
-\medskip
-\entry{サウスカロライナ大学}{コロンビア, SC}{ソフトウェアデベロッパー}{2021年1月 -- 2024年8月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item PHP、Django、React、SQLを使用して3つのフルスタック研究用Webサイトを設計・構築。
-  \item 数千件の参加者エントリーを含むSQLデータベースを設計・管理し、データの整合性、セキュリティコンプライアンス、クエリパフォーマンスの最適化を確保。
-  \item 連邦・州の助成金申請の開発をリードし、20,000ドル以上の資金を獲得。
-  \item 4名以上の開発者チームをリードし、KPIおよびパフォーマンス目標を達成しつつメンタリングと技術指導を実施。
-  \item クラスタリングアルゴリズム、ランダムフォレスト、ニューラルネットワーク等の高度な機械学習手法を実装し、患者データの分析、パターンの特定、予測モデルの開発を実施。
-  \item numpyおよびpandasを活用した革新的な自動言語類似性分析システムを開発し、文書比較時間を約99\%短縮（2--3日から10分未満）。\href{https://lxaw.github.io/team_papers/historical_unity.pdf}{米国言語学会（LSA）に論文を発表。}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+  \item 博士課程・修士課程の3名のチームをリードし、生成品質を維持しつつ拡散モデルの学習時間を最大5倍短縮する手法を設計。\href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}に採択。
+  \item 米国ARPA-HのTHORヘルスケアイニシアチブのアルゴリズムリードとして、がん検知センサーの劣化を70\%以上低減し、センサー寿命を数時間から数日へと改善。
+  \item 人体のエネルギーで駆動可能なリソース効率の高い機械学習アーキテクチャを設計し、スタンフォード大学、ノースウェスタン大学、カーネギーメロン大学、MIT等のチームと協働。
+  \item 連邦スポンサーおよびヘルスケア関係者に対し、全国各地で技術的進捗を発表。
 \end{itemize}
 
 %----------PUBLICATIONS & PATENTS----------
 \section{主要論文・特許}
-\begin{itemize}[leftmargin=*, nosep, itemsep=4pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
   \item \textbf{L.\ Whalen}, Y.\ Ito, R.\ Sakamoto. \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{``Teaching Diffusion to Speculate Left-to-Right.''} \textit{Tech Report}, 2026. [SB Intuitions]
 
   \item Y.\ Fu, \textbf{L.\ Whalen}, A.\ Garg, C.\ Wu, M.\ Khadkevich, N.\ Oswald, E.\ Xie, D.\ Egert, S.\ Turuvekere Sreenivas, S.\ Diao, C.\ Yu, Y.\ Yu, W.\ Chen, S.\ Norouzi, S.\ Lan, L.\ Zhu, J.\ Wang, J.\ Jiang, M.\ Mardani, M.\ Maghoumi, S.\ Han, A.\ Juki\'{c}, N.\ Tajbakhsh, J.\ Kautz, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{``Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding.''} \textit{Tech Report}, 2026. [NVIDIA]
@@ -147,7 +115,14 @@
 
   \item A.\ Murphy, \textbf{L.\ Whalen}, S.\ Dubinsky, M.\ Gavin, J.\ F.\ Bailyn, J.\ Ginn. \href{https://lxaw.github.io/team_papers/historical_unity.pdf}{``On `historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change.''} \textit{Linguistic Society of America (LSA)}, 2023年4月. [サウスカロライナ大学]
 \end{itemize}
-{\small * 等貢献（Equal contribution）}
+{\footnotesize * 等貢献（Equal contribution）}
+
+%----------INVITED TALKS----------
+\section{招待講演}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item 「拡散言語モデル：基本から応用まで」、ソフトバンク -- SB Intuitions \hfill 2026年6月
+  \item 入社式スピーチ、ソフトバンク \hfill 2026年4月
+\end{itemize}
 
 %----------EDUCATION----------
 \section{学歴}
@@ -155,34 +130,25 @@
 \entry{ジョージア工科大学}{アトランタ, GA}{大学院研究員 -- 効率的機械学習システム}{2024年8月 -- 2025年12月}
 
 \medskip
-\entry{サウスカロライナ大学}{コロンビア, SC}{コンピュータサイエンス加速修士課程}{2024年1月 -- 2024年8月}
-
-\medskip
-\entry{サウスカロライナ大学}{コロンビア, SC}{コンピュータサイエンス学士}{2021年1月 -- 2023年12月}
+\entry{サウスカロライナ大学 オナーズカレッジ}{コロンビア, SC}{コンピュータサイエンス加速修士課程}{2021年1月 -- 2024年8月}
 
 %----------AWARDS----------
 \section{受賞・表彰}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-  \item ソフトバンクグループ入社式代表 2026 \hfill 2026年3月
-  \item NSF GRFP受賞（150,000ドル相当） \hfill 2024年4月
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item ソフトバンクグループ代表（2026年入社式） \hfill 2026年3月
+  \item NSF大学院研究フェローシップ（150,000ドル相当） \hfill 2024年4月
   \item 東洋大学交換留学生代表 \hfill 2023年7月
   \item サウスカロライナ大学 2023年度優秀卒業生 \hfill 2023年2月
   \item 米国務省日本語クリティカル・ランゲージ・スカラー \hfill 2023年1月
   \item サウスカロライナ大学トップスカラー（100,000ドル以上相当） \hfill 2020年8月
 \end{itemize}
 
-%----------QUALIFICATIONS----------
-\section{資格}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-  \item 日本語能力試験（N1）
-\end{itemize}
-
 %----------LANGUAGES----------
 \section{語学力}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-  \item 英語 -- ネイティブレベル
-  \item 日本語 -- ネイティブレベル（N1認定）
-  \item 中国語 -- 中級レベル
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item 英語 -- ネイティブ
+  \item 日本語 -- ネイティブレベル（日本語能力試験N1認定）
+  \item 中国語 -- 中級
   \item ドイツ語 -- 初級
 \end{itemize}
 

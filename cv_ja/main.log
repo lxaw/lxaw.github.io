@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  10 JUN 2026 09:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  10 JUN 2026 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -445,88 +445,88 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 27.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -536,23 +536,23 @@ LaTeX Font Info:    ... okay on input line 52.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(54.2025pt, 489.10287pt, 54.2025pt)
-* v-part:(T,H,B)=(50.58878pt, 743.8693pt, 50.58878pt)
+* h-part:(L,W,R)=(50.58878pt, 496.33032pt, 50.58878pt)
+* v-part:(T,H,B)=(43.36243pt, 758.32199pt, 43.36243pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=489.10287pt
-* \textheight=743.8693pt
-* \oddsidemargin=-18.06749pt
-* \evensidemargin=-18.06749pt
-* \topmargin=-58.68121pt
+* \textwidth=496.33032pt
+* \textheight=758.32199pt
+* \oddsidemargin=-21.68121pt
+* \evensidemargin=-21.68121pt
+* \topmargin=-65.90756pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -562,7 +562,7 @@ LaTeX Font Info:    ... okay on input line 52.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 52.
+Package hyperref Info: Link coloring ON on input line 55.
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -582,19 +582,19 @@ Package hyperref Info: Link coloring ON on input line 52.
 \makeMPintoPDFobject=\count289
 \everyMPtoPDFconversion=\toks25
 )
-LaTeX Info: Redefining \microtypecontext on input line 52.
-Package microtype Info: Applying patch `item' on input line 52.
-Package microtype Info: Applying patch `toc' on input line 52.
-Package microtype Info: Applying patch `eqnum' on input line 52.
-Package microtype Info: Applying patch `footnote' on input line 52.
-Package microtype Info: Applying patch `verbatim' on input line 52.
+LaTeX Info: Redefining \microtypecontext on input line 55.
+Package microtype Info: Applying patch `item' on input line 55.
+Package microtype Info: Applying patch `toc' on input line 55.
+Package microtype Info: Applying patch `eqnum' on input line 55.
+Package microtype Info: Applying patch `footnote' on input line 55.
+Package microtype Info: Applying patch `verbatim' on input line 55.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 52.
+LaTeX Info: Redefining \showhyphens on input line 55.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -608,254 +608,223 @@ File: UTF8.enc 2021/10/16 4.8.5
 (/usr/local/texlive/2023/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-LaTeX Font Info:    Font shape `C70/mc/bx/n'
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `C70/mc/m/sc'
 (Font)              in size <17.28> not available.
-(Font)              Font shape `C70/gt/m/n'
-(Font)              tried instead on input line 56.
-LaTeX Font Info:    Font shape `C70/gt/m/n' will be
-(Font)              scaled to size 17.28pt on input line 56.
+(Font)              Font shape `C70/mc/m/n'
+(Font)              tried instead on input line 59.
+LaTeX Font Info:    Font shape `C70/mc/m/n' will be
+(Font)              scaled to size 17.28pt on input line 59.
 Package CJKpunct Info: punctuation spaces for family 'mc' do not exist. Use fam
-ily 'def' instead. on input line 56.
+ily 'def' instead. on input line 59.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 60.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
+0.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 57.
+ input line 62.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.
 fd)
-LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10.95> n
-ot available
+LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
+available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 57.
-
-
-LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 61.
-
-LaTeX Font Info:    Font shape `C70/mc/bx/sc'
+n input line 62.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `C70/mc/m/sc'
 (Font)              in size <12> not available.
-(Font)              Font shape `C70/mc/bx/n'
-(Font)              tried instead on input line 61.
-LaTeX Font Info:    Font shape `C70/mc/bx/n'
-(Font)              in size <12> not available.
-(Font)              Font shape `C70/gt/m/n'
-(Font)              tried instead on input line 61.
-LaTeX Font Info:    Font shape `C70/gt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 61.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-2.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `C70/mc/bx/n'
-(Font)              in size <10.95> not available.
-(Font)              Font shape `C70/gt/m/n'
-(Font)              tried instead on input line 63.
-LaTeX Font Info:    Font shape `C70/gt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 63.
-LaTeX Font Info:    Font shape `C70/mc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 63.
-LaTeX Font Info:    Font shape `C70/mc/m/it'
-(Font)              in size <10.95> not available.
 (Font)              Font shape `C70/mc/m/n'
-(Font)              tried instead on input line 79.
+(Font)              tried instead on input line 67.
+LaTeX Font Info:    Font shape `C70/mc/m/n' will be
+(Font)              scaled to size 12.0pt on input line 67.
+LaTeX Font Info:    Font shape `C70/mc/m/n' will be
+(Font)              scaled to size 10.0pt on input line 68.
+LaTeX Font Info:    Font shape `C70/mc/bx/n'
+(Font)              in size <10> not available.
+(Font)              Font shape `C70/gt/m/n'
+(Font)              tried instead on input line 73.
+LaTeX Font Info:    Font shape `C70/gt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 73.
+LaTeX Font Info:    Font shape `C70/mc/m/it'
+(Font)              in size <10> not available.
+(Font)              Font shape `C70/mc/m/n'
+(Font)              tried instead on input line 73.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u30.enc}{/usr/loca
 l/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-uff.enc}{/usr/local
 /texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/
-texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{/usr/local/texlive/2023
-/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u69.enc}{/usr/local/texlive/2023/
-texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u89.enc}{/usr/local/texlive/2023/t
+texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2023/t
 exmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2023/texmf-dist/fon
-ts/enc/dvips/ipaex-type1/ipxt1-u6a.enc}{/usr/local/texlive/2023/texmf-dist/font
-s/enc/dvips/ipaex-type1/ipxt1-u68.enc}{/usr/local/texlive/2023/texmf-dist/fonts
-/enc/dvips/ipaex-type1/ipxt1-u5b.enc}{/usr/local/texlive/2023/texmf-dist/fonts/
-enc/dvips/ipaex-type1/ipxt1-u7f.enc}{/usr/local/texlive/2023/texmf-dist/fonts/e
-nc/dvips/ipaex-type1/ipxt1-u78.enc}{/usr/local/texlive/2023/texmf-dist/fonts/en
-c/dvips/ipaex-type1/ipxt1-u7a.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc
-/dvips/ipaex-type1/ipxt1-u52.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/
-dvips/ipaex-type1/ipxt1-u62.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/d
-vips/ipaex-type1/ipxt1-u76.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dv
-ips/ipaex-type1/ipxt1-u88.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvi
-ps/ipaex-type1/ipxt1-u4e.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvip
-s/ipaex-type1/ipxt1-u5c.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips
-/ipaex-type1/ipxt1-u65.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/
-ipaex-type1/ipxt1-u67.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/i
-paex-type1/ipxt1-u59.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ip
-aex-type1/ipxt1-u8a.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipa
-ex-type1/ipxt1-u63.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipae
-x-type1/ipxt1-u90.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex
--type1/ipxt1-u53.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-
-type1/ipxt1-u95.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-t
-ype1/ipxt1-u51.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-ty
-pe1/ipxt1-u54.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-typ
-e1/ipxt1-u6c.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type
-1/ipxt1-u58.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1
-/ipxt1-u79.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/
-ipxt1-u75.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/i
-pxt1-u5f.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ip
-xt1-u6b.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipx
-t1-u8f.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt
-1-u5e.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1
--u7d.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-
-u50.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u
-7c.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u4
-f.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u96
-.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8c.
-enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u73.e
-nc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u99.en
-c}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u56.enc
-}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8b.enc}
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u72.enc}{
-/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u61.enc}{/
-usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u60.enc}{/u
-sr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u9a.enc}{/us
-r/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6d.enc}{/usr
-/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u57.enc}{/usr/
-local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u77.enc}{/usr/l
-ocal/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6e.enc}{/usr/lo
-cal/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u97.enc}{/usr/loc
-al/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5d.enc}{/usr/loca
-l/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u7b.enc}{/usr/local
-/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u80.enc}{/usr/local/
-texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u74.enc}{/usr/local/t
-exlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u98.enc}{/usr/local/te
-xlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u91.enc}{/usr/local/tex
-live/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u55.enc}{/usr/local/texl
-ive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u64.enc}] [2{/usr/local/t
-exlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6f.enc}{/usr/local/te
-xlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u84.enc}{/usr/local/tex
-live/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u81.enc}{/usr/local/texl
-ive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8d.enc}{/usr/local/texli
-ve/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u66.enc}{/usr/local/texliv
-e/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u7e.enc}]
+ts/enc/dvips/fontawesome5/fa5brands0.enc}{/usr/local/texlive/2023/texmf-dist/fo
+nts/enc/dvips/ipaex-type1/ipxt1-u69.enc}{/usr/local/texlive/2023/texmf-dist/fon
+ts/enc/dvips/ipaex-type1/ipxt1-u89.enc}{/usr/local/texlive/2023/texmf-dist/font
+s/enc/dvips/ipaex-type1/ipxt1-u59.enc}{/usr/local/texlive/2023/texmf-dist/fonts
+/enc/dvips/ipaex-type1/ipxt1-u6a.enc}{/usr/local/texlive/2023/texmf-dist/fonts/
+enc/dvips/ipaex-type1/ipxt1-u8a.enc}{/usr/local/texlive/2023/texmf-dist/fonts/e
+nc/dvips/ipaex-type1/ipxt1-u52.enc}{/usr/local/texlive/2023/texmf-dist/fonts/en
+c/dvips/ipaex-type1/ipxt1-u73.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc
+/dvips/ipaex-type1/ipxt1-u76.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/
+dvips/ipaex-type1/ipxt1-u5b.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/d
+vips/ipaex-type1/ipxt1-u7f.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dv
+ips/ipaex-type1/ipxt1-u63.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvi
+ps/ipaex-type1/ipxt1-u5c.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvip
+s/ipaex-type1/ipxt1-u95.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips
+/ipaex-type1/ipxt1-u68.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/
+ipaex-type1/ipxt1-u78.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/i
+paex-type1/ipxt1-u7a.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ip
+aex-type1/ipxt1-u80.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipa
+ex-type1/ipxt1-u57.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipae
+x-type1/ipxt1-u65.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex
+-type1/ipxt1-u67.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-
+type1/ipxt1-u4e.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-t
+ype1/ipxt1-u90.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-ty
+pe1/ipxt1-u53.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-typ
+e1/ipxt1-u51.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type
+1/ipxt1-u54.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1
+/ipxt1-u62.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/
+ipxt1-u79.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/i
+pxt1-u75.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ip
+xt1-u7b.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipx
+t1-u88.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt
+1-u96.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1
+-u7c.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-
+u56.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u
+7e.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6
+b.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5e
+.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5f.
+enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u4f.e
+nc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8b.en
+c}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u64.enc
+}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u50.enc}
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6d.enc}{
+/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u81.enc}{/
+usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5d.enc}{/u
+sr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u97.enc}{/us
+r/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6c.enc}{/usr
+/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u58.enc}{/usr/
+local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6f.enc}{/usr/l
+ocal/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u55.enc}{/usr/lo
+cal/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u91.enc}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8c.enc}{/usr/loca
+l/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u7d.enc}{/usr/local
+/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u66.enc}{/usr/local/
+texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u77.enc}{/usr/local/t
+exlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6e.enc}{/usr/local/te
+xlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u99.enc}{/usr/local/tex
+live/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u9a.enc}{/usr/local/texl
+ive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u72.enc}]
 LaTeX Font Info:    Font shape `C70/mc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 150.
- [3] [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8
-2.enc}] (./main.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
+(Font)              scaled to size 8.0pt on input line 118.
+ [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u98.en
+c}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u82.enc
+}]
+(./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9677316BF8807701EA1B1237CE91A9A9;485.
+(rerunfilecheck)             Checksum: 02EA2B441DCD9C3555B8E17D9F5B9FF7;501.
  ) 
 Here is how much of TeX's memory you used:
- 18942 strings out of 476025
- 319714 string characters out of 5790017
- 1915388 words of memory out of 5000000
- 38520 multiletter control sequences out of 15000+600000
- 573699 words of font info for 186 fonts, out of 8000000 for 9000
+ 18508 strings out of 476025
+ 312897 string characters out of 5790017
+ 1908388 words of memory out of 5000000
+ 38271 multiletter control sequences out of 15000+600000
+ 564829 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,76p,1193b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,76p,1193b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
-me5Brands-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ip
-aex-type1/ipxg-r-u30.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
-/ipaex-type1/ipxg-r-u4e.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/ipaex-type1/ipxg-r-u52.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
-public/ipaex-type1/ipxg-r-u53.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
-e1/public/ipaex-type1/ipxg-r-u59.pfb></usr/local/texlive/2023/texmf-dist/fonts/
-type1/public/ipaex-type1/ipxg-r-u5b.pfb></usr/local/texlive/2023/texmf-dist/fon
-ts/type1/public/ipaex-type1/ipxg-r-u5d.pfb></usr/local/texlive/2023/texmf-dist/
-fonts/type1/public/ipaex-type1/ipxg-r-u5f.pfb></usr/local/texlive/2023/texmf-di
-st/fonts/type1/public/ipaex-type1/ipxg-r-u62.pfb></usr/local/texlive/2023/texmf
--dist/fonts/type1/public/ipaex-type1/ipxg-r-u65.pfb></usr/local/texlive/2023/te
-xmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u67.pfb></usr/local/texlive/2023
-/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u68.pfb></usr/local/texlive/2
-023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u69.pfb></usr/local/texliv
-e/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u6a.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u6b.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u72.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u76.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u78.pfb></u
-sr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u79.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u7a.p
-fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u7
-f.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r
--u80.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipx
-g-r-u88.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/
-ipxg-r-u89.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-typ
-e1/ipxg-r-u8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-
-type1/ipxg-r-u8c.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipa
-ex-type1/ipxg-r-u95.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/
-ipaex-type1/ipxg-r-uff.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
-ic/ipaex-type1/ipxm-r-u30.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/p
-ublic/ipaex-type1/ipxm-r-u4e.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
-1/public/ipaex-type1/ipxm-r-u4f.pfb></usr/local/texlive/2023/texmf-dist/fonts/t
-ype1/public/ipaex-type1/ipxm-r-u50.pfb></usr/local/texlive/2023/texmf-dist/font
-s/type1/public/ipaex-type1/ipxm-r-u51.pfb></usr/local/texlive/2023/texmf-dist/f
-onts/type1/public/ipaex-type1/ipxm-r-u52.pfb></usr/local/texlive/2023/texmf-dis
-t/fonts/type1/public/ipaex-type1/ipxm-r-u53.pfb></usr/local/texlive/2023/texmf-
-dist/fonts/type1/public/ipaex-type1/ipxm-r-u54.pfb></usr/local/texlive/2023/tex
-mf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u55.pfb></usr/local/texlive/2023/
-texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u56.pfb></usr/local/texlive/20
-23/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u57.pfb></usr/local/texlive
-/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u58.pfb></usr/local/texl
-ive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u59.pfb></usr/local/t
-exlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5b.pfb></usr/loca
-l/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5c.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5d.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5e.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5f.pf
-b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u60
-.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-
-u61.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm
--r-u62.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/i
-pxm-r-u63.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type
-1/ipxm-r-u64.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-t
-ype1/ipxm-r-u65.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipae
-x-type1/ipxm-r-u66.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/i
-paex-type1/ipxm-r-u67.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
-c/ipaex-type1/ipxm-r-u68.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pu
-blic/ipaex-type1/ipxm-r-u69.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
-/public/ipaex-type1/ipxm-r-u6a.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
-pe1/public/ipaex-type1/ipxm-r-u6b.pfb></usr/local/texlive/2023/texmf-dist/fonts
-/type1/public/ipaex-type1/ipxm-r-u6c.pfb></usr/local/texlive/2023/texmf-dist/fo
-nts/type1/public/ipaex-type1/ipxm-r-u6d.pfb></usr/local/texlive/2023/texmf-dist
-/fonts/type1/public/ipaex-type1/ipxm-r-u6e.pfb></usr/local/texlive/2023/texmf-d
-ist/fonts/type1/public/ipaex-type1/ipxm-r-u6f.pfb></usr/local/texlive/2023/texm
-f-dist/fonts/type1/public/ipaex-type1/ipxm-r-u72.pfb></usr/local/texlive/2023/t
-exmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u73.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u74.pfb></usr/local/texlive/
-2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u75.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u76.pfb></usr/local/te
-xlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u77.pfb></usr/local
-/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u78.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u79.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7a.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7b.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7c.
+me5Brands-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fo
+ntawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2023/texmf-dist/fonts
+/type1/public/ipaex-type1/ipxg-r-u30.pfb></usr/local/texlive/2023/texmf-dist/fo
+nts/type1/public/ipaex-type1/ipxg-r-u4e.pfb></usr/local/texlive/2023/texmf-dist
+/fonts/type1/public/ipaex-type1/ipxg-r-u59.pfb></usr/local/texlive/2023/texmf-d
+ist/fonts/type1/public/ipaex-type1/ipxg-r-u5b.pfb></usr/local/texlive/2023/texm
+f-dist/fonts/type1/public/ipaex-type1/ipxg-r-u5d.pfb></usr/local/texlive/2023/t
+exmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u67.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/public/ipaex-type1/ipxg-r-u79.pfb></usr/local/texlive/
+2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u30.pfb></usr/local/texli
+ve/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u4e.pfb></usr/local/te
+xlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u4f.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u50.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u51.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u52.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u53.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u54.
 pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u
-7d.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-
-r-u7e.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ip
-xm-r-u7f.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1
-/ipxm-r-u80.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-ty
-pe1/ipxm-r-u81.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex
--type1/ipxm-r-u82.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ip
-aex-type1/ipxm-r-u84.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
-/ipaex-type1/ipxm-r-u88.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/ipaex-type1/ipxm-r-u89.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
-public/ipaex-type1/ipxm-r-u8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
-e1/public/ipaex-type1/ipxm-r-u8b.pfb></usr/local/texlive/2023/texmf-dist/fonts/
-type1/public/ipaex-type1/ipxm-r-u8c.pfb></usr/local/texlive/2023/texmf-dist/fon
-ts/type1/public/ipaex-type1/ipxm-r-u8d.pfb></usr/local/texlive/2023/texmf-dist/
-fonts/type1/public/ipaex-type1/ipxm-r-u8f.pfb></usr/local/texlive/2023/texmf-di
-st/fonts/type1/public/ipaex-type1/ipxm-r-u90.pfb></usr/local/texlive/2023/texmf
--dist/fonts/type1/public/ipaex-type1/ipxm-r-u91.pfb></usr/local/texlive/2023/te
-xmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u95.pfb></usr/local/texlive/2023
-/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u96.pfb></usr/local/texlive/2
-023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u97.pfb></usr/local/texliv
-e/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u98.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u99.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u9a.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-uff.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texl
-ive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/t
-exmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/f
-onts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (4 pages, 796506 bytes).
+55.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-
+r-u56.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ip
+xm-r-u57.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1
+/ipxm-r-u58.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-ty
+pe1/ipxm-r-u59.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex
+-type1/ipxm-r-u5b.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ip
+aex-type1/ipxm-r-u5c.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
+/ipaex-type1/ipxm-r-u5d.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
+lic/ipaex-type1/ipxm-r-u5e.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
+public/ipaex-type1/ipxm-r-u5f.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
+e1/public/ipaex-type1/ipxm-r-u62.pfb></usr/local/texlive/2023/texmf-dist/fonts/
+type1/public/ipaex-type1/ipxm-r-u63.pfb></usr/local/texlive/2023/texmf-dist/fon
+ts/type1/public/ipaex-type1/ipxm-r-u64.pfb></usr/local/texlive/2023/texmf-dist/
+fonts/type1/public/ipaex-type1/ipxm-r-u65.pfb></usr/local/texlive/2023/texmf-di
+st/fonts/type1/public/ipaex-type1/ipxm-r-u66.pfb></usr/local/texlive/2023/texmf
+-dist/fonts/type1/public/ipaex-type1/ipxm-r-u67.pfb></usr/local/texlive/2023/te
+xmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u68.pfb></usr/local/texlive/2023
+/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u69.pfb></usr/local/texlive/2
+023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6a.pfb></usr/local/texliv
+e/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6b.pfb></usr/local/tex
+live/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6c.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6d.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6e.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6f.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u72.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u73.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7
+5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r
+-u76.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipx
+m-r-u77.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/
+ipxm-r-u78.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-typ
+e1/ipxm-r-u79.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-
+type1/ipxm-r-u7a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipa
+ex-type1/ipxm-r-u7b.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/
+ipaex-type1/ipxm-r-u7c.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
+ic/ipaex-type1/ipxm-r-u7d.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/p
+ublic/ipaex-type1/ipxm-r-u7e.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
+1/public/ipaex-type1/ipxm-r-u7f.pfb></usr/local/texlive/2023/texmf-dist/fonts/t
+ype1/public/ipaex-type1/ipxm-r-u80.pfb></usr/local/texlive/2023/texmf-dist/font
+s/type1/public/ipaex-type1/ipxm-r-u81.pfb></usr/local/texlive/2023/texmf-dist/f
+onts/type1/public/ipaex-type1/ipxm-r-u82.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/ipaex-type1/ipxm-r-u88.pfb></usr/local/texlive/2023/texmf-
+dist/fonts/type1/public/ipaex-type1/ipxm-r-u89.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8a.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8b.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8c.pfb></usr/local/texlive
+/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u90.pfb></usr/local/texl
+ive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u91.pfb></usr/local/t
+exlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u95.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u96.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u97.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u98.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u99.pf
+b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u9a
+.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-
+uff.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/lm/lmri10.pfb>
+Output written on main.pdf (2 pages, 641144 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 12 named destinations out of 1000 (max. 500000)
- 20809 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 580 PDF objects out of 1000 (max. 8388607)
+ 357 compressed objects within 4 object streams
+ 10 named destinations out of 1000 (max. 500000)
+ 18737 words of extra memory for PDF output out of 20736 (max. 10000000)
 
