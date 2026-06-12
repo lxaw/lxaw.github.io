@@ -121,6 +121,12 @@ def generate_html(json_file_path, output_file_path):
             vertical-align: top;
         }}
 
+        /* Let the browser skip layout/paint for off-screen rows. */
+        #paperTable tbody tr {{
+            content-visibility: auto;
+            contain-intrinsic-size: auto 150px;
+        }}
+
         @media (max-width: 720px) {{
             body {{
                 margin: 0;
@@ -198,9 +204,26 @@ def generate_html(json_file_path, output_file_path):
         const searchCountElement = document.getElementById('searchCount');
         let sortOrder = {{}};
 
+        const columnKeys = ['title', 'author', 'year', 'topic', 'venue', 'description'];
+
+        // Built once at load so searching never has to read cell text
+        // from the DOM. Entries keep a reference to their row, so the
+        // index stays valid when sorting reorders the tbody.
+        const rowIndex = Array.from(tbody.rows, row => ({{
+            row,
+            text: Array.from(row.cells, cell => cell.textContent.toLowerCase()),
+            visible: true
+        }}));
+
+        let searchDebounce;
+        function scheduleSearch() {{
+            clearTimeout(searchDebounce);
+            searchDebounce = setTimeout(searchTable, 100);
+        }}
+
         function setupEventListeners() {{
             for (let key in searchInputs) {{
-                searchInputs[key].addEventListener('keyup', searchTable);
+                searchInputs[key].addEventListener('input', scheduleSearch);
             }}
 
             clearButton.addEventListener('click', function() {{
@@ -221,27 +244,14 @@ def generate_html(json_file_path, output_file_path):
         }}
 
         function searchTable() {{
-            const rows = tbody.getElementsByTagName('tr');
+            const terms = columnKeys.map(key => searchInputs[key].value.trim().toLowerCase());
             let numRowsMatch = 0;
-            for (let i = 0; i < rows.length; i++) {{
-                const row = rows[i];
-                const cells = row.getElementsByTagName('td');
-                let foundMatch = true;
-
-                for (let key in searchInputs) {{
-                    const cellText = cells[Object.keys(searchInputs).indexOf(key)].textContent.toLowerCase();
-                    const searchTerm = searchInputs[key].value.toLowerCase();
-                    if (searchTerm && !cellText.includes(searchTerm)) {{
-                        foundMatch = false;
-                        break;
-                    }}
-                }}
-
-                if(foundMatch) {{
-                    row.style.display = '';
-                    numRowsMatch++;
-                }} else {{
-                    row.style.display = 'none';
+            for (const entry of rowIndex) {{
+                const foundMatch = terms.every((term, i) => !term || entry.text[i].includes(term));
+                if (foundMatch) numRowsMatch++;
+                if (foundMatch !== entry.visible) {{
+                    entry.visible = foundMatch;
+                    entry.row.style.display = foundMatch ? '' : 'none';
                 }}
             }}
             updateSearchCount(numRowsMatch);

@@ -1,5 +1,50 @@
 [
   {
+    "title": "Large Language Models Can Self-Improve",
+    "author": "Jiaxin Huang et al",
+    "year": "2022",
+    "topic": "llm, self-improvement, self-consistency, chain-of-thought",
+    "venue": "Arxiv",
+    "description": "The paper proposes that large language models can improve their own reasoning ability without labeled data by generating and training on their own solutions. The method uses Chain-of-Thought prompting to sample multiple reasoning paths per question, then applies self-consistency via majority voting to identify high-confidence answers. Only the reasoning paths that lead to the majority answer are kept, forming pseudo-labeled training data consisting of both intermediate reasoning and final answers. The model is then fine-tuned on this self-generated dataset using a mixture of prompt and output formats to avoid overfitting to a single style and to encourage both step-by-step and direct-answer reasoning. A key insight is that confidence from agreement across sampled reasoning paths serves as an effective proxy for correctness, allowing noisy self-labels to still improve performance. Overall, the technique reframes self-training for LLMs by leveraging internal reasoning diversity and consistency as a signal for learning, rather than relying on external supervision.",
+    "link": "https://arxiv.org/pdf/2210.11610"
+  },
+  {
+    "title": "Kimi K2: Open Agentic Intelligence",
+    "author": "Kimi Team",
+    "year": "2026",
+    "topic": "agentic intelligence, moe",
+    "venue": "Arxiv",
+    "description": "Kimi K2 is a Mixture-of-Experts large language model with 1.Kimi K2 is a Mixture-of-Experts large language model with 1.04 trillion total parameters and 32 billion activated parameters, designed specifically to advance agentic intelligence — the ability of models to autonomously plan, reason, and act across complex environments. The central training innovation is MuonClip, a new optimizer that combines the token-efficient Muon algorithm with a mechanism called QK-Clip, which prevents attention logit explosion during large-scale training by rescaling query and key projection weights on a per-head basis whenever logits exceed a threshold, enabling stable training across 15.5 trillion tokens without a single loss spike. To improve how much learning signal each token contributes, the team developed domain-specialized data rephrasing pipelines that rewrite high-quality knowledge and mathematics documents in varied styles and formats, demonstrating that diverse rephrasings outperform simply repeating the same data across multiple epochs. For post-training, a large-scale agentic data synthesis pipeline was built to generate tens of thousands of tool-use training trajectories by constructing a repository of over 3,000 real MCP tools and 20,000 synthetic tools, pairing them with generated agents and tasks, simulating multi-turn interactions through a stateful tool execution environment, and filtering trajectories with an LLM judge. Reinforcement learning is extended beyond verifiable tasks through a self-critique rubric reward mechanism, where the model evaluates its own outputs via pairwise comparisons against a combination of core, prescriptive, and human-annotated rubrics, with the critic continuously refined using signals from verifiable tasks to ground its subjective judgments. Additional RL training improvements include a per-sample token budget with truncation penalties to promote concise outputs, a PTX auxiliary loss over curated high-quality data to prevent forgetting, and a temperature decay schedule that transitions from broad exploration early in training to stable exploitation later.",
+    "link": "https://arxiv.org/pdf/2507.20534"
+  },
+  {
+    "title": "Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs",
+    "author": "Enshu Liu et al",
+    "year": "2024",
+    "topic": "moe, compression, inference",
+    "venue": "Arxiv",
+    "description": "The paper proposes Efficient Expert Pruning (EEP), a gradient-free evolutionary method for compressing sparse Mixture-of-Experts language models by jointly optimizing which experts to keep and how to combine them. The core technique introduces two learnable matrices, a router mapping matrix and an expert merging matrix, which define a continuous search space that can represent both discrete pruning (via one-hot selection) and soft merging of experts. EEP operates in two phases: first, it performs structured expert pruning by searching for an optimal subset of experts without modifying model weights, and second, it merges pruned knowledge back into remaining experts by linearly combining their parameters. The optimization is performed using an evolutionary strategy that iteratively selects, mutates, and recombines candidate pruning/merging configurations based solely on inference performance, avoiding any gradient computation or backpropagation. This design allows the method to run under inference-only constraints while still effectively “fine-tuning” the model through weight-space transformations rather than parameter updates. A key insight is that redundancy across experts enables aggressive pruning, and that merging acts as a form of knowledge consolidation analogous to ensembling in weight space. Overall, the novelty lies in framing expert pruning and adaptation as a unified, gradient-free search over structured transformations that simultaneously reduce model size, adjust routing behavior, and preserve or even improve task performance.",
+    "link": "https://arxiv.org/pdf/2407.00945"
+  },
+  {
+    "title": "Which Heads Matter for Reasoning? RL-Guided KV Cache Compression",
+    "author": "Wenjie Du et al",
+    "year": "2026",
+    "topic": "kv cache, compression, rl, heads",
+    "venue": "ICML",
+    "description": "The paper identifies a core failure of existing KV cache compression methods in reasoning LLMs: they treat all attention heads uniformly or target retrieval heads, which breaks chain-of-thought consistency because the KV cache in reasoning models encodes intermediate reasoning states rather than just retrieval context. Its main novelty is RLKV, which uses reinforcement learning as a probing mechanism to directly measure how compressing each attention head affects end-to-end reasoning quality, rather than relying on proxy metrics like attention scores or next-token loss. Concretely, the method inserts per-head gating parameters that interpolate between full KV attention and compressed local attention, and optimizes these gates using RL with reward signals derived from actual generation correctness, combined with an L1 sparsity penalty to force most heads toward compression. This produces a sparse solution in which a small subset of “reasoning-critical heads” retain full KV cache while the rest use a constant-size cache (sink tokens plus recent window), yielding a structured head-level compression policy. A key technical challenge is instability from sparse rewards versus dense regularization, which the paper addresses with self-distillation sampling to stabilize rewards and adaptive penalty weighting that modulates the L1 term based on current performance. At inference, the learned continuous gates are discretized into a top-k selection of heads that keep full KV cache, resulting in a hybrid attention system that preserves reasoning dynamics while significantly reducing memory and computation. Overall, the technique reframes KV cache compression as a policy learning problem over heads, revealing that reasoning behavior is localized to specific heads and can be preserved by selectively maintaining their full attention context.",
+    "link": "https://arxiv.org/pdf/2510.08525"
+  },
+  {
+    "title": "dMoE: dLLMs with Learnable Block Experts",
+    "author": "Sicheng Feng et al",
+    "year": "2026",
+    "topic": "moe, dlm, optimization",
+    "venue": "Arxiv",
+    "description": "The paper identifies a fundamental inefficiency in combining diffusion language models (dLLMs) with mixture-of-experts (MoE): while dLLMs process multiple tokens jointly in a block, standard MoE performs token-level routing, leading to a large number of uniquely activated experts and a memory-bound inference bottleneck. To address this mismatch, the authors propose dMoE, which replaces token-level expert selection with a block-level routing strategy by aggregating token-wise router scores into a single block-level expert distribution. This aggregated distribution is then used to select a small “coreset” of experts via a top-p criterion, after which standard token-level routing is constrained to only this subset, preserving per-token computation while reducing global expert diversity. A key technical insight is that token-level router scores correlate with expert importance, making simple aggregation effective, and that expert concentration varies across blocks and denoising steps, motivating adaptive (rather than fixed-size) expert selection. The method is trained using a self-distillation framework that applies the same constrained routing during forward passes, ensuring consistency between training and inference without modifying the underlying model architecture. Overall, the novelty lies in reframing MoE routing from a token-centric to a block-centric perspective tailored to diffusion decoding, enabling substantial reduction in activated experts and memory overhead while maintaining the original model’s behavior.",
+    "link": "https://arxiv.org/pdf/2605.30876"
+  },
+  {
     "title": "Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion",
     "author": "Xun Huang et al",
     "year": "2025",

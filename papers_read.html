@@ -95,6 +95,12 @@
             vertical-align: top;
         }
 
+        /* Let the browser skip layout/paint for off-screen rows. */
+        #paperTable tbody tr {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 150px;
+        }
+
         @media (max-width: 720px) {
             body {
                 margin: 0;
@@ -127,8 +133,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 485 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 485 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 490 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 490 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -152,6 +158,51 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2210.11610" target="_blank" rel="noopener noreferrer">Large Language Models Can Self-Improve</a></td>
+                <td>Jiaxin Huang et al</td>
+                <td>2022</td>
+                <td>llm, self-improvement, self-consistency, chain-of-thought</td>
+                <td>Arxiv</td>
+                <td>The paper proposes that large language models can improve their own reasoning ability without labeled data by generating and training on their own solutions. The method uses Chain-of-Thought prompting to sample multiple reasoning paths per question, then applies self-consistency via majority voting to identify high-confidence answers. Only the reasoning paths that lead to the majority answer are kept, forming pseudo-labeled training data consisting of both intermediate reasoning and final answers. The model is then fine-tuned on this self-generated dataset using a mixture of prompt and output formats to avoid overfitting to a single style and to encourage both step-by-step and direct-answer reasoning. A key insight is that confidence from agreement across sampled reasoning paths serves as an effective proxy for correctness, allowing noisy self-labels to still improve performance. Overall, the technique reframes self-training for LLMs by leveraging internal reasoning diversity and consistency as a signal for learning, rather than relying on external supervision.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2507.20534" target="_blank" rel="noopener noreferrer">Kimi K2: Open Agentic Intelligence</a></td>
+                <td>Kimi Team</td>
+                <td>2026</td>
+                <td>agentic intelligence, moe</td>
+                <td>Arxiv</td>
+                <td>Kimi K2 is a Mixture-of-Experts large language model with 1.Kimi K2 is a Mixture-of-Experts large language model with 1.04 trillion total parameters and 32 billion activated parameters, designed specifically to advance agentic intelligence — the ability of models to autonomously plan, reason, and act across complex environments. The central training innovation is MuonClip, a new optimizer that combines the token-efficient Muon algorithm with a mechanism called QK-Clip, which prevents attention logit explosion during large-scale training by rescaling query and key projection weights on a per-head basis whenever logits exceed a threshold, enabling stable training across 15.5 trillion tokens without a single loss spike. To improve how much learning signal each token contributes, the team developed domain-specialized data rephrasing pipelines that rewrite high-quality knowledge and mathematics documents in varied styles and formats, demonstrating that diverse rephrasings outperform simply repeating the same data across multiple epochs. For post-training, a large-scale agentic data synthesis pipeline was built to generate tens of thousands of tool-use training trajectories by constructing a repository of over 3,000 real MCP tools and 20,000 synthetic tools, pairing them with generated agents and tasks, simulating multi-turn interactions through a stateful tool execution environment, and filtering trajectories with an LLM judge. Reinforcement learning is extended beyond verifiable tasks through a self-critique rubric reward mechanism, where the model evaluates its own outputs via pairwise comparisons against a combination of core, prescriptive, and human-annotated rubrics, with the critic continuously refined using signals from verifiable tasks to ground its subjective judgments. Additional RL training improvements include a per-sample token budget with truncation penalties to promote concise outputs, a PTX auxiliary loss over curated high-quality data to prevent forgetting, and a temperature decay schedule that transitions from broad exploration early in training to stable exploitation later.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2407.00945" target="_blank" rel="noopener noreferrer">Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs</a></td>
+                <td>Enshu Liu et al</td>
+                <td>2024</td>
+                <td>moe, compression, inference</td>
+                <td>Arxiv</td>
+                <td>The paper proposes Efficient Expert Pruning (EEP), a gradient-free evolutionary method for compressing sparse Mixture-of-Experts language models by jointly optimizing which experts to keep and how to combine them. The core technique introduces two learnable matrices, a router mapping matrix and an expert merging matrix, which define a continuous search space that can represent both discrete pruning (via one-hot selection) and soft merging of experts. EEP operates in two phases: first, it performs structured expert pruning by searching for an optimal subset of experts without modifying model weights, and second, it merges pruned knowledge back into remaining experts by linearly combining their parameters. The optimization is performed using an evolutionary strategy that iteratively selects, mutates, and recombines candidate pruning/merging configurations based solely on inference performance, avoiding any gradient computation or backpropagation. This design allows the method to run under inference-only constraints while still effectively “fine-tuning” the model through weight-space transformations rather than parameter updates. A key insight is that redundancy across experts enables aggressive pruning, and that merging acts as a form of knowledge consolidation analogous to ensembling in weight space. Overall, the novelty lies in framing expert pruning and adaptation as a unified, gradient-free search over structured transformations that simultaneously reduce model size, adjust routing behavior, and preserve or even improve task performance.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.08525" target="_blank" rel="noopener noreferrer">Which Heads Matter for Reasoning? RL-Guided KV Cache Compression</a></td>
+                <td>Wenjie Du et al</td>
+                <td>2026</td>
+                <td>kv cache, compression, rl, heads</td>
+                <td>ICML</td>
+                <td>The paper identifies a core failure of existing KV cache compression methods in reasoning LLMs: they treat all attention heads uniformly or target retrieval heads, which breaks chain-of-thought consistency because the KV cache in reasoning models encodes intermediate reasoning states rather than just retrieval context. Its main novelty is RLKV, which uses reinforcement learning as a probing mechanism to directly measure how compressing each attention head affects end-to-end reasoning quality, rather than relying on proxy metrics like attention scores or next-token loss. Concretely, the method inserts per-head gating parameters that interpolate between full KV attention and compressed local attention, and optimizes these gates using RL with reward signals derived from actual generation correctness, combined with an L1 sparsity penalty to force most heads toward compression. This produces a sparse solution in which a small subset of “reasoning-critical heads” retain full KV cache while the rest use a constant-size cache (sink tokens plus recent window), yielding a structured head-level compression policy. A key technical challenge is instability from sparse rewards versus dense regularization, which the paper addresses with self-distillation sampling to stabilize rewards and adaptive penalty weighting that modulates the L1 term based on current performance. At inference, the learned continuous gates are discretized into a top-k selection of heads that keep full KV cache, resulting in a hybrid attention system that preserves reasoning dynamics while significantly reducing memory and computation. Overall, the technique reframes KV cache compression as a policy learning problem over heads, revealing that reasoning behavior is localized to specific heads and can be preserved by selectively maintaining their full attention context.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2605.30876" target="_blank" rel="noopener noreferrer">dMoE: dLLMs with Learnable Block Experts</a></td>
+                <td>Sicheng Feng et al</td>
+                <td>2026</td>
+                <td>moe, dlm, optimization</td>
+                <td>Arxiv</td>
+                <td>The paper identifies a fundamental inefficiency in combining diffusion language models (dLLMs) with mixture-of-experts (MoE): while dLLMs process multiple tokens jointly in a block, standard MoE performs token-level routing, leading to a large number of uniquely activated experts and a memory-bound inference bottleneck. To address this mismatch, the authors propose dMoE, which replaces token-level expert selection with a block-level routing strategy by aggregating token-wise router scores into a single block-level expert distribution. This aggregated distribution is then used to select a small “coreset” of experts via a top-p criterion, after which standard token-level routing is constrained to only this subset, preserving per-token computation while reducing global expert diversity. A key technical insight is that token-level router scores correlate with expert importance, making simple aggregation effective, and that expert concentration varies across blocks and denoising steps, motivating adaptive (rather than fixed-size) expert selection. The method is trained using a self-distillation framework that applies the same constrained routing during forward passes, ensuring consistency between training and inference without modifying the underlying model architecture. Overall, the novelty lies in reframing MoE routing from a token-centric to a block-centric perspective tailored to diffusion decoding, enabling substantial reduction in activated experts and memory overhead while maintaining the original model’s behavior.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer">Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion</a></td>
@@ -4539,9 +4590,26 @@
         const searchCountElement = document.getElementById('searchCount');
         let sortOrder = {};
 
+        const columnKeys = ['title', 'author', 'year', 'topic', 'venue', 'description'];
+
+        // Built once at load so searching never has to read cell text
+        // from the DOM. Entries keep a reference to their row, so the
+        // index stays valid when sorting reorders the tbody.
+        const rowIndex = Array.from(tbody.rows, row => ({
+            row,
+            text: Array.from(row.cells, cell => cell.textContent.toLowerCase()),
+            visible: true
+        }));
+
+        let searchDebounce;
+        function scheduleSearch() {
+            clearTimeout(searchDebounce);
+            searchDebounce = setTimeout(searchTable, 100);
+        }
+
         function setupEventListeners() {
             for (let key in searchInputs) {
-                searchInputs[key].addEventListener('keyup', searchTable);
+                searchInputs[key].addEventListener('input', scheduleSearch);
             }
 
             clearButton.addEventListener('click', function() {
@@ -4562,27 +4630,14 @@
         }
 
         function searchTable() {
-            const rows = tbody.getElementsByTagName('tr');
+            const terms = columnKeys.map(key => searchInputs[key].value.trim().toLowerCase());
             let numRowsMatch = 0;
-            for (let i = 0; i < rows.length; i++) {
-                const row = rows[i];
-                const cells = row.getElementsByTagName('td');
-                let foundMatch = true;
-
-                for (let key in searchInputs) {
-                    const cellText = cells[Object.keys(searchInputs).indexOf(key)].textContent.toLowerCase();
-                    const searchTerm = searchInputs[key].value.toLowerCase();
-                    if (searchTerm && !cellText.includes(searchTerm)) {
-                        foundMatch = false;
-                        break;
-                    }
-                }
-
-                if(foundMatch) {
-                    row.style.display = '';
-                    numRowsMatch++;
-                } else {
-                    row.style.display = 'none';
+            for (const entry of rowIndex) {
+                const foundMatch = terms.every((term, i) => !term || entry.text[i].includes(term));
+                if (foundMatch) numRowsMatch++;
+                if (foundMatch !== entry.visible) {
+                    entry.visible = foundMatch;
+                    entry.row.style.display = foundMatch ? '' : 'none';
                 }
             }
             updateSearchCount(numRowsMatch);
