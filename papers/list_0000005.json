@@ -1,5 +1,23 @@
 [
   {
+    "title": "Spectral Progressive Diffusion for Efficient Image and Video Generation",
+    "author": "Howard Xiao et al",
+    "year": "2026",
+    "topic": "diffusion, spectral, efficiency",
+    "venue": "Arxiv",
+    "description": "The paper addresses the inefficiency of diffusion models arising from their uniform high-resolution computation across all denoising steps, despite the fact that different frequency components of the signal emerge at different times. It builds on the observation that diffusion models exhibit a form of spectral autoregression, where low-frequency components are recovered early while high-frequency components remain dominated by noise until later stages. Based on this, the authors propose Spectral Progressive Diffusion, a framework that progressively increases spatial resolution during denoising, aligning resolution growth with the emergence of higher-frequency signal content. The core mechanism is spectral noise expansion, which embeds a partially denoised low-resolution signal into a higher-resolution frequency space while injecting appropriately scaled high-frequency noise, preserving consistency with the diffusion process. They further derive a principled resolution transition schedule by analyzing the power spectrum of the data and identifying when each frequency component becomes signal-dominated under a given error tolerance, linking this to spatial resolution via sampling theory. This results in a theoretically grounded method that minimizes redundant computation by avoiding high-resolution processing when the corresponding frequencies are still noise. Overall, the contribution is a general, model-agnostic framework that leverages the frequency structure of diffusion dynamics to reduce computational cost while remaining consistent with the underlying probabilistic formulation.",
+    "link": "https://arxiv.org/pdf/2605.18736"
+  },
+  {
+    "title": "Don't Retrain - Align: Adapting Autoregressive LMs to Diffusion LMs via Representation Alignment",
+    "author": "Fred Peng et al",
+    "year": "2026",
+    "topic": "dlm, autoregressive, representation alignment",
+    "venue": "Arxiv",
+    "description": "The paper is motivated by the inefficiency of training diffusion language models (DLMs), arguing that much of the cost comes from relearning linguistic representations that autoregressive (AR) models already capture. It hypothesizes that AR and diffusion models share a common underlying representation geometry, and that DLM training should focus on adapting the decoding mechanism rather than relearning features. To test this, the authors propose REPR-ALIGN, a simple method that converts a pretrained AR model into a DLM by aligning the DLM’s layer-wise hidden states to those of a frozen AR teacher using a cosine similarity loss during masked denoising training. The key contribution is showing that this representation alignment requires no architectural changes (beyond switching to bidirectional attention) and no additional parameters, yet significantly improves adaptation efficiency. Empirically, the method accelerates AR→DLM conversion, improves sample efficiency, and remains effective even with limited data or partial parameter freezing. The results support the broader claim that language representations are largely invariant to generation order, and that diffusion training can be reframed as a lightweight alignment problem rather than full retraining.",
+    "link": "https://arxiv.org/pdf/2605.06885"
+  },
+  {
     "title": "Beyond Outliers: A Study of Optimizers Under Quantization",
     "author": "Georgios Vlassis et al",
     "year": "2025",
