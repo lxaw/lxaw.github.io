@@ -31,7 +31,7 @@
   {\large\scshape}
   {}{0em}{}
   [{\titlerule[0.5pt]}]
-\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
 
 % Slightly more open line spacing
 \linespread{1.06}
@@ -49,6 +49,10 @@
   \noindent\textbf{#1} \hfill \textbf{#2}%
 }
 
+% Publication list: numbered, tight
+\newlist{publist}{enumerate}{1}
+\setlist[publist]{leftmargin=2.1em, label=[\arabic*], itemsep=4pt, topsep=4pt, labelsep=0.6em}
+
 \tolerance=400
 \emergencystretch=2em
 
@@ -64,78 +68,80 @@
 \end{center}
 
 %----------SUMMARY----------
-\section{Summary}
-Machine learning researcher specializing in efficient training and inference of large language models. Currently co-lead pretraining and inference optimization research for the Sarashina LLM series at SoftBank's SB Intuitions; previously co-led NVIDIA's flagship diffusion language models, building training and inference infrastructure adopted by 5+ internal research teams. Publications at ICML, CVPR, and ACL; NSF Graduate Research Fellow. Proven record of leading research teams in both the United States and Japan.
+\section{Profile}
+Machine learning researcher specializing in efficient training and inference of large language models, with first- and co-first-author publications at ICML, CVPR, and ACL and an NSF Graduate Research Fellowship. Currently co-lead pretraining and inference optimization for SoftBank SB Intuitions' Sarashina LLMs; previously co-led NVIDIA's diffusion language models and led research teams in the U.S. and Japan.
+
+%----------EDUCATION----------
+\section{Education}
+
+\entry{Georgia Institute of Technology}{Atlanta, GA}{M.S.\ in Computer Science, Specialization in Artificial Intelligence}{Expected Dec.\ 2026}\\
+{\footnotesize NSF Graduate Research Fellow.}
+
+\medskip
+\entry{University of South Carolina, Honors College}{Columbia, SC}{Accelerated B.S./M.S.\ in Computer Science}{Jan.\ 2021 -- Aug.\ 2024}\\
+{\footnotesize Outstanding Senior, Class of 2023.}
+
+%----------PREPRINTS----------
+\section{Preprints \& Technical Reports}
+\begin{publist}
+  \item \textbf{L.\ Whalen}, Y.\ Ito, R.\ Sakamoto. \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{``Teaching Diffusion to Speculate Left-to-Right.''} Technical Report, 2026. [SB Intuitions]
+
+  \item Y.\ Fu, \textbf{L.\ Whalen}, A.\ Garg, C.\ Wu, M.\ Khadkevich, N.\ Oswald, E.\ Xie, D.\ Egert, S.\ Turuvekere Sreenivas, S.\ Diao, C.\ Yu, Y.\ Yu, W.\ Chen, S.\ Norouzi, S.\ Lan, L.\ Zhu, J.\ Wang, J.\ Jiang, M.\ Mardani, M.\ Maghoumi, S.\ Han, A.\ Juki\'{c}, N.\ Tajbakhsh, J.\ Kautz, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{``Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding.''} Technical Report, 2026. [NVIDIA]
+\end{publist}
+
+%----------PUBLICATIONS----------
+\section{Peer-Reviewed Publications}
+\begin{publist}
+  \item Y.\ Fu*, \textbf{L.\ Whalen*}, Z.\ Ye, X.\ Dong, S.\ Diao, J.\ Liu, C.\ Wu, H.\ Zhang, E.\ Xie, S.\ Han, M.\ Khadkevich, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{``Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed.''} \textbf{ICML}, 2026. [NVIDIA]
+
+  \item C.\ Shih, C.\ Li, C.\ Yu, H.\ Fang, S.\ Li, W.\ Hsin, \textbf{L.\ Whalen}, H.\ Suh, G.\ Eisenhauer, L.\ Liu, Y.\ (Celine) Lin. ``NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators.'' \textbf{ISCA}, 2026. [Georgia Tech]
+
+  \item \textbf{L.\ Whalen*}, Z.\ Du*, H.\ You*, C.\ Li, S.\ Li, Y.\ (Celine) Lin. \href{https://lxaw.github.io/team_papers/early_bird.pdf}{``Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training.''} \textbf{CVPR}, 2025. [Georgia Tech]
+
+  \item Z.\ Ye, Z.\ Wang, K.\ Xia, J.\ Hong, L.\ Li, \textbf{L.\ Whalen}, C.\ Wan, Y.\ Fu, Y.\ (Celine) Lin, S.\ Kundu. \href{https://lxaw.github.io/team_papers/lamb.pdf}{``LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering.''} \textbf{ACL}, 2025. [Georgia Tech]
+
+  \item A.\ Murphy, \textbf{L.\ Whalen}, S.\ Dubinsky, M.\ Gavin, J.\ F.\ Bailyn, J.\ Ginn. \href{https://lxaw.github.io/team_papers/historical_unity.pdf}{``On `historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change.''} \textbf{LSA}, Apr.\ 2023. [University of South Carolina]
+\end{publist}
+{\footnotesize * Equal contribution}
+
+%----------PATENTS----------
+\section{Patents}
+\begin{publist}
+  \item Y.\ Fu, \textbf{L.\ Whalen}, X.\ Dong, S.\ Diao, C.\ Wu, E.\ Xie, S.\ Han, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. ``Training Framework for Converting Autoregressive Language Models into Faster Diffusion Language Models.'' U.S.\ Patent (to be filed), 2026. [NVIDIA]
+\end{publist}
 
 %----------EXPERIENCE----------
-\section{Experience}
+\section{Research Experience}
 
 \entry{SoftBank -- SB Intuitions}{Tokyo, Japan}{Pretraining \& Inference Optimization Research Lead}{Apr.\ 2026 --}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
   \item Co-lead pretraining and post-training optimization research for the Sarashina series, Japan's largest LLMs, at SoftBank's SB Intuitions R\&D Division.
-  \item Built SB Intuitions' first inference optimizations via \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{speculative decoding}, delivering significant throughput and latency improvements across the Sarashina model family.
+  \item Built SB Intuitions' first \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{speculative-decoding} inference stack for the Sarashina family; introduced training-time drafter-alignment methods that raise the accepted draft length by 21--76\% over a position-uniform baseline.
   \item Serve as a key technical voice in Japanese-language cross-team discussions on pretraining, post-training, and inference optimization, bridging research and engineering.
-  \item Collaborate with leading Japanese and international technology companies to evaluate GPU resources and co-develop long-term compute strategies for large-scale training.
+  \item Collaborate with leading Japanese and international technology companies and government agencies to evaluate GPU resources and co-develop long-term compute strategies for large-scale training.
 \end{itemize}
 
 \medskip
-\entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern \& Data Filtering Challenge Lead}{Dec.\ 2024 -- Mar.\ 2026}
+\entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern \& Data Filtering Challenge Lead}{Dec.\ 2024 -- Mar.\ 2026}\\
+{\footnotesize Mentor: Dr.\ Pavlo Molchanov (NVIDIA Research).}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
-  \item Helped lead development of the \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron series} of diffusion language models.
-  \item Co-developed the \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{EfficientDLM series} of diffusion language models (base, instruct, and RL variants), outperforming the Qwen3 autoregressive series in both accuracy and speed (ICML 2026); work presented directly to CEO Jensen Huang.
-  \item Built the training, evaluation, and inference infrastructure adopted by 5+ internal research teams for vision-language models, embeddings, and latent reasoning, with over 1 million internal downloads.
+  \item Co-developed \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron-Labs-Diffusion}, a tri-mode (autoregressive / diffusion / self-speculation) language model family at 3B--14B scale; the 8B model decodes 6$\times$ more tokens per forward pass than Qwen3-8B at comparable accuracy (up to 4$\times$ higher throughput); \href{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{released on Hugging Face} with $\sim$1M total downloads.
+  \item Co-first author of \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{Efficient-DLM} (ICML 2026), converting pretrained autoregressive models into diffusion LMs; the 8B model reaches +5.4\%/+2.7\% higher accuracy at 4.5$\times$/2.7$\times$ higher throughput than Dream 7B / Qwen3 4B (open-weights on Hugging Face); presented directly to CEO Jensen Huang.
+  \item Built the training, evaluation, and inference infrastructure adopted by 5+ internal research teams for vision-language models, embeddings, and latent reasoning.
   \item Organized NVIDIA's international data filtering challenge across 30+ university and industry teams, coordinating GPU resource allocation with sponsors including Lambda Labs and Turing.
 \end{itemize}
 
 \medskip
-\entry{Georgia Institute of Technology}{Atlanta, GA}{Machine Learning Engineer}{Aug.\ 2024 -- Dec.\ 2025}
+\entry{Georgia Institute of Technology}{Atlanta, GA}{Graduate Researcher}{Aug.\ 2024 -- Dec.\ 2025}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
-  \item Led a team of 3 Ph.D.\ and Masters students to reduce diffusion model training time by up to 5x while maintaining generation quality; accepted to \href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}.
+  \item Led a team of 3 Ph.D.\ and Masters students (co-first author) to cut diffusion-model training time by 2.9--5.8$\times$ (up to 10.3$\times$ vs.\ standard train-prune-finetune) while maintaining generation quality; \href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}.
   \item Algorithm lead for the United States' ARPA-H THOR healthcare initiative: reduced cancer detection sensor degradation by over 70\%, extending sensor lifetime from a few hours to several days.
   \item Engineered resource-efficient ML architectures powered by energy from the human body, collaborating with teams from Stanford, Northwestern, Carnegie Mellon, and MIT.
   \item Presented technical progress to federal sponsors and healthcare stakeholders nationwide.
 \end{itemize}
 
-%----------PUBLICATIONS & PATENTS----------
-\section{Selected Publications \& Patents}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item \textbf{L.\ Whalen}, Y.\ Ito, R.\ Sakamoto. \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{``Teaching Diffusion to Speculate Left-to-Right.''} \textit{Tech Report}, 2026. [SB Intuitions]
-
-  \item Y.\ Fu, \textbf{L.\ Whalen}, A.\ Garg, C.\ Wu, M.\ Khadkevich, N.\ Oswald, E.\ Xie, D.\ Egert, S.\ Turuvekere Sreenivas, S.\ Diao, C.\ Yu, Y.\ Yu, W.\ Chen, S.\ Norouzi, S.\ Lan, L.\ Zhu, J.\ Wang, J.\ Jiang, M.\ Mardani, M.\ Maghoumi, S.\ Han, A.\ Juki\'{c}, N.\ Tajbakhsh, J.\ Kautz, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{``Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding.''} \textit{Tech Report}, 2026. [NVIDIA]
-
-  \item Y.\ Fu*, \textbf{L.\ Whalen*}, Z.\ Ye, X.\ Dong, S.\ Diao, J.\ Liu, C.\ Wu, H.\ Zhang, E.\ Xie, S.\ Han, M.\ Khadkevich, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{``Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed.''} \textit{International Conference on Machine Learning (ICML)}, 2026. [NVIDIA]
-
-  \item Y.\ Fu, \textbf{L.\ Whalen}, X.\ Dong, S.\ Diao, C.\ Wu, E.\ Xie, S.\ Han, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. ``Training Framework for Converting Autoregressive Language Models into Faster Diffusion Language Models.'' \textit{U.S.\ Patent, to be filed}, 2026. [NVIDIA]
-
-  \item C.\ Shih, C.\ Li, C.\ Yu, H.\ Fang, S.\ Li, W.\ Hsin, \textbf{L.\ Whalen}, H.\ Suh, G.\ Eisenhauer, L.\ Liu, Y.\ (Celine) Lin. ``NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators.'' \textit{International Symposium on Computer Architecture (ISCA)}, 2026. [Georgia Tech]
-
-  \item \textbf{L.\ Whalen*}, Z.\ Du*, H.\ You*, C.\ Li, S.\ Li, Y.\ (Celine) Lin. \href{https://lxaw.github.io/team_papers/early_bird.pdf}{``Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training.''} \textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2025. [Georgia Tech]
-
-  \item Z.\ Ye, Z.\ Wang, K.\ Xia, J.\ Hong, L.\ Li, \textbf{L.\ A.\ Whalen}, C.\ Wan, H.\ You, C.\ Lin, S.\ Kundu. \href{https://lxaw.github.io/team_papers/lamb.pdf}{``LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering.''} \textit{Association for Computational Linguistics (ACL)}, 2025. [Georgia Tech]
-
-  \item A.\ Murphy, \textbf{L.\ Whalen}, S.\ Dubinsky, M.\ Gavin, J.\ F.\ Bailyn, J.\ Ginn. \href{https://lxaw.github.io/team_papers/historical_unity.pdf}{``On `historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change.''} \textit{Linguistic Society of America (LSA)}, Apr.\ 2023. [University of South Carolina]
-\end{itemize}
-{\footnotesize * Equal contribution}
-
-%----------INVITED TALKS----------
-\section{Invited Talks}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item ``拡散言語モデル：基本から応用まで'', SoftBank -- SB Intuitions \hfill Jun.\ 2026\\
-        {\footnotesize\textit{Diffusion Language Models: From Fundamentals to Applications}}
-  \item 入社式スピーチ, SoftBank \hfill Apr.\ 2026\\
-        {\footnotesize\textit{Entrance Ceremony Speech}}
-\end{itemize}
-
-%----------EDUCATION----------
-\section{Education}
-
-\entry{Georgia Institute of Technology}{Atlanta, GA}{Graduate Researcher -- Efficient Machine Learning Systems}{Aug.\ 2024 -- Dec.\ 2025}
-
-\medskip
-\entry{University of South Carolina, Honors College}{Columbia, SC}{Accelerated Master's in Computer Science}{Jan.\ 2021 -- Aug.\ 2024}
-
 %----------AWARDS----------
-\section{Awards \& Recognition}
+\section{Honors \& Awards}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
   \item SoftBank Group Representative, 2026 Entrance Ceremony \hfill Mar.\ 2026
   \item NSF Graduate Research Fellowship (\$150,000 value) \hfill Apr.\ 2024
@@ -145,13 +151,17 @@ Machine learning researcher specializing in efficient training and inference of 
   \item University of South Carolina Top Scholar (\$100,000+ value) \hfill Aug.\ 2020
 \end{itemize}
 
+%----------INVITED TALKS----------
+\section{Invited Talks}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item ``拡散言語モデル：基本から応用まで'', SoftBank -- SB Intuitions \hfill Jul.\ 2026\\
+        {\footnotesize\textit{Diffusion Language Models: From Fundamentals to Applications}}
+  \item 入社式スピーチ, SoftBank \hfill Apr.\ 2026\\
+        {\footnotesize\textit{Entrance Ceremony Speech}}
+\end{itemize}
+
 %----------LANGUAGES----------
 \section{Language Skills}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item English -- Native
-  \item Japanese -- Native Level (JLPT N1 Certified)
-  \item Mandarin -- Intermediate
-  \item German -- Beginner
-\end{itemize}
+\noindent\textbf{English} (Native) \,\textperiodcentered\, \textbf{Japanese} (Native Level, JLPT N1 Certified) \,\textperiodcentered\, \textbf{Mandarin} (Intermediate)
 
 \end{document}

@@ -8,9 +8,9 @@
 \usepackage{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage[whole]{bxcjkjatype}
 \usepackage{parskip}
 \usepackage{microtype}
-\usepackage[whole]{bxcjkjatype}
 
 % Colors
 \definecolor{heading}{HTML}{000000}
@@ -22,8 +22,8 @@
     colorlinks=true,
     linkcolor=accent,
     urlcolor=accent,
-    pdftitle={ワレン・レックス - 履歴書},
-    pdfauthor={ワレン・レックス}
+    pdftitle={Lexington Whalen - 履歴書},
+    pdfauthor={Lexington Whalen}
 }
 
 % Section formatting
@@ -31,7 +31,7 @@
   {\large\scshape}
   {}{0em}{}
   [{\titlerule[0.5pt]}]
-\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
 
 % Slightly more open line spacing
 \linespread{1.06}
@@ -49,6 +49,10 @@
   \noindent\textbf{#1} \hfill \textbf{#2}%
 }
 
+% Publication list: numbered, tight
+\newlist{publist}{enumerate}{1}
+\setlist[publist]{leftmargin=2.1em, label=[\arabic*], itemsep=4pt, topsep=4pt, labelsep=0.6em}
+
 \tolerance=400
 \emergencystretch=2em
 
@@ -65,91 +69,97 @@
 
 %----------SUMMARY----------
 \section{概要}
-大規模言語モデルの効率的な学習・推論を専門とする機械学習研究者。現在、ソフトバンクのSB Intuitionsにて日本最大の大規模言語モデル「Sarashina」シリーズの事前学習・推論最適化研究を共同リード。前職ではNVIDIAのフラッグシップ拡散言語モデルの開発を共同リードし、社内5つ以上の研究チームに採用された学習・推論インフラを構築。ICML、CVPR、ACLにて論文発表。NSF大学院研究フェロー。日米両国において研究チームをリードしてきた実績を有する。
-
-%----------EXPERIENCE----------
-\section{職歴}
-
-\entry{ソフトバンク -- SB Intuitions}{東京}{事前学習・推論最適化研究リード}{2026年4月 --}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
-  \item ソフトバンクのSB Intuitions R\&D部門にて、日本最大の大規模言語モデル「Sarashina」シリーズの\mbox{事前学習・事後学習}最適化研究を共同リード。
-  \item SB Intuitions初となる\href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{投機的デコーディング（Speculative Decoding）}による推論最適化を構築し、Sarashinaモデルファミリー全体のスループット向上・低遅延化を実現。
-  \item 事前学習・事後学習・推論最適化に関する社内横断的な技術議論において中心的な役割を担い、研究チームとエンジニアリングチームの連携を促進。
-  \item 大規模モデル学習に向けたGPUリソースの評価および長期的なコンピュート戦略の共同策定において、国内外の主要テクノロジー企業と協働。
-\end{itemize}
-
-\medskip
-\entry{NVIDIA}{アトランタ, GA \& サンタクララ, CA}{効率的深層学習インターン 兼 データフィルタリングチャレンジリード}{2024年12月 -- 2026年3月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
-  \item \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotronシリーズ}の拡散言語モデルの開発を共同リード。
-  \item 拡散言語モデル（ベース・指示・RLバリアント）\href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{EfficientDLMシリーズ}を共同開発し、Qwen3自己回帰シリーズを精度・速度の両面で上回る成果を達成（ICML 2026）。成果はCEOジェンスン・ファン氏に直接報告。
-  \item ビジョン言語モデル、エンベディング、潜在推論に関する5つ以上の社内研究チームに採用された学習・評価・推論インフラストラクチャを構築。社内ダウンロード数100万以上。
-  \item 30以上の大学・企業チームが参加するNVIDIAの国際データフィルタリングチャレンジを運営し、Lambda LabsやTuring等のスポンサー企業とGPUリソースの配分を調整。
-\end{itemize}
-
-\medskip
-\entry{ジョージア工科大学}{アトランタ, GA}{機械学習エンジニア}{2024年8月 -- 2025年12月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
-  \item 博士課程・修士課程の3名のチームをリードし、生成品質を維持しつつ拡散モデルの学習時間を最大5倍短縮する手法を設計。\href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}に採択。
-  \item 米国ARPA-HのTHORヘルスケアイニシアチブのアルゴリズムリードとして、がん検知センサーの劣化を70\%以上低減し、センサー寿命を数時間から数日へと改善。
-  \item 人体のエネルギーで駆動可能なリソース効率の高い機械学習アーキテクチャを設計し、スタンフォード大学、ノースウェスタン大学、カーネギーメロン大学、MIT等のチームと協働。
-  \item 連邦スポンサーおよびヘルスケア関係者に対し、全国各地で技術的進捗を発表。
-\end{itemize}
-
-%----------PUBLICATIONS & PATENTS----------
-\section{主要論文・特許}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item \textbf{L.\ Whalen}, Y.\ Ito, R.\ Sakamoto. \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{``Teaching Diffusion to Speculate Left-to-Right.''} \textit{Tech Report}, 2026. [SB Intuitions]
-
-  \item Y.\ Fu, \textbf{L.\ Whalen}, A.\ Garg, C.\ Wu, M.\ Khadkevich, N.\ Oswald, E.\ Xie, D.\ Egert, S.\ Turuvekere Sreenivas, S.\ Diao, C.\ Yu, Y.\ Yu, W.\ Chen, S.\ Norouzi, S.\ Lan, L.\ Zhu, J.\ Wang, J.\ Jiang, M.\ Mardani, M.\ Maghoumi, S.\ Han, A.\ Juki\'{c}, N.\ Tajbakhsh, J.\ Kautz, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{``Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding.''} \textit{Tech Report}, 2026. [NVIDIA]
-
-  \item Y.\ Fu*, \textbf{L.\ Whalen*}, Z.\ Ye, X.\ Dong, S.\ Diao, J.\ Liu, C.\ Wu, H.\ Zhang, E.\ Xie, S.\ Han, M.\ Khadkevich, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{``Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed.''} \textit{International Conference on Machine Learning (ICML)}, 2026. [NVIDIA]
-
-  \item Y.\ Fu, \textbf{L.\ Whalen}, X.\ Dong, S.\ Diao, C.\ Wu, E.\ Xie, S.\ Han, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. ``Training Framework for Converting Autoregressive Language Models into Faster Diffusion Language Models.'' \textit{米国特許、出願予定}, 2026. [NVIDIA]
-
-  \item C.\ Shih, C.\ Li, C.\ Yu, H.\ Fang, S.\ Li, W.\ Hsin, \textbf{L.\ Whalen}, H.\ Suh, G.\ Eisenhauer, L.\ Liu, Y.\ (Celine) Lin. ``NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators.'' \textit{International Symposium on Computer Architecture (ISCA)}, 2026. [ジョージア工科大学]
-
-  \item \textbf{L.\ Whalen*}, Z.\ Du*, H.\ You*, C.\ Li, S.\ Li, Y.\ (Celine) Lin. \href{https://lxaw.github.io/team_papers/early_bird.pdf}{``Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training.''} \textit{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2025. [ジョージア工科大学]
-
-  \item Z.\ Ye, Z.\ Wang, K.\ Xia, J.\ Hong, L.\ Li, \textbf{L.\ A.\ Whalen}, C.\ Wan, H.\ You, C.\ Lin, S.\ Kundu. \href{https://lxaw.github.io/team_papers/lamb.pdf}{``LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering.''} \textit{Association for Computational Linguistics (ACL)}, 2025. [ジョージア工科大学]
-
-  \item A.\ Murphy, \textbf{L.\ Whalen}, S.\ Dubinsky, M.\ Gavin, J.\ F.\ Bailyn, J.\ Ginn. \href{https://lxaw.github.io/team_papers/historical_unity.pdf}{``On `historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change.''} \textit{Linguistic Society of America (LSA)}, 2023年4月. [サウスカロライナ大学]
-\end{itemize}
-{\footnotesize * 等貢献（Equal contribution）}
-
-%----------INVITED TALKS----------
-\section{招待講演}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item 「拡散言語モデル：基本から応用まで」、ソフトバンク -- SB Intuitions \hfill 2026年6月
-  \item 入社式スピーチ、ソフトバンク \hfill 2026年4月
-\end{itemize}
+大規模言語モデルの効率的な学習・推論を専門とする機械学習研究者。ICML・CVPR・ACLにおいて筆頭著者・共同筆頭著者として論文を発表し、NSF大学院研究フェローシップを取得。現在はソフトバンクのSB Intuitionsにて大規模言語モデル「Sarashina」シリーズの事前学習・推論最適化を共同リード。前職ではNVIDIAの拡散言語モデル開発を共同リードするなど、日米両国で研究チームを率いてきた実績を有する。
 
 %----------EDUCATION----------
 \section{学歴}
 
-\entry{ジョージア工科大学}{アトランタ, GA}{大学院研究員 -- 効率的機械学習システム}{2024年8月 -- 2025年12月}
+\entry{ジョージア工科大学}{アトランタ, GA}{コンピュータサイエンス修士課程（人工知能専攻）}{2026年12月修了予定}\\
+{\footnotesize NSF大学院研究フェロー。}
 
 \medskip
-\entry{サウスカロライナ大学 オナーズカレッジ}{コロンビア, SC}{コンピュータサイエンス加速修士課程}{2021年1月 -- 2024年8月}
+\entry{サウスカロライナ大学 オナーズカレッジ}{コロンビア, SC}{コンピュータサイエンス 学士・修士一貫課程}{2021年1月 -- 2024年8月}\\
+{\footnotesize 2023年度 優秀卒業生（Outstanding Senior）。}
+
+%----------PREPRINTS----------
+\section{プレプリント・技術報告}
+\begin{publist}
+  \item \textbf{L.\ Whalen}, Y.\ Ito, R.\ Sakamoto. \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{``Teaching Diffusion to Speculate Left-to-Right.''} Technical Report, 2026. [SB Intuitions]
+
+  \item Y.\ Fu, \textbf{L.\ Whalen}, A.\ Garg, C.\ Wu, M.\ Khadkevich, N.\ Oswald, E.\ Xie, D.\ Egert, S.\ Turuvekere Sreenivas, S.\ Diao, C.\ Yu, Y.\ Yu, W.\ Chen, S.\ Norouzi, S.\ Lan, L.\ Zhu, J.\ Wang, J.\ Jiang, M.\ Mardani, M.\ Maghoumi, S.\ Han, A.\ Juki\'{c}, N.\ Tajbakhsh, J.\ Kautz, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{``Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding.''} Technical Report, 2026. [NVIDIA]
+\end{publist}
+
+%----------PUBLICATIONS----------
+\section{査読付き論文}
+\begin{publist}
+  \item Y.\ Fu*, \textbf{L.\ Whalen*}, Z.\ Ye, X.\ Dong, S.\ Diao, J.\ Liu, C.\ Wu, H.\ Zhang, E.\ Xie, S.\ Han, M.\ Khadkevich, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{``Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed.''} \textbf{ICML}, 2026. [NVIDIA]
+
+  \item C.\ Shih, C.\ Li, C.\ Yu, H.\ Fang, S.\ Li, W.\ Hsin, \textbf{L.\ Whalen}, H.\ Suh, G.\ Eisenhauer, L.\ Liu, Y.\ (Celine) Lin. ``NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators.'' \textbf{ISCA}, 2026. [Georgia Tech]
+
+  \item \textbf{L.\ Whalen*}, Z.\ Du*, H.\ You*, C.\ Li, S.\ Li, Y.\ (Celine) Lin. \href{https://lxaw.github.io/team_papers/early_bird.pdf}{``Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training.''} \textbf{CVPR}, 2025. [Georgia Tech]
+
+  \item Z.\ Ye, Z.\ Wang, K.\ Xia, J.\ Hong, L.\ Li, \textbf{L.\ Whalen}, C.\ Wan, Y.\ Fu, Y.\ (Celine) Lin, S.\ Kundu. \href{https://lxaw.github.io/team_papers/lamb.pdf}{``LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering.''} \textbf{ACL}, 2025. [Georgia Tech]
+
+  \item A.\ Murphy, \textbf{L.\ Whalen}, S.\ Dubinsky, M.\ Gavin, J.\ F.\ Bailyn, J.\ Ginn. \href{https://lxaw.github.io/team_papers/historical_unity.pdf}{``On `historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change.''} \textbf{LSA}, 2023年4月. [University of South Carolina]
+\end{publist}
+{\footnotesize * 共同筆頭著者（Equal contribution）}
+
+%----------PATENTS----------
+\section{特許}
+\begin{publist}
+  \item Y.\ Fu, \textbf{L.\ Whalen}, X.\ Dong, S.\ Diao, C.\ Wu, E.\ Xie, S.\ Han, J.\ Kautz, Y.\ (Celine) Lin, P.\ Molchanov. ``Training Framework for Converting Autoregressive Language Models into Faster Diffusion Language Models.'' 米国特許（出願予定）, 2026. [NVIDIA]
+\end{publist}
+
+%----------EXPERIENCE----------
+\section{研究経歴}
+
+\entry{ソフトバンク -- SB Intuitions}{東京}{事前学習・推論最適化 研究リード}{2026年4月 --}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+  \item 日本最大の大規模言語モデル「Sarashina」シリーズの事前学習・事後学習最適化研究を、ソフトバンクのSB Intuitions R\&D部門にて共同リード。
+  \item SB Intuitions初となる\href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{投機的デコーディング}推論基盤をSarashinaファミリー向けに構築。学習時のドラフタ整合手法を提案し、位置一様なベースラインと比較して受理ドラフト長を21〜76\%向上。
+  \item 事前学習・事後学習・推論最適化に関する日本語での部門横断的な技術議論において中心的な技術的役割を担い、研究とエンジニアリングの橋渡しを実施。
+  \item 大規模学習に向けたGPUリソースの評価および長期的なコンピュート戦略の共同策定において、国内外の主要テクノロジー企業および政府機関と協働。
+\end{itemize}
+
+\medskip
+\entry{NVIDIA}{アトランタ, GA \& サンタクララ, CA}{効率的深層学習インターン 兼 データフィルタリングチャレンジ・リード}{2024年12月 -- 2026年3月}\\
+{\footnotesize メンター：Dr.\ Pavlo Molchanov（NVIDIA Research）。}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+  \item 自己回帰・拡散・自己投機の3モードを統合した言語モデルファミリー \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron-Labs-Diffusion}（3B〜14B規模）を共同開発。8Bモデルは同等精度でQwen3-8Bの6倍のトークンを1回の順伝播でデコードし（最大4倍のスループット）、\href{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{Hugging Faceで公開}、累計ダウンロード数は約100万。
+  \item \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{Efficient-DLM}（ICML 2026）の共同筆頭著者。事前学習済み自己回帰モデルを拡散言語モデルへ変換し、8BモデルはDream 7B / Qwen3 4Bと比べて精度+5.4\%/+2.7\%、スループット4.5倍/2.7倍を達成（Hugging Faceでオープンウェイト公開）。成果はCEOジェンスン・フアン氏に直接報告。
+  \item ビジョン言語モデル・埋め込み・潜在推論に関する5チーム以上の社内研究チームに採用された学習・評価・推論インフラを構築。
+  \item 30以上の大学・企業チームが参加するNVIDIAの国際データフィルタリングチャレンジを運営し、Lambda LabsやTuringを含むスポンサー企業とGPUリソースの配分を調整。
+\end{itemize}
+
+\medskip
+\entry{ジョージア工科大学}{アトランタ, GA}{大学院研究員}{2024年8月 -- 2025年12月}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+  \item 博士・修士課程の学生3名のチームをリード（共同筆頭著者）し、生成品質を維持しつつ拡散モデルの学習時間を2.9〜5.8倍（標準的なtrain-prune-finetuneと比較して最大10.3倍）短縮。\href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}採択。
+  \item 米国ARPA-H THORヘルスケアイニシアチブのアルゴリズムリードとして、がん検知センサーの劣化を70\%以上低減し、センサー寿命を数時間から数日へ延長。
+  \item 人体のエネルギーで駆動するリソース効率の高い機械学習アーキテクチャを設計し、スタンフォード大学・ノースウェスタン大学・カーネギーメロン大学・MITのチームと協働。
+  \item 連邦政府のスポンサーおよびヘルスケア関係者に対し、全国各地で技術的進捗を発表。
+\end{itemize}
 
 %----------AWARDS----------
 \section{受賞・表彰}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
   \item ソフトバンクグループ代表（2026年入社式） \hfill 2026年3月
   \item NSF大学院研究フェローシップ（150,000ドル相当） \hfill 2024年4月
-  \item 東洋大学交換留学生代表 \hfill 2023年7月
-  \item サウスカロライナ大学 2023年度優秀卒業生 \hfill 2023年2月
-  \item 米国務省日本語クリティカル・ランゲージ・スカラー \hfill 2023年1月
-  \item サウスカロライナ大学トップスカラー（100,000ドル以上相当） \hfill 2020年8月
+  \item 東洋大学 交換留学生代表 \hfill 2023年7月
+  \item サウスカロライナ大学 2023年度 優秀卒業生 \hfill 2023年2月
+  \item 米国務省 日本語クリティカル・ランゲージ・スカラー \hfill 2023年1月
+  \item サウスカロライナ大学 トップスカラー（100,000ドル以上相当） \hfill 2020年8月
+\end{itemize}
+
+%----------INVITED TALKS----------
+\section{招待講演}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item 「拡散言語モデル：基本から応用まで」、ソフトバンク -- SB Intuitions \hfill 2026年7月
+  \item 入社式スピーチ、ソフトバンク \hfill 2026年4月
 \end{itemize}
 
 %----------LANGUAGES----------
 \section{語学力}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item 英語 -- ネイティブ
-  \item 日本語 -- ネイティブレベル（日本語能力試験N1認定）
-  \item 中国語 -- 中級
-  \item ドイツ語 -- 初級
-\end{itemize}
+\noindent\textbf{英語}（ネイティブ） \,\textperiodcentered\, \textbf{日本語}（ネイティブレベル、日本語能力試験N1認定） \,\textperiodcentered\, \textbf{中国語}（中級）
 
 \end{document}
