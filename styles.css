@@ -95,6 +95,32 @@ h1 {
   color: var(--text);
 }
 
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: 6px;
+  margin: 0 0 14px 0;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 20px;
+  margin: 0 0 4px 0;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
 section {
   margin-bottom: 18px;
 }

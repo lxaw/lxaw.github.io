@@ -148,6 +148,16 @@
         }
 
         /* Slightly tighter on small screens */
+        .hero-photo {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            object-position: center 40%;
+            display: block;
+            border-radius: 4px;
+            margin-bottom: 28px;
+        }
+
         @media (max-width: 720px) {
             body {
                 margin: 0;
@@ -162,7 +172,6 @@
             }
         }
     </style>
-    </style>
 </head>
 <body>
     <nav>
@@ -172,13 +181,13 @@
         <a href="https://github.com/lxaw">GitHub</a> ·
         <a href="books_read.html">Books</a> ·
         <a href="papers_read.html">Papers</a> ·
-        <a href="posts.html">Posts</a> ·
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
-        <div class="intro">
-            <p>This list was curated by <a href="index.html">myself</a>, beginning from around February 2023 to now.</p>
-            <p class="muted">I typically use this to organize books I found interesting. Please feel free to do whatever you want with it.</p>
+        <img src="photos/trees_cropped.PNG" alt="Forest" class="hero-photo">
+        <div class="page-header">
+            <h1>Books</h1>
+            <p>Curated from February 2023 to now. I typically use this to organize books I found interesting — feel free to do whatever you want with it.</p>
         </div>
 
     <div class="controls">

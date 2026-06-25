@@ -3,159 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lex</title>
+    <title>Lexington Whalen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        main {
+        .profile-wrap {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-bio {
+            flex: 1;
+        }
+
+        .profile-bio h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 6px 0;
+        }
+
+        .profile-bio .affil {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0 0 14px 0;
+        }
+
+        .profile-bio p {
+            font-size: 14px;
+            margin: 0 0 14px 0;
+            line-height: 1.65;
+        }
+
+        .profile-links {
+            font-size: 13px;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .profile-links a {
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .profile-links a:hover {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 10px;
+            gap: 12px;
         }
 
-        .intro {
-            text-align: center;
-            margin-bottom: 10px;
+        .profile-photo img {
+            width: 167px;
+            height: 167px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
         }
 
-        .intro p {
-            margin: 4px 0;
-            font-size: 14px;
-        }
-
-        .cloud-wrap {
-            position: relative;
-            width: 600px;
-            height: 600px;
-            margin: 0 auto;
-            cursor: grab;
-            user-select: none;
-        }
-
-        .cloud-wrap.dragging {
-            cursor: grabbing;
-        }
-
-        .cloud-wrap .tag {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            cursor: pointer;
-            white-space: nowrap;
-            transform-origin: center center;
-            will-change: transform;
-        }
-
-        .cloud-wrap .tag:hover {
-            color: #000 !important;
-            text-decoration: underline;
-        }
-
-        /* Paper list panel */
-        .panel-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.15);
-            z-index: 200;
-        }
-
-        .panel-overlay.open { display: block; }
-
-        .panel {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            border: 1px solid var(--hair);
-            padding: 24px 28px;
-            max-width: 500px;
-            width: 90%;
-            max-height: 70vh;
-            overflow-y: auto;
-            z-index: 201;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .panel .panel-title {
-            font-weight: 600;
-            font-size: 15px;
-            margin: 0 0 4px 0;
-        }
-
-        .panel .panel-count {
+        .section-title {
             font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             color: var(--muted);
-            margin-bottom: 14px;
+            border-bottom: 1px solid var(--hair);
+            padding-bottom: 6px;
+            margin: 0 0 14px 0;
         }
 
-        .panel .panel-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            cursor: pointer;
-            font-size: 18px;
-            color: var(--muted);
-            background: none;
-            border: none;
-            font-family: inherit;
-        }
-
-        .panel .panel-close:hover { color: #000; }
-
-        .panel ul {
-            margin: 0;
-            padding: 0;
+        /* News */
+        .news-list {
             list-style: none;
+            margin: 0 0 36px 0;
+            padding: 0;
         }
 
-        .panel li {
-            padding: 8px 0;
+        .news-list li {
+            display: flex;
+            gap: 16px;
+            font-size: 13.5px;
+            padding: 5px 0;
             border-bottom: 1px solid var(--hair2);
-            line-height: 1.45;
+            line-height: 1.5;
         }
 
-        .panel li:last-child { border-bottom: none; }
-
-        .panel li a {
-            font-size: 13px;
+        .news-list li:last-child {
+            border-bottom: none;
         }
 
-        .panel li .paper-meta {
-            font-size: 11px;
+        .news-date {
             color: var(--muted);
-            margin-top: 2px;
+            white-space: nowrap;
+            min-width: 70px;
+            font-size: 12px;
+            padding-top: 1px;
         }
 
-        /* Tooltip (hover preview) */
-        .tooltip {
-            display: none;
-            position: fixed;
-            background: #fff;
+        /* Publications */
+        .pub-list {
+            list-style: none;
+            margin: 0 0 36px 0;
+            padding: 0;
+        }
+
+        .pub-list li {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--hair2);
+            font-size: 15px;
+            line-height: 1.6;
+            align-items: flex-start;
+        }
+
+        .pub-list li:last-child {
+            border-bottom: none;
+        }
+
+        .pub-thumb {
+            flex-shrink: 0;
+            width: 200px;
+            height: auto;
+            object-fit: contain;
             border: 1px solid var(--hair);
-            padding: 8px 12px;
-            max-width: 280px;
-            font-size: 11px;
-            line-height: 1.4;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            pointer-events: none;
+            border-radius: 3px;
+            background: var(--hair2);
         }
 
-        @media (max-width: 660px) {
-            .cloud-wrap {
-                width: 90vw;
-                height: 90vw;
-                max-width: 400px;
-                max-height: 400px;
+        .pub-thumb-placeholder {
+            flex-shrink: 0;
+            width: 200px;
+            height: 130px;
+            border: 1px solid var(--hair);
+            border-radius: 3px;
+            background: var(--hair2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+        }
+
+        .pub-body {
+            flex: 1;
+        }
+
+        .pub-title {
+            font-weight: 700;
+        }
+
+        .pub-authors {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .pub-venue {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--muted);
+            border: 1px solid var(--hair);
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-top: 3px;
+        }
+
+        .pub-desc {
+            font-size: 13.5px;
+            color: var(--muted);
+            margin-top: 6px;
+            line-height: 1.55;
+        }
+
+        .pub-list.highlightable li {
+            border-radius: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            transition: background 0.15s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .pub-list.highlightable li:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .pub-list.highlightable .stretched-link::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        @media (max-width: 600px) {
+            .pub-thumb, .pub-thumb-placeholder {
+                display: none;
             }
-            .panel {
-                max-width: 95%;
-                padding: 18px 16px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-wrap {
+                flex-direction: column-reverse;
+                gap: 20px;
             }
-            nav {
-                font-size: 12px;
+            .profile-photo img {
+                width: 110px;
+                height: 110px;
             }
         }
     </style>
@@ -168,330 +234,139 @@
         <a href="https://github.com/lxaw">GitHub</a> ·
         <a href="books_read.html">Books</a> ·
         <a href="papers_read.html">Papers</a> ·
-        <a href="posts.html">Posts</a> ·
         <a href="personal_interests.html">Personal</a>
     </nav>
+
     <main>
-        <div class="intro">
-            <p>I work on and with large models.</p>
+        <div class="profile-wrap">
+            <div class="profile-bio">
+                <h1>Lexington Whalen</h1>
+                <p class="affil">Research Lead, SB Intuitions (SoftBank) &nbsp;·&nbsp; NSF Graduate Research Fellow, Georgia Tech</p>
+                <p>
+                    I am a machine learning researcher specializing in efficient training and inference of large language models.
+                    At SoftBank's SB Intuitions, I co-lead pretraining and inference optimization for the Sarashina LLM family — Japan's largest language models.
+                    Previously I was at NVIDIA Research, where I co-developed Nemotron-Labs-Diffusion and co-first-authored Efficient-DLM (ICML 2026).
+                    I was a NSF Graduate Research Fellow and pursued an M.S. in CS at Georgia Tech.
+                </p>
+                <p style="font-size:11.5px;color:var(--muted);line-height:1.6;">
+                    I am committed to mentoring students, and make time for this every week. Please feel free to message me on <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> and I will try to respond. I don't care about background, and the request can be anything from resume reviews to just general advice. Please note that I cannot help with internship / university / job applications unless I directly was involved in your project.
+                </p>
+            </div>
+            <div class="profile-photo">
+                <img src="photos/profile_pic.png" alt="Lexington Whalen">
+                <div class="profile-links">
+                    <a href="mailto:whalenlex@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="cv/main.pdf" title="CV"><i class="fa-solid fa-file"></i></a>
+                    <a href="https://github.com/lxaw" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/lxaw/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?hl=ja&user=FE17fUMAAAAJ" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="cloud-wrap" id="cloud"></div>
+
+        <section>
+            <div class="section-title">News</div>
+            <ul class="news-list">
+                <li><span class="news-date">Jul 2026</span><span>Invited talk at SB Intuitions: <em>Diffusion Language Models: From Fundamentals to Applications</em></span></li>
+                <li><span class="news-date">Jun 2026</span><span>New preprint: <a href="team_papers/teaching_diffusion_left_right.pdf">Teaching Diffusion to Speculate Left-to-Right</a> — speculative decoding for diffusion LMs, raises accepted draft length by 21–76%</span></li>
+                <li><span class="news-date">Jun 2026</span><span><a href="team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf">Nemotron-Labs-Diffusion</a> released on Hugging Face — ~1M total downloads, 6× tokens-per-pass over Qwen3-8B</span></li>
+                <li><span class="news-date">Jun 2026</span><span><a href="team_papers/efficient_dlm.pdf">Efficient-DLM</a> accepted at <strong>ICML 2026</strong></span></li>
+                <li><span class="news-date">Jun 2026</span><span>NeRArch-Sim accepted at <strong>ISCA 2026</strong></span></li>
+                <li><span class="news-date">Apr 2026</span><span>Joined SoftBank SB Intuitions as Pretraining &amp; Inference Optimization Research Lead. Gave the SoftBank Group entrance ceremony speech.</span></li>
+                <li><span class="news-date">Apr 2025</span><span><a href="team_papers/lamb.pdf">LAMB</a> accepted at <strong>ACL 2025</strong></span></li>
+                <li><span class="news-date">Apr 2025</span><span><a href="team_papers/early_bird.pdf">Early-Bird Diffusion</a> accepted at <strong>CVPR 2025</strong></span></li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-title">Preprints &amp; Tech Reports</div>
+            <ul class="pub-list highlightable">
+                <li>
+                    <img class="pub-thumb" src="team_papers_photos/teaching_left2right.png" alt="">
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="team_papers/teaching_diffusion_left_right.pdf" class="stretched-link">Teaching Diffusion to Speculate Left-to-Right</a></div>
+                        <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
+                        <span class="pub-venue">Preprint 2026 &middot; SB Intuitions</span>
+                        <div class="pub-desc">Speculative decoding uses a lightweight draft model to propose tokens verified in parallel by a larger target. Diffusion LMs are natural drafters — they generate entire token blocks in parallel — but are trained with a symmetric bidirectional objective while verification is strictly left-to-right. We analyze three training-time interventions that close this gap: token positional weighting, a first-error focal loss targeting the position that breaks the accepted prefix, and a chain loss as a differentiable surrogate for expected accepted length. Across four target models and six benchmarks, the combined interventions raise accepted draft length by 21–76% without additional overhead.</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="pub-thumb" src="team_papers_photos/nemotron_diffusion.png" alt="">
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf" class="stretched-link">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding</a></div>
+                        <div class="pub-authors">Y. Fu, <strong>L. Whalen</strong>, A. Garg, C. Wu, et al.</div>
+                        <span class="pub-venue">Tech Report 2026 &middot; NVIDIA</span>
+                        <div class="pub-desc">We introduce a tri-mode language model that jointly optimizes autoregressive (AR) and diffusion objectives within a single architecture, enabling switching between AR, diffusion, and self-speculation decoding at inference time. AR and diffusion objectives are complementary: diffusion improves lookahead planning while AR injects strong left-to-right priors. In self-speculation mode, the diffusion head drafts while the AR head verifies, outperforming multi-token prediction in both acceptance rate and throughput. Scaling to 3B, 8B, and 14B, the 8B model decodes 6× more tokens per forward pass than Qwen3-8B at comparable accuracy.</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-title">Selected Publications</div>
+            <ul class="pub-list highlightable">
+                <li>
+                    <img class="pub-thumb" src="team_papers_photos/efficient_dlm.png" alt="">
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="team_papers/efficient_dlm.pdf" class="stretched-link">Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed</a></div>
+                        <div class="pub-authors">Y. Fu*, <strong>L. Whalen*</strong>, Z. Ye, X. Dong, S. Diao, et al. &nbsp;<em>(* equal contribution)</em></div>
+                        <span class="pub-venue">ICML 2026 &middot; NVIDIA</span>
+                        <div class="pub-desc">Diffusion LMs promise parallel generation but lag AR models in learning efficiency when trained from scratch. We study AR-to-dLM conversion: systematically identifying that block-wise attention — causal across blocks, bidirectional within — better preserves pretrained AR weight distributions than fully bidirectional training, yielding a win-win in accuracy and speed. We further propose position-dependent token masking to close the training-test gap. Efficient-DLM 8B achieves +5.4%/+2.7% higher accuracy with 4.5×/2.7× higher throughput than Dream 7B and Qwen3 4B.</div>
+                    </div>
+                </li>
+                <li style="cursor:default;">
+                    <div class="pub-thumb-placeholder">TBA</div>
+                    <div class="pub-body" style="cursor:default;">
+                        <div class="pub-title">NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators</div>
+                        <div class="pub-authors">C. Shih, C. Li, C. Yu, H. Fang, S. Li, W. Hsin, <strong>L. Whalen</strong>, et al.</div>
+                        <span class="pub-venue">ISCA 2026 &middot; Georgia Tech</span>
+                        <div class="pub-desc">To be announced.</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="pub-thumb" src="team_papers_photos/early_bird_diffusion.png" alt="">
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="team_papers/early_bird.pdf" class="stretched-link">Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training</a></div>
+                        <div class="pub-authors"><strong>L. Whalen*</strong>, Z. Du*, H. You*, C. Li, S. Li, Y. Lin &nbsp;<em>(* equal contribution)</em></div>
+                        <span class="pub-venue">CVPR 2025 &middot; Georgia Tech</span>
+                        <div class="pub-desc">Training diffusion models is computationally expensive due to multi-step forward and backward passes across many timesteps. We investigate the existence of Early-Bird (EB) tickets — sparse subnetworks that emerge early in training and maintain high generation quality — and introduce timestep-aware EB tickets that adapt their sparsity based on the importance of each timestep region. Our EB-Diff-Train method derives these tickets, trains them in parallel, and combines them at inference, achieving 2.9–5.8× speedups over training unpruned dense models and up to 10.3× faster training versus standard train-prune-finetune pipelines.</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="pub-thumb" src="team_papers_photos/lamb.png" alt="">
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="team_papers/lamb.pdf" class="stretched-link">LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering</a></div>
+                        <div class="pub-authors">Z. Ye, Z. Wang, K. Xia, J. Hong, L. Li, <strong>L. Whalen</strong>, et al.</div>
+                        <span class="pub-venue">ACL 2025 &middot; Georgia Tech</span>
+                        <div class="pub-desc">State space models achieve efficient sub-quadratic compute but degrade significantly at long contexts due to exponential decay in hidden state memory. We investigate Mamba's attention patterns to explain why token filtering alleviates this degradation, then propose LAMB — a training-free, attention-guided token filtering strategy that preserves critical tokens during inference. LAMB boosts long-context performance for both pure SSMs and hybrid models, achieving up to 30.35% improvement over state-of-the-art techniques on standard long-context benchmarks.</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="pub-thumb" src="team_papers_photos/historical_unity.png" alt="">
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="team_papers/historical_unity.pdf" class="stretched-link">On 'historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change</a></div>
+                        <div class="pub-authors">A. Murphy, <strong>L. Whalen</strong>, S. Dubinsky, et al.</div>
+                        <span class="pub-venue">LSA 2023 &middot; University of South Carolina</span>
+                        <div class="pub-desc">We examine Putin's (2021) claim of "historical linguistic unity" between Russian and Ukrainian using computational lexical distance measures. Applying Levenshtein distance over frequency-based word lists — sensitive to both organic and contact-induced language change — we objectively quantify the linguistic distance between the two languages and their relationships to Polish, substantiating that Russian and Ukrainian are demonstrably distinct languages with no grounds for claims of unity.</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+            <div class="section-title" style="margin-top:28px;">Patents</div>
+            <ul class="pub-list">
+                <li>
+                    <div class="pub-title">Training Framework for Converting Autoregressive Language Models into Faster Diffusion Language Models</div>
+                    <div class="pub-authors">Y. Fu, <strong>L. Whalen</strong>, X. Dong, S. Diao, C. Wu, E. Xie, S. Han, J. Kautz, Y. Lin, P. Molchanov</div>
+                    <span class="pub-venue">U.S. Patent (to be filed) 2026 &middot; NVIDIA</span>
+                </li>
+            </ul>
+        </section>
     </main>
 
-    <div class="tooltip" id="tooltip"></div>
-
-    <div class="panel-overlay" id="panelOverlay">
-        <div class="panel" id="panel">
-            <button class="panel-close" id="panelClose">&times;</button>
-            <div id="panelContent"></div>
-        </div>
-    </div>
-
-    <small style="display:block;text-align:center;margin:10px 0;">
+    <small style="display:block;text-align:center;margin:20px 0 10px;">
         <a href="gineiden.html" style="opacity:0.35;">_</a>
     </small>
-    <small style="position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;">Last updated: 2026-06-20</small>
-
-    <script>
-        // Loads a list.json. If it's a manifest of the form
-        // {"parts": ["list_0000001.json", ...]} (produced by split_list.py),
-        // fetches all parts and concatenates them in order. Otherwise returns
-        // the parsed JSON as-is.
-        async function loadList(path) {
-            const res = await fetch(path);
-            if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-            const data = await res.json();
-            if (data && !Array.isArray(data) && Array.isArray(data.parts)) {
-                const dir = path.substring(0, path.lastIndexOf('/') + 1);
-                const chunks = await Promise.all(
-                    data.parts.map(p => fetch(dir + p).then(r => {
-                        if (!r.ok) throw new Error(`Failed to load ${dir + p}: ${r.status}`);
-                        return r.json();
-                    }))
-                );
-                return chunks.flat();
-            }
-            return data;
-        }
-
-        const cloud = document.getElementById('cloud');
-        const tooltip = document.getElementById('tooltip');
-        const panelOverlay = document.getElementById('panelOverlay');
-        const panelContent = document.getElementById('panelContent');
-        const panelClose = document.getElementById('panelClose');
-
-        const isMobile = window.innerWidth <= 660;
-        const MAX_TAGS = isMobile ? 120 : 250;
-        const FRAME_MS = isMobile ? 33 : 16; // ~30fps mobile, ~60fps desktop
-
-        const radius = 0.42;
-        let rotX = 0, rotY = 0;
-        let autoRotX = isMobile ? 0.001 : 0.002;
-        let autoRotY = isMobile ? 0.002 : 0.004;
-        let dragging = false, dragStartX = 0, dragStartY = 0;
-        let velX = 0, velY = 0;
-        let lastDragTime = 0;
-        let lastFrameTime = 0;
-        let frameCount = 0;
-        let items = [];
-
-        cloud.innerHTML = '<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#999;font-size:13px;pointer-events:none;">loading…</span>';
-
-        loadList('papers/list.json')
-            .then(papers => {
-                cloud.innerHTML = '';
-                const tagMap = {};
-                papers.forEach(p => {
-                    if (!p.topic) return;
-                    p.topic.split(',').map(t => t.trim().toLowerCase()).filter(Boolean).forEach(tag => {
-                        if (!tagMap[tag]) tagMap[tag] = [];
-                        tagMap[tag].push(p);
-                    });
-                });
-
-                // Sort by paper count descending, cap to MAX_TAGS
-                const tags = Object.keys(tagMap)
-                    .sort((a, b) => tagMap[b].length - tagMap[a].length)
-                    .slice(0, MAX_TAGS);
-
-                // Semantic clustering via co-occurrence
-                const cooccur = {};
-                tags.forEach(t => { cooccur[t] = {}; });
-                papers.forEach(p => {
-                    if (!p.topic) return;
-                    const pts = p.topic.split(',').map(t => t.trim().toLowerCase()).filter(t => cooccur[t]);
-                    for (let i = 0; i < pts.length; i++) {
-                        for (let j = i + 1; j < pts.length; j++) {
-                            cooccur[pts[i]][pts[j]] = (cooccur[pts[i]][pts[j]] || 0) + 1;
-                            cooccur[pts[j]][pts[i]] = (cooccur[pts[j]][pts[i]] || 0) + 1;
-                        }
-                    }
-                });
-
-                // Greedy nearest-neighbor ordering for clustering
-                const ordered = [];
-                const used = new Set();
-                let current = tags.reduce((a, b) => tagMap[a].length >= tagMap[b].length ? a : b);
-                ordered.push(current);
-                used.add(current);
-
-                while (ordered.length < tags.length) {
-                    let best = null, bestScore = -1;
-                    for (const t of tags) {
-                        if (used.has(t)) continue;
-                        const score = cooccur[current][t] || 0;
-                        if (score > bestScore || (score === bestScore && tagMap[t].length > (best ? tagMap[best].length : 0))) {
-                            best = t;
-                            bestScore = score;
-                        }
-                    }
-                    if (!best) best = tags.find(t => !used.has(t));
-                    ordered.push(best);
-                    used.add(best);
-                    current = best;
-                }
-
-                // Distribute on sphere via golden spiral
-                const total = ordered.length;
-                const maxCount = Math.max(...ordered.map(t => tagMap[t].length));
-                const minCount = Math.min(...ordered.map(t => tagMap[t].length));
-
-                ordered.forEach((tag, i) => {
-                    const tagPapers = tagMap[tag];
-                    const phi = Math.acos(1 - 2 * (i + 0.5) / total);
-                    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
-
-                    const el = document.createElement('span');
-                    el.className = 'tag';
-                    el.textContent = tag;
-
-                    const ratio = minCount === maxCount ? 0.5
-                        : (tagPapers.length - minCount) / (maxCount - minCount);
-                    el.style.fontSize = (11 + ratio * 16) + 'px';
-
-                    el.addEventListener('mouseenter', e => showTooltip(e, tag, tagPapers));
-                    el.addEventListener('mousemove', moveTooltip);
-                    el.addEventListener('mouseleave', hideTooltip);
-                    el.addEventListener('click', e => {
-                        e.stopPropagation();
-                        openPanel(tag, tagPapers);
-                    });
-
-                    cloud.appendChild(el);
-
-                    items.push({
-                        el,
-                        x: Math.sin(phi) * Math.cos(theta),
-                        y: Math.sin(phi) * Math.sin(theta),
-                        z: Math.cos(phi),
-                    });
-                });
-
-                requestAnimationFrame(animate);
-            });
-
-        // --- Drag to rotate ---
-        cloud.addEventListener('mousedown', e => {
-            dragging = true;
-            dragStartX = e.clientX;
-            dragStartY = e.clientY;
-            velX = 0;
-            velY = 0;
-            lastDragTime = performance.now();
-            cloud.classList.add('dragging');
-        });
-
-        window.addEventListener('mousemove', e => {
-            if (!dragging) return;
-            const now = performance.now();
-            const dt = Math.max(now - lastDragTime, 1);
-            const dx = e.clientX - dragStartX;
-            const dy = e.clientY - dragStartY;
-            // Scale rotation by delta and time for responsiveness
-            velY = (dx / dt) * 0.8;
-            velX = (-dy / dt) * 0.8;
-            dragStartX = e.clientX;
-            dragStartY = e.clientY;
-            lastDragTime = now;
-        });
-
-        window.addEventListener('mouseup', () => {
-            if (dragging) {
-                dragging = false;
-                cloud.classList.remove('dragging');
-            }
-        });
-
-        // Touch support
-        cloud.addEventListener('touchstart', e => {
-            if (e.touches.length === 1) {
-                dragging = true;
-                dragStartX = e.touches[0].clientX;
-                dragStartY = e.touches[0].clientY;
-                velX = 0;
-                velY = 0;
-                lastDragTime = performance.now();
-            }
-        }, { passive: false });
-
-        cloud.addEventListener('touchmove', e => {
-            if (!dragging || e.touches.length !== 1) return;
-            e.preventDefault(); // prevent page scroll while dragging cloud
-            const now = performance.now();
-            const dt = Math.max(now - lastDragTime, 1);
-            const dx = e.touches[0].clientX - dragStartX;
-            const dy = e.touches[0].clientY - dragStartY;
-            velY = (dx / dt) * 0.8;
-            velX = (-dy / dt) * 0.8;
-            dragStartX = e.touches[0].clientX;
-            dragStartY = e.touches[0].clientY;
-            lastDragTime = now;
-        }, { passive: false });
-
-        window.addEventListener('touchend', () => { dragging = false; });
-
-        // --- Animation ---
-        function animate(timestamp) {
-            requestAnimationFrame(animate);
-            if (timestamp - lastFrameTime < FRAME_MS) return;
-            lastFrameTime = timestamp;
-            frameCount++;
-
-            if (dragging) {
-                rotX = velX;
-                rotY = velY;
-            } else {
-                velX *= 0.95;
-                velY *= 0.95;
-
-                const speed = Math.abs(velX) + Math.abs(velY);
-                if (speed > 0.001) {
-                    rotX = velX;
-                    rotY = velY;
-                } else {
-                    rotX += (autoRotX - rotX) * 0.03;
-                    rotY += (autoRotY - rotY) * 0.03;
-                }
-            }
-
-            const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
-            const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
-
-            const w = cloud.clientWidth;
-            const h = cloud.clientHeight;
-            const r = Math.min(w, h) * radius;
-            const updateZIndex = (frameCount % 4 === 0);
-
-            items.forEach(item => {
-                const y1 = item.y * cosX - item.z * sinX;
-                const z1 = item.y * sinX + item.z * cosX;
-                const x2 = item.x * cosY + z1 * sinY;
-                const z2 = -item.x * sinY + z1 * cosY;
-
-                item.x = x2;
-                item.y = y1;
-                item.z = z2;
-
-                const scale = (z2 + 1.5) / 2.5;
-                const px = x2 * r;
-                const py = y1 * r;
-
-                item.el.style.transform = `translate(-50%,-50%) translate3d(${px}px,${py}px,0)`;
-                item.el.style.opacity = 0.05 + scale * 0.95;
-                if (updateZIndex) item.el.style.zIndex = Math.round(scale * 100);
-            });
-        }
-
-        // --- Tooltip ---
-        function showTooltip(e, tag, papers) {
-            if (panelOverlay.classList.contains('open')) return;
-            const n = papers.length;
-            tooltip.textContent = `${tag} — ${n} paper${n !== 1 ? 's' : ''} (click to view)`;
-            tooltip.style.display = 'block';
-            moveTooltip(e);
-        }
-
-        function moveTooltip(e) {
-            const pad = 12;
-            let x = e.clientX + pad, y = e.clientY + pad;
-            const rect = tooltip.getBoundingClientRect();
-            if (x + rect.width > window.innerWidth - pad) x = e.clientX - rect.width - pad;
-            if (y + rect.height > window.innerHeight - pad) y = e.clientY - rect.height - pad;
-            tooltip.style.left = x + 'px';
-            tooltip.style.top = y + 'px';
-        }
-
-        function hideTooltip() {
-            tooltip.style.display = 'none';
-        }
-
-        // --- Panel ---
-        function openPanel(tag, papers) {
-            hideTooltip();
-            let html = `<p class="panel-title">${tag}</p>`;
-            html += `<p class="panel-count">${papers.length} paper${papers.length !== 1 ? 's' : ''}</p>`;
-            html += '<ul>';
-            papers.forEach(p => {
-                const title = p.link
-                    ? `<a href="${p.link}" target="_blank" rel="noopener">${p.title}</a>`
-                    : p.title;
-                html += `<li>${title}`;
-                const meta = [p.author, p.year, p.venue].filter(Boolean).join(' · ');
-                if (meta) html += `<div class="paper-meta">${meta}</div>`;
-                html += '</li>';
-            });
-            html += '</ul>';
-            panelContent.innerHTML = html;
-            panelOverlay.classList.add('open');
-        }
-
-        panelClose.addEventListener('click', () => panelOverlay.classList.remove('open'));
-        panelOverlay.addEventListener('click', e => {
-            if (e.target === panelOverlay) panelOverlay.classList.remove('open');
-        });
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') panelOverlay.classList.remove('open');
-        });
-    </script>
+    <small style="position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;">Last updated: 2026-06-25</small>
 </body>
 </html>
