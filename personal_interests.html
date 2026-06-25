@@ -25,14 +25,16 @@
 
     .slideshow {
       float: right;
-      width: 300px;
+      width: 240px;
       margin: 0 0 12px 24px;
     }
 
     .slideshow-frame {
       position: relative;
       width: 100%;
-      height: 300px;
+      /* Tall enough to show the largest photo (berlin.png, ~324px at this width)
+         at full size; shorter photos are letterboxed so the frame never resizes. */
+      height: 330px;
       border-radius: 4px;
       overflow: hidden;
       background: var(--hair2);
@@ -98,7 +100,9 @@
       color: var(--muted);
       margin-top: 8px;
       line-height: 1.45;
-      min-height: 2.6em;
+      /* Reserve room for the longest caption so the block height — and the
+         surrounding text wrap — stays constant across slides. */
+      min-height: 5.9em;
     }
 
     .slideshow-dots {
@@ -159,8 +163,8 @@
                data-caption="I gave a speech at my high school graduation. The first one was rejected as it was too serious, the second one was more upbeat." class="active">
           <img src="photos/speech.png" alt="Picture of speech at Toyo Uni."
                data-caption="I gave a speech at a uni in Tokyo as the exchange student representative. This one wasn't rejected." class="active">
-          <img src="photos/swim.png" alt="Picture of swim team."
-               data-caption="I swam competitively from elementary school through end of high school. I actually never really liked it, I did it because it was the only exercise where you cannot feel your own sweat.">
+          <img src="photos/berlin.png" alt="Picture in Berlin with my sister."
+               data-caption="In Berlin with my sister. Berlin is probably my favorite city.">
           <img src="photos/ml.png" alt="Picture of a message mentioning my laptop on fire"
                data-caption="My first foray into machine learning ended up with my laptop catching fire. I never knew this was possible outside of cartoons.">
           <img src="photos/upset.png" alt="Picture of me upset as a child"
