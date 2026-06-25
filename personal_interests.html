@@ -15,6 +15,121 @@
       border-radius: 4px;
       margin-bottom: 28px;
     }
+
+    /* Remove the hairline rule under section titles on this page */
+    .section-title {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 10px;
+    }
+
+    .slideshow {
+      float: right;
+      width: 300px;
+      margin: 0 0 12px 24px;
+    }
+
+    .slideshow-frame {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--hair2);
+    }
+
+    .slideshow-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .slideshow-frame img.active {
+      opacity: 1;
+    }
+
+    .slideshow-arrow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 28%;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .slideshow-arrow.prev {
+      left: 0;
+      justify-content: flex-start;
+      padding-left: 8px;
+      background: linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0));
+    }
+
+    .slideshow-arrow.next {
+      right: 0;
+      justify-content: flex-end;
+      padding-right: 8px;
+      background: linear-gradient(to left, rgba(0,0,0,0.28), rgba(0,0,0,0));
+    }
+
+    .slideshow-frame:hover .slideshow-arrow {
+      opacity: 1;
+    }
+
+    .slideshow-arrow:hover {
+      color: #fff;
+    }
+
+    .slideshow-caption {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.45;
+      min-height: 2.6em;
+    }
+
+    .slideshow-dots {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .slideshow-dots button {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--hair);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .slideshow-dots button.active {
+      background: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .slideshow {
+        float: none;
+        width: 100%;
+        margin: 14px 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -35,28 +150,49 @@
     </div>
 
     <section>
-      <div class="section-title">Goals</div>
-      <p class="muted">Before I die:</p>
-      <ul>
-        <li>Four languages to fluency (English, Japanese, Mandarin, German)</li>
-        <li>100 million in investments (depositing about a third of each paycheck)</li>
-        <li>Monthly donations to education / charities / space exploration</li>
-      </ul>
-
-      <p class="muted" style="margin-top:14px;">At time of death:</p>
-      <ul>
-        <li>Still physically and mentally fit</li>
-        <li>At least have some people there</li>
-      </ul>
+      <div class="section-title">Past Life</div>
+      <div class="slideshow" id="pastLifeSlideshow">
+        <div class="slideshow-frame">
+          <img src="photos/mountains.png" alt="Picture of mountains"
+               data-caption="I like mountains a lot. Here is one from a trip to Lake Tahoe where we got lost." class="active">
+          <img src="photos/speech_hs.png" alt="Picture of speech at high school graduation"
+               data-caption="I gave a speech at my high school graduation. The first one was rejected as it was too serious, the second one was more upbeat." class="active">
+          <img src="photos/speech.png" alt="Picture of speech at Toyo Uni."
+               data-caption="I gave a speech at a uni in Tokyo as the exchange student representative. This one wasn't rejected." class="active">
+          <img src="photos/swim.png" alt="Picture of swim team."
+               data-caption="I swam competitively from elementary school through end of high school. I actually never really liked it, I did it because it was the only exercise where you cannot feel your own sweat.">
+          <img src="photos/ml.png" alt="Picture of a message mentioning my laptop on fire"
+               data-caption="My first foray into machine learning ended up with my laptop catching fire. I never knew this was possible outside of cartoons.">
+          <img src="photos/upset.png" alt="Picture of me upset as a child"
+               data-caption="Somehow I was very upset in this photo, to the extend where the other child ran away (you can see the remainder of the popcorn, a testimony to their presence).">
+          <button class="slideshow-arrow prev" aria-label="Previous photo">&#10094;</button>
+          <button class="slideshow-arrow next" aria-label="Next photo">&#10095;</button>
+        </div>
+        <div class="slideshow-caption">Filler caption — mountains.png</div>
+        <div class="slideshow-dots"></div>
+      </div>
+      <p>
+        A bit of my past. I was born in California, and then moved to live on the East Coast for a while. I then lived in Japan briefly, and then moved back to the East Coast.
+      </p>
+      <p>
+        Growing up I did swimming, piano, and kickboxing, and have a second degree black-belt in taekwondo (although this was a while ago). I played violin for about 4 years, but never got good, and piano for about 5 ish years; piano was a bit better, and I performed in a few recitals. 
+      </p>
+      <p>
+        My first job was at a local Chinese restaurant. I hated it at first, but learned a lot and grew to love the people. This first highschool job was likely the most important single decision in my life; it made me interested in learning Mandarin, which led to an interested in neuroscience and linguistics, ultimately leading to my current career path. I will never forget my first boss; she was incredibly supportive and kind.
+      </p>
     </section>
 
     <section>
-      <div class="section-title">Languages</div>
-      <ul>
-        <li><i>Japanese</i> — My grandfather was Fukuokan (なので僕は一応形式上日系三世かな？）. I gave a <a href="pictures/speech.png">speech at graduation</a> as the exchange student representative. My favorite class was 学習心理学.</li>
-        <li><i>Mandarin</i> — By the end of my 20s, I aim to be fluent. Chinese literature is really interesting, and the history is quite rich.</li>
-        <li><i>German</i> — I started recently. My sister lives there, and I like the place.</li>
-      </ul>
+      <div class="section-title">Goals</div>
+      <p>
+        Before I die, I'd like to bring four languages to fluency (English, Japanese, Mandarin, and German),
+        reach 100 million in investments by depositing about a third of each paycheck, and give monthly to
+        education, charities, and space exploration.
+      </p>
+      <p>
+        And at the time of death, I hope to still be physically and mentally fit, and to at least have some
+        people there. Doesn't have to be a party, but should be a bit more uplifting than a funeral.
+      </p>
     </section>
 
     <section>
@@ -64,7 +200,7 @@
       <p>
         Jazz is my favorite genre. I like Coltrane (<a href="https://www.youtube.com/watch?v=ll3CMgiUPuU">this</a> and
         <a href="https://youtu.be/ioPRCwpB1Ak?si=sjB5jiMi8M3XpH4d">this</a>). I also like classical and
-        <a href="https://www.youtube.com/watch?v=tJBtztG-xR4">hip-hop</a>.
+        <a href="https://www.youtube.com/watch?v=tJBtztG-xR4">hip-hop</a>. I don't often listen to music with voices in it these days, but recently got into Steely Dan.
       </p>
     </section>
 
@@ -94,5 +230,47 @@
       </ul>
     </section>
   </main>
+
+  <script>
+    (function () {
+      var box = document.getElementById('pastLifeSlideshow');
+      if (!box) return;
+      var slides = box.querySelectorAll('.slideshow-frame img');
+      var caption = box.querySelector('.slideshow-caption');
+      var dotsWrap = box.querySelector('.slideshow-dots');
+      var current = 0, timer;
+
+      var dots = [];
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.setAttribute('aria-label', 'Show photo ' + (i + 1));
+        dot.addEventListener('click', function () { show(i); restart(); });
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      });
+
+      function show(i) {
+        current = i;
+        slides.forEach(function (s, j) { s.classList.toggle('active', j === i); });
+        dots.forEach(function (d, j) { d.classList.toggle('active', j === i); });
+        caption.textContent = slides[i].dataset.caption || '';
+      }
+
+      function next() { show((current + 1) % slides.length); }
+      function prev() { show((current - 1 + slides.length) % slides.length); }
+      function restart() { clearInterval(timer); timer = setInterval(next, 4000); }
+
+      var nextBtn = box.querySelector('.slideshow-arrow.next');
+      var prevBtn = box.querySelector('.slideshow-arrow.prev');
+      if (nextBtn) nextBtn.addEventListener('click', function () { next(); restart(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restart(); });
+
+      show(0);
+      restart();
+
+      box.addEventListener('mouseenter', function () { clearInterval(timer); });
+      box.addEventListener('mouseleave', restart);
+    })();
+  </script>
 </body>
 </html>
