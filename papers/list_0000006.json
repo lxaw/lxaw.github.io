@@ -1,0 +1,38 @@
+[
+  {
+    "title": "ELF: Embedded Language Flows",
+    "author": "Keya Hu et al",
+    "year": "2026",
+    "topic": "dlm, continuous diffusion, consistency",
+    "venue": "Arxiv",
+    "description": "The paper asks whether the underperformance of continuous diffusion language models is intrinsic to language discreteness or instead due to suboptimal design, and proposes Embedded Language Flows (ELF) to test the latter by removing most discrete constraints. ELF maps tokens into a continuous embedding space and performs generation entirely as a continuous-time flow matching process, where noisy embeddings follow a linear interpolant z_t = t x + (1 − t) ε and the model predicts clean embeddings x via an x-prediction objective that induces the correct velocity field. A key design choice is to avoid any token-level supervision during intermediate steps, allowing unconstrained trajectories in embedding space, and to defer discretization to a single final step implemented by a shared network that switches from denoising to decoding mode. This unification is technically important because predicting clean embeddings aligns the denoising objective with the final cross-entropy decoding loss, enabling weight sharing and eliminating the need for a separate decoder while preserving consistency between continuous and discrete representations. Because the model operates purely in continuous space until the end, it naturally supports techniques like classifier-free guidance and stochastic sampling, which improve controllability and error correction by modifying the learned velocity field during integration.",
+    "link": "https://arxiv.org/pdf/2605.10938"
+  },
+  {
+    "title": "Where Should Diffusion Enter a Language Model? Geometry-Guided Hidden-State Replacement",
+    "author": "Injin Kong et al",
+    "year": "2026",
+    "topic": "dlm, diffusion models, geometry, hidden states",
+    "venue": "Arxiv",
+    "description": "The paper asks where diffusion should be applied inside a pretrained transformer, hypothesizing that failure of continuous diffusion in language stems less from discreteness and more from using representation spaces with unfavorable geometry for denoising. It formalizes “diffusion-friendly” spaces via three properties—fast contraction under Langevin dynamics (linked to curvature), robustness to score estimation error (also controlled by curvature), and low effective dimensionality (captured by effective rank)—and derives these as practical spectral proxies computed layer-wise from hidden states. Using these proxies, it scores each transformer layer and selects an insertion point where hidden-state distributions are locally compact, globally well-conditioned, and lie near low-dimensional manifolds, making them easier targets for diffusion. The proposed DiHAL architecture then replaces the lower transformer layers with a conditional diffusion bridge trained to reconstruct the selected hidden state from noise, while keeping the upper layers and LM head unchanged so that token prediction is handled by the original autoregressive machinery. This design avoids unstable continuous-to-discrete recovery by shifting diffusion to an internal representation that the pretrained model already knows how to decode, effectively reframing language diffusion as hidden-state reconstruction in a geometrically suitable space.",
+    "link": "https://arxiv.org/pdf/2605.14368"
+  },
+  {
+    "title": "SparseD: Sparse Attention for Diffusion Language Models",
+    "author": "Zeqing Wang et al",
+    "year": "2025",
+    "topic": "dlm, sparsity, attention",
+    "venue": "Arxiv",
+    "description": "The paper addresses the high inference latency of diffusion language models by asking how to reduce the quadratic cost of bidirectional attention without breaking the denoising process. It observes that, unlike autoregressive models, attention in DLMs is head-specific but temporally stable across diffusion steps, and that early denoising steps are disproportionately important for forming correct global structure. Based on this, SparseD first runs full attention during early steps, then computes head-specific sparse attention patterns by selecting high-score query–key pairs (separately for prefill and generation tokens) using blockwise pooled attention, and reuses these fixed patterns for all subsequent steps. This works because the denoising trajectory stabilizes attention structure after early steps, so recomputing patterns each step is redundant, and restricting computation later does not significantly perturb the trajectory. The method reduces complexity by masking attention to a precomputed sparse set while preserving critical early global interactions, effectively amortizing the cost of pattern discovery and aligning sparsification with the temporal dynamics of diffusion.",
+    "link": "https://arxiv.org/pdf/2509.24014"
+  },
+  {
+    "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+    "author": "Junyi Wu et al",
+    "year": "2026",
+    "topic": "dlm, mask tokens, rope, context compression, iterative folding",
+    "venue": "Arxiv",
+    "description": "The paper asks whether the large computational cost in diffusion language models comes from repeatedly processing many future [MASK] tokens that contribute little new information, and how to reduce this redundancy without breaking generation. It shows that although [MASK] tokens have highly redundant feature representations and mostly interact locally with each other, they encode critical structural signals through their RoPE positional indices, especially for determining where content should be generated and when to terminate. Based on this, the method compresses the future [MASK] context by sparsely sampling tokens from each block while keeping decoded history, the current block, and the terminal region dense, and crucially preserves each retained token’s original RoPE coordinate so that positional priors remain unchanged. This design works because generation in dLLMs is strongly guided by positional encoding rather than token identity for masked positions, so maintaining the positional “skeleton” preserves semantics even under heavy token reduction. The framework further extends to iterative folding, where older decoded tokens are also sparsified under the same positional-preserving rule for long-context scaling, and to block dLLMs by adding a single protected [MASK] token at the final RoPE position to explicitly reintroduce the terminal signal that guides EOS prediction.",
+    "link": "https://arxiv.org/pdf/2605.18165"
+  }
+]
