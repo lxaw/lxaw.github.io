@@ -133,8 +133,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 504 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 504 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 506 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 506 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -158,6 +158,24 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2605.02404" target="_blank" rel="noopener noreferrer">Statistically-Lossless Quantization for Large Language Models</a></td>
+                <td>Michael Helcig et al</td>
+                <td>2026</td>
+                <td>quantization, post-training</td>
+                <td>Arxiv</td>
+                <td>This paper introduces Statistically Lossless Quantization (SLQ), a framework that bridges the gap between conventional lossy quantization and exact lossless compression by defining two fidelity targets: task-lossless preservation of model behavior and the stricter distribution-lossless preservation of next-token distributions. A central contribution is the Expected Acceptance Rate (EAR), a token-level fidelity metric that measures the maximum probability that the original and quantized models produce the same token under optimal coupling, providing a more interpretable objective than KL divergence for quantization search. The authors also prove a gamma-squared variance law showing that symmetric quantization amplifies quantization noise by a factor proportional to the square of weight-distribution skewness, motivating the use of asymmetric quantization with learned zero-points as a prerequisite for high-fidelity distribution preservation. Their implementation quantizes each layer using asymmetric integer quantization while allowing a wide range of bitwidths from 2 to 8 bits, estimates layer sensitivities through a multi-bitwidth Shapley-value procedure, and builds a sensitivity database that predicts how each layer-bitwidth choice affects EAR and KL divergence. Given these sensitivity estimates, SLQ formulates bit allocation as an integer linear program that assigns bitwidths to layer groups under a compression budget, then performs a search to find the lowest average precision satisfying either an EAR constraint for distribution-lossless compression or a KL-derived recovery target for task-lossless compression. The resulting system combines asymmetric quantization, fine-grained mixed-precision allocation, Shapley-based sensitivity estimation, and optimization-driven bitwidth assignment to achieve highly compressed models that remain statistically indistinguishable from their original counterparts while retaining practical inference acceleration.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2210.17323" target="_blank" rel="noopener noreferrer">GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers</a></td>
+                <td>Elias Frantar et al</td>
+                <td>2023</td>
+                <td>quantization, post-training</td>
+                <td>ICLR</td>
+                <td>GPTQ presents a scalable post-training quantization method for large language models that achieves aggressive weight compression without retraining by approximating the effect of quantization using second-order information derived from layer activations. The method builds on Optimal Brain Quantization (OBQ), which quantizes weights while compensating for the resulting error using the inverse Hessian of the layer reconstruction objective, but replaces OBQ’s expensive greedy weight-by-weight ordering with a shared column-wise quantization order across all rows, exploiting the fact that the Hessian depends only on layer inputs and not on the weights themselves. This insight allows inverse-Hessian updates to be performed once per column rather than once per weight, reducing computational complexity by orders of magnitude while preserving most of the benefits of second-order error compensation. To make the algorithm practical on GPUs, GPTQ introduces lazy batch updates that quantize blocks of columns at a time, accumulate local quantization errors, and apply large matrix updates only after an entire block has been processed, significantly improving hardware utilization by reducing memory-bandwidth overhead. The authors further reformulate the algorithm using a damped Cholesky decomposition of the inverse Hessian, avoiding the numerical instability caused by repeated inverse updates while enabling efficient use of optimized linear algebra kernels. In implementation, GPTQ computes activation statistics from a small calibration set, constructs a layer-wise Hessian approximation, sequentially quantizes transformer layers using blockwise second-order error correction, and combines the resulting compressed weights with custom dequantization-aware inference kernels that reduce memory movement and translate compression into practical deployment and inference benefits.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2605.10938" target="_blank" rel="noopener noreferrer">ELF: Embedded Language Flows</a></td>
