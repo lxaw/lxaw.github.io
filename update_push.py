@@ -5,6 +5,8 @@ import subprocess
 from datetime import date
 from pathlib import Path
 
+import gen as gen_module
+
 PAPERS_MANIFEST = Path("papers/list.json")
 MAX_ENTRIES_PER_PART = 100
 
@@ -134,6 +136,8 @@ def git_operations(date):
 
 if __name__ == "__main__":
     check_and_split_papers()
+    gen_module.generate_html("papers/list.json", "papers_read.html")
+    print("Regenerated papers_read.html")
     current_date = update_html()
     git_operations(current_date)
     print(f"Changes have been committed and pushed. Date updated to {current_date} in index.html")
