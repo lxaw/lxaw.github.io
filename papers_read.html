@@ -133,8 +133,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 506 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 506 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 508 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 508 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -158,6 +158,24 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2507.18553" target="_blank" rel="noopener noreferrer">The Geometry of LLM Quantization: GPTQ as Babai&#x27;s Nearest Plane Algorithm</a></td>
+                <td>Jiale Chen et al</td>
+                <td>2026</td>
+                <td>quantization, post-training</td>
+                <td>ICML</td>
+                <td>This paper provides the first geometric interpretation of GPTQ by proving that weight quantization for a linear layer can be reformulated as a closest vector problem (CVP) on a lattice whose basis is determined by the layer activations and quantization scales, allowing the quantization process to be analyzed using classical lattice algorithms. The key theoretical result is that GPTQ, when executed in reverse dimension order, is mathematically identical to Babai’s nearest plane algorithm: each quantization step rounds one coordinate and then propagates the resulting error to the remaining coordinates, which the authors show is exactly equivalent to projecting a target vector onto the nearest lattice hyperplane. To establish this equivalence, they derive a correspondence between the GPTQ objective and CVP, reinterpret GPTQ’s Hessian-based error propagation as a geometric projection operation, and prove that the sequence of residual updates performed by GPTQ matches Babai’s recursive nearest-plane procedure. This perspective yields a tight layer-wise quantization error bound in the no-clipping setting, expressed through the diagonal terms of an LDL decomposition of the Hessian, and also explains how quantization order influences the final error through its effect on that decomposition. Building on the theory, the authors introduce practical no-clipping quantization methods: SSQR, which stores overflowed weights as sparse outliers while adjusting scales through binary search, and HPTQ, which quantizes onto an unrestricted integer lattice and uses Huffman coding to satisfy a target compression budget. They additionally implement optimized CUDA kernels for the resulting representations, demonstrating that the lattice-based interpretation is not only a theoretical framework but also a guide for designing more accurate and efficient post-training quantization algorithms.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://proceedings.mlr.press/v202/frantar23a/frantar23a.pdf" target="_blank" rel="noopener noreferrer">SparseGPT: Massive Language Models Can be Accuracy Pruned in One-Shot</a></td>
+                <td>Elias Frantar et al</td>
+                <td>2023</td>
+                <td>pruning, post-training</td>
+                <td>ICML</td>
+                <td>SparseGPT introduces the first practical one-shot pruning method for massive GPT-style language models, showing that highly sparse models can be obtained without retraining by framing pruning as a layer-wise reconstruction problem that preserves each layer’s input-output behavior. The key contribution is a scalable approximation to Optimal Brain Surgeon (OBS), a second-order pruning technique that uses the inverse Hessian of layer activations to estimate both the error incurred by removing a weight and the optimal compensatory update to the remaining weights. Direct OBS reconstruction is computationally infeasible because each row of a weight matrix would require solving a different sparse regression problem with its own masked Hessian inverse, so SparseGPT introduces Hessian synchronization, processing weights column-by-column while maintaining a shared sequence of inverse Hessians that can be updated efficiently through recursive Gaussian elimination rather than recomputed independently. During pruning, weights are removed according to a second-order saliency score proportional to the squared weight divided by the corresponding diagonal entry of the inverse Hessian, and after each removal the resulting error is propagated to later, still-unfrozen weights using OBS-style updates, allowing the network to continuously compensate for pruning damage. To avoid imposing rigid sparsity patterns and to account for weight correlations introduced by previous updates, the method performs adaptive mask selection in blocks, periodically recomputing which weights are cheapest to remove based on the evolving second-order error estimates. The algorithm is implemented in the same column-wise greedy framework as GPTQ, enabling efficient batched updates, numerically stable Cholesky-based inverse-Hessian computations, support for both unstructured and semi-structured sparsity patterns, and seamless integration of pruning and quantization into a single compression pass.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2605.02404" target="_blank" rel="noopener noreferrer">Statistically-Lossless Quantization for Large Language Models</a></td>
