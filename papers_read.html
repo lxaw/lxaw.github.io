@@ -133,8 +133,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 515 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 515 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 519 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 519 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -158,6 +158,42 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td></td>
+                <td> et al</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2405.14297" target="_blank" rel="noopener noreferrer">Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformers Models</a></td>
+                <td>Yongxin Guo et al</td>
+                <td>2025</td>
+                <td>moe, routing, dynamic allocation</td>
+                <td>ICLR</td>
+                <td>DynMoE removes two major Mixture-of-Experts hyperparameters by allowing both the number of active experts per token (top-k) and the total number of experts to adapt automatically during training instead of being fixed beforehand. Instead of conventional top-k routing, the router computes cosine similarity between each token and learned expert embeddings, compares each similarity against a trainable threshold for that expert, independently activates every expert whose score exceeds its threshold (top-any routing), averages the outputs of the selected experts equally, and falls back to top-1 routing only when no expert is selected during inference to prevent dropped tokens. To encourage sparse but diverse routing, the method replaces standard load-balancing losses with an auxiliary objective that orthogonalizes expert representations while regularizing their norms, promoting specialization without forcing every expert to receive equal traffic. During training, the router records which experts were used and accumulates embeddings of tokens that matched no expert; if unmatched tokens appear, a new expert is added by initializing its routing vector from the normalized average embedding of those tokens, while experts that remain unused for an extended period are removed, allowing the expert pool itself to grow or shrink dynamically. This adaptive process is performed periodically rather than every iteration to reduce overhead, with configurable upper limits on the maximum number of experts to satisfy hardware constraints. Overall, the paper demonstrates that jointly learning routing thresholds and dynamically managing the expert pool eliminates expensive hyperparameter tuning while maintaining sparse computation, competitive accuracy, and revealing architectural insights such as lower layers benefiting from greater expert diversity than upper layers.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2409.06669" target="_blank" rel="noopener noreferrer">DA-MoE: Towards Dynamic Expert Allocation for Mixture-of-Experts Models</a></td>
+                <td>Maryam Akhavan Aghdam et al</td>
+                <td>2024</td>
+                <td>moe, routing, dynamic allocation</td>
+                <td>Arxiv</td>
+                <td>DA-MoE extends a standard Transformer-based Mixture-of-Experts model by replacing the conventional fixed top-K router with a dynamic routing mechanism that assigns a different number of experts to each token based on its estimated importance, arguing that semantically important tokens should receive more computation while less informative tokens require fewer experts. Token importance is computed directly from the Transformer&#x27;s final attention layer by taking, for each token, the maximum attention value within each attention head and averaging these maxima across all heads, producing a normalized importance score that is multiplied by the total number of experts and rounded up to determine the token-specific routing budget K. After determining K, the router itself remains largely unchanged: router logits are computed from a learned linear projection of the token embedding, converted to routing probabilities with a softmax, and the top-K experts are selected instead of a globally fixed top-1 or top-2 routing strategy. The implementation also preserves standard MoE capacity constraints by generating expert assignment masks, tracking each token&#x27;s position within an expert, and dropping assignments that exceed expert capacity, allowing the approach to be integrated into existing Switch Transformer-style architectures with minimal architectural modifications beyond the routing logic. The key contribution is demonstrating that attention scores can serve as a simple heuristic for token importance, enabling adaptive allocation of computation across tokens without modifying the attention or expert networks themselves. Overall, the paper proposes a lightweight routing modification that dynamically varies expert usage according to attention-derived token importance, improving the efficiency-accuracy tradeoff while remaining compatible with existing sparse MoE implementations.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2606.01062" target="_blank" rel="noopener noreferrer">DAG-MoE: From Simple Mixture to Structural Aggregation in Mixture-of-Experts</a></td>
+                <td>Jiarui Feng et al</td>
+                <td>2026</td>
+                <td>moe, routing, dag, structural aggregation</td>
+                <td>ICML</td>
+                <td>DAG-MoE replaces the standard weighted-sum aggregation of selected MoE experts with a learned directed acyclic graph (DAG), arguing that structural composition increases the expressive power of an MoE layer without changing the router or the experts themselves. After the router selects the top-K experts as usual, each expert output becomes a node, and a lightweight DAG learning module iteratively learns pairwise connections by projecting expert features into a lower-dimensional space, concatenating node pairs, predicting edge gates with small MLPs, gating message passing between nodes, applying residual connections, and repeating this process for multiple iterations before summing the final node representations as the layer output. Unlike prior approaches that rely on fixed tree structures or multiple routing stages, the method performs routing only once and dynamically learns a token-dependent aggregation structure, allowing different inputs to induce different expert interaction patterns with relatively little additional computation. The authors theoretically prove that this structural aggregation is strictly more expressive than permutation-invariant weighted summation because it can distinguish different expert orderings and graph structures, and they further show that a single DAG-style MoE layer can approximate multi-step compositional reasoning, such as dynamic programming computations, through iterative message passing over the learned graph. The implementation is intentionally lightweight, using small projection layers, learned edge-gating networks, residual updates, shared parameters across iterations, zero initialization for stability, and a configurable hidden dimension independent of the model or expert size, making it easy to integrate into existing MoE architectures. Overall, the paper&#x27;s main contribution is introducing structural aggregation as a new scaling axis for MoE models that complements expert count and routing improvements, demonstrating that learning how experts interact can improve model capacity more effectively than simply adding parameters or additional shared experts.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/file/ac58b418745b3e5f10c80110c963969f-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer">HALO: Hadamard-Assisted Lower Precision Optimization for LLMs</a></td>
