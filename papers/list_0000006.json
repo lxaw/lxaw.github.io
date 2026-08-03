@@ -1,12 +1,21 @@
 [
   {
-    "title": "",
-    "author": " et al",
-    "year": "",
-    "topic": "",
-    "venue": "",
-    "description": "",
-    "link": ""
+    "title": "Why Muon Outperforms Adam: A Curvature Perspective",
+    "author": "Shuche Wang et al",
+    "year": "2026",
+    "topic": "muon, adam, optimization, curvature, hessian",
+    "venue": "Arxiv",
+    "description": "This paper explains Muon’s optimization advantage over Adam through a curvature-based analysis rather than optimizer heuristics, showing that Muon consistently achieves larger one-step loss reductions because its updates incur a smaller second-order curvature penalty despite having similar first-order gradient alignment. The authors analyze optimization using a second-order Taylor expansion of the loss, decomposing each update into a gradient-alignment term and a Hessian-based curvature penalty, then further separating the curvature penalty into update magnitude and Normalized Directional Sharpness (NDS), a metric measuring the curvature encountered along the update direction independent of its scale. They show that Muon’s implementation, which forms a momentum matrix, spectrally normalizes it by replacing all nonzero singular values with one using an orthogonalized update (approximated efficiently via Newton–Schulz iterations rather than exact SVD), produces update directions with substantially lower NDS than Adam while maintaining comparable update norms, demonstrating that its advantage comes from choosing flatter directions instead of taking smaller steps. The paper further investigates why this occurs by showing that increasing dataset imbalance amplifies Muon’s NDS advantage and by decomposing Hessian curvature into within-layer and cross-layer components, revealing that Muon increasingly concentrates its advantage in reduced within-layer curvature as training progresses. To explain these observations theoretically, the authors construct a structured quadratic optimization model with heterogeneous curvature, low-rank Kronecker Hessian structure, and gradient alignment toward sharp directions, proving that Muon’s spectral normalization distributes update energy more evenly across curvature modes, whereas gradient descent and Adam concentrate updates in sharper directions, increasing directional sharpness. Overall, the paper’s main contribution is identifying reduced normalized directional sharpness as the fundamental mechanism behind Muon’s superior optimization behavior, connecting its matrix orthogonalization procedure directly to lower curvature costs and providing both empirical and theoretical evidence that this geometric property explains its improved training efficiency.",
+    "link": "https://arxiv.org/pdf/2606.04662"
+  },
+  {
+    "title": "Understanding Adam Requires Better Rotation Dependent Assumptions",
+    "author": "Tianyue H. Zhang et al",
+    "year": "2025",
+    "topic": "adam, optimization, rotation invariance",
+    "venue": "NeurIPS",
+    "description": "The paper investigates why Adam consistently outperforms SGD by studying its sensitivity to rotations of the parameter space, arguing that Adam's optimization behavior fundamentally depends on the choice of coordinate basis rather than being rotation-invariant. To evaluate this, the authors implement a training procedure that leaves model weights in the original parameterization but rotates gradients into an alternative basis before applying Adam, then rotates the resulting parameter update back into the original space, allowing standard forward and backward passes while isolating the optimizer's behavior under different coordinate systems. They systematically compare random rotations at different granularities and introduce a structured SVD-based rotation that decomposes each layer's gradient into singular vectors and singular values, periodically recomputes this basis, performs Adam updates in the rotated coordinates, and transforms the updates back, showing that carefully chosen rotations can improve optimization whereas arbitrary rotations often reduce Adam's effectiveness. The authors further analyze why this occurs by examining how rotations affect Adam's second-moment statistics, Hessian structure, gradient bounds, and update geometry, finding that commonly assumed theoretical explanations such as L∞ gradient bounds and block-diagonal Hessians do not consistently predict Adam's empirical behavior across different bases. Instead, they observe that the degree of orthogonality of each layer's update matrix, measured through the variation of its singular values, closely tracks optimization quality and naturally connects Adam's behavior to recent orthogonal update methods such as Muon and SOAP. The main contribution is demonstrating that Adam's success is inherently basis-dependent, introducing a practical framework for studying optimization under arbitrary parameter-space rotations, identifying structured rotations that enhance optimization, and proposing update orthogonality as a more promising theoretical principle for explaining and designing adaptive optimizers.",
+    "link": "https://openreview.net/pdf?id=KD4wgunbhO"
   },
   {
     "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformers Models",

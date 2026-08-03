@@ -133,8 +133,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 519 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 519 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 520 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 520 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -160,12 +160,21 @@
         <tbody>
         
             <tr>
-                <td></td>
-                <td> et al</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><a href="https://arxiv.org/pdf/2606.04662" target="_blank" rel="noopener noreferrer">Why Muon Outperforms Adam: A Curvature Perspective</a></td>
+                <td>Shuche Wang et al</td>
+                <td>2026</td>
+                <td>muon, adam, optimization, curvature, hessian</td>
+                <td>Arxiv</td>
+                <td>This paper explains Muon’s optimization advantage over Adam through a curvature-based analysis rather than optimizer heuristics, showing that Muon consistently achieves larger one-step loss reductions because its updates incur a smaller second-order curvature penalty despite having similar first-order gradient alignment. The authors analyze optimization using a second-order Taylor expansion of the loss, decomposing each update into a gradient-alignment term and a Hessian-based curvature penalty, then further separating the curvature penalty into update magnitude and Normalized Directional Sharpness (NDS), a metric measuring the curvature encountered along the update direction independent of its scale. They show that Muon’s implementation, which forms a momentum matrix, spectrally normalizes it by replacing all nonzero singular values with one using an orthogonalized update (approximated efficiently via Newton–Schulz iterations rather than exact SVD), produces update directions with substantially lower NDS than Adam while maintaining comparable update norms, demonstrating that its advantage comes from choosing flatter directions instead of taking smaller steps. The paper further investigates why this occurs by showing that increasing dataset imbalance amplifies Muon’s NDS advantage and by decomposing Hessian curvature into within-layer and cross-layer components, revealing that Muon increasingly concentrates its advantage in reduced within-layer curvature as training progresses. To explain these observations theoretically, the authors construct a structured quadratic optimization model with heterogeneous curvature, low-rank Kronecker Hessian structure, and gradient alignment toward sharp directions, proving that Muon’s spectral normalization distributes update energy more evenly across curvature modes, whereas gradient descent and Adam concentrate updates in sharper directions, increasing directional sharpness. Overall, the paper’s main contribution is identifying reduced normalized directional sharpness as the fundamental mechanism behind Muon’s superior optimization behavior, connecting its matrix orthogonalization procedure directly to lower curvature costs and providing both empirical and theoretical evidence that this geometric property explains its improved training efficiency.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://openreview.net/pdf?id=KD4wgunbhO" target="_blank" rel="noopener noreferrer">Understanding Adam Requires Better Rotation Dependent Assumptions</a></td>
+                <td>Tianyue H. Zhang et al</td>
+                <td>2025</td>
+                <td>adam, optimization, rotation invariance</td>
+                <td>NeurIPS</td>
+                <td>The paper investigates why Adam consistently outperforms SGD by studying its sensitivity to rotations of the parameter space, arguing that Adam&#x27;s optimization behavior fundamentally depends on the choice of coordinate basis rather than being rotation-invariant. To evaluate this, the authors implement a training procedure that leaves model weights in the original parameterization but rotates gradients into an alternative basis before applying Adam, then rotates the resulting parameter update back into the original space, allowing standard forward and backward passes while isolating the optimizer&#x27;s behavior under different coordinate systems. They systematically compare random rotations at different granularities and introduce a structured SVD-based rotation that decomposes each layer&#x27;s gradient into singular vectors and singular values, periodically recomputes this basis, performs Adam updates in the rotated coordinates, and transforms the updates back, showing that carefully chosen rotations can improve optimization whereas arbitrary rotations often reduce Adam&#x27;s effectiveness. The authors further analyze why this occurs by examining how rotations affect Adam&#x27;s second-moment statistics, Hessian structure, gradient bounds, and update geometry, finding that commonly assumed theoretical explanations such as L∞ gradient bounds and block-diagonal Hessians do not consistently predict Adam&#x27;s empirical behavior across different bases. Instead, they observe that the degree of orthogonality of each layer&#x27;s update matrix, measured through the variation of its singular values, closely tracks optimization quality and naturally connects Adam&#x27;s behavior to recent orthogonal update methods such as Muon and SOAP. The main contribution is demonstrating that Adam&#x27;s success is inherently basis-dependent, introducing a practical framework for studying optimization under arbitrary parameter-space rotations, identifying structured rotations that enhance optimization, and proposing update orthogonality as a more promising theoretical principle for explaining and designing adaptive optimizers.</td>
             </tr>
         
             <tr>
