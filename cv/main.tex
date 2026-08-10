@@ -1,6 +1,8 @@
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[top=0.6in,bottom=0.6in,left=0.7in,right=0.7in]{geometry}
+\usepackage[top=0.5in,bottom=0.5in,left=0.65in,right=0.65in,footskip=20pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{needspace}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -31,13 +33,18 @@
   {\large\scshape}
   {}{0em}{}
   [{\titlerule[0.5pt]}]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{6pt}{3pt}
 
 % Slightly more open line spacing
-\linespread{1.06}
+\linespread{1.03}
 
-% Remove page numbers
-\pagestyle{empty}
+% No page numbers; "last edited" stamp in the bottom-left corner of every page.
+% \today stamps the compile date, so rebuilding the CV updates it automatically.
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{lightgray}Last edited: \today}
 
 % Custom commands
 \newcommand{\entry}[4]{%
@@ -51,7 +58,7 @@
 
 % Publication list: numbered, tight
 \newlist{publist}{enumerate}{1}
-\setlist[publist]{leftmargin=2.1em, label=[\arabic*], itemsep=4pt, topsep=4pt, labelsep=0.6em}
+\setlist[publist]{leftmargin=2.1em, label=[\arabic*], itemsep=3pt, topsep=3pt, labelsep=0.6em}
 
 \tolerance=400
 \emergencystretch=2em
@@ -63,23 +70,24 @@
   {\LARGE\scshape Lexington Whalen}\\[5pt]
   \faEnvelope\ whalenlex[@]gmail.com \,\textperiodcentered\,
   \faGlobe\ \href{https://lxaw.github.io}{lxaw.github.io} \,\textperiodcentered\,
-  \faLinkedin\ \href{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw}\\[6pt]
+  \faLinkedin\ \href{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw} \,\textperiodcentered\,
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=FE17fUMAAAAJ&hl=en}{Google Scholar}\\[6pt]
   \rule{\textwidth}{0.8pt}
 \end{center}
 
 %----------SUMMARY----------
 \section{Profile}
-Machine learning researcher specializing in efficient training and inference of large language models, with first- and co-first-author publications at ICML, CVPR, and ACL and an NSF Graduate Research Fellowship. Currently co-lead pretraining and inference optimization for SoftBank SB Intuitions' Sarashina LLMs; previously co-led NVIDIA's diffusion language models and led research teams in the U.S. and Japan.
+Machine learning researcher specializing in efficient training and inference of large language models, with publications at ICML, CVPR, and ACL and an NSF Graduate Research Fellowship. Currently co-lead pretraining and inference optimization for SoftBank SB Intuitions' Sarashina LLMs, Japan's largest series of large language models; previously co-led NVIDIA's diffusion language models and led research teams in the U.S. and Japan.
 
 %----------EDUCATION----------
 \section{Education}
 
 \entry{Georgia Institute of Technology}{Atlanta, GA}{M.S.\ in Computer Science, Specialization in Artificial Intelligence}{Expected Dec.\ 2026}\\
-{\footnotesize NSF Graduate Research Fellow.}
+{\footnotesize \href{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF Graduate Research Fellow}.}
 
 \medskip
 \entry{University of South Carolina, Honors College}{Columbia, SC}{Accelerated B.S./M.S.\ in Computer Science}{Jan.\ 2021 -- Aug.\ 2024}\\
-{\footnotesize Outstanding Senior, Class of 2023.}
+{\footnotesize \href{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{Outstanding Senior}, Class of 2023.}
 
 %----------PREPRINTS----------
 \section{Preprints \& Technical Reports}
@@ -113,11 +121,14 @@ Machine learning researcher specializing in efficient training and inference of 
 \end{publist}
 
 %----------EXPERIENCE----------
+% Keep the section heading with its first entry and bullets; never orphan it at a page bottom.
+\Needspace*{8\baselineskip}
 \section{Research Experience}
 
 \entry{SoftBank -- SB Intuitions}{Tokyo, Japan}{Pretraining \& Inference Optimization Research Lead}{Apr.\ 2026 --}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item Co-lead pretraining and post-training optimization research for the Sarashina series, Japan's largest LLMs, at SoftBank's SB Intuitions R\&D Division.
+  \item Lead novel Mixture-of-Experts (MoE) and quantization-aware training (QAT) efforts, spanning models up to hundreds of billions of parameters.
   \item Built SB Intuitions' first \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{speculative-decoding} inference stack for the Sarashina family; introduced training-time drafter-alignment methods that raise the accepted draft length by 21--76\% over a position-uniform baseline.
   \item Serve as a key technical voice in Japanese-language cross-team discussions on pretraining, post-training, and inference optimization, bridging research and engineering.
   \item Collaborate with leading Japanese and international technology companies and government agencies to evaluate GPU resources and co-develop long-term compute strategies for large-scale training.
@@ -126,29 +137,28 @@ Machine learning researcher specializing in efficient training and inference of 
 \medskip
 \entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern \& Data Filtering Challenge Lead}{Dec.\ 2024 -- Mar.\ 2026}\\
 {\footnotesize Mentors: Dr.\ \href{https://pmolchanov.com/}{Pavlo Molchanov} \& \href{https://www.yongganfu.com/}{Yonggan Fu} (NVIDIA Research).}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item Co-developed \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron-Labs-Diffusion}, a tri-mode (autoregressive / diffusion / self-speculation) language model family at 3B--14B scale; the 8B model decodes 6$\times$ more tokens per forward pass than Qwen3-8B at comparable accuracy (up to 4$\times$ higher throughput); \href{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{released on Hugging Face} with $\sim$1M total downloads.
   \item Co-first author of \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{Efficient-DLM} (ICML 2026), converting pretrained autoregressive models into diffusion LMs; the 8B model reaches +5.4\%/+2.7\% higher accuracy at 4.5$\times$/2.7$\times$ higher throughput than Dream 7B / Qwen3 4B (open-weights on Hugging Face); presented directly to CEO Jensen Huang.
   \item Built the training, evaluation, and inference infrastructure adopted by 5+ internal research teams for vision-language models, embeddings, and latent reasoning.
-  \item Organized NVIDIA's international data filtering challenge across 30+ university and industry teams, coordinating GPU resource allocation with sponsors including Lambda Labs and Turing.
+  \item Organized NVIDIA's \href{https://sites.google.com/view/datafilteringchallenge/home}{2026 International Data Filtering Challenge for Training Edge Language Models} across 30+ university and industry teams.
 \end{itemize}
 
 \medskip
 \entry{Georgia Institute of Technology}{Atlanta, GA}{Graduate Researcher}{Aug.\ 2024 -- Dec.\ 2025}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item Led a team of 3 Ph.D.\ and Masters students (co-first author) to cut diffusion-model training time by 2.9--5.8$\times$ (up to 10.3$\times$ vs.\ standard train-prune-finetune) while maintaining generation quality; \href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}.
   \item Algorithm lead for the United States' ARPA-H THOR healthcare initiative: reduced cancer detection sensor degradation by over 70\%, extending sensor lifetime from a few hours to several days.
   \item Engineered resource-efficient ML architectures powered by energy from the human body, collaborating with teams from Stanford, Northwestern, Carnegie Mellon, and MIT.
-  \item Presented technical progress to federal sponsors and healthcare stakeholders nationwide.
 \end{itemize}
 
 %----------AWARDS----------
 \section{Honors \& Awards}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item SoftBank Group Representative, 2026 Entrance Ceremony \hfill Mar.\ 2026
-  \item NSF Graduate Research Fellowship (\$150,000 value) \hfill Apr.\ 2024
+  \item SoftBank Group Representative, \href{https://www.softbank.jp/sbnews/entry/20260403_01}{2026 Entrance Ceremony} \hfill Mar.\ 2026
+  \item \href{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF Graduate Research Fellowship} (\$150,000 value) \hfill Apr.\ 2024
   \item Toyo University Exchange Student Representative \hfill Jul.\ 2023
-  \item University of South Carolina Outstanding Senior, Class of 2023 \hfill Feb.\ 2023
+  \item University of South Carolina \href{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{Outstanding Senior}, Class of 2023 \hfill Feb.\ 2023
   \item U.S.\ Department of State Critical Language Scholar of Japanese \hfill Jan.\ 2023
   \item University of South Carolina Top Scholar (\$100,000+ value) \hfill Aug.\ 2020
 \end{itemize}
@@ -158,8 +168,14 @@ Machine learning researcher specializing in efficient training and inference of 
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
   \item ``拡散言語モデル：基本から応用まで'', SoftBank -- SB Intuitions \hfill Jul.\ 2026\\
         {\footnotesize\textit{Diffusion Language Models: From Fundamentals to Applications}}
-  \item 入社式スピーチ, SoftBank \hfill Apr.\ 2026\\
+  \item \href{https://www.softbank.jp/sbnews/entry/20260403_01}{入社式スピーチ}, SoftBank \hfill Apr.\ 2026\\
         {\footnotesize\textit{Entrance Ceremony Speech}}
+\end{itemize}
+
+%----------SERVICE----------
+\section{Service \& Outreach}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item Serve as an informal advisor on U.S.--Japan AI and technology policy, engaging with U.S.\ Embassy Tokyo and Japanese government stakeholders.
 \end{itemize}
 
 %----------LANGUAGES----------

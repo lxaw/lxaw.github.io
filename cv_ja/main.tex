@@ -1,6 +1,8 @@
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[top=0.6in,bottom=0.6in,left=0.7in,right=0.7in]{geometry}
+\usepackage[top=0.5in,bottom=0.5in,left=0.65in,right=0.65in,footskip=20pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{needspace}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -31,13 +33,18 @@
   {\large\scshape}
   {}{0em}{}
   [{\titlerule[0.5pt]}]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{6pt}{3pt}
 
 % Slightly more open line spacing
-\linespread{1.06}
+\linespread{1.03}
 
-% Remove page numbers
-\pagestyle{empty}
+% No page numbers; "last edited" stamp in the bottom-left corner of every page.
+% The date is built from the compile date, so rebuilding the CV updates it automatically.
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{lightgray}最終更新：\the\year 年\the\month 月\the\day 日}
 
 % Custom commands
 \newcommand{\entry}[4]{%
@@ -51,7 +58,7 @@
 
 % Publication list: numbered, tight
 \newlist{publist}{enumerate}{1}
-\setlist[publist]{leftmargin=2.1em, label=[\arabic*], itemsep=4pt, topsep=4pt, labelsep=0.6em}
+\setlist[publist]{leftmargin=2.1em, label=[\arabic*], itemsep=3pt, topsep=3pt, labelsep=0.6em}
 
 \tolerance=400
 \emergencystretch=2em
@@ -63,23 +70,24 @@
   {\LARGE\scshape ワレン・レックス（Lexington Whalen）}\\[5pt]
   \faEnvelope\ whalenlex[@]gmail.com \,\textperiodcentered\,
   \faGlobe\ \href{https://lxaw.github.io}{lxaw.github.io} \,\textperiodcentered\,
-  \faLinkedin\ \href{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw}\\[6pt]
+  \faLinkedin\ \href{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw} \,\textperiodcentered\,
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=FE17fUMAAAAJ&hl=en}{Google Scholar}\\[6pt]
   \rule{\textwidth}{0.8pt}
 \end{center}
 
 %----------SUMMARY----------
 \section{概要}
-大規模言語モデルの効率的な学習・推論を専門とする機械学習研究者。ICML・CVPR・ACLにおいて筆頭著者・共同筆頭著者として論文を発表し、NSF大学院研究フェローシップを取得。現在はソフトバンクのSB Intuitionsにて大規模言語モデル「Sarashina」シリーズの事前学習・推論最適化を共同リード。前職ではNVIDIAの拡散言語モデル開発を共同リードするなど、日米両国で研究チームを率いてきた実績を有する。
+大規模言語モデルの効率的な学習・推論を専門とする機械学習研究者。ICML・CVPR・ACLにおいて論文を発表し、NSF大学院研究フェローシップを取得。現在はソフトバンクのSB Intuitionsにて、日本最大の大規模言語モデルシリーズである「Sarashina」の事前学習・推論最適化を共同リード。前職ではNVIDIAの拡散言語モデル開発を共同リードするなど、日米両国で研究チームを率いてきた実績を有する。
 
 %----------EDUCATION----------
 \section{学歴}
 
 \entry{ジョージア工科大学}{アトランタ, GA}{コンピュータサイエンス修士課程（人工知能専攻）}{2026年12月修了予定}\\
-{\footnotesize NSF大学院研究フェロー。}
+{\footnotesize \href{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF大学院研究フェロー}。}
 
 \medskip
 \entry{サウスカロライナ大学 オナーズカレッジ}{コロンビア, SC}{コンピュータサイエンス 学士・修士一貫課程}{2021年1月 -- 2024年8月}\\
-{\footnotesize 2023年度 優秀卒業生（Outstanding Senior）。}
+{\footnotesize 2023年度 \href{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{優秀卒業生（Outstanding Senior）}。}
 
 %----------PREPRINTS----------
 \section{プレプリント・技術報告}
@@ -112,11 +120,14 @@
 \end{publist}
 
 %----------EXPERIENCE----------
+% Keep the section heading with its first entry and bullets; never orphan it at a page bottom.
+\Needspace*{8\baselineskip}
 \section{研究経歴}
 
 \entry{ソフトバンク -- SB Intuitions}{東京}{事前学習・推論最適化 研究リード}{2026年4月 --}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item 日本最大の大規模言語モデル「Sarashina」シリーズの事前学習・事後学習最適化研究を、ソフトバンクのSB Intuitions R\&D部門にて共同リード。
+  \item 最大100Bパラメータ規模のモデルを対象に、新規のMixture-of-Experts（MoE）およびQAT（Quantization Aware Training）の学習手法開発をリード。
   \item SB Intuitions初となる\href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{投機的デコーディング}推論基盤をSarashinaファミリー向けに構築。学習時のドラフタ整合手法を提案し、位置一様なベースラインと比較して受理ドラフト長を21〜76\%向上。
   \item 事前学習・事後学習・推論最適化に関する日本語での部門横断的な技術議論において中心的な技術的役割を担い、研究とエンジニアリングの橋渡しを実施。
   \item 大規模学習に向けたGPUリソースの評価および長期的なコンピュート戦略の共同策定において、国内外の主要テクノロジー企業および政府機関と協働。
@@ -125,29 +136,28 @@
 \medskip
 \entry{NVIDIA}{アトランタ, GA \& サンタクララ, CA}{効率的深層学習インターン 兼 データフィルタリングチャレンジ・リード}{2024年12月 -- 2026年3月}\\
 {\footnotesize メンター：Dr.\ \href{https://pmolchanov.com/}{Pavlo Molchanov}・\href{https://www.yongganfu.com/}{Yonggan Fu}（NVIDIA Research）。}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item 自己回帰・拡散・自己投機の3モードを統合した言語モデルファミリー \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron-Labs-Diffusion}（3B〜14B規模）を共同開発。8Bモデルは同等精度でQwen3-8Bの6倍のトークンを1回の順伝播でデコードし（最大4倍のスループット）、\href{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{Hugging Faceで公開}、累計ダウンロード数は約100万。
   \item \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{Efficient-DLM}（ICML 2026）の共同筆頭著者。事前学習済み自己回帰モデルを拡散言語モデルへ変換し、8BモデルはDream 7B / Qwen3 4Bと比べて精度+5.4\%/+2.7\%、スループット4.5倍/2.7倍を達成（Hugging Faceでオープンウェイト公開）。成果はCEOジェンスン・フアン氏に直接報告。
   \item ビジョン言語モデル・埋め込み・潜在推論に関する5チーム以上の社内研究チームに採用された学習・評価・推論インフラを構築。
-  \item 30以上の大学・企業チームが参加するNVIDIAの国際データフィルタリングチャレンジを運営し、Lambda LabsやTuringを含むスポンサー企業とGPUリソースの配分を調整。
+  \item 30以上の大学・企業チームが参加するNVIDIAの\href{https://sites.google.com/view/datafilteringchallenge/home}{2026 International Data Filtering Challenge for Training Edge Language Models}を運営。
 \end{itemize}
 
 \medskip
 \entry{ジョージア工科大学}{アトランタ, GA}{大学院研究員}{2024年8月 -- 2025年12月}
-\begin{itemize}[leftmargin=*, nosep, itemsep=3pt, topsep=5pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item 博士・修士課程の学生3名のチームをリード（共同筆頭著者）し、生成品質を維持しつつ拡散モデルの学習時間を2.9〜5.8倍（標準的なtrain-prune-finetuneと比較して最大10.3倍）短縮。\href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}採択。
   \item 米国ARPA-H THORヘルスケアイニシアチブのアルゴリズムリードとして、がん検知センサーの劣化を70\%以上低減し、センサー寿命を数時間から数日へ延長。
   \item 人体のエネルギーで駆動するリソース効率の高い機械学習アーキテクチャを設計し、スタンフォード大学・ノースウェスタン大学・カーネギーメロン大学・MITのチームと協働。
-  \item 連邦政府のスポンサーおよびヘルスケア関係者に対し、全国各地で技術的進捗を発表。
 \end{itemize}
 
 %----------AWARDS----------
 \section{受賞・表彰}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item ソフトバンクグループ代表（2026年入社式） \hfill 2026年3月
-  \item NSF大学院研究フェローシップ（150,000ドル相当） \hfill 2024年4月
+  \item ソフトバンクグループ代表（\href{https://www.softbank.jp/sbnews/entry/20260403_01}{2026年入社式}） \hfill 2026年3月
+  \item \href{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF大学院研究フェローシップ}（150,000ドル相当） \hfill 2024年4月
   \item 東洋大学 交換留学生代表 \hfill 2023年7月
-  \item サウスカロライナ大学 2023年度 優秀卒業生 \hfill 2023年2月
+  \item サウスカロライナ大学 2023年度 \href{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{優秀卒業生} \hfill 2023年2月
   \item 米国務省 日本語クリティカル・ランゲージ・スカラー \hfill 2023年1月
   \item サウスカロライナ大学 トップスカラー（100,000ドル以上相当） \hfill 2020年8月
 \end{itemize}
@@ -156,7 +166,13 @@
 \section{招待講演}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
   \item 「拡散言語モデル：基本から応用まで」、ソフトバンク -- SB Intuitions \hfill 2026年7月
-  \item 入社式スピーチ、ソフトバンク \hfill 2026年4月
+  \item \href{https://www.softbank.jp/sbnews/entry/20260403_01}{入社式スピーチ}、ソフトバンク \hfill 2026年4月
+\end{itemize}
+
+%----------SERVICE----------
+\section{アドバイザリ}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+  \item 日米のAI・技術政策に関するアドバイザーとして、在日米国大使館および日本政府関係者と協力。
 \end{itemize}
 
 %----------LANGUAGES----------
