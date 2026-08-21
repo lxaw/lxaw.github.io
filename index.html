@@ -39,6 +39,7 @@
         .profile-links {
             font-size: 13px;
             display: flex;
+            align-items: center;
             gap: 14px;
             flex-wrap: wrap;
         }
@@ -47,6 +48,12 @@
             color: var(--muted);
             font-size: 18px;
             line-height: 1;
+        }
+
+        .profile-links a.cv-link {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
         }
 
         .profile-links a:hover {
@@ -266,7 +273,7 @@
                 <img src="photos/profile_pic.png" alt="Lexington Whalen">
                 <div class="profile-links">
                     <a href="mailto:whalenlex@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="cv/main.pdf" title="CV"><i class="fa-solid fa-file"></i></a>
+                    <a href="cv/main.pdf" title="CV" class="cv-link">CV</a>
                     <a href="https://github.com/lxaw" title="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/lxaw/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://scholar.google.com/citations?hl=ja&user=FE17fUMAAAAJ" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
