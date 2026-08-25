@@ -19,14 +19,19 @@
 \definecolor{accent}{HTML}{1B3A5C}
 \definecolor{lightgray}{HTML}{888888}
 
-% Hyperlink style
+% Hyperlink style: medium blue -- clearly reads as a link at a glance
+\definecolor{linkcolour}{HTML}{2A6099}
 \hypersetup{
     colorlinks=true,
-    linkcolor=accent,
-    urlcolor=accent,
+    linkcolor=linkcolour,
+    urlcolor=linkcolour,
     pdftitle={Lexington Whalen - CV},
     pdfauthor={Lexington Whalen}
 }
+
+% All links are plain \href in linkcolour (set in \hypersetup above); \cvlink is
+% kept as the single hook for link styling so it can be changed in one place.
+\newcommand{\cvlink}[2]{\href{#1}{#2}}
 
 % Section formatting
 \titleformat{\section}
@@ -69,9 +74,9 @@
 \begin{center}
   {\LARGE\scshape Lexington Whalen}\\[5pt]
   \faEnvelope\ whalenlex[@]gmail.com \,\textperiodcentered\,
-  \faGlobe\ \href{https://lxaw.github.io}{lxaw.github.io} \,\textperiodcentered\,
-  \faLinkedin\ \href{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw} \,\textperiodcentered\,
-  \faGraduationCap\ \href{https://scholar.google.com/citations?user=FE17fUMAAAAJ&hl=en}{Google Scholar}\\[6pt]
+  \faGlobe\ \cvlink{https://lxaw.github.io}{lxaw.github.io} \,\textperiodcentered\,
+  \faLinkedin\ \cvlink{https://www.linkedin.com/in/lxaw/}{linkedin.com/in/lxaw} \,\textperiodcentered\,
+  \faGraduationCap\ \cvlink{https://scholar.google.com/citations?user=FE17fUMAAAAJ&hl=en}{Google Scholar}\\[6pt]
   \rule{\textwidth}{0.8pt}
 \end{center}
 
@@ -83,11 +88,11 @@ Machine learning researcher specializing in efficient training and inference of 
 \section{Education}
 
 \entry{Georgia Institute of Technology}{Atlanta, GA}{M.S.\ in Computer Science, Specialization in Artificial Intelligence}{Expected Dec.\ 2026}\\
-{\footnotesize \href{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF Graduate Research Fellow}.}
+{\footnotesize \cvlink{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF Graduate Research Fellow}.}
 
 \medskip
 \entry{University of South Carolina, Honors College}{Columbia, SC}{Accelerated B.S./M.S.\ in Computer Science}{Jan.\ 2021 -- Aug.\ 2024}\\
-{\footnotesize \href{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{Outstanding Senior}, Class of 2023.}
+{\footnotesize \cvlink{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{Outstanding Senior}, Class of 2023.}
 
 %----------PREPRINTS----------
 \section{Preprints \& Technical Reports}
@@ -130,17 +135,17 @@ Machine learning researcher specializing in efficient training and inference of 
 \begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
   \item Co-lead pretraining and post-training optimization research for the Sarashina series, Japan's largest LLMs, at SoftBank's SB Intuitions R\&D Division.
   \item Lead novel Mixture-of-Experts (MoE) and quantization-aware training (QAT) efforts, spanning models up to hundreds of billions of parameters.
-  \item Built SB Intuitions' first \href{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{speculative-decoding} inference stack for the Sarashina family; introduced training-time drafter-alignment methods that raise the accepted draft length by 21--76\% over a position-uniform baseline.
+  \item Built SB Intuitions' first \cvlink{https://lxaw.github.io/team_papers/teaching_diffusion_left_right.pdf}{speculative-decoding} inference stack for the Sarashina family; introduced training-time drafter-alignment methods that raise the accepted draft length by 21--76\% over a position-uniform baseline.
   \item Serve as a key technical voice in Japanese-language cross-team discussions on pretraining, post-training, and inference optimization, bridging research and engineering.
   \item Collaborate with leading Japanese and international technology companies and government agencies to evaluate GPU resources and co-develop long-term compute strategies for large-scale training.
 \end{itemize}
 
 \medskip
 \entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern \& Data Filtering Challenge Lead}{Dec.\ 2024 -- Mar.\ 2026}\\
-{\footnotesize Mentors: Dr.\ \href{https://pmolchanov.com/}{Pavlo Molchanov} \& \href{https://www.yongganfu.com/}{Yonggan Fu} (NVIDIA Research).}
+{\footnotesize Mentors: Dr.\ \cvlink{https://pmolchanov.com/}{Pavlo Molchanov} \& \cvlink{https://www.yongganfu.com/}{Yonggan Fu} (NVIDIA Research).}
 \begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item Co-developed \href{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron-Labs-Diffusion} (EMNLP 2026), a tri-mode (autoregressive / diffusion / self-speculation) language model family at 3B--14B scale; the 8B model decodes 6$\times$ more tokens per forward pass than Qwen3-8B at comparable accuracy (up to 4$\times$ higher throughput); \href{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{released on Hugging Face} with $\sim$1M total downloads.
-  \item Co-first author of \href{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{Efficient-DLM} (ICML 2026), converting pretrained autoregressive models into diffusion LMs; the 8B model reaches +5.4\%/+2.7\% higher accuracy at 4.5$\times$/2.7$\times$ higher throughput than Dream 7B / Qwen3 4B (open-weights on Hugging Face); presented directly to CEO Jensen Huang.
+  \item Co-developed \cvlink{https://lxaw.github.io/team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf}{Nemotron-Labs-Diffusion} (EMNLP 2026), a tri-mode (autoregressive / diffusion / self-speculation) language model family at 3B--14B scale; the 8B model decodes 6$\times$ more tokens per forward pass than Qwen3-8B at comparable accuracy (up to 4$\times$ higher throughput); \cvlink{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{released on Hugging Face} with $\sim$1M total downloads.
+  \item Co-first author of \cvlink{https://lxaw.github.io/team_papers/efficient_dlm.pdf}{Efficient-DLM} (ICML 2026), converting pretrained autoregressive models into diffusion LMs; the 8B model reaches +5.4\%/+2.7\% higher accuracy at 4.5$\times$/2.7$\times$ higher throughput than Dream 7B / Qwen3 4B (\cvlink{https://huggingface.co/collections/nvidia/efficient-dlm}{open-weights on Hugging Face}); presented directly to CEO Jensen Huang.
   \item Built the training, evaluation, and inference infrastructure adopted by 5+ internal research teams for vision-language models, embeddings, and latent reasoning.
   \item Organized NVIDIA's \href{https://sites.google.com/view/datafilteringchallenge/home}{2025 International Data Filtering Challenge for Training Edge Language Models} across 30+ university and industry teams.
 \end{itemize}
@@ -148,20 +153,20 @@ Machine learning researcher specializing in efficient training and inference of 
 \medskip
 \entry{Georgia Institute of Technology}{Atlanta, GA}{Graduate Researcher}{Aug.\ 2024 -- Dec.\ 2025}
 \begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
-  \item Led a team of 3 Ph.D.\ and Masters students (co-first author) to cut diffusion-model training time by 2.9--5.8$\times$ (up to 10.3$\times$ vs.\ standard train-prune-finetune) while maintaining generation quality; \href{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}.
-  \item Algorithm lead for the United States' ARPA-H THOR healthcare initiative: reduced cancer detection sensor degradation by over 70\%, extending sensor lifetime from a few hours to several days.
+  \item Led a team of 3 Ph.D.\ and Masters students (co-first author) to cut diffusion-model training time by 2.9--5.8$\times$ (up to 10.3$\times$ vs.\ standard train-prune-finetune) while maintaining generation quality; \cvlink{https://lxaw.github.io/team_papers/early_bird.pdf}{CVPR 2025}.
+  \item Algorithm lead for the United States' \cvlink{https://responsible.computing.gatech.edu/featured-project-thor/}{ARPA-H THOR healthcare initiative}: reduced cancer detection sensor degradation by over 70\%, extending sensor lifetime from a few hours to several days.
   \item Engineered resource-efficient ML architectures powered by energy from the human body, collaborating with teams from Stanford, Northwestern, Carnegie Mellon, and MIT.
 \end{itemize}
 
 %----------AWARDS----------
 \section{Honors \& Awards}
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
-  \item SoftBank Group Representative, \href{https://www.softbank.jp/sbnews/entry/20260403_01}{2026 Entrance Ceremony} \hfill Mar.\ 2026
-  \item \href{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF Graduate Research Fellowship} (\$150,000 value) \hfill Apr.\ 2024
+  \item SoftBank Group Representative, \cvlink{https://www.softbank.jp/sbnews/entry/20260403_01}{2026 Entrance Ceremony} \hfill Mar.\ 2026
+  \item \cvlink{https://cse.sc.edu/news/lex-whalen-wins-nsf-graduate-research-fellowship}{NSF Graduate Research Fellowship} (\$150,000 value) \hfill Apr.\ 2024
   \item Toyo University Exchange Student Representative \hfill Jul.\ 2023
-  \item University of South Carolina \href{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{Outstanding Senior}, Class of 2023 \hfill Feb.\ 2023
-  \item U.S.\ Department of State Critical Language Scholar of Japanese \hfill Jan.\ 2023
-  \item University of South Carolina Top Scholar (\$100,000+ value) \hfill Aug.\ 2020
+  \item University of South Carolina \cvlink{https://web.cse.sc.edu/news/outstanding-senior-award-2023}{Outstanding Senior}, Class of 2023 \hfill Feb.\ 2023
+  \item U.S.\ Department of State \cvlink{https://sc.edu/about/offices_and_divisions/fellowships_and_scholar_programs/news/national_fellowships_news/2023/cls_spring23.php}{Critical Language Scholar of Japanese} \hfill Jan.\ 2023
+  \item University of South Carolina \cvlink{https://sc.edu/about/offices_and_divisions/fellowships_and_scholar_programs/national_fellowships/usc_award_winners/recipient.php?wid=714}{Top Scholar} (\$100,000+ value) \hfill Aug.\ 2020
 \end{itemize}
 
 %----------INVITED TALKS----------
@@ -169,7 +174,7 @@ Machine learning researcher specializing in efficient training and inference of 
 \begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
   \item ``拡散言語モデル：基本から応用まで'', SoftBank -- SB Intuitions \hfill Jul.\ 2026\\
         {\footnotesize\textit{Diffusion Language Models: From Fundamentals to Applications}}
-  \item \href{https://www.softbank.jp/sbnews/entry/20260403_01}{入社式スピーチ}, SoftBank \hfill Apr.\ 2026\\
+  \item \cvlink{https://www.softbank.jp/sbnews/entry/20260403_01}{入社式スピーチ}, SoftBank \hfill Apr.\ 2026\\
         {\footnotesize\textit{Entrance Ceremony Speech}}
 \end{itemize}
 
