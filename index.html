@@ -284,16 +284,16 @@
         <section>
             <div class="section-title">News</div>
             <ul class="news-list">
-                <li><span class="news-date">Aug 2026</span><span><a href="team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf">Nemotron-Labs-Diffusion</a> accepted at <strong>EMNLP 2026</strong> (Main Conference)!</span></li>
+                <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/pdf/2607.05722">Nemotron-Labs-Diffusion</a> accepted at <strong>EMNLP 2026</strong> (Main Conference)!</span></li>
                 <li><span class="news-date">Jul 2026</span><span>Invited talk at SB Intuitions: <em>Diffusion Language Models: From Fundamentals to Applications</em>!</span></li>
                 <li><span class="news-date">Jun 2026</span><span>SB Intuitions releases <a href="https://huggingface.co/sbintuitions/sarashina2.2-tts#audio-samples">Sarashina2.2-TTS</a>, a SoTA Japanese TTS model, and the <a href="https://www.sbintuitions.co.jp/blog/entry/2026/06/30/100000">Sarashina3 mini/nano</a> tech report. For the bigger models, we'll be using our in-house spec decoding recipe!</span></li>
-                <li><span class="news-date">Jun 2026</span><span>New preprint: <a href="team_papers/teaching_diffusion_left_right.pdf">Teaching Diffusion to Speculate Left-to-Right</a> — optimizations to raise accepted draft length by up to 76%!</span></li>
-                <li><span class="news-date">Jun 2026</span><span><a href="team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf">Nemotron-Labs-Diffusion</a> released on Hugging Face — ~1M total downloads, 6× tokens-per-pass over Qwen3-8B!</span></li>
-                <li><span class="news-date">Jun 2026</span><span><a href="team_papers/efficient_dlm.pdf">Efficient-DLM</a> accepted at <strong>ICML 2026</strong>!</span></li>
+                <li><span class="news-date">Jun 2026</span><span>New preprint: <a href="https://arxiv.org/pdf/2606.11552">Teaching Diffusion to Speculate Left-to-Right</a> — optimizations to raise accepted draft length by up to 76%!</span></li>
+                <li><span class="news-date">Jun 2026</span><span><a href="https://arxiv.org/pdf/2607.05722">Nemotron-Labs-Diffusion</a> released on Hugging Face — ~1M total downloads, 6× tokens-per-pass over Qwen3-8B!</span></li>
+                <li><span class="news-date">Jun 2026</span><span><a href="https://arxiv.org/pdf/2512.14067">Efficient-DLM</a> accepted at <strong>ICML 2026</strong>!</span></li>
                 <li><span class="news-date">Jun 2026</span><span>NeRArch-Sim accepted at <strong>ISCA 2026</strong>!</span></li>
                 <li><span class="news-date">Apr 2026</span><span>Joined SoftBank SB Intuitions as Pretraining &amp; Inference Optimization Research Lead. Gave the SoftBank Group entrance ceremony speech!</span></li>
-                <li><span class="news-date">Apr 2025</span><span><a href="team_papers/lamb.pdf">LAMB</a> accepted at <strong>ACL 2025</strong>!</span></li>
-                <li><span class="news-date">Apr 2025</span><span><a href="team_papers/early_bird.pdf">Early-Bird Diffusion</a> accepted at <strong>CVPR 2025</strong>!</span></li>
+                <li><span class="news-date">Apr 2025</span><span><a href="https://aclanthology.org/2025.acl-short.96.pdf">LAMB</a> accepted at <strong>ACL 2025</strong>!</span></li>
+                <li><span class="news-date">Apr 2025</span><span><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Whalen_Early-Bird_Diffusion_Investigating_and_Leveraging_Timestep-Aware_Early-Bird_Tickets_in_Diffusion_CVPR_2025_paper.html">Early-Bird Diffusion</a> accepted at <strong>CVPR 2025</strong>!</span></li>
             </ul>
         </section>
 
@@ -303,7 +303,7 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/teaching_left2right.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="team_papers/teaching_diffusion_left_right.pdf" class="stretched-link">Teaching Diffusion to Speculate Left-to-Right</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2606.11552" class="stretched-link">Teaching Diffusion to Speculate Left-to-Right</a></div>
                         <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
                         <span class="pub-venue">Preprint 2026 &middot; SB Intuitions</span>
                         <div class="pub-desc">Speculative decoding uses a lightweight draft model to propose tokens verified in parallel by a larger target. Diffusion LMs are natural drafters — they generate entire token blocks in parallel — but are trained with a symmetric bidirectional objective while verification is strictly left-to-right. We analyze three training-time interventions that close this gap: token positional weighting, a first-error focal loss targeting the position that breaks the accepted prefix, and a chain loss as a differentiable surrogate for expected accepted length. Across four target models and six benchmarks, the combined interventions raise accepted draft length by 21–76% without additional overhead.</div>
@@ -318,7 +318,7 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/nemotron_diffusion.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="team_papers/Nemotron_Diffusion_Tech_Report_v1.pdf" class="stretched-link">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2607.05722" class="stretched-link">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding</a></div>
                         <div class="pub-authors">Y. Fu, <strong>L. Whalen</strong>, A. Garg, C. Wu, et al.</div>
                         <span class="pub-venue">EMNLP 2026 &middot; NVIDIA</span>
                         <div class="pub-desc">We introduce a tri-mode language model that jointly optimizes autoregressive (AR) and diffusion objectives within a single architecture, enabling switching between AR, diffusion, and self-speculation decoding at inference time. AR and diffusion objectives are complementary: diffusion improves lookahead planning while AR injects strong left-to-right priors. In self-speculation mode, the diffusion head drafts while the AR head verifies, outperforming multi-token prediction in both acceptance rate and throughput. Scaling to 3B, 8B, and 14B, the 8B model decodes 6× more tokens per forward pass than Qwen3-8B at comparable accuracy.</div>
@@ -327,7 +327,7 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/efficient_dlm.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="team_papers/efficient_dlm.pdf" class="stretched-link">Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2512.14067" class="stretched-link">Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed</a></div>
                         <div class="pub-authors">Y. Fu*, <strong>L. Whalen*</strong>, Z. Ye, X. Dong, S. Diao, et al. &nbsp;<em>(* equal contribution)</em></div>
                         <span class="pub-venue">ICML 2026 &middot; NVIDIA</span>
                         <div class="pub-desc">Diffusion LMs promise parallel generation but lag AR models in learning efficiency when trained from scratch. We study AR-to-dLM conversion: systematically identifying that block-wise attention — causal across blocks, bidirectional within — better preserves pretrained AR weight distributions than fully bidirectional training, yielding a win-win in accuracy and speed. We further propose position-dependent token masking to close the training-test gap. Efficient-DLM 8B achieves +5.4%/+2.7% higher accuracy with 4.5×/2.7× higher throughput than Dream 7B and Qwen3 4B.</div>
@@ -336,7 +336,7 @@
                 <li style="cursor:default;">
                     <img class="pub-thumb" src="team_papers_photos/nerarch_sim.png" alt="">
                     <div class="pub-body" style="cursor:default;">
-                        <div class="pub-title"><a href="team_papers/nerarch_sim.pdf" class="stretched-link">NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators</a></div>
+                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11617858/" class="stretched-link">NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators</a></div>
                         <div class="pub-authors">C. Shih, C. Li, C. Yu, H. Fang, S. Li, W. Hsin, <strong>L. Whalen</strong>, et al.</div>
                         <span class="pub-venue">ISCA 2026 &middot; Georgia Tech</span>
                         <div class="pub-desc">A versatile simulator for benchmarking and design-space exploration of neural rendering accelerators.</div>
@@ -345,7 +345,7 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/early_bird_diffusion.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="team_papers/early_bird.pdf" class="stretched-link">Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training</a></div>
+                        <div class="pub-title"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Whalen_Early-Bird_Diffusion_Investigating_and_Leveraging_Timestep-Aware_Early-Bird_Tickets_in_Diffusion_CVPR_2025_paper.html" class="stretched-link">Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training</a></div>
                         <div class="pub-authors"><strong>L. Whalen*</strong>, Z. Du*, H. You*, C. Li, S. Li, Y. Lin &nbsp;<em>(* equal contribution)</em></div>
                         <span class="pub-venue">CVPR 2025 &middot; Georgia Tech</span>
                         <div class="pub-desc">Training diffusion models is computationally expensive due to multi-step forward and backward passes across many timesteps. We investigate the existence of Early-Bird (EB) tickets — sparse subnetworks that emerge early in training and maintain high generation quality — and introduce timestep-aware EB tickets that adapt their sparsity based on the importance of each timestep region. Our EB-Diff-Train method derives these tickets, trains them in parallel, and combines them at inference, achieving 2.9–5.8× speedups over training unpruned dense models and up to 10.3× faster training versus standard train-prune-finetune pipelines.</div>
@@ -354,7 +354,7 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/lamb.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="team_papers/lamb.pdf" class="stretched-link">LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering</a></div>
+                        <div class="pub-title"><a href="https://aclanthology.org/2025.acl-short.96.pdf" class="stretched-link">LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering</a></div>
                         <div class="pub-authors">Z. Ye, Z. Wang, K. Xia, J. Hong, L. Li, <strong>L. Whalen</strong>, et al.</div>
                         <span class="pub-venue">ACL 2025 &middot; Georgia Tech</span>
                         <div class="pub-desc">State space models achieve efficient sub-quadratic compute but degrade significantly at long contexts due to exponential decay in hidden state memory. We investigate Mamba's attention patterns to explain why token filtering alleviates this degradation, then propose LAMB — a training-free, attention-guided token filtering strategy that preserves critical tokens during inference. LAMB boosts long-context performance for both pure SSMs and hybrid models, achieving up to 30.35% improvement over state-of-the-art techniques on standard long-context benchmarks.</div>
@@ -363,7 +363,7 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/historical_unity.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="team_papers/historical_unity.pdf" class="stretched-link">On 'historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change</a></div>
+                        <div class="pub-title"><a href="https://journals.linguisticsociety.org/proceedings/index.php/PLSA/article/view/5467" class="stretched-link">On 'historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change</a></div>
                         <div class="pub-authors">A. Murphy, <strong>L. Whalen</strong>, S. Dubinsky, et al.</div>
                         <span class="pub-venue">LSA 2023 &middot; University of South Carolina</span>
                         <div class="pub-desc">We examine Putin's (2021) claim of "historical linguistic unity" between Russian and Ukrainian using computational lexical distance measures. Applying Levenshtein distance over frequency-based word lists — sensitive to both organic and contact-induced language change — we objectively quantify the linguistic distance between the two languages and their relationships to Polish, substantiating that Russian and Ukrainian are demonstrably distinct languages with no grounds for claims of unity.</div>
@@ -403,6 +403,6 @@
     <small style="display:block;text-align:center;margin:20px 0 10px;">
         <a href="gineiden.html" style="opacity:0.35;">_</a>
     </small>
-    <small style="position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;">Last updated: 2026-08-28</small>
+    <small style="position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;">Last updated: 2026-08-30</small>
 </body>
 </html>
