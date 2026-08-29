@@ -150,7 +150,6 @@ def generate_html(json_file_path, output_file_path):
         <a href="https://github.com/lxaw">GitHub</a> ·
         <a href="books_read.html">Books</a> ·
         <a href="papers_read.html">Papers</a> ·
-        <a href="posts.html">Posts</a> ·
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
