@@ -132,8 +132,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 536 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 536 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 539 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 539 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -157,6 +157,33 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://aclanthology.org/2025.acl-long.1123.pdf" target="_blank" rel="noopener noreferrer">HoPE: A Novel Positional Encoding Without Long-Term Decay for Enhanced Context Awareness and Extrapolation</a></td>
+                <td>Yuhan Chen et al</td>
+                <td>2025</td>
+                <td>rope, positional encoding, attention normalization, long-context attention</td>
+                <td>ACL</td>
+                <td>The paper argues that global long-term attention decay is unnecessary for modern language models, since learned attention patterns tend to combine local decay with globally U-shaped behavior rather than monotonically decreasing with distance. Through decomposition of RoPE attention into frequency-specific components, it identifies activated low-frequency components as the primary source of the U-shaped pattern and as a constraint on optimization and length extrapolation. These activated components become out-of-distribution when positions extend beyond the training context, producing anomalous first-layer attention logits that propagate through subsequent layers. The paper also finds that the lowest-frequency RoPE components tend toward nearly constant patterns, suggesting that their representational capacity is better suited to semantic information than positional encoding. HoPE addresses these issues by replacing the activated and top low-frequency RoPE components with position-independent components while retaining the higher-frequency rotary components, yielding an attention formulation that removes the imposed global decay while preserving relative positional information. The resulting mechanism reduces frequency-induced constraints and extrapolation distribution shifts, allowing positional and semantic representation subspaces to be used more flexibly.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2501.18795" target="_blank" rel="noopener noreferrer">Rope to Nope and Back Again: A New Hybrid Attention Strategy</a></td>
+                <td>Bowen Yang et al</td>
+                <td>2025</td>
+                <td>rope, positional encoding, attention normalization, long-context attention</td>
+                <td>NeurIPS</td>
+                <td>The paper analyzes RoPE, NoPE, and QK-Norm to characterize how positional encoding and attention normalization shape long-context attention behavior. It finds that NoPE naturally promotes similarity-based long-range retrieval, while RoPE provides a strong recency bias and local-context aggregation, whereas QK-Norm flattens attention logits and weakens the attention-sink behavior. The proposed RNoPE architecture interleaves NoPE and RoPE layers, leading to an emergent division of labor in which NoPE layers specialize in global retrieval and RoPE layers specialize in local information processing. The work further shows that increasing RoPE’s θ in this hybrid architecture can interfere with NoPE retrieval by making RoPE attention less localized, motivating explicit restriction of RoPE layers to a sliding attention window. RNoPE-SWA therefore removes QK-Norm, gives full attention to NoPE layers, and applies sliding-window attention to RoPE layers, with a 1:3 full-attention-to-windowed-layer interleaving chosen to balance the two roles. This design reduces the quadratic attention workload for most layers to O(SL), where S is the local window size, while preserving full-context retrieval through the NoPE layers and substantially reducing training and inference memory and computation.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2305.19466" target="_blank" rel="noopener noreferrer">The Impact of Positional Encoding on Length Generalizeation in Transformers</a></td>
+                <td>Amirhossein Kazemnejad et al</td>
+                <td>2023</td>
+                <td>nope, positional encoding, length generalization</td>
+                <td>Arxiv</td>
+                <td>This work systematically studies how positional encoding affects length generalization in decoder-only Transformers, comparing absolute, relative, rotary, ALiBi, and no positional encoding mechanisms. Its central technical finding is that causal self-attention can recover positional structure even without explicit positional encodings, making explicit position representations unnecessary for the architecture. Theoretically, the authors show that a NoPE Transformer can construct absolute positional information in its first layer and subsequently use that representation to implement relative positional attention in later layers. This establishes that positional information can emerge internally through the interaction of causal masking, self-attention, and learned feed-forward transformations rather than being injected into token representations. To characterize the mechanism learned during optimization, the work introduces an attention-pattern distance based on Jensen-Shannon divergence and finds that NoPE attention structurally resembles T5-style relative positional attention across layers. The analysis further shows that positional encoding determines the spatial structure of attention, with NoPE and relative bias supporting both short- and long-range dependencies while ALiBi imposes recency bias, providing a mechanistic explanation for their differing extrapolation behavior.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2410.10254" target="_blank" rel="noopener noreferrer">LoLCATs: On Low-Rank Linearization of Large Language Models</a></td>
