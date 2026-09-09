@@ -48,6 +48,7 @@
             color: var(--muted);
             font-size: 18px;
             line-height: 1;
+            transition: color 0.15s ease;
         }
 
         .profile-links a.cv-link {
@@ -57,7 +58,7 @@
         }
 
         .profile-links a:hover {
-            color: var(--text);
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -73,27 +74,20 @@
             width: 167px;
             height: 167px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 8px;
             display: block;
             image-rendering: -webkit-optimize-contrast;
-        }
-
-        .section-title {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--muted);
-            border-bottom: 1px solid var(--hair);
-            padding-bottom: 6px;
-            margin: 0 0 14px 0;
+            border: 1px solid var(--hair);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
         }
 
         /* News */
         .news-list {
             list-style: none;
             margin: 0 0 36px 0;
-            padding: 0;
+            padding: 0 8px 0 0;
+            max-height: 360px;
+            overflow-y: auto;
         }
 
         .news-list li {
@@ -118,13 +112,13 @@
         }
 
         .news-list a {
-            color: #1a5fb4;
+            color: var(--accent);
             text-decoration: underline;
             text-underline-offset: 2px;
         }
 
         .news-list a:hover {
-            color: #134a8e;
+            opacity: 0.8;
         }
 
         /* Publications */
@@ -137,7 +131,7 @@
         .pub-list li {
             display: flex;
             gap: 16px;
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--hair2);
             font-size: 15px;
             line-height: 1.6;
@@ -154,8 +148,9 @@
             height: auto;
             object-fit: contain;
             border: 1px solid var(--hair);
-            border-radius: 3px;
+            border-radius: 6px;
             background: var(--hair2);
+            transition: transform 0.2s ease;
         }
 
         .pub-thumb-placeholder {
@@ -163,7 +158,7 @@
             width: 200px;
             height: 130px;
             border: 1px solid var(--hair);
-            border-radius: 3px;
+            border-radius: 6px;
             background: var(--hair2);
             display: flex;
             align-items: center;
@@ -192,11 +187,12 @@
             display: inline-block;
             font-size: 11px;
             font-weight: 600;
-            color: var(--muted);
-            border: 1px solid var(--hair);
-            padding: 1px 5px;
-            border-radius: 3px;
-            margin-top: 3px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 2px 7px;
+            border-radius: 4px;
+            margin-top: 5px;
+            letter-spacing: 0.02em;
         }
 
         .pub-desc {
@@ -207,16 +203,25 @@
         }
 
         .pub-list.highlightable li {
-            border-radius: 4px;
-            padding-left: 8px;
-            padding-right: 8px;
-            transition: background 0.15s;
+            border-radius: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 -10px;
+            transition: background 0.15s ease;
             position: relative;
             cursor: pointer;
         }
 
         .pub-list.highlightable li:hover {
-            background: rgba(0, 0, 0, 0.03);
+            background: var(--hover);
+        }
+
+        .pub-list.highlightable li:hover .pub-thumb {
+            transform: scale(1.02);
+        }
+
+        .pub-list.highlightable li:hover .pub-title a {
+            color: var(--accent);
         }
 
         .pub-list.highlightable .stretched-link::after {
@@ -284,6 +289,7 @@
         <section>
             <div class="section-title">News</div>
             <ul class="news-list">
+                <li><span class="news-date">Sep 2026</span><span>New tech report: <a href="https://arxiv.org/pdf/2609.08135">KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization</a>!</span></li>
                 <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/pdf/2607.05722">Nemotron-Labs-Diffusion</a> accepted at <strong>EMNLP 2026</strong> (Main Conference)!</span></li>
                 <li><span class="news-date">Jul 2026</span><span>Invited talk at SB Intuitions: <em>Diffusion Language Models: From Fundamentals to Applications</em>!</span></li>
                 <li><span class="news-date">Jun 2026</span><span>SB Intuitions releases <a href="https://huggingface.co/sbintuitions/sarashina2.2-tts#audio-samples">Sarashina2.2-TTS</a>, a SoTA Japanese TTS model, and the <a href="https://www.sbintuitions.co.jp/blog/entry/2026/06/30/100000">Sarashina3 mini/nano</a> tech report. For the bigger models, we'll be using our in-house spec decoding recipe!</span></li>
@@ -303,11 +309,10 @@
                 <li>
                     <img class="pub-thumb" src="team_papers_photos/kbbq.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2609.08135" class="stretched-link">KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4
-Quantization</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2609.08135" class="stretched-link">KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization</a></div>
                         <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
                         <span class="pub-venue">Preprint 2026 &middot; SB Intuitions</span>
-                        <div class="pub-desc">We develop a second-order theory of quantization noise in matrix multiplication that characterizes formats by their per-element variance profiles, reducing floating-point rounding to a single scalar — the participation factor κ — with a closed-form SNR law and an upper bound κ* that no function-preserving linear transform can exceed. Building on this, KBBQ (Kappa-Braked Blockwise Quantization) parameterizes how closely a transform approaches that ceiling, outperforming the prior state of the art at W4A4 across four base models and two FP4 formats without additional deployment-time computation.</div>
+                        <div class="pub-desc">We develop a second-order theory of quantization noise in matrix multiplication, characterizing a format by the variance profile it assigns to each element. The multiplicative variance profile of floating-point rounding collapses the data dependence to a single scalar, the participation factor κ, yielding a closed-form signal-to-noise-ratio law and a closed-form ceiling κ* that no function-preserving linear transform can exceed. Building on this analysis, we introduce KBBQ (Kappa-Braked Blockwise Quantization), which parameterizes how closely a transform approaches this ceiling. At W4A4, across four base models and two FP4 formats, KBBQ outperforms the prior state of the art without additional deployment-time computation.</div>
                     </div>
                 </li>
                 <li>

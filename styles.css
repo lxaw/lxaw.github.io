@@ -1,10 +1,35 @@
 /* Minimal site defaults */
 :root {
+  color-scheme: light dark;
   --text: #111;
   --muted: rgba(0, 0, 0, 0.62);
   --hair: rgba(0, 0, 0, 0.10);
   --hair2: rgba(0, 0, 0, 0.06);
+  --hover: rgba(0, 0, 0, 0.035);
+  --faint: rgba(0, 0, 0, 0.28);
   --bg: #fff;
+  --bg-elevated: #fff;
+  --accent: #3b6fd6;
+  --accent-soft: rgba(59, 111, 214, 0.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e9e9ec;
+    --muted: rgba(255, 255, 255, 0.60);
+    --hair: rgba(255, 255, 255, 0.14);
+    --hair2: rgba(255, 255, 255, 0.08);
+    --hover: rgba(255, 255, 255, 0.05);
+    --faint: rgba(255, 255, 255, 0.32);
+    --bg: #111113;
+    --bg-elevated: #19191c;
+    --accent: #82a6f2;
+    --accent-soft: rgba(130, 166, 242, 0.14);
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -14,6 +39,8 @@ body {
   line-height: 1.55;
   color: var(--text);
   background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 main {
@@ -22,29 +49,47 @@ main {
   max-width: 980px;
 }
 
+::selection {
+  background: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Thin, unobtrusive scrollbars where content scrolls internally */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--hair) transparent;
+}
+
 /* Navbar styling */
 nav {
   border-bottom: 1px solid var(--hair);
   padding: 16px 0;
   margin-bottom: 32px;
-  font-size: 14px;
+  font-size: 13.5px;
   text-align: center;
+  letter-spacing: 0.01em;
+  color: var(--faint);
 }
 
 nav a {
-  color: var(--text);
+  color: var(--muted);
   text-decoration: none;
-  opacity: 0.85;
-  margin: 0 8px;
+  margin: 0 10px;
+  transition: color 0.15s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
-  opacity: 1;
+  text-decoration: none;
+  color: var(--accent);
 }
 
 nav .separator {
-  opacity: 0.5;
+  opacity: 0.35;
   margin: 0 4px;
 }
 
@@ -64,23 +109,28 @@ nav .separator {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #fff;
+  background: var(--bg-elevated);
   border: 1px solid var(--hair);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   z-index: 300;
   white-space: nowrap;
   padding: 4px 0;
   margin-top: 2px;
+  overflow: hidden;
 }
 
 .cv-dropdown-menu a {
   display: block;
-  padding: 4px 14px;
+  padding: 6px 16px;
   font-size: 13px;
+  margin: 0;
+  color: var(--text);
 }
 
 .cv-dropdown-menu a:hover {
-  background: rgba(0,0,0,0.03);
+  background: var(--hover);
+  color: var(--accent);
 }
 
 .cv-dropdown:hover .cv-dropdown-menu,
@@ -96,14 +146,25 @@ h1 {
 }
 
 .section-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  border-bottom: 1px solid var(--hair);
   padding-bottom: 6px;
   margin: 0 0 14px 0;
+}
+
+.section-title::before {
+  content: '';
+  flex-shrink: 0;
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
 }
 
 .page-header {
@@ -139,10 +200,13 @@ small {
 a {
   color: var(--text);
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--accent);
 }
 
 footer {
@@ -173,6 +237,7 @@ thead th {
   border-bottom: 1px solid var(--hair);
   cursor: pointer;
   user-select: none;
+  transition: color 0.15s ease;
 
   /* Optional: keep header visible while scrolling */
   position: sticky;
@@ -181,7 +246,7 @@ thead th {
 }
 
 thead th:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 tbody td {
@@ -189,8 +254,12 @@ tbody td {
   line-height: 1.45;
 }
 
+tbody tr {
+  transition: background 0.12s ease;
+}
+
 tbody tr:hover {
-  background: rgba(0, 0, 0, 0.02);
+  background: var(--hover);
 }
 
 /* Description column: wrap naturally */
@@ -219,10 +288,12 @@ td:nth-child(7) {
   outline: none;
   font-size: 14px;
   background: transparent;
+  color: var(--text);
+  transition: border-color 0.15s ease;
 }
 
 .search-inputs input:focus {
-  border-color: rgba(0, 0, 0, 0.25);
+  border-color: var(--accent);
 }
 
 .search-inputs button {
@@ -233,10 +304,12 @@ td:nth-child(7) {
   font-size: 13px;
   cursor: pointer;
   color: var(--text);
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .search-inputs button:hover {
-  border-color: rgba(0, 0, 0, 0.25);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* Compact non-description columns (desktop) */

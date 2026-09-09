@@ -879,6 +879,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxm-r-u7a
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxm-r-u7d.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-u67.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-u4e.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxm-r-u91.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxm-r-u6c.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxm-r-u69.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxm-r-u7b.tfm
@@ -908,6 +909,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-u82
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-u8a.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-u65.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-u56.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u91.enc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6c.enc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8f.enc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8b.enc
@@ -992,6 +994,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8c.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8f.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u90.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u91.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u95.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u96.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u98.pfb
