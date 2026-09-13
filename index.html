@@ -74,11 +74,9 @@
             width: 167px;
             height: 167px;
             object-fit: cover;
-            border-radius: 8px;
             display: block;
             image-rendering: -webkit-optimize-contrast;
             border: 1px solid var(--hair);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
         }
 
         /* News */
@@ -111,16 +109,6 @@
             padding-top: 1px;
         }
 
-        .news-list a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-        .news-list a:hover {
-            opacity: 0.8;
-        }
-
         /* Publications */
         .pub-list {
             list-style: none;
@@ -129,52 +117,18 @@
         }
 
         .pub-list li {
-            display: flex;
-            gap: 16px;
-            padding: 14px 0;
+            padding: 12px 0;
             border-bottom: 1px solid var(--hair2);
             font-size: 15px;
             line-height: 1.6;
-            align-items: flex-start;
         }
 
         .pub-list li:last-child {
             border-bottom: none;
         }
 
-        .pub-thumb {
-            flex-shrink: 0;
-            width: 200px;
-            height: auto;
-            object-fit: contain;
-            border: 1px solid var(--hair);
-            border-radius: 6px;
-            background: var(--hair2);
-            transition: transform 0.2s ease;
-        }
-
-        .pub-thumb-placeholder {
-            flex-shrink: 0;
-            width: 200px;
-            height: 130px;
-            border: 1px solid var(--hair);
-            border-radius: 6px;
-            background: var(--hair2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: 0.05em;
-        }
-
-        .pub-body {
-            flex: 1;
-        }
-
         .pub-title {
-            font-weight: 700;
+            font-weight: normal;
         }
 
         .pub-authors {
@@ -184,15 +138,11 @@
         }
 
         .pub-venue {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--accent);
-            background: var(--accent-soft);
-            padding: 2px 7px;
-            border-radius: 4px;
-            margin-top: 5px;
-            letter-spacing: 0.02em;
+            display: block;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--muted);
+            margin-top: 3px;
         }
 
         .pub-desc {
@@ -200,40 +150,7 @@
             color: var(--muted);
             margin-top: 6px;
             line-height: 1.55;
-        }
-
-        .pub-list.highlightable li {
-            border-radius: 8px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin: 0 -10px;
-            transition: background 0.15s ease;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .pub-list.highlightable li:hover {
-            background: var(--hover);
-        }
-
-        .pub-list.highlightable li:hover .pub-thumb {
-            transform: scale(1.02);
-        }
-
-        .pub-list.highlightable li:hover .pub-title a {
-            color: var(--accent);
-        }
-
-        .pub-list.highlightable .stretched-link::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-        }
-
-        @media (max-width: 600px) {
-            .pub-thumb, .pub-thumb-placeholder {
-                display: none;
-            }
+            text-align: left;
         }
 
         @media (max-width: 600px) {
@@ -250,12 +167,10 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> ·
-        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span> ·
-        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
-        <a href="https://github.com/lxaw">GitHub</a> ·
-        <a href="books_read.html">Books</a> ·
-        <a href="papers_read.html">Papers</a> ·
+        <a href="index.html">Home</a>
+        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span>
+        <a href="books_read.html">Books</a>
+        <a href="papers_read.html">Papers</a>
         <a href="personal_interests.html">Personal</a>
     </nav>
 
@@ -305,20 +220,18 @@
 
         <section>
             <div class="section-title">Preprints &amp; Tech Reports</div>
-            <ul class="pub-list highlightable">
+            <ul class="pub-list">
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/kbbq.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2609.08135" class="stretched-link">KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2609.08135">KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization</a></div>
                         <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
                         <span class="pub-venue">Preprint 2026 &middot; SB Intuitions</span>
                         <div class="pub-desc">We develop a second-order theory of quantization noise in matrix multiplication, characterizing a format by the variance profile it assigns to each element. The multiplicative variance profile of floating-point rounding collapses the data dependence to a single scalar, the participation factor κ, yielding a closed-form signal-to-noise-ratio law and a closed-form ceiling κ* that no function-preserving linear transform can exceed. Building on this analysis, we introduce KBBQ (Kappa-Braked Blockwise Quantization), which parameterizes how closely a transform approaches this ceiling. At W4A4, across four base models and two FP4 formats, KBBQ outperforms the prior state of the art without additional deployment-time computation.</div>
                     </div>
                 </li>
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/teaching_left2right.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2606.11552" class="stretched-link">Teaching Diffusion to Speculate Left-to-Right</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2606.11552">Teaching Diffusion to Speculate Left-to-Right</a></div>
                         <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
                         <span class="pub-venue">Preprint 2026 &middot; SB Intuitions</span>
                         <div class="pub-desc">Speculative decoding uses a lightweight draft model to propose tokens verified in parallel by a larger target. Diffusion LMs are natural drafters — they generate entire token blocks in parallel — but are trained with a symmetric bidirectional objective while verification is strictly left-to-right. We analyze three training-time interventions that close this gap: token positional weighting, a first-error focal loss targeting the position that breaks the accepted prefix, and a chain loss as a differentiable surrogate for expected accepted length. Across four target models and six benchmarks, the combined interventions raise accepted draft length by 21–76% without additional overhead.</div>
@@ -329,56 +242,50 @@
 
         <section>
             <div class="section-title">Selected Publications</div>
-            <ul class="pub-list highlightable">
+            <ul class="pub-list">
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/nemotron_diffusion.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2607.05722" class="stretched-link">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2607.05722">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding</a></div>
                         <div class="pub-authors">Y. Fu, <strong>L. Whalen</strong>, A. Garg, C. Wu, et al.</div>
                         <span class="pub-venue">EMNLP 2026 &middot; NVIDIA</span>
                         <div class="pub-desc">We introduce a tri-mode language model that jointly optimizes autoregressive (AR) and diffusion objectives within a single architecture, enabling switching between AR, diffusion, and self-speculation decoding at inference time. AR and diffusion objectives are complementary: diffusion improves lookahead planning while AR injects strong left-to-right priors. In self-speculation mode, the diffusion head drafts while the AR head verifies, outperforming multi-token prediction in both acceptance rate and throughput. Scaling to 3B, 8B, and 14B, the 8B model decodes 6× more tokens per forward pass than Qwen3-8B at comparable accuracy.</div>
                     </div>
                 </li>
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/efficient_dlm.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2512.14067" class="stretched-link">Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed</a></div>
+                        <div class="pub-title"><a href="https://arxiv.org/pdf/2512.14067">Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed</a></div>
                         <div class="pub-authors">Y. Fu*, <strong>L. Whalen*</strong>, Z. Ye, X. Dong, S. Diao, et al. &nbsp;<em>(* equal contribution)</em></div>
                         <span class="pub-venue">ICML 2026 &middot; NVIDIA</span>
                         <div class="pub-desc">Diffusion LMs promise parallel generation but lag AR models in learning efficiency when trained from scratch. We study AR-to-dLM conversion: systematically identifying that block-wise attention — causal across blocks, bidirectional within — better preserves pretrained AR weight distributions than fully bidirectional training, yielding a win-win in accuracy and speed. We further propose position-dependent token masking to close the training-test gap. Efficient-DLM 8B achieves +5.4%/+2.7% higher accuracy with 4.5×/2.7× higher throughput than Dream 7B and Qwen3 4B.</div>
                     </div>
                 </li>
-                <li style="cursor:default;">
-                    <img class="pub-thumb" src="team_papers_photos/nerarch_sim.png" alt="">
-                    <div class="pub-body" style="cursor:default;">
-                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11617858/" class="stretched-link">NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators</a></div>
+                <li>
+                    <div class="pub-body">
+                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11617858/">NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators</a></div>
                         <div class="pub-authors">C. Shih, C. Li, C. Yu, H. Fang, S. Li, W. Hsin, <strong>L. Whalen</strong>, et al.</div>
                         <span class="pub-venue">ISCA 2026 &middot; Georgia Tech</span>
                         <div class="pub-desc">A versatile simulator for benchmarking and design-space exploration of neural rendering accelerators.</div>
                     </div>
                 </li>
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/early_bird_diffusion.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Whalen_Early-Bird_Diffusion_Investigating_and_Leveraging_Timestep-Aware_Early-Bird_Tickets_in_Diffusion_CVPR_2025_paper.html" class="stretched-link">Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training</a></div>
+                        <div class="pub-title"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Whalen_Early-Bird_Diffusion_Investigating_and_Leveraging_Timestep-Aware_Early-Bird_Tickets_in_Diffusion_CVPR_2025_paper.html">Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training</a></div>
                         <div class="pub-authors"><strong>L. Whalen*</strong>, Z. Du*, H. You*, C. Li, S. Li, Y. Lin &nbsp;<em>(* equal contribution)</em></div>
                         <span class="pub-venue">CVPR 2025 &middot; Georgia Tech</span>
                         <div class="pub-desc">Training diffusion models is computationally expensive due to multi-step forward and backward passes across many timesteps. We investigate the existence of Early-Bird (EB) tickets — sparse subnetworks that emerge early in training and maintain high generation quality — and introduce timestep-aware EB tickets that adapt their sparsity based on the importance of each timestep region. Our EB-Diff-Train method derives these tickets, trains them in parallel, and combines them at inference, achieving 2.9–5.8× speedups over training unpruned dense models and up to 10.3× faster training versus standard train-prune-finetune pipelines.</div>
                     </div>
                 </li>
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/lamb.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://aclanthology.org/2025.acl-short.96.pdf" class="stretched-link">LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering</a></div>
+                        <div class="pub-title"><a href="https://aclanthology.org/2025.acl-short.96.pdf">LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering</a></div>
                         <div class="pub-authors">Z. Ye, Z. Wang, K. Xia, J. Hong, L. Li, <strong>L. Whalen</strong>, et al.</div>
                         <span class="pub-venue">ACL 2025 &middot; Georgia Tech</span>
                         <div class="pub-desc">State space models achieve efficient sub-quadratic compute but degrade significantly at long contexts due to exponential decay in hidden state memory. We investigate Mamba's attention patterns to explain why token filtering alleviates this degradation, then propose LAMB — a training-free, attention-guided token filtering strategy that preserves critical tokens during inference. LAMB boosts long-context performance for both pure SSMs and hybrid models, achieving up to 30.35% improvement over state-of-the-art techniques on standard long-context benchmarks.</div>
                     </div>
                 </li>
                 <li>
-                    <img class="pub-thumb" src="team_papers_photos/historical_unity.png" alt="">
                     <div class="pub-body">
-                        <div class="pub-title"><a href="https://journals.linguisticsociety.org/proceedings/index.php/PLSA/article/view/5467" class="stretched-link">On 'historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change</a></div>
+                        <div class="pub-title"><a href="https://journals.linguisticsociety.org/proceedings/index.php/PLSA/article/view/5467">On 'historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change</a></div>
                         <div class="pub-authors">A. Murphy, <strong>L. Whalen</strong>, S. Dubinsky, et al.</div>
                         <span class="pub-venue">LSA 2023 &middot; University of South Carolina</span>
                         <div class="pub-desc">We examine Putin's (2021) claim of "historical linguistic unity" between Russian and Ukrainian using computational lexical distance measures. Applying Levenshtein distance over frequency-based word lists — sensitive to both organic and contact-induced language change — we objectively quantify the linguistic distance between the two languages and their relationships to Polish, substantiating that Russian and Ukrainian are demonstrably distinct languages with no grounds for claims of unity.</div>
@@ -418,6 +325,5 @@
     <small style="display:block;text-align:center;margin:20px 0 10px;">
         <a href="gineiden.html" style="opacity:0.35;">_</a>
     </small>
-    <small style="position:fixed;bottom:10px;left:12px;font-size:11px;opacity:0.4;pointer-events:none;">Last updated: 2026-09-09</small>
 </body>
 </html>

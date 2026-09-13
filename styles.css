@@ -9,8 +9,10 @@
   --faint: rgba(0, 0, 0, 0.28);
   --bg: #fff;
   --bg-elevated: #fff;
-  --accent: #3b6fd6;
-  --accent-soft: rgba(59, 111, 214, 0.10);
+  --accent: #8b4513;
+  --accent-hover: #5c2e0a;
+  --accent-underline: rgba(139, 69, 19, 0.35);
+  --accent-soft: rgba(139, 69, 19, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +25,10 @@
     --faint: rgba(255, 255, 255, 0.32);
     --bg: #111113;
     --bg-elevated: #19191c;
-    --accent: #82a6f2;
-    --accent-soft: rgba(130, 166, 242, 0.14);
+    --accent: #d9a066;
+    --accent-hover: #f0c294;
+    --accent-underline: rgba(217, 160, 102, 0.35);
+    --accent-soft: rgba(217, 160, 102, 0.14);
   }
 }
 
@@ -33,10 +37,10 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -111,7 +115,7 @@ nav .separator {
   transform: translateX(-50%);
   background: var(--bg-elevated);
   border: 1px solid var(--hair);
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   z-index: 300;
   white-space: nowrap;
@@ -139,32 +143,23 @@ nav .separator {
 }
 
 h1 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
   margin: 0 0 18px 0;
   color: var(--text);
 }
 
 .section-title {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-size: 15px;
+  font-weight: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  border-bottom: 1px solid var(--hair);
   padding-bottom: 6px;
   margin: 0 0 14px 0;
-}
-
-.section-title::before {
-  content: '';
-  flex-shrink: 0;
-  width: 14px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--accent);
 }
 
 .page-header {
@@ -189,6 +184,15 @@ section {
 p {
   margin: 6px 0;
   font-size: 15px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (max-width: 700px) {
+  p {
+    text-align: left;
+    hyphens: none;
+  }
 }
 
 small {
@@ -196,17 +200,22 @@ small {
   font-size: 12px;
 }
 
-/* Links: no underline by default */
+/* Links: flat underline via border-bottom, no transition */
 a {
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
-  transition: color 0.15s ease;
+  border-bottom: 1px solid var(--accent-underline);
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  color: var(--accent);
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent);
+}
+
+/* Plain nav/UI links stay text-colored with no underline */
+nav a,
+.pub-title a {
+  border-bottom: none;
 }
 
 footer {
@@ -284,7 +293,7 @@ td:nth-child(7) {
   min-width: 180px;
   padding: 10px 10px;
   border: 1px solid var(--hair);
-  border-radius: 10px;
+  border-radius: 0;
   outline: none;
   font-size: 14px;
   background: transparent;
@@ -300,7 +309,7 @@ td:nth-child(7) {
   border: 1px solid var(--hair);
   background: transparent;
   padding: 9px 10px;
-  border-radius: 10px;
+  border-radius: 0;
   font-size: 13px;
   cursor: pointer;
   color: var(--text);

@@ -47,7 +47,7 @@
             min-width: 240px;
             padding: 10px;
             border: 1px solid var(--hair);
-            border-radius: 10px;
+            border-radius: 0;
             outline: none;
             font-size: 14px;
             background: transparent;
@@ -62,7 +62,7 @@
             border: 1px solid var(--hair);
             background: transparent;
             padding: 9px 10px;
-            border-radius: 10px;
+            border-radius: 0;
             font-size: 13px;
             cursor: pointer;
             color: var(--text);
@@ -98,7 +98,7 @@
             width: 90px;
             padding: 8px;
             border: 1px solid var(--hair);
-            border-radius: 10px;
+            border-radius: 0;
             background: transparent;
             color: var(--text);
             outline: none;
@@ -147,15 +147,12 @@
             color: var(--text);
         }
 
-        /* Slightly tighter on small screens */
-        .hero-photo {
-            width: 100%;
-            max-height: 320px;
-            object-fit: cover;
-            object-position: center 40%;
-            display: block;
-            border-radius: 4px;
-            margin-bottom: 28px;
+        .page-header {
+            margin-bottom: 16px;
+        }
+
+        .controls {
+            margin: 12px 0 4px 0;
         }
 
         @media (max-width: 720px) {
@@ -175,16 +172,13 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> ·
-        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span> ·
-        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
-        <a href="https://github.com/lxaw">GitHub</a> ·
-        <a href="books_read.html">Books</a> ·
-        <a href="papers_read.html">Papers</a> ·
+        <a href="index.html">Home</a>
+        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span>
+        <a href="books_read.html">Books</a>
+        <a href="papers_read.html">Papers</a>
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
-        <img src="photos/trees_cropped.PNG" alt="Forest" class="hero-photo">
         <div class="page-header">
             <h1>Books</h1>
             <p>Curated from February 2023 to now. I typically use this to organize books I found interesting — feel free to do whatever you want with it.</p>
