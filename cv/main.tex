@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[top=0.5in,bottom=0.5in,left=0.65in,right=0.65in,footskip=20pt]{geometry}
+\usepackage[top=0.45in,bottom=0.4in,left=0.65in,right=0.65in,footskip=18pt]{geometry}
 \usepackage{fancyhdr}
 \usepackage{needspace}
 \usepackage{titlesec}
@@ -82,7 +82,7 @@
 
 %----------SUMMARY----------
 \section{Profile}
-Machine learning researcher specializing in efficient training and inference of large language models, with publications at EMNLP, ICML, CVPR, and ACL and an NSF Graduate Research Fellowship. Currently co-lead pretraining and inference optimization for SoftBank SB Intuitions' Sarashina LLMs, Japan's largest series of large language models; previously co-led NVIDIA's diffusion language models and led research teams in the U.S. and Japan.
+Machine learning researcher specializing in efficient training and inference of large language models, with publications at EMNLP, ICML, CVPR, and ACL and an NSF Graduate Research Fellowship. Currently co-lead pretraining and inference optimization for SoftBank SB Intuitions' Sarashina LLMs, Japan's largest series of large language models; returning to NVIDIA Research's DLER team as a Research Scientist starting November 2026.
 
 %----------EDUCATION----------
 \section{Education}
@@ -131,8 +131,11 @@ Machine learning researcher specializing in efficient training and inference of 
 \Needspace*{8\baselineskip}
 \section{Research Experience}
 
-\entry{SoftBank -- SB Intuitions}{Tokyo, Japan}{Pretraining \& Inference Optimization Research Lead}{Apr.\ 2026 --}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+\entry{NVIDIA Research -- \cvlink{https://nv-dler.github.io/}{DLER Team}}{Santa Clara, CA}{Research Scientist}{Nov.\ 2026 --}
+
+\smallskip
+\entry{SoftBank -- SB Intuitions}{Tokyo, Japan}{Pretraining \& Inference Optimization Research Lead}{Apr.\ 2026 -- Nov.\ 2026}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=2pt]
   \item Co-lead pretraining and post-training optimization research for the \cvlink{https://huggingface.co/sbintuitions}{Sarashina series}, Japan's largest LLMs, at SoftBank's SB Intuitions R\&D Division.
   \item Lead novel \cvlink{https://arxiv.org/pdf/2609.08135}{quantization efforts}, spanning models up to hundreds of billions of parameters.
   \item Built SB Intuitions' first \cvlink{https://arxiv.org/pdf/2606.11552}{speculative-decoding} inference stack for the Sarashina family; introduced training-time drafter-alignment methods that raise the accepted draft length by 21--76\% over a position-uniform baseline.
@@ -140,19 +143,19 @@ Machine learning researcher specializing in efficient training and inference of 
   \item Collaborate with leading Japanese and international technology companies and government agencies to evaluate GPU resources and co-develop long-term compute strategies for large-scale training.
 \end{itemize}
 
-\medskip
-\entry{NVIDIA}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern \& Data Filtering Challenge Lead}{Dec.\ 2024 -- Mar.\ 2026}\\
+\smallskip
+\entry{NVIDIA -- DLER Team}{Atlanta, GA \& Santa Clara, CA}{Efficient Deep Learning Intern \& Data Filtering Challenge Lead}{Dec.\ 2024 -- Mar.\ 2026}\\
 {\footnotesize Mentors: Dr.\ \cvlink{https://pmolchanov.com/}{Pavlo Molchanov} \& \cvlink{https://www.yongganfu.com/}{Yonggan Fu} (NVIDIA Research).}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=2pt]
   \item Co-developed \cvlink{https://arxiv.org/pdf/2607.05722}{Nemotron-Labs-Diffusion} (EMNLP 2026), a tri-mode (autoregressive / diffusion / self-speculation) language model family at 3B--14B scale; the 8B model decodes 6$\times$ more tokens per forward pass than Qwen3-8B at comparable accuracy (up to 4$\times$ higher throughput); \cvlink{https://huggingface.co/collections/nvidia/nemotron-labs-diffusion}{released on Hugging Face} with $\sim$1M total downloads.
   \item Co-first author of \cvlink{https://arxiv.org/pdf/2512.14067}{Efficient-DLM} (ICML 2026), converting pretrained autoregressive models into diffusion LMs; the 8B model reaches +5.4\%/+2.7\% higher accuracy at 4.5$\times$/2.7$\times$ higher throughput than Dream 7B / Qwen3 4B (\cvlink{https://huggingface.co/collections/nvidia/efficient-dlm}{open-weights on Hugging Face}); presented directly to CEO Jensen Huang.
   \item Built the training, evaluation, and inference infrastructure adopted by 5+ internal research teams for vision-language models, embeddings, and latent reasoning.
   \item Organized NVIDIA's \href{https://sites.google.com/view/datafilteringchallenge/home}{2025 International Data Filtering Challenge for Training Edge Language Models} across 30+ university and industry teams.
 \end{itemize}
 
-\medskip
+\smallskip
 \entry{Georgia Institute of Technology}{Atlanta, GA}{Graduate Researcher}{Aug.\ 2024 -- Dec.\ 2025}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=4pt]
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt, topsep=2pt]
   \item Led a team of 3 Ph.D.\ and Masters students (co-first author) to cut diffusion-model training time by 2.9--5.8$\times$ (up to 10.3$\times$ vs.\ standard train-prune-finetune) while maintaining generation quality; \cvlink{https://openaccess.thecvf.com/content/CVPR2025/html/Whalen_Early-Bird_Diffusion_Investigating_and_Leveraging_Timestep-Aware_Early-Bird_Tickets_in_Diffusion_CVPR_2025_paper.html}{CVPR 2025}.
   \item Algorithm lead for the United States' \cvlink{https://responsible.computing.gatech.edu/featured-project-thor/}{ARPA-H THOR healthcare initiative}: reduced cancer detection sensor degradation by over 70\%, extending sensor lifetime from a few hours to several days.
   \item Engineered resource-efficient ML architectures powered by energy from the human body, collaborating with teams from Stanford, Northwestern, Carnegie Mellon, and MIT.
