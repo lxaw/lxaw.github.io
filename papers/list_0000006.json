@@ -1,5 +1,41 @@
 [
   {
+    "title": "How to build a consistency model: Learning flow maps via self-distillation",
+    "author": "Nicholas M. Boffi et al",
+    "year": "2025",
+    "topic": "consistency models, flow maps, self-distillation",
+    "venue": "Arxiv",
+    "description": "The authors introduce a unified direct training framework for flow maps that eliminates the need for pre-trained teacher models to achieve efficient single-step or few-step generative sampling. They achieve this by establishing a theoretical tangent condition which mathematically connects the instantaneous velocity of a probability flow to the time derivative of its corresponding two-time flow map. The method is implemented by parameterizing the flow map as a simple linear shift scaled by the time difference, where a single neural network learns to predict the corresponding continuous velocity function. To train this network, the implementation utilizes a self-distillation algorithm that simultaneously regresses the model against the exact interpolant velocity for infinitesimally small steps while using a stop-gradient technique to enforce flow map consistency across larger temporal jumps. Based on this framework, their core contribution introduces three novel algorithmic families derived from different mathematical flow descriptions, specifically categorized as Eulerian, Lagrangian, and Progressive self-distillation methods. Experimental insights demonstrate that the Lagrangian approach yields the most stable training dynamics and highest generation quality because its objective naturally avoids the computation of spatial derivatives and prevents the compounding errors associated with bootstrapping from small steps.",
+    "link": "https://arxiv.org/pdf/2505.18825"
+  },
+  {
+    "title": "Stochastic Interpolants: A Unifying Framework for Flows and Diffusions",
+    "author": "Michael S. Albergo et al",
+    "year": "2025",
+    "topic": "stochastic processes, interpolants, flows, diffusions",
+    "venue": "Arxiv",
+    "description": "The authors introduce a unifying generative modeling framework called stochastic interpolants that bridges any two arbitrary probability density functions exactly in finite time. This is achieved by constructing a continuous-time stochastic process that mathematically combines data samples from a base distribution and a target distribution with an independent Gaussian latent variable. The researchers prove that the time-dependent density of this interpolant satisfies a first-order transport equation as well as a family of forward and backward Fokker-Planck equations. To implement the model, the necessary drift coefficients and score functions for these equations are learned by minimizing simple, empirically trackable quadratic objective functions using paired data samples. After learning these continuous velocity fields, practitioners can generate new target data from the base distribution by numerically simulating either deterministic ordinary differential equations or stochastic differential equations with a tunable diffusion coefficient. Empirical insights highlight that while both sampling methods successfully transport the distribution, integrating via stochastic differential equations provides better robustness against neural network approximation errors and superior likelihood control compared to purely deterministic probability flows.",
+    "link": "https://arxiv.org/pdf/2303.08797"
+  },
+  {
+    "title": "ParallelBench: Understanding the Trade-Offs of Parallel Decoding in Diffusion LLMs",
+    "author": "Wonjun Kang et al",
+    "year": "2026",
+    "topic": "diffusion models, parallel decoding, token dependencies",
+    "venue": "ICLR",
+    "description": "To investigate the quality degradation in diffusion language models caused by ignoring token dependencies during parallel decoding, the authors introduce a structured methodology to quantify these limitations. Their method first employs an information-theoretic approach utilizing conditional total correlation to mathematically formalize how the difficulty of parallel decoding scales alongside inherent token dependencies. They achieve a precise understanding of this phenomenon by conducting quantitative case studies on synthetic list operations, deriving the exact achievable accuracies for both static and adaptive unmasking strategies to prove that parallel generation inherently fails when mutual constraints exist. As their primary contribution, the authors implement a novel evaluation suite consisting of seventeen realistic tasks across queue management, text writing, and logic puzzles, each carefully designed to feature tunable levels of conditional dependency. They systematically execute this suite against multiple diffusion and autoregressive architectures to observe how different decoding strategies handle tasks that are trivial sequentially but complex in parallel. The resulting insights demonstrate that real-world performance tightly mirrors the synthetic mathematical boundaries, revealing that current adaptive decoding algorithms fundamentally fail to balance speed and quality when faced with high token dependency.",
+    "link": "https://arxiv.org/pdf/2510.04767"
+  },
+  {
+    "title": "Flow Map Language Models: One-step Language Modeling via Continuous Denoising",
+    "author": "Chanhyuk Lee et al",
+    "year": "2026",
+    "topic": "diffusion models, continuous flows, flow map language models",
+    "venue": "Arxiv",
+    "description": "This paper demonstrates that continuous flows over one-hot token embeddings outperform discrete diffusion models in both text generation quality and speed. The authors first implement a flow language model that learns a denoiser to predict the posterior over clean data by continuously interpolating between Gaussian noise and the discrete text data. To ensure stable training across large vocabularies, they employ a specific time reparameterization strategy that redistributes the training steps so each contributes equally to reducing the overall decoding error. They subsequently distill this base model into a flow map language model tailored for few-step inference by introducing a two-time denoiser that directly transports states between distant timepoints. They achieve this distillation by parameterizing the two-time denoiser to strictly remain on the probability simplex, allowing it to be trained with novel cross-entropy and Kullback-Leibler divergence objectives that enforce a temporal semigroup condition. As a result, their distilled continuous model enables accurate one-step generation that rivals the multi-step quality of previous discrete architectures while uniquely facilitating efficient inference-time steering and reward guidance.",
+    "link": "https://arxiv.org/pdf/2602.16813"
+  },
+  {
     "title": "dQwen3.5: Hybrid-Attention Diffusion Language Models",
     "author": "Anton Xue et al",
     "year": "2026",
