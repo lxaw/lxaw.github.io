@@ -33,6 +33,9 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Spain | 30 | 218 BCE to 2004 | seeded | The conquest of Mexico and Peru is left for those countries' files. |
 | Portugal | 21 | 1143 to 1999 | seeded | Vasco da Gama's voyage is in the India file. |
 | Netherlands | 24 | 1568 to 2001 | seeded | Nothing before the revolt against Spain. |
+| Greece | 30 | 1600 BCE to 2010 | seeded | Includes the Byzantine centuries; 1204 is in the Italy file and 1453 in the Turkey file. |
+| Egypt | 26 | 3100 BCE to 2013 | seeded | The 1973 war and the peace with Israel are in the Israel file. |
+| Iran | 27 | 550 BCE to 2015 | seeded | Chaldiran (1514) is in the Turkey file. |
 | Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
@@ -61,8 +64,10 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-3. Greece, Egypt, Iran
-4. Mexico, Brazil
+1. Mexico, Brazil
+2. Poland, Sweden, Ireland
+3. Vietnam, Indonesia, Ethiopia, South Africa
+4. Canada, Australia, Argentina
 
 Gaps in the seeded countries:
 
@@ -223,6 +228,7 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-07 (night): Seeded Greece (30), Egypt (26) and Iran (27).
 - 2026-10-07 (night): Seeded Spain (30), Portugal (21) and the Netherlands (24).
 - 2026-10-07 (night): Japan extended to 51, China to 54, Germany to 50 and
   Russia to 54.
