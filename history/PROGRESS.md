@@ -30,6 +30,9 @@ Counts come from `python check_events.py`; update this table after each batch.
 | France | 40 | 52 BCE to 2015 | seeded | Waterloo is in the United Kingdom file, Borodino in the Russia file. |
 | Korea | 35 | 2333 BCE to 2006 | seeded | Both Koreas after 1948. Thin on the Three Kingdoms. |
 | India | 37 | 2600 BCE to 1992 | seeded | Thin on the south and on the centuries between the Guptas and 1192. |
+| Spain | 30 | 218 BCE to 2004 | seeded | The conquest of Mexico and Peru is left for those countries' files. |
+| Portugal | 21 | 1143 to 1999 | seeded | Vasco da Gama's voyage is in the India file. |
+| Netherlands | 24 | 1568 to 2001 | seeded | Nothing before the revolt against Spain. |
 | Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
@@ -58,7 +61,6 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-1. Spain, Portugal, Netherlands
 3. Greece, Egypt, Iran
 4. Mexico, Brazil
 
@@ -221,6 +223,7 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-07 (night): Seeded Spain (30), Portugal (21) and the Netherlands (24).
 - 2026-10-07 (night): Japan extended to 51, China to 54, Germany to 50 and
   Russia to 54.
 - 2026-10-07 (night): Seeded Korea (35) and India (37).
