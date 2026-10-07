@@ -28,6 +28,19 @@
     "source": "https://en.wikipedia.org/wiki/Christianization_of_Kievan_Rus%27"
   },
   {
+    "id": "russia-1147-first-mention-of-moscow",
+    "title": "First mention of Moscow",
+    "date": "1147",
+    "year-from": 1147,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "importance": 3,
+    "description": "A chronicle records Prince Yuri Dolgorukiy meeting an ally at Moscow, the first written notice of the town.",
+    "source": "https://en.wikipedia.org/wiki/Moscow"
+  },
+  {
     "id": "russia-1238-mongols-sack-vladimir",
     "title": "Mongols sack Vladimir",
     "date": "Feb 1238",
@@ -40,6 +53,20 @@
     "importance": 2,
     "description": "Batu Khan's army takes the capital of the leading Rus' principality, beginning more than two centuries of Mongol overlordship.",
     "source": "https://en.wikipedia.org/wiki/Siege_of_Vladimir"
+  },
+  {
+    "id": "russia-1240-mongols-sack-kiev",
+    "title": "Mongols sack Kiev",
+    "date": "6 Dec 1240",
+    "year-from": 1240,
+    "place": "Kyiv",
+    "lat": 50.45,
+    "lon": 30.52,
+    "country": "Russia",
+    "polity": "Kievan Rus'",
+    "importance": 2,
+    "description": "Batu Khan's army destroys the old capital of Rus', and the principalities become tributaries of the Golden Horde.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Kiev_(1240)"
   },
   {
     "id": "russia-1242-battle-on-the-ice",
@@ -68,6 +95,19 @@
     "importance": 1,
     "description": "Dmitry of Moscow defeats the army of Mamai, the first major Rus' victory over the Golden Horde.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Kulikovo"
+  },
+  {
+    "id": "russia-1478-moscow-annexes-novgorod",
+    "title": "Moscow annexes Novgorod",
+    "date": "1478",
+    "year-from": 1478,
+    "place": "Novgorod",
+    "lat": 58.52,
+    "lon": 31.27,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Ivan III ends the independence of the Novgorod Republic and carries off its assembly bell.",
+    "source": "https://en.wikipedia.org/wiki/Novgorod_Republic"
   },
   {
     "id": "russia-1480-great-stand-on-the-ugra-river",
@@ -112,6 +152,34 @@
     "source": "https://en.wikipedia.org/wiki/Siege_of_Kazan"
   },
   {
+    "id": "russia-1582-yermak-takes-the-capital-of-sibir",
+    "title": "Yermak takes the capital of Sibir",
+    "date": "26 Oct 1582",
+    "year-from": 1582,
+    "place": "Qashliq, near Tobolsk",
+    "lat": 58.15,
+    "lon": 68.52,
+    "country": "Russia",
+    "polity": "Tsardom of Russia",
+    "importance": 2,
+    "description": "A Cossack band defeats Khan Kuchum, beginning the Russian conquest of Siberia.",
+    "source": "https://en.wikipedia.org/wiki/Yermak_Timofeyevich"
+  },
+  {
+    "id": "russia-1612-moscow-freed-from-the-poles",
+    "title": "Moscow freed from the Poles",
+    "date": "1612",
+    "year-from": 1612,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "polity": "Tsardom of Russia",
+    "importance": 2,
+    "description": "A volunteer army led by Kuzma Minin and Prince Dmitry Pozharsky forces the Polish garrison in the Kremlin to surrender, near the end of the Time of Troubles.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Moscow_(1612)"
+  },
+  {
     "id": "russia-1613-michael-romanov-elected-tsar",
     "title": "Michael Romanov elected tsar",
     "date": "3 Mar 1613 (21 Feb Old Style)",
@@ -124,6 +192,34 @@
     "importance": 1,
     "description": "An assembly of the land ends the Time of Troubles by choosing the first Romanov tsar.",
     "source": "https://en.wikipedia.org/wiki/Zemsky_Sobor_of_1613"
+  },
+  {
+    "id": "russia-1649-law-code-of-1649",
+    "title": "Law code of 1649",
+    "date": "1649",
+    "year-from": 1649,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "polity": "Tsardom of Russia",
+    "importance": 2,
+    "description": "The Sobornoye Ulozheniye binds peasants to the land for good, completing the establishment of serfdom.",
+    "source": "https://en.wikipedia.org/wiki/Sobornoye_Ulozheniye"
+  },
+  {
+    "id": "russia-1654-pereiaslav-agreement",
+    "title": "Pereiaslav Agreement",
+    "date": "Jan 1654",
+    "year-from": 1654,
+    "place": "Pereiaslav, Ukraine",
+    "lat": 50.07,
+    "lon": 31.46,
+    "country": "Russia",
+    "polity": "Tsardom of Russia",
+    "importance": 2,
+    "description": "The Cossack Hetmanate under Bohdan Khmelnytsky swears allegiance to the tsar.",
+    "source": "https://en.wikipedia.org/wiki/Pereiaslav_Agreement"
   },
   {
     "id": "russia-1703-saint-petersburg-founded",
@@ -154,6 +250,63 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Poltava"
   },
   {
+    "id": "russia-1721-russian-empire-proclaimed",
+    "title": "Russian Empire proclaimed",
+    "date": "1721",
+    "year-from": 1721,
+    "place": "Saint Petersburg",
+    "lat": 59.94,
+    "lon": 30.31,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "After victory over Sweden, Peter I takes the title of emperor.",
+    "source": "https://en.wikipedia.org/wiki/Russian_Empire"
+  },
+  {
+    "id": "russia-1762-catherine-ii-takes-the-throne",
+    "title": "Catherine II takes the throne",
+    "date": "9 Jul 1762",
+    "year-from": 1762,
+    "place": "Saint Petersburg",
+    "lat": 59.94,
+    "lon": 30.31,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "A palace coup deposes Peter III in favour of his wife, who rules for 34 years; the date is New Style.",
+    "source": "https://en.wikipedia.org/wiki/Catherine_the_Great"
+  },
+  {
+    "id": "russia-1773-pugachev-s-rebellion",
+    "title": "Pugachev's Rebellion",
+    "date": "1773 to 1775",
+    "year-from": 1773,
+    "year-to": 1775,
+    "place": "Orenburg",
+    "lat": 51.77,
+    "lon": 55.1,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 3,
+    "description": "A Cossack claiming to be Peter III leads the largest peasant revolt in Russian history.",
+    "source": "https://en.wikipedia.org/wiki/Pugachev's_Rebellion"
+  },
+  {
+    "id": "russia-1783-annexation-of-crimea",
+    "title": "Annexation of Crimea",
+    "date": "1783",
+    "year-from": 1783,
+    "place": "Crimea",
+    "lat": 44.95,
+    "lon": 34.1,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "Catherine II annexes the Crimean Khanate, giving Russia the northern shore of the Black Sea.",
+    "source": "https://en.wikipedia.org/wiki/Annexation_of_the_Crimean_Khanate_by_the_Russian_Empire"
+  },
+  {
     "id": "russia-1812-battle-of-borodino",
     "title": "Battle of Borodino",
     "date": "7 Sep 1812",
@@ -182,6 +335,20 @@
     "source": "https://en.wikipedia.org/wiki/Decembrist_revolt"
   },
   {
+    "id": "russia-1855-fall-of-sevastopol",
+    "title": "Fall of Sevastopol",
+    "date": "Sep 1855",
+    "year-from": 1855,
+    "place": "Sevastopol",
+    "lat": 44.61,
+    "lon": 33.52,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "After a siege of nearly a year the Russians abandon the city, and defeat in the Crimean War prompts the reforms of Alexander II.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Sevastopol_(1854%E2%80%931855)"
+  },
+  {
     "id": "russia-1861-emancipation-of-the-serfs",
     "title": "Emancipation of the serfs",
     "date": "3 Mar 1861",
@@ -196,6 +363,34 @@
     "source": "https://en.wikipedia.org/wiki/Emancipation_reform_of_1861"
   },
   {
+    "id": "russia-1881-assassination-of-alexander-ii",
+    "title": "Assassination of Alexander II",
+    "date": "13 Mar 1881",
+    "year-from": 1881,
+    "place": "Saint Petersburg",
+    "lat": 59.94,
+    "lon": 30.31,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "Members of the People's Will kill the tsar with a bomb; the date is New Style.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Alexander_II_of_Russia"
+  },
+  {
+    "id": "russia-1891-trans-siberian-railway-begun",
+    "title": "Trans-Siberian Railway begun",
+    "date": "1891",
+    "year-from": 1891,
+    "place": "Vladivostok",
+    "lat": 43.12,
+    "lon": 131.89,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "Work starts on the line that links Moscow to the Pacific by 1904.",
+    "source": "https://en.wikipedia.org/wiki/Trans-Siberian_Railway"
+  },
+  {
     "id": "russia-1905-bloody-sunday",
     "title": "Bloody Sunday",
     "date": "22 Jan 1905",
@@ -208,6 +403,20 @@
     "importance": 2,
     "description": "Troops fire on a peaceful march to the Winter Palace, setting off the Revolution of 1905.",
     "source": "https://en.wikipedia.org/wiki/Bloody_Sunday_(1905)"
+  },
+  {
+    "id": "russia-1905-october-manifesto",
+    "title": "October Manifesto",
+    "date": "30 Oct 1905",
+    "year-from": 1905,
+    "place": "Saint Petersburg",
+    "lat": 59.94,
+    "lon": 30.31,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "Under pressure from a general strike Nicholas II promises civil liberties and an elected parliament, the Duma; the date is New Style.",
+    "source": "https://en.wikipedia.org/wiki/October_Manifesto"
   },
   {
     "id": "russia-1917-nicholas-ii-abdicates",
@@ -252,6 +461,19 @@
     "source": "https://en.wikipedia.org/wiki/Treaty_of_Brest-Litovsk"
   },
   {
+    "id": "russia-1918-murder-of-the-romanovs",
+    "title": "Murder of the Romanovs",
+    "date": "17 Jul 1918",
+    "year-from": 1918,
+    "place": "Yekaterinburg",
+    "lat": 56.844,
+    "lon": 60.609,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Bolsheviks shoot the former tsar, his wife and their five children.",
+    "source": "https://en.wikipedia.org/wiki/Murder_of_the_Romanov_family"
+  },
+  {
     "id": "russia-1922-soviet-union-founded",
     "title": "Soviet Union founded",
     "date": "30 Dec 1922",
@@ -264,6 +486,63 @@
     "importance": 1,
     "description": "Russia, Ukraine, Belarus and the Transcaucasian republic form the Union of Soviet Socialist Republics.",
     "source": "https://en.wikipedia.org/wiki/Treaty_on_the_Creation_of_the_Union_of_Soviet_Socialist_Republics"
+  },
+  {
+    "id": "russia-1924-death-of-lenin",
+    "title": "Death of Lenin",
+    "date": "21 Jan 1924",
+    "year-from": 1924,
+    "place": "Gorki Leninskiye",
+    "lat": 55.51,
+    "lon": 37.77,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "Lenin's death opens the struggle for the leadership that Stalin wins.",
+    "source": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Vladimir_Lenin"
+  },
+  {
+    "id": "russia-1932-soviet-famine",
+    "title": "Soviet famine",
+    "date": "1932 to 1933",
+    "year-from": 1932,
+    "year-to": 1933,
+    "place": "Ukraine, Kazakhstan and southern Russia (shown at Kharkiv)",
+    "lat": 49.99,
+    "lon": 36.23,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 1,
+    "description": "Forced collectivisation and grain seizures lead to a famine that kills millions.",
+    "source": "https://en.wikipedia.org/wiki/Soviet_famine_of_1930%E2%80%931933"
+  },
+  {
+    "id": "russia-1936-first-moscow-trial",
+    "title": "First Moscow Trial",
+    "date": "Aug 1936",
+    "year-from": 1936,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 1,
+    "description": "The show trial of Zinoviev and Kamenev opens the Great Purge, in which, by official figures, about 680,000 people are shot.",
+    "source": "https://en.wikipedia.org/wiki/Moscow_trials"
+  },
+  {
+    "id": "russia-1939-molotovribbentrop-pact",
+    "title": "Molotov–Ribbentrop Pact",
+    "date": "23 Aug 1939",
+    "year-from": 1939,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 1,
+    "description": "The Soviet Union and Germany sign a non-aggression pact with a secret protocol dividing eastern Europe between them.",
+    "source": "https://en.wikipedia.org/wiki/Molotov%E2%80%93Ribbentrop_Pact"
   },
   {
     "id": "russia-1941-siege-of-leningrad",
@@ -295,6 +574,90 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad"
   },
   {
+    "id": "russia-1943-battle-of-kursk",
+    "title": "Battle of Kursk",
+    "date": "5 Jul 1943",
+    "year-from": 1943,
+    "place": "Kursk",
+    "lat": 51.73,
+    "lon": 36.19,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "The Red Army defeats the last major German offensive in the east.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Kursk"
+  },
+  {
+    "id": "russia-1945-yalta-conference",
+    "title": "Yalta Conference",
+    "date": "4 to 11 Feb 1945",
+    "year-from": 1945,
+    "place": "Livadia Palace, Yalta",
+    "lat": 44.468,
+    "lon": 34.143,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "Stalin, Roosevelt and Churchill agree on the occupation of Germany and the shape of post-war Europe.",
+    "source": "https://en.wikipedia.org/wiki/Yalta_Conference"
+  },
+  {
+    "id": "russia-1949-first-soviet-atomic-bomb",
+    "title": "First Soviet atomic bomb",
+    "date": "29 Aug 1949",
+    "year-from": 1949,
+    "place": "Semipalatinsk, Kazakhstan",
+    "lat": 50.44,
+    "lon": 77.81,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "The test ends the American monopoly on nuclear weapons.",
+    "source": "https://en.wikipedia.org/wiki/RDS-1"
+  },
+  {
+    "id": "russia-1953-death-of-stalin",
+    "title": "Death of Stalin",
+    "date": "5 Mar 1953",
+    "year-from": 1953,
+    "place": "Kuntsevo, Moscow",
+    "lat": 55.72,
+    "lon": 37.42,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 1,
+    "description": "Stalin dies after nearly thirty years in power.",
+    "source": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Joseph_Stalin"
+  },
+  {
+    "id": "russia-1956-khrushchev-s-secret-speech",
+    "title": "Khrushchev's Secret Speech",
+    "date": "25 Feb 1956",
+    "year-from": 1956,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "At the Twentieth Party Congress, Nikita Khrushchev denounces Stalin's crimes and the cult around him.",
+    "source": "https://en.wikipedia.org/wiki/On_the_Cult_of_Personality_and_Its_Consequences"
+  },
+  {
+    "id": "russia-1957-sputnik-launched",
+    "title": "Sputnik launched",
+    "date": "4 Oct 1957",
+    "year-from": 1957,
+    "place": "Baikonur, Kazakhstan",
+    "lat": 45.92,
+    "lon": 63.34,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 1,
+    "description": "The Soviet Union puts the first artificial satellite into orbit.",
+    "source": "https://en.wikipedia.org/wiki/Sputnik_1"
+  },
+  {
     "id": "russia-1961-first-human-in-space",
     "title": "First human in space",
     "date": "12 Apr 1961",
@@ -309,6 +672,34 @@
     "source": "https://en.wikipedia.org/wiki/Vostok_1"
   },
   {
+    "id": "russia-1979-invasion-of-afghanistan",
+    "title": "Invasion of Afghanistan",
+    "date": "Dec 1979",
+    "year-from": 1979,
+    "place": "Kabul, Afghanistan",
+    "lat": 34.53,
+    "lon": 69.17,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "Soviet troops enter Afghanistan to prop up its communist government and stay for nine years.",
+    "source": "https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War"
+  },
+  {
+    "id": "russia-1986-chernobyl-disaster",
+    "title": "Chernobyl disaster",
+    "date": "26 Apr 1986",
+    "year-from": 1986,
+    "place": "Chernobyl, Ukraine",
+    "lat": 51.389,
+    "lon": 30.099,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 1,
+    "description": "A reactor explodes at the Chernobyl power station, the worst nuclear accident in history.",
+    "source": "https://en.wikipedia.org/wiki/Chernobyl_disaster"
+  },
+  {
     "id": "russia-1991-soviet-union-dissolved",
     "title": "Soviet Union dissolved",
     "date": "26 Dec 1991",
@@ -321,5 +712,45 @@
     "importance": 1,
     "description": "The Supreme Soviet votes the union out of existence a day after Gorbachev resigns.",
     "source": "https://en.wikipedia.org/wiki/Dissolution_of_the_Soviet_Union"
+  },
+  {
+    "id": "russia-1991-august-coup",
+    "title": "August Coup",
+    "date": "19 Aug 1991",
+    "year-from": 1991,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "polity": "Soviet Union",
+    "importance": 2,
+    "description": "Hardliners try to depose Mikhail Gorbachev; their failure in three days hastens the end of the Soviet Union.",
+    "source": "https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt"
+  },
+  {
+    "id": "russia-1999-yeltsin-resigns",
+    "title": "Yeltsin resigns",
+    "date": "31 Dec 1999",
+    "year-from": 1999,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Boris Yeltsin hands the presidency to his prime minister, Vladimir Putin.",
+    "source": "https://en.wikipedia.org/wiki/Boris_Yeltsin"
+  },
+  {
+    "id": "russia-2014-annexation-of-crimea",
+    "title": "Annexation of Crimea",
+    "date": "18 Mar 2014",
+    "year-from": 2014,
+    "place": "Crimea",
+    "lat": 44.95,
+    "lon": 34.1,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Russia annexes Crimea from Ukraine after occupying it, an act most states do not recognise.",
+    "source": "https://en.wikipedia.org/wiki/Annexation_of_Crimea_by_the_Russian_Federation"
   }
 ]
