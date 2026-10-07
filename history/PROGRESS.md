@@ -28,8 +28,8 @@ Deep time (see the section below); the span is in millions of years ago:
 | --- | --- | ---: | --- | --- | --- |
 | Universe, Milky Way | `deep/universe.json` | 20 | 13800 to 5700 | researched | Weakest date: when the expansion began to speed up (sources say 5 to 6 billion years ago). |
 | Solar System | `deep/solar-system.json` | 13 | 4600 to 3700 | researched | No entry for Mars losing its water: no datable source found. |
-| Earth | `deep/earth.json` | 32 | 4500 to 0.0117 | researched | Six entries have site coordinates, all taken from Wikipedia. |
-| Life | `deep/life.json` | 46 | 4280 to 0.023 | researched | Most dates confirmed on Wikipedia only; journal sites and the ICS chart would not load. |
+| Earth | `deep/earth.json` | 37 | 4500 to 0.0117 | researched | Six entries have site coordinates, all taken from Wikipedia. |
+| Life | `deep/life.json` | 48 | 4280 to 0.023 | researched | Most dates confirmed on Wikipedia only; journal sites and the ICS chart would not load. |
 
 Status values:
 
@@ -130,9 +130,9 @@ and 0.3 million year stops.
 The time bar starts at the Big Bang. Stops before 1 billion years ago have no
 map: `drawScene` in `history.html` draws a schematic illustration for each
 stretch (Big Bang, first stars, early galaxies, the Milky Way, the solar
-nebula, the molten Earth and Moon, the early ocean Earth). Seven deep-time
-stops have no events yet: 9, 7 and 5 billion years ago, and 880, 280, 120 and
-100 million years ago.
+nebula, the molten Earth and Moon, the early ocean Earth). Four deep-time
+stops have no events yet: 9, 7 and 5 billion years ago, and 880 million years
+ago.
 
 Events before written history live in `history/events/deep/`, one file per
 scope: `universe.json` (including the Milky Way), `solar-system.json`,
@@ -215,6 +215,8 @@ country they belong to.
 
 ## Log
 
+- 2026-10-07 (night): Seven deep-time events added so the 280, 120 and 100
+  million year stops have something on their cards.
 - 2026-10-07 (night): Seeded Taiwan (23). From this batch on, a script checks
   that each source page exists and that the event's year and day appear in
   its text; that is weaker than reading the page, so the status stays seeded.

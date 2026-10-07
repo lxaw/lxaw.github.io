@@ -235,6 +235,21 @@
     "source": "https://en.wikipedia.org/wiki/Pangaea"
   },
   {
+    "id": "deep-265-emeishan-traps-eruptions",
+    "title": "Emeishan Traps eruptions",
+    "date": "about 265 to 259 million years ago",
+    "ma": 265,
+    "ma-to": 259,
+    "scope": "Earth",
+    "importance": 3,
+    "description": "Flood basalts cover a large area of what is now Sichuan and Yunnan in China, with the main eruptions between 262 and 261 million years ago.",
+    "uncertainty": "The start is given as 265 million years ago or earlier; the end, at 259 million years ago, is better fixed.",
+    "source": "https://en.wikipedia.org/wiki/Emeishan_Traps",
+    "place": "Mount Emei, Sichuan, China",
+    "lat": 29.52,
+    "lon": 103.33
+  },
+  {
     "id": "deep-252-siberian-traps-eruptions",
     "title": "Siberian Traps eruptions",
     "date": "about 252 million years ago",
@@ -268,6 +283,52 @@
     "description": "Rifting between North America and northwest Africa split Pangaea, and new ocean floor began to form in the central Atlantic. The South and North Atlantic opened later, and the ocean is still widening today.",
     "uncertainty": "The timing of the first ocean floor is controversial, with estimates from 200 to 170 million years ago; rift basins had begun to open earlier, in the Late Triassic.",
     "source": "https://en.wikipedia.org/wiki/Atlantic_Ocean"
+  },
+  {
+    "id": "deep-120-5-selli-event",
+    "title": "Selli Event: the oceans lose their oxygen",
+    "date": "about 120.5 million years ago",
+    "ma": 120.5,
+    "scope": "Earth",
+    "importance": 3,
+    "description": "Much of the deep ocean runs out of oxygen at the start of the Aptian age, leaving black shales worldwide and killing off marine species; it is linked to large volcanic eruptions and warming.",
+    "source": "https://en.wikipedia.org/wiki/Selli_Event"
+  },
+  {
+    "id": "deep-116-ontong-java-plateau-forms",
+    "title": "Ontong Java Plateau forms",
+    "date": "about 116 million years ago",
+    "ma": 116,
+    "scope": "Earth",
+    "importance": 3,
+    "description": "Eruptions on the floor of the Pacific build an oceanic plateau that, with the Manihiki and Hikurangi plateaus, covered about 1% of the Earth's surface, among the largest volcanic outpourings known.",
+    "uncertainty": "Published ages for the main eruptions range from about 125 to 116 million years ago.",
+    "source": "https://en.wikipedia.org/wiki/Ontong_Java_Plateau",
+    "place": "Ontong Java Plateau, Pacific Ocean",
+    "lat": -3.0,
+    "lon": 160.0
+  },
+  {
+    "id": "deep-100-western-interior-seaway",
+    "title": "Western Interior Seaway divides North America",
+    "date": "100 to 66 million years ago",
+    "ma": 100,
+    "ma-to": 66,
+    "scope": "Earth",
+    "importance": 3,
+    "description": "With sea level high, an inland sea runs from the Gulf of Mexico to the Arctic Ocean and splits North America into two landmasses, Laramidia in the west and Appalachia in the east.",
+    "source": "https://en.wikipedia.org/wiki/Western_Interior_Seaway"
+  },
+  {
+    "id": "deep-94-cenomanian-turonian-boundary-event",
+    "title": "Cenomanian–Turonian boundary event",
+    "date": "about 94 million years ago",
+    "ma": 94,
+    "scope": "Earth",
+    "importance": 2,
+    "description": "The most recent truly global loss of oxygen from the oceans disturbs the carbon cycle and causes an extinction of marine life.",
+    "uncertainty": "Estimates fall between about 94.5 and 93 million years ago; the stage boundary itself is dated to 93.9 million years ago.",
+    "source": "https://en.wikipedia.org/wiki/Cenomanian%E2%80%93Turonian_boundary_event"
   },
   {
     "id": "deep-66-3-deccan-traps-eruptions",

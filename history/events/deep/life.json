@@ -288,6 +288,29 @@
     "lon": -64.5
   },
   {
+    "id": "deep-273-olson-s-extinction",
+    "title": "Olson's Extinction",
+    "date": "about 273 million years ago",
+    "ma": 273,
+    "scope": "Life",
+    "importance": 3,
+    "description": "The land animals of the early Permian give way abruptly to a different set in the middle Permian, which is read as an extinction among early reptiles, amphibians and the relatives of mammals.",
+    "uncertainty": "Hypothesised: the break may partly be a gap in the fossil record, and its timing and even its existence are debated.",
+    "source": "https://en.wikipedia.org/wiki/Olson%27s_Extinction"
+  },
+  {
+    "id": "deep-262-capitanian-mass-extinction",
+    "title": "Capitanian mass extinction",
+    "date": "262 to 259 million years ago",
+    "ma": 262,
+    "ma-to": 259,
+    "scope": "Life",
+    "importance": 2,
+    "description": "A third or more of marine genera die out at the end of the middle Permian, at the time of the Emeishan Traps eruptions in what is now south-west China.",
+    "uncertainty": "Recognised as separate from the end-Permian extinction only in 1994; estimates of its size vary widely.",
+    "source": "https://en.wikipedia.org/wiki/Capitanian_mass_extinction_event"
+  },
+  {
     "id": "deep-251-9-end-permian-mass-extinction",
     "title": "End-Permian mass extinction",
     "date": "251.9 million years ago",
