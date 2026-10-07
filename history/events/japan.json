@@ -1,5 +1,58 @@
 [
   {
+    "id": "japan-538-buddhism-arrives-from-baekje",
+    "title": "Buddhism arrives from Baekje",
+    "date": "538 or 552",
+    "year-from": 538,
+    "year-to": 552,
+    "place": "Asuka",
+    "lat": 34.47,
+    "lon": 135.82,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The king of Baekje sends a Buddhist image and scriptures to the Yamato court; the sources disagree on the year.",
+    "source": "https://en.wikipedia.org/wiki/Buddhism_in_Japan"
+  },
+  {
+    "id": "japan-604-seventeen-article-constitution",
+    "title": "Seventeen-article constitution",
+    "date": "604",
+    "year-from": 604,
+    "place": "Asuka",
+    "lat": 34.47,
+    "lon": 135.82,
+    "country": "Japan",
+    "importance": 3,
+    "description": "A set of moral and political precepts for officials is issued, attributed to Prince Shōtoku.",
+    "source": "https://en.wikipedia.org/wiki/Seventeen-article_constitution"
+  },
+  {
+    "id": "japan-645-taika-reform",
+    "title": "Taika Reform",
+    "date": "645",
+    "year-from": 645,
+    "place": "Asuka",
+    "lat": 34.47,
+    "lon": 135.82,
+    "country": "Japan",
+    "importance": 2,
+    "description": "After the overthrow of the Soga clan the court begins reforms modelled on Tang China that strengthen the emperor's government.",
+    "source": "https://en.wikipedia.org/wiki/Taika_Reform"
+  },
+  {
+    "id": "japan-663-battle-of-baekgang",
+    "title": "Battle of Baekgang",
+    "date": "663",
+    "year-from": 663,
+    "place": "Geum River, Korea",
+    "lat": 36.0,
+    "lon": 126.7,
+    "country": "Japan",
+    "importance": 3,
+    "description": "Tang and Silla forces destroy a Japanese fleet sent to restore Baekje, ending Japanese intervention in Korea for centuries.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Baekgang"
+  },
+  {
     "id": "japan-710-capital-established-at-heijo-kyo",
     "title": "Capital established at Heijō-kyō",
     "date": "710",
@@ -24,6 +77,19 @@
     "importance": 1,
     "description": "Emperor Kanmu moves the court to what becomes Kyoto, the imperial capital for over a thousand years.",
     "source": "https://en.wikipedia.org/wiki/Heian-kyō"
+  },
+  {
+    "id": "japan-1008-the-tale-of-genji",
+    "title": "The Tale of Genji",
+    "date": "about 1008",
+    "year-from": 1008,
+    "place": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.77,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The court lady Murasaki Shikibu writes a long prose romance often called the world's first novel.",
+    "source": "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
   },
   {
     "id": "japan-1185-battle-of-dan-no-ura",
@@ -66,6 +132,32 @@
     "source": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Japan"
   },
   {
+    "id": "japan-1333-fall-of-the-kamakura-shogunate",
+    "title": "Fall of the Kamakura shogunate",
+    "date": "1333",
+    "year-from": 1333,
+    "place": "Kamakura",
+    "lat": 35.32,
+    "lon": 139.55,
+    "country": "Japan",
+    "importance": 3,
+    "description": "Forces loyal to Emperor Go-Daigo take Kamakura and the Hōjō regents kill themselves.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Kamakura_(1333)"
+  },
+  {
+    "id": "japan-1336-ashikaga-shogunate-founded",
+    "title": "Ashikaga shogunate founded",
+    "date": "1336",
+    "year-from": 1336,
+    "place": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.77,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Ashikaga Takauji drives Go-Daigo from Kyoto and sets up a military government that lasts, at least in name, until 1573.",
+    "source": "https://en.wikipedia.org/wiki/Ashikaga_shogunate"
+  },
+  {
     "id": "japan-1467-onin-war",
     "title": "Ōnin War",
     "date": "1467 – 1477",
@@ -91,6 +183,71 @@
     "importance": 3,
     "description": "Portuguese traders bring matchlock guns, the first recorded European contact with Japan.",
     "source": "https://en.wikipedia.org/wiki/Tanegashima_(gun)"
+  },
+  {
+    "id": "japan-1549-francis-xavier-lands-at-kagoshima",
+    "title": "Francis Xavier lands at Kagoshima",
+    "date": "15 Aug 1549",
+    "year-from": 1549,
+    "place": "Kagoshima",
+    "lat": 31.6,
+    "lon": 130.56,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The Jesuit missionary brings Christianity to Japan.",
+    "source": "https://en.wikipedia.org/wiki/Francis_Xavier"
+  },
+  {
+    "id": "japan-1560-battle-of-okehazama",
+    "title": "Battle of Okehazama",
+    "date": "Jun 1560",
+    "year-from": 1560,
+    "place": "Okehazama, Owari",
+    "lat": 35.05,
+    "lon": 136.97,
+    "country": "Japan",
+    "importance": 3,
+    "description": "Oda Nobunaga surprises and kills Imagawa Yoshimoto, whose army was far larger, beginning his rise.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Okehazama"
+  },
+  {
+    "id": "japan-1568-nobunaga-enters-kyoto",
+    "title": "Nobunaga enters Kyoto",
+    "date": "1568",
+    "year-from": 1568,
+    "place": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.77,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Oda Nobunaga occupies the capital and installs Ashikaga Yoshiaki as shogun, the start of the reunification of Japan.",
+    "source": "https://en.wikipedia.org/wiki/Oda_Nobunaga"
+  },
+  {
+    "id": "japan-1582-honno-ji-incident",
+    "title": "Honnō-ji Incident",
+    "date": "21 Jun 1582",
+    "year-from": 1582,
+    "place": "Honnō-ji, Kyoto",
+    "lat": 35.006,
+    "lon": 135.754,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Akechi Mitsuhide turns on Nobunaga, who dies in the burning temple; Toyotomi Hideyoshi avenges him and takes his place.",
+    "source": "https://en.wikipedia.org/wiki/Honn%C5%8D-ji_Incident"
+  },
+  {
+    "id": "japan-1590-siege-of-odawara",
+    "title": "Siege of Odawara",
+    "date": "1590",
+    "year-from": 1590,
+    "place": "Odawara",
+    "lat": 35.25,
+    "lon": 139.15,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Hideyoshi defeats the Hōjō clan, completing the unification of Japan.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Odawara_(1590)"
   },
   {
     "id": "japan-1600-battle-of-sekigahara",
@@ -119,6 +276,77 @@
     "source": "https://en.wikipedia.org/wiki/Tokugawa_shogunate"
   },
   {
+    "id": "japan-1615-siege-of-osaka-ends",
+    "title": "Siege of Osaka ends",
+    "date": "1615",
+    "year-from": 1615,
+    "place": "Osaka Castle",
+    "lat": 34.687,
+    "lon": 135.526,
+    "country": "Japan",
+    "polity": "Tokugawa shogunate",
+    "importance": 3,
+    "description": "The Tokugawa destroy the Toyotomi family, removing the last rival to their rule.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Osaka"
+  },
+  {
+    "id": "japan-1637-shimabara-rebellion",
+    "title": "Shimabara Rebellion",
+    "date": "1637 to 1638",
+    "year-from": 1637,
+    "year-to": 1638,
+    "place": "Hara Castle, Shimabara",
+    "lat": 32.63,
+    "lon": 130.25,
+    "country": "Japan",
+    "polity": "Tokugawa shogunate",
+    "importance": 3,
+    "description": "A rising of peasants, many of them Christian, is crushed, and the shogunate tightens its ban on Christianity.",
+    "source": "https://en.wikipedia.org/wiki/Shimabara_Rebellion"
+  },
+  {
+    "id": "japan-1639-portuguese-ships-banned",
+    "title": "Portuguese ships banned",
+    "date": "1639",
+    "year-from": 1639,
+    "place": "Nagasaki",
+    "lat": 32.74,
+    "lon": 129.87,
+    "country": "Japan",
+    "polity": "Tokugawa shogunate",
+    "importance": 2,
+    "description": "The shogunate expels the Portuguese, leaving the Dutch and Chinese at Nagasaki as Japan's only regular trade with the outside for two centuries.",
+    "source": "https://en.wikipedia.org/wiki/Sakoku"
+  },
+  {
+    "id": "japan-1657-great-fire-of-meireki",
+    "title": "Great Fire of Meireki",
+    "date": "2 Mar 1657",
+    "year-from": 1657,
+    "place": "Edo (Tokyo)",
+    "lat": 35.68,
+    "lon": 139.76,
+    "country": "Japan",
+    "polity": "Tokugawa shogunate",
+    "importance": 3,
+    "description": "A fire destroys most of Edo and is estimated to have killed over 100,000 people.",
+    "source": "https://en.wikipedia.org/wiki/Great_Fire_of_Meireki"
+  },
+  {
+    "id": "japan-1707-hoei-eruption-of-mount-fuji",
+    "title": "Hōei eruption of Mount Fuji",
+    "date": "16 Dec 1707",
+    "year-from": 1707,
+    "place": "Mount Fuji",
+    "lat": 35.36,
+    "lon": 138.73,
+    "country": "Japan",
+    "polity": "Tokugawa shogunate",
+    "importance": 3,
+    "description": "Fuji's last eruption covers Edo in ash.",
+    "source": "https://en.wikipedia.org/wiki/H%C5%8Dei_eruption"
+  },
+  {
     "id": "japan-1853-perry-arrives-at-uraga",
     "title": "Perry arrives at Uraga",
     "date": "8 Jul 1853",
@@ -132,6 +360,20 @@
     "source": "https://en.wikipedia.org/wiki/Perry_Expedition"
   },
   {
+    "id": "japan-1854-convention-of-kanagawa",
+    "title": "Convention of Kanagawa",
+    "date": "31 Mar 1854",
+    "year-from": 1854,
+    "place": "Yokohama",
+    "lat": 35.44,
+    "lon": 139.64,
+    "country": "Japan",
+    "polity": "Tokugawa shogunate",
+    "importance": 2,
+    "description": "On Perry's return the shogunate opens two ports to American ships, ending the policy of seclusion.",
+    "source": "https://en.wikipedia.org/wiki/Convention_of_Kanagawa"
+  },
+  {
     "id": "japan-1868-meiji-restoration",
     "title": "Meiji Restoration",
     "date": "3 Jan 1868",
@@ -143,6 +385,45 @@
     "importance": 1,
     "description": "Imperial rule is declared restored and the shogunate abolished.",
     "source": "https://en.wikipedia.org/wiki/Meiji_Restoration"
+  },
+  {
+    "id": "japan-1877-battle-of-shiroyama",
+    "title": "Battle of Shiroyama",
+    "date": "24 Sep 1877",
+    "year-from": 1877,
+    "place": "Kagoshima",
+    "lat": 31.6,
+    "lon": 130.55,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The new conscript army defeats Saigō Takamori's last samurai, ending the Satsuma Rebellion.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Shiroyama"
+  },
+  {
+    "id": "japan-1889-meiji-constitution",
+    "title": "Meiji Constitution",
+    "date": "11 Feb 1889",
+    "year-from": 1889,
+    "place": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.76,
+    "country": "Japan",
+    "importance": 1,
+    "description": "The emperor grants a constitution with an elected lower house, the first in Asia to last.",
+    "source": "https://en.wikipedia.org/wiki/Meiji_Constitution"
+  },
+  {
+    "id": "japan-1894-first-sino-japanese-war-begins",
+    "title": "First Sino-Japanese War begins",
+    "date": "25 Jul 1894",
+    "year-from": 1894,
+    "place": "Off Asan, Korea",
+    "lat": 37.0,
+    "lon": 126.5,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Japanese ships attack a Chinese convoy off Korea; Japan's victory the next year makes it the leading power in East Asia.",
+    "source": "https://en.wikipedia.org/wiki/First_Sino-Japanese_War"
   },
   {
     "id": "japan-1905-battle-of-tsushima",
@@ -171,6 +452,32 @@
     "source": "https://en.wikipedia.org/wiki/1923_Great_Kantō_earthquake"
   },
   {
+    "id": "japan-1931-mukden-incident",
+    "title": "Mukden Incident",
+    "date": "18 Sep 1931",
+    "year-from": 1931,
+    "place": "Mukden (Shenyang), China",
+    "lat": 41.83,
+    "lon": 123.47,
+    "country": "Japan",
+    "importance": 1,
+    "description": "Japanese officers blow up a stretch of railway as a pretext for seizing Manchuria.",
+    "source": "https://en.wikipedia.org/wiki/Mukden_incident"
+  },
+  {
+    "id": "japan-1936-february-26-incident",
+    "title": "February 26 Incident",
+    "date": "26 Feb 1936",
+    "year-from": 1936,
+    "place": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.76,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Young army officers kill several ministers in an attempted coup; its failure leaves the army leadership stronger in politics.",
+    "source": "https://en.wikipedia.org/wiki/February_26_incident"
+  },
+  {
     "id": "japan-1941-attack-on-pearl-harbor",
     "title": "Attack on Pearl Harbor",
     "date": "7 Dec 1941",
@@ -182,6 +489,19 @@
     "importance": 1,
     "description": "Japan attacks the US Pacific Fleet, bringing the United States into the Second World War.",
     "source": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"
+  },
+  {
+    "id": "japan-1942-battle-of-midway",
+    "title": "Battle of Midway",
+    "date": "4 to 7 Jun 1942",
+    "year-from": 1942,
+    "place": "Midway Atoll",
+    "lat": 28.2,
+    "lon": -177.4,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The United States Navy sinks four Japanese aircraft carriers, the turning point of the Pacific War.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Midway"
   },
   {
     "id": "japan-1945-atomic-bombing-of-hiroshima",
@@ -210,6 +530,58 @@
     "source": "https://en.wikipedia.org/wiki/Japanese_Instrument_of_Surrender"
   },
   {
+    "id": "japan-1945-firebombing-of-tokyo",
+    "title": "Firebombing of Tokyo",
+    "date": "10 Mar 1945",
+    "year-from": 1945,
+    "place": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.76,
+    "country": "Japan",
+    "importance": 2,
+    "description": "An American incendiary raid burns out much of eastern Tokyo and kills more than 90,000 people in one night.",
+    "source": "https://en.wikipedia.org/wiki/Bombing_of_Tokyo_(10_March_1945)"
+  },
+  {
+    "id": "japan-1945-battle-of-okinawa",
+    "title": "Battle of Okinawa",
+    "date": "1 Apr 1945",
+    "year-from": 1945,
+    "place": "Okinawa",
+    "lat": 26.33,
+    "lon": 127.8,
+    "country": "Japan",
+    "importance": 2,
+    "description": "American forces land on Okinawa; three months of fighting kill tens of thousands of soldiers and civilians.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Okinawa"
+  },
+  {
+    "id": "japan-1945-atomic-bombing-of-nagasaki",
+    "title": "Atomic bombing of Nagasaki",
+    "date": "9 Aug 1945",
+    "year-from": 1945,
+    "place": "Nagasaki",
+    "lat": 32.774,
+    "lon": 129.863,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Three days after Hiroshima a second atomic bomb destroys much of Nagasaki.",
+    "source": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+  },
+  {
+    "id": "japan-1945-emperor-announces-the-surrender",
+    "title": "Emperor announces the surrender",
+    "date": "15 Aug 1945",
+    "year-from": 1945,
+    "place": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.76,
+    "country": "Japan",
+    "importance": 1,
+    "description": "Hirohito tells the nation by radio that Japan has accepted the Allied terms.",
+    "source": "https://en.wikipedia.org/wiki/Hirohito_surrender_broadcast"
+  },
+  {
     "id": "japan-1947-postwar-constitution-takes-effect",
     "title": "Postwar constitution takes effect",
     "date": "3 May 1947",
@@ -223,6 +595,19 @@
     "source": "https://en.wikipedia.org/wiki/Constitution_of_Japan"
   },
   {
+    "id": "japan-1951-treaty-of-san-francisco",
+    "title": "Treaty of San Francisco",
+    "date": "8 Sep 1951",
+    "year-from": 1951,
+    "place": "San Francisco, United States",
+    "lat": 37.78,
+    "lon": -122.42,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Japan signs a peace treaty with 48 nations, and the occupation ends the following April.",
+    "source": "https://en.wikipedia.org/wiki/Treaty_of_San_Francisco"
+  },
+  {
     "id": "japan-1964-tokyo-olympics",
     "title": "Tokyo Olympics",
     "date": "10 Oct 1964",
@@ -234,5 +619,57 @@
     "importance": 3,
     "description": "The first Olympic Games held in Asia, seen as marking Japan's postwar recovery.",
     "source": "https://en.wikipedia.org/wiki/1964_Summer_Olympics"
+  },
+  {
+    "id": "japan-1972-okinawa-returned-to-japan",
+    "title": "Okinawa returned to Japan",
+    "date": "1972",
+    "year-from": 1972,
+    "place": "Naha, Okinawa",
+    "lat": 26.21,
+    "lon": 127.68,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The United States hands back the Ryukyu Islands after 27 years of administration.",
+    "source": "https://en.wikipedia.org/wiki/1971_Okinawa_Reversion_Agreement"
+  },
+  {
+    "id": "japan-1989-stock-market-peaks",
+    "title": "Stock market peaks",
+    "date": "29 Dec 1989",
+    "year-from": 1989,
+    "place": "Tokyo Stock Exchange",
+    "lat": 35.683,
+    "lon": 139.778,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The Nikkei index reaches its high point; the collapse of share and land prices that follows begins decades of slow growth.",
+    "source": "https://en.wikipedia.org/wiki/Japanese_asset_price_bubble"
+  },
+  {
+    "id": "japan-1995-kobe-earthquake",
+    "title": "Kobe earthquake",
+    "date": "17 Jan 1995",
+    "year-from": 1995,
+    "place": "Kobe",
+    "lat": 34.59,
+    "lon": 135.04,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The Great Hanshin earthquake kills more than 6,000 people.",
+    "source": "https://en.wikipedia.org/wiki/Great_Hanshin_earthquake"
+  },
+  {
+    "id": "japan-2011-tohoku-earthquake-and-tsunami",
+    "title": "Tōhoku earthquake and tsunami",
+    "date": "11 Mar 2011",
+    "year-from": 2011,
+    "place": "Off Miyagi Prefecture",
+    "lat": 38.32,
+    "lon": 142.37,
+    "country": "Japan",
+    "importance": 1,
+    "description": "A magnitude 9 earthquake and the tsunami it raises kill nearly 20,000 people and cause the Fukushima nuclear accident.",
+    "source": "https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami"
   }
 ]

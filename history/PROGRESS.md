@@ -16,8 +16,8 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Country | Events | Years covered | Status | Notes |
 | --- | ---: | --- | --- | --- |
 | Turkey | 41 | 1299 to 2016 | seeded | Ottoman Empire and the republic. Has an example article. |
-| Japan | 18 | 710 to 1964 | seeded | Nothing before Nara or after 1964. |
-| China | 19 | 221 BCE to 1997 | seeded | |
+| Japan | 51 | 538 to 2011 | seeded | Nothing before the arrival of Buddhism. |
+| China | 54 | 1250 BCE to 2008 | seeded | |
 | Germany | 20 | 9 to 1990 | seeded | |
 | Russia | 23 | 862 to 1991 | seeded | Dates before 1918 are New Style unless marked. |
 | Austria | 24 | 976 to 1995 | seeded | The sieges of Vienna (1529, 1683) are in the Turkey file. |
@@ -65,8 +65,8 @@ In rough order, following the reading list on the Books page:
 Gaps in the seeded countries:
 
 - Turkey: Seljuks and Byzantium before 1299, Balkan Wars, the Kurdish conflict.
-- Japan: Jōmon to Asuka, the Sengoku unifiers, Sino-Japanese War, 1930s, post-1964.
-- China: Zhou and Warring States, Three Kingdoms to Sui, Taiping, Long March, Cultural Revolution.
+- Japan: Jōmon, Yayoi and the Yamato state; Heian politics; the Meiji economy.
+- China: Shang and earlier, the Song economy, Ming–Qing transition detail, Tibet and Xinjiang.
 - Germany: Hanseatic League, Thirty Years' War battles, 1866, Weimar crises, postwar division (1949).
 - Russia: Novgorod and the other principalities, Time of Troubles, Catherine II, Crimean War, 1930s, Cold War, post-1991.
 
@@ -221,6 +221,7 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-07 (night): Japan extended to 51 and China to 54.
 - 2026-10-07 (night): Seeded Korea (35) and India (37).
 - 2026-10-07 (night): Seeded Italy (39), the United States (41), the United
   Kingdom (38) and France (40).
