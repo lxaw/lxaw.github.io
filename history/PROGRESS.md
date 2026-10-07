@@ -22,6 +22,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Russia | 23 | 862 to 1991 | seeded | Dates before 1918 are New Style unless marked. |
 | Austria | 24 | 976 to 1995 | seeded | The sieges of Vienna (1529, 1683) are in the Turkey file. |
 | Switzerland | 18 | 1291 to 2002 | seeded | The Peace of Westphalia (1648) is in the Germany file. |
+| Finland | 28 | 1249 to 1995 | seeded | Nothing after 1995 (NATO, 2023, is past the map's last year). |
 | Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
@@ -50,12 +51,11 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-1. Finland
-2. Israel and Jewish history
-3. Italy (Rome, Venice)
-4. United States
-5. United Kingdom, France
-6. Korea, India
+1. Israel and Jewish history
+2. Italy (Rome, Venice)
+3. United States
+4. United Kingdom, France
+5. Korea, India
 
 Gaps in the seeded countries:
 
@@ -216,7 +216,7 @@ country they belong to.
 
 ## Log
 
-- 2026-10-07 (night): Seeded Austria (24) and Switzerland (18).
+- 2026-10-07 (night): Seeded Austria (24), Switzerland (18) and Finland (28).
 - 2026-10-07 (night): Turkey extended to the whole Ottoman period and the
   republic (41).
 - 2026-10-07 (night): Seven deep-time events added so the 280, 120 and 100
