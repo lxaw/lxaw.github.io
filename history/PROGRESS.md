@@ -25,6 +25,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Finland | 28 | 1249 to 1995 | seeded | Nothing after 1995 (NATO, 2023, is past the map's last year). |
 | Israel | 41 | 1000 BCE to 2005 | seeded | Includes Jewish history outside the land (expulsions, emancipation, the Holocaust). Biblical dates are marked traditional. |
 | Italy | 39 | 753 BCE to 1992 | seeded | Rome, Venice and united Italy. Charlemagne's coronation (800) is in the Germany file, Lepanto in the Turkey file. |
+| United States | 41 | 1100 to 2008 | seeded | Little before 1607 and nothing on the West before 1848. |
 | Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
@@ -53,9 +54,8 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-1. United States
-2. United Kingdom, France
-3. Korea, India
+1. United Kingdom, France
+2. Korea, India
 
 Gaps in the seeded countries:
 
@@ -216,7 +216,7 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
-- 2026-10-07 (night): Seeded Italy (39).
+- 2026-10-07 (night): Seeded Italy (39) and the United States (41).
 - 2026-10-07 (night): Seeded Israel and Jewish history (41). A polity match on
   a country card now brings in only the events with that polity. The source
   check now ignores citations, which caught four dates that were not in the
