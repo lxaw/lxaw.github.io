@@ -15,7 +15,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 
 | Country | Events | Years covered | Status | Notes |
 | --- | ---: | --- | --- | --- |
-| Turkey | 10 | 1918 to 1923 | seeded | Only the end of the Ottoman Empire. Has an example article. |
+| Turkey | 41 | 1299 to 2016 | seeded | Ottoman Empire and the republic. Has an example article. |
 | Japan | 18 | 710 to 1964 | seeded | Nothing before Nara or after 1964. |
 | China | 19 | 221 BCE to 1997 | seeded | |
 | Germany | 20 | 9 to 1990 | seeded | |
@@ -58,7 +58,7 @@ In rough order, following the reading list on the Books page:
 
 Gaps in the seeded countries:
 
-- Turkey: the Ottoman Empire before 1918 (1299 founding, 1453, 1683, Tanzimat) and the republic after 1923.
+- Turkey: Seljuks and Byzantium before 1299, Balkan Wars, the Kurdish conflict.
 - Japan: Jōmon to Asuka, the Sengoku unifiers, Sino-Japanese War, 1930s, post-1964.
 - China: Zhou and Warring States, Three Kingdoms to Sui, Taiping, Long March, Cultural Revolution.
 - Germany: Hanseatic League, Thirty Years' War battles, 1866, Weimar crises, postwar division (1949).
@@ -215,6 +215,8 @@ country they belong to.
 
 ## Log
 
+- 2026-10-07 (night): Turkey extended to the whole Ottoman period and the
+  republic (41).
 - 2026-10-07 (night): Seven deep-time events added so the 280, 120 and 100
   million year stops have something on their cards.
 - 2026-10-07 (night): Seeded Taiwan (23). From this batch on, a script checks
