@@ -28,6 +28,8 @@ Counts come from `python check_events.py`; update this table after each batch.
 | United States | 41 | 1100 to 2008 | seeded | Little before 1607 and nothing on the West before 1848. |
 | United Kingdom | 38 | 43 to 2016 | seeded | Mostly England before 1707; little on Scotland, Wales, Ireland or the empire. |
 | France | 40 | 52 BCE to 2015 | seeded | Waterloo is in the United Kingdom file, Borodino in the Russia file. |
+| Korea | 35 | 2333 BCE to 2006 | seeded | Both Koreas after 1948. Thin on the Three Kingdoms. |
+| India | 37 | 2600 BCE to 1992 | seeded | Thin on the south and on the centuries between the Guptas and 1192. |
 | Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
@@ -56,8 +58,7 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-1. Korea, India
-2. Spain, Portugal, Netherlands
+1. Spain, Portugal, Netherlands
 3. Greece, Egypt, Iran
 4. Mexico, Brazil
 
@@ -220,6 +221,7 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-07 (night): Seeded Korea (35) and India (37).
 - 2026-10-07 (night): Seeded Italy (39), the United States (41), the United
   Kingdom (38) and France (40).
 - 2026-10-07 (night): Seeded Israel and Jewish history (41). A polity match on
