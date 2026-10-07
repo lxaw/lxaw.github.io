@@ -1,0 +1,13 @@
+{
+  "parts": [
+    "deep/universe.json",
+    "deep/solar-system.json",
+    "deep/earth.json",
+    "deep/life.json",
+    "turkey.json",
+    "japan.json",
+    "china.json",
+    "germany.json",
+    "russia.json"
+  ]
+}

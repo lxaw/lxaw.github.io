@@ -1,0 +1,150 @@
+[
+  {
+    "id": "deep-4600-collapse-of-the-solar-nebula",
+    "title": "Collapse of the solar nebula",
+    "date": "about 4.6 billion years ago",
+    "ma": 4600,
+    "scope": "Solar System",
+    "importance": 1,
+    "description": "Part of a cloud of interstellar gas and dust collapsed under its own gravity into a spinning disk, the solar nebula, with the future Sun at its centre. The age comes from radiometric dating of the oldest meteorites.",
+    "uncertainty": "The date is rounded; that a nearby supernova's shock wave triggered the collapse is a hypothesis; NASA describes it only as possible.",
+    "source": "https://science.nasa.gov/solar-system/solar-system-facts/"
+  },
+  {
+    "id": "deep-4567-3-first-solids-in-the-solar-system",
+    "title": "First solids in the Solar System",
+    "date": "4.567 billion years ago",
+    "ma": 4567.3,
+    "scope": "Solar System",
+    "importance": 1,
+    "description": "The oldest dated solids, calcium-aluminium-rich inclusions found in primitive meteorites, condensed from hot gas near the young Sun. Lead-lead dating of four inclusions gives 4,567.30 million years, which is commonly used as the Solar System's time zero.",
+    "uncertainty": "The measurement uncertainty is only 0.16 million years, but other studies argue for a slightly older age of about 4,568.3 million years.",
+    "source": "https://en.wikipedia.org/wiki/Calcium%E2%80%93aluminium-rich_inclusion"
+  },
+  {
+    "id": "deep-4567-the-young-sun-ignites",
+    "title": "The young Sun ignites",
+    "date": "about 4.57 to 4.52 billion years ago",
+    "ma": 4567,
+    "ma-to": 4517,
+    "scope": "Solar System",
+    "importance": 2,
+    "description": "The centre of the nebula became a protostar and then a T Tauri star, shining by contraction and surrounded by a disk of gas and dust. Within about 50 million years its core became hot and dense enough for sustained hydrogen fusion.",
+    "uncertainty": "The timescale comes from models of stellar evolution and from observing young stars elsewhere, not from direct dating.",
+    "source": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System"
+  },
+  {
+    "id": "deep-4566-jupiters-core-forms",
+    "title": "Jupiter's core forms",
+    "date": "about 4.566 billion years ago",
+    "ma": 4566,
+    "ma-to": 4563,
+    "scope": "Solar System",
+    "importance": 2,
+    "description": "Isotopes in iron meteorites show that the disk was split into two separate reservoirs from about 1 million years after the first solids, most plausibly by a growing Jupiter. This implies that Jupiter's core reached about 20 Earth masses in under a million years, making it the oldest planet.",
+    "uncertainty": "Jupiter is dated indirectly from meteorites; its growth to about 50 Earth masses continued until at least 3 to 4 million years after the first solids.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5495263/"
+  },
+  {
+    "id": "deep-4565-jupiter-migrates-inward-and-back-grand-tack-model",
+    "title": "Jupiter migrates inward and back (Grand Tack model)",
+    "date": "about 4.565 billion years ago",
+    "ma": 4565,
+    "scope": "Solar System",
+    "importance": 3,
+    "description": "In the Grand Tack model, Jupiter drifted inward through the gas disk to about 1.5 times the Earth-Sun distance and then moved back out. Simulations show this would trim the inner disk, explaining why Mars is small and why the asteroid belt is mixed.",
+    "uncertainty": "This is a model result, not an observed event; the date is only constrained to the few million years when the gas disk existed.",
+    "source": "https://www.nature.com/articles/nature10201"
+  },
+  {
+    "id": "deep-4565-mars-forms-within-a-few-million-years",
+    "title": "Mars forms within a few million years",
+    "date": "about 4.565 billion years ago",
+    "ma": 4565,
+    "scope": "Solar System",
+    "importance": 3,
+    "description": "Hafnium-tungsten isotopes in Martian meteorites show that Mars reached about half its present size within roughly 1.8 million years of the Solar System's birth. It is probably a leftover planetary embryo that never merged into a larger planet.",
+    "uncertainty": "The published timescale is 1.8 million years with an error of about a million years either way; earlier estimates ranged from 0 to 15 million years.",
+    "source": "https://www.nature.com/articles/nature10077"
+  },
+  {
+    "id": "deep-4564-the-gas-disk-around-the-sun-disperses",
+    "title": "The gas disk around the Sun disperses",
+    "date": "about 4.564 to 4.557 billion years ago",
+    "ma": 4564,
+    "ma-to": 4557,
+    "scope": "Solar System",
+    "importance": 2,
+    "description": "The gas and dust of the protoplanetary disk were cleared away between about three and ten million years after the Sun formed, blown into interstellar space by the young Sun's wind. This ended the growth of the giant planets, which need gas to build their atmospheres.",
+    "uncertainty": "The date is not measured directly here: estimates range from about 3 to 10 million years after the Sun formed.",
+    "source": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System"
+  },
+  {
+    "id": "deep-4560-rocky-planets-assemble-from-collisions",
+    "title": "Rocky planets assemble from collisions",
+    "date": "about 4.56 to 4.47 billion years ago",
+    "ma": 4560,
+    "ma-to": 4470,
+    "scope": "Solar System",
+    "importance": 2,
+    "description": "The inner Solar System held dozens of Moon- to Mars-sized bodies that collided and merged into Mercury, Venus, Earth and Mars. Computer simulations and isotope dating of meteorites indicate this took less than 100 million years.",
+    "uncertainty": "The duration is a model estimate rather than a directly dated event.",
+    "source": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System"
+  },
+  {
+    "id": "deep-4560-giant-planets-shift-their-orbits-nice-model",
+    "title": "Giant planets shift their orbits (Nice model)",
+    "date": "about 4.56 to 4.47 billion years ago",
+    "ma": 4560,
+    "ma-to": 4470,
+    "scope": "Solar System",
+    "importance": 2,
+    "description": "In the Nice model, Jupiter, Saturn, Uranus and Neptune started closer together and were rearranged by an orbital instability that scattered the icy bodies beyond them and created the Kuiper belt. The survival of a fragile pair of Jupiter Trojan asteroids implies this happened within about 100 million years of the Solar System's birth.",
+    "uncertainty": "This is a model, and its timing is debated: the original 2005 version placed the instability about 700 million years after the planets formed, to explain the Late Heavy Bombardment.",
+    "source": "https://www.nature.com/articles/s41550-018-0564-3"
+  },
+  {
+    "id": "deep-4540-formation-of-earth",
+    "title": "Formation of Earth",
+    "date": "4.54 billion years ago",
+    "ma": 4540,
+    "scope": "Solar System",
+    "importance": 1,
+    "description": "Earth grew by the accumulation of smaller bodies in the inner disk. Its age of 4.54 billion years comes from lead isotopes in meteorites and in old terrestrial lead ores, since no rocks survive from Earth's first few hundred million years.",
+    "uncertainty": "The uncertainty is less than 1 percent; growth was gradual, so the figure is not a single moment.",
+    "source": "https://pubs.usgs.gov/gip/geotime/age.html"
+  },
+  {
+    "id": "deep-4510-moon-forming-giant-impact",
+    "title": "Moon-forming giant impact",
+    "date": "about 4.51 billion years ago",
+    "ma": 4510,
+    "scope": "Solar System",
+    "importance": 1,
+    "description": "A giant impact on the proto-Earth is thought to have thrown out the debris from which the Moon formed. Uranium-lead dating of zircon grains brought back by Apollo 14 shows that the Moon's crust had already separated by 4.51 billion years ago, within about 60 million years of the Solar System's birth.",
+    "uncertainty": "The giant impact is the leading hypothesis rather than an observed event, and some researchers argue for a later impact, 4.35 to 4.42 billion years ago, about 150 to 200 million years after the Solar System began.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5226643/"
+  },
+  {
+    "id": "deep-3900-late-heavy-bombardment-disputed",
+    "title": "Late Heavy Bombardment (disputed)",
+    "date": "about 3.9 billion years ago",
+    "ma": 3900,
+    "scope": "Solar System",
+    "importance": 2,
+    "description": "Many Apollo Moon rocks give impact ages that cluster near 3.9 billion years, which was read as a sudden spike in asteroid and comet impacts across the inner Solar System. Later modelling showed that the dating method can produce such a cluster even when impacts simply declined steadily.",
+    "uncertainty": "Whether a spike happened at all is disputed; the alternative is a long, gradually declining bombardment.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5047187/"
+  },
+  {
+    "id": "deep-3700-mars-still-has-a-global-magnetic-field",
+    "title": "Mars still has a global magnetic field",
+    "date": "about 3.7 billion years ago",
+    "ma": 3700,
+    "scope": "Solar System",
+    "importance": 3,
+    "description": "Magnetised rocks measured from orbit by the MAVEN spacecraft show that Mars had a core dynamo both 4.5 and 3.7 billion years ago. The field shut down some time afterwards, leaving the atmosphere exposed to the solar wind; Mars has no global field today.",
+    "uncertainty": "When the dynamo stopped is not known; earlier studies argued it had already ceased by about 4.1 billion years ago.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7195189/"
+  }
+]

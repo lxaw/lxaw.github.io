@@ -9,12 +9,22 @@
         .map-wrap {
             position: relative;
             border: 1px solid var(--hair);
+            aspect-ratio: 960 / 500;
+        }
+
+        .map-wrap.beside .polity.named {
+            cursor: inherit;
+        }
+
+        /* On the deep-time maps the notes sit beside the map, not over it. */
+        .map-wrap.beside #map {
+            width: calc(100% - 316px);
         }
 
         #map {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
             cursor: grab;
             touch-action: none;
         }
@@ -40,8 +50,119 @@
             fill-opacity: 1;
         }
 
+        .polity.named {
+            cursor: pointer;
+        }
+
         .polity.named:hover {
             fill-opacity: 0.9;
+        }
+
+        /* A clicked country stands out and the rest fade back. */
+        #polities.has-selection .polity.named {
+            fill-opacity: 0.25;
+        }
+
+        #polities.has-selection .polity.named.selected {
+            fill-opacity: 0.9;
+        }
+
+        .country-card {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 300px;
+            max-height: calc(100% - 16px);
+            overflow-y: auto;
+            padding: 10px 12px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--hair);
+            font-size: 13px;
+            z-index: 5;
+        }
+
+        .country-card h2 {
+            margin: 0 28px 0 0;
+            font-size: 16px;
+            font-weight: normal;
+            font-variant: small-caps;
+            letter-spacing: 0.04em;
+        }
+
+        .country-card .close {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            border: 0;
+            background: transparent;
+            padding: 4px 8px;
+            font: inherit;
+            font-size: 16px;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .country-card .close:hover {
+            color: var(--accent);
+        }
+
+        .country-card .meta {
+            display: block;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .country-card h3 {
+            margin: 10px 0 2px 0;
+            font-size: 11px;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .country-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .country-card li {
+            padding: 5px 0;
+            border-top: 1px solid var(--hair2);
+        }
+
+        .country-card li p {
+            margin: 2px 0 0 0;
+            font-size: 12px;
+            color: var(--muted);
+            text-align: left;
+        }
+
+        .country-card .source {
+            margin-left: 6px;
+            font-size: 11px;
+        }
+
+        .country-card .jump {
+            display: block;
+            width: 100%;
+            border: 0;
+            background: transparent;
+            padding: 0;
+            font: inherit;
+            color: var(--text);
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .country-card .jump:hover {
+            color: var(--accent);
+        }
+
+        .country-card .jump .meta {
+            display: inline;
+            margin-right: 6px;
         }
 
         #labels text {
@@ -52,13 +173,6 @@
             paint-order: stroke;
             stroke: var(--bg);
             stroke-linejoin: round;
-        }
-
-        #pins circle {
-            fill: var(--accent);
-            stroke: var(--bg);
-            vector-effect: non-scaling-stroke;
-            cursor: pointer;
         }
 
         .map-tooltip {
@@ -95,17 +209,52 @@
             color: var(--text);
         }
 
-        #mapNote {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0 24px;
-            text-align: center;
+        /* Stops with no map: an illustration, with the events of the stretch
+           on a card beside it. */
+        #scene .space {
+            fill: var(--hover);
+        }
+
+        #scene .star {
+            fill: var(--text);
+        }
+
+        #scene .glow {
+            fill: var(--accent);
+        }
+
+        #scene .ring {
+            fill: none;
+            stroke: var(--muted);
+        }
+
+        #scene .ocean {
+            fill: hsl(205 38% 45%);
+        }
+
+        #scene .crust {
+            fill: var(--hair);
+        }
+
+        #scene .rock {
+            fill: var(--muted);
+        }
+
+        #mapNote ul {
+            margin-top: 6px;
+        }
+
+        #mapNote .title {
+            display: block;
             font-size: 14px;
+            color: var(--text);
+        }
+
+        #mapNote .note {
+            display: block;
+            margin-top: 8px;
+            font-size: 12px;
             color: var(--muted);
-            pointer-events: none;
         }
 
         /* Timeline */
@@ -189,39 +338,102 @@
             text-align: left;
         }
 
-        /* Writings list */
-        #writingList {
+        /* Events list */
+        .event-controls {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            margin-bottom: 4px;
+        }
+
+        .event-controls small {
+            flex: 1;
+        }
+
+        .event-controls button,
+        .event-controls select {
+            border: 1px solid var(--hair);
+            border-radius: 0;
+            background: transparent;
+            padding: 5px 10px;
+            font: inherit;
+            font-size: 13px;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .event-controls button:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        #eventList {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        #writingList li {
-            padding: 8px 0;
+        #eventList li {
+            padding: 8px 0 8px 10px;
             border-bottom: 1px solid var(--hair2);
+            border-left: 2px solid transparent;
             font-size: 14px;
-            cursor: pointer;
         }
 
-        #writingList li.current .when {
-            color: var(--accent);
+        #eventList li.selected {
+            border-left-color: var(--accent);
+            background: var(--accent-soft);
         }
 
-        #writingList .when {
+        #eventList li.empty {
+            color: var(--muted);
+        }
+
+        #eventList .when {
             display: block;
             font-size: 12px;
             color: var(--muted);
         }
 
-        #writingList p {
+        #eventList p {
             margin: 2px 0 0 0;
             font-size: 13px;
             color: var(--muted);
+            text-align: left;
+        }
+
+        #eventList .source {
+            margin-left: 6px;
+            font-size: 12px;
+        }
+
+        #eventList p.uncertainty {
+            font-size: 12px;
+            font-style: italic;
         }
 
         @media (max-width: 720px) {
             .ticks span.minor {
                 display: none;
+            }
+
+            .map-wrap {
+                aspect-ratio: auto;
+            }
+
+            #map,
+            .map-wrap.beside #map {
+                width: 100%;
+                height: auto;
+            }
+
+            /* No room beside the country on a phone: the card goes under the map. */
+            .country-card {
+                position: static;
+                width: auto;
+                max-height: 50vh;
+                border-width: 1px 0 0 0;
             }
         }
     </style>
@@ -244,20 +456,21 @@
         <section>
             <div class="map-wrap" id="mapWrap">
                 <svg id="map" viewBox="0 0 960 500" role="img" aria-label="World map of political borders in the selected year">
+                    <g id="scene" display="none"></g>
                     <g id="mapLayer">
                         <path class="sphere"></path>
                         <path id="land" class="polity unnamed" display="none"></path>
                         <g id="polities"></g>
                         <g id="labels"></g>
-                        <g id="pins"></g>
                     </g>
                 </svg>
                 <div class="map-overlay">
                     <div id="eraLabel"></div>
                     <div id="mapStatus"></div>
                 </div>
-                <div id="mapNote" hidden>The continents cannot be reliably placed before about 1 billion years ago.</div>
+                <aside id="mapNote" class="country-card" hidden></aside>
                 <div id="tooltip" class="map-tooltip" hidden></div>
+                <aside id="countryCard" class="country-card" aria-live="polite" hidden></aside>
             </div>
 
             <div class="timeline" id="timeline">
@@ -280,16 +493,29 @@
                 <a href="https://icr.ethz.ch/data/cshapes/">CShapes 2.0</a> (ETH Zurich, CC BY-NC-SA 4.0, simplified).
                 Earlier borders are approximate snapshots from
                 <a href="https://github.com/aourednik/historical-basemaps">historical-basemaps</a> (GPL-3.0),
-                starting at 10,000 BCE. Before that, the map shows today's coastlines moved to where plate
+                starting at 10,000 BCE. From a billion years ago until then, the map shows today's coastlines moved to where plate
                 reconstructions place them (<a href="https://gws.gplates.org/">GPlates Web Service</a>, model of
-                Merdith et al. 2021, CC BY 4.0), not the actual shorelines of the time; geological periods follow
-                the International Chronostratigraphic Chart. Scroll or pinch to zoom, drag to pan.
+                Merdith et al. 2021, CC BY 4.0), not the actual shorelines of the time, coloured by the part of
+                today's world each piece of land belongs to; geological periods follow
+                the International Chronostratigraphic Chart. Earlier still there is no map to draw: the time bar
+                runs back to the Big Bang, and those stops show a schematic illustration, not to scale, with the
+                events of each stretch beside it. Greenland, which CShapes leaves out, is added from
+                <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain).
+                Click a country to zoom in on it and see its events; scroll or pinch to zoom, drag to pan.
             </p>
         </section>
 
         <section>
-            <div class="section-title">Pieces</div>
-            <ul id="writingList"></ul>
+            <div class="section-title">Events</div>
+            <div class="event-controls">
+                <select id="countryFilter" aria-label="Country">
+                    <option value="">All events</option>
+                </select>
+                <small id="eventCount"></small>
+                <button type="button" id="prevEvent">← Earlier</button>
+                <button type="button" id="nextEvent">Later →</button>
+            </div>
+            <ul id="eventList"></ul>
         </section>
     </main>
 
@@ -310,23 +536,34 @@
         ];
         const CSHAPES_PATH = 'history/cshapes-2.0.topojson';
         const CSHAPES_FROM = 1886, CSHAPES_TO = 2019;
+        // CShapes has no shape for Greenland. This one is today's outline from
+        // Natural Earth, shown as Danish for the whole CShapes period.
+        const GREENLAND_PATH = 'history/greenland.topojson';
         for (let y = CSHAPES_FROM; y <= CSHAPES_TO; y++) YEARS.push(y);
 
         // Deep time, in millions of years ago (Ma), stored as large negative
-        // years so it sorts with everything else. Continental positions exist
-        // for 1000 Ma onwards (history/paleo/<Ma>.json); the earlier stops
-        // have no map, only their place in the geological time scale.
+        // years so it sorts with everything else. The bar starts at the Big
+        // Bang. Continental positions exist for 1000 Ma onwards
+        // (history/paleo/<Ma>.json); the earlier stops have no map, only the
+        // events of that stretch. The last few stops are recent enough to
+        // use today's coastlines.
         const MA = 1e6;
-        const PALEO_FROM = 1000;
+        const PALEO_FROM = 1000, PALEO_TO = 10;
         const PALEO_PATH = 'history/paleo/';
-        const deepTime = [4540, 4000, 2500, 1600];
+        const deepTime = [
+            13800, 13600, 13000, 12000, 11000, 10000, 9000, 8000, 7000, 6000, 5000,
+            4600, 4540, 4500, 4400, 4200, 4000, 3800, 3500, 3000, 2500, 2000, 1600, 1200
+        ];
         for (let t = PALEO_FROM; t >= 20; t -= 20) deepTime.push(t);
-        deepTime.push(10);
+        deepTime.push(PALEO_TO, 5, 2, 0.3);
         // Prehistoric snapshots from the same source as the pre-1880 borders.
-        YEARS.unshift(...deepTime.map(t => -t * MA), -10000, -8000, -4000);
+        const FIRST_SNAPSHOT = -10000;
+        YEARS.unshift(...deepTime.map(t => -t * MA), FIRST_SNAPSHOT, -8000, -4000);
+        const isDeep = year => year < FIRST_SNAPSHOT;
 
         // Start of each division in Ma: [start, eon, era, period].
         const GEOLOGIC_TIME = [
+            [13800, 'Before the Earth', '', ''],
             [4567, 'Hadean', '', ''],
             [4031, 'Archean', '', ''],
             [2500, 'Proterozoic', 'Paleoproterozoic', ''],
@@ -356,26 +593,33 @@
         }
 
         const TICKS = [
-            [-4540 * MA, '4.5 bya'], [-500 * MA, '500 mya', true], [-200 * MA, '200 mya', true],
+            [-13800 * MA, '13.8 bya'], [-1000 * MA, '1 bya', true], [-500 * MA, '500 mya', true], [-200 * MA, '200 mya', true],
             [-3000, '3000 BCE'], [1000, '1000 CE', true], [1900, '1900'], [1950, '1950'],
             [2000, '2000', true], [2019, '2019']
         ]; // [year, label, hidden on narrow screens]
 
-        // Entries in history/list.json look like:
-        //   { "title": "...", "date": "18 Jan 1871", "year-from": 1871, "year-to": 1871,
-        //     "place": "Versailles", "lat": 48.8, "lon": 2.12,
-        //     "description": "...", "link": "history/some-article.html#anchor" }
-        // Each entry is one pin. "year-from"/"year-to" decide when it is on the map
-        // (BCE years are negative); "date" is only the text shown for it.
-        // "date", "year-to", "description" and "link" are optional.
-        const WRITINGS_PATH = 'history/list.json';
+        // Events live in history/events/, one file per country, listed in
+        // history/events/list.json. The fields and conventions are described in
+        // history/PROGRESS.md; check_events.py validates them.
+        const EVENTS_PATH = 'history/events/list.json';
+
+        // Clicking a country on the map looks up its events. An event country is
+        // matched when the map's name contains it ("Turkey (Ottoman Empire)"),
+        // when an event's polity is the map's name, or when most of that
+        // country's events happened inside the clicked borders. Map names that
+        // none of those catch are listed here.
+        const COUNTRY_ALIASES = {
+            Germany: ['German Federal Republic', 'German Democratic Republic']
+        };
 
         const W = 960, H = 500;
         const fileFor = y => `world_${y < 0 ? 'bc' + -y : y}.geojson`;
         function formatYear(y) {
-            if (y <= -MA) {
+            if (isDeep(y)) {
                 const ma = -y / MA;
-                return ma >= 1000 ? `${ma / 1000} billion years ago` : `${ma} million years ago`;
+                return ma >= 1000 ? `${ma / 1000} billion years ago`
+                    : ma >= 1 ? `${ma} million years ago`
+                    : `${(-y).toLocaleString('en-US')} years ago`;
             }
             return y < 0 ? `${(-y).toLocaleString('en-US')} BCE` : `${y} CE`;
         }
@@ -420,11 +664,11 @@
         const anchorCache = new WeakMap();
         function anchorOf(f) {
             if (!anchorCache.has(f)) {
-                let best = { area: 0, at: [NaN, NaN] };
+                let best = { area: 0, at: [NaN, NaN], bounds: null };
                 for (const coords of f.geometry.type === 'MultiPolygon' ? f.geometry.coordinates : [f.geometry.coordinates]) {
                     const poly = { type: 'Polygon', coordinates: coords };
                     const area = path.area(poly);
-                    if (area > best.area) best = { area, at: path.centroid(poly) };
+                    if (area > best.area) best = { area, at: path.centroid(poly), bounds: path.bounds(poly) };
                 }
                 anchorCache.set(f, best);
             }
@@ -450,7 +694,6 @@
                 .attr('font-size', 10 / zoomK)
                 .attr('stroke-width', 2.5 / zoomK)
                 .attr('display', d => d.area * zoomK * zoomK > 900 ? null : 'none');
-            d3.selectAll('#pins circle').attr('r', 5 / zoomK);
         }
 
         const zoom = d3.zoom()
@@ -470,7 +713,8 @@
                 .join(enter => enter.append('path')
                     .attr('class', f => nameOf(f) ? 'polity named' : 'polity unnamed')
                     .attr('d', outlineOf)
-                    .style('fill', f => nameOf(f) ? colorFor(ownerOf(f)) : null));
+                    .style('fill', f => f.properties.hue !== undefined ? `hsl(${f.properties.hue} 38% 52%)`
+                        : nameOf(f) ? colorFor(ownerOf(f)) : null));
 
             d3.select('#labels').selectAll('text')
                 .data(labelData(features))
@@ -479,6 +723,7 @@
                 .attr('y', d => d.at[1])
                 .text(d => d.name);
             updateZoomDependent();
+            refreshCountry();
         }
 
         // Snapshots are fetched on demand and kept, so revisiting a year is instant.
@@ -496,18 +741,41 @@
             return cache.get(year);
         }
 
-        // Continental positions for one deep-time stop: a single landmass shape.
+        // The reconstructed land comes in pieces, grouped by the part of today's
+        // world each piece belongs to: [name on the map, hue].
+        const LANDS = {
+            na: ['North America', 150], sa: ['South America', 95], eu: ['Europe', 215],
+            si: ['Siberia', 185], ea: ['East Asia', 300], in: ['India', 20], ar: ['Arabia', 50],
+            af: ['Africa', 35], au: ['Australia', 340], an: ['Antarctica', 260]
+        };
+        // When most land was joined together: [from Ma, to Ma, text].
+        const SUPERCONTINENTS = [
+            [1000, 760, 'Most land is joined in the supercontinent Rodinia.'],
+            [540, 340, 'The southern lands are joined in Gondwana.'],
+            [320, 200, 'Nearly all land is joined in the supercontinent Pangaea.']
+        ];
+
+        // Continental positions for one deep-time stop, one shape per group.
+        // The stops before the reconstructions have no shapes; the ones after
+        // them all use today's positions (0.json).
         function loadPaleo(ma) {
             if (ma > PALEO_FROM) return Promise.resolve({ features: [] });
+            if (ma < PALEO_TO) ma = 0;
             const year = -ma * MA;
             if (!cache.has(year)) {
                 cache.set(year, fetch(`${PALEO_PATH}${ma}.json`).then(r => {
                     if (!r.ok) throw new Error(`Failed to load ${PALEO_PATH}${ma}.json: ${r.status}`);
                     return r.json();
-                }).then(collection => ({
-                    features: collection.geometries.map((geometry, i) =>
-                        ({ type: 'Feature', key: `p${ma}:${i}`, properties: {}, geometry }))
-                })).catch(err => { cache.delete(year); throw err; }));
+                }).then(collection => {
+                    collection.features = collection.features.filter(f => f.geometry);
+                    collection.features.forEach((f, i) => {
+                        f.key = `p${ma}:${i}`;
+                        const land = LANDS[f.properties.g];
+                        // Pieces that could not be matched to a group stay grey and unnamed.
+                        if (land) Object.assign(f.properties, { NAME: land[0], hue: land[1] });
+                    });
+                    return collection;
+                }).catch(err => { cache.delete(year); throw err; }));
             }
             return cache.get(year);
         }
@@ -534,11 +802,17 @@
                 cshapes = fetch(CSHAPES_PATH).then(r => {
                     if (!r.ok) throw new Error(`Failed to load ${CSHAPES_PATH}: ${r.status}`);
                     return r.json();
-                }).then(topo => {
+                }).then(async topo => {
                     const features = topojson.feature(topo, Object.values(topo.objects)[0]).features;
+                    features.forEach(f => { f.properties.dated = true; });
+                    const extra = await fetch(GREENLAND_PATH).then(r => r.json())
+                        .then(t => topojson.feature(t, Object.values(t.objects)[0]).features)
+                        .catch(err => { console.error(err); return []; });
+                    features.push(...extra);
                     features.forEach((f, i) => {
                         f.key = `c${i}`;
                         f.properties.NAME = f.properties.n;
+                        if (f.properties.o) f.properties.SUBJECTO = f.properties.o;
                     });
                     return features;
                 }).catch(err => { cshapes = null; throw err; });
@@ -548,7 +822,7 @@
 
         // Modern years show the borders in force on 1 July of that year.
         function loadYear(year) {
-            if (year <= -MA) return loadPaleo(-year / MA);
+            if (isDeep(year)) return loadPaleo(-year / MA);
             if (year < CSHAPES_FROM) return loadSnapshot(year);
             const day = year * 10000 + 701;
             return loadCShapes().then(features => ({
@@ -556,7 +830,9 @@
             }));
         }
 
-        let writings = [];
+        let events = [];
+        let countryFilter = '';
+        let selectedIds = new Set();
         let currentIndex = -1;
 
         // Resolves once the map for that stop is on screen (or failed to load).
@@ -571,13 +847,15 @@
             document.getElementById('yearLabel').textContent = formatYear(year);
             document.getElementById('periodLabel').textContent =
                 year >= CSHAPES_FROM ? 'borders as of 1 July'
-                : year <= -MA ? (year < -PALEO_FROM * MA ? '' : 'continents in their reconstructed positions')
-                : `next snapshot: ${formatYear(next)}`;
+                : !isDeep(year) ? `next snapshot: ${formatYear(next)}`
+                : year < -PALEO_FROM * MA ? 'illustration, not a map and not to scale'
+                : year > -PALEO_TO * MA ? "today's coastlines, which the continents had nearly reached"
+                : "reconstructed positions, coloured by where the land is today";
             document.getElementById('eraLabel').textContent = geologicLabel(year);
-            document.getElementById('mapNote').hidden = year >= -PALEO_FROM * MA;
             slider.setAttribute('aria-valuetext', formatYear(year));
             status.textContent = 'Loading…';
-            drawWritings();
+            drawScene(year);
+            drawEvents();
 
             return loadYear(year).then(geo => {
                 if (currentIndex !== i) return; // the bar has moved on
@@ -613,74 +891,519 @@
             return from === to ? formatYear(from) : `${formatYear(from)} – ${formatYear(to)}`;
         }
 
-        function drawWritings() {
-            const current = writings.filter(w => inPeriod(w, currentIndex));
+        const filteredEvents = () => events.filter(ev => !countryFilter || ev.country === countryFilter);
 
-            d3.select('#pins').selectAll('circle')
-                .data(current.filter(w => w.lat != null && w.lon != null))
-                .join('circle')
-                .attr('cx', w => projection([w.lon, w.lat])[0])
-                .attr('cy', w => projection([w.lon, w.lat])[1])
-                .on('click', (e, w) => { if (w.link) location.href = w.link; });
-            updateZoomDependent();
+        function drawEvents() {
+            const all = filteredEvents();
+            const current = all.filter(ev => inPeriod(ev, currentIndex));
 
-            const list = document.getElementById('writingList');
+            drawEventList(current, all.length);
+            drawMapNote(current);
+        }
+
+        // Every deep-time stop has a card with the main events of its stretch:
+        // over the illustration where there is no map, beside the map after that.
+        function drawMapNote(current) {
+            const note = document.getElementById('mapNote');
+            const year = YEARS[currentIndex];
+            note.hidden = !isDeep(year);
+            document.getElementById('mapWrap').classList.toggle('beside', isDeep(year) && year >= -PALEO_FROM * MA);
+            if (note.hidden) return;
+            note.textContent = '';
+            const h2 = document.createElement('h2');
+            h2.textContent = formatYear(year);
+            note.appendChild(h2);
+            const joined = SUPERCONTINENTS.find(([from, to]) => -year / MA <= from && -year / MA >= to);
+            if (joined) {
+                const span = document.createElement('span');
+                span.className = 'meta';
+                span.textContent = joined[2];
+                note.appendChild(span);
+            }
+            // The five most important, kept in the order they happened.
+            const top = new Set([...current].sort((a, b) => a.importance - b.importance).slice(0, 5));
+            const shown = current.filter(ev => top.has(ev));
+            if (shown.length) {
+                const ul = document.createElement('ul');
+                for (const ev of shown) {
+                    const li = document.createElement('li');
+                    const title = document.createElement('span');
+                    title.className = 'title';
+                    title.textContent = ev.title;
+                    li.appendChild(title);
+                    const when = document.createElement('span');
+                    when.className = 'meta';
+                    when.textContent = [whenText(ev), ev.place].filter(Boolean).join(' · ');
+                    li.appendChild(when);
+                    const p = document.createElement('p');
+                    p.textContent = ev.description;
+                    li.appendChild(p);
+                    ul.appendChild(li);
+                }
+                note.appendChild(ul);
+            }
+            const more = current.length - shown.length;
+            const foot = more > 0 ? `${more} more in the list below.`
+                : !current.length ? 'No events listed for this stretch.' : '';
+            if (foot) {
+                const span = document.createElement('span');
+                span.className = 'note';
+                span.textContent = foot;
+                note.appendChild(span);
+            }
+        }
+
+        // Illustrations for the stops with no map. They are schematic: the
+        // dots are placed by a seeded generator so each stop always looks
+        // the same, and nothing is to scale.
+        function seeded(seed) {
+            let x = Math.floor(seed * 7919) % 2147483647 || 1;
+            return () => (x = x * 48271 % 2147483647) / 2147483647;
+        }
+
+        function drawScene(year) {
+            const ma = -year / MA;
+            const kind = year >= -PALEO_FROM * MA ? null
+                : ma >= 13800 ? 'bigbang'
+                : ma >= 13600 ? 'firststars'
+                : ma >= 11000 ? 'galaxies'
+                : ma >= 5000 ? 'milkyway'
+                : ma >= 4600 ? 'nebula'
+                : ma >= 4500 ? 'molten'
+                : 'earlyearth';
+            const g = d3.select('#scene').attr('display', kind ? null : 'none');
+            layer.select('.sphere').attr('display', kind ? 'none' : null);
+            g.selectAll('*').remove();
+            if (!kind) return;
+            // The illustration is not part of the map, so any zoom is dropped.
+            svg.interrupt().call(zoom.transform, d3.zoomIdentity);
+
+            const rand = seeded(ma);
+            const between = (a, b) => a + (b - a) * rand();
+            // The card covers the right of the map on a wide screen.
+            const cx = window.matchMedia('(max-width: 720px)').matches ? W / 2 : W * 0.34;
+            const cy = H / 2;
+            const dot = (cls, x, y, r, opacity) => g.append('circle').attr('class', cls)
+                .attr('cx', x).attr('cy', y).attr('r', r).attr('opacity', opacity);
+
+            g.append('rect').attr('class', 'space').attr('width', W).attr('height', H);
+            if (kind !== 'bigbang') {
+                for (let n = 0; n < 150; n++) dot('star', between(0, W), between(0, H), between(0.4, 1.1), between(0.15, 0.55));
+            }
+
+            if (kind === 'bigbang') {
+                // Expansion from a hot, dense state: rings moving out, matter thinning.
+                for (let n = 1; n <= 6; n++) {
+                    g.append('circle').attr('class', 'ring').attr('cx', cx).attr('cy', cy)
+                        .attr('r', n * 38).attr('opacity', 0.6 - n * 0.08);
+                }
+                for (let n = 0; n < 420; n++) {
+                    const r = 230 * Math.pow(rand(), 0.7), a = between(0, 2 * Math.PI);
+                    dot(rand() < 0.5 ? 'glow' : 'star', cx + r * Math.cos(a), cy + r * Math.sin(a),
+                        between(0.5, 1.6), 0.75 - r / 400);
+                }
+                dot('glow', cx, cy, 26, 0.18);
+                dot('glow', cx, cy, 9, 0.9);
+            } else if (kind === 'firststars') {
+                // A dark universe with the first few massive stars lighting up.
+                for (let n = 0; n < 16; n++) {
+                    const x = between(40, W - 40), y = between(40, H - 40), r = between(1.8, 3.6);
+                    dot('glow', x, y, r * 5, 0.1);
+                    dot('glow', x, y, r, 0.9);
+                }
+            } else if (kind === 'galaxies') {
+                // Small, irregular early galaxies; more of them as time goes on.
+                const count = Math.round(8 + (13000 - ma) / 200);
+                for (let n = 0; n < count; n++) {
+                    const x = between(40, W - 40), y = between(40, H - 40), size = between(8, 20);
+                    g.append('ellipse').attr('class', 'star').attr('cx', x).attr('cy', y)
+                        .attr('rx', size).attr('ry', size * between(0.25, 0.6)).attr('opacity', 0.22)
+                        .attr('transform', `rotate(${between(0, 180)} ${x} ${y})`);
+                    dot('glow', x, y, size * 0.16, 0.9);
+                }
+            } else if (kind === 'milkyway') {
+                // The Milky Way seen from above its disk at a slant: a bulge and
+                // halo first, with the spiral disk filling in over time.
+                const grown = (10000 - ma) / 5000; // 0 at the first stop, 1 at the last
+                const disk = g.append('g').attr('transform', `translate(${cx} ${cy}) rotate(-18) scale(1 0.5)`);
+                const put = (cls, x, y, r, opacity) => disk.append('circle').attr('class', cls)
+                    .attr('cx', x).attr('cy', y).attr('r', r).attr('opacity', opacity);
+                for (let n = 0; n < 260; n++) {
+                    const r = 190 * Math.pow(rand(), 1.6), a = between(0, 2 * Math.PI);
+                    put('star', r * Math.cos(a), r * Math.sin(a), between(0.5, 1.3), 0.35);
+                }
+                const turns = 0.6 + 2.2 * grown;
+                for (let arm = 0; arm < 4; arm++) {
+                    for (let n = 0; n < 190 * turns; n++) {
+                        const t = between(0.4, turns * Math.PI);
+                        const r = 16 * Math.exp(0.36 * t) + between(-9, 9);
+                        const a = t + arm * Math.PI / 2 + between(-0.14, 0.14);
+                        put(rand() < 0.2 ? 'glow' : 'star', r * Math.cos(a), r * Math.sin(a), between(0.6, 1.7), between(0.4, 0.85));
+                    }
+                }
+                put('glow', 0, 0, 34, 0.25);
+                put('glow', 0, 0, 16, 0.85);
+            } else if (kind === 'nebula') {
+                // The young Sun in its disk of gas and dust, with gaps where planets are forming.
+                for (let n = 0; n < 26; n++) {
+                    const rx = 34 + n * 8.5;
+                    if (n % 7 === 5) continue;
+                    g.append('ellipse').attr('class', 'ring').attr('cx', cx).attr('cy', cy)
+                        .attr('rx', rx).attr('ry', rx * 0.34).attr('stroke-width', 5).attr('opacity', 0.5 - n * 0.015);
+                }
+                for (let n = 0; n < 60; n++) {
+                    const rx = between(50, 250), a = between(0, 2 * Math.PI);
+                    dot('rock', cx + rx * Math.cos(a), cy + rx * 0.34 * Math.sin(a), between(0.8, 2.4), 0.8);
+                }
+                dot('glow', cx, cy, 34, 0.2);
+                dot('glow', cx, cy, 15, 0.95);
+            } else {
+                // The Earth as a disk, with the Moon beside it.
+                const R = 125;
+                const clip = g.append('clipPath').attr('id', 'sceneClip');
+                clip.append('circle').attr('cx', cx).attr('cy', cy).attr('r', R);
+                const globe = g.append('g').attr('clip-path', 'url(#sceneClip)');
+                const blob = (cls, x, y, size, opacity) => {
+                    const points = d3.range(9).map(i => {
+                        const a = i / 9 * 2 * Math.PI, r = size * between(0.55, 1.1);
+                        return [x + r * Math.cos(a), y + r * Math.sin(a)];
+                    });
+                    globe.append('path').attr('class', cls).attr('opacity', opacity)
+                        .attr('d', d3.line().curve(d3.curveBasisClosed)(points));
+                };
+                if (kind === 'molten') {
+                    // A magma ocean, just after the impact that made the Moon.
+                    globe.append('circle').attr('class', 'glow').attr('cx', cx).attr('cy', cy).attr('r', R).attr('opacity', 0.75);
+                    for (let n = 0; n < 14; n++) blob('crust', between(cx - R, cx + R), between(cy - R, cy + R), between(10, 26), 0.7);
+                    for (let n = 0; n < 90; n++) {
+                        const a = between(-0.9, 0.5), r = between(R + 30, R + 110);
+                        dot('rock', cx + r * Math.cos(a), cy + r * 0.8 * Math.sin(a), between(0.8, 2.6), 0.8);
+                    }
+                    dot('glow', cx + R + 75, cy - 62, 24, 0.7);
+                } else {
+                    // Oceans, with more continental crust as time goes on.
+                    globe.append('circle').attr('class', 'ocean').attr('cx', cx).attr('cy', cy).attr('r', R);
+                    const count = Math.round(1 + (4400 - ma) / 450);
+                    for (let n = 0; n < count; n++) blob('crust', between(cx - R * 0.75, cx + R * 0.75), between(cy - R * 0.75, cy + R * 0.75), between(16, 40), 1);
+                    dot('rock', cx + R + 90, cy - 80, 14, 0.9);
+                }
+                g.append('circle').attr('class', 'ring').attr('cx', cx).attr('cy', cy).attr('r', R).attr('opacity', 0.6);
+            }
+        }
+
+        // The list shows what is on the map for the current stop.
+        function drawEventList(current, total) {
+            document.getElementById('eventCount').textContent =
+                `${current.length} in this period · ${total} in total`;
+            const list = document.getElementById('eventList');
             list.textContent = '';
-            if (writings.length === 0) {
+            if (current.length === 0) {
                 const li = document.createElement('li');
-                li.style.cursor = 'default';
-                li.style.color = 'var(--muted)';
-                li.textContent = 'Nothing written yet.';
+                li.className = 'empty';
+                li.textContent = total ? 'No events in this period. Use Earlier and Later to jump to one.' : 'No events yet.';
                 list.appendChild(li);
                 return;
             }
-            for (const w of writings) {
+            for (const ev of current) {
                 const li = document.createElement('li');
-                if (current.includes(w)) li.className = 'current';
+                if (selectedIds.has(ev.id)) li.className = 'selected';
                 const when = document.createElement('span');
                 when.className = 'when';
-                when.textContent = whenText(w) + (w.place ? ` · ${w.place}` : '');
+                when.textContent = [whenText(ev), ev.place, ev.country].filter(Boolean).join(' · ');
                 li.appendChild(when);
-                const title = document.createElement(w.link ? 'a' : 'span');
-                title.textContent = w.title || '';
-                if (w.link) title.href = w.link;
+                const title = document.createElement(ev.link ? 'a' : 'span');
+                title.textContent = ev.title;
+                if (ev.link) title.href = ev.link;
                 li.appendChild(title);
-                if (w.description) {
-                    const p = document.createElement('p');
-                    p.textContent = w.description;
-                    li.appendChild(p);
+                const source = document.createElement('a');
+                source.className = 'source';
+                source.href = ev.source;
+                source.target = '_blank';
+                source.rel = 'noopener noreferrer';
+                source.textContent = 'source';
+                li.appendChild(source);
+                const p = document.createElement('p');
+                p.textContent = ev.description;
+                li.appendChild(p);
+                if (ev.uncertainty) {
+                    const u = document.createElement('p');
+                    u.className = 'uncertainty';
+                    u.textContent = ev.uncertainty;
+                    li.appendChild(u);
                 }
-                // Clicking a row (not its link) moves the map to that time.
-                li.addEventListener('click', e => {
-                    if (e.target.closest('a')) return;
-                    showIndex(indexForYear(w['year-from']));
-                });
                 list.appendChild(li);
             }
         }
 
-        // Tooltip for polities and pins.
+        // Jump to the nearest earlier or later stop that has an event.
+        function jumpToEvent(direction) {
+            const stops = [...new Set(filteredEvents().map(ev => indexForYear(ev['year-from'])))].sort((a, b) => a - b);
+            const target = direction > 0 ? stops.find(i => i > currentIndex) : stops.filter(i => i < currentIndex).pop();
+            if (target === undefined) return;
+            setPlaying(false);
+            showIndex(target);
+        }
+        document.getElementById('prevEvent').addEventListener('click', () => jumpToEvent(-1));
+        document.getElementById('nextEvent').addEventListener('click', () => jumpToEvent(1));
+        document.getElementById('countryFilter').addEventListener('change', e => {
+            countryFilter = e.target.value;
+            drawEvents();
+        });
+
+        // Clicking a country zooms in on it and lists its events beside it.
+        // The selection is kept by name, because the shapes change from year
+        // to year.
+        const card = document.getElementById('countryCard');
+        let selectedCountry = null;
+        let selectedPoint = null; // a spot inside it, to find it again under another name
+
+        const politiesNamed = name => d3.select('#polities').selectAll('path').filter(f => nameOf(f) === name);
+        const containsEvent = (nodes, ev) => {
+            const [x, y] = projection([ev.lon, ev.lat]);
+            return nodes.some(node => node.isPointInFill(new DOMPoint(x, y)));
+        };
+
+        // Which event countries a map name stands for (see COUNTRY_ALIASES).
+        function countriesFor(name, nodes) {
+            const lower = name.toLowerCase();
+            const found = [];
+            for (const [country, list] of d3.group(events.filter(ev => !ev.deep), ev => ev.country)) {
+                const word = new RegExp(`(^|[^a-z])${country.toLowerCase().replace(/[^a-z ]/g, '.')}([^a-z]|$)`);
+                const named = word.test(lower)
+                    || (COUNTRY_ALIASES[country] || []).includes(name)
+                    || list.some(ev => ev.polity === name);
+                const inside = list.filter(ev => containsEvent(nodes, ev)).length;
+                if (named || inside * 2 > list.length) found.push(country);
+            }
+            return found;
+        }
+
+        // 19200210 -> "10 Feb 1920"
+        function formatDay(day) {
+            const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][Math.floor(day / 100) % 100 - 1];
+            return `${day % 100} ${month} ${Math.floor(day / 10000)}`;
+        }
+
+        function eventLinks(ev) {
+            const frag = document.createDocumentFragment();
+            const title = document.createElement(ev.link ? 'a' : 'span');
+            title.textContent = ev.title;
+            if (ev.link) title.href = ev.link;
+            frag.appendChild(title);
+            const source = document.createElement('a');
+            source.className = 'source';
+            source.href = ev.source;
+            source.target = '_blank';
+            source.rel = 'noopener noreferrer';
+            source.textContent = 'source';
+            frag.appendChild(source);
+            return frag;
+        }
+
+        function drawCountryCard(name, selection) {
+            const nodes = selection.nodes();
+            const feature = selection.datum();
+            const countries = countriesFor(name, nodes);
+            const here = events.filter(ev => !ev.deep && inPeriod(ev, currentIndex)
+                && (countries.includes(ev.country) || containsEvent(nodes, ev)));
+            const others = events.filter(ev => countries.includes(ev.country) && !inPeriod(ev, currentIndex));
+
+            card.textContent = '';
+            const close = document.createElement('button');
+            close.type = 'button';
+            close.className = 'close';
+            close.setAttribute('aria-label', 'Close');
+            close.textContent = '×';
+            close.addEventListener('click', () => selectCountry(null));
+            card.appendChild(close);
+
+            const h2 = document.createElement('h2');
+            h2.textContent = name;
+            card.appendChild(h2);
+            const meta = [];
+            if (ownerOf(feature) !== name) meta.push(`Under ${ownerOf(feature)}`);
+            if (feature.properties.dated) {
+                const { s, e } = feature.properties;
+                const from = Math.floor(s / 10000) === CSHAPES_FROM && s % 10000 === 101 ? `${CSHAPES_FROM} or earlier` : formatDay(s);
+                const to = Math.floor(e / 10000) === CSHAPES_TO ? `${CSHAPES_TO} or later` : formatDay(e);
+                meta.push(`These borders: ${from} to ${to}`);
+            }
+            for (const line of meta) {
+                const span = document.createElement('span');
+                span.className = 'meta';
+                span.textContent = line;
+                card.appendChild(span);
+            }
+
+            const heading = text => {
+                const h3 = document.createElement('h3');
+                h3.textContent = text;
+                card.appendChild(h3);
+            };
+            heading(`${formatYear(YEARS[currentIndex])} · ${here.length} ${here.length === 1 ? 'event' : 'events'}`);
+            if (here.length) {
+                const ul = document.createElement('ul');
+                for (const ev of here) {
+                    const li = document.createElement('li');
+                    const when = document.createElement('span');
+                    when.className = 'meta';
+                    when.textContent = [whenText(ev), ev.place].filter(Boolean).join(' · ');
+                    li.appendChild(when);
+                    li.appendChild(eventLinks(ev));
+                    const p = document.createElement('p');
+                    p.textContent = ev.description;
+                    li.appendChild(p);
+                    ul.appendChild(li);
+                }
+                card.appendChild(ul);
+            }
+            if (others.length) {
+                heading(`Other years · ${countries.join(', ')}`);
+                const ul = document.createElement('ul');
+                for (const ev of others) {
+                    const li = document.createElement('li');
+                    const jump = document.createElement('button');
+                    jump.type = 'button';
+                    jump.className = 'jump';
+                    const when = document.createElement('span');
+                    when.className = 'meta';
+                    when.textContent = whenText(ev);
+                    jump.appendChild(when);
+                    jump.appendChild(document.createTextNode(ev.title));
+                    jump.addEventListener('click', () => goToEvent(ev));
+                    li.appendChild(jump);
+                    ul.appendChild(li);
+                }
+                card.appendChild(ul);
+            } else if (!here.length) {
+                const p = document.createElement('span');
+                p.className = 'meta';
+                p.textContent = 'No events here yet.';
+                card.appendChild(p);
+            }
+            card.hidden = false;
+        }
+
+        // A point inside the country's largest landmass: its centre if that is
+        // on land, otherwise the first spot on land along the same latitude.
+        function pointInside(name) {
+            const selection = politiesNamed(name);
+            let best = null;
+            for (const f of selection.data()) {
+                const anchor = anchorOf(f);
+                if (anchor.bounds && (!best || anchor.area > best.area)) best = anchor;
+            }
+            if (!best) return null;
+            const [[x0], [x1]] = best.bounds;
+            const tries = [best.at[0]];
+            for (let n = 1; n < 20; n++) tries.push(x0 + (x1 - x0) * n / 20);
+            const nodes = selection.nodes();
+            for (const x of tries) {
+                const point = new DOMPoint(x, best.at[1]);
+                if (nodes.some(node => node.isPointInFill(point))) return point;
+            }
+            return null;
+        }
+
+        // Re-applies the selection to whatever shapes are on the map now.
+        function refreshCountry() {
+            let selection = selectedCountry ? politiesNamed(selectedCountry) : null;
+            if (selection && selection.empty() && selectedPoint) {
+                // No country of that name in this year ("Japan" is "Imperial
+                // Japan" in 1880): follow whoever holds the same spot.
+                const holder = d3.select('#polities').selectAll('path.named')
+                    .filter(function () { return this.isPointInFill(selectedPoint); });
+                if (!holder.empty()) {
+                    selectedCountry = nameOf(holder.datum());
+                    selection = politiesNamed(selectedCountry);
+                }
+            }
+            if (!selection || selection.empty()) {
+                selectedCountry = null;
+                selectedPoint = null;
+                d3.select('#polities').classed('has-selection', false).selectAll('path').classed('selected', false);
+                card.hidden = true;
+                return;
+            }
+            d3.select('#polities').classed('has-selection', true)
+                .selectAll('path').classed('selected', f => nameOf(f) === selectedCountry);
+            drawCountryCard(selectedCountry, selection);
+        }
+
+        // Fits the country's largest landmass into the part of the map the card
+        // does not cover.
+        function zoomToCountry(name) {
+            let best = null;
+            for (const f of politiesNamed(name).data()) {
+                const anchor = anchorOf(f);
+                if (anchor.bounds && (!best || anchor.area > best.area)) best = anchor;
+            }
+            if (!best) return;
+            const [[x0, y0], [x1, y1]] = best.bounds;
+            const roomW = window.matchMedia('(max-width: 720px)').matches ? W : W * 0.64;
+            // Even the largest countries get a little closer.
+            const k = Math.max(1.5, Math.min(16, 0.6 * Math.min(roomW / (x1 - x0), H / (y1 - y0))));
+            const target = d3.zoomIdentity.translate(roomW / 2 - k * (x0 + x1) / 2, H / 2 - k * (y0 + y1) / 2).scale(k);
+            svg.transition().duration(600).call(zoom.transform, target);
+        }
+
+        function selectCountry(name) {
+            const had = selectedCountry;
+            selectedCountry = name;
+            selectedPoint = name ? pointInside(name) : null;
+            refreshCountry();
+            if (selectedCountry) zoomToCountry(selectedCountry);
+            else if (had) svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity);
+        }
+
+        // From the card: go to an event's year and select whichever country
+        // holds its location then.
+        function goToEvent(ev) {
+            setPlaying(false);
+            const i = indexForYear(ev['year-from']);
+            showIndex(i).then(() => {
+                if (currentIndex !== i) return;
+                selectedIds = new Set([ev.id]);
+                drawEvents();
+                const holder = d3.select('#polities').selectAll('path.named')
+                    .filter(function () { return containsEvent([this], ev); });
+                if (!holder.empty()) selectCountry(nameOf(holder.datum()));
+                else refreshCountry();
+            });
+        }
+
+        // d3-zoom swallows the click that ends a drag, so this only sees real clicks.
+        svg.on('click', e => {
+            // The deep-time continents are not countries; their notes are already up.
+            if (isDeep(YEARS[currentIndex])) return;
+            const d = d3.select(e.target).datum();
+            const name = e.target.closest('#polities') && d ? nameOf(d) : null;
+            if (name) selectCountry(name === selectedCountry ? null : name);
+            else if (selectedCountry) selectCountry(null);
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && selectedCountry) selectCountry(null);
+        });
+
+        // Tooltip for polities.
         svg.on('pointermove', e => {
             const d = d3.select(e.target).datum();
-            let title = '', sub = '';
-            if (e.target.closest('#pins')) {
-                title = d.title || '';
-                sub = whenText(d) + (d.place ? ` · ${d.place}` : '');
-            } else if (e.target.closest('#polities') && nameOf(d)) {
+            let title = '', lines = [];
+            if (e.target.closest('#polities') && nameOf(d)) {
                 title = nameOf(d);
-                if (ownerOf(d) !== title) sub = ownerOf(d);
+                if (ownerOf(d) !== title) lines = [ownerOf(d)];
             }
             if (!title) { tooltip.hidden = true; return; }
             tooltip.textContent = title;
-            if (sub) {
+            for (const line of lines) {
                 const small = document.createElement('small');
-                small.textContent = sub;
+                small.textContent = line;
                 tooltip.appendChild(small);
             }
             tooltip.hidden = false;
             const box = document.getElementById('mapWrap').getBoundingClientRect();
             const x = e.clientX - box.left, y = e.clientY - box.top;
-            tooltip.style.left = Math.min(x + 12, box.width - tooltip.offsetWidth - 4) + 'px';
+            tooltip.style.left = Math.max(4, Math.min(x + 12, box.width - tooltip.offsetWidth - 4)) + 'px';
             tooltip.style.top = Math.max(y - tooltip.offsetHeight - 8, 4) + 'px';
         });
         svg.on('pointerleave', () => { tooltip.hidden = true; });
@@ -751,12 +1474,46 @@
             ticks.appendChild(span);
         }
 
-        fetch(WRITINGS_PATH)
-            .then(r => r.ok ? r.json() : [])
-            .catch(() => [])
+        // Loads a list.json. If it's a manifest of the form
+        // {"parts": ["japan.json", ...]}, fetches all parts and concatenates
+        // them in order. Otherwise returns the parsed JSON as-is.
+        async function loadList(path) {
+            const res = await fetch(path);
+            if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+            const data = await res.json();
+            if (data && !Array.isArray(data) && Array.isArray(data.parts)) {
+                const dir = path.substring(0, path.lastIndexOf('/') + 1);
+                const chunks = await Promise.all(
+                    data.parts.map(p => fetch(dir + p).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load ${dir + p}: ${r.status}`);
+                        return r.json();
+                    }))
+                );
+                return chunks.flat();
+            }
+            return data;
+        }
+
+        loadList(EVENTS_PATH)
+            .catch(err => { console.error(err); return []; })
             .then(list => {
-                writings = [...list].sort((a, b) => a['year-from'] - b['year-from']);
-                drawWritings();
+                // Deep-time events are dated in millions of years ago and belong
+                // to a scope ("Universe", "Life") instead of a country.
+                for (const ev of list) {
+                    if (ev.ma === undefined) continue;
+                    ev.deep = true;
+                    ev['year-from'] = -ev.ma * MA;
+                    ev['year-to'] = -(ev['ma-to'] ?? ev.ma) * MA;
+                    ev.country = ev.scope;
+                }
+                events = [...list].sort((a, b) => a['year-from'] - b['year-from']);
+                const select = document.getElementById('countryFilter');
+                const names = kind => [...new Set(events.filter(ev => !!ev.deep === kind).map(ev => ev.country))];
+                for (const country of [...names(true), ...names(false).sort()]) {
+                    select.appendChild(new Option(country, country));
+                }
+                drawEvents();
+                refreshCountry();
             });
 
         // history.html#1920 opens the map at that year.
