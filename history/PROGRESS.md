@@ -23,6 +23,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Austria | 24 | 976 to 1995 | seeded | The sieges of Vienna (1529, 1683) are in the Turkey file. |
 | Switzerland | 18 | 1291 to 2002 | seeded | The Peace of Westphalia (1648) is in the Germany file. |
 | Finland | 28 | 1249 to 1995 | seeded | Nothing after 1995 (NATO, 2023, is past the map's last year). |
+| Israel | 41 | 1000 BCE to 2005 | seeded | Includes Jewish history outside the land (expulsions, emancipation, the Holocaust). Biblical dates are marked traditional. |
 | Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
@@ -51,11 +52,10 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-1. Israel and Jewish history
-2. Italy (Rome, Venice)
-3. United States
-4. United Kingdom, France
-5. Korea, India
+1. Italy (Rome, Venice)
+2. United States
+3. United Kingdom, France
+4. Korea, India
 
 Gaps in the seeded countries:
 
@@ -197,13 +197,13 @@ jumps to their year. The map's names are not the event files' names ("Turkey
 (Ottoman Empire)", "Holy Roman Empire"), so an event country is matched when:
 
 - the map's name contains it as a word,
-- an event's `polity` is exactly the map's name (so set `polity` to the name
-  the map uses for that period where you can),
 - more than half of the country's events happened inside the clicked borders,
 - or the name is listed under `COUNTRY_ALIASES` in `history.html`.
 
 Events of the current stop that happened inside the borders are shown whatever
-country they belong to.
+country they belong to. An event whose `polity` is exactly the map's name is
+also shown on that card, alone, without bringing in the rest of its country:
+clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Ideas, not started
 
@@ -216,6 +216,11 @@ country they belong to.
 
 ## Log
 
+- 2026-10-07 (night): Seeded Israel and Jewish history (41). A polity match on
+  a country card now brings in only the events with that polity. The source
+  check now ignores citations, which caught four dates that were not in the
+  page text; three were corrected (Michael Romanov's election, Turkey joining
+  NATO, the French emancipation decree).
 - 2026-10-07 (night): Seeded Austria (24), Switzerland (18) and Finland (28).
 - 2026-10-07 (night): Turkey extended to the whole Ottoman period and the
   republic (41).

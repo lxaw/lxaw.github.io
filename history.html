@@ -1170,8 +1170,7 @@
             for (const [country, list] of d3.group(events.filter(ev => !ev.deep), ev => ev.country)) {
                 const word = new RegExp(`(^|[^a-z])${country.toLowerCase().replace(/[^a-z ]/g, '.')}([^a-z]|$)`);
                 const named = word.test(lower)
-                    || (COUNTRY_ALIASES[country] || []).includes(name)
-                    || list.some(ev => ev.polity === name);
+                    || (COUNTRY_ALIASES[country] || []).includes(name);
                 const inside = list.filter(ev => containsEvent(nodes, ev)).length;
                 if (named || inside * 2 > list.length) found.push(country);
             }
@@ -1204,9 +1203,12 @@
             const nodes = selection.nodes();
             const feature = selection.datum();
             const countries = countriesFor(name, nodes);
+            // An event whose polity is this map name belongs here even when the
+            // rest of its country does not (Taiwan's years under Japan).
+            const belongs = ev => !ev.deep && (countries.includes(ev.country) || ev.polity === name);
             const here = events.filter(ev => !ev.deep && inPeriod(ev, currentIndex)
-                && (countries.includes(ev.country) || containsEvent(nodes, ev)));
-            const others = events.filter(ev => countries.includes(ev.country) && !inPeriod(ev, currentIndex));
+                && (belongs(ev) || containsEvent(nodes, ev)));
+            const others = events.filter(ev => belongs(ev) && !inPeriod(ev, currentIndex));
 
             card.textContent = '';
             const close = document.createElement('button');
