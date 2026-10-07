@@ -147,6 +147,39 @@
             color: var(--text);
         }
 
+        /* styles.css sizes column 6 as the description and column 7 as a
+           narrow link column; here column 6 is tags and column 7 is notes. */
+        #bookTable th:nth-child(6),
+        #bookTable td.tags {
+            min-width: 130px;
+            max-width: 170px;
+            overflow-wrap: normal;
+        }
+
+        #bookTable th:nth-child(7),
+        #bookTable td.desc {
+            min-width: 460px;
+            max-width: none;
+        }
+
+        .tag {
+            display: inline-block;
+            margin: 0 4px 4px 0;
+            padding: 1px 6px;
+            border: 1px solid var(--hair);
+            font-size: 12px;
+            color: var(--muted);
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .tag:hover,
+        .tag.active {
+            color: var(--accent);
+            border-color: var(--accent-underline);
+            background: var(--accent-soft);
+        }
+
         .page-header {
             margin-bottom: 16px;
         }
@@ -176,6 +209,7 @@
         <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span>
         <a href="books_read.html">Books</a>
         <a href="papers_read.html">Papers</a>
+        <a href="history.html">History</a>
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
@@ -196,6 +230,7 @@
             <input type="text" id="titleSearch" placeholder="Title" onkeyup="applyFilters()">
             <input type="text" id="authorSearch" placeholder="Author" onkeyup="applyFilters()">
             <input type="text" id="yearSearch" placeholder="Year" onkeyup="applyFilters()">
+            <input type="text" id="tagSearch" placeholder="Tags (comma-separated)" onkeyup="applyFilters()">
             <input type="text" id="descriptionSearch" placeholder="Description" onkeyup="applyFilters()">
 
             <button class="btn" type="button" onclick="toggleFilters()">Filters</button>
@@ -223,11 +258,12 @@
                 <th onclick="sortTable(2)">Date</th>
                 <th onclick="sortTable(3)">Pages</th>
                 <th onclick="sortTable(4)">Rating</th>
-                <th onclick="sortTable(5)">Notes</th>
+                <th onclick="sortTable(5)">Tags</th>
+                <th onclick="sortTable(6)">Notes</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td colspan="6">Loading books...</td></tr>
+            <tr><td colspan="7">Loading books...</td></tr>
         </tbody>
     </table>
     </main>
@@ -268,7 +304,7 @@
             .catch(error => {
                 console.error('Error loading books:', error);
                 document.querySelector('#bookTable tbody').innerHTML =
-                    '<tr><td colspan="6">Error loading books. Please try again later.</td></tr>';
+                    '<tr><td colspan="7">Error loading books. Please try again later.</td></tr>';
             });
 
         function displayBooks(books) {
@@ -276,9 +312,11 @@
             tbody.innerHTML = '';
 
             if (books.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6">No books found.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7">No books found.</td></tr>';
                 return;
             }
+
+            const activeTags = parseTags(document.getElementById('tagSearch').value);
 
             books.forEach(book => {
                 const row = document.createElement('tr');
@@ -288,17 +326,37 @@
                     <td>${book['date-complete'] || ''}</td>
                     <td>${book['page-count'] || ''}</td>
                     <td>${book.rating || ''}</td>
+                    <td class="tags">${parseTags(book.tags).map(tag =>
+                        `<span class="tag${activeTags.includes(tag) ? ' active' : ''}" data-tag="${tag}">${tag}</span>`
+                    ).join('')}</td>
                     <td class="desc">${book.description || ''}</td>
                 `;
                 tbody.appendChild(row);
             });
         }
 
+        function parseTags(text) {
+            return (text || '').split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+        }
+
+        // Clicking a tag toggles it in the tag search box.
+        document.querySelector('#bookTable tbody').addEventListener('click', e => {
+            const el = e.target.closest('.tag');
+            if (!el) return;
+            const input = document.getElementById('tagSearch');
+            const current = parseTags(input.value);
+            const tag = el.dataset.tag;
+            const next = current.includes(tag) ? current.filter(t => t !== tag) : [...current, tag];
+            input.value = next.join(', ');
+            applyFilters();
+        });
+
         function applyFilters() {
             const titleSearch = document.getElementById('titleSearch').value;
             const authorSearch = document.getElementById('authorSearch').value;
             const yearSearch = document.getElementById('yearSearch').value;
             const descriptionSearch = document.getElementById('descriptionSearch').value;
+            const tagTerms = parseTags(document.getElementById('tagSearch').value);
             const minPages = document.getElementById('minPages').value;
             const maxPages = document.getElementById('maxPages').value;
             const yearFrom = document.getElementById('yearFrom').value;
@@ -320,6 +378,13 @@
                 if (!matchText(book.title, titleSearch)) return false;
                 if (!matchText(book.author, authorSearch)) return false;
                 if (!matchText(book.description, descriptionSearch)) return false;
+
+                // Every term must match a tag from its start, so "fiction"
+                // does not also match "nonfiction".
+                if (tagTerms.length) {
+                    const bookTags = parseTags(book.tags);
+                    if (!tagTerms.every(term => bookTags.some(tag => tag.startsWith(term)))) return false;
+                }
 
                 if (yearSearch) {
                     const dateText = book['date-complete'] || '';
@@ -350,6 +415,7 @@
             document.getElementById('authorSearch').value = '';
             document.getElementById('yearSearch').value = '';
             document.getElementById('descriptionSearch').value = '';
+            document.getElementById('tagSearch').value = '';
             document.getElementById('minPages').value = '';
             document.getElementById('maxPages').value = '';
             document.getElementById('yearFrom').value = '';
@@ -386,7 +452,7 @@
             const isAsc = sortDirection[columnIndex] !== 'asc';
             sortDirection[columnIndex] = isAsc ? 'asc' : 'desc';
 
-            const columnMap = ['title', 'author', 'date-complete', 'page-count', 'rating', 'description'];
+            const columnMap = ['title', 'author', 'date-complete', 'page-count', 'rating', 'tags', 'description'];
             const sortKey = columnMap[columnIndex];
 
             filteredBooks.sort((a, b) => {

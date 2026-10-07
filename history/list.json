@@ -1,0 +1,103 @@
+[
+  {
+    "title": "Armistice of Mudros",
+    "date": "30 Oct 1918",
+    "year-from": 1918,
+    "place": "Mudros, Lemnos",
+    "lat": 39.87,
+    "lon": 25.27,
+    "description": "The Ottoman Empire leaves the First World War and opens the Straits to the Allies.",
+    "link": "history/end-of-the-ottoman-empire.html#mudros"
+  },
+  {
+    "title": "Allied occupation of Constantinople",
+    "date": "13 Nov 1918 – 4 Oct 1923",
+    "year-from": 1918,
+    "year-to": 1923,
+    "place": "Constantinople",
+    "lat": 41.01,
+    "lon": 28.98,
+    "description": "Allied forces enter the capital two weeks after the armistice and occupy it formally in March 1920.",
+    "link": "history/end-of-the-ottoman-empire.html#occupation"
+  },
+  {
+    "title": "Greek landing at Smyrna",
+    "date": "15 May 1919",
+    "year-from": 1919,
+    "place": "Smyrna (İzmir)",
+    "lat": 38.42,
+    "lon": 27.14,
+    "description": "Greek troops land with Allied backing, starting the Greco-Turkish War.",
+    "link": "history/end-of-the-ottoman-empire.html#smyrna"
+  },
+  {
+    "title": "Mustafa Kemal lands at Samsun",
+    "date": "19 May 1919",
+    "year-from": 1919,
+    "place": "Samsun",
+    "lat": 41.29,
+    "lon": 36.33,
+    "description": "The conventional starting point of the Turkish national movement.",
+    "link": "history/end-of-the-ottoman-empire.html#samsun"
+  },
+  {
+    "title": "Treaty of Sèvres",
+    "date": "10 Aug 1920",
+    "year-from": 1920,
+    "place": "Sèvres, France",
+    "lat": 48.82,
+    "lon": 2.21,
+    "description": "The sultan's government signs a partition of the empire that is never ratified.",
+    "link": "history/end-of-the-ottoman-empire.html#sevres"
+  },
+  {
+    "title": "Battle of the Sakarya",
+    "date": "23 Aug – 13 Sep 1921",
+    "year-from": 1921,
+    "place": "Sakarya River, near Polatlı",
+    "lat": 39.58,
+    "lon": 32.15,
+    "description": "The Greek advance on Ankara is stopped.",
+    "link": "history/end-of-the-ottoman-empire.html#sakarya"
+  },
+  {
+    "title": "Battle of Dumlupınar",
+    "date": "26 – 30 Aug 1922",
+    "year-from": 1922,
+    "place": "Dumlupınar",
+    "lat": 38.86,
+    "lon": 29.98,
+    "description": "The Great Offensive breaks the Greek army in Anatolia.",
+    "link": "history/end-of-the-ottoman-empire.html#dumlupinar"
+  },
+  {
+    "title": "Armistice of Mudanya",
+    "date": "11 Oct 1922",
+    "year-from": 1922,
+    "place": "Mudanya",
+    "lat": 40.375,
+    "lon": 28.88,
+    "description": "The Allies concede Eastern Thrace and Constantinople to the Ankara government.",
+    "link": "history/end-of-the-ottoman-empire.html#mudanya"
+  },
+  {
+    "title": "Abolition of the sultanate",
+    "date": "1 Nov 1922",
+    "year-from": 1922,
+    "place": "Ankara",
+    "lat": 39.94,
+    "lon": 32.85,
+    "description": "The Grand National Assembly ends the Ottoman monarchy after roughly six centuries.",
+    "link": "history/end-of-the-ottoman-empire.html#sultanate"
+  },
+  {
+    "title": "Treaty of Lausanne",
+    "date": "24 Jul 1923",
+    "year-from": 1923,
+    "place": "Lausanne, Switzerland",
+    "lat": 46.52,
+    "lon": 6.63,
+    "description": "Replaces Sèvres and sets the borders of the new Turkish state.",
+    "link": "history/end-of-the-ottoman-empire.html#lausanne"
+  }
+]

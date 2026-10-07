@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .map-wrap {
+            position: relative;
+            border: 1px solid var(--hair);
+        }
+
+        #map {
+            display: block;
+            width: 100%;
+            height: auto;
+            cursor: grab;
+            touch-action: none;
+        }
+
+        #map:active {
+            cursor: grabbing;
+        }
+
+        .sphere {
+            fill: var(--hover);
+            stroke: var(--hair);
+        }
+
+        .polity {
+            stroke: var(--bg);
+            stroke-width: 0.6;
+            vector-effect: non-scaling-stroke;
+            fill-opacity: 0.6;
+        }
+
+        .polity.unnamed {
+            fill: var(--hair);
+            fill-opacity: 1;
+        }
+
+        .polity.named:hover {
+            fill-opacity: 0.9;
+        }
+
+        #labels text {
+            fill: var(--text);
+            text-anchor: middle;
+            dominant-baseline: middle;
+            pointer-events: none;
+            paint-order: stroke;
+            stroke: var(--bg);
+            stroke-linejoin: round;
+        }
+
+        #pins circle {
+            fill: var(--accent);
+            stroke: var(--bg);
+            vector-effect: non-scaling-stroke;
+            cursor: pointer;
+        }
+
+        .map-tooltip {
+            position: absolute;
+            pointer-events: none;
+            padding: 4px 8px;
+            font-size: 12px;
+            line-height: 1.4;
+            background: var(--bg-elevated);
+            border: 1px solid var(--hair);
+            color: var(--text);
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .map-tooltip small {
+            display: block;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            right: 10px;
+            pointer-events: none;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        #eraLabel {
+            font-size: 15px;
+            font-variant: small-caps;
+            letter-spacing: 0.06em;
+            color: var(--text);
+        }
+
+        #mapNote {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--muted);
+            pointer-events: none;
+        }
+
+        /* Timeline */
+        .timeline {
+            padding: 12px 0 0 0;
+        }
+
+        .timeline-head {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+        }
+
+        #periodLabel {
+            flex: 1;
+        }
+
+        .timeline-head button,
+        .timeline-head select {
+            border: 1px solid var(--hair);
+            border-radius: 0;
+            background: transparent;
+            padding: 5px 10px;
+            font: inherit;
+            font-size: 13px;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .timeline-head button {
+            min-width: 64px;
+        }
+
+        .timeline-head button:hover,
+        .timeline-head button[aria-pressed="true"] {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        #yearLabel {
+            font-size: 20px;
+            font-variant: small-caps;
+            letter-spacing: 0.04em;
+        }
+
+        #timeSlider {
+            display: block;
+            width: 100%;
+            margin: 8px 0 0 0;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .ticks {
+            position: relative;
+            height: 18px;
+            margin: 2px 8px 0 8px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .ticks span {
+            position: absolute;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .ticks span:first-child {
+            transform: none;
+        }
+
+        .ticks span:last-child {
+            transform: translateX(-100%);
+        }
+
+        .credit {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--muted);
+            text-align: left;
+        }
+
+        /* Writings list */
+        #writingList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #writingList li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--hair2);
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #writingList li.current .when {
+            color: var(--accent);
+        }
+
+        #writingList .when {
+            display: block;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        #writingList p {
+            margin: 2px 0 0 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 720px) {
+            .ticks span.minor {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span>
+        <a href="books_read.html">Books</a>
+        <a href="papers_read.html">Papers</a>
+        <a href="history.html">History</a>
+        <a href="personal_interests.html">Personal</a>
+    </nav>
+    <main>
+        <div class="page-header">
+            <h1>History</h1>
+            <p>Notes on history. I put some pins in the map to events I have read about. This is related to my <a href="books_read.html">books </a>section.</p>
+        </div>
+
+        <section>
+            <div class="map-wrap" id="mapWrap">
+                <svg id="map" viewBox="0 0 960 500" role="img" aria-label="World map of political borders in the selected year">
+                    <g id="mapLayer">
+                        <path class="sphere"></path>
+                        <path id="land" class="polity unnamed" display="none"></path>
+                        <g id="polities"></g>
+                        <g id="labels"></g>
+                        <g id="pins"></g>
+                    </g>
+                </svg>
+                <div class="map-overlay">
+                    <div id="eraLabel"></div>
+                    <div id="mapStatus"></div>
+                </div>
+                <div id="mapNote" hidden>The continents cannot be reliably placed before about 1 billion years ago.</div>
+                <div id="tooltip" class="map-tooltip" hidden></div>
+            </div>
+
+            <div class="timeline" id="timeline">
+                <div class="timeline-head">
+                    <span id="yearLabel"></span>
+                    <small id="periodLabel"></small>
+                    <select id="playSpeed" aria-label="Playback speed">
+                        <option value="1500">Slow</option>
+                        <option value="600" selected>Normal</option>
+                        <option value="250">Fast</option>
+                    </select>
+                    <button type="button" id="playButton" aria-pressed="false">Play</button>
+                </div>
+                <input type="range" id="timeSlider" min="0" step="1" aria-label="Year">
+                <div class="ticks" id="ticks"></div>
+            </div>
+
+            <p class="credit">
+                Borders from 1886 to 2019 are year by year, from
+                <a href="https://icr.ethz.ch/data/cshapes/">CShapes 2.0</a> (ETH Zurich, CC BY-NC-SA 4.0, simplified).
+                Earlier borders are approximate snapshots from
+                <a href="https://github.com/aourednik/historical-basemaps">historical-basemaps</a> (GPL-3.0),
+                starting at 10,000 BCE. Before that, the map shows today's coastlines moved to where plate
+                reconstructions place them (<a href="https://gws.gplates.org/">GPlates Web Service</a>, model of
+                Merdith et al. 2021, CC BY 4.0), not the actual shorelines of the time; geological periods follow
+                the International Chronostratigraphic Chart. Scroll or pinch to zoom, drag to pan.
+            </p>
+        </section>
+
+        <section>
+            <div class="section-title">Pieces</div>
+            <ul id="writingList"></ul>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <script>
+        // Borders come from two sources.
+        // Up to 1880: historical-basemaps snapshots, one GeoJSON file per listed
+        // year (negative = BCE), loaded from a CDN.
+        // 1886 onwards: CShapes 2.0, where every border has exact start and end
+        // dates, so there is a stop for every year. history/cshapes-2.0.topojson
+        // is the original file with shapes simplified to 30% of their points.
+        const BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/';
+        const YEARS = [
+            -3000, -2000, -1500, -1000, -700, -500, -400, -323, -300, -200, -100, -1,
+            100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1279, 1300, 1400,
+            1492, 1500, 1530, 1600, 1650, 1700, 1715, 1783, 1800, 1815, 1878, 1880
+        ];
+        const CSHAPES_PATH = 'history/cshapes-2.0.topojson';
+        const CSHAPES_FROM = 1886, CSHAPES_TO = 2019;
+        for (let y = CSHAPES_FROM; y <= CSHAPES_TO; y++) YEARS.push(y);
+
+        // Deep time, in millions of years ago (Ma), stored as large negative
+        // years so it sorts with everything else. Continental positions exist
+        // for 1000 Ma onwards (history/paleo/<Ma>.json); the earlier stops
+        // have no map, only their place in the geological time scale.
+        const MA = 1e6;
+        const PALEO_FROM = 1000;
+        const PALEO_PATH = 'history/paleo/';
+        const deepTime = [4540, 4000, 2500, 1600];
+        for (let t = PALEO_FROM; t >= 20; t -= 20) deepTime.push(t);
+        deepTime.push(10);
+        // Prehistoric snapshots from the same source as the pre-1880 borders.
+        YEARS.unshift(...deepTime.map(t => -t * MA), -10000, -8000, -4000);
+
+        // Start of each division in Ma: [start, eon, era, period].
+        const GEOLOGIC_TIME = [
+            [4567, 'Hadean', '', ''],
+            [4031, 'Archean', '', ''],
+            [2500, 'Proterozoic', 'Paleoproterozoic', ''],
+            [1600, 'Proterozoic', 'Mesoproterozoic', ''],
+            [1000, 'Proterozoic', 'Neoproterozoic', 'Tonian'],
+            [720, 'Proterozoic', 'Neoproterozoic', 'Cryogenian'],
+            [635, 'Proterozoic', 'Neoproterozoic', 'Ediacaran'],
+            [538.8, 'Phanerozoic', 'Paleozoic', 'Cambrian'],
+            [485.4, 'Phanerozoic', 'Paleozoic', 'Ordovician'],
+            [443.8, 'Phanerozoic', 'Paleozoic', 'Silurian'],
+            [419.2, 'Phanerozoic', 'Paleozoic', 'Devonian'],
+            [358.9, 'Phanerozoic', 'Paleozoic', 'Carboniferous'],
+            [298.9, 'Phanerozoic', 'Paleozoic', 'Permian'],
+            [251.9, 'Phanerozoic', 'Mesozoic', 'Triassic'],
+            [201.4, 'Phanerozoic', 'Mesozoic', 'Jurassic'],
+            [145, 'Phanerozoic', 'Mesozoic', 'Cretaceous'],
+            [66, 'Phanerozoic', 'Cenozoic', 'Paleogene'],
+            [23.03, 'Phanerozoic', 'Cenozoic', 'Neogene'],
+            [2.58, 'Phanerozoic', 'Cenozoic', 'Quaternary']
+        ];
+        // "Jurassic · Mesozoic · Phanerozoic" for a year; empty once history starts.
+        function geologicLabel(year) {
+            if (year >= -3000) return '';
+            const ma = -year / MA;
+            const [, eon, era, period] = GEOLOGIC_TIME.filter(d => d[0] >= ma).pop();
+            return [period, era, eon].filter(Boolean).join(' · ');
+        }
+
+        const TICKS = [
+            [-4540 * MA, '4.5 bya'], [-500 * MA, '500 mya', true], [-200 * MA, '200 mya', true],
+            [-3000, '3000 BCE'], [1000, '1000 CE', true], [1900, '1900'], [1950, '1950'],
+            [2000, '2000', true], [2019, '2019']
+        ]; // [year, label, hidden on narrow screens]
+
+        // Entries in history/list.json look like:
+        //   { "title": "...", "date": "18 Jan 1871", "year-from": 1871, "year-to": 1871,
+        //     "place": "Versailles", "lat": 48.8, "lon": 2.12,
+        //     "description": "...", "link": "history/some-article.html#anchor" }
+        // Each entry is one pin. "year-from"/"year-to" decide when it is on the map
+        // (BCE years are negative); "date" is only the text shown for it.
+        // "date", "year-to", "description" and "link" are optional.
+        const WRITINGS_PATH = 'history/list.json';
+
+        const W = 960, H = 500;
+        const fileFor = y => `world_${y < 0 ? 'bc' + -y : y}.geojson`;
+        function formatYear(y) {
+            if (y <= -MA) {
+                const ma = -y / MA;
+                return ma >= 1000 ? `${ma / 1000} billion years ago` : `${ma} million years ago`;
+            }
+            return y < 0 ? `${(-y).toLocaleString('en-US')} BCE` : `${y} CE`;
+        }
+
+        const svg = d3.select('#map');
+        const layer = d3.select('#mapLayer');
+        const tooltip = document.getElementById('tooltip');
+        const status = document.getElementById('mapStatus');
+        const slider = document.getElementById('timeSlider');
+
+        const projection = d3.geoNaturalEarth1().fitExtent([[4, 4], [W - 4, H - 4]], { type: 'Sphere' });
+        layer.select('.sphere').attr('d', d3.geoPath(projection)({ type: 'Sphere' }));
+
+        // The snapshot polygons have inconsistent winding, which d3's spherical
+        // clipping reads as "everything except this shape". Projecting point by
+        // point treats them as plain planar shapes instead.
+        const path = d3.geoPath(d3.geoTransform({
+            point(lon, lat) {
+                const p = projection([lon, lat]);
+                this.stream.point(p[0], p[1]);
+            }
+        }));
+
+        const nameOf = f => f.properties.NAME;
+        const ownerOf = f => f.properties.SUBJECTO || f.properties.NAME;
+
+        function colorFor(name) {
+            let h = 0;
+            for (const ch of name) h = (h * 31 + ch.codePointAt(0)) % 360;
+            return `hsl(${h} 38% 52%)`;
+        }
+
+        // Shapes are reused from year to year, so projected outlines and label
+        // anchors are worked out once per shape.
+        const outlineCache = new WeakMap();
+        function outlineOf(f) {
+            if (!outlineCache.has(f)) outlineCache.set(f, path(f));
+            return outlineCache.get(f);
+        }
+
+        // A shape's label sits on its largest landmass.
+        const anchorCache = new WeakMap();
+        function anchorOf(f) {
+            if (!anchorCache.has(f)) {
+                let best = { area: 0, at: [NaN, NaN] };
+                for (const coords of f.geometry.type === 'MultiPolygon' ? f.geometry.coordinates : [f.geometry.coordinates]) {
+                    const poly = { type: 'Polygon', coordinates: coords };
+                    const area = path.area(poly);
+                    if (area > best.area) best = { area, at: path.centroid(poly) };
+                }
+                anchorCache.set(f, best);
+            }
+            return anchorCache.get(f);
+        }
+
+        function labelData(features) {
+            const best = new Map();
+            for (const f of features) {
+                const name = nameOf(f);
+                if (!name) continue;
+                const anchor = anchorOf(f);
+                if (!best.has(name) || anchor.area > best.get(name).area) {
+                    best.set(name, { name, area: anchor.area, at: anchor.at });
+                }
+            }
+            return [...best.values()].filter(d => isFinite(d.at[0])).sort((a, b) => b.area - a.area).slice(0, 150);
+        }
+
+        let zoomK = 1;
+        function updateZoomDependent() {
+            d3.selectAll('#labels text')
+                .attr('font-size', 10 / zoomK)
+                .attr('stroke-width', 2.5 / zoomK)
+                .attr('display', d => d.area * zoomK * zoomK > 900 ? null : 'none');
+            d3.selectAll('#pins circle').attr('r', 5 / zoomK);
+        }
+
+        const zoom = d3.zoom()
+            .scaleExtent([1, 16])
+            .translateExtent([[0, 0], [W, H]])
+            .on('zoom', e => {
+                layer.attr('transform', e.transform);
+                zoomK = e.transform.k;
+                updateZoomDependent();
+            });
+        svg.call(zoom);
+
+        function drawMap(geo) {
+            const features = geo.features.filter(f => f.geometry);
+            d3.select('#polities').selectAll('path')
+                .data(features, f => f.key)
+                .join(enter => enter.append('path')
+                    .attr('class', f => nameOf(f) ? 'polity named' : 'polity unnamed')
+                    .attr('d', outlineOf)
+                    .style('fill', f => nameOf(f) ? colorFor(ownerOf(f)) : null));
+
+            d3.select('#labels').selectAll('text')
+                .data(labelData(features))
+                .join('text')
+                .attr('x', d => d.at[0])
+                .attr('y', d => d.at[1])
+                .text(d => d.name);
+            updateZoomDependent();
+        }
+
+        // Snapshots are fetched on demand and kept, so revisiting a year is instant.
+        const cache = new Map();
+        function loadSnapshot(year) {
+            if (!cache.has(year)) {
+                cache.set(year, fetch(BASE + fileFor(year)).then(r => {
+                    if (!r.ok) throw new Error(`Failed to load ${fileFor(year)}: ${r.status}`);
+                    return r.json();
+                }).then(geo => {
+                    geo.features.forEach((f, i) => { f.key = `${year}:${i}`; });
+                    return geo;
+                }).catch(err => { cache.delete(year); throw err; }));
+            }
+            return cache.get(year);
+        }
+
+        // Continental positions for one deep-time stop: a single landmass shape.
+        function loadPaleo(ma) {
+            if (ma > PALEO_FROM) return Promise.resolve({ features: [] });
+            const year = -ma * MA;
+            if (!cache.has(year)) {
+                cache.set(year, fetch(`${PALEO_PATH}${ma}.json`).then(r => {
+                    if (!r.ok) throw new Error(`Failed to load ${PALEO_PATH}${ma}.json: ${r.status}`);
+                    return r.json();
+                }).then(collection => ({
+                    features: collection.geometries.map((geometry, i) =>
+                        ({ type: 'Feature', key: `p${ma}:${i}`, properties: {}, geometry }))
+                })).catch(err => { cache.delete(year); throw err; }));
+            }
+            return cache.get(year);
+        }
+
+        // The dated borders only cover states and their dependencies, so land
+        // nobody claimed would look like sea. A plain modern landmass goes underneath.
+        const LAND_PATH = 'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-50m.json';
+        let landLoaded = false;
+        function showLand(on) {
+            d3.select('#land').attr('display', on ? null : 'none');
+            if (!on || landLoaded) return;
+            landLoaded = true;
+            fetch(LAND_PATH).then(r => r.json()).then(topo => {
+                // This file is wound correctly for d3's spherical path, which also
+                // cuts it cleanly at the date line.
+                d3.select('#land').attr('d', d3.geoPath(projection)(topojson.feature(topo, topo.objects.land)));
+            }).catch(err => { landLoaded = false; console.error(err); });
+        }
+
+        // The dated borders are one file, fetched the first time a modern year is shown.
+        let cshapes;
+        function loadCShapes() {
+            if (!cshapes) {
+                cshapes = fetch(CSHAPES_PATH).then(r => {
+                    if (!r.ok) throw new Error(`Failed to load ${CSHAPES_PATH}: ${r.status}`);
+                    return r.json();
+                }).then(topo => {
+                    const features = topojson.feature(topo, Object.values(topo.objects)[0]).features;
+                    features.forEach((f, i) => {
+                        f.key = `c${i}`;
+                        f.properties.NAME = f.properties.n;
+                    });
+                    return features;
+                }).catch(err => { cshapes = null; throw err; });
+            }
+            return cshapes;
+        }
+
+        // Modern years show the borders in force on 1 July of that year.
+        function loadYear(year) {
+            if (year <= -MA) return loadPaleo(-year / MA);
+            if (year < CSHAPES_FROM) return loadSnapshot(year);
+            const day = year * 10000 + 701;
+            return loadCShapes().then(features => ({
+                features: features.filter(f => f.properties.s <= day && day <= f.properties.e)
+            }));
+        }
+
+        let writings = [];
+        let currentIndex = -1;
+
+        // Resolves once the map for that stop is on screen (or failed to load).
+        function showIndex(i) {
+            i = Math.max(0, Math.min(YEARS.length - 1, i));
+            if (i === currentIndex) return Promise.resolve();
+            currentIndex = i;
+            slider.value = i;
+
+            const year = YEARS[i];
+            const next = YEARS[i + 1];
+            document.getElementById('yearLabel').textContent = formatYear(year);
+            document.getElementById('periodLabel').textContent =
+                year >= CSHAPES_FROM ? 'borders as of 1 July'
+                : year <= -MA ? (year < -PALEO_FROM * MA ? '' : 'continents in their reconstructed positions')
+                : `next snapshot: ${formatYear(next)}`;
+            document.getElementById('eraLabel').textContent = geologicLabel(year);
+            document.getElementById('mapNote').hidden = year >= -PALEO_FROM * MA;
+            slider.setAttribute('aria-valuetext', formatYear(year));
+            status.textContent = 'Loading…';
+            drawWritings();
+
+            return loadYear(year).then(geo => {
+                if (currentIndex !== i) return; // the bar has moved on
+                drawMap(geo);
+                showLand(year >= CSHAPES_FROM);
+                status.textContent = '';
+                // Warm the neighbours so stepping along the bar stays smooth.
+                [i - 1, i + 1].forEach(j => { if (YEARS[j] !== undefined) loadYear(YEARS[j]).catch(() => {}); });
+            }).catch(err => {
+                console.error(err);
+                if (currentIndex === i) status.textContent = 'Could not load this map. Try again later.';
+            });
+        }
+
+        // A piece belongs to a snapshot if its years overlap the stretch from
+        // that snapshot up to the next one.
+        function inPeriod(w, i) {
+            const from = w['year-from'];
+            const to = w['year-to'] ?? from;
+            return from < (YEARS[i + 1] ?? Infinity) && to >= (i === 0 ? -Infinity : YEARS[i]);
+        }
+
+        function indexForYear(year) {
+            let i = 0;
+            while (i + 1 < YEARS.length && YEARS[i + 1] <= year) i++;
+            return i;
+        }
+
+        function whenText(w) {
+            if (w.date) return w.date;
+            const from = w['year-from'];
+            const to = w['year-to'] ?? from;
+            return from === to ? formatYear(from) : `${formatYear(from)} – ${formatYear(to)}`;
+        }
+
+        function drawWritings() {
+            const current = writings.filter(w => inPeriod(w, currentIndex));
+
+            d3.select('#pins').selectAll('circle')
+                .data(current.filter(w => w.lat != null && w.lon != null))
+                .join('circle')
+                .attr('cx', w => projection([w.lon, w.lat])[0])
+                .attr('cy', w => projection([w.lon, w.lat])[1])
+                .on('click', (e, w) => { if (w.link) location.href = w.link; });
+            updateZoomDependent();
+
+            const list = document.getElementById('writingList');
+            list.textContent = '';
+            if (writings.length === 0) {
+                const li = document.createElement('li');
+                li.style.cursor = 'default';
+                li.style.color = 'var(--muted)';
+                li.textContent = 'Nothing written yet.';
+                list.appendChild(li);
+                return;
+            }
+            for (const w of writings) {
+                const li = document.createElement('li');
+                if (current.includes(w)) li.className = 'current';
+                const when = document.createElement('span');
+                when.className = 'when';
+                when.textContent = whenText(w) + (w.place ? ` · ${w.place}` : '');
+                li.appendChild(when);
+                const title = document.createElement(w.link ? 'a' : 'span');
+                title.textContent = w.title || '';
+                if (w.link) title.href = w.link;
+                li.appendChild(title);
+                if (w.description) {
+                    const p = document.createElement('p');
+                    p.textContent = w.description;
+                    li.appendChild(p);
+                }
+                // Clicking a row (not its link) moves the map to that time.
+                li.addEventListener('click', e => {
+                    if (e.target.closest('a')) return;
+                    showIndex(indexForYear(w['year-from']));
+                });
+                list.appendChild(li);
+            }
+        }
+
+        // Tooltip for polities and pins.
+        svg.on('pointermove', e => {
+            const d = d3.select(e.target).datum();
+            let title = '', sub = '';
+            if (e.target.closest('#pins')) {
+                title = d.title || '';
+                sub = whenText(d) + (d.place ? ` · ${d.place}` : '');
+            } else if (e.target.closest('#polities') && nameOf(d)) {
+                title = nameOf(d);
+                if (ownerOf(d) !== title) sub = ownerOf(d);
+            }
+            if (!title) { tooltip.hidden = true; return; }
+            tooltip.textContent = title;
+            if (sub) {
+                const small = document.createElement('small');
+                small.textContent = sub;
+                tooltip.appendChild(small);
+            }
+            tooltip.hidden = false;
+            const box = document.getElementById('mapWrap').getBoundingClientRect();
+            const x = e.clientX - box.left, y = e.clientY - box.top;
+            tooltip.style.left = Math.min(x + 12, box.width - tooltip.offsetWidth - 4) + 'px';
+            tooltip.style.top = Math.max(y - tooltip.offsetHeight - 8, 4) + 'px';
+        });
+        svg.on('pointerleave', () => { tooltip.hidden = true; });
+
+        // Timeline bar: stops are evenly spaced by snapshot, not by year,
+        // so the crowded recent centuries stay usable.
+        slider.max = YEARS.length - 1;
+        let sliderDebounce;
+        slider.addEventListener('input', () => {
+            const i = Number(slider.value);
+            document.getElementById('yearLabel').textContent = formatYear(YEARS[i]);
+            setPlaying(false);
+            clearTimeout(sliderDebounce);
+            sliderDebounce = setTimeout(() => showIndex(i), 60);
+        });
+
+        // Auto-play: step forward one snapshot at a time, waiting for each map
+        // to load before starting the pause, and stop at the latest one.
+        const playButton = document.getElementById('playButton');
+        const playSpeed = document.getElementById('playSpeed');
+        let playing = false;
+        let playTimer;
+
+        function setPlaying(on) {
+            if (on === playing) return;
+            playing = on;
+            clearTimeout(playTimer);
+            playButton.textContent = on ? 'Pause' : 'Play';
+            playButton.setAttribute('aria-pressed', on);
+            if (!on) return;
+            // Pressing play at the end starts over from the beginning.
+            if (currentIndex >= YEARS.length - 1) showIndex(0).then(queuePlayStep);
+            else queuePlayStep();
+        }
+
+        function queuePlayStep() {
+            if (!playing) return;
+            clearTimeout(playTimer);
+            playTimer = setTimeout(() => {
+                if (!playing) return;
+                showIndex(currentIndex + 1).then(() => {
+                    if (currentIndex >= YEARS.length - 1) setPlaying(false);
+                    else queuePlayStep();
+                });
+            }, Number(playSpeed.value));
+        }
+
+        playButton.addEventListener('click', () => setPlaying(!playing));
+        playSpeed.addEventListener('change', queuePlayStep);
+
+        // Scrolling over the bar steps through time.
+        let lastWheel = 0;
+        document.getElementById('timeline').addEventListener('wheel', e => {
+            e.preventDefault();
+            const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+            if (!delta || e.timeStamp - lastWheel < 80) return;
+            lastWheel = e.timeStamp;
+            setPlaying(false);
+            showIndex(currentIndex + Math.sign(delta));
+        }, { passive: false });
+
+        const ticks = document.getElementById('ticks');
+        for (const [y, label, minor] of TICKS) {
+            const span = document.createElement('span');
+            span.textContent = label;
+            span.style.left = (YEARS.indexOf(y) / (YEARS.length - 1) * 100) + '%';
+            if (minor) span.className = 'minor';
+            ticks.appendChild(span);
+        }
+
+        fetch(WRITINGS_PATH)
+            .then(r => r.ok ? r.json() : [])
+            .catch(() => [])
+            .then(list => {
+                writings = [...list].sort((a, b) => a['year-from'] - b['year-from']);
+                drawWritings();
+            });
+
+        // history.html#1920 opens the map at that year.
+        const hashYear = /^#-?\d+$/.test(location.hash) ? Number(location.hash.slice(1)) : null;
+        showIndex(hashYear === null ? YEARS.length - 1 : indexForYear(hashYear));
+    </script>
+</body>
+</html>

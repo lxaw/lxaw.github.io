@@ -144,12 +144,11 @@ def generate_html(json_file_path, output_file_path):
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> ·
-        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span> ·
-        <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> ·
-        <a href="https://github.com/lxaw">GitHub</a> ·
-        <a href="books_read.html">Books</a> ·
-        <a href="papers_read.html">Papers</a> ·
+        <a href="index.html">Home</a>
+        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span>
+        <a href="books_read.html">Books</a>
+        <a href="papers_read.html">Papers</a>
+        <a href="history.html">History</a>
         <a href="personal_interests.html">Personal</a>
     </nav>
     <main>
