@@ -20,6 +20,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 | China | 19 | 221 BCE to 1997 | seeded | |
 | Germany | 20 | 9 to 1990 | seeded | |
 | Russia | 23 | 862 to 1991 | seeded | Dates before 1918 are New Style unless marked. |
+| Taiwan | 23 | 1624 to 2014 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
 
 Deep time (see the section below); the span is in millions of years ago:
 
@@ -47,14 +48,13 @@ Status values:
 
 In rough order, following the reading list on the Books page:
 
-1. Taiwan
-2. Austria and Switzerland
-3. Finland
-4. Israel and Jewish history
-5. Italy (Rome, Venice)
-6. United States
-7. United Kingdom, France
-8. Korea, India
+1. Austria and Switzerland
+2. Finland
+3. Israel and Jewish history
+4. Italy (Rome, Venice)
+5. United States
+6. United Kingdom, France
+7. Korea, India
 
 Gaps in the seeded countries:
 
@@ -215,6 +215,9 @@ country they belong to.
 
 ## Log
 
+- 2026-10-07 (night): Seeded Taiwan (23). From this batch on, a script checks
+  that each source page exists and that the event's year and day appear in
+  its text; that is weaker than reading the page, so the status stays seeded.
 - 2026-10-07 (evening): Pins removed from the map for now. Deep-time land
   coloured and labelled by present-day region, with a notes card beside it.
 - 2026-10-07 (later): Clicking a country zooms in and shows its events on a
