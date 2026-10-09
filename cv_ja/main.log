@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.29)  9 OCT 2026 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.29)  9 OCT 2026 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,10 +844,10 @@ c/lm/lmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc
 10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></us
 r/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texl
 ive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (2 pages, 701242 bytes).
+Output written on main.pdf (2 pages, 701271 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 424 compressed objects within 5 object streams
+ 664 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
  23 named destinations out of 1000 (max. 500000)
  18773 words of extra memory for PDF output out of 20736 (max. 10000000)
 
