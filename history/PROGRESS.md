@@ -124,6 +124,71 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Venezuela | 30 | 1498 to 2019 | seeded | |
 | Yemen | 30 | 685 BCE to 2017 | seeded | |
 | Zimbabwe | 25 | 1300 to 2017 | seeded | |
+| Bahamas | 18 | 1648 to 2019 | seeded | Columbus's first landfall (1492) is in the Spain file. |
+| Bahrain | 18 | 2300 BCE to 2019 | seeded | |
+| Barbados | 18 | 1625 to 2018 | seeded | |
+| Belize | 18 | 1200 BCE to 2019 | seeded | |
+| Benin | 22 | 1600 to 2019 | seeded | |
+| Bhutan | 21 | 747 to 2008 | seeded | Standing fail: Guru Rinpoche (about 747; the source page says 8th century). |
+| Botswana | 23 | 1600 to 2019 | seeded | |
+| Brunei | 19 | 977 to 2014 | seeded | |
+| Burkina Faso | 23 | 1050 to 2019 | seeded | |
+| Burundi | 23 | 1680 to 2018 | seeded | |
+| Cameroon | 22 | 1394 to 2016 | seeded | |
+| Cape Verde | 15 | 1460 to 2016 | seeded | |
+| Central African Republic | 20 | 3500 BCE to 2016 | seeded | |
+| Chad | 24 | 2000 BCE to 2016 | seeded | |
+| Comoros | 18 | 1500 to 2018 | seeded | Standing fail: the sultanates (about 1500; the page says by the 15th century). |
+| Costa Rica | 22 | 1502 to 2010 | seeded | |
+| Cyprus | 29 | 7000 BCE to 2013 | seeded | Author's own version. |
+| Djibouti | 16 | 1577 to 2016 | seeded | |
+| East Timor | 19 | 1512 to 2012 | seeded | The 1975 invasion and 1999 referendum are in the Indonesia file. |
+| El Salvador | 22 | 600 to 2019 | seeded | The Football War is in the Honduras file. |
+| Equatorial Guinea | 15 | 1472 to 2004 | seeded | |
+| Eritrea | 19 | 100 to 2013 | seeded | Ethiopia file has Eritrea to 1993. Standing fail: Adulis (about 100; the page says 1st century). |
+| Eswatini | 17 | 1815 to 2018 | seeded | |
+| Fiji | 20 | 1500 BCE to 2016 | seeded | |
+| Gabon | 18 | 1472 to 2019 | seeded | |
+| Gambia | 19 | 927 to 2017 | seeded | Senegambia (1982) is in the Senegal file. |
+| Guinea | 20 | 1725 to 2019 | seeded | |
+| Guinea-Bissau | 20 | 1446 to 2019 | seeded | |
+| Guyana | 19 | 1616 to 2015 | seeded | |
+| Honduras | 23 | 426 to 2009 | seeded | |
+| Ivory Coast | 22 | 1710 to 2016 | seeded | The map name is "Cote D'Ivoire". |
+| Jamaica | 23 | 650 to 2010 | seeded | |
+| Kosovo | 26 | 1321 to 2013 | seeded | Author's own version. |
+| Kuwait | 18 | 2000 BCE to 2015 | seeded | The 1990 invasion and 1991 liberation are in the Iraq file. |
+| Kyrgyzstan | 25 | 2500 BCE to 2017 | seeded | The map name is "Kyrgyz Republic". Standing fail: Pishpek and Tokmok (1862; the pages give no year in the text). |
+| Lesotho | 23 | 1822 to 2017 | seeded | |
+| Liberia | 24 | 1462 to 2017 | seeded | |
+| Luxembourg | 22 | 963 to 2000 | seeded | Author's own version. |
+| Madagascar | 27 | 1610 to 2018 | seeded | |
+| Malawi | 24 | 1480 to 2019 | seeded | |
+| Maldives | 19 | 500 BCE to 2018 | seeded | Standing fail: Ibn Battuta (1344; the pages say the 1340s). |
+| Malta | 24 | 3600 BCE to 2017 | seeded | Author's own version. |
+| Mauritania | 19 | 1076 to 2019 | seeded | The Western Sahara War is in the Morocco file. |
+| Mauritius | 19 | 1507 to 1999 | seeded | |
+| Moldova | 22 | 1436 to 2014 | seeded | Author's own version. |
+| Montenegro | 28 | 1042 to 2017 | seeded | Author's own version. |
+| Namibia | 24 | 1872 to 2019 | seeded | |
+| Nicaragua | 26 | 1200 to 2018 | seeded | |
+| Niger | 20 | 1449 to 2011 | seeded | Sonni Ali and Askia are in the Mali file. |
+| Oman | 23 | 630 to 2011 | seeded | Author's own version. |
+| Palestine | 26 | 691 to 2018 | seeded | Balfour, the mandate, Oslo and Gaza 2005 are in the Israel file. |
+| Panama | 24 | 1501 to 2016 | seeded | The 1903 separation is in the Colombia file. |
+| Qatar | 20 | 1766 to 2017 | seeded | |
+| Republic of the Congo | 21 | 1550 to 2015 | seeded | Congo-Brazzaville; Diogo Cão (1483) is in the Angola file. |
+| Sierra Leone | 25 | 1462 to 2014 | seeded | |
+| Solomon Islands | 17 | 1568 to 2019 | seeded | Guadalcanal (1942) is in the United States file. |
+| Somalia | 28 | 1269 to 2017 | seeded | The Ogaden War is in the Ethiopia file. |
+| South Sudan | 19 | 1490 to 2018 | seeded | The 2011 independence referendum is in the Sudan file. |
+| Suriname | 18 | 1650 to 2019 | seeded | The map name is "Surinam". |
+| Tajikistan | 25 | 3000 BCE to 2016 | seeded | |
+| Togo | 19 | 1600 to 2017 | seeded | |
+| Trinidad and Tobago | 18 | 5000 BCE to 2010 | seeded | |
+| Turkmenistan | 28 | 2200 BCE to 2017 | seeded | |
+| United Arab Emirates | 26 | 2600 BCE to 2017 | seeded | Author's own version. |
+| Zambia | 22 | 1600 to 2016 | seeded | |
 
 Deep time (see the section below); the span is in millions of years ago:
 
@@ -152,28 +217,17 @@ Status values:
 In rough order, following the reading list on the Books page:
 
 The aim (stated by the author on 2026-10-08) is to cover most countries in
-the world. Countries not yet started, by region, roughly in the order to take
-them within each region (updated 2026-10-09; every other country on the
-2019 map now has a file):
+the world. As of 2026-10-09 every country that has a polygon in the 2019
+snapshot has an events file: the world is covered. What remains:
 
-- Europe: Cyprus, Kosovo, Luxembourg, Malta, Montenegro, Moldova.
-- Middle East: Bahrain, Kuwait, Oman, Qatar, United Arab Emirates, Palestine.
-- Central and South Asia: Kyrgyzstan, Tajikistan, Turkmenistan, Bhutan,
-  Maldives.
-- Southeast Asia and Oceania: Brunei, East Timor, Fiji, Solomon Islands.
-- Americas: Belize, Costa Rica, El Salvador, Honduras, Nicaragua, Panama,
-  Jamaica, Trinidad and Tobago, Bahamas, Barbados, Guyana, Suriname.
-- Africa: Benin, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde,
-  Central African Republic, Chad, Comoros, Republic of the Congo, Ivory
-  Coast, Djibouti, Equatorial Guinea, Eritrea, Eswatini, Gabon, Gambia,
-  Guinea, Guinea-Bissau, Lesotho, Liberia, Madagascar, Malawi, Mauritania,
-  Mauritius, Namibia, Niger, Sierra Leone, Somalia, South Sudan, Togo,
-  Zambia.
-
-Smaller countries can have shorter files (15 to 25 events). States too small
-to have a polygon on the 2019 map (Andorra, Liechtenstein, Monaco, San
-Marino, Vatican City, most Pacific microstates) are left out for now; North
-Korea and South Korea are covered together in the Korea file.
+- States too small to have a polygon on the 2019 map (Andorra, Liechtenstein,
+  Monaco, San Marino, Vatican City, most Pacific microstates) have no file;
+  worth adding only if the event list alone justifies them (they would still
+  show in the Events list and on a neighbour's card).
+- North Korea and South Korea are covered together in the Korea file;
+  Western Sahara is folded into the Morocco file.
+- Gaps in the seeded countries are listed below; deepening those files is
+  the obvious next work.
 
 Gaps in the seeded countries:
 
@@ -337,6 +391,18 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-09 (later): Completed the world. Agents wrote 57 of the last 65
+  country files (see the table above); the author committed the other eight
+  (Cyprus, Kosovo, Luxembourg, Malta, Moldova, Montenegro, Oman and the
+  United Arab Emirates) in their own versions. The whole 2019 map is
+  covered: 4871 events in 178 files. `python3 check_events.py` reports no
+  problems. The source script passed on the new agent files except five
+  events that stand with looser dates, all noted in the table: Guru
+  Rinpoche in Bhutan (about 747), the sultanates of the Comoros (about
+  1500), Adulis in Eritrea (about 100), Ibn Battuta in the Maldives (1344)
+  and Pishpek and Tokmok in Kyrgyzstan (1862). Shared events that already
+  lived in another country's file were kept out of the new files; the
+  table's notes say where.
 - 2026-10-09: Registered 59 country files in `list.json` that were already on
   disk but never listed, from Afghanistan to Zimbabwe (see the table above):
   3477 events in 113 files, `python3 check_events.py` reports no problems.
