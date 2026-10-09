@@ -65,6 +65,65 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Cuba | 30 | 1492 to 2016 | seeded | The Missile Crisis is in the United States file and the Treaty of Paris (1898) in the Spain file. |
 | Nigeria | 31 | 500 BCE to 2015 | seeded | Dates before 1472 are approximate. Thin on Kanem-Bornu and the Hausa states. |
 | Morocco | 33 | 40 to 2011 | seeded | Ceuta (1415) and Alcácer Quibir (1578) are in the Portugal file, Las Navas de Tolosa in the Spain file. |
+| Afghanistan | 31 | 330 BCE to 2014 | seeded | |
+| Albania | 28 | 627 BCE to 2009 | seeded | |
+| Algeria | 29 | 202 BCE to 2019 | seeded | |
+| Angola | 26 | 1390 to 2017 | seeded | |
+| Armenia | 30 | 782 BCE to 2018 | seeded | |
+| Azerbaijan | 31 | 84 to 2016 | seeded | |
+| Bangladesh | 32 | 300 BCE to 2017 | seeded | Partition and 1971 are in the India file. |
+| Belarus | 26 | 862 to 2010 | seeded | |
+| Belgium | 30 | 54 BCE to 2016 | seeded | Waterloo is in the United Kingdom file. |
+| Bolivia | 29 | 800 to 2019 | seeded | |
+| Bosnia and Herzegovina | 27 | 1189 to 2014 | seeded | |
+| Bulgaria | 31 | 251 to 2007 | seeded | |
+| Cambodia | 30 | 245 to 2017 | seeded | |
+| Croatia | 31 | 305 to 2013 | seeded | |
+| Democratic Republic of the Congo | 32 | 900 to 2019 | seeded | |
+| Dominican Republic | 30 | 1494 to 2013 | seeded | |
+| Ecuador | 29 | 3500 BCE to 2019 | seeded | |
+| Estonia | 28 | 1030 to 2011 | seeded | |
+| Georgia | 30 | 302 BCE to 2008 | seeded | |
+| Ghana | 31 | 2500 BCE to 2007 | seeded | |
+| Guatemala | 30 | 300 BCE to 2018 | seeded | |
+| Haiti | 30 | 1492 to 2016 | seeded | |
+| Iceland | 26 | 874 to 2010 | seeded | |
+| Jordan | 27 | 7200 BCE to 2012 | seeded | |
+| Kazakhstan | 25 | 3500 BCE to 2019 | seeded | |
+| Kenya | 32 | 750 to 2017 | seeded | |
+| Laos | 22 | 1353 to 2018 | seeded | |
+| Latvia | 27 | 1186 to 2004 | seeded | |
+| Lebanon | 30 | 1000 BCE to 2019 | seeded | |
+| Libya | 31 | 631 BCE to 2019 | seeded | |
+| Lithuania | 32 | 1009 to 2004 | seeded | |
+| Malaysia | 28 | 450 to 2018 | seeded | |
+| Mali | 25 | 250 BCE to 2019 | seeded | |
+| Mongolia | 30 | 209 BCE to 2008 | seeded | |
+| Mozambique | 24 | 1200 to 2019 | seeded | |
+| Myanmar | 31 | 832 to 2017 | seeded | |
+| Nepal | 27 | 563 BCE to 2015 | seeded | |
+| New Zealand | 29 | 1300 to 2019 | seeded | |
+| North Macedonia | 27 | 350 BCE to 2019 | seeded | |
+| Papua New Guinea | 26 | 5000 BCE to 2019 | seeded | |
+| Paraguay | 29 | 1537 to 2012 | seeded | The Paraguayan War is in the Brazil file. |
+| Romania | 32 | 106 to 2007 | seeded | |
+| Rwanda | 26 | 1600 to 2015 | seeded | |
+| Senegal | 26 | 1035 to 2012 | seeded | |
+| Serbia | 32 | 269 to 2008 | seeded | |
+| Singapore | 29 | 1299 to 2018 | seeded | |
+| Slovakia | 32 | 179 to 2018 | seeded | |
+| Slovenia | 28 | 14 to 2004 | seeded | |
+| Sri Lanka | 32 | 288 BCE to 2019 | seeded | |
+| Sudan | 31 | 2500 BCE to 2019 | seeded | Includes South Sudan's independence (2011). |
+| Syria | 32 | 2300 BCE to 2019 | seeded | |
+| Tanzania | 26 | 960 to 2015 | seeded | |
+| Tunisia | 32 | 814 BCE to 2015 | seeded | |
+| Uganda | 24 | 1400 to 2010 | seeded | |
+| Uruguay | 29 | 1624 to 2013 | seeded | |
+| Uzbekistan | 31 | 329 BCE to 2016 | seeded | |
+| Venezuela | 30 | 1498 to 2019 | seeded | |
+| Yemen | 30 | 685 BCE to 2017 | seeded | |
+| Zimbabwe | 25 | 1300 to 2017 | seeded | |
 
 Deep time (see the section below); the span is in millions of years ago:
 
@@ -94,32 +153,27 @@ In rough order, following the reading list on the Books page:
 
 The aim (stated by the author on 2026-10-08) is to cover most countries in
 the world. Countries not yet started, by region, roughly in the order to take
-them within each region:
+them within each region (updated 2026-10-09; every other country on the
+2019 map now has a file):
 
-- Europe: Belgium, Romania, Serbia, Bulgaria, Croatia, Lithuania, Scotland
-  (as part of the United Kingdom gaps), Slovakia, Bosnia and Herzegovina,
-  Albania, Belarus, Estonia, Latvia, Iceland, Slovenia, North Macedonia,
-  Moldova, Luxembourg, Malta, Cyprus, Montenegro, Kosovo.
-- Middle East and Caucasus: Syria, Lebanon, Jordan,
-  Yemen, Oman, United Arab Emirates, Kuwait, Qatar, Bahrain, Armenia,
-  Georgia, Azerbaijan.
-- Central and South Asia: Afghanistan, Bangladesh, Sri Lanka,
-  Nepal, Mongolia, Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan,
-  Turkmenistan, Bhutan, Maldives.
-- Southeast Asia and Oceania: Cambodia, Myanmar, Malaysia, Singapore, Laos,
-  New Zealand, Papua New Guinea, East Timor, Brunei, Fiji and the Pacific
-  islands.
-- Americas: Venezuela, Bolivia, Haiti, Ecuador,
-  Paraguay, Uruguay, Guatemala, Dominican Republic, Panama, Jamaica,
-  Nicaragua, El Salvador, Honduras, Costa Rica, the smaller Caribbean states.
-- Africa: Algeria, Ghana, Kenya, Democratic Republic of the
-  Congo, Sudan, Tunisia, Libya, Mali, Senegal, Tanzania, Uganda, Zimbabwe,
-  Angola, Mozambique, Rwanda, Somalia, Madagascar, Cameroon, Ivory Coast,
-  Liberia, Sierra Leone, Zambia, Namibia, Botswana, and the rest.
+- Europe: Cyprus, Kosovo, Luxembourg, Malta, Montenegro, Moldova.
+- Middle East: Bahrain, Kuwait, Oman, Qatar, United Arab Emirates, Palestine.
+- Central and South Asia: Kyrgyzstan, Tajikistan, Turkmenistan, Bhutan,
+  Maldives.
+- Southeast Asia and Oceania: Brunei, East Timor, Fiji, Solomon Islands.
+- Americas: Belize, Costa Rica, El Salvador, Honduras, Nicaragua, Panama,
+  Jamaica, Trinidad and Tobago, Bahamas, Barbados, Guyana, Suriname.
+- Africa: Benin, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde,
+  Central African Republic, Chad, Comoros, Republic of the Congo, Ivory
+  Coast, Djibouti, Equatorial Guinea, Eritrea, Eswatini, Gabon, Gambia,
+  Guinea, Guinea-Bissau, Lesotho, Liberia, Madagascar, Malawi, Mauritania,
+  Mauritius, Namibia, Niger, Sierra Leone, Somalia, South Sudan, Togo,
+  Zambia.
 
-This list was drawn up on 2026-10-08, when the earlier list ran out; the
-Books page names no further countries. Smaller countries can have shorter
-files (15 to 25 events).
+Smaller countries can have shorter files (15 to 25 events). States too small
+to have a polygon on the 2019 map (Andorra, Liechtenstein, Monaco, San
+Marino, Vatican City, most Pacific microstates) are left out for now; North
+Korea and South Korea are covered together in the Korea file.
 
 Gaps in the seeded countries:
 
@@ -283,6 +337,12 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-09: Registered 59 country files in `list.json` that were already on
+  disk but never listed, from Afghanistan to Zimbabwe (see the table above):
+  3477 events in 113 files, `python3 check_events.py` reports no problems.
+  The source script was run on Iceland (0 problems); the rest of the batch
+  still needs a `check_sources.py` pass. The countries still without a file
+  are listed by region under Next up.
 - 2026-10-08 (later still): Seeded Iraq (31), Saudi Arabia (31), Pakistan
   (29), Chile (30), Colombia (28), Cuba (30), Nigeria (31) and Morocco (33),
   and ran the source script on them. One event still fails and stands: the
