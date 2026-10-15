@@ -178,7 +178,7 @@
   {
     "id": "paraguay-1870-constitution-of-1870",
     "title": "Constitution of 1870",
-    "date": "25 Nov 1870",
+    "date": "Nov 1870",
     "year-from": 1870,
     "place": "Asunción",
     "lat": -25.28,
@@ -251,7 +251,7 @@
     "country": "Paraguay",
     "importance": 2,
     "description": "Paraguay and Bolivia sign a treaty that gives Paraguay about three quarters of the Chaco.",
-    "source": "https://en.wikipedia.org/wiki/Chaco_War"
+    "source": "https://en.wikipedia.org/wiki/1938_Paraguayan_Chaco_Treaty_referendum"
   },
   {
     "id": "paraguay-1947-civil-war-of-1947",
@@ -329,7 +329,7 @@
     "country": "Paraguay",
     "importance": 2,
     "description": "A democratic constitution limits the president to one term and makes Guaraní an official language beside Spanish.",
-    "source": "https://en.wikipedia.org/wiki/Constitution_of_Paraguay"
+    "source": "https://en.wikipedia.org/wiki/1992"
   },
   {
     "id": "paraguay-1992-archives-of-terror-found",

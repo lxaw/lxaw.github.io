@@ -43,7 +43,7 @@
   {
     "id": "tanzania-1505-portuguese-sack-kilwa",
     "title": "Portuguese sack Kilwa",
-    "date": "24 Jul 1505",
+    "date": "Jul 1505",
     "year-from": 1505,
     "place": "Kilwa Kisiwani",
     "lat": -8.96,
@@ -52,7 +52,7 @@
     "polity": "Kilwa Sultanate",
     "importance": 2,
     "description": "The fleet of Francisco de Almeida takes the city and builds a fort, and Kilwa's trade never recovers.",
-    "source": "https://en.wikipedia.org/wiki/Kilwa_Sultanate"
+    "source": "https://en.wikipedia.org/wiki/Francisco_de_Almeida"
   },
   {
     "id": "tanzania-1698-omanis-take-zanzibar",
@@ -92,7 +92,7 @@
     "country": "Tanzania",
     "importance": 3,
     "description": "The two British explorers, following Arab caravan routes from the coast, are the first Europeans to see the lake.",
-    "source": "https://en.wikipedia.org/wiki/Lake_Tanganyika"
+    "source": "https://en.wikipedia.org/wiki/Richard_Francis_Burton"
   },
   {
     "id": "tanzania-1871-stanley-meets-livingstone",
@@ -132,7 +132,7 @@
     "country": "Tanzania",
     "importance": 1,
     "description": "The German government grants imperial protection to the lands for which Carl Peters had obtained treaties in the hinterland of Bagamoyo.",
-    "source": "https://en.wikipedia.org/wiki/German_East_Africa_Company"
+    "source": "https://en.wikipedia.org/wiki/German_East_Africa"
   },
   {
     "id": "tanzania-1890-heligolandzanzibar-treaty",
@@ -159,7 +159,7 @@
     "polity": "German East Africa",
     "importance": 3,
     "description": "The Hehe under Chief Mkwawa destroy a German column, beginning seven years of resistance.",
-    "source": "https://en.wikipedia.org/wiki/Battle_of_Lugalo"
+    "source": "https://en.wikipedia.org/wiki/Emil_von_Zelewski"
   },
   {
     "id": "tanzania-1896-anglo-zanzibar-war",

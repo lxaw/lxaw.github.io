@@ -15,18 +15,18 @@ Counts come from `python check_events.py`; update this table after each batch.
 
 | Country | Events | Years covered | Status | Notes |
 | --- | ---: | --- | --- | --- |
-| Turkey | 41 | 1299 to 2016 | seeded | Ottoman Empire and the republic. Has an example article. |
-| Japan | 51 | 538 to 2011 | seeded | Nothing before the arrival of Buddhism. |
-| China | 54 | 1250 BCE to 2008 | seeded | |
-| Germany | 50 | 9 to 1990 | seeded | Königgrätz (1866) is in the Austria file; the Nuremberg Laws and Kristallnacht are in the Israel file. |
-| Russia | 54 | 862 to 2014 | seeded | Dates before 1918 are New Style unless marked. |
+| Turkey | 57 | 1077 to 2016 | seeded | Seljuks of Rum, the Ottoman Empire and the republic, with the Balkan Wars and the Kurdish conflict. Has an example article. Manzikert (1071) is in the Greece file. |
+| Japan | 67 | 3900 BCE to 2011 | seeded | Jōmon to Yamato added 2026-10-16. The Daisen Kofun ("mid-5th century") fails the source script and stands. |
+| China | 71 | 3300 BCE to 2009 | seeded | Koxinga is in the Taiwan file. The Sanxingdui pits ("12th–11th centuries BC") fail the source script and stand. |
+| Germany | 63 | 9 to 2015 | seeded | Königgrätz (1866) is in the Austria file; the Nuremberg Laws and Kristallnacht are in the Israel file. |
+| Russia | 71 | 862 to 2014 | seeded | Dates before 1918 are New Style unless marked. Russian conquests in Central Asia are in the Central Asian files; the Treaty of Georgievsk is in the Georgia file. Nicholas II's abdication (15 Mar 1917) fails the source script and stands: the date is standard but not in the page text. |
 | Austria | 24 | 976 to 1995 | seeded | The sieges of Vienna (1529, 1683) are in the Turkey file. |
 | Switzerland | 18 | 1291 to 2002 | seeded | The Peace of Westphalia (1648) is in the Germany file. |
 | Finland | 28 | 1249 to 1995 | seeded | Nothing after 1995 (NATO, 2023, is past the map's last year). |
 | Israel | 41 | 1000 BCE to 2005 | seeded | Includes Jewish history outside the land (expulsions, emancipation, the Holocaust). Biblical dates are marked traditional. |
 | Italy | 39 | 753 BCE to 1992 | seeded | Rome, Venice and united Italy. Charlemagne's coronation (800) is in the Germany file, Lepanto in the Turkey file. |
-| United States | 41 | 1100 to 2008 | seeded | Little before 1607 and nothing on the West before 1848. |
-| United Kingdom | 38 | 43 to 2016 | seeded | Mostly England before 1707; little on Scotland, Wales, Ireland or the empire. |
+| United States | 52 | 1100 to 2008 | seeded | Little on the West after 1848. |
+| United Kingdom | 49 | 43 to 2016 | seeded | Some Scotland and Wales since 2026-10-16; little on Ireland or the empire (the East India Company and Plassey are in the India file). |
 | France | 40 | 52 BCE to 2015 | seeded | Waterloo is in the United Kingdom file, Borodino in the Russia file. |
 | Korea | 35 | 2333 BCE to 2006 | seeded | Both Koreas after 1948. Thin on the Three Kingdoms. |
 | India | 37 | 2600 BCE to 1992 | seeded | Thin on the south and on the centuries between the Guptas and 1192. |
@@ -89,7 +89,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Haiti | 30 | 1492 to 2016 | seeded | |
 | Iceland | 26 | 874 to 2010 | seeded | |
 | Jordan | 27 | 7200 BCE to 2012 | seeded | |
-| Kazakhstan | 25 | 3500 BCE to 2019 | seeded | |
+| Kazakhstan | 25 | 3700 BCE to 2019 | seeded | |
 | Kenya | 32 | 750 to 2017 | seeded | |
 | Laos | 22 | 1353 to 2018 | seeded | |
 | Latvia | 27 | 1186 to 2004 | seeded | |
@@ -177,7 +177,7 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Palestine | 26 | 691 to 2018 | seeded | Balfour, the mandate, Oslo and Gaza 2005 are in the Israel file. |
 | Panama | 24 | 1501 to 2016 | seeded | The 1903 separation is in the Colombia file. |
 | Qatar | 20 | 1766 to 2017 | seeded | |
-| Republic of the Congo | 21 | 1550 to 2015 | seeded | Congo-Brazzaville; Diogo Cão (1483) is in the Angola file. |
+| Republic of the Congo | 21 | 1550 to 2015 | seeded | Congo-Brazzaville; Diogo Cão (1482) is in the Angola file. |
 | Sierra Leone | 25 | 1462 to 2014 | seeded | |
 | Solomon Islands | 17 | 1568 to 2019 | seeded | Guadalcanal (1942) is in the United States file. |
 | Somalia | 28 | 1269 to 2017 | seeded | The Ogaden War is in the Ethiopia file. |
@@ -231,11 +231,13 @@ snapshot has an events file: the world is covered. What remains:
 
 Gaps in the seeded countries:
 
-- Turkey: Seljuks and Byzantium before 1299, Balkan Wars, the Kurdish conflict.
-- Japan: Jōmon, Yayoi and the Yamato state; Heian politics; the Meiji economy.
-- China: Shang and earlier, the Song economy, Ming–Qing transition detail, Tibet and Xinjiang.
-- Germany: Hanseatic League, the Staufer emperors, industrialisation, post-1990.
-- Russia: the principalities before 1240, expansion into Central Asia and the Caucasus, the Chechen wars.
+- The gaps listed for Turkey, Japan, China, Germany, Russia, the United
+  States and the United Kingdom were filled on 2026-10-16 (see the Log).
+- United Kingdom: Ireland and the empire.
+- United States: the West after 1848.
+- Every country file has now had one `check_sources.py` pass; the next
+  step up is a review (each event read against its source) to move files
+  from seeded to reviewed.
 
 ## How to add events
 
@@ -391,6 +393,28 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
 
 ## Log
 
+- 2026-10-16: Five agents. (1) Filled the listed gaps: Turkey +16
+  (Seljuks of Rum, Balkan Wars, Kurdish conflict), Russia +17 (before
+  1240, the Caucasus, the Chechen wars), Japan +16 (Jōmon to Yamato,
+  Heian, Meiji economy), China +17 (Shang and earlier, Song economy,
+  Ming–Qing, Tibet and Xinjiang), Germany +13, United States +11 and
+  United Kingdom +11. Events already in another country's file were
+  left there. (2) Ran `check_sources.py` on the 58 files registered on
+  2026-10-09 (all but Iceland): 76 events flagged, 64 fixed (wrong days,
+  missing or wrong source pages, dates cut back to month or year).
+  Some dates moved away from the year in their id, which stays
+  unchanged: angola-1483 (now 1482), rwanda-1853 (1867), senegal-1444
+  (1445), slovakia-828 (827), sri-lanka-bce250 (247 BCE), zimbabwe-1684
+  (1683). Twelve stand because the page gives only a century or range,
+  or states the day in a form the script cannot match: Incallajta
+  (Bolivia), Begho (Ghana), Shanga and Gedi (Kenya), and the Malaysia
+  450, Nepal 250 BCE, North Macedonia 350 BCE, Papua New Guinea 5000
+  BCE, Rwanda 1600, Bigo (Uganda), Mozambique 1498 and Uganda 1966
+  events. Weak sources to replace in a review: slovakia-1610 (Synod of
+  Žilina, no English page) and paraguay-1992 (a year article). With the
+  new Daisen Kofun, Sanxingdui and the older Nicholas II abdication,
+  those are all the standing fails in the touched files. 4972 events in
+  178 files; `python3 check_events.py` reports no problems.
 - 2026-10-09 (later): Completed the world. Agents wrote 57 of the last 65
   country files (see the table above); the author committed the other eight
   (Cyprus, Kosovo, Luxembourg, Malta, Moldova, Montenegro, Oman and the

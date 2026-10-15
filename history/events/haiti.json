@@ -10,7 +10,7 @@
     "country": "Haiti",
     "importance": 1,
     "description": "Columbus's flagship Santa María is wrecked on the north coast and its timbers are used for the first Spanish settlement in the Americas.",
-    "source": "https://en.wikipedia.org/wiki/La_Navidad"
+    "source": "https://en.wikipedia.org/wiki/Santa_María_(ship)"
   },
   {
     "id": "haiti-1503-jaragua-massacre",
@@ -126,7 +126,7 @@
   {
     "id": "haiti-1801-louverture-s-constitution",
     "title": "Louverture's constitution",
-    "date": "Jul 1801",
+    "date": "7 Jul 1801",
     "year-from": 1801,
     "place": "Cap-Haïtien",
     "lat": 19.76,
@@ -135,7 +135,7 @@
     "polity": "Saint-Domingue",
     "importance": 2,
     "description": "Toussaint Louverture issues a constitution that makes him governor for life and bans slavery for good.",
-    "source": "https://en.wikipedia.org/wiki/Constitution_of_1801"
+    "source": "https://en.wikipedia.org/wiki/Toussaint_Louverture"
   },
   {
     "id": "haiti-1803-death-of-toussaint-louverture",

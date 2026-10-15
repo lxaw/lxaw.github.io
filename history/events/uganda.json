@@ -29,7 +29,7 @@
   {
     "id": "uganda-1875-stanley-at-the-court-of-mutesa",
     "title": "Stanley at the court of Mutesa",
-    "date": "Apr 1875",
+    "date": "1875",
     "year-from": 1875,
     "place": "Rubaga, Kampala",
     "lat": 0.3,
@@ -57,7 +57,7 @@
   {
     "id": "uganda-1892-battle-of-mengo",
     "title": "Battle of Mengo",
-    "date": "24 Jan 1892",
+    "date": "1892",
     "year-from": 1892,
     "place": "Mengo, Kampala",
     "lat": 0.3,
@@ -66,7 +66,7 @@
     "polity": "Kingdom of Buganda",
     "importance": 3,
     "description": "Frederick Lugard's Maxim gun decides a fight between Protestant and Catholic factions in favour of the Protestants and the British company.",
-    "source": "https://en.wikipedia.org/wiki/Frederick_Lugard"
+    "source": "https://en.wikipedia.org/wiki/Military_history_of_Uganda"
   },
   {
     "id": "uganda-1894-british-protectorate",
@@ -293,7 +293,7 @@
     "country": "Uganda",
     "importance": 3,
     "description": "The Lord's Resistance Army kills some 300 people in a camp for the displaced, one of the worst attacks of its long war in the north.",
-    "source": "https://en.wikipedia.org/wiki/Barlonyo_massacre"
+    "source": "https://en.wikipedia.org/wiki/Barlonyo"
   },
   {
     "id": "uganda-2005-multiparty-politics-restored",

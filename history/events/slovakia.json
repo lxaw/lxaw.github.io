@@ -16,8 +16,8 @@
   {
     "id": "slovakia-828-church-consecrated-at-nitra",
     "title": "Church consecrated at Nitra",
-    "date": "about 828",
-    "year-from": 828,
+    "date": "about 827",
+    "year-from": 827,
     "place": "Nitra",
     "lat": 48.317,
     "lon": 18.087,
@@ -99,7 +99,7 @@
   {
     "id": "slovakia-1610-synod-of-zilina",
     "title": "Synod of Žilina",
-    "date": "Mar 1610",
+    "date": "1610",
     "year-from": 1610,
     "place": "Žilina",
     "lat": 49.223,
@@ -108,7 +108,7 @@
     "polity": "Kingdom of Hungary",
     "importance": 3,
     "description": "Lutherans of Upper Hungary set up their own church organisation with three superintendents, independent of the Catholic bishops.",
-    "source": "https://en.wikipedia.org/wiki/Synod_of_Žilina"
+    "source": "https://en.wikipedia.org/wiki/History_of_the_Slovak_language"
   },
   {
     "id": "slovakia-1635-university-of-trnava-founded",
@@ -150,7 +150,7 @@
     "polity": "Kingdom of Hungary",
     "importance": 3,
     "description": "A tribunal under General Antonio Caraffa tortures and executes 24 Protestant townsmen and nobles accused of supporting the Thököly uprising.",
-    "source": "https://en.wikipedia.org/wiki/Antonio_Caraffa"
+    "source": "https://en.wikipedia.org/wiki/Executive_Court_of_Prešov"
   },
   {
     "id": "slovakia-1741-maria-theresa-crowned",
@@ -169,7 +169,7 @@
   {
     "id": "slovakia-1762-mining-academy-founded",
     "title": "Mining Academy founded",
-    "date": "1762",
+    "date": "13 Dec 1762",
     "year-from": 1762,
     "place": "Banská Štiavnica",
     "lat": 48.459,
@@ -178,7 +178,7 @@
     "polity": "Kingdom of Hungary",
     "importance": 2,
     "description": "Maria Theresa founds a mining academy in the silver town of Banská Štiavnica, often counted as the first technical university in the world.",
-    "source": "https://en.wikipedia.org/wiki/Banská_Štiavnica"
+    "source": "https://en.wikipedia.org/wiki/Mining_Academy_(Banská_Štiavnica)"
   },
   {
     "id": "slovakia-1805-peace-of-pressburg",
@@ -234,7 +234,7 @@
     "polity": "Austrian Empire",
     "importance": 2,
     "description": "A national assembly in Martin asks the Hungarian parliament for a self-governing Slovak district and language rights.",
-    "source": "https://en.wikipedia.org/wiki/Memorandum_of_the_Slovak_Nation"
+    "source": "https://en.wikipedia.org/wiki/Matica_slovenská"
   },
   {
     "id": "slovakia-1863-matica-slovenska-founded",
@@ -357,12 +357,12 @@
     "polity": "Czechoslovakia",
     "importance": 2,
     "description": "The first post-war Czechoslovak government announces its programme in liberated Košice, recognising Slovaks as a separate nation.",
-    "source": "https://en.wikipedia.org/wiki/Košice_Government_Programme"
+    "source": "https://en.wikipedia.org/wiki/Košice_Program"
   },
   {
     "id": "slovakia-1968-czechoslovakia-becomes-a-federation",
     "title": "Czechoslovakia becomes a federation",
-    "date": "30 Oct 1968",
+    "date": "Oct 1968",
     "year-from": 1968,
     "place": "Bratislava Castle",
     "lat": 48.142,
@@ -425,7 +425,7 @@
     "country": "Slovakia",
     "importance": 3,
     "description": "The euro replaces the Slovak koruna, making Slovakia the first of the former Warsaw Pact states to join the eurozone.",
-    "source": "https://en.wikipedia.org/wiki/Slovakia_and_the_euro"
+    "source": "https://en.wikipedia.org/wiki/Slovak_koruna"
   },
   {
     "id": "slovakia-2018-murder-of-jan-kuciak",

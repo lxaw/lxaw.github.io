@@ -126,6 +126,34 @@
     "source": "https://en.wikipedia.org/wiki/Magna_Carta"
   },
   {
+    "id": "united-kingdom-1282-death-of-llywelyn-ap-gruffudd",
+    "title": "Death of Llywelyn ap Gruffudd",
+    "date": "11 Dec 1282",
+    "year-from": 1282,
+    "place": "Cilmeri, Wales",
+    "lat": 52.153,
+    "lon": -3.45,
+    "country": "United Kingdom",
+    "polity": "Principality of Wales",
+    "importance": 2,
+    "description": "The last native Prince of Wales is killed in battle with Edward I's forces, and Wales is conquered by England within months.",
+    "source": "https://en.wikipedia.org/wiki/Llywelyn_ap_Gruffudd"
+  },
+  {
+    "id": "united-kingdom-1297-battle-of-stirling-bridge",
+    "title": "Battle of Stirling Bridge",
+    "date": "11 Sep 1297",
+    "year-from": 1297,
+    "place": "Stirling",
+    "lat": 56.124,
+    "lon": -3.93,
+    "country": "United Kingdom",
+    "polity": "Kingdom of Scotland",
+    "importance": 3,
+    "description": "William Wallace and Andrew Moray defeat an English army in the first Scottish War of Independence.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Stirling_Bridge"
+  },
+  {
     "id": "united-kingdom-1314-battle-of-bannockburn",
     "title": "Battle of Bannockburn",
     "date": "23 to 24 Jun 1314",
@@ -140,6 +168,20 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Bannockburn"
   },
   {
+    "id": "united-kingdom-1320-declaration-of-arbroath",
+    "title": "Declaration of Arbroath",
+    "date": "6 Apr 1320",
+    "year-from": 1320,
+    "place": "Arbroath Abbey",
+    "lat": 56.562,
+    "lon": -2.583,
+    "country": "United Kingdom",
+    "polity": "Kingdom of Scotland",
+    "importance": 3,
+    "description": "Scottish barons write to the Pope asserting Scotland's independence and Robert the Bruce's right to the throne.",
+    "source": "https://en.wikipedia.org/wiki/Declaration_of_Arbroath"
+  },
+  {
     "id": "united-kingdom-1348-black-death-reaches-england",
     "title": "Black Death reaches England",
     "date": "Jun 1348",
@@ -152,6 +194,20 @@
     "importance": 2,
     "description": "The plague arrives by ship and within two years kills an estimated 40 to 60% of the population.",
     "source": "https://en.wikipedia.org/wiki/Black_Death_in_England"
+  },
+  {
+    "id": "united-kingdom-1400-glyndwr-rising",
+    "title": "Glyndŵr Rising",
+    "date": "16 Sep 1400",
+    "year-from": 1400,
+    "place": "Glyndyfrdwy, Wales",
+    "lat": 52.98,
+    "lon": -3.37,
+    "country": "United Kingdom",
+    "polity": "Kingdom of England",
+    "importance": 3,
+    "description": "Owain Glyndŵr is proclaimed Prince of Wales and begins the last major Welsh revolt against English rule.",
+    "source": "https://en.wikipedia.org/wiki/Glyndŵr_rebellion"
   },
   {
     "id": "united-kingdom-1415-battle-of-agincourt",
@@ -182,6 +238,20 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field"
   },
   {
+    "id": "united-kingdom-1513-battle-of-flodden",
+    "title": "Battle of Flodden",
+    "date": "9 Sep 1513",
+    "year-from": 1513,
+    "place": "Branxton, Northumberland",
+    "lat": 55.633,
+    "lon": -2.17,
+    "country": "United Kingdom",
+    "polity": "Kingdom of England",
+    "importance": 3,
+    "description": "An English army defeats the invading Scots, killing James IV and much of the Scottish nobility.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Flodden"
+  },
+  {
     "id": "united-kingdom-1534-act-of-supremacy",
     "title": "Act of Supremacy",
     "date": "Nov 1534",
@@ -194,6 +264,20 @@
     "importance": 1,
     "description": "Parliament declares Henry VIII supreme head of the Church of England, breaking with Rome.",
     "source": "https://en.wikipedia.org/wiki/Act_of_Supremacy_1534"
+  },
+  {
+    "id": "united-kingdom-1560-scottish-reformation-parliament",
+    "title": "Scottish Reformation Parliament",
+    "date": "Aug 1560",
+    "year-from": 1560,
+    "place": "Edinburgh",
+    "lat": 55.953,
+    "lon": -3.188,
+    "country": "United Kingdom",
+    "polity": "Kingdom of Scotland",
+    "importance": 3,
+    "description": "The Scottish Parliament rejects the Pope's authority and adopts a Protestant confession of faith.",
+    "source": "https://en.wikipedia.org/wiki/Scottish_Reformation_Parliament"
   },
   {
     "id": "united-kingdom-1588-spanish-armada-defeated",
@@ -334,6 +418,19 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar"
   },
   {
+    "id": "united-kingdom-1807-slave-trade-act",
+    "title": "Slave Trade Act",
+    "date": "25 Mar 1807",
+    "year-from": 1807,
+    "place": "Westminster, London",
+    "lat": 51.499,
+    "lon": -0.125,
+    "country": "United Kingdom",
+    "importance": 2,
+    "description": "Parliament bans the slave trade in the British Empire, after a twenty-year abolitionist campaign.",
+    "source": "https://en.wikipedia.org/wiki/Slave_Trade_Act_1807"
+  },
+  {
     "id": "united-kingdom-1815-battle-of-waterloo",
     "title": "Battle of Waterloo",
     "date": "18 Jun 1815",
@@ -464,6 +561,19 @@
     "source": "https://en.wikipedia.org/wiki/National_Health_Service"
   },
   {
+    "id": "united-kingdom-1948-windrush-arrives",
+    "title": "Empire Windrush arrives",
+    "date": "22 Jun 1948",
+    "year-from": 1948,
+    "place": "Tilbury, Essex",
+    "lat": 51.456,
+    "lon": 0.36,
+    "country": "United Kingdom",
+    "importance": 3,
+    "description": "Passengers from the Caribbean disembark from the ship, a symbol of post-war immigration from the empire and Commonwealth.",
+    "source": "https://en.wikipedia.org/wiki/HMT_Empire_Windrush"
+  },
+  {
     "id": "united-kingdom-1973-united-kingdom-joins-the-european-communities",
     "title": "United Kingdom joins the European Communities",
     "date": "1 Jan 1973",
@@ -490,6 +600,32 @@
     "source": "https://en.wikipedia.org/wiki/Falklands_War"
   },
   {
+    "id": "united-kingdom-1997-scotland-votes-for-a-parliament",
+    "title": "Scotland votes for a parliament",
+    "date": "11 Sep 1997",
+    "year-from": 1997,
+    "place": "Edinburgh",
+    "lat": 55.953,
+    "lon": -3.188,
+    "country": "United Kingdom",
+    "importance": 2,
+    "description": "Scottish voters back a devolved parliament with tax-varying powers; it first meets in 1999.",
+    "source": "https://en.wikipedia.org/wiki/1997_Scottish_devolution_referendum"
+  },
+  {
+    "id": "united-kingdom-1997-wales-votes-for-an-assembly",
+    "title": "Wales votes for an assembly",
+    "date": "18 Sep 1997",
+    "year-from": 1997,
+    "place": "Cardiff",
+    "lat": 51.481,
+    "lon": -3.179,
+    "country": "United Kingdom",
+    "importance": 3,
+    "description": "Welsh voters narrowly approve a devolved National Assembly for Wales.",
+    "source": "https://en.wikipedia.org/wiki/1997_Welsh_devolution_referendum"
+  },
+  {
     "id": "united-kingdom-1998-good-friday-agreement",
     "title": "Good Friday Agreement",
     "date": "10 Apr 1998",
@@ -501,6 +637,19 @@
     "importance": 2,
     "description": "The agreement sets up power-sharing in Northern Ireland and largely ends thirty years of violence.",
     "source": "https://en.wikipedia.org/wiki/Good_Friday_Agreement"
+  },
+  {
+    "id": "united-kingdom-2014-scottish-independence-referendum",
+    "title": "Scottish independence referendum",
+    "date": "18 Sep 2014",
+    "year-from": 2014,
+    "place": "Edinburgh",
+    "lat": 55.953,
+    "lon": -3.188,
+    "country": "United Kingdom",
+    "importance": 2,
+    "description": "Scottish voters reject independence from the United Kingdom by 55 to 45 per cent.",
+    "source": "https://en.wikipedia.org/wiki/2014_Scottish_independence_referendum"
   },
   {
     "id": "united-kingdom-2016-vote-to-leave-the-european-union",

@@ -14,6 +14,20 @@
     "source": "https://en.wikipedia.org/wiki/Rurik"
   },
   {
+    "id": "russia-965-sviatoslav-destroys-sarkel",
+    "title": "Sviatoslav destroys Sarkel",
+    "date": "about 965",
+    "year-from": 965,
+    "place": "Sarkel, lower Don (site now under the Tsimlyansk Reservoir)",
+    "lat": 47.71,
+    "lon": 42.27,
+    "country": "Russia",
+    "polity": "Kievan Rus'",
+    "importance": 2,
+    "description": "Prince Sviatoslav I takes the Khazar fortress of Sarkel in the campaign that breaks the Khazar Khaganate, for centuries one of the strongest states of Eastern Europe.",
+    "source": "https://en.wikipedia.org/wiki/Sviatoslav_I"
+  },
+  {
     "id": "russia-988-baptism-of-rus",
     "title": "Baptism of Rus'",
     "date": "988 (traditional date)",
@@ -26,6 +40,20 @@
     "importance": 1,
     "description": "Prince Vladimir adopts Christianity from Byzantium for Kievan Rus'.",
     "source": "https://en.wikipedia.org/wiki/Christianization_of_Kievan_Rus%27"
+  },
+  {
+    "id": "russia-1136-novgorod-deposes-its-prince",
+    "title": "Novgorod deposes its prince",
+    "date": "1136",
+    "year-from": 1136,
+    "place": "Novgorod",
+    "lat": 58.52,
+    "lon": 31.27,
+    "country": "Russia",
+    "polity": "Novgorod Republic",
+    "importance": 2,
+    "description": "The Novgorodians depose their prince, and from then on the veche, the town assembly, chooses and dismisses princes, the start of the Novgorod Republic.",
+    "source": "https://en.wikipedia.org/wiki/Novgorod_Republic"
   },
   {
     "id": "russia-1147-first-mention-of-moscow",
@@ -41,6 +69,48 @@
     "source": "https://en.wikipedia.org/wiki/Moscow"
   },
   {
+    "id": "russia-1169-andrey-bogolyubsky-sacks-kiev",
+    "title": "Andrey Bogolyubsky sacks Kiev",
+    "date": "Mar 1169",
+    "year-from": 1169,
+    "place": "Kyiv",
+    "lat": 50.45,
+    "lon": 30.52,
+    "country": "Russia",
+    "polity": "Vladimir-Suzdal",
+    "importance": 2,
+    "description": "A coalition of princes gathered by Andrey Bogolyubsky of Vladimir-Suzdal sacks Kiev, a sign that power among the Rus' is moving to the northeast.",
+    "source": "https://en.wikipedia.org/wiki/Sack_of_Kiev_(1169)"
+  },
+  {
+    "id": "russia-1223-battle-of-the-kalka-river",
+    "title": "Battle of the Kalka River",
+    "date": "31 May 1223",
+    "year-from": 1223,
+    "place": "Kalka River, Donetsk Oblast, Ukraine",
+    "lat": 47.25,
+    "lon": 37.5,
+    "country": "Russia",
+    "polity": "Kievan Rus'",
+    "importance": 2,
+    "description": "A Mongol force under Jebe and Subutai routs the Rus' princes and their Cuman allies, the first clash between the Rus' and the Mongols.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River"
+  },
+  {
+    "id": "russia-1237-siege-of-ryazan",
+    "title": "Siege of Ryazan",
+    "date": "Dec 1237",
+    "year-from": 1237,
+    "place": "Old Ryazan (Staraya Ryazan)",
+    "lat": 54.26,
+    "lon": 40.07,
+    "country": "Russia",
+    "polity": "Principality of Ryazan",
+    "importance": 3,
+    "description": "Batu Khan's army takes and burns Ryazan, the first Rus' city to fall in the Mongol invasion.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Ryazan"
+  },
+  {
     "id": "russia-1238-mongols-sack-vladimir",
     "title": "Mongols sack Vladimir",
     "date": "Feb 1238",
@@ -53,6 +123,20 @@
     "importance": 2,
     "description": "Batu Khan's army takes the capital of the leading Rus' principality, beginning more than two centuries of Mongol overlordship.",
     "source": "https://en.wikipedia.org/wiki/Siege_of_Vladimir"
+  },
+  {
+    "id": "russia-1240-battle-of-the-neva",
+    "title": "Battle of the Neva",
+    "date": "15 Jul 1240",
+    "year-from": 1240,
+    "place": "Ust-Izhora, on the Neva",
+    "lat": 59.81,
+    "lon": 30.6,
+    "country": "Russia",
+    "polity": "Novgorod Republic",
+    "importance": 3,
+    "description": "Prince Alexander of Novgorod, later called Nevsky, defeats a Swedish force; known only from Russian sources, it may have been a small raid.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_the_Neva"
   },
   {
     "id": "russia-1240-mongols-sack-kiev",
@@ -321,6 +405,20 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Borodino"
   },
   {
+    "id": "russia-1818-fortress-of-groznaya-founded",
+    "title": "Fortress of Groznaya founded",
+    "date": "1818",
+    "year-from": 1818,
+    "place": "Grozny",
+    "lat": 43.31,
+    "lon": 45.7,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 3,
+    "description": "General Aleksey Yermolov builds a fort on the Sunzha as a base against the Chechens; it grows into the city of Grozny.",
+    "source": "https://en.wikipedia.org/wiki/Grozny"
+  },
+  {
     "id": "russia-1825-decembrist-revolt",
     "title": "Decembrist revolt",
     "date": "26 Dec 1825",
@@ -333,6 +431,20 @@
     "importance": 2,
     "description": "Army officers refuse the oath to Nicholas I and are put down the same day.",
     "source": "https://en.wikipedia.org/wiki/Decembrist_revolt"
+  },
+  {
+    "id": "russia-1839-siege-of-akhulgo",
+    "title": "Siege of Akhulgo",
+    "date": "Jun to Aug 1839",
+    "year-from": 1839,
+    "place": "Akhulgo, Dagestan",
+    "lat": 42.78,
+    "lon": 46.74,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 3,
+    "description": "After 80 days Russian troops take Imam Shamil's rock fortress and kill most of its defenders, but Shamil escapes to fight on for twenty years.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Akhoulgo"
   },
   {
     "id": "russia-1855-fall-of-sevastopol",
@@ -349,6 +461,20 @@
     "source": "https://en.wikipedia.org/wiki/Siege_of_Sevastopol_(1854%E2%80%931855)"
   },
   {
+    "id": "russia-1859-shamil-surrenders-at-gunib",
+    "title": "Shamil surrenders at Gunib",
+    "date": "6 Sep 1859 (25 Aug Old Style)",
+    "year-from": 1859,
+    "place": "Gunib, Dagestan",
+    "lat": 42.39,
+    "lon": 46.96,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "Imam Shamil gives himself up to Prince Baryatinsky, ending the Caucasian Imamate's long resistance in Dagestan and Chechnya.",
+    "source": "https://en.wikipedia.org/wiki/Muhammad_Amin_Asiyalav"
+  },
+  {
     "id": "russia-1861-emancipation-of-the-serfs",
     "title": "Emancipation of the serfs",
     "date": "3 Mar 1861",
@@ -361,6 +487,20 @@
     "importance": 1,
     "description": "Alexander II's manifesto frees more than 20 million privately held serfs.",
     "source": "https://en.wikipedia.org/wiki/Emancipation_reform_of_1861"
+  },
+  {
+    "id": "russia-1864-battle-of-qbaada",
+    "title": "Battle of Qbaada",
+    "date": "2 Jun 1864 (21 May Old Style)",
+    "year-from": 1864,
+    "place": "Krasnaya Polyana, Sochi",
+    "lat": 43.68,
+    "lon": 40.21,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "The last Circassian fighters are defeated, ending the Russo-Circassian War; most surviving Circassians are killed or driven to the Ottoman Empire.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Qbaada"
   },
   {
     "id": "russia-1881-assassination-of-alexander-ii",
@@ -728,6 +868,71 @@
     "source": "https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt"
   },
   {
+    "id": "russia-1994-first-chechen-war-begins",
+    "title": "First Chechen War begins",
+    "date": "11 Dec 1994",
+    "year-from": 1994,
+    "place": "Grozny",
+    "lat": 43.31,
+    "lon": 45.7,
+    "country": "Russia",
+    "importance": 1,
+    "description": "Russian troops enter Chechnya to end its secession; Grozny is captured in March 1995 after bombing and street fighting that kill thousands of civilians.",
+    "source": "https://en.wikipedia.org/wiki/First_Chechen_War"
+  },
+  {
+    "id": "russia-1995-budyonnovsk-hospital-hostage-crisis",
+    "title": "Budyonnovsk hospital hostage crisis",
+    "date": "14 to 19 Jun 1995",
+    "year-from": 1995,
+    "place": "Budyonnovsk",
+    "lat": 44.78,
+    "lon": 44.17,
+    "country": "Russia",
+    "importance": 3,
+    "description": "Chechen fighters under Shamil Basayev seize a hospital with over 2,000 hostages, and the government agrees to a ceasefire and talks to free them.",
+    "source": "https://en.wikipedia.org/wiki/Budyonnovsk_hospital_hostage_crisis"
+  },
+  {
+    "id": "russia-1996-khasavyurt-accord",
+    "title": "Khasavyurt Accord",
+    "date": "30 Aug 1996",
+    "year-from": 1996,
+    "place": "Khasavyurt, Dagestan",
+    "lat": 43.25,
+    "lon": 46.59,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Alexander Lebed and Aslan Maskhadov sign the agreement that ends the First Chechen War, and Russian forces withdraw from Chechnya.",
+    "source": "https://en.wikipedia.org/wiki/Khasavyurt_Accord"
+  },
+  {
+    "id": "russia-1999-second-chechen-war-begins",
+    "title": "Second Chechen War begins",
+    "date": "Aug 1999",
+    "year-from": 1999,
+    "place": "Botlikh District, Dagestan, where the incursion began",
+    "lat": 42.67,
+    "lon": 46.22,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Islamist fighters from Chechnya cross into Dagestan, and Russia answers with a new war in Chechnya that takes Grozny by February 2000 and restores Moscow's rule.",
+    "source": "https://en.wikipedia.org/wiki/Second_Chechen_War"
+  },
+  {
+    "id": "russia-1999-apartment-bombings",
+    "title": "Apartment bombings",
+    "date": "4 to 16 Sep 1999",
+    "year-from": 1999,
+    "place": "Moscow (also Buynaksk and Volgodonsk)",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Blasts in four apartment blocks kill more than 300 people; blamed on Chechen militants, who deny it, they help launch the Second Chechen War and Putin's rise.",
+    "source": "https://en.wikipedia.org/wiki/1999_Russian_apartment_bombings"
+  },
+  {
     "id": "russia-1999-yeltsin-resigns",
     "title": "Yeltsin resigns",
     "date": "31 Dec 1999",
@@ -739,6 +944,32 @@
     "importance": 2,
     "description": "Boris Yeltsin hands the presidency to his prime minister, Vladimir Putin.",
     "source": "https://en.wikipedia.org/wiki/Boris_Yeltsin"
+  },
+  {
+    "id": "russia-2002-moscow-theater-hostage-crisis",
+    "title": "Moscow theater hostage crisis",
+    "date": "23 to 26 Oct 2002",
+    "year-from": 2002,
+    "place": "Dubrovka Theater, Moscow",
+    "lat": 55.73,
+    "lon": 37.67,
+    "country": "Russia",
+    "importance": 3,
+    "description": "Chechen gunmen hold 912 people in a theatre; special forces end the siege with a gas that kills 132 hostages along with all 40 attackers.",
+    "source": "https://en.wikipedia.org/wiki/Moscow_theater_hostage_crisis"
+  },
+  {
+    "id": "russia-2004-beslan-school-siege",
+    "title": "Beslan school siege",
+    "date": "1 to 3 Sep 2004",
+    "year-from": 2004,
+    "place": "Beslan, North Ossetia",
+    "lat": 43.18,
+    "lon": 44.54,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Militants hold more than 1,100 people, most of them children, in a school; the siege ends with 334 hostages dead, 186 of them children.",
+    "source": "https://en.wikipedia.org/wiki/Beslan_school_siege"
   },
   {
     "id": "russia-2014-annexation-of-crimea",

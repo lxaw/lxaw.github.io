@@ -178,12 +178,12 @@
     "polity": "Kingdom of Laos",
     "importance": 1,
     "description": "France transfers its remaining powers to the royal government by treaty.",
-    "source": "https://en.wikipedia.org/wiki/Franco–Lao_Treaty_of_Amity_and_Association"
+    "source": "https://en.wikipedia.org/wiki/Kingdom_of_Laos"
   },
   {
     "id": "laos-1960-kong-les-coup",
     "title": "Kong Le's coup",
-    "date": "9 Aug 1960",
+    "date": "10 Aug 1960",
     "year-from": 1960,
     "place": "Vientiane",
     "lat": 17.967,
@@ -260,7 +260,7 @@
     "country": "Laos",
     "importance": 2,
     "description": "The ruling party's congress adopts market reforms, ending collective farming and opening the economy to private business.",
-    "source": "https://en.wikipedia.org/wiki/New_Economic_Mechanism"
+    "source": "https://en.wikipedia.org/wiki/New_Economic_Mechanism_(Laos)"
   },
   {
     "id": "laos-1994-first-friendship-bridge-opens",

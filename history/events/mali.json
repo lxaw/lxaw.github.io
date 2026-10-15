@@ -66,7 +66,7 @@
     "polity": "Songhai Empire",
     "importance": 1,
     "description": "The king of Gao captures Timbuktu from the Tuareg, the first large conquest of the Songhai Empire.",
-    "source": "https://en.wikipedia.org/wiki/Sonni_Ali"
+    "source": "https://en.wikipedia.org/wiki/Songhai_Empire"
   },
   {
     "id": "mali-1493-askia-muhammad-seizes-the-songhai-throne",
@@ -166,7 +166,7 @@
   {
     "id": "mali-1893-french-occupy-timbuktu",
     "title": "French occupy Timbuktu",
-    "date": "15 Dec 1893",
+    "date": "Dec 1893",
     "year-from": 1893,
     "place": "Timbuktu",
     "lat": 16.77,
@@ -174,7 +174,7 @@
     "country": "Mali",
     "importance": 2,
     "description": "French troops enter Timbuktu, completing their control of the middle Niger.",
-    "source": "https://en.wikipedia.org/wiki/Timbuktu"
+    "source": "https://en.wikipedia.org/wiki/Eugène_Bonnier"
   },
   {
     "id": "mali-1898-fall-of-sikasso",

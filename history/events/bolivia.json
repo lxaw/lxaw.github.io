@@ -216,7 +216,7 @@
     "country": "Bolivia",
     "importance": 2,
     "description": "Liberals from La Paz defeat the Conservative government of Sucre, and the seat of government moves to La Paz.",
-    "source": "https://en.wikipedia.org/wiki/Federal_War_(Bolivia)"
+    "source": "https://en.wikipedia.org/wiki/Bolivian_Civil_War"
   },
   {
     "id": "bolivia-1903-treaty-of-petropolis",
@@ -339,7 +339,7 @@
   {
     "id": "bolivia-2003-gas-war",
     "title": "Gas War",
-    "date": "17 Oct 2003",
+    "date": "Oct 2003",
     "year-from": 2003,
     "place": "El Alto",
     "lat": -16.5,

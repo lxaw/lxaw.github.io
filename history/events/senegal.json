@@ -30,8 +30,8 @@
   {
     "id": "senegal-1444-portuguese-reach-cap-vert",
     "title": "Portuguese reach Cap-Vert",
-    "date": "1444",
-    "year-from": 1444,
+    "date": "1445",
+    "year-from": 1445,
     "place": "Cap-Vert, Dakar",
     "lat": 14.74,
     "lon": -17.52,
@@ -162,7 +162,7 @@
   {
     "id": "senegal-1886-death-of-lat-dior",
     "title": "Death of Lat Dior",
-    "date": "27 Oct 1886",
+    "date": "1886",
     "year-from": 1886,
     "place": "Dekheule",
     "lat": 15.2,
@@ -184,7 +184,7 @@
     "country": "Senegal",
     "importance": 1,
     "description": "France groups its West African colonies under a governor-general based in Senegal, moving the seat to Dakar in 1902.",
-    "source": "https://en.wikipedia.org/wiki/French_West_Africa"
+    "source": "https://en.wikipedia.org/wiki/Jean-Baptiste_Chaudié"
   },
   {
     "id": "senegal-1914-blaise-diagne-elected",

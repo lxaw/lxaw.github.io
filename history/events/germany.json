@@ -93,6 +93,62 @@
     "source": "https://en.wikipedia.org/wiki/Concordat_of_Worms"
   },
   {
+    "id": "germany-1143-lubeck-founded",
+    "title": "Lübeck founded",
+    "date": "1143",
+    "year-from": 1143,
+    "place": "Lübeck",
+    "lat": 53.866,
+    "lon": 10.686,
+    "country": "Germany",
+    "polity": "Holy Roman Empire",
+    "importance": 2,
+    "description": "Count Adolf II of Holstein founds the town that becomes the leading city of the Hanseatic League.",
+    "source": "https://en.wikipedia.org/wiki/Lübeck"
+  },
+  {
+    "id": "germany-1155-barbarossa-crowned-emperor",
+    "title": "Barbarossa crowned emperor",
+    "date": "18 Jun 1155",
+    "year-from": 1155,
+    "place": "St. Peter's Basilica, Rome",
+    "lat": 41.902,
+    "lon": 12.457,
+    "country": "Germany",
+    "polity": "Holy Roman Empire",
+    "importance": 2,
+    "description": "Pope Adrian IV crowns Frederick I Barbarossa, the most powerful of the Staufer emperors.",
+    "source": "https://en.wikipedia.org/wiki/Frederick_Barbarossa"
+  },
+  {
+    "id": "germany-1190-death-of-barbarossa",
+    "title": "Death of Barbarossa",
+    "date": "10 Jun 1190",
+    "year-from": 1190,
+    "place": "Saleph (Göksu) river near Silifke, Turkey",
+    "lat": 36.38,
+    "lon": 33.93,
+    "country": "Germany",
+    "polity": "Holy Roman Empire",
+    "importance": 3,
+    "description": "Frederick Barbarossa drowns in Anatolia while leading the Third Crusade, and much of his army turns back.",
+    "source": "https://en.wikipedia.org/wiki/Frederick_Barbarossa"
+  },
+  {
+    "id": "germany-1220-frederick-ii-crowned-emperor",
+    "title": "Frederick II crowned emperor",
+    "date": "Nov 1220",
+    "year-from": 1220,
+    "place": "St. Peter's Basilica, Rome",
+    "lat": 41.902,
+    "lon": 12.457,
+    "country": "Germany",
+    "polity": "Holy Roman Empire",
+    "importance": 3,
+    "description": "Pope Honorius III crowns the Staufer Frederick II, king of Sicily, whose long conflict with the papacy ends with the dynasty's fall.",
+    "source": "https://en.wikipedia.org/wiki/Frederick_II,_Holy_Roman_Emperor"
+  },
+  {
     "id": "germany-1356-golden-bull",
     "title": "Golden Bull",
     "date": "10 Jan 1356",
@@ -104,6 +160,20 @@
     "importance": 2,
     "description": "Fixes the seven electors who choose the emperor.",
     "source": "https://en.wikipedia.org/wiki/Golden_Bull_of_1356"
+  },
+  {
+    "id": "germany-1370-treaty-of-stralsund",
+    "title": "Treaty of Stralsund",
+    "date": "24 May 1370",
+    "year-from": 1370,
+    "place": "Stralsund",
+    "lat": 54.315,
+    "lon": 13.09,
+    "country": "Germany",
+    "polity": "Holy Roman Empire",
+    "importance": 2,
+    "description": "Denmark makes peace with the Hanseatic towns on their terms, marking the height of the League's power in the Baltic.",
+    "source": "https://en.wikipedia.org/wiki/Treaty_of_Stralsund_(1370)"
   },
   {
     "id": "germany-1414-council-of-constance-opens",
@@ -285,6 +355,20 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Jena%E2%80%93Auerstedt"
   },
   {
+    "id": "germany-1811-krupp-founded",
+    "title": "Krupp founded",
+    "date": "1811",
+    "year-from": 1811,
+    "place": "Essen",
+    "lat": 51.455,
+    "lon": 7.011,
+    "country": "Germany",
+    "polity": "Grand Duchy of Berg",
+    "importance": 3,
+    "description": "Friedrich Krupp sets up a steel works in Essen, the start of the firm that becomes Germany's largest industrial company.",
+    "source": "https://en.wikipedia.org/wiki/Krupp"
+  },
+  {
     "id": "germany-1813-battle-of-leipzig",
     "title": "Battle of Leipzig",
     "date": "16 – 19 Oct 1813",
@@ -312,6 +396,20 @@
     "source": "https://en.wikipedia.org/wiki/Zollverein"
   },
   {
+    "id": "germany-1835-first-german-railway",
+    "title": "First German railway opens",
+    "date": "7 Dec 1835",
+    "year-from": 1835,
+    "place": "Nuremberg",
+    "lat": 49.448,
+    "lon": 11.075,
+    "country": "Germany",
+    "polity": "Kingdom of Bavaria",
+    "importance": 2,
+    "description": "The Bavarian Ludwig Railway between Nuremberg and Fürth, the first steam railway in Germany, opens.",
+    "source": "https://en.wikipedia.org/wiki/Bavarian_Ludwig_Railway"
+  },
+  {
     "id": "germany-1848-frankfurt-parliament",
     "title": "Frankfurt Parliament",
     "date": "18 May 1848",
@@ -337,6 +435,20 @@
     "importance": 2,
     "description": "King Wilhelm I makes Otto von Bismarck minister-president during a conflict with parliament over the army.",
     "source": "https://en.wikipedia.org/wiki/Otto_von_Bismarck"
+  },
+  {
+    "id": "germany-1865-basf-founded",
+    "title": "BASF founded",
+    "date": "6 Apr 1865",
+    "year-from": 1865,
+    "place": "Mannheim",
+    "lat": 49.488,
+    "lon": 8.466,
+    "country": "Germany",
+    "polity": "Grand Duchy of Baden",
+    "importance": 3,
+    "description": "The Badische Anilin- und Sodafabrik is founded to make dyes, the start of what becomes the world's largest chemical company.",
+    "source": "https://en.wikipedia.org/wiki/BASF"
   },
   {
     "id": "germany-1871-german-empire-proclaimed",
@@ -378,6 +490,20 @@
     "importance": 2,
     "description": "European powers meet to set rules for claiming territory in Africa.",
     "source": "https://en.wikipedia.org/wiki/Berlin_Conference"
+  },
+  {
+    "id": "germany-1886-benz-patents-the-motor-car",
+    "title": "Benz patents the motor car",
+    "date": "29 Jan 1886",
+    "year-from": 1886,
+    "place": "Mannheim",
+    "lat": 49.488,
+    "lon": 8.466,
+    "country": "Germany",
+    "polity": "German Empire",
+    "importance": 2,
+    "description": "Carl Benz applies for a patent on his Motorwagen, generally regarded as the first practical automobile.",
+    "source": "https://en.wikipedia.org/wiki/Benz_Patent-Motorwagen"
   },
   {
     "id": "germany-1914-germany-declares-war-on-russia",
@@ -669,5 +795,57 @@
     "importance": 1,
     "description": "East Germany joins the Federal Republic.",
     "source": "https://en.wikipedia.org/wiki/German_reunification"
+  },
+  {
+    "id": "germany-1991-bundestag-votes-for-berlin",
+    "title": "Bundestag votes to move to Berlin",
+    "date": "20 Jun 1991",
+    "year-from": 1991,
+    "place": "Bonn",
+    "lat": 50.718,
+    "lon": 7.121,
+    "country": "Germany",
+    "importance": 3,
+    "description": "The Bundestag decides to make Berlin the seat of parliament and government, moving most ministries from Bonn.",
+    "source": "https://en.wikipedia.org/wiki/Berlin/Bonn_Act"
+  },
+  {
+    "id": "germany-1999-bundestag-meets-in-the-reichstag",
+    "title": "Bundestag meets in the Reichstag",
+    "date": "19 Apr 1999",
+    "year-from": 1999,
+    "place": "Reichstag building, Berlin",
+    "lat": 52.5186,
+    "lon": 13.376,
+    "country": "Germany",
+    "importance": 2,
+    "description": "The rebuilt Reichstag is handed over to the Bundestag, which holds its first session there, completing the move of parliament from Bonn to Berlin.",
+    "source": "https://en.wikipedia.org/wiki/Reichstag_building"
+  },
+  {
+    "id": "germany-2002-euro-replaces-the-mark",
+    "title": "Euro replaces the Deutsche Mark",
+    "date": "1 Jan 2002",
+    "year-from": 2002,
+    "place": "Frankfurt",
+    "lat": 50.11,
+    "lon": 8.674,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Euro notes and coins go into circulation, replacing the Deutsche Mark, a symbol of West Germany's post-war recovery.",
+    "source": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+  },
+  {
+    "id": "germany-2015-germany-admits-refugees-from-hungary",
+    "title": "Germany admits refugees from Hungary",
+    "date": "4 Sep 2015",
+    "year-from": 2015,
+    "place": "Berlin",
+    "lat": 52.52,
+    "lon": 13.405,
+    "country": "Germany",
+    "importance": 2,
+    "description": "Germany and Austria agree to let refugees stranded in Hungary cross their borders; Germany goes on to take in over a million asylum seekers.",
+    "source": "https://en.wikipedia.org/wiki/European_migrant_crisis"
   }
 ]

@@ -11,13 +11,13 @@
     "polity": "Kingdom of Rwanda",
     "importance": 2,
     "description": "By tradition Ruganzu II Ndori refounds the Nyiginya kingdom and begins its expansion across the hills.",
-    "source": "https://en.wikipedia.org/wiki/Ruganzu_II_Ndori"
+    "source": "https://en.wikipedia.org/wiki/Kingdom_of_Rwanda"
   },
   {
     "id": "rwanda-1853-accession-of-rwabugiri",
     "title": "Accession of Rwabugiri",
-    "date": "1853",
-    "year-from": 1853,
+    "date": "1867",
+    "year-from": 1867,
     "place": "Nyanza",
     "lat": -2.35,
     "lon": 29.74,

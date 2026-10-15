@@ -80,7 +80,7 @@
     "country": "Singapore",
     "importance": 2,
     "description": "The Sultan and the Temenggong give up the whole island to the East India Company in return for payments.",
-    "source": "https://en.wikipedia.org/wiki/Treaty_of_Friendship_and_Alliance"
+    "source": "https://en.wikipedia.org/wiki/Founding_years_of_modern_Singapore"
   },
   {
     "id": "singapore-1832-capital-of-the-straits-settlements",
@@ -141,7 +141,7 @@
   {
     "id": "singapore-1938-naval-base-opened",
     "title": "Naval base opened",
-    "date": "14 Feb 1938",
+    "date": "Feb 1938",
     "year-from": 1938,
     "place": "Sembawang",
     "lat": 1.463,
@@ -233,7 +233,7 @@
     "polity": "State of Singapore",
     "importance": 1,
     "description": "Singapore becomes a self-governing state after the People's Action Party wins the election, with Lee Kuan Yew as prime minister.",
-    "source": "https://en.wikipedia.org/wiki/Self-governance_of_Singapore"
+    "source": "https://en.wikipedia.org/wiki/Colony_of_Singapore"
   },
   {
     "id": "singapore-1960-housing-and-development-board-set-up",
@@ -353,7 +353,7 @@
     "country": "Singapore",
     "importance": 3,
     "description": "The disease reaches Singapore, where 238 people are infected and 33 die before the outbreak is contained in May.",
-    "source": "https://en.wikipedia.org/wiki/2003_SARS_outbreak_in_Singapore"
+    "source": "https://en.wikipedia.org/wiki/2002–2004_SARS_outbreak"
   },
   {
     "id": "singapore-2004-lee-hsien-loong-becomes-prime-minister",

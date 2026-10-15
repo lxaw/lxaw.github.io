@@ -1,5 +1,73 @@
 [
   {
+    "id": "japan-bce3900-sannai-maruyama-settlement",
+    "title": "Sannai-Maruyama settled",
+    "date": "about 3900 BCE",
+    "year-from": -3900,
+    "place": "Sannai-Maruyama, Aomori",
+    "lat": 40.81,
+    "lon": 140.698,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Jōmon people begin to occupy what becomes the largest known Jōmon village, with hundreds of pit dwellings and large timber buildings, lived in until about 2200 BCE.",
+    "source": "https://en.wikipedia.org/wiki/Sannai-Maruyama_site"
+  },
+  {
+    "id": "japan-bce400-yoshinogari-settlement",
+    "title": "Yoshinogari settlement",
+    "date": "before 400 BCE",
+    "year-from": -400,
+    "place": "Yoshinogari, Saga",
+    "lat": 33.324,
+    "lon": 130.391,
+    "country": "Japan",
+    "importance": 3,
+    "description": "A rice-farming village of the Yayoi period is founded in northern Kyushu and grows into a large moated and palisaded settlement.",
+    "source": "https://en.wikipedia.org/wiki/Yoshinogari_site"
+  },
+  {
+    "id": "japan-57-na-envoy-receives-the-han-gold-seal",
+    "title": "Na envoy receives the Han gold seal",
+    "date": "57",
+    "year-from": 57,
+    "place": "Luoyang, Han China",
+    "lat": 34.73,
+    "lon": 112.63,
+    "country": "Japan",
+    "polity": "Na",
+    "importance": 3,
+    "description": "Emperor Guangwu of Han grants a gold seal to an envoy of the Wa state of Na; a seal matching the record was found on Shikanoshima in 1784.",
+    "source": "https://en.wikipedia.org/wiki/King_of_Na_gold_seal"
+  },
+  {
+    "id": "japan-238-himiko-s-envoys-reach-the-wei-court",
+    "title": "Himiko's envoys reach the Wei court",
+    "date": "238 or 239",
+    "year-from": 238,
+    "year-to": 239,
+    "place": "Luoyang, Wei China",
+    "lat": 34.73,
+    "lon": 112.63,
+    "country": "Japan",
+    "polity": "Yamatai",
+    "importance": 1,
+    "description": "Queen Himiko of Yamatai sends envoys to the Wei court, which names her a friend of Wei; the Chinese record is the main written source on Japan in this period.",
+    "source": "https://en.wikipedia.org/wiki/Himiko"
+  },
+  {
+    "id": "japan-450-daisen-kofun",
+    "title": "Daisen Kofun built",
+    "date": "mid-5th century",
+    "year-from": 450,
+    "place": "Sakai, Osaka",
+    "lat": 34.564,
+    "lon": 135.487,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The largest keyhole-shaped burial mound in Japan, traditionally the tomb of Emperor Nintoku, shows the power of the Yamato kings.",
+    "source": "https://en.wikipedia.org/wiki/Daisen_Kofun"
+  },
+  {
     "id": "japan-538-buddhism-arrives-from-baekje",
     "title": "Buddhism arrives from Baekje",
     "date": "538 or 552",
@@ -53,6 +121,19 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Baekgang"
   },
   {
+    "id": "japan-701-taiho-code",
+    "title": "Taihō Code",
+    "date": "701",
+    "year-from": 701,
+    "place": "Fujiwara-kyō",
+    "lat": 34.502,
+    "lon": 135.807,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The court issues a full legal code on the Chinese model, setting up the ministries, provinces and land system of the ritsuryō state.",
+    "source": "https://en.wikipedia.org/wiki/Taihō_Code"
+  },
+  {
     "id": "japan-710-capital-established-at-heijo-kyo",
     "title": "Capital established at Heijō-kyō",
     "date": "710",
@@ -64,6 +145,19 @@
     "importance": 2,
     "description": "The first long-lived capital, laid out on the model of Tang Chang'an; start of the Nara period.",
     "source": "https://en.wikipedia.org/wiki/Heijō-kyō"
+  },
+  {
+    "id": "japan-752-great-buddha-of-todai-ji-consecrated",
+    "title": "Great Buddha of Tōdai-ji consecrated",
+    "date": "752",
+    "year-from": 752,
+    "place": "Tōdai-ji, Nara",
+    "lat": 34.689,
+    "lon": 135.84,
+    "country": "Japan",
+    "importance": 2,
+    "description": "An eye-opening ceremony attended by thousands of monks completes the colossal bronze Buddha that Emperor Shōmu ordered as the centre of state Buddhism.",
+    "source": "https://en.wikipedia.org/wiki/Tōdai-ji"
   },
   {
     "id": "japan-794-capital-moved-to-heian-kyo",
@@ -79,6 +173,19 @@
     "source": "https://en.wikipedia.org/wiki/Heian-kyō"
   },
   {
+    "id": "japan-858-fujiwara-no-yoshifusa-becomes-regent",
+    "title": "Fujiwara no Yoshifusa becomes regent",
+    "date": "858",
+    "year-from": 858,
+    "place": "Heian-kyō",
+    "lat": 35.02,
+    "lon": 135.75,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Yoshifusa becomes the first regent not of imperial blood, beginning two centuries in which the Fujiwara rule through child emperors.",
+    "source": "https://en.wikipedia.org/wiki/Sesshō_and_Kampaku"
+  },
+  {
     "id": "japan-1008-the-tale-of-genji",
     "title": "The Tale of Genji",
     "date": "about 1008",
@@ -90,6 +197,32 @@
     "importance": 3,
     "description": "The court lady Murasaki Shikibu writes a long prose romance often called the world's first novel.",
     "source": "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
+  },
+  {
+    "id": "japan-1156-hogen-rebellion",
+    "title": "Hōgen rebellion",
+    "date": "Jul – Aug 1156",
+    "year-from": 1156,
+    "place": "Kyoto",
+    "lat": 35.012,
+    "lon": 135.768,
+    "country": "Japan",
+    "importance": 2,
+    "description": "A short war over the imperial succession is decided by Taira and Minamoto warriors, showing that the court now depends on the samurai clans.",
+    "source": "https://en.wikipedia.org/wiki/Hōgen_rebellion"
+  },
+  {
+    "id": "japan-1160-heiji-rebellion",
+    "title": "Heiji rebellion",
+    "date": "Jan – Feb 1160",
+    "year-from": 1160,
+    "place": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.76,
+    "country": "Japan",
+    "importance": 3,
+    "description": "Taira no Kiyomori crushes a Minamoto coup in the capital, leaving the Taira the dominant power at court for two decades.",
+    "source": "https://en.wikipedia.org/wiki/Heiji_rebellion"
   },
   {
     "id": "japan-1185-battle-of-dan-no-ura",
@@ -387,6 +520,58 @@
     "source": "https://en.wikipedia.org/wiki/Meiji_Restoration"
   },
   {
+    "id": "japan-1871-abolition-of-the-han-system",
+    "title": "Abolition of the han system",
+    "date": "Aug 1871",
+    "year-from": 1871,
+    "place": "Tokyo",
+    "lat": 35.685,
+    "lon": 139.753,
+    "country": "Japan",
+    "importance": 1,
+    "description": "An imperial edict abolishes the feudal domains and replaces them with prefectures run by the central government.",
+    "source": "https://en.wikipedia.org/wiki/Abolition_of_the_han_system"
+  },
+  {
+    "id": "japan-1872-first-railway-opens",
+    "title": "First railway opens",
+    "date": "14 Oct 1872",
+    "year-from": 1872,
+    "place": "Shimbashi, Tokyo",
+    "lat": 35.666,
+    "lon": 139.761,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Japan's first railway, built with British help, opens between Shimbashi in Tokyo and Yokohama.",
+    "source": "https://en.wikipedia.org/wiki/Shiodome_Freight_Terminal"
+  },
+  {
+    "id": "japan-1872-tomioka-silk-mill-opens",
+    "title": "Tomioka Silk Mill opens",
+    "date": "4 Nov 1872",
+    "year-from": 1872,
+    "place": "Tomioka, Gunma",
+    "lat": 36.255,
+    "lon": 138.888,
+    "country": "Japan",
+    "importance": 3,
+    "description": "A government model factory with French machinery begins mechanised silk reeling, the start of Japan's leading export industry.",
+    "source": "https://en.wikipedia.org/wiki/Tomioka_Silk_Mill"
+  },
+  {
+    "id": "japan-1873-land-tax-reform",
+    "title": "Land tax reform",
+    "date": "1873",
+    "year-from": 1873,
+    "place": "Tokyo",
+    "lat": 35.685,
+    "lon": 139.753,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The government replaces rice dues with a money tax on assessed land value and grants title to landowners, giving the state a steady revenue.",
+    "source": "https://en.wikipedia.org/wiki/Land_Tax_Reform_(Japan_1873)"
+  },
+  {
     "id": "japan-1877-battle-of-shiroyama",
     "title": "Battle of Shiroyama",
     "date": "24 Sep 1877",
@@ -398,6 +583,19 @@
     "importance": 2,
     "description": "The new conscript army defeats Saigō Takamori's last samurai, ending the Satsuma Rebellion.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Shiroyama"
+  },
+  {
+    "id": "japan-1882-bank-of-japan-founded",
+    "title": "Bank of Japan founded",
+    "date": "10 Oct 1882",
+    "year-from": 1882,
+    "place": "Tokyo",
+    "lat": 35.686,
+    "lon": 139.772,
+    "country": "Japan",
+    "importance": 3,
+    "description": "Finance minister Matsukata Masayoshi founds a central bank to stabilise the currency after the inflation of the 1870s.",
+    "source": "https://en.wikipedia.org/wiki/Bank_of_Japan"
   },
   {
     "id": "japan-1889-meiji-constitution",
@@ -424,6 +622,19 @@
     "importance": 2,
     "description": "Japanese ships attack a Chinese convoy off Korea; Japan's victory the next year makes it the leading power in East Asia.",
     "source": "https://en.wikipedia.org/wiki/First_Sino-Japanese_War"
+  },
+  {
+    "id": "japan-1901-yawata-steel-works",
+    "title": "Yawata Steel Works fires its first furnace",
+    "date": "5 Feb 1901",
+    "year-from": 1901,
+    "place": "Yahata, Kitakyushu",
+    "lat": 33.903,
+    "lon": 130.83,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The state-run steel works, paid for partly by the Chinese indemnity of 1895, begins operation and becomes the base of Japan's heavy industry.",
+    "source": "https://en.wikipedia.org/wiki/Yawata_Steel_Works"
   },
   {
     "id": "japan-1905-battle-of-tsushima",

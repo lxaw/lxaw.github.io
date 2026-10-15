@@ -2,8 +2,9 @@
   {
     "id": "kazakhstan-bce3500-horses-kept-at-botai",
     "title": "Horses kept at Botai",
-    "date": "about 3500 BCE",
-    "year-from": -3500,
+    "date": "about 3700 to 3100 BCE",
+    "year-from": -3700,
+    "year-to": -3100,
     "place": "Botai, North Kazakhstan",
     "lat": 53.3,
     "lon": 67.65,

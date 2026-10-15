@@ -28,7 +28,7 @@
   {
     "id": "new-zealand-1769-cook-lands-at-poverty-bay",
     "title": "Cook lands at Poverty Bay",
-    "date": "8 Oct 1769",
+    "date": "7 Oct 1769",
     "year-from": 1769,
     "place": "Gisborne",
     "lat": -38.675,
@@ -36,7 +36,7 @@
     "country": "New Zealand",
     "importance": 1,
     "description": "James Cook makes the first European landing and goes on to chart the whole coast in six months.",
-    "source": "https://en.wikipedia.org/wiki/First_voyage_of_James_Cook"
+    "source": "https://en.wikipedia.org/wiki/Poverty_Bay"
   },
   {
     "id": "new-zealand-1814-first-christian-mission",
@@ -49,7 +49,7 @@
     "country": "New Zealand",
     "importance": 3,
     "description": "Samuel Marsden preaches at the founding of the first mission station, the first lasting European settlement.",
-    "source": "https://en.wikipedia.org/wiki/Samuel_Marsden"
+    "source": "https://en.wikipedia.org/wiki/1814_in_New_Zealand"
   },
   {
     "id": "new-zealand-1835-declaration-of-independence",
@@ -187,7 +187,7 @@
     "polity": "Colony of New Zealand",
     "importance": 2,
     "description": "The ship Dunedin sails for London with a cargo of frozen mutton, opening the export trade on which the economy comes to rest.",
-    "source": "https://en.wikipedia.org/wiki/Dunedin_(ship)"
+    "source": "https://en.wikipedia.org/wiki/Dunedin_(1874_ship)"
   },
   {
     "id": "new-zealand-1886-eruption-of-mount-tarawera",

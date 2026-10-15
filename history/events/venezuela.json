@@ -66,7 +66,7 @@
     "polity": "Spanish Empire",
     "importance": 3,
     "description": "A Basque trading company receives a monopoly on Venezuela's trade with Spain, chiefly in cacao.",
-    "source": "https://en.wikipedia.org/wiki/Guipuzcoan_Company"
+    "source": "https://en.wikipedia.org/wiki/Guipuzcoan_Company_of_Caracas"
   },
   {
     "id": "venezuela-1777-captaincy-general-of-venezuela",
@@ -108,7 +108,7 @@
     "polity": "Captaincy General of Venezuela",
     "importance": 2,
     "description": "The city council of Caracas deposes the Spanish captain general and sets up a governing junta.",
-    "source": "https://en.wikipedia.org/wiki/19_April_1810_Revolution"
+    "source": "https://en.wikipedia.org/wiki/Revolution_of_April_19,_1810"
   },
   {
     "id": "venezuela-1811-declaration-of-independence",
@@ -261,7 +261,7 @@
   {
     "id": "venezuela-1922-barroso-ii-blowout",
     "title": "Barroso II blowout",
-    "date": "14 Dec 1922",
+    "date": "Dec 1922",
     "year-from": 1922,
     "place": "Cabimas",
     "lat": 10.38,
@@ -269,7 +269,7 @@
     "country": "Venezuela",
     "importance": 1,
     "description": "An oil well blows out near Lake Maracaibo, showing the size of the reserves that make Venezuela a leading oil exporter.",
-    "source": "https://en.wikipedia.org/wiki/Barroso_II"
+    "source": "https://en.wikipedia.org/wiki/Cabimas"
   },
   {
     "id": "venezuela-1945-coup-of-october-1945",

@@ -13,6 +13,48 @@
     "source": "https://en.wikipedia.org/wiki/Cahokia"
   },
   {
+    "id": "united-states-1200-cliff-palace",
+    "title": "Cliff Palace inhabited",
+    "date": "about 1200 to 1300",
+    "year-from": 1200,
+    "year-to": 1300,
+    "place": "Mesa Verde, Colorado",
+    "lat": 37.168,
+    "lon": -108.473,
+    "country": "United States",
+    "importance": 3,
+    "description": "Ancestral Puebloans build and live in the largest cliff dwelling in North America, at Mesa Verde.",
+    "source": "https://en.wikipedia.org/wiki/Cliff_Palace"
+  },
+  {
+    "id": "united-states-1513-ponce-de-leon-reaches-florida",
+    "title": "Ponce de León reaches Florida",
+    "date": "Apr 1513",
+    "year-from": 1513,
+    "place": "Florida's Atlantic coast (exact landing site disputed)",
+    "lat": 28.07,
+    "lon": -80.56,
+    "country": "United States",
+    "polity": "Spanish Empire",
+    "importance": 2,
+    "description": "Juan Ponce de León lands on and names Florida, the first recorded European expedition to the present United States.",
+    "source": "https://en.wikipedia.org/wiki/Juan_Ponce_de_León"
+  },
+  {
+    "id": "united-states-1540-coronado-reaches-hawikuh",
+    "title": "Coronado reaches Hawikuh",
+    "date": "1540",
+    "year-from": 1540,
+    "place": "Hawikuh, New Mexico",
+    "lat": 34.987,
+    "lon": -108.85,
+    "country": "United States",
+    "polity": "Spanish Empire",
+    "importance": 3,
+    "description": "Francisco Vázquez de Coronado's expedition seizes the Zuni town of Hawikuh while searching for the Seven Cities of Gold.",
+    "source": "https://en.wikipedia.org/wiki/Francisco_Vázquez_de_Coronado"
+  },
+  {
     "id": "united-states-1565-st-augustine-founded",
     "title": "St. Augustine founded",
     "date": "8 Sep 1565",
@@ -25,6 +67,20 @@
     "importance": 3,
     "description": "Spain founds the oldest continuously occupied European settlement in the present United States.",
     "source": "https://en.wikipedia.org/wiki/St._Augustine,_Florida"
+  },
+  {
+    "id": "united-states-1587-roanoke-colony-settled",
+    "title": "Roanoke colony settled",
+    "date": "Jul 1587",
+    "year-from": 1587,
+    "place": "Roanoke Island, North Carolina",
+    "lat": 35.939,
+    "lon": -75.71,
+    "country": "United States",
+    "polity": "Kingdom of England",
+    "importance": 2,
+    "description": "English colonists under John White settle on Roanoke Island; by 1590 they have vanished, becoming the Lost Colony.",
+    "source": "https://en.wikipedia.org/wiki/Roanoke_Colony"
   },
   {
     "id": "united-states-1607-jamestown-founded",
@@ -67,6 +123,20 @@
     "importance": 2,
     "description": "English Separatists found Plymouth Colony after signing the Mayflower Compact on board ship.",
     "source": "https://en.wikipedia.org/wiki/Plymouth_Colony"
+  },
+  {
+    "id": "united-states-1680-pueblo-revolt",
+    "title": "Pueblo Revolt",
+    "date": "10 Aug 1680",
+    "year-from": 1680,
+    "place": "Santa Fe, New Mexico",
+    "lat": 35.687,
+    "lon": -105.938,
+    "country": "United States",
+    "polity": "New Spain",
+    "importance": 3,
+    "description": "The Pueblo peoples rise against Spanish rule and drive the colonists out of New Mexico for twelve years.",
+    "source": "https://en.wikipedia.org/wiki/Pueblo_Revolt"
   },
   {
     "id": "united-states-1775-battles-of-lexington-and-concord",
@@ -161,6 +231,19 @@
     "source": "https://en.wikipedia.org/wiki/Louisiana_Purchase"
   },
   {
+    "id": "united-states-1804-lewis-and-clark-set-out",
+    "title": "Lewis and Clark set out",
+    "date": "14 May 1804",
+    "year-from": 1804,
+    "place": "Camp Dubois, Illinois",
+    "lat": 38.81,
+    "lon": -90.11,
+    "country": "United States",
+    "importance": 2,
+    "description": "The Corps of Discovery leaves for the Missouri River to explore the Louisiana Purchase, reaching the Pacific in November 1805.",
+    "source": "https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition"
+  },
+  {
     "id": "united-states-1814-burning-of-washington",
     "title": "Burning of Washington",
     "date": "24 Aug 1814",
@@ -187,6 +270,58 @@
     "source": "https://en.wikipedia.org/wiki/Indian_Removal_Act"
   },
   {
+    "id": "united-states-1836-battle-of-the-alamo",
+    "title": "Battle of the Alamo",
+    "date": "6 Mar 1836",
+    "year-from": 1836,
+    "place": "The Alamo, San Antonio, Texas",
+    "lat": 29.426,
+    "lon": -98.486,
+    "country": "United States",
+    "importance": 2,
+    "description": "Mexican troops under Santa Anna storm the Alamo mission and kill its Texian defenders during the Texas Revolution.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_the_Alamo"
+  },
+  {
+    "id": "united-states-1838-cherokee-removal-begins",
+    "title": "Cherokee removal begins",
+    "date": "May 1838",
+    "year-from": 1838,
+    "place": "Fort Cass, Charleston, Tennessee",
+    "lat": 35.287,
+    "lon": -84.756,
+    "country": "United States",
+    "importance": 2,
+    "description": "Federal troops begin rounding up the Cherokee for removal west; about 4,000 die on the Trail of Tears.",
+    "source": "https://en.wikipedia.org/wiki/Trail_of_Tears"
+  },
+  {
+    "id": "united-states-1846-oregon-treaty",
+    "title": "Oregon Treaty",
+    "date": "15 Jun 1846",
+    "year-from": 1846,
+    "place": "Washington, D.C.",
+    "lat": 38.898,
+    "lon": -77.037,
+    "country": "United States",
+    "importance": 3,
+    "description": "Britain and the United States divide the Oregon Country along the 49th parallel, giving the United States the Pacific Northwest.",
+    "source": "https://en.wikipedia.org/wiki/Oregon_Treaty"
+  },
+  {
+    "id": "united-states-1847-mormons-reach-salt-lake-valley",
+    "title": "Mormons reach the Salt Lake Valley",
+    "date": "24 Jul 1847",
+    "year-from": 1847,
+    "place": "Salt Lake City, Utah",
+    "lat": 40.76,
+    "lon": -111.89,
+    "country": "United States",
+    "importance": 3,
+    "description": "Brigham Young's party of Latter-day Saints arrives in the Salt Lake Valley and begins settling the Great Basin.",
+    "source": "https://en.wikipedia.org/wiki/Mormon_pioneers"
+  },
+  {
     "id": "united-states-1848-treaty-of-guadalupe-hidalgo",
     "title": "Treaty of Guadalupe Hidalgo",
     "date": "2 Feb 1848",
@@ -211,6 +346,19 @@
     "importance": 3,
     "description": "The first women's rights convention in the United States calls for women's right to vote.",
     "source": "https://en.wikipedia.org/wiki/Seneca_Falls_Convention"
+  },
+  {
+    "id": "united-states-1848-gold-found-at-sutters-mill",
+    "title": "Gold found at Sutter's Mill",
+    "date": "24 Jan 1848",
+    "year-from": 1848,
+    "place": "Coloma, California",
+    "lat": 38.8,
+    "lon": -120.891,
+    "country": "United States",
+    "importance": 2,
+    "description": "James W. Marshall finds gold on the American River, setting off the California gold rush.",
+    "source": "https://en.wikipedia.org/wiki/California_gold_rush"
   },
   {
     "id": "united-states-1861-attack-on-fort-sumter",

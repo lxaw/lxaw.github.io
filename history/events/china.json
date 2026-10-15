@@ -1,5 +1,46 @@
 [
   {
+    "id": "china-bce3300-liangzhu-culture",
+    "title": "Liangzhu culture emerges",
+    "date": "about 3300 BCE",
+    "year-from": -3300,
+    "place": "Liangzhu, Hangzhou",
+    "lat": 30.39,
+    "lon": 119.99,
+    "country": "China",
+    "importance": 2,
+    "description": "A stratified Neolithic society arises in the Yangtze delta that, until about 2300 BCE, builds a walled city and large waterworks and makes elaborate ritual jades.",
+    "source": "https://en.wikipedia.org/wiki/Liangzhu_culture"
+  },
+  {
+    "id": "china-bce1750-erlitou-culture",
+    "title": "Erlitou culture",
+    "date": "about 1750 – 1500 BCE",
+    "year-from": -1750,
+    "year-to": -1500,
+    "place": "Erlitou, Yanshi, Henan",
+    "lat": 34.693,
+    "lon": 112.689,
+    "country": "China",
+    "importance": 1,
+    "description": "A Bronze Age centre with palaces and bronze workshops rises in the Yellow River valley; some scholars identify it with the Xia dynasty of the later histories.",
+    "source": "https://en.wikipedia.org/wiki/Erlitou_culture"
+  },
+  {
+    "id": "china-bce1630-zhengzhou-shang-city",
+    "title": "Zhengzhou Shang City",
+    "date": "about 1630 – 1400 BCE",
+    "year-from": -1630,
+    "year-to": -1400,
+    "place": "Zhengzhou, Henan",
+    "lat": 34.752,
+    "lon": 113.69,
+    "country": "China",
+    "importance": 2,
+    "description": "Builders of the Erligang culture raise a walled city with rammed-earth walls about seven kilometres around, an early capital of the Shang.",
+    "source": "https://en.wikipedia.org/wiki/Zhengzhou_Shang_City"
+  },
+  {
     "id": "china-bce1250-oracle-bone-inscriptions",
     "title": "Oracle bone inscriptions",
     "date": "about 1250 BCE",
@@ -11,6 +52,33 @@
     "importance": 2,
     "description": "Diviners of the Shang kings carve questions on bones and turtle shells, the earliest substantial body of Chinese writing.",
     "source": "https://en.wikipedia.org/wiki/Oracle_bone_script"
+  },
+  {
+    "id": "china-bce1200-tomb-of-fu-hao",
+    "title": "Tomb of Fu Hao",
+    "date": "about 1200 BCE",
+    "year-from": -1200,
+    "place": "Yinxu, Anyang",
+    "lat": 36.121,
+    "lon": 114.316,
+    "country": "China",
+    "importance": 3,
+    "description": "Fu Hao, consort of King Wu Ding and a military leader named on oracle bones, is buried with hundreds of bronzes and jades; the tomb was found intact in 1976.",
+    "source": "https://en.wikipedia.org/wiki/Tomb_of_Fu_Hao"
+  },
+  {
+    "id": "china-bce1200-sanxingdui-sacrificial-pits",
+    "title": "Sanxingdui sacrificial pits",
+    "date": "12th to 11th century BCE",
+    "year-from": -1200,
+    "year-to": -1001,
+    "place": "Sanxingdui, Guanghan, Sichuan",
+    "lat": 30.993,
+    "lon": 104.2,
+    "country": "China",
+    "importance": 2,
+    "description": "A Bronze Age culture in Sichuan, distinct from the Shang, buries bronze masks, figures and trees in sacrificial pits.",
+    "source": "https://en.wikipedia.org/wiki/Sanxingdui"
   },
   {
     "id": "china-bce1046-battle-of-muye",
@@ -222,6 +290,32 @@
     "source": "https://en.wikipedia.org/wiki/Song_dynasty"
   },
   {
+    "id": "china-1024-first-government-paper-money",
+    "title": "First government paper money",
+    "date": "1024",
+    "year-from": 1024,
+    "place": "Chengdu",
+    "lat": 30.66,
+    "lon": 104.06,
+    "country": "China",
+    "importance": 2,
+    "description": "The Song state takes over the jiaozi notes issued by Sichuan merchants and prints the first series of government paper money.",
+    "source": "https://en.wikipedia.org/wiki/Jiaozi_(currency)"
+  },
+  {
+    "id": "china-1069-wang-anshi-s-new-policies",
+    "title": "Wang Anshi's New Policies",
+    "date": "1069",
+    "year-from": 1069,
+    "place": "Kaifeng",
+    "lat": 34.8,
+    "lon": 114.31,
+    "country": "China",
+    "importance": 2,
+    "description": "Emperor Shenzong appoints Wang Anshi, who launches reforms of state loans to farmers, taxation, trade and the army that divide the court for decades.",
+    "source": "https://en.wikipedia.org/wiki/New_Policies_(Song_dynasty)"
+  },
+  {
     "id": "china-1127-fall-of-kaifeng",
     "title": "Fall of Kaifeng",
     "date": "1127",
@@ -233,6 +327,19 @@
     "importance": 2,
     "description": "The Jurchen Jin capture the Song capital and two emperors, and the Song court moves south.",
     "source": "https://en.wikipedia.org/wiki/Jingkang_incident"
+  },
+  {
+    "id": "china-1138-lin-an-becomes-the-southern-song-capital",
+    "title": "Lin'an becomes the Southern Song capital",
+    "date": "1138",
+    "year-from": 1138,
+    "place": "Hangzhou",
+    "lat": 30.25,
+    "lon": 120.17,
+    "country": "China",
+    "importance": 2,
+    "description": "After the loss of the north the Song court settles at Lin'an (Hangzhou), which grows into one of the largest and richest cities in the world.",
+    "source": "https://en.wikipedia.org/wiki/Hangzhou"
   },
   {
     "id": "china-1271-yuan-dynasty-proclaimed",
@@ -326,6 +433,46 @@
     "source": "https://en.wikipedia.org/wiki/Battle_of_Shanhai_Pass"
   },
   {
+    "id": "china-1644-li-zicheng-takes-beijing",
+    "title": "Li Zicheng takes Beijing",
+    "date": "25 Apr 1644",
+    "year-from": 1644,
+    "place": "Beijing",
+    "lat": 39.925,
+    "lon": 116.397,
+    "country": "China",
+    "importance": 1,
+    "description": "Rebel armies under Li Zicheng enter the capital and the Chongzhen Emperor hangs himself on Coal Hill, ending the Ming dynasty in Beijing.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Beijing_(1644)"
+  },
+  {
+    "id": "china-1645-yangzhou-massacre",
+    "title": "Yangzhou massacre",
+    "date": "20 May 1645",
+    "year-from": 1645,
+    "place": "Yangzhou",
+    "lat": 32.39,
+    "lon": 119.42,
+    "country": "China",
+    "importance": 2,
+    "description": "Qing forces under Prince Dodo sack Yangzhou after its defence by the Ming loyalist Shi Kefa and kill a large part of its people over ten days.",
+    "source": "https://en.wikipedia.org/wiki/Yangzhou_massacre"
+  },
+  {
+    "id": "china-1673-revolt-of-the-three-feudatories",
+    "title": "Revolt of the Three Feudatories",
+    "date": "1673 to 1681",
+    "year-from": 1673,
+    "year-to": 1681,
+    "place": "Kunming",
+    "lat": 25.04,
+    "lon": 102.71,
+    "country": "China",
+    "importance": 2,
+    "description": "Wu Sangui and two other Chinese princes who held the south for the Qing rebel when the Kangxi Emperor moves to abolish their fiefs; their defeat secures Qing rule.",
+    "source": "https://en.wikipedia.org/wiki/Revolt_of_the_Three_Feudatories"
+  },
+  {
     "id": "china-1689-treaty-of-nerchinsk",
     "title": "Treaty of Nerchinsk",
     "date": "27 Aug 1689",
@@ -337,6 +484,33 @@
     "importance": 3,
     "description": "The Qing and Russia fix their border in the first treaty between China and a European power.",
     "source": "https://en.wikipedia.org/wiki/Treaty_of_Nerchinsk"
+  },
+  {
+    "id": "china-1720-qing-army-enters-lhasa",
+    "title": "Qing army enters Lhasa",
+    "date": "1720",
+    "year-from": 1720,
+    "place": "Lhasa",
+    "lat": 29.658,
+    "lon": 91.117,
+    "country": "China",
+    "importance": 2,
+    "description": "A Qing expedition drives the Dzungars out of Tibet and installs the Seventh Dalai Lama, beginning nearly two centuries of Qing overlordship.",
+    "source": "https://en.wikipedia.org/wiki/Chinese_expedition_to_Tibet_(1720)"
+  },
+  {
+    "id": "china-1755-qing-conquest-of-dzungaria",
+    "title": "Qing conquest of Dzungaria",
+    "date": "1755 to 1759",
+    "year-from": 1755,
+    "year-to": 1759,
+    "place": "Ili valley",
+    "lat": 43.92,
+    "lon": 81.32,
+    "country": "China",
+    "importance": 2,
+    "description": "The Qianlong Emperor's armies destroy the Dzungar Khanate, killing most of the Dzungar people, and go on to take the Tarim Basin.",
+    "source": "https://en.wikipedia.org/wiki/Dzungar–Qing_Wars"
   },
   {
     "id": "china-1793-macartney-embassy",
@@ -402,6 +576,19 @@
     "importance": 2,
     "description": "British troops destroy the imperial gardens at the end of the Second Opium War.",
     "source": "https://en.wikipedia.org/wiki/Old_Summer_Palace"
+  },
+  {
+    "id": "china-1884-xinjiang-becomes-a-province",
+    "title": "Xinjiang becomes a province",
+    "date": "1884",
+    "year-from": 1884,
+    "place": "Dihua (Ürümqi)",
+    "lat": 43.8,
+    "lon": 87.6,
+    "country": "China",
+    "importance": 2,
+    "description": "After retaking the region from Yakub Beg, the Qing make Xinjiang a regular province with its capital at Dihua.",
+    "source": "https://en.wikipedia.org/wiki/Xinjiang_under_Qing_rule"
   },
   {
     "id": "china-1900-allied-armies-take-beijing",
@@ -534,6 +721,19 @@
     "source": "https://en.wikipedia.org/wiki/Proclamation_of_the_People's_Republic_of_China"
   },
   {
+    "id": "china-1950-battle-of-chamdo",
+    "title": "Battle of Chamdo",
+    "date": "6 – 24 Oct 1950",
+    "year-from": 1950,
+    "place": "Chamdo, Tibet",
+    "lat": 31.137,
+    "lon": 97.178,
+    "country": "China",
+    "importance": 2,
+    "description": "The People's Liberation Army defeats the Tibetan army in the east, forcing Lhasa to accept the Seventeen Point Agreement in 1951.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Chamdo"
+  },
+  {
     "id": "china-1958-great-leap-forward",
     "title": "Great Leap Forward",
     "date": "1958 to 1962",
@@ -546,6 +746,19 @@
     "importance": 1,
     "description": "A campaign of forced collectivisation and backyard industry leads to a famine that kills tens of millions.",
     "source": "https://en.wikipedia.org/wiki/Great_Leap_Forward"
+  },
+  {
+    "id": "china-1959-tibetan-uprising",
+    "title": "Tibetan uprising",
+    "date": "10 Mar 1959",
+    "year-from": 1959,
+    "place": "Lhasa",
+    "lat": 29.65,
+    "lon": 91.12,
+    "country": "China",
+    "importance": 1,
+    "description": "Protests in Lhasa turn into a revolt that the army crushes; the Dalai Lama flees to India, where he sets up a government in exile.",
+    "source": "https://en.wikipedia.org/wiki/1959_Tibetan_uprising"
   },
   {
     "id": "china-1964-first-nuclear-test",
@@ -702,5 +915,18 @@
     "importance": 3,
     "description": "The Summer Olympics open in Beijing.",
     "source": "https://en.wikipedia.org/wiki/2008_Summer_Olympics"
+  },
+  {
+    "id": "china-2009-urumqi-riots",
+    "title": "Ürümqi riots",
+    "date": "5 Jul 2009",
+    "year-from": 2009,
+    "place": "Ürümqi",
+    "lat": 43.823,
+    "lon": 87.613,
+    "country": "China",
+    "importance": 2,
+    "description": "A protest by Uyghurs turns into ethnic violence between Uyghurs and Han Chinese in which nearly two hundred people die, followed by a sweeping security crackdown.",
+    "source": "https://en.wikipedia.org/wiki/July_2009_Ürümqi_riots"
   }
 ]
