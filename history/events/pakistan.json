@@ -380,5 +380,44 @@
     "importance": 3,
     "description": "Taliban gunmen kill about 150 people, most of them children.",
     "source": "https://en.wikipedia.org/wiki/2014_Peshawar_school_massacre"
+  },
+  {
+    "id": "pakistan-2015-china-pakistan-economic-corridor",
+    "title": "China–Pakistan Economic Corridor",
+    "date": "20 Apr 2015",
+    "year-from": 2015,
+    "place": "Islamabad",
+    "lat": 33.69,
+    "lon": 73.06,
+    "country": "Pakistan",
+    "importance": 3,
+    "description": "During a visit by President Xi Jinping, Pakistan and China sign agreements on an economic corridor of roads, railways and power plants worth about $46 billion.",
+    "source": "https://en.wikipedia.org/wiki/China–Pakistan_Economic_Corridor"
+  },
+  {
+    "id": "pakistan-2017-nawaz-sharif-disqualified",
+    "title": "Nawaz Sharif disqualified",
+    "date": "28 Jul 2017",
+    "year-from": 2017,
+    "place": "Islamabad",
+    "lat": 33.69,
+    "lon": 73.06,
+    "country": "Pakistan",
+    "importance": 2,
+    "description": "After the Panama Papers leak, the Supreme Court unanimously disqualifies Prime Minister Nawaz Sharif from office for not declaring assets, and he resigns.",
+    "source": "https://en.wikipedia.org/wiki/Panama_Papers_case"
+  },
+  {
+    "id": "pakistan-2018-imran-khan-becomes-prime-minister",
+    "title": "Imran Khan becomes prime minister",
+    "date": "25 Jul 2018",
+    "year-from": 2018,
+    "place": "Islamabad",
+    "lat": 33.69,
+    "lon": 73.06,
+    "country": "Pakistan",
+    "importance": 2,
+    "description": "The Pakistan Tehreek-e-Insaf of former cricketer Imran Khan wins the most seats in the general election and forms a coalition government, its first time in power.",
+    "source": "https://en.wikipedia.org/wiki/2018_Pakistani_general_election"
   }
 ]

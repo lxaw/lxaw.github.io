@@ -79,8 +79,9 @@ for ev in events:
     elif text is None:
         problems.append("page missing")
     else:
-        if not re.search(rf"\b{abs(ev['year-from'])}\b", text):
-            problems.append(f"year {abs(ev['year-from'])} not in text")
+        year = abs(ev["year-from"])
+        if not re.search(rf"\b(?:{year}|{year:,})\b", text):
+            problems.append(f"year {year} not in text")
         m = re.match(r"(?:(\d{1,2}) )?([A-Z][a-z]{2}) ", ev["date"])
         if m and m.group(2) in MONTHS:
             day, month, year = m.group(1), MONTHS[m.group(2)], abs(ev["year-from"])

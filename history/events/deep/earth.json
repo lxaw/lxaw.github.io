@@ -152,6 +152,18 @@
     "lon": -81.183
   },
   {
+    "id": "deep-1800-the-boring-billion",
+    "title": "The 'Boring Billion'",
+    "date": "about 1.8 to 0.8 billion years ago",
+    "ma": 1800,
+    "ma-to": 800,
+    "scope": "Earth",
+    "importance": 3,
+    "description": "For about a billion years Earth's system idled: tectonically quiet supercontinent cycles, no recorded ice ages, oxygen stuck far below modern levels, and slow biological evolution dominated by microbes. The calm ended as Rodinia broke up and oxygen rose a second time toward the Neoproterozoic.",
+    "uncertainty": "The 1.8-to-0.8-billion-year bracket is the common modern usage; some authors prefer about 2.0 to 1.0 billion years, and how dull the biology of the interval really was is debated.",
+    "source": "https://en.wikipedia.org/wiki/Boring_Billion"
+  },
+  {
     "id": "deep-1260-supercontinent-rodinia-assembles",
     "title": "Supercontinent Rodinia assembles",
     "date": "about 1.26 to 0.9 billion years ago",
@@ -161,6 +173,18 @@
     "importance": 2,
     "description": "The continents came together again as the supercontinent Rodinia, which later broke up between about 750 and 633 million years ago. Its existence is inferred from mountain belts of matching age and from magnetic data.",
     "uncertainty": "Rodinia's existence is widely accepted but reconstructions of how the continents were arranged within it still differ in many details.",
+    "source": "https://en.wikipedia.org/wiki/Rodinia"
+  },
+  {
+    "id": "deep-900-rodinia-at-its-greatest-extent",
+    "title": "Rodinia at its greatest extent",
+    "date": "about 900 to 800 million years ago",
+    "ma": 900,
+    "ma-to": 800,
+    "scope": "Earth",
+    "importance": 3,
+    "description": "With over three hundred million years of collisions finished, the supercontinent Rodinia stood complete, straddling the equatorial and temperate zones and ringed by the superocean Mirovia. The first plume-driven rifts that would eventually break it apart appeared from about 825 million years ago.",
+    "uncertainty": "Rodinia's outline rests on matching mountain belts and magnetic data and which blocks were truly joined is still argued over; breakup ran in stages from about 825 to 550 million years ago.",
     "source": "https://en.wikipedia.org/wiki/Rodinia"
   },
   {

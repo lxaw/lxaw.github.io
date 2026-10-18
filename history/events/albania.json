@@ -375,5 +375,44 @@
     "importance": 2,
     "description": "Albania becomes a member of the North Atlantic alliance, together with Croatia.",
     "source": "https://en.wikipedia.org/wiki/Albania–NATO_relations"
+  },
+  {
+    "id": "albania-2013-socialists-win-election",
+    "title": "Socialists win election",
+    "date": "23 Jun 2013",
+    "year-from": 2013,
+    "place": "Tirana",
+    "lat": 41.328,
+    "lon": 19.818,
+    "country": "Albania",
+    "importance": 3,
+    "description": "The Socialist-led coalition won a landslide, and Edi Rama replaced Sali Berisha as prime minister.",
+    "source": "https://en.wikipedia.org/wiki/2013_Albanian_parliamentary_election"
+  },
+  {
+    "id": "albania-2014-eu-candidate-status",
+    "title": "EU candidate status",
+    "date": "24 Jun 2014",
+    "year-from": 2014,
+    "place": "Tirana",
+    "lat": 41.328,
+    "lon": 19.818,
+    "country": "Albania",
+    "importance": 3,
+    "description": "The European Union granted Albania the status of official candidate for membership.",
+    "source": "https://en.wikipedia.org/wiki/Potential_accession_of_Albania_to_the_European_Union"
+  },
+  {
+    "id": "albania-2019-earthquake",
+    "title": "Earthquake",
+    "date": "26 Nov 2019",
+    "year-from": 2019,
+    "place": "Durrës",
+    "lat": 41.32,
+    "lon": 19.44,
+    "country": "Albania",
+    "importance": 2,
+    "description": "A magnitude 6.4 earthquake killed 51 people, the country's deadliest earthquake in nearly a century.",
+    "source": "https://en.wikipedia.org/wiki/2019_Albania_earthquake"
   }
 ]

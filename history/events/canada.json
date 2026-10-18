@@ -488,5 +488,57 @@
     "importance": 2,
     "description": "The prime minister apologises in Parliament for the schools that took about 150,000 Indigenous children from their families.",
     "source": "https://en.wikipedia.org/wiki/Canadian_Indian_residential_school_system"
+  },
+  {
+    "id": "canada-2010-vancouver-olympics",
+    "title": "Vancouver Olympics",
+    "date": "12 Feb 2010",
+    "year-from": 2010,
+    "place": "Vancouver, British Columbia",
+    "lat": 49.28,
+    "lon": -123.12,
+    "country": "Canada",
+    "importance": 3,
+    "description": "The Winter Olympics opened in Vancouver, the third Olympics hosted by Canada.",
+    "source": "https://en.wikipedia.org/wiki/2010_Winter_Olympics"
+  },
+  {
+    "id": "canada-2015-trudeau-elected-prime-minister",
+    "title": "Trudeau elected prime minister",
+    "date": "19 Oct 2015",
+    "year-from": 2015,
+    "place": "Ottawa",
+    "lat": 45.42,
+    "lon": -75.7,
+    "country": "Canada",
+    "importance": 3,
+    "description": "Justin Trudeau led the Liberal Party from third place to a majority government, ending nearly a decade of Conservative rule.",
+    "source": "https://en.wikipedia.org/wiki/2015_Canadian_federal_election"
+  },
+  {
+    "id": "canada-2016-fort-mcmurray-wildfire",
+    "title": "Fort McMurray wildfire",
+    "date": "3 May 2016",
+    "year-from": 2016,
+    "place": "Fort McMurray, Alberta",
+    "lat": 56.67,
+    "lon": -111.38,
+    "country": "Canada",
+    "importance": 2,
+    "description": "A wildfire forced the evacuation of all 88,000 residents of Fort McMurray and became the costliest disaster in Canadian history.",
+    "source": "https://en.wikipedia.org/wiki/2016_Fort_McMurray_wildfire"
+  },
+  {
+    "id": "canada-2018-cannabis-legalised",
+    "title": "Cannabis legalised",
+    "date": "17 Oct 2018",
+    "year-from": 2018,
+    "place": "Ottawa",
+    "lat": 45.42,
+    "lon": -75.7,
+    "country": "Canada",
+    "importance": 3,
+    "description": "Recreational cannabis became legal nationwide, making Canada the second country to legalise it, after Uruguay.",
+    "source": "https://en.wikipedia.org/wiki/Cannabis_Act_(Canada)"
   }
 ]

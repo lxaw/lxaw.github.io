@@ -430,5 +430,57 @@
     "importance": 1,
     "description": "Romania becomes a member of the European Union, three years after joining NATO.",
     "source": "https://en.wikipedia.org/wiki/2007_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "romania-2012-impeachment-referendum-fails",
+    "title": "Impeachment referendum fails",
+    "date": "29 Jul 2012",
+    "year-from": 2012,
+    "place": "Bucharest",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "country": "Romania",
+    "importance": 3,
+    "description": "President Băsescu, suspended by parliament, kept his job when the referendum to remove him failed on turnout.",
+    "source": "https://en.wikipedia.org/wiki/2012_Romanian_presidential_impeachment_referendum"
+  },
+  {
+    "id": "romania-2014-iohannis-elected-president",
+    "title": "Iohannis elected president",
+    "date": "16 Nov 2014",
+    "year-from": 2014,
+    "place": "Bucharest",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "country": "Romania",
+    "importance": 3,
+    "description": "Klaus Iohannis, an ethnic German mayor of Sibiu, won the run-off in a surprise result.",
+    "source": "https://en.wikipedia.org/wiki/2014_Romanian_presidential_election"
+  },
+  {
+    "id": "romania-2015-colectiv-nightclub-fire",
+    "title": "Colectiv nightclub fire",
+    "date": "30 Oct 2015",
+    "year-from": 2015,
+    "place": "Bucharest",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "country": "Romania",
+    "importance": 2,
+    "description": "A nightclub fire killed 64 people, and the mass protests over the corruption blamed for it brought down the Ponta government.",
+    "source": "https://en.wikipedia.org/wiki/Colectiv_nightclub_fire"
+  },
+  {
+    "id": "romania-2017-anti-corruption-protests",
+    "title": "Anti-corruption protests",
+    "date": "Feb 2017",
+    "year-from": 2017,
+    "place": "Bucharest",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "country": "Romania",
+    "importance": 2,
+    "description": "Protests against an emergency decree easing graft penalties became the largest since 1989 and forced the government to withdraw it.",
+    "source": "https://en.wikipedia.org/wiki/2017–2019_Romanian_protests"
   }
 ]

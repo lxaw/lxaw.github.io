@@ -476,5 +476,44 @@
     "importance": 3,
     "description": "Jorge Mario Bergoglio, archbishop of Buenos Aires, becomes the first pope from the Americas.",
     "source": "https://en.wikipedia.org/wiki/Pope_Francis"
+  },
+  {
+    "id": "argentina-2015-macri-elected-president",
+    "title": "Macri elected president",
+    "date": "22 Nov 2015",
+    "year-from": 2015,
+    "place": "Buenos Aires",
+    "lat": -34.608,
+    "lon": -58.372,
+    "country": "Argentina",
+    "importance": 2,
+    "description": "Mauricio Macri wins the first run-off in the country's history, becoming the first elected president in almost a century who is neither a Peronist nor a Radical.",
+    "source": "https://en.wikipedia.org/wiki/2015_Argentine_general_election"
+  },
+  {
+    "id": "argentina-2017-submarine-san-juan-lost",
+    "title": "Submarine San Juan lost",
+    "date": "15 Nov 2017",
+    "year-from": 2017,
+    "place": "South Atlantic, off Patagonia",
+    "lat": -45.95,
+    "lon": -59.77,
+    "country": "Argentina",
+    "importance": 3,
+    "description": "The submarine ARA San Juan goes missing with 44 crew on a patrol off Patagonia; its wreck is found on the seabed a year later.",
+    "source": "https://en.wikipedia.org/wiki/ARA_San_Juan_(S-42)"
+  },
+  {
+    "id": "argentina-2018-imf-standby-loan",
+    "title": "IMF standby loan",
+    "date": "8 May 2018",
+    "year-from": 2018,
+    "place": "Buenos Aires",
+    "lat": -34.608,
+    "lon": -58.372,
+    "country": "Argentina",
+    "importance": 3,
+    "description": "As the peso collapses, President Macri announces that Argentina will take a $50 billion standby loan from the IMF, later expanded into the largest in the fund's history.",
+    "source": "https://en.wikipedia.org/wiki/2018–present_Argentine_monetary_crisis"
   }
 ]

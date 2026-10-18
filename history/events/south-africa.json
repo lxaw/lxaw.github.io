@@ -512,5 +512,44 @@
     "importance": 3,
     "description": "Mandela dies at the age of 95.",
     "source": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Nelson_Mandela"
+  },
+  {
+    "id": "south-africa-2015-fees-must-fall",
+    "title": "FeesMustFall protests",
+    "date": "Oct 2015",
+    "year-from": 2015,
+    "place": "Johannesburg",
+    "lat": -26.19,
+    "lon": 28.03,
+    "country": "South Africa",
+    "importance": 3,
+    "description": "Student protests against university fee increases begin at the University of the Witwatersrand and spread nationwide, until the government announces there will be no fee rise in 2016.",
+    "source": "https://en.wikipedia.org/wiki/FeesMustFall"
+  },
+  {
+    "id": "south-africa-2018-ramaphosa-becomes-president",
+    "title": "Ramaphosa becomes president",
+    "date": "15 Feb 2018",
+    "year-from": 2018,
+    "place": "Cape Town",
+    "lat": -33.92,
+    "lon": 18.42,
+    "country": "South Africa",
+    "importance": 2,
+    "description": "The day after Jacob Zuma resigns, the National Assembly elects deputy president Cyril Ramaphosa in his place.",
+    "source": "https://en.wikipedia.org/wiki/Cyril_Ramaphosa"
+  },
+  {
+    "id": "south-africa-2018-day-zero-averted",
+    "title": "'Day Zero' averted",
+    "date": "28 Jun 2018",
+    "year-from": 2018,
+    "place": "Cape Town",
+    "lat": -33.92,
+    "lon": 18.42,
+    "country": "South Africa",
+    "importance": 3,
+    "description": "After a three-year drought Cape Town cuts its water use by more than half and postpones indefinitely 'Day Zero', the day its municipal taps were to run dry.",
+    "source": "https://en.wikipedia.org/wiki/Cape_Town_water_crisis"
   }
 ]

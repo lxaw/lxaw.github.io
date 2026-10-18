@@ -354,5 +354,45 @@
     "importance": 2,
     "description": "An eruption under the ice cap sends up an ash cloud that closes most European airspace for several days.",
     "source": "https://en.wikipedia.org/wiki/2010_eruptions_of_Eyjafjallajökull"
+  },
+  {
+    "id": "iceland-2014-holuhraun-eruption",
+    "title": "Holuhraun eruption",
+    "date": "Aug 2014",
+    "year-from": 2014,
+    "year-to": 2015,
+    "place": "Holuhraun",
+    "lat": 64.85,
+    "lon": -16.83,
+    "country": "Iceland",
+    "importance": 3,
+    "description": "A fissure eruption in the Bárðarbunga volcanic system pours out lava for six months, Iceland's largest eruption since Laki in 1783.",
+    "source": "https://en.wikipedia.org/wiki/2014%E2%80%932015_eruption_of_B%C3%A1r%C3%B0arbunga"
+  },
+  {
+    "id": "iceland-2016-panama-papers",
+    "title": "Panama Papers bring down the prime minister",
+    "date": "Apr 2016",
+    "year-from": 2016,
+    "place": "Reykjavík",
+    "lat": 64.147,
+    "lon": -21.942,
+    "country": "Iceland",
+    "importance": 3,
+    "description": "Days after the Panama Papers reveal his past part-ownership of an offshore company, Prime Minister Sigmundur Davíð Gunnlaugsson steps aside amid large street protests.",
+    "source": "https://en.wikipedia.org/wiki/Sigmundur_Dav%C3%AD%C3%B0_Gunnlaugsson"
+  },
+  {
+    "id": "iceland-2019-ok-glacier-memorial",
+    "title": "Memorial for a dead glacier",
+    "date": "18 Aug 2019",
+    "year-from": 2019,
+    "place": "Okjökull",
+    "lat": 64.598,
+    "lon": -20.881,
+    "country": "Iceland",
+    "importance": 3,
+    "description": "A plaque addressed 'to the future' is unveiled at Okjökull, the first Icelandic glacier to lose its status as it wastes away.",
+    "source": "https://en.wikipedia.org/wiki/Okj%C3%B6kull"
   }
 ]

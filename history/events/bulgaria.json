@@ -422,5 +422,44 @@
     "importance": 1,
     "description": "Bulgaria becomes a member of the European Union, three years after joining NATO.",
     "source": "https://en.wikipedia.org/wiki/2007_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "bulgaria-2009-gerb-wins-the-election",
+    "title": "GERB wins the election",
+    "date": "5 Jul 2009",
+    "year-from": 2009,
+    "place": "Sofia",
+    "lat": 42.698,
+    "lon": 23.322,
+    "country": "Bulgaria",
+    "importance": 3,
+    "description": "Boyko Borisov's new GERB party won the election with 40 per cent of the vote and he became prime minister.",
+    "source": "https://en.wikipedia.org/wiki/2009_Bulgarian_parliamentary_election"
+  },
+  {
+    "id": "bulgaria-2013-protests-force-out-the-government",
+    "title": "Protests force out the government",
+    "date": "20 Feb 2013",
+    "year-from": 2013,
+    "place": "Sofia",
+    "lat": 42.698,
+    "lon": 23.322,
+    "country": "Bulgaria",
+    "importance": 3,
+    "description": "Weeks of protests over soaring electricity bills, which spread from Blagoevgrad to more than thirty cities, ended with the resignation of the Borisov government.",
+    "source": "https://en.wikipedia.org/wiki/2013_Bulgarian_protests_against_the_first_Borisov_cabinet"
+  },
+  {
+    "id": "bulgaria-2014-corpbank-loses-its-licence",
+    "title": "Corpbank loses its licence",
+    "date": "Jun 2014",
+    "year-from": 2014,
+    "place": "Sofia",
+    "lat": 42.698,
+    "lon": 23.322,
+    "country": "Bulgaria",
+    "importance": 3,
+    "description": "A run on Corporate Commercial Bank, the country's fourth-largest, forced it under central bank supervision and it was stripped of its licence.",
+    "source": "https://en.wikipedia.org/wiki/Corporate_Commercial_Bank"
   }
 ]

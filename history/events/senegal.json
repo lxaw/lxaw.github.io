@@ -345,5 +345,44 @@
     "importance": 3,
     "description": "Abdoulaye Wade, seeking a disputed third term, loses the run-off and concedes to his former prime minister.",
     "source": "https://en.wikipedia.org/wiki/2012_Senegalese_presidential_election"
+  },
+  {
+    "id": "senegal-2016-referendum-shortens-presidential-term",
+    "title": "Referendum shortens presidential term",
+    "date": "20 Mar 2016",
+    "year-from": 2016,
+    "place": "Dakar",
+    "lat": 14.69,
+    "lon": -17.45,
+    "country": "Senegal",
+    "importance": 3,
+    "description": "Voters approved fifteen constitutional changes, including cutting the presidential term from seven years back to five.",
+    "source": "https://en.wikipedia.org/wiki/2016_Senegalese_constitutional_referendum"
+  },
+  {
+    "id": "senegal-2017-blaise-diagne-airport-opens",
+    "title": "Blaise Diagne airport opens",
+    "date": "7 Dec 2017",
+    "year-from": 2017,
+    "place": "Ndiass",
+    "lat": 14.671,
+    "lon": -17.067,
+    "country": "Senegal",
+    "importance": 3,
+    "description": "Dakar's new international airport opened at Diass, replacing the overcrowded Léopold Sédar Senghor airport as the country's main gateway.",
+    "source": "https://en.wikipedia.org/wiki/Blaise_Diagne_International_Airport"
+  },
+  {
+    "id": "senegal-2018-museum-of-black-civilisations-opens",
+    "title": "Museum of Black Civilisations opens",
+    "date": "6 Dec 2018",
+    "year-from": 2018,
+    "place": "Dakar",
+    "lat": 14.69,
+    "lon": -17.45,
+    "country": "Senegal",
+    "importance": 3,
+    "description": "A museum first proposed by Léopold Sédar Senghor opened in Dakar, advancing Senegal's calls for the return of African artworks kept in Europe.",
+    "source": "https://en.wikipedia.org/wiki/Museum_of_Black_Civilisations"
   }
 ]

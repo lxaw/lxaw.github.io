@@ -443,5 +443,57 @@
     "importance": 2,
     "description": "The assembly of Kosovo declares independence from Serbia, which most Western states recognise and Serbia does not.",
     "source": "https://en.wikipedia.org/wiki/2008_Kosovo_declaration_of_independence"
+  },
+  {
+    "id": "serbia-2012-nikolic-elected-president",
+    "title": "Nikolić elected president",
+    "date": "20 May 2012",
+    "year-from": 2012,
+    "place": "Belgrade",
+    "lat": 44.82,
+    "lon": 20.46,
+    "country": "Serbia",
+    "importance": 3,
+    "description": "Tomislav Nikolić of the Progressive Party narrowly defeated the incumbent Boris Tadić in the run-off.",
+    "source": "https://en.wikipedia.org/wiki/2012_Serbian_presidential_election"
+  },
+  {
+    "id": "serbia-2014-eu-accession-negotiations-begin",
+    "title": "EU accession negotiations begin",
+    "date": "21 Jan 2014",
+    "year-from": 2014,
+    "place": "Belgrade",
+    "lat": 44.82,
+    "lon": 20.46,
+    "country": "Serbia",
+    "importance": 3,
+    "description": "Serbia and the European Union held their first intergovernmental conference, formally starting membership negotiations.",
+    "source": "https://en.wikipedia.org/wiki/Potential_accession_of_Serbia_to_the_European_Union"
+  },
+  {
+    "id": "serbia-2014-southeast-europe-floods",
+    "title": "Southeast Europe floods",
+    "date": "May 2014",
+    "year-from": 2014,
+    "place": "Obrenovac",
+    "lat": 44.65,
+    "lon": 20.2,
+    "country": "Serbia",
+    "importance": 2,
+    "description": "The heaviest rain in 120 years caused catastrophic flooding in which 57 people died in Serbia; the town of Obrenovac was evacuated.",
+    "source": "https://en.wikipedia.org/wiki/2014_Southeast_Europe_floods"
+  },
+  {
+    "id": "serbia-2017-vucic-elected-president",
+    "title": "Vučić elected president",
+    "date": "2 Apr 2017",
+    "year-from": 2017,
+    "place": "Belgrade",
+    "lat": 44.82,
+    "lon": 20.46,
+    "country": "Serbia",
+    "importance": 3,
+    "description": "Prime Minister Aleksandar Vučić won the presidency outright in the first round.",
+    "source": "https://en.wikipedia.org/wiki/2017_Serbian_presidential_election"
   }
 ]

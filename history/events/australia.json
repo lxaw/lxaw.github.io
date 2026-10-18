@@ -462,5 +462,57 @@
     "importance": 2,
     "description": "The prime minister apologises in parliament to Indigenous children taken from their families.",
     "source": "https://en.wikipedia.org/wiki/National_Apology_to_the_Stolen_Generations"
+  },
+  {
+    "id": "australia-2009-black-saturday-bushfires",
+    "title": "Black Saturday bushfires",
+    "date": "7 Feb 2009",
+    "year-from": 2009,
+    "place": "Kinglake, Victoria",
+    "lat": -37.53,
+    "lon": 145.34,
+    "country": "Australia",
+    "importance": 2,
+    "description": "Bushfires across Victoria killed 173 people, the highest loss of life from a bushfire in the country's history.",
+    "source": "https://en.wikipedia.org/wiki/Black_Saturday_bushfires"
+  },
+  {
+    "id": "australia-2010-gillard-first-female-prime-minister",
+    "title": "First female prime minister",
+    "date": "24 Jun 2010",
+    "year-from": 2010,
+    "place": "Canberra",
+    "lat": -35.308,
+    "lon": 149.124,
+    "country": "Australia",
+    "importance": 2,
+    "description": "Julia Gillard replaced Kevin Rudd as Labor leader and was sworn in as the first woman prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Julia_Gillard"
+  },
+  {
+    "id": "australia-2011-queensland-floods",
+    "title": "Queensland floods",
+    "date": "Jan 2011",
+    "year-from": 2011,
+    "place": "Brisbane",
+    "lat": -27.47,
+    "lon": 153.03,
+    "country": "Australia",
+    "importance": 3,
+    "description": "Flooding across Queensland killed 33 people, inundated parts of Brisbane and left most of the state a disaster zone.",
+    "source": "https://en.wikipedia.org/wiki/2010–2011_Queensland_floods"
+  },
+  {
+    "id": "australia-2017-same-sex-marriage-legalised",
+    "title": "Same-sex marriage legalised",
+    "date": "7 Dec 2017",
+    "year-from": 2017,
+    "place": "Canberra",
+    "lat": -35.308,
+    "lon": 149.124,
+    "country": "Australia",
+    "importance": 2,
+    "description": "Parliament legalised same-sex marriage after a national postal survey returned a majority yes vote.",
+    "source": "https://en.wikipedia.org/wiki/Marriage_Amendment_(Definition_and_Religious_Freedoms)_Act_2017"
   }
 ]

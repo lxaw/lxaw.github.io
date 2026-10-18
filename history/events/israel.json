@@ -541,5 +541,44 @@
     "importance": 3,
     "description": "Israel removes its settlers and troops from the Gaza Strip.",
     "source": "https://en.wikipedia.org/wiki/Israeli_disengagement_from_the_Gaza_Strip"
+  },
+  {
+    "id": "israel-2009-netanyahu-returns-to-office",
+    "title": "Netanyahu returns to office",
+    "date": "31 Mar 2009",
+    "year-from": 2009,
+    "place": "Jerusalem",
+    "lat": 31.778,
+    "lon": 35.235,
+    "country": "Israel",
+    "importance": 3,
+    "description": "Benjamin Netanyahu was sworn in as prime minister for a second time, beginning twelve consecutive years in power.",
+    "source": "https://en.wikipedia.org/wiki/Benjamin_Netanyahu"
+  },
+  {
+    "id": "israel-2011-tent-city-protests",
+    "title": "Tent-city protests",
+    "date": "Jul 2011",
+    "year-from": 2011,
+    "place": "Tel Aviv",
+    "lat": 32.08,
+    "lon": 34.78,
+    "country": "Israel",
+    "importance": 3,
+    "description": "Tent camps sprang up on Tel Aviv's Rothschild Boulevard and spread nationwide as hundreds of thousands protested against the cost of living.",
+    "source": "https://en.wikipedia.org/wiki/2011_Israeli_social_justice_protests"
+  },
+  {
+    "id": "israel-2017-us-recognises-jerusalem-as-israel-s-capital",
+    "title": "United States recognises Jerusalem as Israel's capital",
+    "date": "6 Dec 2017",
+    "year-from": 2017,
+    "place": "Jerusalem",
+    "lat": 31.778,
+    "lon": 35.235,
+    "country": "Israel",
+    "importance": 3,
+    "description": "The United States recognised Jerusalem as Israel's capital, a decision welcomed by the Israeli government but condemned by most members of the UN Security Council.",
+    "source": "https://en.wikipedia.org/wiki/United_States_recognition_of_Jerusalem_as_capital_of_Israel"
   }
 ]

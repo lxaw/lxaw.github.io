@@ -385,5 +385,44 @@
     "importance": 2,
     "description": "The Senate passes a law making Uruguay the first country to legalise the production and sale of cannabis.",
     "source": "https://en.wikipedia.org/wiki/Cannabis_in_Uruguay"
+  },
+  {
+    "id": "uruguay-2014-guantanamo-prisoners-accepted",
+    "title": "Guantánamo prisoners accepted",
+    "date": "2014",
+    "year-from": 2014,
+    "place": "Montevideo",
+    "lat": -34.9,
+    "lon": -56.19,
+    "country": "Uruguay",
+    "importance": 3,
+    "description": "At the request of the United States, President Mujica agreed to receive a group of freed Guantánamo Bay prisoners for resettlement.",
+    "source": "https://en.wikipedia.org/wiki/Presidency_of_José_Mujica"
+  },
+  {
+    "id": "uruguay-2017-vice-president-resigns",
+    "title": "Vice president resigns",
+    "date": "Sep 2017",
+    "year-from": 2017,
+    "place": "Montevideo",
+    "lat": -34.9,
+    "lon": -56.19,
+    "country": "Uruguay",
+    "importance": 3,
+    "description": "Raúl Sendic resigned after months of scandal over an academic degree he never held and his use of an official credit card, the first vice-president to do so since 1973.",
+    "source": "https://en.wikipedia.org/wiki/Raúl_Fernando_Sendic_Rodríguez"
+  },
+  {
+    "id": "uruguay-2019-lacalle-pou-elected",
+    "title": "Lacalle Pou elected",
+    "date": "24 Nov 2019",
+    "year-from": 2019,
+    "place": "Montevideo",
+    "lat": -34.9,
+    "lon": -56.19,
+    "country": "Uruguay",
+    "importance": 2,
+    "description": "Luis Lacalle Pou of the National Party won a tight run-off against Daniel Martínez, ending fifteen years of Broad Front rule.",
+    "source": "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
   }
 ]

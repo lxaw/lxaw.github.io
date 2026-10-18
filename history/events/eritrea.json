@@ -252,5 +252,31 @@
     "importance": 2,
     "description": "Soldiers briefly occupy the information ministry at Forto demanding change, the closest thing to a public challenge to the government in years.",
     "source": "https://en.wikipedia.org/wiki/2013_Eritrean_Army_mutiny"
+  },
+  {
+    "id": "eritrea-2017-asmara-world-heritage-site",
+    "title": "Asmara a World Heritage Site",
+    "date": "Jul 2017",
+    "year-from": 2017,
+    "place": "Asmara",
+    "lat": 15.32,
+    "lon": 38.93,
+    "country": "Eritrea",
+    "importance": 3,
+    "description": "UNESCO listed Asmara as a World Heritage site for its exceptionally preserved Italian-era modernist city centre.",
+    "source": "https://en.wikipedia.org/wiki/Asmara"
+  },
+  {
+    "id": "eritrea-2018-ties-with-djibouti-normalised",
+    "title": "Ties with Djibouti normalised",
+    "date": "Sep 2018",
+    "year-from": 2018,
+    "place": "Asmara",
+    "lat": 15.32,
+    "lon": 38.93,
+    "country": "Eritrea",
+    "importance": 3,
+    "description": "Eritrea and Djibouti agreed to normalise their relations after a decade of hostility over their border, part of the year's wider Horn of Africa détente.",
+    "source": "https://en.wikipedia.org/wiki/Djiboutian–Eritrean_border_conflict"
   }
 ]

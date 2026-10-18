@@ -500,5 +500,57 @@
     "importance": 3,
     "description": "A crowd of Hindu activists destroys a sixteenth-century mosque, and riots follow across India.",
     "source": "https://en.wikipedia.org/wiki/Demolition_of_the_Babri_Masjid"
+  },
+  {
+    "id": "india-1998-pokhran-ii-tests",
+    "title": "Pokhran-II tests",
+    "date": "11 May 1998",
+    "year-from": 1998,
+    "place": "Pokhran, Rajasthan",
+    "lat": 27.09,
+    "lon": 71.75,
+    "country": "India",
+    "importance": 3,
+    "description": "India conducted five nuclear test explosions, its first since 1974, and Pakistan answered weeks later with tests of its own.",
+    "source": "https://en.wikipedia.org/wiki/Pokhran-II"
+  },
+  {
+    "id": "india-2008-mumbai-attacks",
+    "title": "Mumbai attacks",
+    "date": "26 Nov 2008",
+    "year-from": 2008,
+    "place": "Mumbai",
+    "lat": 18.94,
+    "lon": 72.83,
+    "country": "India",
+    "importance": 3,
+    "description": "Ten Lashkar-e-Taiba gunmen attacked a railway station, two hotels and a Jewish centre, killing 166 people over four days.",
+    "source": "https://en.wikipedia.org/wiki/2008_Mumbai_attacks"
+  },
+  {
+    "id": "india-2014-bjp-wins-a-majority",
+    "title": "BJP wins a majority",
+    "date": "16 May 2014",
+    "year-from": 2014,
+    "place": "New Delhi",
+    "lat": 28.61,
+    "lon": 77.21,
+    "country": "India",
+    "importance": 2,
+    "description": "The Bharatiya Janata Party won the first single-party majority since 1984, and Narendra Modi became prime minister.",
+    "source": "https://en.wikipedia.org/wiki/2014_Indian_general_election"
+  },
+  {
+    "id": "india-2019-special-status-of-kashmir-revoked",
+    "title": "Special status of Kashmir revoked",
+    "date": "5 Aug 2019",
+    "year-from": 2019,
+    "place": "New Delhi",
+    "lat": 28.61,
+    "lon": 77.21,
+    "country": "India",
+    "importance": 3,
+    "description": "The government revoked the constitutional special status of Jammu and Kashmir and split the state into two union territories.",
+    "source": "https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir"
   }
 ]

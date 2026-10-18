@@ -301,5 +301,31 @@
     "importance": 2,
     "description": "Protests for jobs and against corruption lead the sultan to dismiss ministers and give the elected council some powers.",
     "source": "https://en.wikipedia.org/wiki/2011_Omani_protests"
+  },
+  {
+    "id": "oman-2013-secret-iran-us-talks",
+    "title": "Secret US–Iran talks hosted",
+    "date": "2013",
+    "year-from": 2013,
+    "place": "Muscat",
+    "lat": 23.61,
+    "lon": 58.59,
+    "country": "Oman",
+    "importance": 3,
+    "description": "Sultan Qaboos hosts secret back-channel talks between American and Iranian officials that open the way to the 2015 nuclear agreement.",
+    "source": "https://en.wikipedia.org/wiki/Qaboos_bin_Said"
+  },
+  {
+    "id": "oman-2018-cyclone-mekunu",
+    "title": "Cyclone Mekunu",
+    "date": "25 May 2018",
+    "year-from": 2018,
+    "place": "Salalah",
+    "lat": 17.02,
+    "lon": 54.09,
+    "country": "Oman",
+    "importance": 3,
+    "description": "The strongest cyclone to hit Dhofar since 1959 makes landfall near Salalah, dropping five years' worth of rain in four days.",
+    "source": "https://en.wikipedia.org/wiki/Cyclone_Mekunu"
   }
 ]

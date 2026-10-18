@@ -425,5 +425,44 @@
     "importance": 2,
     "description": "The International Security Assistance Force is formally closed after thirteen years and Afghan forces take over the fighting against the Taliban.",
     "source": "https://en.wikipedia.org/wiki/International_Security_Assistance_Force"
+  },
+  {
+    "id": "afghanistan-2015-death-of-mullah-omar-announced",
+    "title": "Death of Mullah Omar announced",
+    "date": "29 Jul 2015",
+    "year-from": 2015,
+    "place": "Kabul",
+    "lat": 34.53,
+    "lon": 69.17,
+    "country": "Afghanistan",
+    "importance": 3,
+    "description": "The Afghan government announces that the Taliban's founding leader Mullah Omar died in April 2013, and the Taliban confirm his death the next day.",
+    "source": "https://en.wikipedia.org/wiki/Mullah_Omar"
+  },
+  {
+    "id": "afghanistan-2015-taliban-take-kunduz",
+    "title": "Taliban briefly take Kunduz",
+    "date": "28 Sep 2015",
+    "year-from": 2015,
+    "place": "Kunduz",
+    "lat": 36.73,
+    "lon": 68.87,
+    "country": "Afghanistan",
+    "importance": 3,
+    "description": "The Taliban overrun the northern city of Kunduz, their first major city captured since 2001, before government forces with American support retake it within days.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Kunduz_(2015)"
+  },
+  {
+    "id": "afghanistan-2019-presidential-election",
+    "title": "Presidential election of 2019",
+    "date": "28 Sep 2019",
+    "year-from": 2019,
+    "place": "Kabul",
+    "lat": 34.53,
+    "lon": 69.17,
+    "country": "Afghanistan",
+    "importance": 3,
+    "description": "In a vote with historically low turnout amid Taliban attacks, preliminary results give President Ashraf Ghani a narrow majority, which runner-up Abdullah Abdullah rejects.",
+    "source": "https://en.wikipedia.org/wiki/2019_Afghan_presidential_election"
   }
 ]

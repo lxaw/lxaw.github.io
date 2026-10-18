@@ -364,5 +364,44 @@
     "importance": 2,
     "description": "A far-right extremist kills 77 people with a bomb at the government offices and a shooting at a youth camp.",
     "source": "https://en.wikipedia.org/wiki/2011_Norway_attacks"
+  },
+  {
+    "id": "norway-2013-solberg-government",
+    "title": "Solberg becomes prime minister",
+    "date": "16 Oct 2013",
+    "year-from": 2013,
+    "place": "Oslo",
+    "lat": 59.913,
+    "lon": 10.752,
+    "country": "Norway",
+    "importance": 3,
+    "description": "Erna Solberg forms a centre-right coalition including the Progress Party, which enters government for the first time.",
+    "source": "https://en.wikipedia.org/wiki/Erna_Solberg"
+  },
+  {
+    "id": "norway-2014-stoltenberg-nato",
+    "title": "Stoltenberg leads NATO",
+    "date": "1 Oct 2014",
+    "year-from": 2014,
+    "place": "Brussels, Belgium",
+    "lat": 50.85,
+    "lon": 4.35,
+    "country": "Norway",
+    "importance": 3,
+    "description": "Former prime minister Jens Stoltenberg takes office as secretary general of NATO, the first Norwegian to hold the post.",
+    "source": "https://en.wikipedia.org/wiki/Jens_Stoltenberg"
+  },
+  {
+    "id": "norway-2017-oil-fund-trillion",
+    "title": "Oil fund passes one trillion dollars",
+    "date": "Sep 2017",
+    "year-from": 2017,
+    "place": "Oslo",
+    "lat": 59.913,
+    "lon": 10.752,
+    "country": "Norway",
+    "importance": 3,
+    "description": "The state oil fund set up in 1990 passes one trillion US dollars in value, the largest sovereign wealth fund in the world.",
+    "source": "https://en.wikipedia.org/wiki/Government_Pension_Fund_of_Norway"
   }
 ]

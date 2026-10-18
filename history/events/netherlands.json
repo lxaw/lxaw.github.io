@@ -321,5 +321,44 @@
     "importance": 3,
     "description": "The Netherlands becomes the first country to open marriage to same-sex couples.",
     "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands"
+  },
+  {
+    "id": "netherlands-2002-pim-fortuyn-assassinated",
+    "title": "Pim Fortuyn assassinated",
+    "date": "6 May 2002",
+    "year-from": 2002,
+    "place": "Hilversum",
+    "lat": 52.23,
+    "lon": 5.17,
+    "country": "Netherlands",
+    "importance": 2,
+    "description": "A gunman murdered the politician Pim Fortuyn nine days before a general election in which his new party won 26 seats.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Pim_Fortuyn"
+  },
+  {
+    "id": "netherlands-2004-theo-van-gogh-murdered",
+    "title": "Theo van Gogh murdered",
+    "date": "2 Nov 2004",
+    "year-from": 2004,
+    "place": "Amsterdam",
+    "lat": 52.37,
+    "lon": 4.9,
+    "country": "Netherlands",
+    "importance": 3,
+    "description": "A radical Islamist murdered the film-maker Theo van Gogh, who had directed a short film criticising the treatment of women in Islam.",
+    "source": "https://en.wikipedia.org/wiki/Theo_van_Gogh_(film_director)"
+  },
+  {
+    "id": "netherlands-2014-flight-mh17-shot-down",
+    "title": "Flight MH17 shot down",
+    "date": "17 Jul 2014",
+    "year-from": 2014,
+    "place": "near Hrabove, Ukraine",
+    "lat": 48.14,
+    "lon": 38.64,
+    "country": "Netherlands",
+    "importance": 2,
+    "description": "A surface-to-air missile downed Malaysia Airlines Flight 17 from Amsterdam over separatist-held eastern Ukraine, killing all 298 aboard, 193 of them Dutch.",
+    "source": "https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_17"
   }
 ]

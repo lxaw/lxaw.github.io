@@ -340,5 +340,44 @@
     "importance": 2,
     "description": "The army under Abdel Fattah el-Sisi deposes the elected president, Mohamed Morsi.",
     "source": "https://en.wikipedia.org/wiki/2013_Egyptian_coup_d'%C3%A9tat"
+  },
+  {
+    "id": "egypt-2014-sisi-elected-president",
+    "title": "Sisi elected president",
+    "date": "26 to 28 May 2014",
+    "year-from": 2014,
+    "place": "Cairo",
+    "lat": 30.04,
+    "lon": 31.24,
+    "country": "Egypt",
+    "importance": 2,
+    "description": "Abdel Fattah el-Sisi, the former army chief who had removed Mohamed Morsi, won the presidency with 97 per cent of the vote against a single challenger.",
+    "source": "https://en.wikipedia.org/wiki/2014_Egyptian_presidential_election"
+  },
+  {
+    "id": "egypt-2015-new-capital-announced",
+    "title": "New capital announced",
+    "date": "13 Mar 2015",
+    "year-from": 2015,
+    "place": "East of Cairo",
+    "lat": 30.022,
+    "lon": 31.755,
+    "country": "Egypt",
+    "importance": 3,
+    "description": "The government unveiled plans for a new administrative capital in the desert east of Cairo, intended to relieve congestion and house the organs of state.",
+    "source": "https://en.wikipedia.org/wiki/New_Administrative_Capital"
+  },
+  {
+    "id": "egypt-2015-new-suez-canal-opens",
+    "title": "New Suez Canal opens",
+    "date": "6 Aug 2015",
+    "year-from": 2015,
+    "place": "Ismailia",
+    "lat": 30.59,
+    "lon": 32.27,
+    "country": "Egypt",
+    "importance": 2,
+    "description": "President Sisi inaugurated a second shipping lane dug beside part of the canal within a year, with the aim of doubling the number of ships it could handle each day.",
+    "source": "https://en.wikipedia.org/wiki/Suez_Canal_Area_Development_Project"
   }
 ]

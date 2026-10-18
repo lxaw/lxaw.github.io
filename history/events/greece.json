@@ -396,5 +396,44 @@
     "importance": 2,
     "description": "Unable to borrow, Greece accepts loans from the euro area and the International Monetary Fund in return for austerity.",
     "source": "https://en.wikipedia.org/wiki/Greek_government-debt_crisis"
+  },
+  {
+    "id": "greece-2015-bailout-referendum",
+    "title": "Bailout referendum",
+    "date": "5 Jul 2015",
+    "year-from": 2015,
+    "place": "Athens",
+    "lat": 37.97,
+    "lon": 23.73,
+    "country": "Greece",
+    "importance": 2,
+    "description": "Voters reject the creditors' bailout terms by 61 percent, but the government accepts a third bailout with even harsher terms within weeks.",
+    "source": "https://en.wikipedia.org/wiki/2015_Greek_bailout_referendum"
+  },
+  {
+    "id": "greece-2018-mati-wildfires",
+    "title": "Mati wildfires",
+    "date": "23 Jul 2018",
+    "year-from": 2018,
+    "place": "Mati, Attica",
+    "lat": 38.053,
+    "lon": 23.868,
+    "country": "Greece",
+    "importance": 3,
+    "description": "Wildfires trap residents and holidaymakers around the seaside town of Mati and kill more than a hundred people, the deadliest fires in modern Greek history.",
+    "source": "https://en.wikipedia.org/wiki/2018_Attica_wildfires"
+  },
+  {
+    "id": "greece-2018-bailout-programmes-end",
+    "title": "Third bailout ends",
+    "date": "Aug 2018",
+    "year-from": 2018,
+    "place": "Athens",
+    "lat": 37.97,
+    "lon": 23.73,
+    "country": "Greece",
+    "importance": 3,
+    "description": "Greece formally exits its third bailout programme, ending eight years of emergency loans and direct creditor supervision.",
+    "source": "https://en.wikipedia.org/wiki/2015_Greek_bailout_referendum"
   }
 ]

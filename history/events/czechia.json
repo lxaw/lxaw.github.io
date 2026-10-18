@@ -394,5 +394,57 @@
     "importance": 3,
     "description": "The Czech Republic enters the European Union with nine other states.",
     "source": "https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "czechia-2007-czechia-joins-the-schengen-area",
+    "title": "Czechia joins the Schengen Area",
+    "date": "21 Dec 2007",
+    "year-from": 2007,
+    "place": "Prague",
+    "lat": 50.087,
+    "lon": 14.421,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "Land and sea border checks ended as the Czech Republic joined the Schengen Area with eight other new EU states.",
+    "source": "https://en.wikipedia.org/wiki/2008_enlargement_of_the_Schengen_Area"
+  },
+  {
+    "id": "czechia-2013-first-direct-presidential-election",
+    "title": "First direct presidential election",
+    "date": "Jan 2013",
+    "year-from": 2013,
+    "place": "Prague",
+    "lat": 50.087,
+    "lon": 14.421,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "Miloš Zeman won the first direct election of a Czech president, a post previously filled by parliament.",
+    "source": "https://en.wikipedia.org/wiki/2013_Czech_presidential_election"
+  },
+  {
+    "id": "czechia-2017-ano-wins-the-election",
+    "title": "ANO wins the election",
+    "date": "Oct 2017",
+    "year-from": 2017,
+    "place": "Prague",
+    "lat": 50.087,
+    "lon": 14.421,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "The populist ANO movement of businessman Andrej Babiš won the election and he formed a minority government.",
+    "source": "https://en.wikipedia.org/wiki/2017_Czech_parliamentary_election"
+  },
+  {
+    "id": "czechia-2019-largest-protests-since-1989",
+    "title": "Largest protests since 1989",
+    "date": "23 Jun 2019",
+    "year-from": 2019,
+    "place": "Prague",
+    "lat": 50.087,
+    "lon": 14.421,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "More than 250,000 people rallied in Prague's Letná Park to demand the resignation of Prime Minister Babiš, the biggest demonstration since the fall of communism.",
+    "source": "https://en.wikipedia.org/wiki/Milion_chvilek_pro_demokracii"
   }
 ]

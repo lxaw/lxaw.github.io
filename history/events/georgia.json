@@ -412,5 +412,44 @@
     "importance": 1,
     "description": "Fighting between Georgian and South Ossetian forces becomes a five-day war with Russia, which then recognises South Ossetia and Abkhazia as independent states.",
     "source": "https://en.wikipedia.org/wiki/Russo-Georgian_War"
+  },
+  {
+    "id": "georgia-2012-georgian-dream-wins-election",
+    "title": "Georgian Dream wins election",
+    "date": "1 Oct 2012",
+    "year-from": 2012,
+    "place": "Tbilisi",
+    "lat": 41.7151,
+    "lon": 44.8271,
+    "country": "Georgia",
+    "importance": 2,
+    "description": "Bidzina Ivanishvili's Georgian Dream coalition won a majority and President Saakashvili conceded defeat, the country's first democratic transfer of power.",
+    "source": "https://en.wikipedia.org/wiki/2012_Georgian_parliamentary_election"
+  },
+  {
+    "id": "georgia-2018-first-female-president",
+    "title": "First female president",
+    "date": "28 Nov 2018",
+    "year-from": 2018,
+    "place": "Tbilisi",
+    "lat": 41.7151,
+    "lon": 44.8271,
+    "country": "Georgia",
+    "importance": 2,
+    "description": "Salome Zourabichvili won the run-off with about 60 per cent of the vote, becoming the first woman elected president and the last to be chosen by direct vote.",
+    "source": "https://en.wikipedia.org/wiki/2018_Georgian_presidential_election"
+  },
+  {
+    "id": "georgia-2019-gavrilov-night-protests",
+    "title": "Gavrilov Night protests",
+    "date": "20 Jun 2019",
+    "year-from": 2019,
+    "place": "Tbilisi",
+    "lat": 41.7151,
+    "lon": 44.8271,
+    "country": "Georgia",
+    "importance": 3,
+    "description": "Mass protests erupted over a Russian MP addressing parliament from the speaker's chair, and riot police dispersed them with tear gas and rubber bullets.",
+    "source": "https://en.wikipedia.org/wiki/2019_protests_in_Georgia_(country)"
   }
 ]

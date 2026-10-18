@@ -383,5 +383,58 @@
     "importance": 2,
     "description": "Slovenia enters the European Union, a month after joining NATO, and adopts the euro in 2007.",
     "source": "https://en.wikipedia.org/wiki/Slovenia"
+  },
+  {
+    "id": "slovenia-2008-first-post-communist-eu-presidency",
+    "title": "First post-communist EU presidency",
+    "date": "2008",
+    "year-from": 2008,
+    "place": "Ljubljana",
+    "lat": 46.051,
+    "lon": 14.506,
+    "country": "Slovenia",
+    "importance": 3,
+    "description": "Slovenia held the rotating presidency of the Council of the European Union, the first former communist country to do so.",
+    "source": "https://en.wikipedia.org/wiki/Slovenia"
+  },
+  {
+    "id": "slovenia-2012-anti-corruption-protests",
+    "title": "Anti-corruption protests",
+    "date": "Nov 2012",
+    "year-from": 2012,
+    "year-to": 2013,
+    "place": "Maribor",
+    "lat": 46.557,
+    "lon": 15.646,
+    "country": "Slovenia",
+    "importance": 3,
+    "description": "Protests that broke out in Maribor against the city's mayor spread across the country, with demands that politicians accused of corruption resign.",
+    "source": "https://en.wikipedia.org/wiki/2012–2013_Slovenian_protests"
+  },
+  {
+    "id": "slovenia-2013-bank-bailout-averted",
+    "title": "Bank bailout averted",
+    "date": "2013",
+    "year-from": 2013,
+    "place": "Ljubljana",
+    "lat": 46.051,
+    "lon": 14.506,
+    "country": "Slovenia",
+    "importance": 3,
+    "description": "During the euro crisis Slovenia was expected to need a European bailout for its banks, but managed to recapitalise them from its own funds.",
+    "source": "https://en.wikipedia.org/wiki/Slovenia"
+  },
+  {
+    "id": "slovenia-2017-border-arbitration-ruling",
+    "title": "Border arbitration ruling",
+    "date": "29 Jun 2017",
+    "year-from": 2017,
+    "place": "The Hague, Netherlands",
+    "lat": 52.07,
+    "lon": 4.3,
+    "country": "Slovenia",
+    "importance": 3,
+    "description": "The Permanent Court of Arbitration drew the border with Croatia and gave Slovenia direct access to international waters, but Croatia refused to implement the ruling.",
+    "source": "https://en.wikipedia.org/wiki/Croatia–Slovenia_border_disputes"
   }
 ]

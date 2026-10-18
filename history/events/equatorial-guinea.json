@@ -200,5 +200,57 @@
     "importance": 2,
     "description": "Zimbabwe seizes a plane of mercenaries en route to overthrow Obiang for the oil interests behind them; financiers including Mark Thatcher are later convicted.",
     "source": "https://en.wikipedia.org/wiki/2004_Equatorial_Guinea_coup_d%27%C3%A9tat_attempt"
+  },
+  {
+    "id": "equatorial-guinea-2011-obiang-chairs-the-african-union",
+    "title": "Obiang chairs the African Union",
+    "date": "2011",
+    "year-from": 2011,
+    "place": "Addis Ababa, Ethiopia",
+    "lat": 9.03,
+    "lon": 38.75,
+    "country": "Equatorial Guinea",
+    "importance": 3,
+    "description": "President Teodoro Obiang took over the rotating chairmanship of the African Union for a year.",
+    "source": "https://en.wikipedia.org/wiki/Teodoro_Obiang_Nguema_Mbasogo"
+  },
+  {
+    "id": "equatorial-guinea-2017-french-court-convicts-the-vice-president",
+    "title": "Vice-president convicted in France",
+    "date": "Oct 2017",
+    "year-from": 2017,
+    "place": "Paris, France",
+    "lat": 48.855,
+    "lon": 2.345,
+    "country": "Equatorial Guinea",
+    "importance": 3,
+    "description": "A French court found the president's son, Vice-President Teodorín Obiang, guilty of money laundering, seizing his Paris mansion and luxury cars and giving him a suspended sentence.",
+    "source": "https://en.wikipedia.org/wiki/Teodoro_Nguema_Obiang_Mangue"
+  },
+  {
+    "id": "equatorial-guinea-2017-mercenaries-intercepted-at-ebibeyin",
+    "title": "Foreign mercenaries intercepted at Ebibeyin",
+    "date": "Dec 2017",
+    "year-from": 2017,
+    "place": "Ebibeyin",
+    "lat": 2.15,
+    "lon": 11.33,
+    "country": "Equatorial Guinea",
+    "importance": 3,
+    "description": "Security forces intercepted foreign mercenaries at Ebibeyin on the Cameroon border in what the government called a coup attempt, and a crackdown on the opposition followed.",
+    "source": "https://en.wikipedia.org/wiki/2017_Equatorial_Guinea_coup_attempt"
+  },
+  {
+    "id": "equatorial-guinea-2018-seat-on-the-un-security-council",
+    "title": "Seat on the UN Security Council",
+    "date": "2018",
+    "year-from": 2018,
+    "place": "Malabo",
+    "lat": 3.75,
+    "lon": 8.74,
+    "country": "Equatorial Guinea",
+    "importance": 3,
+    "description": "Equatorial Guinea sat on the UN Security Council for the first time.",
+    "source": "https://en.wikipedia.org/wiki/Equatorial_Guinea"
   }
 ]

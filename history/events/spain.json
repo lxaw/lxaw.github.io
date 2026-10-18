@@ -401,5 +401,57 @@
     "importance": 3,
     "description": "Bombs on commuter trains kill 193 people.",
     "source": "https://en.wikipedia.org/wiki/2004_Madrid_train_bombings"
+  },
+  {
+    "id": "spain-2005-same-sex-marriage-legalised",
+    "title": "Same-sex marriage legalised",
+    "date": "3 Jul 2005",
+    "year-from": 2005,
+    "place": "Madrid",
+    "lat": 40.416,
+    "lon": -3.703,
+    "country": "Spain",
+    "importance": 3,
+    "description": "Spain became the third country in the world to open marriage to same-sex couples.",
+    "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Spain"
+  },
+  {
+    "id": "spain-2011-eta-ends-its-armed-campaign",
+    "title": "ETA ends its armed campaign",
+    "date": "20 Oct 2011",
+    "year-from": 2011,
+    "place": "San Sebastián",
+    "lat": 43.3183,
+    "lon": -1.9812,
+    "country": "Spain",
+    "importance": 2,
+    "description": "ETA announced the definitive cessation of its armed activity, ending a campaign in which it killed 829 people.",
+    "source": "https://en.wikipedia.org/wiki/ETA_(separatist_group)"
+  },
+  {
+    "id": "spain-2014-abdication-of-juan-carlos",
+    "title": "Abdication of Juan Carlos I",
+    "date": "19 Jun 2014",
+    "year-from": 2014,
+    "place": "Madrid",
+    "lat": 40.416,
+    "lon": -3.703,
+    "country": "Spain",
+    "importance": 3,
+    "description": "Juan Carlos I abdicated after 39 years on the throne and was succeeded by his son as Felipe VI.",
+    "source": "https://en.wikipedia.org/wiki/Abdication_of_Juan_Carlos_I"
+  },
+  {
+    "id": "spain-2017-catalan-independence-referendum",
+    "title": "Catalan independence referendum",
+    "date": "1 Oct 2017",
+    "year-from": 2017,
+    "place": "Barcelona",
+    "lat": 41.39,
+    "lon": 2.17,
+    "country": "Spain",
+    "importance": 2,
+    "description": "Catalonia held an independence referendum suspended by the Constitutional Court and disrupted by police, and after the Catalan parliament declared independence, Madrid imposed direct rule.",
+    "source": "https://en.wikipedia.org/wiki/2017_Catalan_independence_referendum"
   }
 ]

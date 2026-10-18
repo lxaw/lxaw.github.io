@@ -285,5 +285,44 @@
     "importance": 3,
     "description": "Portugal returns its last overseas territory after 442 years.",
     "source": "https://en.wikipedia.org/wiki/Handover_of_Macau"
+  },
+  {
+    "id": "portugal-2007-treaty-of-lisbon-signed",
+    "title": "Treaty of Lisbon signed",
+    "date": "13 Dec 2007",
+    "year-from": 2007,
+    "place": "Lisbon",
+    "lat": 38.72,
+    "lon": -9.14,
+    "country": "Portugal",
+    "importance": 3,
+    "description": "EU leaders signed the Treaty of Lisbon, which salvaged most of the failed European constitution and reformed the bloc's institutions.",
+    "source": "https://en.wikipedia.org/wiki/Treaty_of_Lisbon"
+  },
+  {
+    "id": "portugal-2011-portugal-requests-a-bail-out",
+    "title": "Portugal requests a bail-out",
+    "date": "6 Apr 2011",
+    "year-from": 2011,
+    "place": "Lisbon",
+    "lat": 38.72,
+    "lon": -9.14,
+    "country": "Portugal",
+    "importance": 2,
+    "description": "Portugal became the third eurozone state after Greece and Ireland to request an international bail-out, later set at 78 billion euros.",
+    "source": "https://en.wikipedia.org/wiki/2010–2014_Portuguese_financial_crisis"
+  },
+  {
+    "id": "portugal-2017-pedrogao-grande-wildfires",
+    "title": "Pedrógão Grande wildfires",
+    "date": "17 Jun 2017",
+    "year-from": 2017,
+    "place": "Pedrógão Grande",
+    "lat": 39.92,
+    "lon": -8.23,
+    "country": "Portugal",
+    "importance": 3,
+    "description": "Wildfires killed 66 people, the country's deadliest ever, and a second wave in October killed dozens more.",
+    "source": "https://en.wikipedia.org/wiki/June_2017_Portugal_wildfires"
   }
 ]

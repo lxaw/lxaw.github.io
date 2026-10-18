@@ -180,6 +180,29 @@
     "source": "https://arxiv.org/abs/1806.06038"
   },
   {
+    "id": "deep-9000-the-cosmic-afternoon-star-formation-fades",
+    "title": "The cosmic afternoon: star formation fades",
+    "date": "about 9 to 8 billion years ago",
+    "ma": 9000,
+    "ma-to": 8000,
+    "scope": "Universe",
+    "importance": 2,
+    "description": "With its peak (cosmic noon) behind it, the universe's average rate of star formation fell steadily and kept falling, dropping by roughly a quarter every billion years. Even so, by about 9 billion years ago - redshift 1.3, when the universe was some 4.8 billion years old - half of all the stars that exist today had already formed.",
+    "uncertainty": "These figures come from surveys of galaxy light across cosmic time and depend on corrections for dust; the decline is a smooth average, not a single event.",
+    "source": "https://arxiv.org/abs/1403.0007"
+  },
+  {
+    "id": "deep-9000-the-sequoia-galaxy-merger",
+    "title": "The Sequoia galaxy merger",
+    "date": "about 9 billion years ago",
+    "ma": 9000,
+    "scope": "Milky Way",
+    "importance": 3,
+    "description": "The Milky Way swallowed a dwarf galaxy, dubbed Sequoia, whose stars still stream through the galactic halo on tall, backward-orbiting paths. The debris was recognised in 2019 from Gaia measurements, and ages of the globular clusters thought to have come in with it put the accretion about 9.4 billion years ago.",
+    "uncertainty": "The globular-cluster study cited gives 9.4 billion years, give or take about half a billion; the discovery paper suggested 9 to 11 billion, and some later work argues Sequoia's stars may share a parent with Gaia-Enceladus, so the event itself is not settled.",
+    "source": "https://arxiv.org/abs/2003.01119"
+  },
+  {
     "id": "deep-8000-milky-way-bar-forms",
     "title": "The Milky Way's central bar forms",
     "date": "about 8 billion years ago",
@@ -202,6 +225,43 @@
     "source": "https://arxiv.org/abs/2203.12110"
   },
   {
+    "id": "deep-7000-a-star-forming-episode-in-the-milky-way",
+    "title": "A star-forming episode in the Milky Way",
+    "date": "about 7 billion years ago",
+    "ma": 7000,
+    "scope": "Milky Way",
+    "importance": 3,
+    "description": "Studies of stellar ages and of the galaxy's chemical evolution find that star formation in the Milky Way was moderately enhanced about 7 to 9 billion years ago, with a peak around 7 billion years ago, perhaps fed by cold gas falling in from the halo. A clue survives in meteorites: the ages of presolar stardust grains bunch up as though many of their parent stars were born in just such an episode.",
+    "uncertainty": "The peak is broad and model-dependent; most studies of the galaxy's star formation history see only mild fluctuations rather than a true starburst.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6995017/"
+  },
+  {
+    "id": "deep-7000-the-oldest-presolar-stardust",
+    "title": "The oldest stardust: grains older than the Sun form",
+    "date": "about 7 to 4.6 billion years ago",
+    "ma": 7000,
+    "ma-to": 4600,
+    "scope": "Milky Way",
+    "importance": 2,
+    "description": "Dust grains condensed in the slowly blowing winds of dying red giant stars and drifted through interstellar space. Some of these grains were later found inside the Murchison meteorite, and neon isotopes built up by cosmic rays show that the oldest are some 3 billion years older than the Solar System, making them the oldest solid material found on Earth.",
+    "uncertainty": "The oldest grains are dated at about 3 billion years, plus or minus 2 billion, before the Solar System's start near 4.6 billion years ago, so the total figure has a wide range around 7 billion years.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6995017/",
+    "place": "Murchison, Victoria, Australia",
+    "lat": -36.617,
+    "lon": 145.2
+  },
+  {
+    "id": "deep-7000-the-el-gordo-cluster-collision",
+    "title": "'El Gordo': two galaxy clusters collide",
+    "date": "about 7 billion years ago",
+    "ma": 7000,
+    "scope": "Universe",
+    "importance": 3,
+    "description": "Two massive galaxy clusters are seen crashing into each other at several million miles per hour at a redshift of 0.87, a lookback time of about 7 billion years. Nicknamed El Gordo ('the Fat One'), the pair was the most massive cluster known at its distance when found, and like the Bullet Cluster its hot gas has been wrenched apart from its dark matter in the collision.",
+    "uncertainty": "The quoted distance of about 7 billion light-years is approximate; the cluster's mass was revised downward in 2021, and whether such an early giant collision challenges standard cosmology is debated.",
+    "source": "https://chandra.si.edu/photo/2012/elgordo/"
+  },
+  {
     "id": "deep-6000-expansion-of-the-universe-begins-to-accelerate",
     "title": "Expansion of the universe begins to speed up",
     "date": "about 6 billion years ago",
@@ -222,5 +282,20 @@
     "description": "The small Sagittarius galaxy is thought to have made its first close pass through the Milky Way's disk, and star formation in the Sun's wider neighbourhood rose to a peak 5.7 billion years ago. The burst was found in Gaia measurements of nearby stars.",
     "uncertainty": "The burst of star formation is measured, but its link to Sagittarius rests on orbit models that put the passage five to six billion years ago; other ESA material gives four to five.",
     "source": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Galactic_crash_may_have_triggered_Solar_System_formation"
+  },
+  {
+    "id": "deep-4900-dying-stars-shed-stardust-near-the-suns-birth-cloud",
+    "title": "Dying stars shed stardust near the Sun's birth cloud",
+    "date": "about 4.9 to 4.6 billion years ago",
+    "ma": 4900,
+    "ma-to": 4600,
+    "scope": "Milky Way",
+    "importance": 3,
+    "description": "Stars born in the Milky Way's enhanced episode about 2 billion years earlier aged into giant stars and, during this stretch, began shedding the silicon carbide dust grains that are found today in meteorites such as Murchison. That stardust mixed into the interstellar cloud out of which the Solar System would form.",
+    "uncertainty": "This is the interpretation proposed in the study cited to explain the ages of the meteoritic grains; the authors themselves call it plausible but speculative.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6995017/",
+    "place": "Murchison, Victoria, Australia",
+    "lat": -36.617,
+    "lon": 145.2
   }
 ]

@@ -328,5 +328,44 @@
     "importance": 1,
     "description": "The West African outbreak crosses from Guinea into Kailahun and kills nearly 4,000 Sierra Leoneans before the government declares victory.",
     "source": "https://en.wikipedia.org/wiki/Ebola_virus_epidemic_in_Sierra_Leone"
+  },
+  {
+    "id": "sierra-leone-2015-who-declares-country-ebola-free",
+    "title": "WHO declares country Ebola-free",
+    "date": "7 Nov 2015",
+    "year-from": 2015,
+    "place": "Freetown",
+    "lat": 8.47,
+    "lon": -13.23,
+    "country": "Sierra Leone",
+    "importance": 2,
+    "description": "The World Health Organization declares the end of Ebola transmission in Sierra Leone; after one flare-up it confirms the outbreak over in March 2016.",
+    "source": "https://en.wikipedia.org/wiki/Ebola_virus_epidemic_in_Sierra_Leone"
+  },
+  {
+    "id": "sierra-leone-2017-freetown-mudslides",
+    "title": "Freetown mudslides",
+    "date": "14 Aug 2017",
+    "year-from": 2017,
+    "place": "Western Area",
+    "lat": 8.43,
+    "lon": -13.22,
+    "country": "Sierra Leone",
+    "importance": 2,
+    "description": "After days of torrential rain, mudslides sweep down Sugar Loaf mountain into the suburbs of Freetown and kill more than 1,100 people.",
+    "source": "https://en.wikipedia.org/wiki/2017_Sierra_Leone_mudslides"
+  },
+  {
+    "id": "sierra-leone-2018-bio-elected-president",
+    "title": "Bio elected president",
+    "date": "31 Mar 2018",
+    "year-from": 2018,
+    "place": "Freetown",
+    "lat": 8.47,
+    "lon": -13.23,
+    "country": "Sierra Leone",
+    "importance": 3,
+    "description": "Opposition leader Julius Maada Bio of the Sierra Leone People's Party wins a run-off against Samura Kamara of the ruling party.",
+    "source": "https://en.wikipedia.org/wiki/2018_Sierra_Leonean_general_election"
   }
 ]

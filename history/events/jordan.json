@@ -364,5 +364,44 @@
     "importance": 3,
     "description": "A camp opens for Syrians fleeing the civil war and grows within a year into one of the largest refugee camps in the world.",
     "source": "https://en.wikipedia.org/wiki/Zaatari_refugee_camp"
+  },
+  {
+    "id": "jordan-2015-islamic-state-kills-captured-pilot",
+    "title": "Islamic State kills captured pilot",
+    "date": "Feb 2015",
+    "year-from": 2015,
+    "place": "Amman",
+    "lat": 31.951,
+    "lon": 35.934,
+    "country": "Jordan",
+    "importance": 2,
+    "description": "After the Islamic State released a video showing the captured Jordanian pilot Muath al-Kasasbeh burned alive in a cage, Jordan hanged two jihadist prisoners and stepped up its air campaign.",
+    "source": "https://en.wikipedia.org/wiki/Muath_al-Kasasbeh"
+  },
+  {
+    "id": "jordan-2016-karak-attack",
+    "title": "Karak attack",
+    "date": "18 Dec 2016",
+    "year-from": 2016,
+    "place": "Al-Karak",
+    "lat": 31.181,
+    "lon": 35.702,
+    "country": "Jordan",
+    "importance": 3,
+    "description": "Gunmen attacked police and tourists in Al-Karak and fought on in the crusader castle, killing fourteen people including a Canadian tourist; the Islamic State claimed responsibility.",
+    "source": "https://en.wikipedia.org/wiki/2016_Al-Karak_attack"
+  },
+  {
+    "id": "jordan-2018-protests-bring-down-government",
+    "title": "Protests bring down the government",
+    "date": "Jun 2018",
+    "year-from": 2018,
+    "place": "Amman",
+    "lat": 31.951,
+    "lon": 35.934,
+    "country": "Jordan",
+    "importance": 3,
+    "description": "A week of strikes and nationwide protests against a planned income-tax law forced the resignation of prime minister Hani Mulki, who was replaced by Omar Razzaz.",
+    "source": "https://en.wikipedia.org/wiki/2018_Jordanian_protests"
   }
 ]

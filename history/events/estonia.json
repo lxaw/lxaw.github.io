@@ -377,5 +377,57 @@
     "importance": 3,
     "description": "The euro replaces the kroon, making Estonia the first former Soviet republic in the eurozone.",
     "source": "https://en.wikipedia.org/wiki/Estonia_and_the_euro"
+  },
+  {
+    "id": "estonia-2014-eston-kohver-detained",
+    "title": "Eston Kohver detained",
+    "date": "5 Sep 2014",
+    "year-from": 2014,
+    "place": "Luhamaa border crossing",
+    "lat": 57.66,
+    "lon": 27.27,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "Russian security forces seize Estonian security officer Eston Kohver near the border in an incident Estonia calls an abduction from its own territory; he is jailed for espionage and returned home in a prisoner exchange a year later.",
+    "source": "https://en.wikipedia.org/wiki/Eston_Kohver"
+  },
+  {
+    "id": "estonia-2014-e-residency",
+    "title": "e-Residency launched",
+    "date": "1 Dec 2014",
+    "year-from": 2014,
+    "place": "Tallinn",
+    "lat": 59.437,
+    "lon": 24.745,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "Estonia becomes the first country to issue digital e-resident identities, letting foreigners set up and run businesses through its online services.",
+    "source": "https://en.wikipedia.org/wiki/E-Residency_of_Estonia"
+  },
+  {
+    "id": "estonia-2016-kaljulaid-president",
+    "title": "Kaljulaid elected president",
+    "date": "3 Oct 2016",
+    "year-from": 2016,
+    "place": "Tallinn",
+    "lat": 59.437,
+    "lon": 24.745,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "After five failed voting rounds the Riigikogu elects Kersti Kaljulaid president, Estonia's first female head of state.",
+    "source": "https://en.wikipedia.org/wiki/Kersti_Kaljulaid"
+  },
+  {
+    "id": "estonia-2019-un-security-council",
+    "title": "Elected to the UN Security Council",
+    "date": "7 Jun 2019",
+    "year-from": 2019,
+    "place": "United Nations, New York, United States",
+    "lat": 40.75,
+    "lon": -73.968,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "Estonia wins a non-permanent seat on the United Nations Security Council for the first time, defeating Romania in a run-off.",
+    "source": "https://en.wikipedia.org/wiki/2019_United_Nations_Security_Council_election"
   }
 ]

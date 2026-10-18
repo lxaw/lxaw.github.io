@@ -291,5 +291,44 @@
     "importance": 3,
     "description": "Jean hands the throne to his son Henri after a reign of 36 years.",
     "source": "https://en.wikipedia.org/wiki/Henri,_Grand_Duke_of_Luxembourg"
+  },
+  {
+    "id": "luxembourg-2005-european-constitution-approved",
+    "title": "European Constitution approved",
+    "date": "10 Jul 2005",
+    "year-from": 2005,
+    "place": "Luxembourg City",
+    "lat": 49.611,
+    "lon": 6.132,
+    "country": "Luxembourg",
+    "importance": 3,
+    "description": "In Luxembourg's first referendum since 1937, voters approved the European constitution weeks after France and the Netherlands had rejected it.",
+    "source": "https://en.wikipedia.org/wiki/2005_Luxembourg_European_Constitution_referendum"
+  },
+  {
+    "id": "luxembourg-2013-xavier-bettel-becomes-prime-minister",
+    "title": "Xavier Bettel becomes prime minister",
+    "date": "4 Dec 2013",
+    "year-from": 2013,
+    "place": "Luxembourg City",
+    "lat": 49.611,
+    "lon": 6.132,
+    "country": "Luxembourg",
+    "importance": 3,
+    "description": "Xavier Bettel formed a coalition of liberals, socialists and greens, ending Jean-Claude Juncker's eighteen years as prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Xavier_Bettel"
+  },
+  {
+    "id": "luxembourg-2014-luxembourg-leaks",
+    "title": "Luxembourg Leaks",
+    "date": "5 Nov 2014",
+    "year-from": 2014,
+    "place": "Luxembourg City",
+    "lat": 49.611,
+    "lon": 6.132,
+    "country": "Luxembourg",
+    "importance": 3,
+    "description": "Leaked documents revealed sweetheart tax rulings issued in Luxembourg to more than three hundred multinationals, embarrassing the new European Commission president Juncker.",
+    "source": "https://en.wikipedia.org/wiki/Luxembourg_Leaks"
   }
 ]

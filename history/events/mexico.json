@@ -329,5 +329,44 @@
     "importance": 2,
     "description": "Vicente Fox wins the presidency, the first defeat for the Institutional Revolutionary Party in 71 years.",
     "source": "https://en.wikipedia.org/wiki/2000_Mexican_general_election"
+  },
+  {
+    "id": "mexico-2006-drug-war-begins",
+    "title": "Drug war begins",
+    "date": "11 Dec 2006",
+    "year-from": 2006,
+    "place": "Michoacán",
+    "lat": 19.17,
+    "lon": -101.9,
+    "country": "Mexico",
+    "importance": 2,
+    "description": "President Felipe Calderón sent federal forces into Michoacán, the start of a militarised campaign against the drug cartels that has since cost hundreds of thousands of lives.",
+    "source": "https://en.wikipedia.org/wiki/Mexican_drug_war"
+  },
+  {
+    "id": "mexico-2017-central-mexico-earthquake",
+    "title": "Central Mexico earthquake",
+    "date": "19 Sep 2017",
+    "year-from": 2017,
+    "place": "Puebla",
+    "lat": 18.584,
+    "lon": -98.399,
+    "country": "Mexico",
+    "importance": 3,
+    "description": "A magnitude 7.1 earthquake struck central Mexico on the thirty-second anniversary of the 1985 quake and killed 370 people.",
+    "source": "https://en.wikipedia.org/wiki/2017_Puebla_earthquake"
+  },
+  {
+    "id": "mexico-2018-lopez-obrador-elected",
+    "title": "López Obrador elected",
+    "date": "1 Jul 2018",
+    "year-from": 2018,
+    "place": "Mexico City",
+    "lat": 19.43,
+    "lon": -99.13,
+    "country": "Mexico",
+    "importance": 2,
+    "description": "Andrés Manuel López Obrador won the presidency in a landslide, the first candidate since 1988 to take an outright majority of the vote.",
+    "source": "https://en.wikipedia.org/wiki/2018_Mexican_general_election"
   }
 ]

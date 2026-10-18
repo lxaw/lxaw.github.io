@@ -353,5 +353,44 @@
     "importance": 3,
     "description": "Police break up a large demonstration against the presidential election result and arrest most of the opposition candidates.",
     "source": "https://en.wikipedia.org/wiki/2010_Belarusian_presidential_election"
+  },
+  {
+    "id": "belarus-2011-minsk-metro-bombing",
+    "title": "Minsk Metro bombing",
+    "date": "11 Apr 2011",
+    "year-from": 2011,
+    "place": "Kastrychnitskaya station, Minsk",
+    "lat": 53.902,
+    "lon": 27.562,
+    "country": "Belarus",
+    "importance": 3,
+    "description": "A bomb explodes on the Minsk Metro at the evening rush hour, killing fifteen people, the deadliest attack in Belarus since independence.",
+    "source": "https://en.wikipedia.org/wiki/2011_Minsk_Metro_bombing"
+  },
+  {
+    "id": "belarus-2015-minsk-ii",
+    "title": "Minsk II agreed",
+    "date": "12 Feb 2015",
+    "year-from": 2015,
+    "place": "Independence Palace, Minsk",
+    "lat": 53.902,
+    "lon": 27.561,
+    "country": "Belarus",
+    "importance": 3,
+    "description": "The leaders of Ukraine, Russia, France and Germany meet through the night in Minsk and agree a package of measures meant to end the war in the Donbas.",
+    "source": "https://en.wikipedia.org/wiki/Minsk_agreements"
+  },
+  {
+    "id": "belarus-2017-parasite-tax-protests",
+    "title": "Protests against the 'parasite tax'",
+    "date": "Feb 2017",
+    "year-from": 2017,
+    "place": "Minsk",
+    "lat": 53.902,
+    "lon": 27.561,
+    "country": "Belarus",
+    "importance": 3,
+    "description": "A decree taxing the unemployed as 'social parasites' sparks a month of protest marches across the country that end with mass detentions in Minsk in March.",
+    "source": "https://en.wikipedia.org/wiki/2017_Belarusian_protests"
   }
 ]

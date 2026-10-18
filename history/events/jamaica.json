@@ -309,5 +309,44 @@
     "importance": 2,
     "description": "The army storms Tivoli Gardens to capture the don Christopher Coke for extradition, killing scores of civilians in four days.",
     "source": "https://en.wikipedia.org/wiki/2010_Kingston_unrest"
+  },
+  {
+    "id": "jamaica-2013-imf-loan",
+    "title": "IMF loan",
+    "date": "2013",
+    "year-from": 2013,
+    "place": "Kingston",
+    "lat": 17.971,
+    "lon": -76.793,
+    "country": "Jamaica",
+    "importance": 3,
+    "description": "As economic troubles deepen, Jamaica agrees a loan of about one billion US dollars with the International Monetary Fund to help it meet heavy debt payments.",
+    "source": "https://en.wikipedia.org/wiki/History_of_Jamaica"
+  },
+  {
+    "id": "jamaica-2015-cannabis-decriminalised",
+    "title": "Cannabis decriminalised",
+    "date": "Feb 2015",
+    "year-from": 2015,
+    "place": "Kingston",
+    "lat": 17.971,
+    "lon": -76.793,
+    "country": "Jamaica",
+    "importance": 3,
+    "description": "Parliament amends the drug laws so that possessing up to two ounces of cannabis becomes a petty offence without a criminal record, and Rastafari may use it for religious purposes.",
+    "source": "https://en.wikipedia.org/wiki/Cannabis_in_Jamaica"
+  },
+  {
+    "id": "jamaica-2018-reggae-unesco",
+    "title": "Reggae on UNESCO heritage list",
+    "date": "Nov 2018",
+    "year-from": 2018,
+    "place": "Kingston",
+    "lat": 17.971,
+    "lon": -76.793,
+    "country": "Jamaica",
+    "importance": 3,
+    "description": "UNESCO inscribes the reggae music of Jamaica on its Representative List of the Intangible Cultural Heritage of Humanity, recognising its role in international discourse.",
+    "source": "https://en.wikipedia.org/wiki/Reggae"
   }
 ]

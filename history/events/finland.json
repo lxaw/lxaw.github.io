@@ -379,5 +379,57 @@
     "importance": 2,
     "description": "Finland becomes a member together with Austria and Sweden.",
     "source": "https://en.wikipedia.org/wiki/1995_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "finland-2000-first-woman-president",
+    "title": "First woman president",
+    "date": "6 Feb 2000",
+    "year-from": 2000,
+    "place": "Helsinki",
+    "lat": 60.17,
+    "lon": 24.94,
+    "country": "Finland",
+    "importance": 3,
+    "description": "Tarja Halonen of the Social Democrats won the run-off and became the country's first woman president.",
+    "source": "https://en.wikipedia.org/wiki/2000_Finnish_presidential_election"
+  },
+  {
+    "id": "finland-2008-kauhajoki-school-shooting",
+    "title": "Kauhajoki school shooting",
+    "date": "23 Sep 2008",
+    "year-from": 2008,
+    "place": "Kauhajoki",
+    "lat": 62.43,
+    "lon": 22.18,
+    "country": "Finland",
+    "importance": 3,
+    "description": "A student shot dead ten people at a hospitality college, Finland's second school massacre in under a year.",
+    "source": "https://en.wikipedia.org/wiki/Kauhajoki_school_shooting"
+  },
+  {
+    "id": "finland-2011-true-finns-surge",
+    "title": "True Finns surge",
+    "date": "17 Apr 2011",
+    "year-from": 2011,
+    "place": "Helsinki",
+    "lat": 60.17,
+    "lon": 24.94,
+    "country": "Finland",
+    "importance": 3,
+    "description": "The True Finns won 39 seats, up from five, in a breakthrough that made them the third-largest party.",
+    "source": "https://en.wikipedia.org/wiki/2011_Finnish_parliamentary_election"
+  },
+  {
+    "id": "finland-2019-sanna-marin-becomes-prime-minister",
+    "title": "Sanna Marin becomes prime minister",
+    "date": "10 Dec 2019",
+    "year-from": 2019,
+    "place": "Helsinki",
+    "lat": 60.17,
+    "lon": 24.94,
+    "country": "Finland",
+    "importance": 3,
+    "description": "Sanna Marin took office at thirty-four, Finland's youngest prime minister and the world's youngest serving head of government at the time.",
+    "source": "https://en.wikipedia.org/wiki/Sanna_Marin"
   }
 ]

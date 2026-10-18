@@ -320,5 +320,44 @@
     "importance": 3,
     "description": "Bombs set by the Somali group al-Shabaab kill 74 people watching the football World Cup final.",
     "source": "https://en.wikipedia.org/wiki/2010_Kampala_bombings"
+  },
+  {
+    "id": "uganda-2012-bujagali-dam-opened",
+    "title": "Bujagali dam opened",
+    "date": "8 Oct 2012",
+    "year-from": 2012,
+    "place": "Bujagali, near Jinja",
+    "lat": 0.498,
+    "lon": 33.138,
+    "country": "Uganda",
+    "importance": 3,
+    "description": "President Museveni and the Aga Khan inaugurate a 250-megawatt hydroelectric station on the Nile, Uganda's largest power plant at the time.",
+    "source": "https://en.wikipedia.org/wiki/Bujagali_Hydroelectric_Power_Station"
+  },
+  {
+    "id": "uganda-2015-pope-francis-visits",
+    "title": "Pope Francis visits",
+    "date": "Nov 2015",
+    "year-from": 2015,
+    "place": "Namugongo",
+    "lat": 0.395,
+    "lon": 32.666,
+    "country": "Uganda",
+    "importance": 3,
+    "description": "Pope Francis celebrates Mass in honour of the Uganda Martyrs at Namugongo before an estimated crowd of one to two million people.",
+    "source": "https://en.wikipedia.org/wiki/List_of_pastoral_trips_made_by_Pope_Francis"
+  },
+  {
+    "id": "uganda-2017-age-limit-abolished",
+    "title": "Presidential age limit abolished",
+    "date": "27 Dec 2017",
+    "year-from": 2017,
+    "place": "Kampala",
+    "lat": 0.32,
+    "lon": 32.58,
+    "country": "Uganda",
+    "importance": 2,
+    "description": "Museveni signs a constitutional amendment removing the upper age limit for presidential candidates, clearing the way for him to stand again.",
+    "source": "https://en.wikipedia.org/wiki/Yoweri_Museveni"
   }
 ]

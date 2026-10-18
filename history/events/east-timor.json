@@ -257,5 +257,44 @@
     "importance": 3,
     "description": "Former guerrilla commander Taur Matan Ruak is sworn in as president on the tenth anniversary of independence, and the UN mission closes at the year's end.",
     "source": "https://en.wikipedia.org/wiki/2012_East_Timorese_presidential_election"
+  },
+  {
+    "id": "east-timor-2017-francisco-guterres-elected-president",
+    "title": "Francisco Guterres elected president",
+    "date": "20 Mar 2017",
+    "year-from": 2017,
+    "place": "Dili",
+    "lat": -8.56,
+    "lon": 125.57,
+    "country": "East Timor",
+    "importance": 3,
+    "description": "Francisco Guterres of Fretilin won the presidency outright in the first round, after the incumbent Taur Matan Ruak chose not to stand again.",
+    "source": "https://en.wikipedia.org/wiki/2017_East_Timorese_presidential_election"
+  },
+  {
+    "id": "east-timor-2018-maritime-boundary-treaty-with-australia",
+    "title": "Maritime boundary treaty with Australia",
+    "date": "Mar 2018",
+    "year-from": 2018,
+    "place": "New York, United States",
+    "lat": 40.749,
+    "lon": -73.968,
+    "country": "East Timor",
+    "importance": 2,
+    "description": "East Timor and Australia signed a treaty at the United Nations settling their long-disputed maritime boundary in the Timor Sea and the sharing of the Greater Sunrise gas field.",
+    "source": "https://en.wikipedia.org/wiki/Timor_Gap"
+  },
+  {
+    "id": "east-timor-2018-early-parliamentary-election",
+    "title": "Early parliamentary election",
+    "date": "12 May 2018",
+    "year-from": 2018,
+    "place": "Dili",
+    "lat": -8.56,
+    "lon": 125.57,
+    "country": "East Timor",
+    "importance": 3,
+    "description": "After months of deadlocked government the president dissolved parliament, and the opposition Alliance of Change and Progress won an absolute majority, making Taur Matan Ruak prime minister.",
+    "source": "https://en.wikipedia.org/wiki/2018_East_Timorese_parliamentary_election"
   }
 ]

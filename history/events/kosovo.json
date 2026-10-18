@@ -355,5 +355,44 @@
     "importance": 2,
     "description": "Kosovo and Serbia agree, with the European Union as mediator, on steps to normalise their relations.",
     "source": "https://en.wikipedia.org/wiki/Brussels_Agreement_(2013)"
+  },
+  {
+    "id": "kosovo-2015-war-crimes-court-approved",
+    "title": "War crimes court approved",
+    "date": "3 Aug 2015",
+    "year-from": 2015,
+    "place": "Pristina",
+    "lat": 42.663,
+    "lon": 21.162,
+    "country": "Kosovo",
+    "importance": 3,
+    "description": "Parliament amended the constitution to create a special court seated in The Hague, with international judges, for wartime offences alleged against members of the KLA.",
+    "source": "https://en.wikipedia.org/wiki/Kosovo_Specialist_Chambers"
+  },
+  {
+    "id": "kosovo-2015-stabilisation-and-association-agreement",
+    "title": "Association agreement with the EU",
+    "date": "27 Oct 2015",
+    "year-from": 2015,
+    "place": "Brussels, Belgium",
+    "lat": 50.843,
+    "lon": 4.383,
+    "country": "Kosovo",
+    "importance": 3,
+    "description": "Kosovo signed a Stabilisation and Association Agreement with the European Union, its first comprehensive treaty with the bloc.",
+    "source": "https://en.wikipedia.org/wiki/Potential_accession_of_Kosovo_to_the_European_Union"
+  },
+  {
+    "id": "kosovo-2018-security-force-becomes-army",
+    "title": "Security force becomes an army",
+    "date": "14 Dec 2018",
+    "year-from": 2018,
+    "place": "Pristina",
+    "lat": 42.663,
+    "lon": 21.162,
+    "country": "Kosovo",
+    "importance": 2,
+    "description": "Parliament passed the final laws turning the Kosovo Security Force into an armed force over ten years, a step endorsed by the United States but condemned by Serbia and regretted by NATO.",
+    "source": "https://en.wikipedia.org/wiki/Kosovo_Security_Force"
   }
 ]

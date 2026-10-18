@@ -1,5 +1,19 @@
 [
   {
+    "id": "turkey-1048-battle-of-kapetron",
+    "title": "Battle of Kapetron",
+    "date": "18 Sep 1048",
+    "year-from": 1048,
+    "place": "Kapetron plain (Hasankale/Pasinler)",
+    "lat": 39.98,
+    "lon": 41.68,
+    "country": "Turkey",
+    "polity": "Seljuk Empire",
+    "importance": 3,
+    "description": "A Seljuk raiding army under Ibrahim Inal fought a Byzantine and Georgian army at Kapetron, the first great clash between Turks and Byzantium on the Anatolian frontier.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Kapetron"
+  },
+  {
     "id": "turkey-1077-sultanate-of-rum-founded",
     "title": "Sultanate of Rum founded",
     "date": "1077",
@@ -26,6 +40,20 @@
     "importance": 2,
     "description": "The First Crusade besieges the Seljuk capital, which surrenders to the Byzantines, and the sultans afterwards rule from Konya.",
     "source": "https://en.wikipedia.org/wiki/Siege_of_Nicaea"
+  },
+  {
+    "id": "turkey-1097-battle-of-dorylaeum",
+    "title": "Battle of Dorylaeum",
+    "date": "1 Jul 1097",
+    "year-from": 1097,
+    "place": "Dorylaeum, near Eskişehir",
+    "lat": 39.78,
+    "lon": 30.52,
+    "country": "Turkey",
+    "polity": "Sultanate of Rum",
+    "importance": 2,
+    "description": "The army of the First Crusade defeated the Seljuks of Rum at Dorylaeum, opening the crusader march across Anatolia; the sultanate later recentered its capital at Iconium (Konya).",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Dorylaeum_(1097)"
   },
   {
     "id": "turkey-1176-battle-of-myriokephalon",
@@ -420,6 +448,20 @@
     "source": "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1913)"
   },
   {
+    "id": "turkey-1913-ottomans-retake-edirne",
+    "title": "Ottomans retake Edirne",
+    "date": "Jul 1913",
+    "year-from": 1913,
+    "place": "Edirne (Adrianople)",
+    "lat": 41.68,
+    "lon": 26.56,
+    "country": "Turkey",
+    "polity": "Ottoman Empire",
+    "importance": 2,
+    "description": "While Bulgaria was losing the Second Balkan War, Ottoman troops recovered Edirne without a battle after its Bulgarian garrison withdrew.",
+    "source": "https://en.wikipedia.org/wiki/Second_Balkan_War"
+  },
+  {
     "id": "turkey-1914-black-sea-raid",
     "title": "Black Sea raid",
     "date": "29 Oct 1914",
@@ -740,6 +782,20 @@
     "source": "https://en.wikipedia.org/wiki/Turkish_invasion_of_Cyprus"
   },
   {
+    "id": "turkey-1978-pkk-founded",
+    "title": "Kurdistan Workers' Party (PKK) founded",
+    "date": "27 Nov 1978",
+    "year-from": 1978,
+    "place": "Fis (Ziyaret), Lice near Diyarbakır",
+    "lat": 38.44,
+    "lon": 40.65,
+    "country": "Turkey",
+    "polity": "Turkey",
+    "importance": 2,
+    "description": "Kurdish students led by Abdullah Öcalan founded the Kurdistan Workers' Party at a village congress, committed to an independent Kurdish state.",
+    "source": "https://en.wikipedia.org/wiki/Kurdistan_Workers%27_Party"
+  },
+  {
     "id": "turkey-1980-military-coup-of-1980",
     "title": "Military coup of 1980",
     "date": "12 Sep 1980",
@@ -808,5 +864,47 @@
     "importance": 3,
     "description": "A faction of the armed forces tries to seize power and fails within a day.",
     "source": "https://en.wikipedia.org/wiki/2016_Turkish_coup_attempt"
+  },
+  {
+    "id": "turkey-2017-constitutional-referendum",
+    "title": "Constitutional referendum",
+    "date": "16 Apr 2017",
+    "year-from": 2017,
+    "place": "Ankara",
+    "lat": 39.93,
+    "lon": 32.86,
+    "country": "Turkey",
+    "polity": "Turkey",
+    "importance": 2,
+    "description": "Voters narrowly approve constitutional changes that abolish the office of prime minister and create an executive presidency.",
+    "source": "https://en.wikipedia.org/wiki/2017_Turkish_constitutional_referendum"
+  },
+  {
+    "id": "turkey-2018-executive-presidency-takes-effect",
+    "title": "Executive presidency takes effect",
+    "date": "24 Jun 2018",
+    "year-from": 2018,
+    "place": "Ankara",
+    "lat": 39.93,
+    "lon": 32.86,
+    "country": "Turkey",
+    "polity": "Turkey",
+    "importance": 2,
+    "description": "Erdoğan is re-elected in the first round of the presidential election and the new presidential system approved in 2017 comes into force.",
+    "source": "https://en.wikipedia.org/wiki/2018_Turkish_general_election"
+  },
+  {
+    "id": "turkey-2019-istanbul-mayoral-election-rerun",
+    "title": "Istanbul mayoral election rerun",
+    "date": "23 Jun 2019",
+    "year-from": 2019,
+    "place": "Istanbul",
+    "lat": 41.01,
+    "lon": 28.98,
+    "country": "Turkey",
+    "polity": "Turkey",
+    "importance": 3,
+    "description": "After the electoral council annuls the opposition's narrow victory in March, Ekrem İmamoğlu wins the rerun for mayor of Istanbul by a wide margin.",
+    "source": "https://en.wikipedia.org/wiki/June_2019_Istanbul_mayoral_election"
   }
 ]

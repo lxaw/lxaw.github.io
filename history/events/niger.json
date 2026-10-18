@@ -267,5 +267,44 @@
     "importance": 3,
     "description": "Mahamadou Issoufou becomes president after elections the junta kept its word on, a rare clean handover.",
     "source": "https://en.wikipedia.org/wiki/Mahamadou_Issoufou"
+  },
+  {
+    "id": "niger-2013-agadez-arlit-attacks",
+    "title": "Agadez and Arlit attacks",
+    "date": "23 May 2013",
+    "year-from": 2013,
+    "place": "Agadez",
+    "lat": 16.967,
+    "lon": 7.983,
+    "country": "Niger",
+    "importance": 3,
+    "description": "Suicide bombers strike an army barracks in Agadez and the French-run uranium mine at Arlit, killing 36 people in Niger's first such attacks, claimed as revenge for its role in the Mali war.",
+    "source": "https://en.wikipedia.org/wiki/Agadez_and_Arlit_attacks"
+  },
+  {
+    "id": "niger-2017-tongo-tongo-ambush",
+    "title": "Tongo Tongo ambush",
+    "date": "4 Oct 2017",
+    "year-from": 2017,
+    "place": "Tongo Tongo, Tillabéri",
+    "lat": 15.053,
+    "lon": 1.836,
+    "country": "Niger",
+    "importance": 3,
+    "description": "Islamic State fighters ambush a joint Nigerien and American patrol near the Malian border, killing four Nigerien and four American soldiers.",
+    "source": "https://en.wikipedia.org/wiki/Tongo_Tongo_ambush"
+  },
+  {
+    "id": "niger-2019-inates-attack",
+    "title": "Inatès attack",
+    "date": "10 Dec 2019",
+    "year-from": 2019,
+    "place": "Inatès, Tillabéri",
+    "lat": 15.23,
+    "lon": 1.32,
+    "country": "Niger",
+    "importance": 3,
+    "description": "Islamic State fighters storm an army post at Inatès and kill more than seventy soldiers, one of the deadliest attacks in Niger's history.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Inates"
   }
 ]

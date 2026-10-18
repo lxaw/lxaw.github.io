@@ -466,5 +466,57 @@
     "importance": 3,
     "description": "President Lech Kaczyński and 95 others die when their aircraft crashes on the way to a Katyn commemoration.",
     "source": "https://en.wikipedia.org/wiki/Smolensk_air_disaster"
+  },
+  {
+    "id": "poland-2014-tusk-european-council",
+    "title": "Tusk heads the European Council",
+    "date": "1 Dec 2014",
+    "year-from": 2014,
+    "place": "Brussels, Belgium",
+    "lat": 50.85,
+    "lon": 4.35,
+    "country": "Poland",
+    "importance": 3,
+    "description": "Donald Tusk steps down as prime minister to become President of the European Council, giving Poland its first top European Union leadership post.",
+    "source": "https://en.wikipedia.org/wiki/Donald_Tusk"
+  },
+  {
+    "id": "poland-2015-law-and-justice-majority",
+    "title": "Law and Justice wins outright",
+    "date": "25 Oct 2015",
+    "year-from": 2015,
+    "place": "Warsaw",
+    "lat": 52.23,
+    "lon": 21.011,
+    "country": "Poland",
+    "importance": 2,
+    "description": "Law and Justice wins a majority of seats, the first time since 1989 that a single party can govern Poland alone.",
+    "source": "https://en.wikipedia.org/wiki/2015_Polish_parliamentary_election"
+  },
+  {
+    "id": "poland-2016-world-youth-day",
+    "title": "World Youth Day in Kraków",
+    "date": "26 Jul 2016",
+    "year-from": 2016,
+    "place": "Kraków",
+    "lat": 50.031,
+    "lon": 20.093,
+    "country": "Poland",
+    "importance": 3,
+    "description": "An estimated three million young pilgrims join Pope Francis in Kraków for the Catholic Church's World Youth Day.",
+    "source": "https://en.wikipedia.org/wiki/World_Youth_Day_2016"
+  },
+  {
+    "id": "poland-2017-article-7-triggered",
+    "title": "EU triggers Article 7",
+    "date": "20 Dec 2017",
+    "year-from": 2017,
+    "place": "Warsaw",
+    "lat": 52.23,
+    "lon": 21.011,
+    "country": "Poland",
+    "importance": 3,
+    "description": "Citing a clear risk of a serious breach of the rule of law, the European Commission opens Article 7 proceedings against Poland over changes to its judiciary, the first time the procedure is used.",
+    "source": "https://en.wikipedia.org/wiki/Article_7_of_the_Treaty_on_European_Union"
   }
 ]

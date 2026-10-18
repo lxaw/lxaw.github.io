@@ -365,5 +365,57 @@
     "importance": 2,
     "description": "Latvia enters the European Union, a month after joining NATO.",
     "source": "https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "latvia-2007-latvia-joins-the-schengen-area",
+    "title": "Latvia joins the Schengen Area",
+    "date": "21 Dec 2007",
+    "year-from": 2007,
+    "place": "Riga",
+    "lat": 56.949,
+    "lon": 24.105,
+    "country": "Latvia",
+    "importance": 3,
+    "description": "Land and sea border checks ended as Latvia joined the Schengen Area with eight other new EU states.",
+    "source": "https://en.wikipedia.org/wiki/2008_enlargement_of_the_Schengen_Area"
+  },
+  {
+    "id": "latvia-2008-parex-bank-nationalised",
+    "title": "Parex Bank nationalised",
+    "date": "Nov 2008",
+    "year-from": 2008,
+    "place": "Riga",
+    "lat": 56.949,
+    "lon": 24.105,
+    "country": "Latvia",
+    "importance": 2,
+    "description": "The state took over Parex, the country's second-largest bank, and sought billions of euros in bailout loans from the IMF, the European Union and the World Bank as the financial crisis deepened.",
+    "source": "https://en.wikipedia.org/wiki/Parex_Banka"
+  },
+  {
+    "id": "latvia-2014-latvia-adopts-the-euro",
+    "title": "Latvia adopts the euro",
+    "date": "1 Jan 2014",
+    "year-from": 2014,
+    "place": "Riga",
+    "lat": 56.949,
+    "lon": 24.105,
+    "country": "Latvia",
+    "importance": 2,
+    "description": "The euro replaced the lats as Latvia's currency.",
+    "source": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Latvia"
+  },
+  {
+    "id": "latvia-2018-ablv-bank-collapses",
+    "title": "ABLV Bank collapses",
+    "date": "Feb 2018",
+    "year-from": 2018,
+    "place": "Riga",
+    "lat": 56.949,
+    "lon": 24.105,
+    "country": "Latvia",
+    "importance": 3,
+    "description": "After money-laundering accusations from the United States Treasury, ABLV, one of Latvia's largest banks, voted to wind itself up.",
+    "source": "https://en.wikipedia.org/wiki/ABLV_Bank"
   }
 ]

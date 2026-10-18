@@ -392,5 +392,44 @@
     "importance": 2,
     "description": "In return for an international loan, the second largest bank is closed and large depositors lose part of their money.",
     "source": "https://en.wikipedia.org/wiki/2012–2013_Cypriot_financial_crisis"
+  },
+  {
+    "id": "cyprus-2015-reunification-talks-resume",
+    "title": "Reunification talks resume",
+    "date": "12 May 2015",
+    "year-from": 2015,
+    "place": "Nicosia",
+    "lat": 35.172,
+    "lon": 33.365,
+    "country": "Cyprus",
+    "importance": 3,
+    "description": "After the election of the pro-settlement Mustafa Akıncı as the Turkish Cypriot leader, he and President Anastasiades met for the first time and restarted peace talks.",
+    "source": "https://en.wikipedia.org/wiki/2015–2017_Cyprus_talks"
+  },
+  {
+    "id": "cyprus-2017-crans-montana-talks-collapse",
+    "title": "Crans-Montana talks collapse",
+    "date": "7 Jul 2017",
+    "year-from": 2017,
+    "place": "Crans-Montana, Switzerland",
+    "lat": 46.31,
+    "lon": 7.48,
+    "country": "Cyprus",
+    "importance": 2,
+    "description": "Ten days of United Nations-sponsored talks in the Swiss Alps, the most advanced attempt at reunification in years, broke down without a deal.",
+    "source": "https://en.wikipedia.org/wiki/2015–2017_Cyprus_talks"
+  },
+  {
+    "id": "cyprus-2018-turkish-navy-blocks-drillship",
+    "title": "Turkish Navy blocks drillship",
+    "date": "Feb 2018",
+    "year-from": 2018,
+    "place": "Cypriot exclusive economic zone",
+    "lat": 34.3,
+    "lon": 33.7,
+    "country": "Cyprus",
+    "importance": 3,
+    "description": "Turkey rejected the Cypriot-Egyptian maritime boundary and its warships blocked a drillship working for Eni from exploring for gas in Cypriot waters.",
+    "source": "https://en.wikipedia.org/wiki/2018_Cyprus_gas_dispute"
   }
 ]

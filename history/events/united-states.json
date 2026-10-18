@@ -684,5 +684,44 @@
     "importance": 3,
     "description": "Barack Obama becomes the first African American elected president.",
     "source": "https://en.wikipedia.org/wiki/2008_United_States_presidential_election"
+  },
+  {
+    "id": "united-states-2010-affordable-care-act",
+    "title": "Affordable Care Act",
+    "date": "23 Mar 2010",
+    "year-from": 2010,
+    "place": "Washington, D.C.",
+    "lat": 38.9,
+    "lon": -77.04,
+    "country": "United States",
+    "importance": 2,
+    "description": "President Obama signed the Affordable Care Act, the biggest overhaul of health insurance since Medicare and Medicaid were created.",
+    "source": "https://en.wikipedia.org/wiki/Affordable_Care_Act"
+  },
+  {
+    "id": "united-states-2015-obergefell-v-hodges",
+    "title": "Obergefell v. Hodges",
+    "date": "26 Jun 2015",
+    "year-from": 2015,
+    "place": "Washington, D.C.",
+    "lat": 38.9,
+    "lon": -77.04,
+    "country": "United States",
+    "importance": 2,
+    "description": "The Supreme Court ruled 5–4 that the Constitution guarantees same-sex couples the right to marry in all fifty states.",
+    "source": "https://en.wikipedia.org/wiki/Obergefell_v._Hodges"
+  },
+  {
+    "id": "united-states-2016-trump-elected-president",
+    "title": "Trump elected president",
+    "date": "8 Nov 2016",
+    "year-from": 2016,
+    "place": "New York City",
+    "lat": 40.71,
+    "lon": -74.01,
+    "country": "United States",
+    "importance": 3,
+    "description": "Donald Trump was elected president, the first with no previous government or military office, while losing the popular vote.",
+    "source": "https://en.wikipedia.org/wiki/2016_United_States_presidential_election"
   }
 ]

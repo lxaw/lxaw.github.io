@@ -459,5 +459,44 @@
     "importance": 3,
     "description": "The United States and Vietnam establish diplomatic relations twenty years after the war, in the year Vietnam joins ASEAN.",
     "source": "https://en.wikipedia.org/wiki/United_States–Vietnam_relations"
+  },
+  {
+    "id": "vietnam-2007-vietnam-joins-the-wto",
+    "title": "Vietnam joins the WTO",
+    "date": "11 Jan 2007",
+    "year-from": 2007,
+    "place": "Hanoi",
+    "lat": 21.035,
+    "lon": 105.84,
+    "country": "Vietnam",
+    "importance": 3,
+    "description": "Vietnam became the 150th member of the World Trade Organization after twelve years of negotiation.",
+    "source": "https://en.wikipedia.org/wiki/2007_in_Vietnam"
+  },
+  {
+    "id": "vietnam-2014-oil-rig-standoff-with-china",
+    "title": "Oil rig standoff with China",
+    "date": "May 2014",
+    "year-from": 2014,
+    "place": "Paracel Islands, South China Sea",
+    "lat": 15.5,
+    "lon": 111.2,
+    "country": "Vietnam",
+    "importance": 3,
+    "description": "China moved an oil rig into waters claimed by Vietnam, setting off months of clashes at sea and riots against foreign-owned factories.",
+    "source": "https://en.wikipedia.org/wiki/Hai_Yang_Shi_You_981_standoff"
+  },
+  {
+    "id": "vietnam-2019-trump-kim-hanoi-summit",
+    "title": "Trump–Kim Hanoi summit",
+    "date": "27–28 Feb 2019",
+    "year-from": 2019,
+    "place": "Hanoi",
+    "lat": 21.035,
+    "lon": 105.84,
+    "country": "Vietnam",
+    "importance": 3,
+    "description": "Hanoi hosted the second summit between Donald Trump and Kim Jong Un, which was cut short without an agreement.",
+    "source": "https://en.wikipedia.org/wiki/2019_North_Korea–United_States_Hanoi_Summit"
   }
 ]

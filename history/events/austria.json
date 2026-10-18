@@ -334,5 +334,57 @@
     "importance": 2,
     "description": "Austria becomes a member together with Finland and Sweden.",
     "source": "https://en.wikipedia.org/wiki/1995_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "austria-2000-schussel-coalition-with-the-fpo",
+    "title": "Schüssel coalition with the FPÖ",
+    "date": "4 Feb 2000",
+    "year-from": 2000,
+    "place": "Vienna",
+    "lat": 48.21,
+    "lon": 16.37,
+    "country": "Austria",
+    "importance": 3,
+    "description": "Wolfgang Schüssel became chancellor of a coalition with Jörg Haider's Freedom Party, and the fourteen other EU states imposed diplomatic sanctions.",
+    "source": "https://en.wikipedia.org/wiki/Wolfgang_Sch%C3%BCssel"
+  },
+  {
+    "id": "austria-2016-presidential-election-repeated",
+    "title": "Presidential election repeated",
+    "date": "4 Dec 2016",
+    "year-from": 2016,
+    "place": "Vienna",
+    "lat": 48.21,
+    "lon": 16.37,
+    "country": "Austria",
+    "importance": 3,
+    "description": "Alexander Van der Bellen won the presidency in a re-run after the Constitutional Court annulled the earlier run-off over counting irregularities.",
+    "source": "https://en.wikipedia.org/wiki/2016_Austrian_presidential_election"
+  },
+  {
+    "id": "austria-2017-kurz-becomes-chancellor",
+    "title": "Kurz becomes chancellor",
+    "date": "18 Dec 2017",
+    "year-from": 2017,
+    "place": "Vienna",
+    "lat": 48.21,
+    "lon": 16.37,
+    "country": "Austria",
+    "importance": 3,
+    "description": "Sebastian Kurz, aged thirty-one, took office at the head of a coalition with the Freedom Party, then the youngest head of government in Europe.",
+    "source": "https://en.wikipedia.org/wiki/First_Kurz_government"
+  },
+  {
+    "id": "austria-2019-ibiza-affair",
+    "title": "Ibiza affair",
+    "date": "17 May 2019",
+    "year-from": 2019,
+    "place": "Vienna",
+    "lat": 48.21,
+    "lon": 16.37,
+    "country": "Austria",
+    "importance": 3,
+    "description": "A secretly filmed video of Vice-Chancellor Heinz-Christian Strache collapsed the coalition, and the chancellor lost a no-confidence vote.",
+    "source": "https://en.wikipedia.org/wiki/Ibiza_affair"
   }
 ]

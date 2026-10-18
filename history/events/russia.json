@@ -42,6 +42,34 @@
     "source": "https://en.wikipedia.org/wiki/Christianization_of_Kievan_Rus%27"
   },
   {
+    "id": "russia-1097-congress-of-lyubech",
+    "title": "Congress of Lyubech",
+    "date": "19 Oct 1097",
+    "year-from": 1097,
+    "place": "Lyubech, Ukraine",
+    "lat": 51.71,
+    "lon": 30.66,
+    "country": "Russia",
+    "polity": "Kievan Rus'",
+    "importance": 3,
+    "description": "The Rus' princes agree that each shall keep his own patrimony, a formal step toward the division of Kievan Rus' into separate principalities.",
+    "source": "https://en.wikipedia.org/wiki/Council_of_Liubech"
+  },
+  {
+    "id": "russia-1132-death-of-mstislav-the-great",
+    "title": "Death of Mstislav the Great",
+    "date": "1132",
+    "year-from": 1132,
+    "place": "Kyiv",
+    "lat": 50.45,
+    "lon": 30.52,
+    "country": "Russia",
+    "polity": "Kievan Rus'",
+    "importance": 3,
+    "description": "The last ruler of a united Kievan Rus' dies in Kyiv and, in the chronicler's words, the land of Rus' is torn apart into rival principalities.",
+    "source": "https://en.wikipedia.org/wiki/Mstislav_I_of_Kiev"
+  },
+  {
     "id": "russia-1136-novgorod-deposes-its-prince",
     "title": "Novgorod deposes its prince",
     "date": "1136",
@@ -433,6 +461,20 @@
     "source": "https://en.wikipedia.org/wiki/Decembrist_revolt"
   },
   {
+    "id": "russia-1834-shamil-becomes-imam",
+    "title": "Shamil becomes imam",
+    "date": "1834",
+    "year-from": 1834,
+    "place": "Gimry, Dagestan",
+    "lat": 42.76,
+    "lon": 46.84,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 3,
+    "description": "After the death of Hamzat Bek, the Avar Shamil becomes the third imam of the Caucasian Imamate and goes on to lead the mountain resistance to Russia for twenty-five years.",
+    "source": "https://en.wikipedia.org/wiki/Imam_Shamil"
+  },
+  {
     "id": "russia-1839-siege-of-akhulgo",
     "title": "Siege of Akhulgo",
     "date": "Jun to Aug 1839",
@@ -445,6 +487,20 @@
     "importance": 3,
     "description": "After 80 days Russian troops take Imam Shamil's rock fortress and kill most of its defenders, but Shamil escapes to fight on for twenty years.",
     "source": "https://en.wikipedia.org/wiki/Siege_of_Akhoulgo"
+  },
+  {
+    "id": "russia-1853-russians-take-ak-mechet",
+    "title": "Russians take Ak-Mechet",
+    "date": "28 Jul 1853",
+    "year-from": 1853,
+    "place": "Ak-Mechet (modern Kyzylorda), Kazakhstan",
+    "lat": 44.85,
+    "lon": 65.52,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 3,
+    "description": "Troops under Vasily Perovsky storm the Kokand fortress of Ak-Mechet on the Syr Darya, the first fort taken in Russia's conquest of Central Asia.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Ak-Mechet"
   },
   {
     "id": "russia-1855-fall-of-sevastopol",
@@ -501,6 +557,34 @@
     "importance": 2,
     "description": "The last Circassian fighters are defeated, ending the Russo-Circassian War; most surviving Circassians are killed or driven to the Ottoman Empire.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Qbaada"
+  },
+  {
+    "id": "russia-1864-russians-take-turkestan-and-shymkent",
+    "title": "Russians take Turkestan and Shymkent",
+    "date": "1864",
+    "year-from": 1864,
+    "place": "Turkestan and Shymkent, Kazakhstan (shown at Shymkent)",
+    "lat": 42.32,
+    "lon": 69.6,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 3,
+    "description": "Russian columns take Hazrat-i-Turkestan in June and Shymkent later in the year from the Khanate of Kokand, joining Russia's two steppe fronts.",
+    "source": "https://en.wikipedia.org/wiki/Russian_conquest_of_Central_Asia"
+  },
+  {
+    "id": "russia-1867-turkestan-governorate-general-created",
+    "title": "Turkestan Governorate-General created",
+    "date": "Jul 1867",
+    "year-from": 1867,
+    "place": "Tashkent, Uzbekistan",
+    "lat": 41.3,
+    "lon": 69.24,
+    "country": "Russia",
+    "polity": "Russian Empire",
+    "importance": 2,
+    "description": "Alexander II organises the conquered lands of Central Asia into the Turkestan Governorate-General under Konstantin von Kaufman, with its capital at Tashkent.",
+    "source": "https://en.wikipedia.org/wiki/Russian_Turkestan"
   },
   {
     "id": "russia-1881-assassination-of-alexander-ii",
@@ -561,7 +645,7 @@
   {
     "id": "russia-1917-nicholas-ii-abdicates",
     "title": "Nicholas II abdicates",
-    "date": "15 Mar 1917 (2 Mar Old Style)",
+    "date": "Mar 1917 (2nd Old Style, 15th New Style)",
     "year-from": 1917,
     "place": "Pskov",
     "lat": 57.82,
@@ -868,6 +952,19 @@
     "source": "https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt"
   },
   {
+    "id": "russia-1991-dudayev-declares-chechnya-independent",
+    "title": "Dudayev declares Chechnya independent",
+    "date": "Nov 1991",
+    "year-from": 1991,
+    "place": "Grozny",
+    "lat": 43.32,
+    "lon": 45.69,
+    "country": "Russia",
+    "importance": 3,
+    "description": "Dzhokhar Dudayev, elected president in October, unilaterally declares the independence of the Chechen Republic of Ichkeria, which Moscow refuses to recognise.",
+    "source": "https://en.wikipedia.org/wiki/Dzhokhar_Dudayev"
+  },
+  {
     "id": "russia-1994-first-chechen-war-begins",
     "title": "First Chechen War begins",
     "date": "11 Dec 1994",
@@ -946,6 +1043,19 @@
     "source": "https://en.wikipedia.org/wiki/Boris_Yeltsin"
   },
   {
+    "id": "russia-2000-russian-forces-retake-grozny",
+    "title": "Russian forces retake Grozny",
+    "date": "2 Feb 2000",
+    "year-from": 2000,
+    "place": "Grozny",
+    "lat": 43.32,
+    "lon": 45.69,
+    "country": "Russia",
+    "importance": 3,
+    "description": "The Russian army finally seizes Grozny after a winter siege, and the separatists abandon the ruined capital.",
+    "source": "https://en.wikipedia.org/wiki/Second_Chechen_War"
+  },
+  {
     "id": "russia-2002-moscow-theater-hostage-crisis",
     "title": "Moscow theater hostage crisis",
     "date": "23 to 26 Oct 2002",
@@ -983,5 +1093,44 @@
     "importance": 2,
     "description": "Russia annexes Crimea from Ukraine after occupying it, an act most states do not recognise.",
     "source": "https://en.wikipedia.org/wiki/Annexation_of_Crimea_by_the_Russian_Federation"
+  },
+  {
+    "id": "russia-2015-nemtsov-assassinated",
+    "title": "Nemtsov assassinated",
+    "date": "27 Feb 2015",
+    "year-from": 2015,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "importance": 3,
+    "description": "The opposition politician Boris Nemtsov is shot dead on a bridge beside the Kremlin, hours before a protest march he was to lead.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Boris_Nemtsov"
+  },
+  {
+    "id": "russia-2018-crimean-bridge-opens",
+    "title": "Crimean Bridge opens",
+    "date": "15 May 2018",
+    "year-from": 2018,
+    "place": "Kerch Strait",
+    "lat": 45.31,
+    "lon": 36.51,
+    "country": "Russia",
+    "importance": 3,
+    "description": "President Putin opens a 19-kilometre road bridge across the Kerch Strait, the longest bridge in Europe, giving Russia a direct road link to the annexed peninsula.",
+    "source": "https://en.wikipedia.org/wiki/Crimean_Bridge"
+  },
+  {
+    "id": "russia-2018-russia-hosts-the-world-cup",
+    "title": "Russia hosts the World Cup",
+    "date": "14 Jun 2018",
+    "year-from": 2018,
+    "place": "Moscow",
+    "lat": 55.75,
+    "lon": 37.62,
+    "country": "Russia",
+    "importance": 3,
+    "description": "Russia hosts the football World Cup for the first time; France win the final in Moscow.",
+    "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup"
   }
 ]

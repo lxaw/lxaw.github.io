@@ -370,5 +370,44 @@
     "importance": 3,
     "description": "Protests by laid-off factory workers in Tuzla spread to other cities, where government buildings are set on fire.",
     "source": "https://en.wikipedia.org/wiki/2014_unrest_in_Bosnia_and_Herzegovina"
+  },
+  {
+    "id": "bosnia-and-herzegovina-2016-applies-for-eu-membership",
+    "title": "Applies for EU membership",
+    "date": "15 Feb 2016",
+    "year-from": 2016,
+    "place": "Sarajevo",
+    "lat": 43.86,
+    "lon": 18.41,
+    "country": "Bosnia and Herzegovina",
+    "importance": 3,
+    "description": "Bosnia and Herzegovina formally applies for membership of the European Union.",
+    "source": "https://en.wikipedia.org/wiki/Potential_accession_of_Bosnia_and_Herzegovina_to_the_European_Union"
+  },
+  {
+    "id": "bosnia-and-herzegovina-2017-mladic-convicted",
+    "title": "Mladić convicted",
+    "date": "2017",
+    "year-from": 2017,
+    "place": "The Hague, Netherlands",
+    "lat": 52.07,
+    "lon": 4.3,
+    "country": "Bosnia and Herzegovina",
+    "importance": 2,
+    "description": "The UN tribunal for the former Yugoslavia sentences Ratko Mladić, wartime commander of the Bosnian Serb army, to life imprisonment for genocide and other crimes.",
+    "source": "https://en.wikipedia.org/wiki/Ratko_Mladić"
+  },
+  {
+    "id": "bosnia-and-herzegovina-2019-karadzic-sentence-raised-to-life",
+    "title": "Karadžić sentence raised to life",
+    "date": "20 Mar 2019",
+    "year-from": 2019,
+    "place": "The Hague, Netherlands",
+    "lat": 52.07,
+    "lon": 4.3,
+    "country": "Bosnia and Herzegovina",
+    "importance": 3,
+    "description": "On appeal the UN court rejects Radovan Karadžić's challenge and increases his sentence from forty years to life imprisonment.",
+    "source": "https://en.wikipedia.org/wiki/Radovan_Karadžić"
   }
 ]

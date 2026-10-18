@@ -426,5 +426,44 @@
     "importance": 1,
     "description": "Croatia becomes the 28th member of the European Union, four years after joining NATO.",
     "source": "https://en.wikipedia.org/wiki/2013_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "croatia-2015-grabar-kitarovic-first-female-president",
+    "title": "Grabar-Kitarović first woman president",
+    "date": "11 Jan 2015",
+    "year-from": 2015,
+    "place": "Zagreb",
+    "lat": 45.813,
+    "lon": 15.977,
+    "country": "Croatia",
+    "importance": 2,
+    "description": "Kolinda Grabar-Kitarović of the HDZ narrowly defeated the incumbent Ivo Josipović in a run-off, becoming Croatia's first female president.",
+    "source": "https://en.wikipedia.org/wiki/2014–15_Croatian_presidential_election"
+  },
+  {
+    "id": "croatia-2017-agrokor-taken-over",
+    "title": "Agrokor taken over",
+    "date": "Apr 2017",
+    "year-from": 2017,
+    "place": "Zagreb",
+    "lat": 45.813,
+    "lon": 15.977,
+    "country": "Croatia",
+    "importance": 3,
+    "description": "The government rushed through an emergency law, dubbed Lex Agrokor, and took control of Agrokor, the country's largest company, to keep it out of bankruptcy.",
+    "source": "https://en.wikipedia.org/wiki/Agrokor"
+  },
+  {
+    "id": "croatia-2018-world-cup-final",
+    "title": "World Cup final",
+    "date": "15 Jul 2018",
+    "year-from": 2018,
+    "place": "Luzhniki Stadium, Moscow, Russia",
+    "lat": 55.716,
+    "lon": 37.554,
+    "country": "Croatia",
+    "importance": 3,
+    "description": "Croatia played the country's first World Cup final, losing 4–2 to France in Moscow.",
+    "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_final"
   }
 ]

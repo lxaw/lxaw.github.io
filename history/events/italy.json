@@ -534,5 +534,57 @@
     "importance": 3,
     "description": "The Mafia kills the anti-Mafia judge Giovanni Falcone, his wife and three police officers.",
     "source": "https://en.wikipedia.org/wiki/Capaci_bombing"
+  },
+  {
+    "id": "italy-1994-berlusconi-wins",
+    "title": "Berlusconi wins",
+    "date": "27–28 Mar 1994",
+    "year-from": 1994,
+    "place": "Rome",
+    "lat": 41.89,
+    "lon": 12.49,
+    "country": "Italy",
+    "importance": 3,
+    "description": "A coalition centred on Silvio Berlusconi's three-month-old Forza Italia won the election as the old governing parties collapsed.",
+    "source": "https://en.wikipedia.org/wiki/1994_Italian_general_election"
+  },
+  {
+    "id": "italy-2009-laquila-earthquake",
+    "title": "L'Aquila earthquake",
+    "date": "6 Apr 2009",
+    "year-from": 2009,
+    "place": "L'Aquila",
+    "lat": 42.35,
+    "lon": 13.4,
+    "country": "Italy",
+    "importance": 3,
+    "description": "An earthquake in Abruzzo killed 308 people and left about 66,000 homeless.",
+    "source": "https://en.wikipedia.org/wiki/2009_L%27Aquila_earthquake"
+  },
+  {
+    "id": "italy-2016-constitutional-referendum-rejected",
+    "title": "Constitutional referendum rejected",
+    "date": "4 Dec 2016",
+    "year-from": 2016,
+    "place": "Rome",
+    "lat": 41.89,
+    "lon": 12.49,
+    "country": "Italy",
+    "importance": 3,
+    "description": "Voters rejected an overhaul of the constitution by 59 to 41 per cent, and Prime Minister Matteo Renzi resigned.",
+    "source": "https://en.wikipedia.org/wiki/2016_Italian_constitutional_referendum"
+  },
+  {
+    "id": "italy-2018-populist-coalition-takes-office",
+    "title": "Populist coalition takes office",
+    "date": "1 Jun 2018",
+    "year-from": 2018,
+    "place": "Rome",
+    "lat": 41.89,
+    "lon": 12.49,
+    "country": "Italy",
+    "importance": 3,
+    "description": "The Five Star Movement and the League formed a coalition under Giuseppe Conte after three months of deadlock.",
+    "source": "https://en.wikipedia.org/wiki/2018_Italian_government_formation"
   }
 ]

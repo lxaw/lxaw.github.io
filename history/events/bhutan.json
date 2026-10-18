@@ -285,5 +285,44 @@
     "importance": 2,
     "description": "A written constitution comes into force, confirming Bhutan as a democratic constitutional monarchy with a two-house parliament.",
     "source": "https://en.wikipedia.org/wiki/Constitution_of_Bhutan"
+  },
+  {
+    "id": "bhutan-2011-royal-wedding",
+    "title": "Royal wedding",
+    "date": "13 Oct 2011",
+    "year-from": 2011,
+    "place": "Punakha",
+    "lat": 27.59,
+    "lon": 89.87,
+    "country": "Bhutan",
+    "importance": 3,
+    "description": "King Jigme Khesar Namgyel Wangchuck married Jetsun Pema at Punakha Dzong.",
+    "source": "https://en.wikipedia.org/wiki/Wedding_of_Jigme_Khesar_Namgyel_Wangchuck_and_Jetsun_Pema"
+  },
+  {
+    "id": "bhutan-2013-peoples-democratic-party-wins-election",
+    "title": "People's Democratic Party wins election",
+    "date": "13 Jul 2013",
+    "year-from": 2013,
+    "place": "Thimphu",
+    "lat": 27.472,
+    "lon": 89.639,
+    "country": "Bhutan",
+    "importance": 2,
+    "description": "The opposition People's Democratic Party won the second parliamentary election and formed the government for the first time.",
+    "source": "https://en.wikipedia.org/wiki/2013_Bhutanese_National_Assembly_election"
+  },
+  {
+    "id": "bhutan-2017-doklam-standoff",
+    "title": "Doklam standoff",
+    "date": "Aug 2017",
+    "year-from": 2017,
+    "place": "Doklam",
+    "lat": 27.29,
+    "lon": 88.91,
+    "country": "Bhutan",
+    "importance": 3,
+    "description": "India and China ended a months-long military standoff on the Doklam plateau, territory disputed between Bhutan and China.",
+    "source": "https://en.wikipedia.org/wiki/2017_China–India_border_standoff"
   }
 ]

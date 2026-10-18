@@ -121,6 +121,19 @@
     "source": "https://en.wikipedia.org/wiki/Frederick_Barbarossa"
   },
   {
+    "id": "germany-1159-henry-the-lion-refounds-lubeck",
+    "title": "Henry the Lion refounds Lübeck",
+    "date": "1159",
+    "year-from": 1159,
+    "place": "Lübeck",
+    "lat": 53.87,
+    "lon": 10.69,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Duke Henry the Lion rebuilds Lübeck after a fire, and the city becomes the head of the Hanseatic trading world.",
+    "source": "https://en.wikipedia.org/wiki/L%C3%BCbeck"
+  },
+  {
     "id": "germany-1190-death-of-barbarossa",
     "title": "Death of Barbarossa",
     "date": "10 Jun 1190",
@@ -147,6 +160,32 @@
     "importance": 3,
     "description": "Pope Honorius III crowns the Staufer Frederick II, king of Sicily, whose long conflict with the papacy ends with the dynasty's fall.",
     "source": "https://en.wikipedia.org/wiki/Frederick_II,_Holy_Roman_Emperor"
+  },
+  {
+    "id": "germany-1241-lubeck-hamburg-alliance",
+    "title": "Lübeck–Hamburg alliance",
+    "date": "1241",
+    "year-from": 1241,
+    "place": "Lübeck",
+    "lat": 53.87,
+    "lon": 10.69,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Lübeck and Hamburg form an alliance, a first step towards the Hanseatic League of trading cities.",
+    "source": "https://en.wikipedia.org/wiki/Hanseatic_League"
+  },
+  {
+    "id": "germany-1268-execution-of-conradin",
+    "title": "Execution of Conradin",
+    "date": "29 Oct 1268",
+    "year-from": 1268,
+    "place": "Naples, Italy",
+    "lat": 40.83,
+    "lon": 14.25,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Conradin, the last Hohenstaufen heir, is beheaded in Naples after his defeat by Charles of Anjou.",
+    "source": "https://en.wikipedia.org/wiki/Conradin"
   },
   {
     "id": "germany-1356-golden-bull",
@@ -410,6 +449,19 @@
     "source": "https://en.wikipedia.org/wiki/Bavarian_Ludwig_Railway"
   },
   {
+    "id": "germany-1847-siemens-and-halske-founded",
+    "title": "Siemens & Halske founded",
+    "date": "1 Oct 1847",
+    "year-from": 1847,
+    "place": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Werner von Siemens and Johann Georg Halske found a telegraph workshop in Berlin, the origin of the Siemens company.",
+    "source": "https://en.wikipedia.org/wiki/Siemens"
+  },
+  {
     "id": "germany-1848-frankfurt-parliament",
     "title": "Frankfurt Parliament",
     "date": "18 May 1848",
@@ -435,6 +487,19 @@
     "importance": 2,
     "description": "King Wilhelm I makes Otto von Bismarck minister-president during a conflict with parliament over the army.",
     "source": "https://en.wikipedia.org/wiki/Otto_von_Bismarck"
+  },
+  {
+    "id": "germany-1863-bayer-founded",
+    "title": "Bayer founded",
+    "date": "1 Aug 1863",
+    "year-from": 1863,
+    "place": "Barmen",
+    "lat": 51.28,
+    "lon": 7.2,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Dye salesman Friedrich Bayer and master dyer Johann Friedrich Weskott found a dyestuffs factory in Barmen.",
+    "source": "https://en.wikipedia.org/wiki/Bayer"
   },
   {
     "id": "germany-1865-basf-founded",
@@ -836,6 +901,32 @@
     "source": "https://en.wikipedia.org/wiki/Deutsche_Mark"
   },
   {
+    "id": "germany-2005-angela-merkel-becomes-chancellor",
+    "title": "Angela Merkel becomes chancellor",
+    "date": "22 Nov 2005",
+    "year-from": 2005,
+    "place": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4,
+    "country": "Germany",
+    "importance": 2,
+    "description": "The Bundestag elects Angela Merkel chancellor, the first woman and the first former East German in the office.",
+    "source": "https://en.wikipedia.org/wiki/Angela_Merkel"
+  },
+  {
+    "id": "germany-2011-nuclear-power-exit-decided",
+    "title": "Nuclear power exit decided",
+    "date": "30 May 2011",
+    "year-from": 2011,
+    "place": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4,
+    "country": "Germany",
+    "importance": 2,
+    "description": "After the Fukushima disaster, the government decides to shut down all nuclear power plants by 2022.",
+    "source": "https://en.wikipedia.org/wiki/Nuclear_power_in_Germany"
+  },
+  {
     "id": "germany-2015-germany-admits-refugees-from-hungary",
     "title": "Germany admits refugees from Hungary",
     "date": "4 Sep 2015",
@@ -847,5 +938,31 @@
     "importance": 2,
     "description": "Germany and Austria agree to let refugees stranded in Hungary cross their borders; Germany goes on to take in over a million asylum seekers.",
     "source": "https://en.wikipedia.org/wiki/European_migrant_crisis"
+  },
+  {
+    "id": "germany-2017-afd-enters-bundestag",
+    "title": "AfD enters the Bundestag",
+    "date": "24 Sep 2017",
+    "year-from": 2017,
+    "place": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Alternative for Germany wins nearly thirteen percent of the vote and enters the Bundestag as the third-largest party, the first party to the right of the CDU/CSU to win seats since 1957.",
+    "source": "https://en.wikipedia.org/wiki/2017_German_federal_election"
+  },
+  {
+    "id": "germany-2018-merkel-steps-down-as-cdu-leader",
+    "title": "Merkel steps down as CDU leader",
+    "date": "Dec 2018",
+    "year-from": 2018,
+    "place": "Hamburg",
+    "lat": 53.551,
+    "lon": 9.993,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Angela Merkel gives up the leadership of the CDU after eighteen years while remaining chancellor, and the party narrowly elects Annegret Kramp-Karrenbauer to succeed her.",
+    "source": "https://en.wikipedia.org/wiki/2018_Christian_Democratic_Union_of_Germany_leadership_election"
   }
 ]

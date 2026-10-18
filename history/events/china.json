@@ -13,6 +13,19 @@
     "source": "https://en.wikipedia.org/wiki/Liangzhu_culture"
   },
   {
+    "id": "china-bce1900-erlitou-culture",
+    "title": "Erlitou culture",
+    "date": "about 1900 BCE",
+    "year-from": -1900,
+    "place": "Erlitou, Yanshi",
+    "lat": 34.69,
+    "lon": 112.69,
+    "country": "China",
+    "importance": 3,
+    "description": "A large settlement with palace compounds and bronze foundries rises on the Yi and Luo rivers, widely seen as China's first state-level society and often linked to the traditional Xia.",
+    "source": "https://en.wikipedia.org/wiki/Erlitou_culture"
+  },
+  {
     "id": "china-bce1750-erlitou-culture",
     "title": "Erlitou culture",
     "date": "about 1750 – 1500 BCE",
@@ -39,6 +52,19 @@
     "importance": 2,
     "description": "Builders of the Erligang culture raise a walled city with rammed-earth walls about seven kilometres around, an early capital of the Shang.",
     "source": "https://en.wikipedia.org/wiki/Zhengzhou_Shang_City"
+  },
+  {
+    "id": "china-bce1600-zhengzhou-shang-city",
+    "title": "Zhengzhou Shang city",
+    "date": "about 1600 BCE",
+    "year-from": -1600,
+    "place": "Zhengzhou",
+    "lat": 34.75,
+    "lon": 113.68,
+    "country": "China",
+    "importance": 3,
+    "description": "A rammed-earth walled city grows at modern Zhengzhou, often identified as an early Shang capital, of the first culture to cast bronze vessels widely in China.",
+    "source": "https://en.wikipedia.org/wiki/Erligang_culture"
   },
   {
     "id": "china-bce1250-oracle-bone-inscriptions",
@@ -159,6 +185,20 @@
     "source": "https://en.wikipedia.org/wiki/Zhang_Qian"
   },
   {
+    "id": "china-bce60-han-protectorate-of-the-western-regions",
+    "title": "Han Protectorate of the Western Regions",
+    "date": "60 BCE",
+    "year-from": -60,
+    "place": "Wulei, near Luntai",
+    "lat": 41.9,
+    "lon": 84.4,
+    "country": "China",
+    "polity": "Han dynasty",
+    "importance": 2,
+    "description": "After Xiongnu forces in the west submit, the Han appoint Zheng Ji protector-general over the oasis states of the Tarim Basin, the first direct Chinese rule in what is now Xinjiang.",
+    "source": "https://en.wikipedia.org/wiki/Protectorate_of_the_Western_Regions"
+  },
+  {
     "id": "china-105-cai-lun-presents-papermaking",
     "title": "Cai Lun presents papermaking",
     "date": "105",
@@ -238,6 +278,20 @@
     "source": "https://en.wikipedia.org/wiki/Tang_dynasty"
   },
   {
+    "id": "china-618-songtsen-gampo-founds-the-tibetan-empire",
+    "title": "Songtsen Gampo founds the Tibetan Empire",
+    "date": "about 618",
+    "year-from": 618,
+    "place": "Lhasa",
+    "lat": 29.65,
+    "lon": 91.1,
+    "country": "China",
+    "polity": "Tibetan Empire",
+    "importance": 2,
+    "description": "The Yarlung king Songtsen Gampo unites the peoples of the Tibetan Plateau into an empire and later moves his capital to Lhasa.",
+    "source": "https://en.wikipedia.org/wiki/Songtsen_Gampo"
+  },
+  {
     "id": "china-751-battle-of-talas",
     "title": "Battle of Talas",
     "date": "751",
@@ -303,6 +357,21 @@
     "source": "https://en.wikipedia.org/wiki/Jiaozi_(currency)"
   },
   {
+    "id": "china-1039-bi-sheng-invents-movable-type",
+    "title": "Bi Sheng invents movable type",
+    "date": "1039 to 1048",
+    "year-from": 1039,
+    "year-to": 1048,
+    "place": "Yingshan, Hubei",
+    "lat": 30.73,
+    "lon": 115.67,
+    "country": "China",
+    "polity": "Song dynasty",
+    "importance": 2,
+    "description": "The artisan Bi Sheng makes movable type of fired clay, one piece for each character, the first known movable-type printing, described by the scholar Shen Kuo.",
+    "source": "https://en.wikipedia.org/wiki/Bi_Sheng"
+  },
+  {
     "id": "china-1069-wang-anshi-s-new-policies",
     "title": "Wang Anshi's New Policies",
     "date": "1069",
@@ -314,6 +383,20 @@
     "importance": 2,
     "description": "Emperor Shenzong appoints Wang Anshi, who launches reforms of state loans to farmers, taxation, trade and the army that divide the court for decades.",
     "source": "https://en.wikipedia.org/wiki/New_Policies_(Song_dynasty)"
+  },
+  {
+    "id": "china-1087-quanzhou-maritime-trade-supervisorate",
+    "title": "Quanzhou maritime trade supervisorate",
+    "date": "1087",
+    "year-from": 1087,
+    "place": "Quanzhou",
+    "lat": 24.87,
+    "lon": 118.68,
+    "country": "China",
+    "polity": "Song dynasty",
+    "importance": 3,
+    "description": "The Song open an office of the maritime trade bureau at the Fujian port, which grows into one of the world's largest seaports, praised by Marco Polo and Ibn Battuta.",
+    "source": "https://en.wikipedia.org/wiki/Quanzhou"
   },
   {
     "id": "china-1127-fall-of-kaifeng",
@@ -526,6 +609,20 @@
     "source": "https://en.wikipedia.org/wiki/Macartney_Embassy"
   },
   {
+    "id": "china-1796-white-lotus-rebellion-begins",
+    "title": "White Lotus Rebellion begins",
+    "date": "1796",
+    "year-from": 1796,
+    "place": "Daba Mountains, Sichuan–Hubei border",
+    "lat": 32.2,
+    "lon": 108.8,
+    "country": "China",
+    "polity": "Qing dynasty",
+    "importance": 3,
+    "description": "A rising inspired by White Lotus teachings and tax grievances breaks out in the mountains between Sichuan, Hubei and Shaanxi, and takes the Qing eight years to crush.",
+    "source": "https://en.wikipedia.org/wiki/White_Lotus_Rebellion"
+  },
+  {
     "id": "china-1839-destruction-of-opium-at-humen",
     "title": "Destruction of opium at Humen",
     "date": "Jun 1839",
@@ -576,6 +673,35 @@
     "importance": 2,
     "description": "British troops destroy the imperial gardens at the end of the Second Opium War.",
     "source": "https://en.wikipedia.org/wiki/Old_Summer_Palace"
+  },
+  {
+    "id": "china-1865-yakub-beg-rules-kashgaria",
+    "title": "Yakub Beg rules Kashgaria",
+    "date": "1865",
+    "year-from": 1865,
+    "place": "Kashgar",
+    "lat": 39.47,
+    "lon": 75.99,
+    "country": "China",
+    "polity": "Yettishar",
+    "importance": 3,
+    "description": "Amid the wider revolt against Qing rule, the Kokandi officer Yakub Beg takes Kashgar and founds the state of Yettishar in the Tarim Basin.",
+    "source": "https://en.wikipedia.org/wiki/Yakub_Beg_of_Yettishar"
+  },
+  {
+    "id": "china-1876-qing-reconquest-of-xinjiang",
+    "title": "Qing reconquest of Xinjiang",
+    "date": "1876 to 1877",
+    "year-from": 1876,
+    "year-to": 1877,
+    "place": "Kashgar",
+    "lat": 39.47,
+    "lon": 75.99,
+    "country": "China",
+    "polity": "Qing dynasty",
+    "importance": 2,
+    "description": "The armies of Zuo Zongtang retake the cities of Xinjiang over two years after the death of Yakub Beg, and the Qing later make the region a province.",
+    "source": "https://en.wikipedia.org/wiki/Qing_reconquest_of_Xinjiang"
   },
   {
     "id": "china-1884-xinjiang-becomes-a-province",
@@ -721,6 +847,19 @@
     "source": "https://en.wikipedia.org/wiki/Proclamation_of_the_People's_Republic_of_China"
   },
   {
+    "id": "china-1949-people-s-republic-takes-over-xinjiang",
+    "title": "People's Republic takes over Xinjiang",
+    "date": "Oct to Dec 1949",
+    "year-from": 1949,
+    "place": "Ürümqi (Dihua)",
+    "lat": 43.83,
+    "lon": 87.62,
+    "country": "China",
+    "importance": 2,
+    "description": "After the Nationalist provincial authorities defect and the Three Districts leaders accede to Beijing, People's Liberation Army units enter Ürümqi and Xinjiang joins the People's Republic.",
+    "source": "https://en.wikipedia.org/wiki/Incorporation_of_Xinjiang_into_the_People%27s_Republic_of_China"
+  },
+  {
     "id": "china-1950-battle-of-chamdo",
     "title": "Battle of Chamdo",
     "date": "6 – 24 Oct 1950",
@@ -732,6 +871,19 @@
     "importance": 2,
     "description": "The People's Liberation Army defeats the Tibetan army in the east, forcing Lhasa to accept the Seventeen Point Agreement in 1951.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Chamdo"
+  },
+  {
+    "id": "china-1951-seventeen-point-agreement",
+    "title": "Seventeen Point Agreement",
+    "date": "23 May 1951",
+    "year-from": 1951,
+    "place": "Zhongnanhai, Beijing",
+    "lat": 39.91,
+    "lon": 116.38,
+    "country": "China",
+    "importance": 2,
+    "description": "Representatives of the Tibetan local government and the central government sign the Seventeen Point Agreement on the peaceful liberation of Tibet, bringing Tibet under Chinese sovereignty while promising it regional autonomy.",
+    "source": "https://en.wikipedia.org/wiki/Seventeen_Point_Agreement"
   },
   {
     "id": "china-1958-great-leap-forward",
@@ -758,6 +910,19 @@
     "country": "China",
     "importance": 1,
     "description": "Protests in Lhasa turn into a revolt that the army crushes; the Dalai Lama flees to India, where he sets up a government in exile.",
+    "source": "https://en.wikipedia.org/wiki/1959_Tibetan_uprising"
+  },
+  {
+    "id": "china-1959-dalai-lama-flees-to-india",
+    "title": "Dalai Lama flees to India",
+    "date": "Mar 1959",
+    "year-from": 1959,
+    "place": "Lhasa",
+    "lat": 29.65,
+    "lon": 91.1,
+    "country": "China",
+    "importance": 2,
+    "description": "After days of protest and fighting in Lhasa, the 14th Dalai Lama slips out of the city and crosses the Himalayas to India, where he is granted asylum.",
     "source": "https://en.wikipedia.org/wiki/1959_Tibetan_uprising"
   },
   {
@@ -928,5 +1093,57 @@
     "importance": 2,
     "description": "A protest by Uyghurs turns into ethnic violence between Uyghurs and Han Chinese in which nearly two hundred people die, followed by a sweeping security crackdown.",
     "source": "https://en.wikipedia.org/wiki/July_2009_Ürümqi_riots"
+  },
+  {
+    "id": "china-2013-xi-jinping-takes-office",
+    "title": "Xi Jinping takes office",
+    "date": "14 Mar 2013",
+    "year-from": 2013,
+    "place": "Beijing",
+    "lat": 39.9,
+    "lon": 116.4,
+    "country": "China",
+    "importance": 2,
+    "description": "Xi Jinping was elected president, having taken over as Communist Party and military leader the previous November.",
+    "source": "https://en.wikipedia.org/wiki/Xi_Jinping"
+  },
+  {
+    "id": "china-2013-belt-and-road-announced",
+    "title": "Belt and Road Initiative announced",
+    "date": "7 Sep 2013",
+    "year-from": 2013,
+    "place": "Astana, Kazakhstan",
+    "lat": 51.09,
+    "lon": 71.4,
+    "country": "China",
+    "importance": 3,
+    "description": "Xi Jinping proposed the Silk Road Economic Belt in a speech in Kazakhstan, the start of what became the Belt and Road Initiative.",
+    "source": "https://en.wikipedia.org/wiki/Belt_and_Road_Initiative"
+  },
+  {
+    "id": "china-2015-one-child-policy-ends",
+    "title": "One-child policy ends",
+    "date": "Oct 2015",
+    "year-from": 2015,
+    "place": "Beijing",
+    "lat": 39.9,
+    "lon": 116.4,
+    "country": "China",
+    "importance": 2,
+    "description": "The Communist Party announced the end of the one-child policy, allowing all couples two children from the following year.",
+    "source": "https://en.wikipedia.org/wiki/One-child_policy"
+  },
+  {
+    "id": "china-2019-hong-kong-protests",
+    "title": "Hong Kong protests",
+    "date": "9 Jun 2019",
+    "year-from": 2019,
+    "place": "Hong Kong",
+    "lat": 22.319,
+    "lon": 114.169,
+    "country": "China",
+    "importance": 2,
+    "description": "Hundreds of thousands marched against a proposed extradition law, the start of the largest protest movement in Hong Kong's history.",
+    "source": "https://en.wikipedia.org/wiki/2019–2020_Hong_Kong_protests"
   }
 ]

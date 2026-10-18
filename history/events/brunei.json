@@ -255,5 +255,31 @@
     "importance": 3,
     "description": "The first phase of a sharia penal code comes into force; the later phases, covering punishments such as stoning, brought an international outcry in 2019.",
     "source": "https://en.wikipedia.org/wiki/Islam_in_Brunei"
+  },
+  {
+    "id": "brunei-2017-golden-jubilee-of-the-sultan",
+    "title": "Golden jubilee of the sultan",
+    "date": "5 Oct 2017",
+    "year-from": 2017,
+    "place": "Bandar Seri Begawan",
+    "lat": 4.89,
+    "lon": 114.94,
+    "country": "Brunei",
+    "importance": 3,
+    "description": "Sultan Hassanal Bolkiah celebrates fifty years on his throne with a procession on his gilded chariot through the capital.",
+    "source": "https://en.wikipedia.org/wiki/Hassanal_Bolkiah"
+  },
+  {
+    "id": "brunei-2019-sharia-penal-code-final-phases",
+    "title": "Sharia penal code, final phases",
+    "date": "3 Apr 2019",
+    "year-from": 2019,
+    "place": "Bandar Seri Begawan",
+    "lat": 4.89,
+    "lon": 114.94,
+    "country": "Brunei",
+    "importance": 2,
+    "description": "The remaining phases of the sharia penal code, covering punishments including stoning for adultery and sodomy, come into force; after international protests the sultan extends the moratorium on the death penalty to the code.",
+    "source": "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Brunei"
   }
 ]

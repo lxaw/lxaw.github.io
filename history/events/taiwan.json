@@ -321,5 +321,47 @@
     "importance": 3,
     "description": "Students occupy the legislature for more than three weeks in protest at a trade agreement with the People's Republic of China.",
     "source": "https://en.wikipedia.org/wiki/Sunflower_Student_Movement"
+  },
+  {
+    "id": "taiwan-2015-ma-xi-meeting",
+    "title": "Ma–Xi meeting",
+    "date": "7 Nov 2015",
+    "year-from": 2015,
+    "place": "Singapore",
+    "lat": 1.311,
+    "lon": 103.827,
+    "country": "Taiwan",
+    "polity": "Republic of China",
+    "importance": 2,
+    "description": "Presidents Ma Ying-jeou and Xi Jinping meet in Singapore, the first meeting of leaders of the two sides of the Taiwan Strait since the end of the Chinese Civil War in 1949.",
+    "source": "https://en.wikipedia.org/wiki/2015_meeting_of_Ma_Ying-jeou_and_Xi_Jinping"
+  },
+  {
+    "id": "taiwan-2016-tsai-ing-wen-elected",
+    "title": "Tsai Ing-wen elected",
+    "date": "16 Jan 2016",
+    "year-from": 2016,
+    "place": "Taipei",
+    "lat": 25.044,
+    "lon": 121.519,
+    "country": "Taiwan",
+    "polity": "Republic of China",
+    "importance": 2,
+    "description": "Tsai Ing-wen of the Democratic Progressive Party is elected Taiwan's first female president, and her party takes a legislative majority for the first time.",
+    "source": "https://en.wikipedia.org/wiki/2016_Taiwanese_general_election"
+  },
+  {
+    "id": "taiwan-2019-same-sex-marriage-legalised",
+    "title": "Same-sex marriage legalised",
+    "date": "17 May 2019",
+    "year-from": 2019,
+    "place": "Taipei",
+    "lat": 25.044,
+    "lon": 121.519,
+    "country": "Taiwan",
+    "polity": "Republic of China",
+    "importance": 2,
+    "description": "The legislature passes a law opening marriage to same-sex couples, a first in Asia, which takes effect a week later.",
+    "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Taiwan"
   }
 ]

@@ -76,6 +76,18 @@
     "source": "https://en.wikipedia.org/wiki/Eukaryote"
   },
   {
+    "id": "deep-1640-a-lost-world-of-early-complex-life",
+    "title": "A 'lost world' of early complex life",
+    "date": "about 1.64 to 0.8 billion years ago",
+    "ma": 1640,
+    "ma-to": 800,
+    "scope": "Life",
+    "importance": 2,
+    "description": "Molecular fossils called protosteroids - early intermediates on the way to the sterols of modern cell membranes - turn out to be widespread and abundant in marine rocks of this age. They record an ecologically prominent community of deep-branching early eukaryotes and related microbes that filled the oceans until recognisably modern eukaryotes spread in the Tonian period.",
+    "uncertainty": "Which organisms made the protosteroids - protosterol-making bacteria or stem-group eukaryotes - is not settled, and the closing date near 800 million years ago is approximate.",
+    "source": "https://www.nature.com/articles/s41586-023-06170-w"
+  },
+  {
     "id": "deep-1560-early-large-multicellular-organisms",
     "title": "Early large multicellular organisms",
     "date": "about 1.56 billion years ago",

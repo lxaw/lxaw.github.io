@@ -473,5 +473,44 @@
     "importance": 2,
     "description": "North Korea explodes a nuclear device underground.",
     "source": "https://en.wikipedia.org/wiki/2006_North_Korean_nuclear_test"
+  },
+  {
+    "id": "korea-2011-death-of-kim-jong-il",
+    "title": "Death of Kim Jong Il",
+    "date": "17 Dec 2011",
+    "year-from": 2011,
+    "place": "Pyongyang",
+    "lat": 39.02,
+    "lon": 125.75,
+    "country": "Korea",
+    "importance": 2,
+    "description": "Kim Jong Il died after seventeen years ruling North Korea, and his son Kim Jong Un was announced as his successor.",
+    "source": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Kim_Jong-il"
+  },
+  {
+    "id": "korea-2017-park-geun-hye-removed-from-office",
+    "title": "Park Geun-hye removed from office",
+    "date": "10 Mar 2017",
+    "year-from": 2017,
+    "place": "Seoul",
+    "lat": 37.57,
+    "lon": 126.98,
+    "country": "Korea",
+    "importance": 3,
+    "description": "The Constitutional Court unanimously removed President Park Geun-hye after months of mass protests over a corruption scandal, the first time a South Korean president was driven from office.",
+    "source": "https://en.wikipedia.org/wiki/Impeachment_of_Park_Geun-hye"
+  },
+  {
+    "id": "korea-2018-panmunjom-summit",
+    "title": "Panmunjom summit",
+    "date": "27 Apr 2018",
+    "year-from": 2018,
+    "place": "Panmunjom",
+    "lat": 37.956,
+    "lon": 126.677,
+    "country": "Korea",
+    "importance": 2,
+    "description": "Kim Jong Un crossed the border to meet President Moon Jae-in, the first North Korean leader to set foot in the South since the war, and the two signed the Panmunjom Declaration.",
+    "source": "https://en.wikipedia.org/wiki/April_2018_inter-Korean_summit"
   }
 ]

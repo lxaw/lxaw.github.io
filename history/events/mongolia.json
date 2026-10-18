@@ -416,5 +416,57 @@
     "importance": 3,
     "description": "Protests over alleged election fraud turn violent, five people are killed and a state of emergency is declared for the first time.",
     "source": "https://en.wikipedia.org/wiki/2008_riot_in_Mongolia"
+  },
+  {
+    "id": "mongolia-2009-elbegdorj-wins-presidency",
+    "title": "Elbegdorj wins presidency",
+    "date": "24 May 2009",
+    "year-from": 2009,
+    "place": "Ulaanbaatar",
+    "lat": 47.92,
+    "lon": 106.92,
+    "country": "Mongolia",
+    "importance": 3,
+    "description": "The Democratic Party's Tsakhiagiin Elbegdorj narrowly defeated the incumbent president Nambaryn Enkhbayar.",
+    "source": "https://en.wikipedia.org/wiki/2009_Mongolian_presidential_election"
+  },
+  {
+    "id": "mongolia-2010-dzud-disaster",
+    "title": "Dzud disaster",
+    "date": "2010",
+    "year-from": 2010,
+    "place": "Ulaangom, Uvs Province",
+    "lat": 49.98,
+    "lon": 92.07,
+    "country": "Mongolia",
+    "importance": 2,
+    "description": "An extreme dzud winter killed eight million head of livestock, about a sixth of the national herd, and drove many herders to the cities.",
+    "source": "https://en.wikipedia.org/wiki/Zud"
+  },
+  {
+    "id": "mongolia-2013-oyu-tolgoi-ships-first-copper",
+    "title": "Oyu Tolgoi ships first copper",
+    "date": "9 Jul 2013",
+    "year-from": 2013,
+    "place": "Khanbogd, Ömnögovi Province",
+    "lat": 43.01,
+    "lon": 106.84,
+    "country": "Mongolia",
+    "importance": 3,
+    "description": "The Oyu Tolgoi copper and gold mine, the largest financial undertaking in the country's history, shipped its first copper.",
+    "source": "https://en.wikipedia.org/wiki/Oyu_Tolgoi_mine"
+  },
+  {
+    "id": "mongolia-2019-constitutional-amendments",
+    "title": "Constitutional amendments",
+    "date": "2019",
+    "year-from": 2019,
+    "place": "Ulaanbaatar",
+    "lat": 47.92,
+    "lon": 106.92,
+    "country": "Mongolia",
+    "importance": 3,
+    "description": "Parliament amended the 1992 constitution, strengthening the prime minister and limiting the president to a single six-year term.",
+    "source": "https://en.wikipedia.org/wiki/Constitution_of_Mongolia"
   }
 ]

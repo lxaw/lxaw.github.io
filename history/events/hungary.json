@@ -382,5 +382,44 @@
     "importance": 3,
     "description": "A new constitution written by Viktor Orbán's government comes into force.",
     "source": "https://en.wikipedia.org/wiki/Constitution_of_Hungary"
+  },
+  {
+    "id": "hungary-2015-border-fence-built",
+    "title": "Border fence built",
+    "date": "Sep 2015",
+    "year-from": 2015,
+    "place": "Röszke, Serbian border",
+    "lat": 46.19,
+    "lon": 19.69,
+    "country": "Hungary",
+    "importance": 2,
+    "description": "As hundreds of thousands of migrants passed through during the European migrant crisis, Hungary sealed its border with Serbia behind a razor-wire fence, deflecting the flow towards Croatia.",
+    "source": "https://en.wikipedia.org/wiki/Hungarian_border_barrier"
+  },
+  {
+    "id": "hungary-2016-migrant-quota-referendum",
+    "title": "Migrant quota referendum",
+    "date": "2 Oct 2016",
+    "year-from": 2016,
+    "place": "Budapest",
+    "lat": 47.497,
+    "lon": 19.04,
+    "country": "Hungary",
+    "importance": 3,
+    "description": "Ninety-eight per cent of voters rejected the European Union's migrant relocation quota in a referendum called by the government, though the turnout was too low for it to be valid.",
+    "source": "https://en.wikipedia.org/wiki/2016_Hungarian_migrant_quota_referendum"
+  },
+  {
+    "id": "hungary-2017-law-targets-central-european-university",
+    "title": "Law targets Central European University",
+    "date": "Apr 2017",
+    "year-from": 2017,
+    "place": "Budapest",
+    "lat": 47.497,
+    "lon": 19.04,
+    "country": "Hungary",
+    "importance": 3,
+    "description": "Parliament rushed through a change to the higher-education law widely seen as aimed at driving out the Central European University, which later moved to Vienna.",
+    "source": "https://en.wikipedia.org/wiki/Central_European_University"
   }
 ]

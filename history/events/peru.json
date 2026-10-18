@@ -436,5 +436,57 @@
     "importance": 3,
     "description": "The commission finds that most victims of the conflict were Quechua-speaking peasants.",
     "source": "https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(Peru)"
+  },
+  {
+    "id": "peru-2007-pisco-earthquake",
+    "title": "Pisco earthquake",
+    "date": "15 Aug 2007",
+    "year-from": 2007,
+    "place": "Pisco",
+    "lat": -13.71,
+    "lon": -76.2,
+    "country": "Peru",
+    "importance": 3,
+    "description": "A magnitude-8.0 earthquake off the coast devastated the city of Pisco and killed 595 people.",
+    "source": "https://en.wikipedia.org/wiki/2007_Peru_earthquake"
+  },
+  {
+    "id": "peru-2009-fujimori-convicted",
+    "title": "Fujimori convicted of human rights abuses",
+    "date": "7 Apr 2009",
+    "year-from": 2009,
+    "place": "Lima",
+    "lat": -12.046,
+    "lon": -77.03,
+    "country": "Peru",
+    "importance": 2,
+    "description": "The former president was sentenced to 25 years in prison for death-squad killings and kidnappings, the first elected head of state convicted of human rights abuses in his own country.",
+    "source": "https://en.wikipedia.org/wiki/Alberto_Fujimori%27s_arrest_and_trial"
+  },
+  {
+    "id": "peru-2010-vargas-llosa-wins-the-nobel-prize",
+    "title": "Vargas Llosa wins the Nobel Prize",
+    "date": "7 Oct 2010",
+    "year-from": 2010,
+    "place": "Stockholm, Sweden",
+    "lat": 59.325,
+    "lon": 18.071,
+    "country": "Peru",
+    "importance": 3,
+    "description": "Mario Vargas Llosa became the first Peruvian to win the Nobel Prize in Literature.",
+    "source": "https://en.wikipedia.org/wiki/2010_Nobel_Prize_in_Literature"
+  },
+  {
+    "id": "peru-2019-death-of-alan-garcia",
+    "title": "Death of Alan García",
+    "date": "17 Apr 2019",
+    "year-from": 2019,
+    "place": "Lima",
+    "lat": -12.046,
+    "lon": -77.03,
+    "country": "Peru",
+    "importance": 3,
+    "description": "Former president Alan García shot himself as police came to arrest him in the Odebrecht bribery investigation and died the same day.",
+    "source": "https://en.wikipedia.org/wiki/Alan_Garc%C3%ADa"
   }
 ]

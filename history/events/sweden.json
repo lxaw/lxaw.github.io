@@ -484,5 +484,57 @@
     "importance": 3,
     "description": "Voters decide to keep the krona, days after the murder of the foreign minister Anna Lindh.",
     "source": "https://en.wikipedia.org/wiki/2003_Swedish_euro_referendum"
+  },
+  {
+    "id": "sweden-2009-same-sex-marriage-legalised",
+    "title": "Same-sex marriage legalised",
+    "date": "1 May 2009",
+    "year-from": 2009,
+    "place": "Stockholm",
+    "lat": 59.325,
+    "lon": 18.071,
+    "country": "Sweden",
+    "importance": 3,
+    "description": "Sweden became the seventh country in the world to open marriage to same-sex couples.",
+    "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Sweden"
+  },
+  {
+    "id": "sweden-2010-sweden-democrats-enter-the-riksdag",
+    "title": "Sweden Democrats enter the Riksdag",
+    "date": "19 Sep 2010",
+    "year-from": 2010,
+    "place": "Stockholm",
+    "lat": 59.325,
+    "lon": 18.071,
+    "country": "Sweden",
+    "importance": 3,
+    "description": "The nationalist Sweden Democrats won seats in parliament for the first time.",
+    "source": "https://en.wikipedia.org/wiki/2010_Swedish_general_election"
+  },
+  {
+    "id": "sweden-2015-record-refugee-arrivals",
+    "title": "Record refugee arrivals",
+    "date": "2015",
+    "year-from": 2015,
+    "place": "Stockholm",
+    "lat": 59.325,
+    "lon": 18.071,
+    "country": "Sweden",
+    "importance": 3,
+    "description": "Sweden took in over 160,000 refugees during the European migrant crisis, more per person than any other country in Europe, and reintroduced border controls.",
+    "source": "https://en.wikipedia.org/wiki/European_migrant_crisis"
+  },
+  {
+    "id": "sweden-2017-truck-attack-in-stockholm",
+    "title": "Truck attack in Stockholm",
+    "date": "7 Apr 2017",
+    "year-from": 2017,
+    "place": "Drottninggatan, Stockholm",
+    "lat": 59.3328,
+    "lon": 18.0622,
+    "country": "Sweden",
+    "importance": 3,
+    "description": "A hijacked lorry was driven into crowds on Drottninggatan, killing five pedestrians.",
+    "source": "https://en.wikipedia.org/wiki/2017_Stockholm_truck_attack"
   }
 ]

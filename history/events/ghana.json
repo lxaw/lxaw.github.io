@@ -417,5 +417,44 @@
     "importance": 3,
     "description": "A large oil field is discovered in deep water off the western coast, and production begins in 2010.",
     "source": "https://en.wikipedia.org/wiki/Jubilee_Oil_Field"
+  },
+  {
+    "id": "ghana-2012-president-dies-in-office",
+    "title": "President dies in office",
+    "date": "24 Jul 2012",
+    "year-from": 2012,
+    "place": "Accra",
+    "lat": 5.55,
+    "lon": -0.2,
+    "country": "Ghana",
+    "importance": 3,
+    "description": "President John Atta Mills died in office, the first Ghanaian head of state to do so, and Vice-President John Mahama was sworn in the same day.",
+    "source": "https://en.wikipedia.org/wiki/John_Atta_Mills"
+  },
+  {
+    "id": "ghana-2016-first-defeat-of-a-sitting-president",
+    "title": "First defeat of a sitting president",
+    "date": "7 Dec 2016",
+    "year-from": 2016,
+    "place": "Accra",
+    "lat": 5.55,
+    "lon": -0.2,
+    "country": "Ghana",
+    "importance": 3,
+    "description": "Nana Akufo-Addo defeated President John Mahama, the first time a sitting Ghanaian president lost re-election.",
+    "source": "https://en.wikipedia.org/wiki/2016_Ghanaian_general_election"
+  },
+  {
+    "id": "ghana-2019-year-of-return",
+    "title": "Year of Return",
+    "date": "2019",
+    "year-from": 2019,
+    "place": "Accra",
+    "lat": 5.55,
+    "lon": -0.2,
+    "country": "Ghana",
+    "importance": 3,
+    "description": "The government marked 400 years since the first enslaved Africans landed in Virginia with a Year of Return encouraging the African diaspora to visit and invest in Ghana.",
+    "source": "https://en.wikipedia.org/wiki/Year_of_Return,_Ghana_2019"
   }
 ]

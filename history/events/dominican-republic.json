@@ -402,5 +402,44 @@
     "importance": 2,
     "description": "The Constitutional Court rules that children born to undocumented migrants since 1929 are not citizens, affecting many thousands of people of Haitian descent.",
     "source": "https://en.wikipedia.org/wiki/Haitians_in_the_Dominican_Republic"
+  },
+  {
+    "id": "dominican-republic-2015-constitution-amended",
+    "title": "Constitution amended",
+    "date": "13 Jun 2015",
+    "year-from": 2015,
+    "place": "Santo Domingo",
+    "lat": 18.47,
+    "lon": -69.89,
+    "country": "Dominican Republic",
+    "importance": 3,
+    "description": "Congress amended the constitution to permit a second consecutive presidential term, allowing Danilo Medina to seek re-election in 2016.",
+    "source": "https://en.wikipedia.org/wiki/Constitution_of_the_Dominican_Republic"
+  },
+  {
+    "id": "dominican-republic-2017-odebrecht-arrests",
+    "title": "Odebrecht arrests",
+    "date": "Jun 2017",
+    "year-from": 2017,
+    "place": "Santo Domingo",
+    "lat": 18.47,
+    "lon": -69.89,
+    "country": "Dominican Republic",
+    "importance": 2,
+    "description": "Eight people, among them two senators, were jailed as the courts took up the case of bribes admitted in the country by the Brazilian construction firm Odebrecht.",
+    "source": "https://en.wikipedia.org/wiki/Odebrecht_case"
+  },
+  {
+    "id": "dominican-republic-2018-relations-established-with-china",
+    "title": "Relations established with China",
+    "date": "1 May 2018",
+    "year-from": 2018,
+    "place": "Beijing, China",
+    "lat": 39.904,
+    "lon": 116.41,
+    "country": "Dominican Republic",
+    "importance": 2,
+    "description": "The Dominican Republic broke ties with Taiwan after seventy-seven years and established diplomatic relations with the People's Republic of China.",
+    "source": "https://en.wikipedia.org/wiki/China–Dominican_Republic_relations"
   }
 ]

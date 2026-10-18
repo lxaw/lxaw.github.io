@@ -255,5 +255,44 @@
     "importance": 2,
     "description": "The death in police custody of the singer Kaya, a hero of the Creole community, triggers days of deadly rioting across the island.",
     "source": "https://en.wikipedia.org/wiki/Kaya_(musician)"
+  },
+  {
+    "id": "mauritius-2003-first-non-hindu-prime-minister",
+    "title": "First non-Hindu prime minister",
+    "date": "30 Sep 2003",
+    "year-from": 2003,
+    "place": "Port Louis",
+    "lat": -20.16,
+    "lon": 57.5,
+    "country": "Mauritius",
+    "importance": 3,
+    "description": "Under a coalition power-sharing deal, Anerood Jugnauth resigned and Paul Bérenger became Mauritius's first non-Hindu prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Paul_B%C3%A9renger"
+  },
+  {
+    "id": "mauritius-2015-first-woman-president",
+    "title": "First woman president",
+    "date": "5 Jun 2015",
+    "year-from": 2015,
+    "place": "Port Louis",
+    "lat": -20.16,
+    "lon": 57.5,
+    "country": "Mauritius",
+    "importance": 3,
+    "description": "Ameenah Gurib-Fakim took office as the first woman elected president of Mauritius.",
+    "source": "https://en.wikipedia.org/wiki/Ameenah_Gurib-Fakim"
+  },
+  {
+    "id": "mauritius-2019-world-court-backs-mauritius-over-the-chagos",
+    "title": "World Court backs Mauritius over the Chagos",
+    "date": "25 Feb 2019",
+    "year-from": 2019,
+    "place": "The Hague, Netherlands",
+    "lat": 52.08,
+    "lon": 4.3,
+    "country": "Mauritius",
+    "importance": 2,
+    "description": "The International Court of Justice advised, thirteen votes to one, that Britain was obliged to end its administration of the Chagos Archipelago as rapidly as possible.",
+    "source": "https://en.wikipedia.org/wiki/Chagos_Archipelago_sovereignty_dispute"
   }
 ]

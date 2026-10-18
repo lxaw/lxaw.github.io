@@ -250,5 +250,44 @@
     "importance": 2,
     "description": "A referendum approves membership with 54.6% in favour, and Switzerland joins the United Nations in September.",
     "source": "https://en.wikipedia.org/wiki/2002_Swiss_referendums"
+  },
+  {
+    "id": "switzerland-2009-minaret-ban-approved",
+    "title": "Minaret ban approved",
+    "date": "29 Nov 2009",
+    "year-from": 2009,
+    "place": "Bern",
+    "lat": 46.95,
+    "lon": 7.44,
+    "country": "Switzerland",
+    "importance": 3,
+    "description": "Voters backed a constitutional ban on building minarets by 57.5 per cent, against the advice of the government, drawing international criticism.",
+    "source": "https://en.wikipedia.org/wiki/2009_Swiss_minaret_referendum"
+  },
+  {
+    "id": "switzerland-2014-mass-immigration-initiative-passes",
+    "title": "Mass immigration initiative passes",
+    "date": "9 Feb 2014",
+    "year-from": 2014,
+    "place": "Bern",
+    "lat": 46.95,
+    "lon": 7.44,
+    "country": "Switzerland",
+    "importance": 3,
+    "description": "Voters narrowly approved quotas on immigration, obliging the government to renegotiate free movement with the European Union.",
+    "source": "https://en.wikipedia.org/wiki/2014_Swiss_immigration_initiative"
+  },
+  {
+    "id": "switzerland-2015-franc-cap-abandoned",
+    "title": "Franc cap abandoned",
+    "date": "15 Jan 2015",
+    "year-from": 2015,
+    "place": "Zurich",
+    "lat": 47.37,
+    "lon": 8.54,
+    "country": "Switzerland",
+    "importance": 3,
+    "description": "The Swiss National Bank abandoned its three-year-old cap on the franc without warning, and the currency briefly leapt almost 30 per cent against the euro.",
+    "source": "https://en.wikipedia.org/wiki/Swiss_franc"
   }
 ]

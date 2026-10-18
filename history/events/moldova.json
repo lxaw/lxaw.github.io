@@ -300,5 +300,44 @@
     "importance": 3,
     "description": "About a billion dollars, an eighth of the economy, disappears from three banks.",
     "source": "https://en.wikipedia.org/wiki/2014_Moldovan_bank_fraud_scandal"
+  },
+  {
+    "id": "moldova-2015-former-prime-minister-filat-arrested",
+    "title": "Former prime minister Filat arrested",
+    "date": "15 Oct 2015",
+    "year-from": 2015,
+    "place": "Chișinău",
+    "lat": 47.01,
+    "lon": 28.86,
+    "country": "Moldova",
+    "importance": 3,
+    "description": "Vlad Filat, prime minister from 2009 to 2013 and once the leader of the pro-European coalition, is detained in parliament over the billion-dollar bank fraud.",
+    "source": "https://en.wikipedia.org/wiki/Vlad_Filat"
+  },
+  {
+    "id": "moldova-2016-dodon-elected-president",
+    "title": "Dodon elected president",
+    "date": "13 Nov 2016",
+    "year-from": 2016,
+    "place": "Chișinău",
+    "lat": 47.01,
+    "lon": 28.86,
+    "country": "Moldova",
+    "importance": 3,
+    "description": "Igor Dodon wins a run-off against Maia Sandu in the first direct presidential election since 1996.",
+    "source": "https://en.wikipedia.org/wiki/2016_Moldovan_presidential_election"
+  },
+  {
+    "id": "moldova-2019-rival-governments",
+    "title": "Rival governments",
+    "date": "8 to 15 Jun 2019",
+    "year-from": 2019,
+    "place": "Chișinău",
+    "lat": 47.01,
+    "lon": 28.86,
+    "country": "Moldova",
+    "importance": 2,
+    "description": "Rival governments claim power for a week after parliament names Maia Sandu prime minister; the Democratic Party cabinet steps down and Vladimir Plahotniuc leaves the country.",
+    "source": "https://en.wikipedia.org/wiki/2019_Moldovan_constitutional_crisis"
   }
 ]

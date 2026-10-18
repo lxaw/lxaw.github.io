@@ -288,5 +288,44 @@
     "importance": 2,
     "description": "Laura Chinchilla wins the presidency in a first-round landslide.",
     "source": "https://en.wikipedia.org/wiki/2010_Costa_Rican_general_election"
+  },
+  {
+    "id": "costa-rica-2014-pac-wins-the-presidency",
+    "title": "PAC wins the presidency",
+    "date": "6 Apr 2014",
+    "year-from": 2014,
+    "place": "San José",
+    "lat": 9.933,
+    "lon": -84.083,
+    "country": "Costa Rica",
+    "importance": 2,
+    "description": "Luis Guillermo Solís of the Citizens' Action Party won the run-off with 78 per cent, the first president since 1978 from outside the two traditional parties.",
+    "source": "https://en.wikipedia.org/wiki/2014_Costa_Rican_general_election"
+  },
+  {
+    "id": "costa-rica-2017-hurricane-nate",
+    "title": "Hurricane Nate",
+    "date": "Oct 2017",
+    "year-from": 2017,
+    "place": "San José",
+    "lat": 9.933,
+    "lon": -84.083,
+    "country": "Costa Rica",
+    "importance": 3,
+    "description": "Floods and mudslides from Hurricane Nate killed 14 people and caused the costliest natural disaster in the country's history.",
+    "source": "https://en.wikipedia.org/wiki/Hurricane_Nate"
+  },
+  {
+    "id": "costa-rica-2018-alvarado-wins-the-presidency",
+    "title": "Alvarado wins the presidency",
+    "date": "1 Apr 2018",
+    "year-from": 2018,
+    "place": "San José",
+    "lat": 9.933,
+    "lon": -84.083,
+    "country": "Costa Rica",
+    "importance": 3,
+    "description": "Carlos Alvarado of the Citizens' Action Party won the run-off with 61 per cent of the vote against the conservative candidate Fabricio Alvarado.",
+    "source": "https://en.wikipedia.org/wiki/2018_Costa_Rican_general_election"
   }
 ]

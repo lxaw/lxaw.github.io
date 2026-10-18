@@ -304,5 +304,31 @@
     "importance": 1,
     "description": "The army seizes President Manuel Zelaya and flies him out of the country, the first successful coup in Latin America in a generation.",
     "source": "https://en.wikipedia.org/wiki/2009_Honduran_coup_d'état"
+  },
+  {
+    "id": "honduras-2011-readmitted-to-the-oas",
+    "title": "Readmitted to the OAS",
+    "date": "1 Jun 2011",
+    "year-from": 2011,
+    "place": "Tegucigalpa",
+    "lat": 14.105,
+    "lon": -87.217,
+    "country": "Honduras",
+    "importance": 3,
+    "description": "The Organization of American States readmitted Honduras, suspended after the 2009 coup, following the return from exile of President Zelaya.",
+    "source": "https://en.wikipedia.org/wiki/Organization_of_American_States"
+  },
+  {
+    "id": "honduras-2017-election-crisis",
+    "title": "Election crisis",
+    "date": "17 Dec 2017",
+    "year-from": 2017,
+    "place": "Tegucigalpa",
+    "lat": 14.105,
+    "lon": -87.217,
+    "country": "Honduras",
+    "importance": 3,
+    "description": "Juan Orlando Hernández was declared re-elected after a vote count that the OAS found too flawed to accept, and protests left at least 22 people dead.",
+    "source": "https://en.wikipedia.org/wiki/2017_Honduran_general_election"
   }
 ]

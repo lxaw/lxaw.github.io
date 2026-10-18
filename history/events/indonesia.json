@@ -462,5 +462,57 @@
     "importance": 2,
     "description": "An earthquake off Sumatra sends waves around the ocean, killing about 230,000 people, more than half of them in Aceh.",
     "source": "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami"
+  },
+  {
+    "id": "indonesia-2005-aceh-peace-agreement",
+    "title": "Aceh peace agreement",
+    "date": "15 Aug 2005",
+    "year-from": 2005,
+    "place": "Helsinki, Finland",
+    "lat": 60.17,
+    "lon": 24.94,
+    "country": "Indonesia",
+    "importance": 2,
+    "description": "The government and the Free Aceh Movement signed a peace accord in Helsinki, ending a thirty-year war in Aceh.",
+    "source": "https://en.wikipedia.org/wiki/Free_Aceh_Movement"
+  },
+  {
+    "id": "indonesia-2014-joko-widodo-elected-president",
+    "title": "Joko Widodo elected president",
+    "date": "2014",
+    "year-from": 2014,
+    "place": "Jakarta",
+    "lat": -6.2,
+    "lon": 106.85,
+    "country": "Indonesia",
+    "importance": 3,
+    "description": "Joko Widodo, a former furniture exporter and governor of Jakarta, defeated Prabowo Subianto to become the first president from outside the political and military elite.",
+    "source": "https://en.wikipedia.org/wiki/Joko_Widodo"
+  },
+  {
+    "id": "indonesia-2018-sulawesi-earthquake-and-tsunami",
+    "title": "Sulawesi earthquake and tsunami",
+    "date": "28 Sep 2018",
+    "year-from": 2018,
+    "place": "Palu, Sulawesi",
+    "lat": -0.9,
+    "lon": 119.87,
+    "country": "Indonesia",
+    "importance": 3,
+    "description": "A magnitude-7.5 earthquake triggered a tsunami that struck Palu and soil liquefaction that buried neighbourhoods; about 4,300 people died.",
+    "source": "https://en.wikipedia.org/wiki/2018_Sulawesi_earthquake_and_tsunami"
+  },
+  {
+    "id": "indonesia-2019-new-capital-announced",
+    "title": "New capital announced",
+    "date": "Aug 2019",
+    "year-from": 2019,
+    "place": "Jakarta",
+    "lat": -6.2,
+    "lon": 106.85,
+    "country": "Indonesia",
+    "importance": 3,
+    "description": "President Widodo announced that the capital would move from the crowded and sinking Jakarta to a new city in Kalimantan on Borneo.",
+    "source": "https://en.wikipedia.org/wiki/Nusantara"
   }
 ]

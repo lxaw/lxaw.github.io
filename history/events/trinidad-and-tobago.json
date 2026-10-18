@@ -238,5 +238,31 @@
     "importance": 2,
     "description": "Kamla Persad-Bissessar is sworn in as the country's first female prime minister.",
     "source": "https://en.wikipedia.org/wiki/Kamla_Persad-Bissessar"
+  },
+  {
+    "id": "trinidad-and-tobago-2018-first-female-president",
+    "title": "First female president",
+    "date": "19 Mar 2018",
+    "year-from": 2018,
+    "place": "Port of Spain",
+    "lat": 10.667,
+    "lon": -61.517,
+    "country": "Trinidad and Tobago",
+    "importance": 2,
+    "description": "Paula-Mae Weekes was sworn in as the country's first female president.",
+    "source": "https://en.wikipedia.org/wiki/Paula-Mae_Weekes"
+  },
+  {
+    "id": "trinidad-and-tobago-2018-petrotrin-shut-down",
+    "title": "Petrotrin shut down",
+    "date": "30 Nov 2018",
+    "year-from": 2018,
+    "place": "Pointe-à-Pierre",
+    "lat": 10.32,
+    "lon": -61.45,
+    "country": "Trinidad and Tobago",
+    "importance": 3,
+    "description": "The state oil company Petrotrin was shut down, ending 101 years of refining at Pointe-à-Pierre and costing about 5,500 jobs.",
+    "source": "https://en.wikipedia.org/wiki/Petrotrin"
   }
 ]

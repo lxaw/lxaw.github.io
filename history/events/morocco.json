@@ -439,5 +439,44 @@
     "importance": 2,
     "description": "After protests the king puts a constitution with a stronger parliament to a vote.",
     "source": "https://en.wikipedia.org/wiki/2011_Moroccan_constitutional_referendum"
+  },
+  {
+    "id": "morocco-2016-death-of-mouhcine-fikri",
+    "title": "Death of Mouhcine Fikri",
+    "date": "28 Oct 2016",
+    "year-from": 2016,
+    "place": "Al Hoceima",
+    "lat": 35.247,
+    "lon": -3.937,
+    "country": "Morocco",
+    "importance": 3,
+    "description": "A fish vendor is crushed inside a rubbish truck as police confiscate his catch in Al Hoceima, setting off the Hirak Rif protest movement.",
+    "source": "https://en.wikipedia.org/wiki/Death_of_Mouhcine_Fikri"
+  },
+  {
+    "id": "morocco-2017-african-union",
+    "title": "Morocco rejoins the African Union",
+    "date": "31 Jan 2017",
+    "year-from": 2017,
+    "place": "Addis Ababa, Ethiopia",
+    "lat": 9.005,
+    "lon": 38.764,
+    "country": "Morocco",
+    "importance": 3,
+    "description": "Thirty-three years after walking out over the admission of the Sahrawi republic, Morocco is readmitted to the African Union.",
+    "source": "https://en.wikipedia.org/wiki/Member_states_of_the_African_Union"
+  },
+  {
+    "id": "morocco-2018-al-boraq",
+    "title": "Al Boraq high-speed railway opens",
+    "date": "15 Nov 2018",
+    "year-from": 2018,
+    "place": "Tangier",
+    "lat": 35.77,
+    "lon": -5.8,
+    "country": "Morocco",
+    "importance": 3,
+    "description": "The first high-speed railway in Africa opens, linking Tangier with Casablanca in just over two hours.",
+    "source": "https://en.wikipedia.org/wiki/Al_Boraq"
   }
 ]

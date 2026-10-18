@@ -435,5 +435,44 @@
     "importance": 1,
     "description": "Lithuania becomes a member of the European Union, a month after joining NATO.",
     "source": "https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union"
+  },
+  {
+    "id": "lithuania-2007-lithuania-joins-the-schengen-area",
+    "title": "Lithuania joins the Schengen Area",
+    "date": "21 Dec 2007",
+    "year-from": 2007,
+    "place": "Vilnius",
+    "lat": 54.687,
+    "lon": 25.28,
+    "country": "Lithuania",
+    "importance": 3,
+    "description": "Land and sea border checks ended as Lithuania joined the Schengen Area with eight other new EU states.",
+    "source": "https://en.wikipedia.org/wiki/2008_enlargement_of_the_Schengen_Area"
+  },
+  {
+    "id": "lithuania-2009-first-woman-elected-president",
+    "title": "First woman elected president",
+    "date": "17 May 2009",
+    "year-from": 2009,
+    "place": "Vilnius",
+    "lat": 54.687,
+    "lon": 25.28,
+    "country": "Lithuania",
+    "importance": 3,
+    "description": "Dalia Grybauskaitė won the presidency in a landslide, the first woman to hold the office.",
+    "source": "https://en.wikipedia.org/wiki/Dalia_Grybauskaitė"
+  },
+  {
+    "id": "lithuania-2015-lithuania-adopts-the-euro",
+    "title": "Lithuania adopts the euro",
+    "date": "1 Jan 2015",
+    "year-from": 2015,
+    "place": "Vilnius",
+    "lat": 54.687,
+    "lon": 25.28,
+    "country": "Lithuania",
+    "importance": 2,
+    "description": "The euro replaced the litas, making Lithuania the last of the three Baltic states to adopt it.",
+    "source": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Lithuania"
   }
 ]

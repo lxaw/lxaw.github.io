@@ -1,5 +1,18 @@
 [
   {
+    "id": "japan-bce14000-jomon-period-begins",
+    "title": "Jōmon period begins",
+    "date": "about 14000 BCE",
+    "year-from": -14000,
+    "place": "Sotogahama, Aomori",
+    "lat": 41.16,
+    "lon": 140.36,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Hunter-gatherers in the islands begin making cord-marked pottery, among the oldest known in the world.",
+    "source": "https://en.wikipedia.org/wiki/Jōmon_period"
+  },
+  {
     "id": "japan-bce3900-sannai-maruyama-settlement",
     "title": "Sannai-Maruyama settled",
     "date": "about 3900 BCE",
@@ -13,6 +26,19 @@
     "source": "https://en.wikipedia.org/wiki/Sannai-Maruyama_site"
   },
   {
+    "id": "japan-bce660-emperor-jimmu-enthroned",
+    "title": "Emperor Jimmu enthroned",
+    "date": "660 BCE (traditional date)",
+    "year-from": -660,
+    "place": "Kashihara, Nara",
+    "lat": 34.51,
+    "lon": 135.79,
+    "country": "Japan",
+    "importance": 2,
+    "description": "According to legend, Emperor Jimmu is enthroned, beginning the imperial line.",
+    "source": "https://en.wikipedia.org/wiki/Emperor_Jimmu"
+  },
+  {
     "id": "japan-bce400-yoshinogari-settlement",
     "title": "Yoshinogari settlement",
     "date": "before 400 BCE",
@@ -24,6 +50,19 @@
     "importance": 3,
     "description": "A rice-farming village of the Yayoi period is founded in northern Kyushu and grows into a large moated and palisaded settlement.",
     "source": "https://en.wikipedia.org/wiki/Yoshinogari_site"
+  },
+  {
+    "id": "japan-bce300-yayoi-period-begins",
+    "title": "Yayoi period begins",
+    "date": "about 300 BCE",
+    "year-from": -300,
+    "place": "Northern Kyushu",
+    "lat": 33.6,
+    "lon": 130.4,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Wet-rice farming and bronze and iron metalworking arrive from the continent and spread from northern Kyushu through the islands.",
+    "source": "https://en.wikipedia.org/wiki/Yayoi_period"
   },
   {
     "id": "japan-57-na-envoy-receives-the-han-gold-seal",
@@ -53,6 +92,19 @@
     "importance": 1,
     "description": "Queen Himiko of Yamatai sends envoys to the Wei court, which names her a friend of Wei; the Chinese record is the main written source on Japan in this period.",
     "source": "https://en.wikipedia.org/wiki/Himiko"
+  },
+  {
+    "id": "japan-250-first-keyhole-shaped-kofun",
+    "title": "First keyhole-shaped kofun",
+    "date": "about 250",
+    "year-from": 250,
+    "place": "Makimuku, Nara",
+    "lat": 34.5,
+    "lon": 135.88,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The rulers of Yamato begin building great keyhole-shaped burial mounds, which spread across the country.",
+    "source": "https://en.wikipedia.org/wiki/Kofun_period"
   },
   {
     "id": "japan-450-daisen-kofun",
@@ -184,6 +236,19 @@
     "importance": 2,
     "description": "Yoshifusa becomes the first regent not of imperial blood, beginning two centuries in which the Fujiwara rule through child emperors.",
     "source": "https://en.wikipedia.org/wiki/Sesshō_and_Kampaku"
+  },
+  {
+    "id": "japan-901-sugawara-no-michizane-exiled",
+    "title": "Sugawara no Michizane exiled",
+    "date": "901",
+    "year-from": 901,
+    "place": "Dazaifu, Fukuoka",
+    "lat": 33.51,
+    "lon": 130.52,
+    "country": "Japan",
+    "importance": 3,
+    "description": "Demoted through the plotting of Fujiwara no Tokihira, the scholar-official Sugawara no Michizane is sent to Dazaifu, where he dies; he is later venerated as Tenjin, the god of learning.",
+    "source": "https://en.wikipedia.org/wiki/Sugawara_no_Michizane"
   },
   {
     "id": "japan-1008-the-tale-of-genji",
@@ -882,5 +947,31 @@
     "importance": 1,
     "description": "A magnitude 9 earthquake and the tsunami it raises kill nearly 20,000 people and cause the Fukushima nuclear accident.",
     "source": "https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami"
+  },
+  {
+    "id": "japan-2013-tokyo-chosen-for-olympics",
+    "title": "Tokyo chosen for the 2020 Olympics",
+    "date": "7 Sep 2013",
+    "year-from": 2013,
+    "place": "Buenos Aires, Argentina",
+    "lat": -34.603,
+    "lon": -58.382,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The International Olympic Committee awards the 2020 Summer Olympics to Tokyo over Istanbul and Madrid, making it the first Asian city chosen twice to host the games.",
+    "source": "https://en.wikipedia.org/wiki/Bids_for_the_2020_Summer_Olympics"
+  },
+  {
+    "id": "japan-2019-reiwa-era",
+    "title": "Reiwa era begins",
+    "date": "1 May 2019",
+    "year-from": 2019,
+    "place": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.76,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Naruhito takes the throne after the abdication of his father Akihito, the first abdication in two centuries, and the Reiwa era begins.",
+    "source": "https://en.wikipedia.org/wiki/Reiwa_era"
   }
 ]

@@ -382,5 +382,31 @@
     "importance": 2,
     "description": "The Senate removes President Lugo after an impeachment lasting two days, which neighbouring governments condemn.",
     "source": "https://en.wikipedia.org/wiki/Impeachment_of_Fernando_Lugo"
+  },
+  {
+    "id": "paraguay-2013-horacio-cartes-elected",
+    "title": "Horacio Cartes elected",
+    "date": "21 Apr 2013",
+    "year-from": 2013,
+    "place": "Asunción",
+    "lat": -25.28,
+    "lon": -57.63,
+    "country": "Paraguay",
+    "importance": 3,
+    "description": "The businessman Horacio Cartes won the presidency for the Colorado Party, returning it to power a year after the removal of Fernando Lugo.",
+    "source": "https://en.wikipedia.org/wiki/2013_Paraguayan_general_election"
+  },
+  {
+    "id": "paraguay-2017-congress-stormed",
+    "title": "Congress stormed over re-election bill",
+    "date": "31 Mar 2017",
+    "year-from": 2017,
+    "place": "Asunción",
+    "lat": -25.28,
+    "lon": -57.63,
+    "country": "Paraguay",
+    "importance": 2,
+    "description": "Protesters stormed and set fire to the Congress building after senators secretly approved a constitutional amendment allowing presidential re-election; in the unrest police killed the young activist Rodrigo Quintana, and the bill was later dropped.",
+    "source": "https://en.wikipedia.org/wiki/2017_Paraguayan_crisis"
   }
 ]
