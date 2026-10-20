@@ -35,6 +35,7 @@ def generate_html(json_file_path, output_file_path):
     <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
     <style>
         main {{
             padding-top: 0;

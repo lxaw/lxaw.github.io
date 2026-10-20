@@ -16,7 +16,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --text: #e9e9ec;
     --muted: rgba(255, 255, 255, 0.60);
     --hair: rgba(255, 255, 255, 0.14);
@@ -30,6 +30,26 @@
     --accent-underline: rgba(217, 160, 102, 0.35);
     --accent-soft: rgba(217, 160, 102, 0.14);
   }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --text: #e9e9ec;
+  --muted: rgba(255, 255, 255, 0.60);
+  --hair: rgba(255, 255, 255, 0.14);
+  --hair2: rgba(255, 255, 255, 0.08);
+  --hover: rgba(255, 255, 255, 0.05);
+  --faint: rgba(255, 255, 255, 0.32);
+  --bg: #111113;
+  --bg-elevated: #19191c;
+  --accent: #d9a066;
+  --accent-hover: #f0c294;
+  --accent-underline: rgba(217, 160, 102, 0.35);
+  --accent-soft: rgba(217, 160, 102, 0.14);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -71,8 +91,9 @@ main {
 
 /* Navbar styling */
 nav {
+  position: relative;
   border-bottom: 1px solid var(--hair);
-  padding: 16px 0;
+  padding: 16px 52px;
   margin-bottom: 32px;
   font-size: 13.5px;
   text-align: center;
@@ -95,6 +116,31 @@ nav a:hover {
 nav .separator {
   opacity: 0.35;
   margin: 0 4px;
+}
+
+/* Light/dark toggle (injected into nav by theme.js) */
+.theme-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--hair);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent-underline);
 }
 
 /* CV dropdown */
