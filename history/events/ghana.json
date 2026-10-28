@@ -456,5 +456,31 @@
     "importance": 3,
     "description": "The government marked 400 years since the first enslaved Africans landed in Virginia with a Year of Return encouraging the African diaspora to visit and invest in Ghana.",
     "source": "https://en.wikipedia.org/wiki/Year_of_Return,_Ghana_2019"
+  },
+  {
+    "id": "ghana-2024-mahama-returns-to-power",
+    "title": "Mahama returns to power",
+    "date": "7 Dec 2024",
+    "year-from": 2024,
+    "place": "Accra",
+    "lat": 5.603,
+    "lon": -0.187,
+    "country": "Ghana",
+    "importance": 3,
+    "description": "John Mahama wins the presidency eight years after losing it.",
+    "source": "https://en.wikipedia.org/wiki/2024_Ghanaian_general_election"
+  },
+  {
+    "id": "ghana-2025-ministers-killed-in-a-helicopter-crash",
+    "title": "Ministers killed in a helicopter crash",
+    "date": "6 Aug 2025",
+    "year-from": 2025,
+    "place": "Adansi, Ashanti",
+    "lat": 6.28,
+    "lon": -1.73,
+    "country": "Ghana",
+    "importance": 3,
+    "description": "The defence and environment ministers are among eight killed in a military helicopter crash.",
+    "source": "https://en.wikipedia.org/wiki/2025_Ghanaian_Air_Force_Harbin_Z-9_crash"
   }
 ]

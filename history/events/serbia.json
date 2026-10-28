@@ -495,5 +495,31 @@
     "importance": 3,
     "description": "Prime Minister Aleksandar Vučić won the presidency outright in the first round.",
     "source": "https://en.wikipedia.org/wiki/2017_Serbian_presidential_election"
+  },
+  {
+    "id": "serbia-2023-belgrade-school-shooting",
+    "title": "Belgrade school shooting",
+    "date": "3 May 2023",
+    "year-from": 2023,
+    "place": "Belgrade",
+    "lat": 44.8,
+    "lon": 20.47,
+    "country": "Serbia",
+    "importance": 3,
+    "description": "A thirteen-year-old kills nine pupils and a guard at his school; another mass shooting follows the next day.",
+    "source": "https://en.wikipedia.org/wiki/Belgrade_school_shooting"
+  },
+  {
+    "id": "serbia-2024-novi-sad-canopy-collapse",
+    "title": "Novi Sad canopy collapse",
+    "date": "1 Nov 2024",
+    "year-from": 2024,
+    "place": "Novi Sad",
+    "lat": 45.265,
+    "lon": 19.83,
+    "country": "Serbia",
+    "importance": 2,
+    "description": "The concrete canopy of the newly renovated railway station collapses, killing 16 and setting off the largest protests since 2000.",
+    "source": "https://en.wikipedia.org/wiki/Novi_Sad_railway_station_canopy_collapse"
   }
 ]

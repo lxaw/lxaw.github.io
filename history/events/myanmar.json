@@ -424,5 +424,44 @@
     "importance": 1,
     "description": "After attacks on police posts by Rohingya insurgents, an army campaign of killing and burning drives more than 700,000 Rohingya into Bangladesh.",
     "source": "https://en.wikipedia.org/wiki/Rohingya_genocide"
+  },
+  {
+    "id": "myanmar-2021-military-coup",
+    "title": "Military coup",
+    "date": "1 Feb 2021",
+    "year-from": 2021,
+    "place": "Naypyidaw",
+    "lat": 19.763,
+    "lon": 96.078,
+    "country": "Myanmar",
+    "importance": 1,
+    "description": "The army detains Aung San Suu Kyi and seizes power; resistance grows into a civil war.",
+    "source": "https://en.wikipedia.org/wiki/2021_Myanmar_coup_d'état"
+  },
+  {
+    "id": "myanmar-2023-operation-1027",
+    "title": "Operation 1027",
+    "date": "27 Oct 2023",
+    "year-from": 2023,
+    "place": "Northern Shan State",
+    "lat": 23.3,
+    "lon": 97.9,
+    "country": "Myanmar",
+    "importance": 3,
+    "description": "An alliance of ethnic armies drives the junta out of much of the north-east.",
+    "source": "https://en.wikipedia.org/wiki/Operation_1027"
+  },
+  {
+    "id": "myanmar-2025-sagaing-earthquake",
+    "title": "Sagaing earthquake",
+    "date": "28 Mar 2025",
+    "year-from": 2025,
+    "place": "Sagaing",
+    "lat": 21.88,
+    "lon": 95.98,
+    "country": "Myanmar",
+    "importance": 2,
+    "description": "A magnitude 7.7 earthquake near Mandalay kills thousands.",
+    "source": "https://en.wikipedia.org/wiki/2025_Myanmar_earthquake"
   }
 ]

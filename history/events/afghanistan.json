@@ -464,5 +464,57 @@
     "importance": 3,
     "description": "In a vote with historically low turnout amid Taliban attacks, preliminary results give President Ashraf Ghani a narrow majority, which runner-up Abdullah Abdullah rejects.",
     "source": "https://en.wikipedia.org/wiki/2019_Afghan_presidential_election"
+  },
+  {
+    "id": "afghanistan-2020-doha-agreement",
+    "title": "Doha Agreement",
+    "date": "29 Feb 2020",
+    "year-from": 2020,
+    "place": "Doha, Qatar",
+    "lat": 25.286,
+    "lon": 51.533,
+    "country": "Afghanistan",
+    "importance": 3,
+    "description": "The United States and the Taliban agree on a withdrawal of foreign troops.",
+    "source": "https://en.wikipedia.org/wiki/United_States–Taliban_deal"
+  },
+  {
+    "id": "afghanistan-2021-taliban-take-kabul",
+    "title": "Taliban take Kabul",
+    "date": "15 Aug 2021",
+    "year-from": 2021,
+    "place": "Kabul",
+    "lat": 34.555,
+    "lon": 69.207,
+    "country": "Afghanistan",
+    "importance": 1,
+    "description": "The government collapses as the Taliban take the capital, two weeks before the last American troops leave.",
+    "source": "https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)"
+  },
+  {
+    "id": "afghanistan-2021-kabul-airport-bombing",
+    "title": "Kabul airport bombing",
+    "date": "26 Aug 2021",
+    "year-from": 2021,
+    "place": "Hamid Karzai International Airport",
+    "lat": 34.566,
+    "lon": 69.212,
+    "country": "Afghanistan",
+    "importance": 3,
+    "description": "An Islamic State suicide bomber kills about 170 Afghans and 13 US troops at the evacuation gates.",
+    "source": "https://en.wikipedia.org/wiki/2021_Kabul_airport_attack"
+  },
+  {
+    "id": "afghanistan-2022-women-barred-from-universities",
+    "title": "Women barred from universities",
+    "date": "20 Dec 2022",
+    "year-from": 2022,
+    "place": "Kabul",
+    "lat": 34.555,
+    "lon": 69.207,
+    "country": "Afghanistan",
+    "importance": 3,
+    "description": "The Taliban suspend university education for women, after closing girls' secondary schools.",
+    "source": "https://en.wikipedia.org/wiki/Women's_rights_in_Afghanistan"
   }
 ]

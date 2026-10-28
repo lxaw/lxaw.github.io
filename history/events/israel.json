@@ -580,5 +580,31 @@
     "importance": 3,
     "description": "The United States recognised Jerusalem as Israel's capital, a decision welcomed by the Israeli government but condemned by most members of the UN Security Council.",
     "source": "https://en.wikipedia.org/wiki/United_States_recognition_of_Jerusalem_as_capital_of_Israel"
+  },
+  {
+    "id": "israel-2020-abraham-accords",
+    "title": "Abraham Accords",
+    "date": "15 Sep 2020",
+    "year-from": 2020,
+    "place": "Washington, D.C.",
+    "lat": 38.897,
+    "lon": -77.037,
+    "country": "Israel",
+    "importance": 2,
+    "description": "Israel normalises relations with the United Arab Emirates and Bahrain, followed by Morocco and Sudan.",
+    "source": "https://en.wikipedia.org/wiki/Abraham_Accords"
+  },
+  {
+    "id": "israel-2023-hamas-attack-on-southern-israel",
+    "title": "Hamas attack on southern Israel",
+    "date": "7 Oct 2023",
+    "year-from": 2023,
+    "place": "Re'im",
+    "lat": 31.39,
+    "lon": 34.46,
+    "country": "Israel",
+    "importance": 1,
+    "description": "Hamas-led gunmen kill about 1,200 people and take 251 hostages, the deadliest day in Israel's history; Israel goes to war in Gaza.",
+    "source": "https://en.wikipedia.org/wiki/October_7_attacks"
   }
 ]

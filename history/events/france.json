@@ -538,5 +538,57 @@
     "importance": 3,
     "description": "Islamic State gunmen and bombers kill 130 people at the Bataclan theatre, cafés and the national stadium.",
     "source": "https://en.wikipedia.org/wiki/November_2015_Paris_attacks"
+  },
+  {
+    "id": "france-2023-pension-reform-protests",
+    "title": "Pension reform protests",
+    "date": "Mar 2023",
+    "year-from": 2023,
+    "place": "Paris",
+    "lat": 48.857,
+    "lon": 2.352,
+    "country": "France",
+    "importance": 3,
+    "description": "The government forces through a rise in the retirement age without a vote, amid months of strikes.",
+    "source": "https://en.wikipedia.org/wiki/2023_French_pension_reform_strikes"
+  },
+  {
+    "id": "france-2024-paris-olympics",
+    "title": "Paris Olympics",
+    "date": "26 Jul 2024",
+    "year-from": 2024,
+    "place": "Paris",
+    "lat": 48.858,
+    "lon": 2.294,
+    "country": "France",
+    "importance": 3,
+    "description": "Paris hosts the Summer Games for the third time, a century after 1924, opening with a parade on the Seine.",
+    "source": "https://en.wikipedia.org/wiki/2024_Summer_Olympics"
+  },
+  {
+    "id": "france-2024-notre-dame-reopens",
+    "title": "Notre-Dame reopens",
+    "date": "7 Dec 2024",
+    "year-from": 2024,
+    "place": "Notre-Dame de Paris",
+    "lat": 48.853,
+    "lon": 2.35,
+    "country": "France",
+    "importance": 3,
+    "description": "The cathedral reopens five years after the fire that destroyed its roof and spire.",
+    "source": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+  },
+  {
+    "id": "france-2025-louvre-jewel-heist",
+    "title": "Louvre jewel heist",
+    "date": "19 Oct 2025",
+    "year-from": 2025,
+    "place": "Louvre, Paris",
+    "lat": 48.861,
+    "lon": 2.336,
+    "country": "France",
+    "importance": 3,
+    "description": "Thieves using a furniture lift break into the Galerie d'Apollon and take French crown jewels in minutes.",
+    "source": "https://en.wikipedia.org/wiki/2025_Louvre_robbery"
   }
 ]

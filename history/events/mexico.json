@@ -368,5 +368,44 @@
     "importance": 2,
     "description": "Andrés Manuel López Obrador won the presidency in a landslide, the first candidate since 1988 to take an outright majority of the vote.",
     "source": "https://en.wikipedia.org/wiki/2018_Mexican_general_election"
+  },
+  {
+    "id": "mexico-2021-mexico-city-metro-overpass-collapse",
+    "title": "Mexico City Metro overpass collapse",
+    "date": "3 May 2021",
+    "year-from": 2021,
+    "place": "Mexico City",
+    "lat": 19.3,
+    "lon": -99.04,
+    "country": "Mexico",
+    "importance": 3,
+    "description": "An elevated section of Line 12 collapses under a train, killing 26 people.",
+    "source": "https://en.wikipedia.org/wiki/Mexico_City_Metro_overpass_collapse"
+  },
+  {
+    "id": "mexico-2024-sheinbaum-first-woman-president",
+    "title": "Sheinbaum first woman president",
+    "date": "2 Jun 2024",
+    "year-from": 2024,
+    "place": "Mexico City",
+    "lat": 19.433,
+    "lon": -99.133,
+    "country": "Mexico",
+    "importance": 2,
+    "description": "Claudia Sheinbaum wins the presidency by a landslide.",
+    "source": "https://en.wikipedia.org/wiki/2024_Mexican_general_election"
+  },
+  {
+    "id": "mexico-2025-first-judicial-elections",
+    "title": "First judicial elections",
+    "date": "1 Jun 2025",
+    "year-from": 2025,
+    "place": "Mexico City",
+    "lat": 19.433,
+    "lon": -99.133,
+    "country": "Mexico",
+    "importance": 3,
+    "description": "Mexico becomes the first country to elect all its judges by popular vote, on a turnout of about 13 percent.",
+    "source": "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections"
   }
 ]

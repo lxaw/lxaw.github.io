@@ -254,5 +254,18 @@
     "importance": 1,
     "description": "With Senegalese troops across the border under an ECOWAS mandate, Jammeh flies into exile and Barrow takes office.",
     "source": "https://en.wikipedia.org/wiki/2016%E2%80%932017_Gambian_constitutional_crisis"
+  },
+  {
+    "id": "gambia-2021-barrow-re-elected",
+    "title": "Barrow re-elected",
+    "date": "4 Dec 2021",
+    "year-from": 2021,
+    "place": "Banjul",
+    "lat": 13.454,
+    "lon": -16.579,
+    "country": "Gambia",
+    "importance": 3,
+    "description": "Adama Barrow wins a second term in the first election since Jammeh's departure.",
+    "source": "https://en.wikipedia.org/wiki/2021_Gambian_presidential_election"
   }
 ]

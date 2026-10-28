@@ -331,5 +331,31 @@
     "importance": 3,
     "description": "President Hage Geingob wins a second term but SWAPO loses its two-thirds majority for the first time.",
     "source": "https://en.wikipedia.org/wiki/2019_Namibian_general_election"
+  },
+  {
+    "id": "namibia-2024-death-of-hage-geingob",
+    "title": "Death of Hage Geingob",
+    "date": "4 Feb 2024",
+    "year-from": 2024,
+    "place": "Windhoek",
+    "lat": -22.56,
+    "lon": 17.083,
+    "country": "Namibia",
+    "importance": 3,
+    "description": "The president dies in office.",
+    "source": "https://en.wikipedia.org/wiki/Hage_Geingob"
+  },
+  {
+    "id": "namibia-2024-first-woman-president-elected",
+    "title": "First woman president elected",
+    "date": "27 Nov 2024",
+    "year-from": 2024,
+    "place": "Windhoek",
+    "lat": -22.56,
+    "lon": 17.083,
+    "country": "Namibia",
+    "importance": 3,
+    "description": "Netumbo Nandi-Ndaitwah of SWAPO wins the presidency.",
+    "source": "https://en.wikipedia.org/wiki/2024_Namibian_general_election"
   }
 ]

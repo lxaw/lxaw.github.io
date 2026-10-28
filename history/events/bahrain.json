@@ -233,5 +233,18 @@
     "importance": 3,
     "description": "Tens of thousands of Bronze Age burial mounds in the interior, raised by the Dilmun civilisation, were inscribed together as a UNESCO World Heritage Site.",
     "source": "https://en.wikipedia.org/wiki/Dilmun_Burial_Mounds"
+  },
+  {
+    "id": "bahrain-2022-pope-francis-visits-bahrain",
+    "title": "Pope Francis visits Bahrain",
+    "date": "Nov 2022",
+    "year-from": 2022,
+    "place": "Awali",
+    "lat": 26.08,
+    "lon": 50.55,
+    "country": "Bahrain",
+    "importance": 3,
+    "description": "Pope Francis makes the first papal visit to Bahrain, for an interfaith forum.",
+    "source": "https://en.wikipedia.org/wiki/List_of_pastoral_trips_made_by_Pope_Francis"
   }
 ]

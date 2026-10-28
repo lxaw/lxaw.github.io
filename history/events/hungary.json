@@ -421,5 +421,31 @@
     "importance": 3,
     "description": "Parliament rushed through a change to the higher-education law widely seen as aimed at driving out the Central European University, which later moved to Vienna.",
     "source": "https://en.wikipedia.org/wiki/Central_European_University"
+  },
+  {
+    "id": "hungary-2022-orban-s-fourth-term-in-a-row",
+    "title": "Orbán's fourth term in a row",
+    "date": "3 Apr 2022",
+    "year-from": 2022,
+    "place": "Budapest",
+    "lat": 47.507,
+    "lon": 19.046,
+    "country": "Hungary",
+    "importance": 3,
+    "description": "Fidesz wins another two-thirds majority despite the opposition uniting against it.",
+    "source": "https://en.wikipedia.org/wiki/2022_Hungarian_parliamentary_election"
+  },
+  {
+    "id": "hungary-2024-president-novak-resigns",
+    "title": "President Novák resigns",
+    "date": "10 Feb 2024",
+    "year-from": 2024,
+    "place": "Budapest",
+    "lat": 47.497,
+    "lon": 19.04,
+    "country": "Hungary",
+    "importance": 3,
+    "description": "Katalin Novák resigns over a pardon granted in a child sex abuse case.",
+    "source": "https://en.wikipedia.org/wiki/Katalin_Novák"
   }
 ]

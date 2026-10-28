@@ -338,5 +338,18 @@
     "importance": 3,
     "description": "President Rahmon launches construction of what is planned as the world's tallest dam, opposed by downstream Uzbekistan.",
     "source": "https://en.wikipedia.org/wiki/Rogun_Dam"
+  },
+  {
+    "id": "tajikistan-2025-border-treaty-with-kyrgyzstan",
+    "title": "Border treaty with Kyrgyzstan",
+    "date": "13 Mar 2025",
+    "year-from": 2025,
+    "place": "Bishkek, Kyrgyzstan",
+    "lat": 42.875,
+    "lon": 74.6,
+    "country": "Tajikistan",
+    "importance": 3,
+    "description": "The two presidents sign a treaty settling their whole border, three years after a border war.",
+    "source": "https://en.wikipedia.org/wiki/Kyrgyzstan–Tajikistan_border"
   }
 ]

@@ -235,5 +235,18 @@
     "importance": 2,
     "description": "Voters approve changes ending the rotating presidency, allowing Azali Assoumani to entrench himself in power.",
     "source": "https://en.wikipedia.org/wiki/2018_Comorian_constitutional_referendum"
+  },
+  {
+    "id": "comoros-2024-azali-re-elected",
+    "title": "Azali re-elected",
+    "date": "14 Jan 2024",
+    "year-from": 2024,
+    "place": "Moroni",
+    "lat": -11.704,
+    "lon": 43.24,
+    "country": "Comoros",
+    "importance": 3,
+    "description": "Azali Assoumani wins a fourth term; protests follow.",
+    "source": "https://en.wikipedia.org/wiki/2024_Comorian_presidential_election"
   }
 ]

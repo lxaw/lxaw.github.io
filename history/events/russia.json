@@ -1132,5 +1132,57 @@
     "importance": 3,
     "description": "Russia hosts the football World Cup for the first time; France win the final in Moscow.",
     "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup"
+  },
+  {
+    "id": "russia-2022-annexation-of-four-ukrainian-regions",
+    "title": "Annexation of four Ukrainian regions",
+    "date": "30 Sep 2022",
+    "year-from": 2022,
+    "place": "Moscow",
+    "lat": 55.752,
+    "lon": 37.617,
+    "country": "Russia",
+    "importance": 2,
+    "description": "After staged referendums, Russia claims to annex the Donetsk, Luhansk, Zaporizhzhia and Kherson regions; almost no country recognises it.",
+    "source": "https://en.wikipedia.org/wiki/Russian_annexation_of_Donetsk,_Kherson,_Luhansk_and_Zaporizhzhia_oblasts"
+  },
+  {
+    "id": "russia-2023-wagner-group-mutiny",
+    "title": "Wagner Group mutiny",
+    "date": "24 Jun 2023",
+    "year-from": 2023,
+    "place": "Rostov-on-Don",
+    "lat": 47.222,
+    "lon": 39.72,
+    "country": "Russia",
+    "importance": 3,
+    "description": "Yevgeny Prigozhin's mercenaries seize Rostov and march on Moscow before turning back; he dies in a plane crash two months later.",
+    "source": "https://en.wikipedia.org/wiki/Wagner_Group_rebellion"
+  },
+  {
+    "id": "russia-2024-death-of-alexei-navalny",
+    "title": "Death of Alexei Navalny",
+    "date": "16 Feb 2024",
+    "year-from": 2024,
+    "place": "Kharp, Yamalo-Nenets",
+    "lat": 66.81,
+    "lon": 65.81,
+    "country": "Russia",
+    "importance": 3,
+    "description": "The opposition leader dies in an Arctic penal colony.",
+    "source": "https://en.wikipedia.org/wiki/Death_of_Alexei_Navalny"
+  },
+  {
+    "id": "russia-2024-crocus-city-hall-attack",
+    "title": "Crocus City Hall attack",
+    "date": "22 Mar 2024",
+    "year-from": 2024,
+    "place": "Krasnogorsk",
+    "lat": 55.826,
+    "lon": 37.389,
+    "country": "Russia",
+    "importance": 3,
+    "description": "Gunmen of the Islamic State's Khorasan branch kill 145 people at a concert hall outside Moscow.",
+    "source": "https://en.wikipedia.org/wiki/Crocus_City_Hall_attack"
   }
 ]

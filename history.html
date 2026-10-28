@@ -495,6 +495,8 @@
             <p class="credit">
                 Borders from 1886 to 2019 are year by year, from
                 <a href="https://icr.ethz.ch/data/cshapes/">CShapes 2.0</a> (ETH Zurich, CC BY-NC-SA 4.0, simplified).
+                CShapes ends in 2019, so the years 2020 to 2026 keep the 2019 borders; changes since then, such as
+                Russia's claimed annexations in Ukraine in 2022, are not drawn.
                 Earlier borders are approximate snapshots from
                 <a href="https://github.com/aourednik/historical-basemaps">historical-basemaps</a> (GPL-3.0),
                 starting at 10,000 BCE. From a billion years ago until then, the map shows today's coastlines moved to where plate
@@ -532,6 +534,7 @@
         // 1886 onwards: CShapes 2.0, where every border has exact start and end
         // dates, so there is a stop for every year. history/cshapes-2.0.topojson
         // is the original file with shapes simplified to 30% of their points.
+        // CShapes ends in 2019; the stops after that reuse the 2019 borders.
         const BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/';
         const YEARS = [
             -3000, -2000, -1500, -1000, -700, -500, -400, -323, -300, -200, -100, -1,
@@ -539,7 +542,7 @@
             1492, 1500, 1530, 1600, 1650, 1700, 1715, 1783, 1800, 1815, 1878, 1880
         ];
         const CSHAPES_PATH = 'history/cshapes-2.0.topojson';
-        const CSHAPES_FROM = 1886, CSHAPES_TO = 2019;
+        const CSHAPES_FROM = 1886, CSHAPES_DATA_TO = 2019, CSHAPES_TO = 2026;
         // CShapes has no shape for Greenland. This one is today's outline from
         // Natural Earth, shown as Danish for the whole CShapes period.
         const GREENLAND_PATH = 'history/greenland.topojson';
@@ -599,7 +602,7 @@
         const TICKS = [
             [-13800 * MA, '13.8 bya'], [-1000 * MA, '1 bya', true], [-500 * MA, '500 mya', true], [-200 * MA, '200 mya', true],
             [-3000, '3000 BCE'], [1000, '1000 CE', true], [1900, '1900'], [1950, '1950'],
-            [2000, '2000', true], [2019, '2019']
+            [2000, '2000', true], [2026, '2026']
         ]; // [year, label, hidden on narrow screens]
 
         // Events live in history/events/, one file per country, listed in
@@ -824,11 +827,12 @@
             return cshapes;
         }
 
-        // Modern years show the borders in force on 1 July of that year.
+        // Modern years show the borders in force on 1 July of that year, or of
+        // 2019 for the years after the data ends.
         function loadYear(year) {
             if (isDeep(year)) return loadPaleo(-year / MA);
             if (year < CSHAPES_FROM) return loadSnapshot(year);
-            const day = year * 10000 + 701;
+            const day = Math.min(year, CSHAPES_DATA_TO) * 10000 + 701;
             return loadCShapes().then(features => ({
                 features: features.filter(f => f.properties.s <= day && day <= f.properties.e)
             }));
@@ -850,7 +854,8 @@
             const next = YEARS[i + 1];
             document.getElementById('yearLabel').textContent = formatYear(year);
             document.getElementById('periodLabel').textContent =
-                year >= CSHAPES_FROM ? 'borders as of 1 July'
+                year > CSHAPES_DATA_TO ? `borders as of ${CSHAPES_DATA_TO} (no newer data)`
+                : year >= CSHAPES_FROM ? 'borders as of 1 July'
                 : !isDeep(year) ? `next snapshot: ${formatYear(next)}`
                 : year < -PALEO_FROM * MA ? 'illustration, not a map and not to scale'
                 : year > -PALEO_TO * MA ? "today's coastlines, which the continents had nearly reached"
@@ -1231,7 +1236,7 @@
             if (feature.properties.dated) {
                 const { s, e } = feature.properties;
                 const from = Math.floor(s / 10000) === CSHAPES_FROM && s % 10000 === 101 ? `${CSHAPES_FROM} or earlier` : formatDay(s);
-                const to = Math.floor(e / 10000) === CSHAPES_TO ? `${CSHAPES_TO} or later` : formatDay(e);
+                const to = Math.floor(e / 10000) === CSHAPES_DATA_TO ? `${CSHAPES_DATA_TO} or later` : formatDay(e);
                 meta.push(`These borders: ${from} to ${to}`);
             }
             for (const line of meta) {

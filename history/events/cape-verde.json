@@ -195,5 +195,18 @@
     "importance": 3,
     "description": "The opposition Movement for Democracy wins a majority and Ulisses Correia e Silva becomes prime minister.",
     "source": "https://en.wikipedia.org/wiki/2016_Cape_Verdean_parliamentary_election"
+  },
+  {
+    "id": "cape-verde-2024-declared-free-of-malaria",
+    "title": "Declared free of malaria",
+    "date": "12 Jan 2024",
+    "year-from": 2024,
+    "place": "Praia",
+    "lat": 14.933,
+    "lon": -23.513,
+    "country": "Cape Verde",
+    "importance": 3,
+    "description": "The WHO certifies Cape Verde malaria-free, the third African country to be so.",
+    "source": "https://en.wikipedia.org/wiki/2024_in_Cape_Verde"
   }
 ]

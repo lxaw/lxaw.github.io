@@ -369,5 +369,31 @@
     "importance": 1,
     "description": "A revised accord is signed after voters narrowly reject the first, ending the longest war in the Americas.",
     "source": "https://en.wikipedia.org/wiki/Colombian_peace_process"
+  },
+  {
+    "id": "colombia-2021-national-strike",
+    "title": "National strike",
+    "date": "28 Apr 2021",
+    "year-from": 2021,
+    "place": "Cali",
+    "lat": 3.452,
+    "lon": -76.532,
+    "country": "Colombia",
+    "importance": 3,
+    "description": "Protests against a tax reform grow into months of unrest in which dozens die.",
+    "source": "https://en.wikipedia.org/wiki/2021_Colombian_protests"
+  },
+  {
+    "id": "colombia-2022-petro-elected",
+    "title": "Petro elected",
+    "date": "19 Jun 2022",
+    "year-from": 2022,
+    "place": "Bogotá",
+    "lat": 4.711,
+    "lon": -74.072,
+    "country": "Colombia",
+    "importance": 2,
+    "description": "Gustavo Petro, a former M-19 guerrilla, becomes the first leftist president of Colombia.",
+    "source": "https://en.wikipedia.org/wiki/2022_Colombian_presidential_election"
   }
 ]

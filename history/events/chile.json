@@ -393,5 +393,57 @@
     "importance": 2,
     "description": "A rise in metro fares sets off the largest protests since the dictatorship.",
     "source": "https://en.wikipedia.org/wiki/Social_Outburst_(Chile)"
+  },
+  {
+    "id": "chile-2020-vote-for-a-new-constitution",
+    "title": "Vote for a new constitution",
+    "date": "25 Oct 2020",
+    "year-from": 2020,
+    "place": "Santiago",
+    "lat": -33.448,
+    "lon": -70.669,
+    "country": "Chile",
+    "importance": 3,
+    "description": "Almost four in five voters back replacing the Pinochet-era constitution.",
+    "source": "https://en.wikipedia.org/wiki/2020_Chilean_national_plebiscite"
+  },
+  {
+    "id": "chile-2021-boric-elected",
+    "title": "Boric elected",
+    "date": "19 Dec 2021",
+    "year-from": 2021,
+    "place": "Santiago",
+    "lat": -33.448,
+    "lon": -70.669,
+    "country": "Chile",
+    "importance": 3,
+    "description": "Gabriel Boric, a former student leader, becomes the youngest president in Chile's history.",
+    "source": "https://en.wikipedia.org/wiki/2021_Chilean_presidential_election"
+  },
+  {
+    "id": "chile-2022-new-constitution-rejected",
+    "title": "New constitution rejected",
+    "date": "4 Sep 2022",
+    "year-from": 2022,
+    "place": "Santiago",
+    "lat": -33.448,
+    "lon": -70.669,
+    "country": "Chile",
+    "importance": 3,
+    "description": "Voters reject the draft constitution by 62 percent; a second draft fails in 2023.",
+    "source": "https://en.wikipedia.org/wiki/2022_Chilean_national_plebiscite"
+  },
+  {
+    "id": "chile-2025-kast-elected",
+    "title": "Kast elected",
+    "date": "14 Dec 2025",
+    "year-from": 2025,
+    "place": "Santiago",
+    "lat": -33.448,
+    "lon": -70.669,
+    "country": "Chile",
+    "importance": 3,
+    "description": "José Antonio Kast wins the run-off, the most right-wing president since the return of democracy.",
+    "source": "https://en.wikipedia.org/wiki/2025_Chilean_presidential_election"
   }
 ]

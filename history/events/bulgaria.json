@@ -461,5 +461,31 @@
     "importance": 3,
     "description": "A run on Corporate Commercial Bank, the country's fourth-largest, forced it under central bank supervision and it was stripped of its licence.",
     "source": "https://en.wikipedia.org/wiki/Corporate_Commercial_Bank"
+  },
+  {
+    "id": "bulgaria-2025-joins-the-schengen-area",
+    "title": "Joins the Schengen Area",
+    "date": "1 Jan 2025",
+    "year-from": 2025,
+    "place": "Sofia",
+    "lat": 42.698,
+    "lon": 23.322,
+    "country": "Bulgaria",
+    "importance": 3,
+    "description": "Land border checks with the rest of the Schengen Area end.",
+    "source": "https://en.wikipedia.org/wiki/2025_enlargement_of_the_Schengen_Area"
+  },
+  {
+    "id": "bulgaria-2026-bulgaria-adopts-the-euro",
+    "title": "Bulgaria adopts the euro",
+    "date": "1 Jan 2026",
+    "year-from": 2026,
+    "place": "Sofia",
+    "lat": 42.698,
+    "lon": 23.322,
+    "country": "Bulgaria",
+    "importance": 3,
+    "description": "The euro replaces the lev, making Bulgaria the 21st country of the eurozone.",
+    "source": "https://en.wikipedia.org/wiki/Bulgaria_and_the_euro"
   }
 ]

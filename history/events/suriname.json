@@ -242,5 +242,31 @@
     "importance": 2,
     "description": "A court finds the former president guilty of murder over the December killings and sentences him in his absence.",
     "source": "https://en.wikipedia.org/wiki/December_murders"
+  },
+  {
+    "id": "suriname-2020-santokhi-elected",
+    "title": "Santokhi elected",
+    "date": "13 Jul 2020",
+    "year-from": 2020,
+    "place": "Paramaribo",
+    "lat": 5.852,
+    "lon": -55.204,
+    "country": "Suriname",
+    "importance": 3,
+    "description": "Chan Santokhi replaces Dési Bouterse as president.",
+    "source": "https://en.wikipedia.org/wiki/2020_Surinamese_general_election"
+  },
+  {
+    "id": "suriname-2025-first-woman-president",
+    "title": "First woman president",
+    "date": "6 Jul 2025",
+    "year-from": 2025,
+    "place": "Paramaribo",
+    "lat": 5.852,
+    "lon": -55.204,
+    "country": "Suriname",
+    "importance": 3,
+    "description": "Jennifer Geerlings-Simons is elected president by the National Assembly.",
+    "source": "https://en.wikipedia.org/wiki/Jennifer_Geerlings-Simons"
   }
 ]

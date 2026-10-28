@@ -400,5 +400,44 @@
     "importance": 3,
     "description": "A category 4 hurricane strikes the south-western peninsula, killing hundreds of people.",
     "source": "https://en.wikipedia.org/wiki/Hurricane_Matthew"
+  },
+  {
+    "id": "haiti-2021-assassination-of-jovenel-moise",
+    "title": "Assassination of Jovenel Moïse",
+    "date": "7 Jul 2021",
+    "year-from": 2021,
+    "place": "Pétion-Ville",
+    "lat": 18.51,
+    "lon": -72.29,
+    "country": "Haiti",
+    "importance": 2,
+    "description": "The president is killed at his home by a group of mostly Colombian mercenaries.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Jovenel_Moïse"
+  },
+  {
+    "id": "haiti-2021-earthquake-of-2021",
+    "title": "Earthquake of 2021",
+    "date": "14 Aug 2021",
+    "year-from": 2021,
+    "place": "Saint-Louis-du-Sud",
+    "lat": 18.26,
+    "lon": -73.55,
+    "country": "Haiti",
+    "importance": 3,
+    "description": "An earthquake in the south-west kills more than 2,000 people.",
+    "source": "https://en.wikipedia.org/wiki/2021_Haiti_earthquake"
+  },
+  {
+    "id": "haiti-2024-kenyan-led-mission-arrives",
+    "title": "Kenyan-led mission arrives",
+    "date": "25 Jun 2024",
+    "year-from": 2024,
+    "place": "Port-au-Prince",
+    "lat": 18.594,
+    "lon": -72.307,
+    "country": "Haiti",
+    "importance": 3,
+    "description": "Kenyan police land at the head of a UN-backed force against the gangs that control most of the capital.",
+    "source": "https://en.wikipedia.org/wiki/Multinational_Security_Support_Mission_in_Haiti"
   }
 ]

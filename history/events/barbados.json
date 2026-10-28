@@ -232,5 +232,18 @@
     "importance": 2,
     "description": "Mia Mottley is sworn in after a landslide, becoming the country's first female prime minister.",
     "source": "https://en.wikipedia.org/wiki/Mia_Mottley"
+  },
+  {
+    "id": "barbados-2021-barbados-becomes-a-republic",
+    "title": "Barbados becomes a republic",
+    "date": "30 Nov 2021",
+    "year-from": 2021,
+    "place": "Bridgetown",
+    "lat": 13.097,
+    "lon": -59.618,
+    "country": "Barbados",
+    "importance": 2,
+    "description": "Barbados removes Elizabeth II as head of state on the 55th anniversary of independence; Sandra Mason becomes president.",
+    "source": "https://en.wikipedia.org/wiki/Barbados"
   }
 ]

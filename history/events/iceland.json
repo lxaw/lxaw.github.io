@@ -394,5 +394,44 @@
     "importance": 3,
     "description": "A plaque addressed 'to the future' is unveiled at Okjökull, the first Icelandic glacier to lose its status as it wastes away.",
     "source": "https://en.wikipedia.org/wiki/Okj%C3%B6kull"
+  },
+  {
+    "id": "iceland-2021-fagradalsfjall-erupts",
+    "title": "Fagradalsfjall erupts",
+    "date": "19 Mar 2021",
+    "year-from": 2021,
+    "place": "Fagradalsfjall",
+    "lat": 63.89,
+    "lon": -22.27,
+    "country": "Iceland",
+    "importance": 3,
+    "description": "The first eruption on the Reykjanes peninsula in some 800 years.",
+    "source": "https://en.wikipedia.org/wiki/Fagradalsfjall"
+  },
+  {
+    "id": "iceland-2023-grindavik-evacuated",
+    "title": "Grindavík evacuated",
+    "date": "10 Nov 2023",
+    "year-from": 2023,
+    "place": "Grindavík",
+    "lat": 63.842,
+    "lon": -22.433,
+    "country": "Iceland",
+    "importance": 3,
+    "description": "The town is evacuated as magma moves beneath it; eruptions follow repeatedly.",
+    "source": "https://en.wikipedia.org/wiki/2023–2025_Sundhnúkur_eruptions"
+  },
+  {
+    "id": "iceland-2024-halla-tomasdottir-elected-president",
+    "title": "Halla Tómasdóttir elected president",
+    "date": "1 Jun 2024",
+    "year-from": 2024,
+    "place": "Reykjavík",
+    "lat": 64.147,
+    "lon": -21.942,
+    "country": "Iceland",
+    "importance": 3,
+    "description": "The businesswoman wins the presidential election.",
+    "source": "https://en.wikipedia.org/wiki/2024_Icelandic_presidential_election"
   }
 ]

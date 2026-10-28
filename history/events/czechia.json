@@ -446,5 +446,31 @@
     "importance": 3,
     "description": "More than 250,000 people rallied in Prague's Letná Park to demand the resignation of Prime Minister Babiš, the biggest demonstration since the fall of communism.",
     "source": "https://en.wikipedia.org/wiki/Milion_chvilek_pro_demokracii"
+  },
+  {
+    "id": "czechia-2023-pavel-elected-president",
+    "title": "Pavel elected president",
+    "date": "28 Jan 2023",
+    "year-from": 2023,
+    "place": "Prague",
+    "lat": 50.088,
+    "lon": 14.42,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "The retired general Petr Pavel defeats Andrej Babiš in the run-off.",
+    "source": "https://en.wikipedia.org/wiki/2023_Czech_presidential_election"
+  },
+  {
+    "id": "czechia-2023-charles-university-shooting",
+    "title": "Charles University shooting",
+    "date": "21 Dec 2023",
+    "year-from": 2023,
+    "place": "Prague",
+    "lat": 50.088,
+    "lon": 14.416,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "A student kills 14 people at the Faculty of Arts, the deadliest mass shooting in the country's history.",
+    "source": "https://en.wikipedia.org/wiki/2023_Prague_shooting"
   }
 ]

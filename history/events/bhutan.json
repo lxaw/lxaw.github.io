@@ -324,5 +324,18 @@
     "importance": 3,
     "description": "India and China ended a months-long military standoff on the Doklam plateau, territory disputed between Bhutan and China.",
     "source": "https://en.wikipedia.org/wiki/2017_China–India_border_standoff"
+  },
+  {
+    "id": "bhutan-2023-gelephu-mindfulness-city-announced",
+    "title": "Gelephu Mindfulness City announced",
+    "date": "17 Dec 2023",
+    "year-from": 2023,
+    "place": "Gelephu",
+    "lat": 26.87,
+    "lon": 90.49,
+    "country": "Bhutan",
+    "importance": 3,
+    "description": "The king announces a special administrative zone on the Indian border meant to stem emigration.",
+    "source": "https://en.wikipedia.org/wiki/Gelephu_Mindfulness_City"
   }
 ]

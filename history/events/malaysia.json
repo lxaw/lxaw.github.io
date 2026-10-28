@@ -381,5 +381,31 @@
     "importance": 2,
     "description": "The coalition that had governed since independence loses a general election for the first time, and Mahathir returns as prime minister.",
     "source": "https://en.wikipedia.org/wiki/2018_Malaysian_general_election"
+  },
+  {
+    "id": "malaysia-2020-sheraton-move",
+    "title": "Sheraton Move",
+    "date": "Feb 2020",
+    "year-from": 2020,
+    "place": "Petaling Jaya",
+    "lat": 3.107,
+    "lon": 101.607,
+    "country": "Malaysia",
+    "importance": 3,
+    "description": "Defections bring down the Pakatan Harapan government less than two years after its historic win.",
+    "source": "https://en.wikipedia.org/wiki/2020–2022_Malaysian_political_crisis"
+  },
+  {
+    "id": "malaysia-2022-anwar-ibrahim-prime-minister",
+    "title": "Anwar Ibrahim prime minister",
+    "date": "24 Nov 2022",
+    "year-from": 2022,
+    "place": "Kuala Lumpur",
+    "lat": 3.139,
+    "lon": 101.687,
+    "country": "Malaysia",
+    "importance": 3,
+    "description": "After a hung parliament, Anwar becomes prime minister a quarter of a century after his fall in 1998.",
+    "source": "https://en.wikipedia.org/wiki/Anwar_Ibrahim"
   }
 ]

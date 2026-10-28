@@ -468,5 +468,18 @@
     "importance": 3,
     "description": "Parliament amended the 1992 constitution, strengthening the prime minister and limiting the president to a single six-year term.",
     "source": "https://en.wikipedia.org/wiki/Constitution_of_Mongolia"
+  },
+  {
+    "id": "mongolia-2022-coal-theft-protests",
+    "title": "Coal theft protests",
+    "date": "Dec 2022",
+    "year-from": 2022,
+    "place": "Ulaanbaatar",
+    "lat": 47.919,
+    "lon": 106.917,
+    "country": "Mongolia",
+    "importance": 3,
+    "description": "Protesters try to storm the State Palace over the theft of coal sold to China.",
+    "source": "https://en.wikipedia.org/wiki/2022_Mongolian_protests"
   }
 ]

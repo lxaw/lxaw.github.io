@@ -488,5 +488,44 @@
     "importance": 3,
     "description": "Former president Alan García shot himself as police came to arrest him in the Odebrecht bribery investigation and died the same day.",
     "source": "https://en.wikipedia.org/wiki/Alan_Garc%C3%ADa"
+  },
+  {
+    "id": "peru-2020-three-presidents-in-a-week",
+    "title": "Three presidents in a week",
+    "date": "Nov 2020",
+    "year-from": 2020,
+    "place": "Lima",
+    "lat": -12.046,
+    "lon": -77.043,
+    "country": "Peru",
+    "importance": 3,
+    "description": "Congress removes Martín Vizcarra; protests force his successor Manuel Merino out five days later.",
+    "source": "https://en.wikipedia.org/wiki/2020_Peruvian_protests"
+  },
+  {
+    "id": "peru-2022-castillo-s-self-coup-fails",
+    "title": "Castillo's self-coup fails",
+    "date": "7 Dec 2022",
+    "year-from": 2022,
+    "place": "Lima",
+    "lat": -12.046,
+    "lon": -77.03,
+    "country": "Peru",
+    "importance": 2,
+    "description": "Pedro Castillo tries to dissolve Congress, is removed and arrested the same day, and Dina Boluarte takes over.",
+    "source": "https://en.wikipedia.org/wiki/2022_Peruvian_self-coup_attempt"
+  },
+  {
+    "id": "peru-2025-boluarte-removed",
+    "title": "Boluarte removed",
+    "date": "10 Oct 2025",
+    "year-from": 2025,
+    "place": "Lima",
+    "lat": -12.046,
+    "lon": -77.03,
+    "country": "Peru",
+    "importance": 3,
+    "description": "Congress removes Dina Boluarte for permanent moral incapacity.",
+    "source": "https://en.wikipedia.org/wiki/Dina_Boluarte"
   }
 ]

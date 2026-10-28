@@ -306,5 +306,18 @@
     "importance": 3,
     "description": "Islamic State fighters storm an army post at Inatès and kill more than seventy soldiers, one of the deadliest attacks in Niger's history.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Inates"
+  },
+  {
+    "id": "niger-2023-coup-of-2023",
+    "title": "Coup of 2023",
+    "date": "26 Jul 2023",
+    "year-from": 2023,
+    "place": "Niamey",
+    "lat": 13.512,
+    "lon": 2.112,
+    "country": "Niger",
+    "importance": 2,
+    "description": "The presidential guard detains Mohamed Bazoum; French and later American troops are told to leave.",
+    "source": "https://en.wikipedia.org/wiki/2023_Nigerien_coup_d'état"
   }
 ]

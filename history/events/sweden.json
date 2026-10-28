@@ -536,5 +536,31 @@
     "importance": 3,
     "description": "A hijacked lorry was driven into crowds on Drottninggatan, killing five pedestrians.",
     "source": "https://en.wikipedia.org/wiki/2017_Stockholm_truck_attack"
+  },
+  {
+    "id": "sweden-2024-sweden-joins-nato",
+    "title": "Sweden joins NATO",
+    "date": "7 Mar 2024",
+    "year-from": 2024,
+    "place": "Washington, D.C.",
+    "lat": 38.897,
+    "lon": -77.037,
+    "country": "Sweden",
+    "importance": 2,
+    "description": "Sweden ends more than two centuries of military non-alignment.",
+    "source": "https://en.wikipedia.org/wiki/Sweden–NATO_relations"
+  },
+  {
+    "id": "sweden-2025-orebro-school-shooting",
+    "title": "Örebro school shooting",
+    "date": "4 Feb 2025",
+    "year-from": 2025,
+    "place": "Örebro",
+    "lat": 59.274,
+    "lon": 15.207,
+    "country": "Sweden",
+    "importance": 3,
+    "description": "A gunman kills ten people at an adult education centre, the deadliest mass shooting in Swedish history.",
+    "source": "https://en.wikipedia.org/wiki/Örebro_school_shooting"
   }
 ]

@@ -428,5 +428,31 @@
     "importance": 2,
     "description": "The president who had ruled since before independence dies and is succeeded by Shavkat Mirziyoyev, who begins to open the country.",
     "source": "https://en.wikipedia.org/wiki/Islam_Karimov"
+  },
+  {
+    "id": "uzbekistan-2022-karakalpakstan-unrest",
+    "title": "Karakalpakstan unrest",
+    "date": "1 Jul 2022",
+    "year-from": 2022,
+    "place": "Nukus",
+    "lat": 42.46,
+    "lon": 59.6,
+    "country": "Uzbekistan",
+    "importance": 3,
+    "description": "Protests against plans to end Karakalpakstan's autonomy are put down, and the plans dropped.",
+    "source": "https://en.wikipedia.org/wiki/2022_Karakalpak_protests"
+  },
+  {
+    "id": "uzbekistan-2023-constitutional-referendum",
+    "title": "Constitutional referendum",
+    "date": "30 Apr 2023",
+    "year-from": 2023,
+    "place": "Tashkent",
+    "lat": 41.311,
+    "lon": 69.28,
+    "country": "Uzbekistan",
+    "importance": 3,
+    "description": "A new constitution lengthens the presidential term and resets Mirziyoyev's term count.",
+    "source": "https://en.wikipedia.org/wiki/2023_Uzbek_constitutional_referendum"
   }
 ]

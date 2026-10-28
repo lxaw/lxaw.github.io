@@ -515,5 +515,44 @@
     "importance": 3,
     "description": "As the peso collapses, President Macri announces that Argentina will take a $50 billion standby loan from the IMF, later expanded into the largest in the fund's history.",
     "source": "https://en.wikipedia.org/wiki/2018–present_Argentine_monetary_crisis"
+  },
+  {
+    "id": "argentina-2020-abortion-legalised",
+    "title": "Abortion legalised",
+    "date": "30 Dec 2020",
+    "year-from": 2020,
+    "place": "Buenos Aires",
+    "lat": -34.609,
+    "lon": -58.392,
+    "country": "Argentina",
+    "importance": 3,
+    "description": "The Senate legalises abortion up to the fourteenth week of pregnancy.",
+    "source": "https://en.wikipedia.org/wiki/Abortion_in_Argentina"
+  },
+  {
+    "id": "argentina-2022-third-world-cup",
+    "title": "Third World Cup",
+    "date": "18 Dec 2022",
+    "year-from": 2022,
+    "place": "Lusail, Qatar",
+    "lat": 25.42,
+    "lon": 51.49,
+    "country": "Argentina",
+    "importance": 3,
+    "description": "Lionel Messi's Argentina beats France on penalties for its first title since 1986.",
+    "source": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final"
+  },
+  {
+    "id": "argentina-2023-milei-elected",
+    "title": "Milei elected",
+    "date": "19 Nov 2023",
+    "year-from": 2023,
+    "place": "Buenos Aires",
+    "lat": -34.608,
+    "lon": -58.372,
+    "country": "Argentina",
+    "importance": 2,
+    "description": "The libertarian economist Javier Milei wins the presidency promising to take a chainsaw to the state.",
+    "source": "https://en.wikipedia.org/wiki/2023_Argentine_general_election"
   }
 ]

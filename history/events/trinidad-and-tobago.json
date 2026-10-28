@@ -264,5 +264,18 @@
     "importance": 3,
     "description": "The state oil company Petrotrin was shut down, ending 101 years of refining at Pointe-à-Pierre and costing about 5,500 jobs.",
     "source": "https://en.wikipedia.org/wiki/Petrotrin"
+  },
+  {
+    "id": "trinidad-and-tobago-2025-persad-bissessar-returns",
+    "title": "Persad-Bissessar returns",
+    "date": "28 Apr 2025",
+    "year-from": 2025,
+    "place": "Port of Spain",
+    "lat": 10.654,
+    "lon": -61.502,
+    "country": "Trinidad and Tobago",
+    "importance": 3,
+    "description": "Kamla Persad-Bissessar's UNC wins the election and she becomes prime minister again.",
+    "source": "https://en.wikipedia.org/wiki/2025_Trinidad_and_Tobago_general_election"
   }
 ]

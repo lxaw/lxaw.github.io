@@ -349,5 +349,31 @@
     "importance": 1,
     "description": "In a non-binding vote 98 per cent of Bougainvilleans choose independence from Papua New Guinea.",
     "source": "https://en.wikipedia.org/wiki/2019_Bougainvillean_independence_referendum"
+  },
+  {
+    "id": "papua-new-guinea-2024-port-moresby-riots",
+    "title": "Port Moresby riots",
+    "date": "10 Jan 2024",
+    "year-from": 2024,
+    "place": "Port Moresby",
+    "lat": -9.443,
+    "lon": 147.18,
+    "country": "Papua New Guinea",
+    "importance": 3,
+    "description": "A police pay strike leads to riots and looting in the capital and Lae.",
+    "source": "https://en.wikipedia.org/wiki/2024_Papua_New_Guinean_unrest"
+  },
+  {
+    "id": "papua-new-guinea-2024-enga-landslide",
+    "title": "Enga landslide",
+    "date": "24 May 2024",
+    "year-from": 2024,
+    "place": "Yambali, Enga",
+    "lat": -5.38,
+    "lon": 143.4,
+    "country": "Papua New Guinea",
+    "importance": 3,
+    "description": "A landslide buries a village; estimates of the dead run from hundreds to more than 2,000.",
+    "source": "https://en.wikipedia.org/wiki/2024_Enga_landslide"
   }
 ]

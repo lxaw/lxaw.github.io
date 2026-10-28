@@ -359,5 +359,18 @@
     "importance": 2,
     "description": "Museveni signs a constitutional amendment removing the upper age limit for presidential candidates, clearing the way for him to stand again.",
     "source": "https://en.wikipedia.org/wiki/Yoweri_Museveni"
+  },
+  {
+    "id": "uganda-2023-anti-homosexuality-act",
+    "title": "Anti-Homosexuality Act",
+    "date": "May 2023",
+    "year-from": 2023,
+    "place": "Kampala",
+    "lat": 0.347,
+    "lon": 32.582,
+    "country": "Uganda",
+    "importance": 3,
+    "description": "One of the world's harshest anti-gay laws, including the death penalty in some cases, is signed.",
+    "source": "https://en.wikipedia.org/wiki/Anti-Homosexuality_Act,_2023"
   }
 ]

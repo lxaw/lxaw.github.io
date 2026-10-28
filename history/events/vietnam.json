@@ -498,5 +498,31 @@
     "importance": 3,
     "description": "Hanoi hosted the second summit between Donald Trump and Kim Jong Un, which was cut short without an agreement.",
     "source": "https://en.wikipedia.org/wiki/2019_North_Korea–United_States_Hanoi_Summit"
+  },
+  {
+    "id": "vietnam-2024-death-of-nguyen-phu-trong",
+    "title": "Death of Nguyễn Phú Trọng",
+    "date": "19 Jul 2024",
+    "year-from": 2024,
+    "place": "Hanoi",
+    "lat": 21.028,
+    "lon": 105.854,
+    "country": "Vietnam",
+    "importance": 3,
+    "description": "The Communist Party's general secretary since 2011 dies in office; Tô Lâm succeeds him.",
+    "source": "https://en.wikipedia.org/wiki/Nguyễn_Phú_Trọng"
+  },
+  {
+    "id": "vietnam-2024-typhoon-yagi",
+    "title": "Typhoon Yagi",
+    "date": "7 Sep 2024",
+    "year-from": 2024,
+    "place": "Hai Phong",
+    "lat": 20.845,
+    "lon": 106.688,
+    "country": "Vietnam",
+    "importance": 3,
+    "description": "The strongest typhoon in northern Vietnam in decades kills about 300 people.",
+    "source": "https://en.wikipedia.org/wiki/Typhoon_Yagi"
   }
 ]

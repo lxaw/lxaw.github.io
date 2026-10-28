@@ -906,5 +906,57 @@
     "importance": 3,
     "description": "After the electoral council annuls the opposition's narrow victory in March, Ekrem İmamoğlu wins the rerun for mayor of Istanbul by a wide margin.",
     "source": "https://en.wikipedia.org/wiki/June_2019_Istanbul_mayoral_election"
+  },
+  {
+    "id": "turkey-2020-hagia-sophia-reconverted-to-a-mosque",
+    "title": "Hagia Sophia reconverted to a mosque",
+    "date": "10 Jul 2020",
+    "year-from": 2020,
+    "place": "Istanbul",
+    "lat": 41.008,
+    "lon": 28.98,
+    "country": "Turkey",
+    "importance": 3,
+    "description": "A court annuls the 1934 decision making Hagia Sophia a museum, and it reopens as a mosque.",
+    "source": "https://en.wikipedia.org/wiki/Hagia_Sophia"
+  },
+  {
+    "id": "turkey-2023-kahramanmaras-earthquakes",
+    "title": "Kahramanmaraş earthquakes",
+    "date": "6 Feb 2023",
+    "year-from": 2023,
+    "place": "Pazarcık, Kahramanmaraş",
+    "lat": 37.226,
+    "lon": 37.014,
+    "country": "Turkey",
+    "importance": 1,
+    "description": "Two earthquakes of magnitude 7.8 and 7.7 kill more than 50,000 people in Turkey, the deadliest in its modern history.",
+    "source": "https://en.wikipedia.org/wiki/2023_Turkey–Syria_earthquakes"
+  },
+  {
+    "id": "turkey-2023-erdogan-re-elected-in-a-run-off",
+    "title": "Erdoğan re-elected in a run-off",
+    "date": "28 May 2023",
+    "year-from": 2023,
+    "place": "Ankara",
+    "lat": 39.933,
+    "lon": 32.86,
+    "country": "Turkey",
+    "importance": 3,
+    "description": "Recep Tayyip Erdoğan wins a third presidential term in the first run-off in Turkish history.",
+    "source": "https://en.wikipedia.org/wiki/2023_Turkish_presidential_election"
+  },
+  {
+    "id": "turkey-2025-arrest-of-imamoglu",
+    "title": "Arrest of İmamoğlu",
+    "date": "19 Mar 2025",
+    "year-from": 2025,
+    "place": "Istanbul",
+    "lat": 41.008,
+    "lon": 28.98,
+    "country": "Turkey",
+    "importance": 3,
+    "description": "The mayor of Istanbul and leading opposition candidate is detained, setting off the largest protests in a decade.",
+    "source": "https://en.wikipedia.org/wiki/Arrest_of_Ekrem_İmamoğlu"
   }
 ]

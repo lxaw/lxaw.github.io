@@ -76,7 +76,7 @@
     "year-from": 224,
     "place": "Hormozdgan (possibly Ramhormoz)",
     "lat": 31.28,
-    "lon": 49.60,
+    "lon": 49.6,
     "country": "Iran",
     "polity": "Sasanian Empire",
     "importance": 1,
@@ -365,5 +365,58 @@
     "importance": 2,
     "description": "Iran agrees with six powers to limit its nuclear programme in return for relief from sanctions.",
     "source": "https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action"
+  },
+  {
+    "id": "iran-2020-qasem-soleimani-killed",
+    "title": "Qasem Soleimani killed",
+    "date": "3 Jan 2020",
+    "year-from": 2020,
+    "place": "Baghdad Airport, Iraq",
+    "lat": 33.262,
+    "lon": 44.234,
+    "country": "Iran",
+    "importance": 2,
+    "description": "A US drone strike kills the commander of the Quds Force; Iran replies with missiles on US bases in Iraq.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Qasem_Soleimani"
+  },
+  {
+    "id": "iran-2022-mahsa-amini-protests",
+    "title": "Mahsa Amini protests",
+    "date": "16 Sep 2022",
+    "year-from": 2022,
+    "place": "Tehran",
+    "lat": 35.689,
+    "lon": 51.389,
+    "country": "Iran",
+    "importance": 2,
+    "description": "The death in police custody of a young Kurdish woman arrested over her hijab sets off months of nationwide protests.",
+    "source": "https://en.wikipedia.org/wiki/Mahsa_Amini_protests"
+  },
+  {
+    "id": "iran-2024-president-raisi-killed-in-a-crash",
+    "title": "President Raisi killed in a crash",
+    "date": "19 May 2024",
+    "year-from": 2024,
+    "place": "Varzaqan, East Azerbaijan",
+    "lat": 38.5,
+    "lon": 46.65,
+    "country": "Iran",
+    "importance": 3,
+    "description": "President Ebrahim Raisi dies when his helicopter crashes in fog.",
+    "source": "https://en.wikipedia.org/wiki/2024_Varzaqan_helicopter_crash"
+  },
+  {
+    "id": "iran-2025-twelve-day-war-with-israel",
+    "title": "Twelve-Day War with Israel",
+    "date": "13 Jun 2025",
+    "year-from": 2025,
+    "year-to": 2025,
+    "place": "Natanz",
+    "lat": 33.72,
+    "lon": 51.73,
+    "country": "Iran",
+    "importance": 2,
+    "description": "Israel strikes Iran's nuclear sites and commanders, Iran fires missiles back, and the United States bombs Fordow before a ceasefire.",
+    "source": "https://en.wikipedia.org/wiki/Twelve-Day_War"
   }
 ]

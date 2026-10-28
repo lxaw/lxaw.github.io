@@ -474,5 +474,31 @@
     "importance": 2,
     "description": "The euro replaced the litas, making Lithuania the last of the three Baltic states to adopt it.",
     "source": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Lithuania"
+  },
+  {
+    "id": "lithuania-2023-nato-summit-in-vilnius",
+    "title": "NATO summit in Vilnius",
+    "date": "11 Jul 2023",
+    "year-from": 2023,
+    "place": "Vilnius",
+    "lat": 54.687,
+    "lon": 25.28,
+    "country": "Lithuania",
+    "importance": 3,
+    "description": "NATO leaders meet in Vilnius as Finland takes its seat and Sweden's entry is unblocked.",
+    "source": "https://en.wikipedia.org/wiki/2023_Vilnius_summit"
+  },
+  {
+    "id": "lithuania-2025-baltic-grids-leave-the-russian-system",
+    "title": "Baltic grids leave the Russian system",
+    "date": "9 Feb 2025",
+    "year-from": 2025,
+    "place": "Vilnius",
+    "lat": 54.687,
+    "lon": 25.28,
+    "country": "Lithuania",
+    "importance": 3,
+    "description": "The power grids of Lithuania, Latvia and Estonia unplug from Russia and join the European grid.",
+    "source": "https://en.wikipedia.org/wiki/Baltic_states_synchronization_with_CESA"
   }
 ]

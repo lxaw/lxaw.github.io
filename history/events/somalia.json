@@ -372,5 +372,31 @@
     "importance": 1,
     "description": "A truck bomb at a packed junction kills nearly six hundred people, one of the deadliest terrorist attacks ever recorded.",
     "source": "https://en.wikipedia.org/wiki/14_October_2017_Mogadishu_bombings"
+  },
+  {
+    "id": "somalia-2022-hassan-sheikh-returns",
+    "title": "Hassan Sheikh returns",
+    "date": "15 May 2022",
+    "year-from": 2022,
+    "place": "Mogadishu",
+    "lat": 2.047,
+    "lon": 45.318,
+    "country": "Somalia",
+    "importance": 3,
+    "description": "Parliament elects Hassan Sheikh Mohamud president for a second time.",
+    "source": "https://en.wikipedia.org/wiki/2022_Somali_presidential_election"
+  },
+  {
+    "id": "somalia-2022-mogadishu-bombings-of-2022",
+    "title": "Mogadishu bombings of 2022",
+    "date": "29 Oct 2022",
+    "year-from": 2022,
+    "place": "Mogadishu",
+    "lat": 2.04,
+    "lon": 45.33,
+    "country": "Somalia",
+    "importance": 3,
+    "description": "Two car bombs at the education ministry kill more than 120 people.",
+    "source": "https://en.wikipedia.org/wiki/2022_Somali_Ministry_of_Education_bombings"
   }
 ]

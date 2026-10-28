@@ -552,5 +552,70 @@
     "importance": 3,
     "description": "The government revoked the constitutional special status of Jammu and Kashmir and split the state into two union territories.",
     "source": "https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir"
+  },
+  {
+    "id": "india-2020-galwan-valley-clash",
+    "title": "Galwan Valley clash",
+    "date": "15 Jun 2020",
+    "year-from": 2020,
+    "place": "Galwan Valley, Ladakh",
+    "lat": 34.75,
+    "lon": 78.2,
+    "country": "India",
+    "importance": 2,
+    "description": "Indian and Chinese troops fight with clubs and stones on the disputed border, the first deadly clash there since 1975.",
+    "source": "https://en.wikipedia.org/wiki/2020_China–India_skirmishes"
+  },
+  {
+    "id": "india-2023-chandrayaan-3-lands-near-the-lunar-south-pole",
+    "title": "Chandrayaan-3 lands near the lunar south pole",
+    "date": "23 Aug 2023",
+    "year-from": 2023,
+    "place": "Sriharikota (launch site)",
+    "lat": 13.72,
+    "lon": 80.23,
+    "country": "India",
+    "importance": 2,
+    "description": "India becomes the first country to land a spacecraft near the Moon's south pole.",
+    "source": "https://en.wikipedia.org/wiki/Chandrayaan-3"
+  },
+  {
+    "id": "india-2024-ram-temple-consecrated-at-ayodhya",
+    "title": "Ram temple consecrated at Ayodhya",
+    "date": "22 Jan 2024",
+    "year-from": 2024,
+    "place": "Ayodhya",
+    "lat": 26.795,
+    "lon": 82.194,
+    "country": "India",
+    "importance": 3,
+    "description": "A Hindu temple is consecrated on the site of the mosque demolished in 1992.",
+    "source": "https://en.wikipedia.org/wiki/Ram_Mandir"
+  },
+  {
+    "id": "india-2024-modi-wins-a-third-term",
+    "title": "Modi wins a third term",
+    "date": "4 Jun 2024",
+    "year-from": 2024,
+    "place": "New Delhi",
+    "lat": 28.614,
+    "lon": 77.209,
+    "country": "India",
+    "importance": 3,
+    "description": "The BJP loses its own majority but Narendra Modi keeps power with coalition partners.",
+    "source": "https://en.wikipedia.org/wiki/2024_Indian_general_election"
+  },
+  {
+    "id": "india-2025-pahalgam-attack-and-strikes-on-pakistan",
+    "title": "Pahalgam attack and strikes on Pakistan",
+    "date": "7 May 2025",
+    "year-from": 2025,
+    "place": "Pahalgam",
+    "lat": 34.016,
+    "lon": 75.315,
+    "country": "India",
+    "importance": 2,
+    "description": "Two weeks after militants kill 26 tourists at Pahalgam, India strikes targets in Pakistan, starting four days of fighting.",
+    "source": "https://en.wikipedia.org/wiki/2025_India–Pakistan_conflict"
   }
 ]

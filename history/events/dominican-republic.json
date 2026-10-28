@@ -441,5 +441,31 @@
     "importance": 2,
     "description": "The Dominican Republic broke ties with Taiwan after seventy-seven years and established diplomatic relations with the People's Republic of China.",
     "source": "https://en.wikipedia.org/wiki/China–Dominican_Republic_relations"
+  },
+  {
+    "id": "dominican-republic-2020-abinader-elected",
+    "title": "Abinader elected",
+    "date": "5 Jul 2020",
+    "year-from": 2020,
+    "place": "Santo Domingo",
+    "lat": 18.486,
+    "lon": -69.931,
+    "country": "Dominican Republic",
+    "importance": 3,
+    "description": "Luis Abinader's victory ends 16 years of government by the Dominican Liberation Party.",
+    "source": "https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election"
+  },
+  {
+    "id": "dominican-republic-2025-jet-set-nightclub-collapse",
+    "title": "Jet Set nightclub collapse",
+    "date": "8 Apr 2025",
+    "year-from": 2025,
+    "place": "Santo Domingo",
+    "lat": 18.467,
+    "lon": -69.94,
+    "country": "Dominican Republic",
+    "importance": 3,
+    "description": "The roof of a nightclub falls during a concert, killing more than 230 people.",
+    "source": "https://en.wikipedia.org/wiki/Jet_Set_nightclub_roof_collapse"
   }
 ]

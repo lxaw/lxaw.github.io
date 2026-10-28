@@ -294,5 +294,18 @@
     "importance": 1,
     "description": "Strikes by anglophone lawyers and teachers meet a harsh response and grow into an armed separatist conflict.",
     "source": "https://en.wikipedia.org/wiki/Anglophone_Crisis"
+  },
+  {
+    "id": "cameroon-2020-ngarbuh-massacre",
+    "title": "Ngarbuh massacre",
+    "date": "14 Feb 2020",
+    "year-from": 2020,
+    "place": "Ngarbuh",
+    "lat": 6.3,
+    "lon": 10.7,
+    "country": "Cameroon",
+    "importance": 3,
+    "description": "Soldiers and allied militia kill 21 civilians in the Anglophone North-West.",
+    "source": "https://en.wikipedia.org/wiki/Ngarbuh_massacre"
   }
 ]

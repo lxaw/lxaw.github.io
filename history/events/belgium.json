@@ -403,5 +403,31 @@
     "importance": 2,
     "description": "Suicide bombers of the Islamic State group kill 32 people at Brussels Airport and Maalbeek metro station, the deadliest attack in the country's history.",
     "source": "https://en.wikipedia.org/wiki/2016_Brussels_bombings"
+  },
+  {
+    "id": "belgium-2023-brussels-shooting-of-swedish-fans",
+    "title": "Brussels shooting of Swedish fans",
+    "date": "16 Oct 2023",
+    "year-from": 2023,
+    "place": "Brussels",
+    "lat": 50.85,
+    "lon": 4.35,
+    "country": "Belgium",
+    "importance": 3,
+    "description": "An Islamist gunman kills two Swedish football supporters before a match.",
+    "source": "https://en.wikipedia.org/wiki/2023_Brussels_shooting"
+  },
+  {
+    "id": "belgium-2025-de-wever-becomes-prime-minister",
+    "title": "De Wever becomes prime minister",
+    "date": "3 Feb 2025",
+    "year-from": 2025,
+    "place": "Brussels",
+    "lat": 50.846,
+    "lon": 4.352,
+    "country": "Belgium",
+    "importance": 3,
+    "description": "Bart De Wever becomes the first Flemish nationalist to lead the federal government.",
+    "source": "https://en.wikipedia.org/wiki/De_Wever_Government"
   }
 ]

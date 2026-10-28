@@ -420,5 +420,57 @@
     "importance": 3,
     "description": "The king dies after a reign of seventy years.",
     "source": "https://en.wikipedia.org/wiki/Death_and_funeral_of_Bhumibol_Adulyadej"
+  },
+  {
+    "id": "thailand-2020-youth-led-protests",
+    "title": "Youth-led protests",
+    "date": "Aug 2020",
+    "year-from": 2020,
+    "place": "Bangkok",
+    "lat": 13.756,
+    "lon": 100.502,
+    "country": "Thailand",
+    "importance": 3,
+    "description": "Student protests openly call for reform of the monarchy, breaking a long taboo.",
+    "source": "https://en.wikipedia.org/wiki/2020–2021_Thai_protests"
+  },
+  {
+    "id": "thailand-2023-thaksin-returns-from-exile",
+    "title": "Thaksin returns from exile",
+    "date": "22 Aug 2023",
+    "year-from": 2023,
+    "place": "Bangkok",
+    "lat": 13.756,
+    "lon": 100.502,
+    "country": "Thailand",
+    "importance": 3,
+    "description": "The former prime minister comes home after 15 years abroad, the day his party's Srettha Thavisin is elected prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Thaksin_Shinawatra"
+  },
+  {
+    "id": "thailand-2025-same-sex-marriage",
+    "title": "Same-sex marriage",
+    "date": "23 Jan 2025",
+    "year-from": 2025,
+    "place": "Bangkok",
+    "lat": 13.756,
+    "lon": 100.502,
+    "country": "Thailand",
+    "importance": 3,
+    "description": "Thailand becomes the first country in South-East Asia to allow same-sex marriage.",
+    "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Thailand"
+  },
+  {
+    "id": "thailand-2025-border-war-with-cambodia",
+    "title": "Border war with Cambodia",
+    "date": "24 Jul 2025",
+    "year-from": 2025,
+    "place": "Ta Muen Thom",
+    "lat": 14.35,
+    "lon": 103.27,
+    "country": "Thailand",
+    "importance": 3,
+    "description": "Five days of fighting on the disputed border kill dozens and displace hundreds of thousands before a ceasefire.",
+    "source": "https://en.wikipedia.org/wiki/2025_Cambodia–Thailand_conflict"
   }
 ]

@@ -265,5 +265,31 @@
     "importance": 2,
     "description": "Mass demonstrations against a new constitution that would let Condé seek a third term are met with repeated live fire.",
     "source": "https://en.wikipedia.org/wiki/2019%E2%80%932020_Guinean_protests"
+  },
+  {
+    "id": "guinea-2021-coup-of-2021",
+    "title": "Coup of 2021",
+    "date": "5 Sep 2021",
+    "year-from": 2021,
+    "place": "Conakry",
+    "lat": 9.509,
+    "lon": -13.712,
+    "country": "Guinea",
+    "importance": 2,
+    "description": "Special forces under Mamady Doumbouya overthrow Alpha Condé.",
+    "source": "https://en.wikipedia.org/wiki/2021_Guinean_coup_d'état"
+  },
+  {
+    "id": "guinea-2023-conakry-fuel-depot-explosion",
+    "title": "Conakry fuel depot explosion",
+    "date": "18 Dec 2023",
+    "year-from": 2023,
+    "place": "Conakry",
+    "lat": 9.519,
+    "lon": -13.69,
+    "country": "Guinea",
+    "importance": 3,
+    "description": "An explosion at the country's main fuel depot kills two dozen people.",
+    "source": "https://en.wikipedia.org/wiki/Conakry_oil_depot_explosion"
   }
 ]

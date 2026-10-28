@@ -249,5 +249,18 @@
     "importance": 2,
     "description": "Mohamed Ould Ghazouani wins the run-off, the first peaceful transfer between elected presidents in Mauritania's history.",
     "source": "https://en.wikipedia.org/wiki/2019_Mauritanian_presidential_election"
+  },
+  {
+    "id": "mauritania-2024-ghazouani-re-elected",
+    "title": "Ghazouani re-elected",
+    "date": "29 Jun 2024",
+    "year-from": 2024,
+    "place": "Nouakchott",
+    "lat": 18.079,
+    "lon": -15.965,
+    "country": "Mauritania",
+    "importance": 3,
+    "description": "Mohamed Ould Ghazouani wins a second term.",
+    "source": "https://en.wikipedia.org/wiki/2024_Mauritanian_presidential_election"
   }
 ]

@@ -431,5 +431,44 @@
     "importance": 3,
     "description": "Sanna Marin took office at thirty-four, Finland's youngest prime minister and the world's youngest serving head of government at the time.",
     "source": "https://en.wikipedia.org/wiki/Sanna_Marin"
+  },
+  {
+    "id": "finland-2023-finland-joins-nato",
+    "title": "Finland joins NATO",
+    "date": "4 Apr 2023",
+    "year-from": 2023,
+    "place": "Brussels, Belgium",
+    "lat": 50.876,
+    "lon": 4.42,
+    "country": "Finland",
+    "importance": 2,
+    "description": "Spurred by Russia's invasion of Ukraine, Finland ends decades of military non-alignment.",
+    "source": "https://en.wikipedia.org/wiki/Finland–NATO_relations"
+  },
+  {
+    "id": "finland-2023-border-with-russia-closed",
+    "title": "Border with Russia closed",
+    "date": "Dec 2023",
+    "year-from": 2023,
+    "place": "Vaalimaa",
+    "lat": 60.58,
+    "lon": 27.82,
+    "country": "Finland",
+    "importance": 3,
+    "description": "Finland closes its entire land border with Russia after a surge of asylum seekers it says Moscow sent.",
+    "source": "https://en.wikipedia.org/wiki/Finland–Russia_border"
+  },
+  {
+    "id": "finland-2024-stubb-elected-president",
+    "title": "Stubb elected president",
+    "date": "11 Feb 2024",
+    "year-from": 2024,
+    "place": "Helsinki",
+    "lat": 60.17,
+    "lon": 24.938,
+    "country": "Finland",
+    "importance": 3,
+    "description": "Former prime minister Alexander Stubb wins the presidential run-off.",
+    "source": "https://en.wikipedia.org/wiki/2024_Finnish_presidential_election"
   }
 ]

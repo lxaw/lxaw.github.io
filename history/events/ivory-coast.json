@@ -292,5 +292,31 @@
     "importance": 3,
     "description": "Al-Qaeda in the Islamic Maghreb gunmen open fire on the beach hotels of the old colonial town, killing nineteen people.",
     "source": "https://en.wikipedia.org/wiki/2016_Grand-Bassam_shootings"
+  },
+  {
+    "id": "ivory-coast-2020-ouattara-s-third-term",
+    "title": "Ouattara's third term",
+    "date": "31 Oct 2020",
+    "year-from": 2020,
+    "place": "Abidjan",
+    "lat": 5.36,
+    "lon": -4.008,
+    "country": "Ivory Coast",
+    "importance": 3,
+    "description": "Alassane Ouattara wins a disputed third term boycotted by the opposition.",
+    "source": "https://en.wikipedia.org/wiki/2020_Ivorian_presidential_election"
+  },
+  {
+    "id": "ivory-coast-2024-hosts-and-wins-the-africa-cup-of-nations",
+    "title": "Hosts and wins the Africa Cup of Nations",
+    "date": "11 Feb 2024",
+    "year-from": 2024,
+    "place": "Abidjan",
+    "lat": 5.36,
+    "lon": -4.008,
+    "country": "Ivory Coast",
+    "importance": 3,
+    "description": "Ivory Coast wins the tournament at home after nearly being knocked out in the group stage.",
+    "source": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations"
   }
 ]

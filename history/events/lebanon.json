@@ -406,5 +406,44 @@
     "importance": 2,
     "description": "Plans for new taxes bring hundreds of thousands into the streets against the political class, and the prime minister resigns as a financial crisis begins.",
     "source": "https://en.wikipedia.org/wiki/17_October_Revolution"
+  },
+  {
+    "id": "lebanon-2020-beirut-port-explosion",
+    "title": "Beirut port explosion",
+    "date": "4 Aug 2020",
+    "year-from": 2020,
+    "place": "Port of Beirut",
+    "lat": 33.901,
+    "lon": 35.519,
+    "country": "Lebanon",
+    "importance": 2,
+    "description": "Ammonium nitrate stored at the port explodes, killing more than 200 people and wrecking much of the city.",
+    "source": "https://en.wikipedia.org/wiki/2020_Beirut_explosion"
+  },
+  {
+    "id": "lebanon-2024-pager-attacks-on-hezbollah",
+    "title": "Pager attacks on Hezbollah",
+    "date": "17 Sep 2024",
+    "year-from": 2024,
+    "place": "Beirut",
+    "lat": 33.85,
+    "lon": 35.5,
+    "country": "Lebanon",
+    "importance": 3,
+    "description": "Thousands of pagers used by Hezbollah explode at once, in an Israeli operation that opens a war in Lebanon.",
+    "source": "https://en.wikipedia.org/wiki/2024_Lebanon_electronic_device_attacks"
+  },
+  {
+    "id": "lebanon-2024-killing-of-hassan-nasrallah",
+    "title": "Killing of Hassan Nasrallah",
+    "date": "27 Sep 2024",
+    "year-from": 2024,
+    "place": "Dahieh, Beirut",
+    "lat": 33.85,
+    "lon": 35.51,
+    "country": "Lebanon",
+    "importance": 3,
+    "description": "An Israeli air strike kills Hezbollah's leader of 32 years.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Hassan_Nasrallah"
   }
 ]

@@ -289,5 +289,31 @@
     "importance": 3,
     "description": "The Swiss National Bank abandoned its three-year-old cap on the franc without warning, and the currency briefly leapt almost 30 per cent against the euro.",
     "source": "https://en.wikipedia.org/wiki/Swiss_franc"
+  },
+  {
+    "id": "switzerland-2023-ubs-takes-over-credit-suisse",
+    "title": "UBS takes over Credit Suisse",
+    "date": "19 Mar 2023",
+    "year-from": 2023,
+    "place": "Zürich",
+    "lat": 47.37,
+    "lon": 8.54,
+    "country": "Switzerland",
+    "importance": 3,
+    "description": "The government brokers an emergency takeover of the 167-year-old Credit Suisse by its rival UBS.",
+    "source": "https://en.wikipedia.org/wiki/Acquisition_of_Credit_Suisse_by_UBS"
+  },
+  {
+    "id": "switzerland-2025-blatten-buried-by-a-glacier-collapse",
+    "title": "Blatten buried by a glacier collapse",
+    "date": "28 May 2025",
+    "year-from": 2025,
+    "place": "Blatten, Valais",
+    "lat": 46.42,
+    "lon": 7.82,
+    "country": "Switzerland",
+    "importance": 3,
+    "description": "The Birch Glacier collapses and buries most of the village, which had been evacuated days before.",
+    "source": "https://en.wikipedia.org/wiki/2025_Blatten_glacier_collapse"
   }
 ]

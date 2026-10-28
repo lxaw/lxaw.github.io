@@ -296,5 +296,57 @@
     "importance": 3,
     "description": "The first Olympic Games held in South America open.",
     "source": "https://en.wikipedia.org/wiki/2016_Summer_Olympics"
+  },
+  {
+    "id": "brazil-2022-lula-elected-again",
+    "title": "Lula elected again",
+    "date": "30 Oct 2022",
+    "year-from": 2022,
+    "place": "Brasília",
+    "lat": -15.794,
+    "lon": -47.882,
+    "country": "Brazil",
+    "importance": 2,
+    "description": "Luiz Inácio Lula da Silva narrowly defeats Jair Bolsonaro and returns to the presidency.",
+    "source": "https://en.wikipedia.org/wiki/2022_Brazilian_general_election"
+  },
+  {
+    "id": "brazil-2023-attacks-on-brasilia",
+    "title": "Attacks on Brasília",
+    "date": "8 Jan 2023",
+    "year-from": 2023,
+    "place": "Praça dos Três Poderes, Brasília",
+    "lat": -15.8,
+    "lon": -47.861,
+    "country": "Brazil",
+    "importance": 2,
+    "description": "Bolsonaro supporters storm Congress, the Supreme Court and the presidential palace.",
+    "source": "https://en.wikipedia.org/wiki/2023_Brazilian_Congress_attack"
+  },
+  {
+    "id": "brazil-2024-rio-grande-do-sul-floods",
+    "title": "Rio Grande do Sul floods",
+    "date": "May 2024",
+    "year-from": 2024,
+    "place": "Porto Alegre",
+    "lat": -30.033,
+    "lon": -51.23,
+    "country": "Brazil",
+    "importance": 3,
+    "description": "Floods kill more than 180 people and swamp much of Porto Alegre.",
+    "source": "https://en.wikipedia.org/wiki/2024_Rio_Grande_do_Sul_floods"
+  },
+  {
+    "id": "brazil-2025-bolsonaro-convicted",
+    "title": "Bolsonaro convicted",
+    "date": "11 Sep 2025",
+    "year-from": 2025,
+    "place": "Supreme Federal Court, Brasília",
+    "lat": -15.8,
+    "lon": -47.862,
+    "country": "Brazil",
+    "importance": 3,
+    "description": "The Supreme Court finds Bolsonaro guilty of plotting a coup and sentences him to 27 years.",
+    "source": "https://en.wikipedia.org/wiki/Jair_Bolsonaro"
   }
 ]

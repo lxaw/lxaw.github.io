@@ -424,5 +424,31 @@
     "importance": 2,
     "description": "Luis Lacalle Pou of the National Party won a tight run-off against Daniel Martínez, ending fifteen years of Broad Front rule.",
     "source": "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
+  },
+  {
+    "id": "uruguay-2024-orsi-elected",
+    "title": "Orsi elected",
+    "date": "24 Nov 2024",
+    "year-from": 2024,
+    "place": "Montevideo",
+    "lat": -34.901,
+    "lon": -56.164,
+    "country": "Uruguay",
+    "importance": 3,
+    "description": "Yamandú Orsi returns the Broad Front to power.",
+    "source": "https://en.wikipedia.org/wiki/2024_Uruguayan_general_election"
+  },
+  {
+    "id": "uruguay-2025-death-of-jose-mujica",
+    "title": "Death of José Mujica",
+    "date": "13 May 2025",
+    "year-from": 2025,
+    "place": "Montevideo",
+    "lat": -34.901,
+    "lon": -56.164,
+    "country": "Uruguay",
+    "importance": 3,
+    "description": "The former guerrilla and president known for his austere life dies.",
+    "source": "https://en.wikipedia.org/wiki/José_Mujica"
   }
 ]

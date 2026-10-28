@@ -298,5 +298,18 @@
     "importance": 2,
     "description": "With the opposition barred from running, elections are boycotted by much of the country and protests in Cotonou are put down by force.",
     "source": "https://en.wikipedia.org/wiki/2019_Beninese_parliamentary_election"
+  },
+  {
+    "id": "benin-2021-talon-re-elected",
+    "title": "Talon re-elected",
+    "date": "11 Apr 2021",
+    "year-from": 2021,
+    "place": "Porto-Novo",
+    "lat": 6.497,
+    "lon": 2.605,
+    "country": "Benin",
+    "importance": 3,
+    "description": "Patrice Talon wins a second term in an election from which the main opposition was excluded.",
+    "source": "https://en.wikipedia.org/wiki/2021_Beninese_presidential_election"
   }
 ]

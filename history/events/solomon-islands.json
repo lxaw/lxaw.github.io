@@ -224,5 +224,31 @@
     "importance": 2,
     "description": "The government ends 36 years of diplomatic ties with Taiwan and recognises the People's Republic of China, over the fierce objection of Malaita's premier.",
     "source": "https://en.wikipedia.org/wiki/China–Solomon_Islands_relations"
+  },
+  {
+    "id": "solomon-islands-2021-honiara-riots",
+    "title": "Honiara riots",
+    "date": "24 Nov 2021",
+    "year-from": 2021,
+    "place": "Honiara",
+    "lat": -9.433,
+    "lon": 159.95,
+    "country": "Solomon Islands",
+    "importance": 3,
+    "description": "Protesters from Malaita burn much of Chinatown; Australian troops are flown in.",
+    "source": "https://en.wikipedia.org/wiki/2021_Solomon_Islands_unrest"
+  },
+  {
+    "id": "solomon-islands-2022-security-pact-with-china",
+    "title": "Security pact with China",
+    "date": "2022",
+    "year-from": 2022,
+    "place": "Honiara",
+    "lat": -9.433,
+    "lon": 159.95,
+    "country": "Solomon Islands",
+    "importance": 3,
+    "description": "A security agreement with China alarms Australia and the United States.",
+    "source": "https://en.wikipedia.org/wiki/Solomon_Islands"
   }
 ]

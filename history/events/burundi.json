@@ -305,5 +305,18 @@
     "importance": 2,
     "description": "Voters approve constitutional changes that lengthen presidential terms, though Nkurunziza then says he will not run again.",
     "source": "https://en.wikipedia.org/wiki/2018_Burundian_constitutional_referendum"
+  },
+  {
+    "id": "burundi-2020-death-of-nkurunziza",
+    "title": "Death of Nkurunziza",
+    "date": "8 Jun 2020",
+    "year-from": 2020,
+    "place": "Karuzi",
+    "lat": -3.1,
+    "lon": 30.16,
+    "country": "Burundi",
+    "importance": 3,
+    "description": "President Pierre Nkurunziza dies days after his successor Évariste Ndayishimiye is elected.",
+    "source": "https://en.wikipedia.org/wiki/Pierre_Nkurunziza"
   }
 ]

@@ -306,5 +306,31 @@
     "importance": 3,
     "description": "After a jihadist raid, local militia kill dozens of Fulani residents, an early atrocity of the insurgency that engulfs the north.",
     "source": "https://en.wikipedia.org/wiki/Yirgou_massacre"
+  },
+  {
+    "id": "burkina-faso-2022-two-coups-in-a-year",
+    "title": "Two coups in a year",
+    "date": "30 Sep 2022",
+    "year-from": 2022,
+    "place": "Ouagadougou",
+    "lat": 12.371,
+    "lon": -1.52,
+    "country": "Burkina Faso",
+    "importance": 2,
+    "description": "Captain Ibrahim Traoré overthrows the junta that had itself seized power in January.",
+    "source": "https://en.wikipedia.org/wiki/September_2022_Burkina_Faso_coup_d'état"
+  },
+  {
+    "id": "burkina-faso-2024-barsalogho-massacre",
+    "title": "Barsalogho massacre",
+    "date": "24 Aug 2024",
+    "year-from": 2024,
+    "place": "Barsalogho",
+    "lat": 13.42,
+    "lon": -1.06,
+    "country": "Burkina Faso",
+    "importance": 3,
+    "description": "Jihadists kill hundreds of villagers ordered to dig trenches around the town.",
+    "source": "https://en.wikipedia.org/wiki/Barsalogho_massacre"
   }
 ]

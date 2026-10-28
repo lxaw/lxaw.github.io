@@ -723,5 +723,83 @@
     "importance": 3,
     "description": "Donald Trump was elected president, the first with no previous government or military office, while losing the popular vote.",
     "source": "https://en.wikipedia.org/wiki/2016_United_States_presidential_election"
+  },
+  {
+    "id": "united-states-2020-murder-of-george-floyd",
+    "title": "Murder of George Floyd",
+    "date": "25 May 2020",
+    "year-from": 2020,
+    "place": "Minneapolis",
+    "lat": 44.934,
+    "lon": -93.262,
+    "country": "United States",
+    "importance": 2,
+    "description": "A Black man dies under a police officer's knee, setting off protests across the country and the world.",
+    "source": "https://en.wikipedia.org/wiki/Murder_of_George_Floyd"
+  },
+  {
+    "id": "united-states-2020-biden-defeats-trump",
+    "title": "Biden defeats Trump",
+    "date": "3 Nov 2020",
+    "year-from": 2020,
+    "place": "Washington, D.C.",
+    "lat": 38.897,
+    "lon": -77.037,
+    "country": "United States",
+    "importance": 3,
+    "description": "Joe Biden wins the presidential election; Donald Trump refuses to concede.",
+    "source": "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+  },
+  {
+    "id": "united-states-2021-attack-on-the-capitol",
+    "title": "Attack on the Capitol",
+    "date": "6 Jan 2021",
+    "year-from": 2021,
+    "place": "United States Capitol",
+    "lat": 38.89,
+    "lon": -77.009,
+    "country": "United States",
+    "importance": 2,
+    "description": "A crowd of Trump supporters storms the Capitol while Congress is certifying the election result.",
+    "source": "https://en.wikipedia.org/wiki/January_6_United_States_Capitol_attack"
+  },
+  {
+    "id": "united-states-2022-roe-v-wade-overturned",
+    "title": "Roe v. Wade overturned",
+    "date": "24 Jun 2022",
+    "year-from": 2022,
+    "place": "Supreme Court, Washington, D.C.",
+    "lat": 38.891,
+    "lon": -77.004,
+    "country": "United States",
+    "importance": 2,
+    "description": "The Supreme Court ends the federal right to abortion in Dobbs v. Jackson, returning the question to the states.",
+    "source": "https://en.wikipedia.org/wiki/Dobbs_v._Jackson_Women's_Health_Organization"
+  },
+  {
+    "id": "united-states-2024-trump-elected-again",
+    "title": "Trump elected again",
+    "date": "5 Nov 2024",
+    "year-from": 2024,
+    "place": "Washington, D.C.",
+    "lat": 38.897,
+    "lon": -77.037,
+    "country": "United States",
+    "importance": 2,
+    "description": "Donald Trump wins a second, non-consecutive term, four months after surviving an assassination attempt in Butler, Pennsylvania.",
+    "source": "https://en.wikipedia.org/wiki/2024_United_States_presidential_election"
+  },
+  {
+    "id": "united-states-2025-sweeping-tariffs-announced",
+    "title": "Sweeping tariffs announced",
+    "date": "2 Apr 2025",
+    "year-from": 2025,
+    "place": "White House",
+    "lat": 38.898,
+    "lon": -77.037,
+    "country": "United States",
+    "importance": 3,
+    "description": "Trump announces tariffs on imports from nearly every country, the highest US tariff level in about a century.",
+    "source": "https://en.wikipedia.org/wiki/Liberation_Day_tariffs"
   }
 ]

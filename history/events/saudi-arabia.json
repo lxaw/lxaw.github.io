@@ -410,5 +410,31 @@
     "importance": 3,
     "description": "A journalist critical of the crown prince is killed by Saudi agents in the consulate in Istanbul.",
     "source": "https://en.wikipedia.org/wiki/Assassination_of_Jamal_Khashoggi"
+  },
+  {
+    "id": "saudi-arabia-2023-restoration-of-ties-with-iran",
+    "title": "Restoration of ties with Iran",
+    "date": "10 Mar 2023",
+    "year-from": 2023,
+    "place": "Beijing, China",
+    "lat": 39.904,
+    "lon": 116.391,
+    "country": "Saudi Arabia",
+    "importance": 2,
+    "description": "Saudi Arabia and Iran agree in Beijing to restore relations broken off in 2016.",
+    "source": "https://en.wikipedia.org/wiki/Iran–Saudi_Arabia_relations"
+  },
+  {
+    "id": "saudi-arabia-2024-awarded-the-2034-world-cup",
+    "title": "Awarded the 2034 World Cup",
+    "date": "11 Dec 2024",
+    "year-from": 2024,
+    "place": "Riyadh",
+    "lat": 24.713,
+    "lon": 46.675,
+    "country": "Saudi Arabia",
+    "importance": 3,
+    "description": "FIFA confirms Saudi Arabia as host of the 2034 World Cup.",
+    "source": "https://en.wikipedia.org/wiki/2034_FIFA_World_Cup"
   }
 ]

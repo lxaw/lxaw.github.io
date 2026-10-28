@@ -251,5 +251,18 @@
     "importance": 2,
     "description": "Opposition candidate Ibrahim Mohamed Solih unexpectedly defeats Yameen and restores competitive politics.",
     "source": "https://en.wikipedia.org/wiki/2018_Maldivian_presidential_election"
+  },
+  {
+    "id": "maldives-2023-muizzu-elected",
+    "title": "Muizzu elected",
+    "date": "30 Sep 2023",
+    "year-from": 2023,
+    "place": "Malé",
+    "lat": 4.175,
+    "lon": 73.509,
+    "country": "Maldives",
+    "importance": 3,
+    "description": "Mohamed Muizzu wins on an \"India Out\" campaign.",
+    "source": "https://en.wikipedia.org/wiki/2023_Maldivian_presidential_election"
   }
 ]

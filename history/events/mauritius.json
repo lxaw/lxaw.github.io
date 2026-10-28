@@ -294,5 +294,31 @@
     "importance": 2,
     "description": "The International Court of Justice advised, thirteen votes to one, that Britain was obliged to end its administration of the Chagos Archipelago as rapidly as possible.",
     "source": "https://en.wikipedia.org/wiki/Chagos_Archipelago_sovereignty_dispute"
+  },
+  {
+    "id": "mauritius-2020-wakashio-oil-spill",
+    "title": "Wakashio oil spill",
+    "date": "Aug 2020",
+    "year-from": 2020,
+    "place": "Pointe d'Esny",
+    "lat": -20.43,
+    "lon": 57.73,
+    "country": "Mauritius",
+    "importance": 3,
+    "description": "A grounded bulk carrier leaks fuel oil into a protected lagoon.",
+    "source": "https://en.wikipedia.org/wiki/MV_Wakashio_oil_spill"
+  },
+  {
+    "id": "mauritius-2025-chagos-sovereignty-agreement",
+    "title": "Chagos sovereignty agreement",
+    "date": "22 May 2025",
+    "year-from": 2025,
+    "place": "London, United Kingdom",
+    "lat": 51.503,
+    "lon": -0.128,
+    "country": "Mauritius",
+    "importance": 2,
+    "description": "The United Kingdom signs a treaty handing the Chagos Islands to Mauritius, leasing back Diego Garcia.",
+    "source": "https://en.wikipedia.org/wiki/Chagos_Archipelago_sovereignty_dispute"
   }
 ]

@@ -400,5 +400,18 @@
     "importance": 2,
     "description": "Juan Guaidó, head of the National Assembly, declares himself acting president in a challenge to Maduro recognised by many countries.",
     "source": "https://en.wikipedia.org/wiki/Venezuelan_presidential_crisis"
+  },
+  {
+    "id": "venezuela-2024-disputed-election-of-2024",
+    "title": "Disputed election of 2024",
+    "date": "28 Jul 2024",
+    "year-from": 2024,
+    "place": "Caracas",
+    "lat": 10.481,
+    "lon": -66.904,
+    "country": "Venezuela",
+    "importance": 2,
+    "description": "Maduro claims victory; tallies published by the opposition show Edmundo González won.",
+    "source": "https://en.wikipedia.org/wiki/2024_Venezuelan_presidential_election"
   }
 ]

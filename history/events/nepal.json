@@ -371,5 +371,44 @@
     "importance": 2,
     "description": "A constitution written by the elected assembly comes into force and divides Nepal into seven federal provinces.",
     "source": "https://en.wikipedia.org/wiki/Constitution_of_Nepal"
+  },
+  {
+    "id": "nepal-2023-yeti-airlines-crash",
+    "title": "Yeti Airlines crash",
+    "date": "15 Jan 2023",
+    "year-from": 2023,
+    "place": "Pokhara",
+    "lat": 28.2,
+    "lon": 83.98,
+    "country": "Nepal",
+    "importance": 3,
+    "description": "An airliner crashes on approach to the new Pokhara airport, killing all 72 on board.",
+    "source": "https://en.wikipedia.org/wiki/Yeti_Airlines_Flight_691"
+  },
+  {
+    "id": "nepal-2025-gen-z-protests",
+    "title": "Gen Z protests",
+    "date": "8 Sep 2025",
+    "year-from": 2025,
+    "place": "Kathmandu",
+    "lat": 27.717,
+    "lon": 85.324,
+    "country": "Nepal",
+    "importance": 2,
+    "description": "Protests against a social media ban and corruption leave dozens dead; parliament is burned and the government falls.",
+    "source": "https://en.wikipedia.org/wiki/2025_Nepalese_Gen_Z_protests"
+  },
+  {
+    "id": "nepal-2025-karki-first-woman-prime-minister",
+    "title": "Karki first woman prime minister",
+    "date": "12 Sep 2025",
+    "year-from": 2025,
+    "place": "Kathmandu",
+    "lat": 27.717,
+    "lon": 85.324,
+    "country": "Nepal",
+    "importance": 3,
+    "description": "The former chief justice Sushila Karki leads an interim government.",
+    "source": "https://en.wikipedia.org/wiki/Sushila_Karki"
   }
 ]

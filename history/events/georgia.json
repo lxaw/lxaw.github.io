@@ -451,5 +451,31 @@
     "importance": 3,
     "description": "Mass protests erupted over a Russian MP addressing parliament from the speaker's chair, and riot police dispersed them with tear gas and rubber bullets.",
     "source": "https://en.wikipedia.org/wiki/2019_protests_in_Georgia_(country)"
+  },
+  {
+    "id": "georgia-2024-foreign-agents-law-passed",
+    "title": "Foreign agents law passed",
+    "date": "14 May 2024",
+    "year-from": 2024,
+    "place": "Tbilisi",
+    "lat": 41.697,
+    "lon": 44.799,
+    "country": "Georgia",
+    "importance": 3,
+    "description": "Parliament passes a law modelled on Russia's despite weeks of mass protests.",
+    "source": "https://en.wikipedia.org/wiki/2023–2024_Georgian_protests"
+  },
+  {
+    "id": "georgia-2024-eu-accession-talks-suspended",
+    "title": "EU accession talks suspended",
+    "date": "28 Nov 2024",
+    "year-from": 2024,
+    "place": "Tbilisi",
+    "lat": 41.697,
+    "lon": 44.799,
+    "country": "Georgia",
+    "importance": 2,
+    "description": "After a disputed election, Georgian Dream halts EU accession talks, setting off nightly protests.",
+    "source": "https://en.wikipedia.org/wiki/2024–2025_Georgian_protests"
   }
 ]

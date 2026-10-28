@@ -414,5 +414,18 @@
     "importance": 2,
     "description": "A magnitude 6.4 earthquake killed 51 people, the country's deadliest earthquake in nearly a century.",
     "source": "https://en.wikipedia.org/wiki/2019_Albania_earthquake"
+  },
+  {
+    "id": "albania-2025-rama-wins-a-fourth-term",
+    "title": "Rama wins a fourth term",
+    "date": "11 May 2025",
+    "year-from": 2025,
+    "place": "Tirana",
+    "lat": 41.328,
+    "lon": 19.818,
+    "country": "Albania",
+    "importance": 3,
+    "description": "Edi Rama's Socialists win a fourth parliamentary election in a row.",
+    "source": "https://en.wikipedia.org/wiki/2025_Albanian_parliamentary_election"
   }
 ]

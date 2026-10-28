@@ -408,5 +408,18 @@
     "importance": 2,
     "description": "Protesters stormed and set fire to the Congress building after senators secretly approved a constitutional amendment allowing presidential re-election; in the unrest police killed the young activist Rodrigo Quintana, and the bill was later dropped.",
     "source": "https://en.wikipedia.org/wiki/2017_Paraguayan_crisis"
+  },
+  {
+    "id": "paraguay-2023-pena-elected",
+    "title": "Peña elected",
+    "date": "30 Apr 2023",
+    "year-from": 2023,
+    "place": "Asunción",
+    "lat": -25.264,
+    "lon": -57.576,
+    "country": "Paraguay",
+    "importance": 3,
+    "description": "Santiago Peña keeps the Colorado Party in power.",
+    "source": "https://en.wikipedia.org/wiki/2023_Paraguayan_general_election"
   }
 ]

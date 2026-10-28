@@ -267,5 +267,18 @@
     "importance": 3,
     "description": "Faustin-Archange Touadéra, a former prime minister and mathematics professor, wins the run-off that ends the transition.",
     "source": "https://en.wikipedia.org/wiki/Faustin-Archange_Touad%C3%A9ra"
+  },
+  {
+    "id": "central-african-republic-2023-term-limits-removed",
+    "title": "Term limits removed",
+    "date": "30 Jul 2023",
+    "year-from": 2023,
+    "place": "Bangui",
+    "lat": 4.394,
+    "lon": 18.558,
+    "country": "Central African Republic",
+    "importance": 3,
+    "description": "A referendum lets President Touadéra run for a third term.",
+    "source": "https://en.wikipedia.org/wiki/2023_Central_African_constitutional_referendum"
   }
 ]

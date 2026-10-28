@@ -353,5 +353,31 @@
     "importance": 3,
     "description": "José Eduardo dos Santos steps down after thirty-eight years as president.",
     "source": "https://en.wikipedia.org/wiki/João_Lourenço"
+  },
+  {
+    "id": "angola-2022-death-of-jose-eduardo-dos-santos",
+    "title": "Death of José Eduardo dos Santos",
+    "date": "8 Jul 2022",
+    "year-from": 2022,
+    "place": "Barcelona, Spain",
+    "lat": 41.389,
+    "lon": 2.159,
+    "country": "Angola",
+    "importance": 3,
+    "description": "The president of 38 years dies in exile.",
+    "source": "https://en.wikipedia.org/wiki/José_Eduardo_dos_Santos"
+  },
+  {
+    "id": "angola-2022-lourenco-re-elected",
+    "title": "Lourenço re-elected",
+    "date": "24 Aug 2022",
+    "year-from": 2022,
+    "place": "Luanda",
+    "lat": -8.839,
+    "lon": 13.289,
+    "country": "Angola",
+    "importance": 3,
+    "description": "The MPLA wins a narrow majority in its closest election since 1992.",
+    "source": "https://en.wikipedia.org/wiki/2022_Angolan_general_election"
   }
 ]

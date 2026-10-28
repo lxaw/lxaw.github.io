@@ -341,5 +341,31 @@
     "importance": 1,
     "description": "Crackdowns on protests over welfare cuts spiral into a popular revolt that the state suppresses with hundreds of deaths.",
     "source": "https://en.wikipedia.org/wiki/2018–2022_Nicaraguan_protests"
+  },
+  {
+    "id": "nicaragua-2021-ortega-re-elected-after-jailing-rivals",
+    "title": "Ortega re-elected after jailing rivals",
+    "date": "7 Nov 2021",
+    "year-from": 2021,
+    "place": "Managua",
+    "lat": 12.136,
+    "lon": -86.251,
+    "country": "Nicaragua",
+    "importance": 3,
+    "description": "Daniel Ortega wins a fourth term in a row after his main challengers were arrested.",
+    "source": "https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election"
+  },
+  {
+    "id": "nicaragua-2023-222-prisoners-expelled",
+    "title": "222 prisoners expelled",
+    "date": "Feb 2023",
+    "year-from": 2023,
+    "place": "Managua",
+    "lat": 12.136,
+    "lon": -86.251,
+    "country": "Nicaragua",
+    "importance": 3,
+    "description": "The government flies 222 political prisoners to the United States and strips them of citizenship.",
+    "source": "https://en.wikipedia.org/wiki/Juan_Sebastián_Chamorro"
   }
 ]

@@ -284,5 +284,18 @@
     "importance": 3,
     "description": "A new constitution removes the age and term barriers, and Sassou wins a fifth decade in power at the following election.",
     "source": "https://en.wikipedia.org/wiki/2015_Republic_of_the_Congo_constitutional_referendum"
+  },
+  {
+    "id": "republic-of-the-congo-2021-sassou-nguesso-re-elected",
+    "title": "Sassou Nguesso re-elected",
+    "date": "21 Mar 2021",
+    "year-from": 2021,
+    "place": "Brazzaville",
+    "lat": -4.263,
+    "lon": 15.242,
+    "country": "Republic of the Congo",
+    "importance": 3,
+    "description": "Denis Sassou Nguesso wins a fourth term; his main opponent dies of COVID-19 on election day.",
+    "source": "https://en.wikipedia.org/wiki/2021_Republic_of_the_Congo_presidential_election"
   }
 ]

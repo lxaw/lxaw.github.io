@@ -255,5 +255,31 @@
     "importance": 2,
     "description": "ExxonMobil announces a major oil find in the Liza well, the start of a petroleum boom that transforms the economy.",
     "source": "https://en.wikipedia.org/wiki/History_of_Guyana"
+  },
+  {
+    "id": "guyana-2020-ali-sworn-in-after-a-five-month-count",
+    "title": "Ali sworn in after a five-month count",
+    "date": "2 Aug 2020",
+    "year-from": 2020,
+    "place": "Georgetown",
+    "lat": 6.801,
+    "lon": -58.155,
+    "country": "Guyana",
+    "importance": 3,
+    "description": "Irfaan Ali takes office after a recount of the March election, as oil revenue starts to arrive.",
+    "source": "https://en.wikipedia.org/wiki/2020_Guyanese_general_election"
+  },
+  {
+    "id": "guyana-2023-venezuela-s-essequibo-referendum",
+    "title": "Venezuela's Essequibo referendum",
+    "date": "3 Dec 2023",
+    "year-from": 2023,
+    "place": "Essequibo",
+    "lat": 6.4,
+    "lon": -59.5,
+    "country": "Guyana",
+    "importance": 3,
+    "description": "Venezuela holds a referendum on annexing two-thirds of Guyana, raising fears of war.",
+    "source": "https://en.wikipedia.org/wiki/2023_Venezuelan_referendum"
   }
 ]

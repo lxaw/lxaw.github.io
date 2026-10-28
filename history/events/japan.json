@@ -973,5 +973,57 @@
     "importance": 2,
     "description": "Naruhito takes the throne after the abdication of his father Akihito, the first abdication in two centuries, and the Reiwa era begins.",
     "source": "https://en.wikipedia.org/wiki/Reiwa_era"
+  },
+  {
+    "id": "japan-2021-tokyo-olympics-held-a-year-late",
+    "title": "Tokyo Olympics held a year late",
+    "date": "23 Jul 2021",
+    "year-from": 2021,
+    "place": "Tokyo",
+    "lat": 35.678,
+    "lon": 139.715,
+    "country": "Japan",
+    "importance": 3,
+    "description": "The 2020 Games open after a year's delay for the pandemic, mostly without spectators.",
+    "source": "https://en.wikipedia.org/wiki/2020_Summer_Olympics"
+  },
+  {
+    "id": "japan-2022-assassination-of-shinzo-abe",
+    "title": "Assassination of Shinzo Abe",
+    "date": "8 Jul 2022",
+    "year-from": 2022,
+    "place": "Nara",
+    "lat": 34.689,
+    "lon": 135.805,
+    "country": "Japan",
+    "importance": 2,
+    "description": "The former prime minister is shot dead while giving a campaign speech.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Shinzo_Abe"
+  },
+  {
+    "id": "japan-2024-noto-earthquake",
+    "title": "Noto earthquake",
+    "date": "1 Jan 2024",
+    "year-from": 2024,
+    "place": "Noto Peninsula",
+    "lat": 37.5,
+    "lon": 137.27,
+    "country": "Japan",
+    "importance": 3,
+    "description": "A magnitude 7.5 earthquake devastates the Noto Peninsula on New Year's Day.",
+    "source": "https://en.wikipedia.org/wiki/2024_Noto_earthquake"
+  },
+  {
+    "id": "japan-2025-takaichi-first-woman-prime-minister",
+    "title": "Takaichi first woman prime minister",
+    "date": "21 Oct 2025",
+    "year-from": 2025,
+    "place": "Tokyo",
+    "lat": 35.676,
+    "lon": 139.745,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Sanae Takaichi becomes Japan's first woman prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Sanae_Takaichi"
   }
 ]

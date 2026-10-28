@@ -403,5 +403,31 @@
     "importance": 3,
     "description": "The state oil fund set up in 1990 passes one trillion US dollars in value, the largest sovereign wealth fund in the world.",
     "source": "https://en.wikipedia.org/wiki/Government_Pension_Fund_of_Norway"
+  },
+  {
+    "id": "norway-2021-kongsberg-attack",
+    "title": "Kongsberg attack",
+    "date": "13 Oct 2021",
+    "year-from": 2021,
+    "place": "Kongsberg",
+    "lat": 59.668,
+    "lon": 9.65,
+    "country": "Norway",
+    "importance": 3,
+    "description": "A man kills five people with a bow and arrows and knives.",
+    "source": "https://en.wikipedia.org/wiki/Kongsberg_attack"
+  },
+  {
+    "id": "norway-2022-oslo-shooting",
+    "title": "Oslo shooting",
+    "date": "25 Jun 2022",
+    "year-from": 2022,
+    "place": "Oslo",
+    "lat": 59.912,
+    "lon": 10.739,
+    "country": "Norway",
+    "importance": 3,
+    "description": "An Islamist gunman kills two people near gay bars on the night before Oslo Pride.",
+    "source": "https://en.wikipedia.org/wiki/2022_Oslo_shooting"
   }
 ]

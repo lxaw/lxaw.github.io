@@ -319,5 +319,31 @@
     "importance": 2,
     "description": "An African Union-backed court in Dakar convicts the former president of crimes against humanity, the first time one African state's courts try another's ruler.",
     "source": "https://en.wikipedia.org/wiki/Hiss%C3%A8ne_Habr%C3%A9"
+  },
+  {
+    "id": "chad-2021-death-of-idriss-deby",
+    "title": "Death of Idriss Déby",
+    "date": "20 Apr 2021",
+    "year-from": 2021,
+    "place": "Kanem Province",
+    "lat": 14.1,
+    "lon": 15.3,
+    "country": "Chad",
+    "importance": 2,
+    "description": "The president of 30 years dies of wounds from fighting rebels; his son Mahamat takes over at the head of a military council.",
+    "source": "https://en.wikipedia.org/wiki/Idriss_Déby"
+  },
+  {
+    "id": "chad-2022-black-thursday",
+    "title": "Black Thursday",
+    "date": "20 Oct 2022",
+    "year-from": 2022,
+    "place": "N'Djamena",
+    "lat": 12.134,
+    "lon": 15.056,
+    "country": "Chad",
+    "importance": 3,
+    "description": "Security forces kill dozens of protesters against the extension of the transition.",
+    "source": "https://en.wikipedia.org/wiki/2022_Chadian_protests"
   }
 ]

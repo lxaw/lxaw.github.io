@@ -586,5 +586,45 @@
     "importance": 3,
     "description": "The Five Star Movement and the League formed a coalition under Giuseppe Conte after three months of deadlock.",
     "source": "https://en.wikipedia.org/wiki/2018_Italian_government_formation"
+  },
+  {
+    "id": "italy-2020-first-national-covid-lockdown",
+    "title": "First national COVID lockdown",
+    "date": "9 Mar 2020",
+    "year-from": 2020,
+    "place": "Rome",
+    "lat": 41.903,
+    "lon": 12.496,
+    "country": "Italy",
+    "importance": 2,
+    "description": "Italy, the first European country hit hard by the virus, puts its whole population under lockdown.",
+    "source": "https://en.wikipedia.org/wiki/COVID-19_lockdowns_in_Italy"
+  },
+  {
+    "id": "italy-2022-meloni-first-woman-prime-minister",
+    "title": "Meloni first woman prime minister",
+    "date": "22 Oct 2022",
+    "year-from": 2022,
+    "place": "Rome",
+    "lat": 41.901,
+    "lon": 12.48,
+    "country": "Italy",
+    "importance": 3,
+    "description": "Giorgia Meloni of the Brothers of Italy forms the most right-wing government since the war.",
+    "source": "https://en.wikipedia.org/wiki/Meloni_government"
+  },
+  {
+    "id": "italy-2025-leo-xiv-elected-pope",
+    "title": "Leo XIV elected pope",
+    "date": "8 May 2025",
+    "year-from": 2025,
+    "place": "Vatican City",
+    "lat": 41.902,
+    "lon": 12.454,
+    "country": "Italy",
+    "polity": "Vatican City",
+    "importance": 2,
+    "description": "Robert Prevost becomes Leo XIV, the first pope from the United States, after the death of Pope Francis.",
+    "source": "https://en.wikipedia.org/wiki/2025_papal_conclave"
   }
 ]

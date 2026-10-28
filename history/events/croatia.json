@@ -465,5 +465,44 @@
     "importance": 3,
     "description": "Croatia played the country's first World Cup final, losing 4–2 to France in Moscow.",
     "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_final"
+  },
+  {
+    "id": "croatia-2020-zagreb-earthquake",
+    "title": "Zagreb earthquake",
+    "date": "22 Mar 2020",
+    "year-from": 2020,
+    "place": "Zagreb",
+    "lat": 45.815,
+    "lon": 15.982,
+    "country": "Croatia",
+    "importance": 3,
+    "description": "The strongest earthquake in Zagreb since 1880 damages the cathedral and the old town.",
+    "source": "https://en.wikipedia.org/wiki/2020_Zagreb_earthquake"
+  },
+  {
+    "id": "croatia-2020-petrinja-earthquake",
+    "title": "Petrinja earthquake",
+    "date": "29 Dec 2020",
+    "year-from": 2020,
+    "place": "Petrinja",
+    "lat": 45.44,
+    "lon": 16.28,
+    "country": "Croatia",
+    "importance": 3,
+    "description": "A magnitude 6.4 earthquake devastates Petrinja and the surrounding area.",
+    "source": "https://en.wikipedia.org/wiki/2020_Petrinja_earthquake"
+  },
+  {
+    "id": "croatia-2023-euro-and-schengen",
+    "title": "Euro and Schengen",
+    "date": "1 Jan 2023",
+    "year-from": 2023,
+    "place": "Zagreb",
+    "lat": 45.815,
+    "lon": 15.982,
+    "country": "Croatia",
+    "importance": 3,
+    "description": "Croatia adopts the euro and joins the Schengen Area on the same day.",
+    "source": "https://en.wikipedia.org/wiki/Croatia_and_the_euro"
   }
 ]

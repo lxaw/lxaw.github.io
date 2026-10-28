@@ -399,5 +399,18 @@
     "importance": 3,
     "description": "Flows of hot ash and gas bury villages on the volcano's slopes, killing about 200 people.",
     "source": "https://en.wikipedia.org/wiki/2018_Volcán_de_Fuego_eruption"
+  },
+  {
+    "id": "guatemala-2024-arevalo-takes-office",
+    "title": "Arévalo takes office",
+    "date": "15 Jan 2024",
+    "year-from": 2024,
+    "place": "Guatemala City",
+    "lat": 14.634,
+    "lon": -90.507,
+    "country": "Guatemala",
+    "importance": 3,
+    "description": "Bernardo Arévalo is sworn in after months of attempts by prosecutors to overturn his election.",
+    "source": "https://en.wikipedia.org/wiki/Bernardo_Arévalo"
   }
 ]

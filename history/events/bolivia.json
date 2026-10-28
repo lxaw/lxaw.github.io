@@ -387,5 +387,44 @@
     "importance": 2,
     "description": "Evo Morales resigns after a disputed election, weeks of protests and a call from the armed forces to step down.",
     "source": "https://en.wikipedia.org/wiki/2019_Bolivian_political_crisis"
+  },
+  {
+    "id": "bolivia-2020-arce-elected",
+    "title": "Arce elected",
+    "date": "18 Oct 2020",
+    "year-from": 2020,
+    "place": "La Paz",
+    "lat": -16.5,
+    "lon": -68.15,
+    "country": "Bolivia",
+    "importance": 3,
+    "description": "Evo Morales's party returns to power a year after his resignation.",
+    "source": "https://en.wikipedia.org/wiki/2020_Bolivian_general_election"
+  },
+  {
+    "id": "bolivia-2024-coup-attempt",
+    "title": "Coup attempt",
+    "date": "26 Jun 2024",
+    "year-from": 2024,
+    "place": "Plaza Murillo, La Paz",
+    "lat": -16.496,
+    "lon": -68.134,
+    "country": "Bolivia",
+    "importance": 3,
+    "description": "General Juan José Zúñiga rams an armoured car into the presidential palace and is arrested within hours.",
+    "source": "https://en.wikipedia.org/wiki/2024_Bolivian_coup_attempt"
+  },
+  {
+    "id": "bolivia-2025-rodrigo-paz-elected",
+    "title": "Rodrigo Paz elected",
+    "date": "19 Oct 2025",
+    "year-from": 2025,
+    "place": "La Paz",
+    "lat": -16.5,
+    "lon": -68.15,
+    "country": "Bolivia",
+    "importance": 3,
+    "description": "Rodrigo Paz wins the first presidential run-off in Bolivian history, ending two decades of MAS government.",
+    "source": "https://en.wikipedia.org/wiki/2025_Bolivian_general_election"
   }
 ]

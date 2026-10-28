@@ -350,5 +350,31 @@
     "importance": 3,
     "description": "Voters approve changes that allow Paul Kagame to stand for further terms.",
     "source": "https://en.wikipedia.org/wiki/2015_Rwandan_constitutional_referendum"
+  },
+  {
+    "id": "rwanda-2021-rusesabagina-convicted",
+    "title": "Rusesabagina convicted",
+    "date": "20 Sep 2021",
+    "year-from": 2021,
+    "place": "Kigali",
+    "lat": -1.944,
+    "lon": 30.062,
+    "country": "Rwanda",
+    "importance": 3,
+    "description": "Paul Rusesabagina, the hotel manager of Hotel Rwanda, is convicted of terrorism after being lured back to Kigali.",
+    "source": "https://en.wikipedia.org/wiki/Paul_Rusesabagina"
+  },
+  {
+    "id": "rwanda-2024-kagame-re-elected",
+    "title": "Kagame re-elected",
+    "date": "15 Jul 2024",
+    "year-from": 2024,
+    "place": "Kigali",
+    "lat": -1.944,
+    "lon": 30.062,
+    "country": "Rwanda",
+    "importance": 3,
+    "description": "Paul Kagame wins a fourth term with 99 percent of the vote.",
+    "source": "https://en.wikipedia.org/wiki/2024_Rwandan_general_election"
   }
 ]

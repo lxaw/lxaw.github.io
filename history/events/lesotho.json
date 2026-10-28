@@ -313,5 +313,18 @@
     "importance": 3,
     "description": "Tom Thabane's ABC alliance wins the third election in five years and he becomes prime minister for a second time.",
     "source": "https://en.wikipedia.org/wiki/2017_Lesotho_general_election"
+  },
+  {
+    "id": "lesotho-2022-matekane-elected",
+    "title": "Matekane elected",
+    "date": "7 Oct 2022",
+    "year-from": 2022,
+    "place": "Maseru",
+    "lat": -29.31,
+    "lon": 27.48,
+    "country": "Lesotho",
+    "importance": 3,
+    "description": "The businessman Sam Matekane's new party wins the election.",
+    "source": "https://en.wikipedia.org/wiki/2022_Lesotho_general_election"
   }
 ]

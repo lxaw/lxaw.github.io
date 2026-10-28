@@ -252,5 +252,18 @@
     "importance": 3,
     "description": "Equatorial Guinea sat on the UN Security Council for the first time.",
     "source": "https://en.wikipedia.org/wiki/Equatorial_Guinea"
+  },
+  {
+    "id": "equatorial-guinea-2021-bata-explosions",
+    "title": "Bata explosions",
+    "date": "7 Mar 2021",
+    "year-from": 2021,
+    "place": "Bata",
+    "lat": 1.863,
+    "lon": 9.765,
+    "country": "Equatorial Guinea",
+    "importance": 3,
+    "description": "Explosions at a military barracks kill about a hundred people.",
+    "source": "https://en.wikipedia.org/wiki/2021_Bata_explosions"
   }
 ]

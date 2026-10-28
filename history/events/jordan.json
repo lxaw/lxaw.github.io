@@ -403,5 +403,18 @@
     "importance": 3,
     "description": "A week of strikes and nationwide protests against a planned income-tax law forced the resignation of prime minister Hani Mulki, who was replaced by Omar Razzaz.",
     "source": "https://en.wikipedia.org/wiki/2018_Jordanian_protests"
+  },
+  {
+    "id": "jordan-2021-prince-hamzah-affair",
+    "title": "Prince Hamzah affair",
+    "date": "3 Apr 2021",
+    "year-from": 2021,
+    "place": "Amman",
+    "lat": 31.954,
+    "lon": 35.911,
+    "country": "Jordan",
+    "importance": 3,
+    "description": "The king's half-brother is placed under house arrest over an alleged plot.",
+    "source": "https://en.wikipedia.org/wiki/2021_arrests_in_Jordan"
   }
 ]

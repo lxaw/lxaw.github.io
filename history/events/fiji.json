@@ -262,5 +262,31 @@
     "importance": 1,
     "description": "The strongest cyclone yet recorded in the southern hemisphere kills 44 people and damages or destroys tens of thousands of homes.",
     "source": "https://en.wikipedia.org/wiki/Cyclone_Winston"
+  },
+  {
+    "id": "fiji-2020-cyclone-yasa",
+    "title": "Cyclone Yasa",
+    "date": "17 Dec 2020",
+    "year-from": 2020,
+    "place": "Vanua Levu",
+    "lat": -16.6,
+    "lon": 179.3,
+    "country": "Fiji",
+    "importance": 3,
+    "description": "A category 5 cyclone strikes Vanua Levu.",
+    "source": "https://en.wikipedia.org/wiki/Cyclone_Yasa"
+  },
+  {
+    "id": "fiji-2022-rabuka-returns-as-prime-minister",
+    "title": "Rabuka returns as prime minister",
+    "date": "24 Dec 2022",
+    "year-from": 2022,
+    "place": "Suva",
+    "lat": -18.124,
+    "lon": 178.45,
+    "country": "Fiji",
+    "importance": 3,
+    "description": "Sitiveni Rabuka, leader of the 1987 coups, takes office after the first change of government since 2006.",
+    "source": "https://en.wikipedia.org/wiki/2022_Fijian_general_election"
   }
 ]

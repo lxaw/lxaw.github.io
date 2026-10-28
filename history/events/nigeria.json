@@ -409,5 +409,31 @@
     "importance": 2,
     "description": "Muhammadu Buhari defeats Goodluck Jonathan, who concedes.",
     "source": "https://en.wikipedia.org/wiki/2015_Nigerian_general_election"
+  },
+  {
+    "id": "nigeria-2020-lekki-toll-gate-shooting",
+    "title": "Lekki toll gate shooting",
+    "date": "20 Oct 2020",
+    "year-from": 2020,
+    "place": "Lekki, Lagos",
+    "lat": 6.434,
+    "lon": 3.46,
+    "country": "Nigeria",
+    "importance": 3,
+    "description": "Soldiers open fire on protesters of the EndSARS movement against police brutality.",
+    "source": "https://en.wikipedia.org/wiki/Lekki_massacre"
+  },
+  {
+    "id": "nigeria-2023-tinubu-elected",
+    "title": "Tinubu elected",
+    "date": "25 Feb 2023",
+    "year-from": 2023,
+    "place": "Abuja",
+    "lat": 9.076,
+    "lon": 7.399,
+    "country": "Nigeria",
+    "importance": 3,
+    "description": "Bola Tinubu wins a disputed presidential election and soon ends the fuel subsidy.",
+    "source": "https://en.wikipedia.org/wiki/2023_Nigerian_presidential_election"
   }
 ]

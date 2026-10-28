@@ -321,5 +321,31 @@
     "importance": 2,
     "description": "The new locks take their first ship, nearly doubling the canal's capacity.",
     "source": "https://en.wikipedia.org/wiki/Panama_Canal_expansion_project"
+  },
+  {
+    "id": "panama-2023-mining-contract-struck-down",
+    "title": "Mining contract struck down",
+    "date": "28 Nov 2023",
+    "year-from": 2023,
+    "place": "Panama City",
+    "lat": 8.983,
+    "lon": -79.517,
+    "country": "Panama",
+    "importance": 3,
+    "description": "After weeks of protests the Supreme Court rules the Cobre Panamá copper mine contract unconstitutional.",
+    "source": "https://en.wikipedia.org/wiki/2023_Panamanian_protests"
+  },
+  {
+    "id": "panama-2024-mulino-elected",
+    "title": "Mulino elected",
+    "date": "5 May 2024",
+    "year-from": 2024,
+    "place": "Panama City",
+    "lat": 8.983,
+    "lon": -79.517,
+    "country": "Panama",
+    "importance": 3,
+    "description": "José Raúl Mulino wins the presidency, standing in for the disqualified Ricardo Martinelli.",
+    "source": "https://en.wikipedia.org/wiki/2024_Panamanian_general_election"
   }
 ]

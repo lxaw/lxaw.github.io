@@ -344,5 +344,31 @@
     "importance": 1,
     "description": "Nursultan Nazarbayev steps down after nearly thirty years as president, and the capital is renamed Nur-Sultan in his honour.",
     "source": "https://en.wikipedia.org/wiki/Nursultan_Nazarbayev"
+  },
+  {
+    "id": "kazakhstan-2022-january-unrest",
+    "title": "January unrest",
+    "date": "Jan 2022",
+    "year-from": 2022,
+    "place": "Almaty",
+    "lat": 43.238,
+    "lon": 76.946,
+    "country": "Kazakhstan",
+    "importance": 2,
+    "description": "Protests over fuel prices turn into riots; Russian-led troops are called in and more than 200 die.",
+    "source": "https://en.wikipedia.org/wiki/2022_Kazakh_unrest"
+  },
+  {
+    "id": "kazakhstan-2022-capital-renamed-astana-again",
+    "title": "Capital renamed Astana again",
+    "date": "Sep 2022",
+    "year-from": 2022,
+    "place": "Astana",
+    "lat": 51.169,
+    "lon": 71.449,
+    "country": "Kazakhstan",
+    "importance": 3,
+    "description": "Nur-Sultan, named after Nazarbayev in 2019, gets its old name back.",
+    "source": "https://en.wikipedia.org/wiki/Astana"
   }
 ]

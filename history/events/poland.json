@@ -518,5 +518,44 @@
     "importance": 3,
     "description": "Citing a clear risk of a serious breach of the rule of law, the European Commission opens Article 7 proceedings against Poland over changes to its judiciary, the first time the procedure is used.",
     "source": "https://en.wikipedia.org/wiki/Article_7_of_the_Treaty_on_European_Union"
+  },
+  {
+    "id": "poland-2020-constitutional-ruling-restricts-abortion",
+    "title": "Constitutional ruling restricts abortion",
+    "date": "22 Oct 2020",
+    "year-from": 2020,
+    "place": "Warsaw",
+    "lat": 52.23,
+    "lon": 21.012,
+    "country": "Poland",
+    "importance": 3,
+    "description": "The Constitutional Tribunal bans abortion for foetal defects, setting off the largest protests since 1989.",
+    "source": "https://en.wikipedia.org/wiki/October_2020_Polish_protests"
+  },
+  {
+    "id": "poland-2023-tusk-returns-as-prime-minister",
+    "title": "Tusk returns as prime minister",
+    "date": "13 Dec 2023",
+    "year-from": 2023,
+    "place": "Warsaw",
+    "lat": 52.23,
+    "lon": 21.012,
+    "country": "Poland",
+    "importance": 3,
+    "description": "A coalition led by Donald Tusk replaces eight years of Law and Justice government.",
+    "source": "https://en.wikipedia.org/wiki/Third_Tusk_cabinet"
+  },
+  {
+    "id": "poland-2025-nawrocki-elected-president",
+    "title": "Nawrocki elected president",
+    "date": "1 Jun 2025",
+    "year-from": 2025,
+    "place": "Warsaw",
+    "lat": 52.23,
+    "lon": 21.012,
+    "country": "Poland",
+    "importance": 3,
+    "description": "Karol Nawrocki, backed by Law and Justice, narrowly wins the presidential run-off.",
+    "source": "https://en.wikipedia.org/wiki/2025_Polish_presidential_election"
   }
 ]

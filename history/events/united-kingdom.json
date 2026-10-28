@@ -663,5 +663,57 @@
     "importance": 2,
     "description": "In a referendum 51.9% vote to leave, and the United Kingdom leaves in 2020.",
     "source": "https://en.wikipedia.org/wiki/2016_United_Kingdom_European_Union_membership_referendum"
+  },
+  {
+    "id": "united-kingdom-2020-brexit-takes-effect",
+    "title": "Brexit takes effect",
+    "date": "31 Jan 2020",
+    "year-from": 2020,
+    "place": "London",
+    "lat": 51.501,
+    "lon": -0.125,
+    "country": "United Kingdom",
+    "importance": 2,
+    "description": "The United Kingdom leaves the European Union, 47 years after joining.",
+    "source": "https://en.wikipedia.org/wiki/Brexit"
+  },
+  {
+    "id": "united-kingdom-2022-death-of-elizabeth-ii",
+    "title": "Death of Elizabeth II",
+    "date": "8 Sep 2022",
+    "year-from": 2022,
+    "place": "Balmoral Castle",
+    "lat": 57.039,
+    "lon": -3.23,
+    "country": "United Kingdom",
+    "importance": 2,
+    "description": "The longest-reigning British monarch dies after 70 years on the throne; Charles III succeeds her.",
+    "source": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Elizabeth_II"
+  },
+  {
+    "id": "united-kingdom-2023-coronation-of-charles-iii",
+    "title": "Coronation of Charles III",
+    "date": "6 May 2023",
+    "year-from": 2023,
+    "place": "Westminster Abbey",
+    "lat": 51.499,
+    "lon": -0.127,
+    "country": "United Kingdom",
+    "importance": 3,
+    "description": "Charles III and Camilla are crowned at Westminster Abbey.",
+    "source": "https://en.wikipedia.org/wiki/Coronation_of_Charles_III_and_Camilla"
+  },
+  {
+    "id": "united-kingdom-2024-labour-landslide",
+    "title": "Labour landslide",
+    "date": "4 Jul 2024",
+    "year-from": 2024,
+    "place": "London",
+    "lat": 51.503,
+    "lon": -0.128,
+    "country": "United Kingdom",
+    "importance": 3,
+    "description": "Keir Starmer's Labour wins a large majority, ending 14 years of Conservative government.",
+    "source": "https://en.wikipedia.org/wiki/2024_United_Kingdom_general_election"
   }
 ]

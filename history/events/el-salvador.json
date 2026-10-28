@@ -289,5 +289,44 @@
     "importance": 2,
     "description": "Nayib Bukele wins the presidency in the first round, breaking the two-party system that survived the peace accords.",
     "source": "https://en.wikipedia.org/wiki/2019_Salvadoran_presidential_election"
+  },
+  {
+    "id": "el-salvador-2021-bitcoin-made-legal-tender",
+    "title": "Bitcoin made legal tender",
+    "date": "7 Sep 2021",
+    "year-from": 2021,
+    "place": "San Salvador",
+    "lat": 13.692,
+    "lon": -89.218,
+    "country": "El Salvador",
+    "importance": 3,
+    "description": "El Salvador becomes the first country to make bitcoin legal tender.",
+    "source": "https://en.wikipedia.org/wiki/Bitcoin_in_El_Salvador"
+  },
+  {
+    "id": "el-salvador-2022-state-of-exception-against-the-gangs",
+    "title": "State of exception against the gangs",
+    "date": "27 Mar 2022",
+    "year-from": 2022,
+    "place": "San Salvador",
+    "lat": 13.692,
+    "lon": -89.218,
+    "country": "El Salvador",
+    "importance": 2,
+    "description": "After a weekend of gang killings, civil rights are suspended and more than 80,000 people are arrested.",
+    "source": "https://en.wikipedia.org/wiki/Salvadoran_gang_crackdown"
+  },
+  {
+    "id": "el-salvador-2024-bukele-re-elected",
+    "title": "Bukele re-elected",
+    "date": "4 Feb 2024",
+    "year-from": 2024,
+    "place": "San Salvador",
+    "lat": 13.692,
+    "lon": -89.218,
+    "country": "El Salvador",
+    "importance": 3,
+    "description": "Nayib Bukele wins a second term despite a constitutional ban on consecutive terms.",
+    "source": "https://en.wikipedia.org/wiki/2024_Salvadoran_presidential_election"
   }
 ]

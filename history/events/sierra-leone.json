@@ -367,5 +367,31 @@
     "importance": 3,
     "description": "Opposition leader Julius Maada Bio of the Sierra Leone People's Party wins a run-off against Samura Kamara of the ruling party.",
     "source": "https://en.wikipedia.org/wiki/2018_Sierra_Leonean_general_election"
+  },
+  {
+    "id": "sierra-leone-2023-freetown-s-cotton-tree-falls",
+    "title": "Freetown's Cotton Tree falls",
+    "date": "24 May 2023",
+    "year-from": 2023,
+    "place": "Freetown",
+    "lat": 8.484,
+    "lon": -13.234,
+    "country": "Sierra Leone",
+    "importance": 3,
+    "description": "A storm brings down the centuries-old tree that symbolised the city's founding.",
+    "source": "https://en.wikipedia.org/wiki/Cotton_Tree_(Sierra_Leone)"
+  },
+  {
+    "id": "sierra-leone-2023-bio-re-elected",
+    "title": "Bio re-elected",
+    "date": "24 Jun 2023",
+    "year-from": 2023,
+    "place": "Freetown",
+    "lat": 8.484,
+    "lon": -13.234,
+    "country": "Sierra Leone",
+    "importance": 3,
+    "description": "Julius Maada Bio wins a second term in a disputed election; an attempted coup follows in November.",
+    "source": "https://en.wikipedia.org/wiki/2023_Sierra_Leonean_general_election"
   }
 ]

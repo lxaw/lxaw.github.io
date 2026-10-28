@@ -300,5 +300,18 @@
     "importance": 3,
     "description": "A dam of the Xe-Pian Xe-Namnoy hydropower project fails, flooding villages and leaving thousands homeless.",
     "source": "https://en.wikipedia.org/wiki/2018_Laos_dam_collapse"
+  },
+  {
+    "id": "laos-2021-railway-to-china-opens",
+    "title": "Railway to China opens",
+    "date": "3 Dec 2021",
+    "year-from": 2021,
+    "place": "Vientiane",
+    "lat": 17.975,
+    "lon": 102.633,
+    "country": "Laos",
+    "importance": 3,
+    "description": "A Chinese-built line links Vientiane to Kunming.",
+    "source": "https://en.wikipedia.org/wiki/Boten–Vientiane_railway"
   }
 ]

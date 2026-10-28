@@ -434,5 +434,31 @@
     "importance": 2,
     "description": "A military campaign in Myanmar drives more than 700,000 Rohingya across the border, where they settle in the world's largest refugee camp.",
     "source": "https://en.wikipedia.org/wiki/Rohingya_genocide"
+  },
+  {
+    "id": "bangladesh-2022-padma-bridge-opens",
+    "title": "Padma Bridge opens",
+    "date": "25 Jun 2022",
+    "year-from": 2022,
+    "place": "Mawa",
+    "lat": 23.45,
+    "lon": 90.26,
+    "country": "Bangladesh",
+    "importance": 3,
+    "description": "The country's longest bridge links the south-west to Dhaka across the Padma.",
+    "source": "https://en.wikipedia.org/wiki/Padma_Bridge"
+  },
+  {
+    "id": "bangladesh-2024-sheikh-hasina-ousted",
+    "title": "Sheikh Hasina ousted",
+    "date": "5 Aug 2024",
+    "year-from": 2024,
+    "place": "Dhaka",
+    "lat": 23.81,
+    "lon": 90.413,
+    "country": "Bangladesh",
+    "importance": 2,
+    "description": "Student-led protests over job quotas force Hasina to flee to India after 15 years in power; Muhammad Yunus leads an interim government.",
+    "source": "https://en.wikipedia.org/wiki/Resignation_of_Sheikh_Hasina"
   }
 ]

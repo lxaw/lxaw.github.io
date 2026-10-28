@@ -385,5 +385,31 @@
     "importance": 3,
     "description": "Protests led by indigenous groups force President Lenín Moreno to restore fuel subsidies.",
     "source": "https://en.wikipedia.org/wiki/2019_Ecuadorian_protests"
+  },
+  {
+    "id": "ecuador-2023-villavicencio-assassinated",
+    "title": "Villavicencio assassinated",
+    "date": "9 Aug 2023",
+    "year-from": 2023,
+    "place": "Quito",
+    "lat": -0.18,
+    "lon": -78.467,
+    "country": "Ecuador",
+    "importance": 3,
+    "description": "The anti-corruption presidential candidate is shot dead after a rally.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Fernando_Villavicencio"
+  },
+  {
+    "id": "ecuador-2024-war-on-the-gangs-declared",
+    "title": "War on the gangs declared",
+    "date": "9 Jan 2024",
+    "year-from": 2024,
+    "place": "Guayaquil",
+    "lat": -2.17,
+    "lon": -79.92,
+    "country": "Ecuador",
+    "importance": 2,
+    "description": "Gunmen storm a television studio live on air, and President Noboa declares an internal armed conflict against the gangs.",
+    "source": "https://en.wikipedia.org/wiki/2024_Ecuadorian_conflict"
   }
 ]

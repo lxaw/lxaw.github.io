@@ -482,5 +482,44 @@
     "importance": 2,
     "description": "Protests against an emergency decree easing graft penalties became the largest since 1989 and forced the government to withdraw it.",
     "source": "https://en.wikipedia.org/wiki/2017–2019_Romanian_protests"
+  },
+  {
+    "id": "romania-2024-presidential-election-annulled",
+    "title": "Presidential election annulled",
+    "date": "6 Dec 2024",
+    "year-from": 2024,
+    "place": "Bucharest",
+    "lat": 44.427,
+    "lon": 26.103,
+    "country": "Romania",
+    "importance": 2,
+    "description": "The Constitutional Court cancels the election after Călin Georgescu's first-round win amid evidence of a Russian-backed campaign.",
+    "source": "https://en.wikipedia.org/wiki/2024_Romanian_presidential_election"
+  },
+  {
+    "id": "romania-2025-joins-the-schengen-area",
+    "title": "Joins the Schengen Area",
+    "date": "1 Jan 2025",
+    "year-from": 2025,
+    "place": "Bucharest",
+    "lat": 44.427,
+    "lon": 26.103,
+    "country": "Romania",
+    "importance": 3,
+    "description": "Land border checks with the rest of the Schengen Area end.",
+    "source": "https://en.wikipedia.org/wiki/2025_enlargement_of_the_Schengen_Area"
+  },
+  {
+    "id": "romania-2025-nicusor-dan-elected",
+    "title": "Nicușor Dan elected",
+    "date": "18 May 2025",
+    "year-from": 2025,
+    "place": "Bucharest",
+    "lat": 44.427,
+    "lon": 26.103,
+    "country": "Romania",
+    "importance": 3,
+    "description": "The mayor of Bucharest defeats the far-right George Simion in the re-run election.",
+    "source": "https://en.wikipedia.org/wiki/2025_Romanian_presidential_election"
   }
 ]

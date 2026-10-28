@@ -964,5 +964,57 @@
     "importance": 3,
     "description": "Angela Merkel gives up the leadership of the CDU after eighteen years while remaining chancellor, and the party narrowly elects Annegret Kramp-Karrenbauer to succeed her.",
     "source": "https://en.wikipedia.org/wiki/2018_Christian_Democratic_Union_of_Germany_leadership_election"
+  },
+  {
+    "id": "germany-2021-scholz-coalition-takes-office",
+    "title": "Scholz coalition takes office",
+    "date": "8 Dec 2021",
+    "year-from": 2021,
+    "place": "Berlin",
+    "lat": 52.52,
+    "lon": 13.405,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Olaf Scholz succeeds Angela Merkel at the head of the first federal coalition of SPD, Greens and FDP.",
+    "source": "https://en.wikipedia.org/wiki/Scholz_cabinet"
+  },
+  {
+    "id": "germany-2022-zeitenwende-speech",
+    "title": "Zeitenwende speech",
+    "date": "27 Feb 2022",
+    "year-from": 2022,
+    "place": "Bundestag, Berlin",
+    "lat": 52.519,
+    "lon": 13.376,
+    "country": "Germany",
+    "importance": 2,
+    "description": "Three days into Russia's invasion of Ukraine, Scholz announces a 100-billion-euro fund to rebuild the armed forces.",
+    "source": "https://en.wikipedia.org/wiki/Zeitenwende_speech"
+  },
+  {
+    "id": "germany-2023-last-nuclear-plants-shut-down",
+    "title": "Last nuclear plants shut down",
+    "date": "15 Apr 2023",
+    "year-from": 2023,
+    "place": "Neckarwestheim",
+    "lat": 49.04,
+    "lon": 9.17,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Germany's three remaining nuclear power stations go offline.",
+    "source": "https://en.wikipedia.org/wiki/Nuclear_power_in_Germany"
+  },
+  {
+    "id": "germany-2025-merz-becomes-chancellor",
+    "title": "Merz becomes chancellor",
+    "date": "6 May 2025",
+    "year-from": 2025,
+    "place": "Bundestag, Berlin",
+    "lat": 52.519,
+    "lon": 13.376,
+    "country": "Germany",
+    "importance": 3,
+    "description": "Friedrich Merz is elected chancellor at the second ballot, the first nominee to fail at the first.",
+    "source": "https://en.wikipedia.org/wiki/Merz_cabinet"
   }
 ]

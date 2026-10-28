@@ -318,5 +318,44 @@
     "importance": 3,
     "description": "Peter Mutharika wins a narrow second term in a result soon overturned by the courts for fraud.",
     "source": "https://en.wikipedia.org/wiki/History_of_Malawi"
+  },
+  {
+    "id": "malawi-2020-election-re-run",
+    "title": "Election re-run",
+    "date": "23 Jun 2020",
+    "year-from": 2020,
+    "place": "Lilongwe",
+    "lat": -13.963,
+    "lon": 33.774,
+    "country": "Malawi",
+    "importance": 3,
+    "description": "After courts annul the 2019 vote, Lazarus Chakwera defeats Peter Mutharika in the re-run.",
+    "source": "https://en.wikipedia.org/wiki/2020_Malawian_presidential_election"
+  },
+  {
+    "id": "malawi-2023-cyclone-freddy",
+    "title": "Cyclone Freddy",
+    "date": "Mar 2023",
+    "year-from": 2023,
+    "place": "Blantyre",
+    "lat": -15.786,
+    "lon": 35.006,
+    "country": "Malawi",
+    "importance": 3,
+    "description": "The longest-lived tropical cyclone on record kills more than a thousand people in southern Malawi.",
+    "source": "https://en.wikipedia.org/wiki/Cyclone_Freddy"
+  },
+  {
+    "id": "malawi-2024-vice-president-killed-in-a-plane-crash",
+    "title": "Vice-president killed in a plane crash",
+    "date": "10 Jun 2024",
+    "year-from": 2024,
+    "place": "Chikangawa Forest",
+    "lat": -11.84,
+    "lon": 33.75,
+    "country": "Malawi",
+    "importance": 3,
+    "description": "Saulos Chilima and eight others die when a military plane crashes in bad weather.",
+    "source": "https://en.wikipedia.org/wiki/2024_Chikangawa_Dornier_228_crash"
   }
 ]

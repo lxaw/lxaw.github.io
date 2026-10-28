@@ -320,5 +320,31 @@
     "importance": 2,
     "description": "One of the worst storms recorded in the southern hemisphere wrecks Beira and floods central Mozambique, killing more than 600 people in the country.",
     "source": "https://en.wikipedia.org/wiki/Cyclone_Idai"
+  },
+  {
+    "id": "mozambique-2021-palma-attack",
+    "title": "Palma attack",
+    "date": "24 Mar 2021",
+    "year-from": 2021,
+    "place": "Palma",
+    "lat": -10.77,
+    "lon": 40.47,
+    "country": "Mozambique",
+    "importance": 3,
+    "description": "Islamist insurgents overrun the town next to a gas project, killing dozens.",
+    "source": "https://en.wikipedia.org/wiki/Battle_of_Palma"
+  },
+  {
+    "id": "mozambique-2024-post-election-protests",
+    "title": "Post-election protests",
+    "date": "Oct 2024",
+    "year-from": 2024,
+    "place": "Maputo",
+    "lat": -25.966,
+    "lon": 32.583,
+    "country": "Mozambique",
+    "importance": 3,
+    "description": "Months of protests against Frelimo's disputed win leave hundreds dead.",
+    "source": "https://en.wikipedia.org/wiki/2024–2025_Mozambican_protests"
   }
 ]

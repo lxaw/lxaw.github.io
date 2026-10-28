@@ -386,5 +386,44 @@
     "importance": 3,
     "description": "A secretly filmed video of Vice-Chancellor Heinz-Christian Strache collapsed the coalition, and the chancellor lost a no-confidence vote.",
     "source": "https://en.wikipedia.org/wiki/Ibiza_affair"
+  },
+  {
+    "id": "austria-2020-vienna-attack",
+    "title": "Vienna attack",
+    "date": "2 Nov 2020",
+    "year-from": 2020,
+    "place": "Vienna",
+    "lat": 48.211,
+    "lon": 16.373,
+    "country": "Austria",
+    "importance": 3,
+    "description": "An Islamic State supporter kills four people in the city centre.",
+    "source": "https://en.wikipedia.org/wiki/2020_Vienna_attack"
+  },
+  {
+    "id": "austria-2021-kurz-resigns",
+    "title": "Kurz resigns",
+    "date": "9 Oct 2021",
+    "year-from": 2021,
+    "place": "Vienna",
+    "lat": 48.208,
+    "lon": 16.366,
+    "country": "Austria",
+    "importance": 3,
+    "description": "Chancellor Sebastian Kurz resigns amid a corruption investigation.",
+    "source": "https://en.wikipedia.org/wiki/Sebastian_Kurz"
+  },
+  {
+    "id": "austria-2025-graz-school-shooting",
+    "title": "Graz school shooting",
+    "date": "10 Jun 2025",
+    "year-from": 2025,
+    "place": "Graz",
+    "lat": 47.07,
+    "lon": 15.44,
+    "country": "Austria",
+    "importance": 3,
+    "description": "A former pupil kills ten people at a secondary school, the deadliest mass shooting in Austrian history.",
+    "source": "https://en.wikipedia.org/wiki/Graz_school_shooting"
   }
 ]

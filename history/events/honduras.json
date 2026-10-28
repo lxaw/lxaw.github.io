@@ -330,5 +330,31 @@
     "importance": 3,
     "description": "Juan Orlando Hernández was declared re-elected after a vote count that the OAS found too flawed to accept, and protests left at least 22 people dead.",
     "source": "https://en.wikipedia.org/wiki/2017_Honduran_general_election"
+  },
+  {
+    "id": "honduras-2020-hurricanes-eta-and-iota",
+    "title": "Hurricanes Eta and Iota",
+    "date": "Nov 2020",
+    "year-from": 2020,
+    "place": "San Pedro Sula",
+    "lat": 15.505,
+    "lon": -88.025,
+    "country": "Honduras",
+    "importance": 3,
+    "description": "Two major hurricanes two weeks apart flood the Sula Valley.",
+    "source": "https://en.wikipedia.org/wiki/Hurricane_Iota"
+  },
+  {
+    "id": "honduras-2022-castro-first-woman-president",
+    "title": "Castro first woman president",
+    "date": "27 Jan 2022",
+    "year-from": 2022,
+    "place": "Tegucigalpa",
+    "lat": 14.072,
+    "lon": -87.192,
+    "country": "Honduras",
+    "importance": 3,
+    "description": "Xiomara Castro takes office; her predecessor Juan Orlando Hernández is extradited to the United States in April.",
+    "source": "https://en.wikipedia.org/wiki/Xiomara_Castro"
   }
 ]

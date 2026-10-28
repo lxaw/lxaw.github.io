@@ -427,5 +427,31 @@
     "importance": 3,
     "description": "Judges cancel Uhuru Kenyatta's re-election over irregularities and order a new vote, the first such ruling in Africa.",
     "source": "https://en.wikipedia.org/wiki/2017_Kenyan_general_election"
+  },
+  {
+    "id": "kenya-2022-ruto-elected",
+    "title": "Ruto elected",
+    "date": "9 Aug 2022",
+    "year-from": 2022,
+    "place": "Nairobi",
+    "lat": -1.286,
+    "lon": 36.817,
+    "country": "Kenya",
+    "importance": 3,
+    "description": "William Ruto narrowly defeats Raila Odinga for the presidency.",
+    "source": "https://en.wikipedia.org/wiki/2022_Kenyan_general_election"
+  },
+  {
+    "id": "kenya-2024-parliament-stormed-over-the-finance-bill",
+    "title": "Parliament stormed over the Finance Bill",
+    "date": "25 Jun 2024",
+    "year-from": 2024,
+    "place": "Parliament Buildings, Nairobi",
+    "lat": -1.288,
+    "lon": 36.82,
+    "country": "Kenya",
+    "importance": 2,
+    "description": "Youth-led protests against tax rises break into parliament; police kill dozens, and the bill is withdrawn.",
+    "source": "https://en.wikipedia.org/wiki/2024_storming_of_the_Kenyan_Parliament"
   }
 ]

@@ -439,5 +439,31 @@
     "importance": 3,
     "description": "An investigative journalist and his fiancée are shot dead at home, and the protests that follow force Prime Minister Robert Fico to resign.",
     "source": "https://en.wikipedia.org/wiki/Murder_of_Ján_Kuciak"
+  },
+  {
+    "id": "slovakia-2023-fico-returns",
+    "title": "Fico returns",
+    "date": "25 Oct 2023",
+    "year-from": 2023,
+    "place": "Bratislava",
+    "lat": 48.149,
+    "lon": 17.107,
+    "country": "Slovakia",
+    "importance": 3,
+    "description": "Robert Fico becomes prime minister for a fourth time.",
+    "source": "https://en.wikipedia.org/wiki/Fico's_Fourth_Cabinet"
+  },
+  {
+    "id": "slovakia-2024-fico-shot",
+    "title": "Fico shot",
+    "date": "15 May 2024",
+    "year-from": 2024,
+    "place": "Handlová",
+    "lat": 48.73,
+    "lon": 18.76,
+    "country": "Slovakia",
+    "importance": 2,
+    "description": "The prime minister is shot and badly wounded after a government meeting.",
+    "source": "https://en.wikipedia.org/wiki/Attempted_assassination_of_Robert_Fico"
   }
 ]

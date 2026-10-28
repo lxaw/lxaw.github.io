@@ -370,5 +370,18 @@
     "importance": 3,
     "description": "Rajoelina beats Ravalomanana in the run-off and returns to the presidency, this time by the ballot box.",
     "source": "https://en.wikipedia.org/wiki/2018_Malagasy_presidential_election"
+  },
+  {
+    "id": "madagascar-2025-gen-z-protests-and-military-takeover",
+    "title": "Gen Z protests and military takeover",
+    "date": "Sep 2025",
+    "year-from": 2025,
+    "place": "Antananarivo",
+    "lat": -18.879,
+    "lon": 47.508,
+    "country": "Madagascar",
+    "importance": 3,
+    "description": "Protests over water and power cuts grow into a movement against Andry Rajoelina, who is removed when an army unit takes power in October.",
+    "source": "https://en.wikipedia.org/wiki/2025_Malagasy_protests"
   }
 ]

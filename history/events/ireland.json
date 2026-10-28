@@ -494,5 +494,44 @@
     "importance": 3,
     "description": "Ireland becomes the first country to approve same-sex marriage by popular vote.",
     "source": "https://en.wikipedia.org/wiki/Thirty-fourth_Amendment_of_the_Constitution_of_Ireland"
+  },
+  {
+    "id": "ireland-2020-three-party-coalition",
+    "title": "Three-party coalition",
+    "date": "27 Jun 2020",
+    "year-from": 2020,
+    "place": "Dublin",
+    "lat": 53.35,
+    "lon": -6.26,
+    "country": "Ireland",
+    "importance": 3,
+    "description": "Fianna Fáil and Fine Gael, the rivals since the civil war, govern together for the first time.",
+    "source": "https://en.wikipedia.org/wiki/2020_Irish_government_formation"
+  },
+  {
+    "id": "ireland-2023-dublin-riot",
+    "title": "Dublin riot",
+    "date": "23 Nov 2023",
+    "year-from": 2023,
+    "place": "Dublin",
+    "lat": 53.349,
+    "lon": -6.26,
+    "country": "Ireland",
+    "importance": 3,
+    "description": "A stabbing outside a school is followed by the worst rioting in Dublin in decades.",
+    "source": "https://en.wikipedia.org/wiki/2023_Dublin_riot"
+  },
+  {
+    "id": "ireland-2024-family-and-care-referendums-rejected",
+    "title": "Family and care referendums rejected",
+    "date": "8 Mar 2024",
+    "year-from": 2024,
+    "place": "Dublin",
+    "lat": 53.35,
+    "lon": -6.26,
+    "country": "Ireland",
+    "importance": 3,
+    "description": "Voters reject two government-backed amendments to the constitution's articles on the family and care.",
+    "source": "https://en.wikipedia.org/wiki/2024_Irish_constitutional_referendums"
   }
 ]

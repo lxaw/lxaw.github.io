@@ -424,5 +424,58 @@
     "importance": 2,
     "description": "The heaviest fighting since the 1994 ceasefire breaks out along the line of contact around Nagorno-Karabakh and kills at least two hundred soldiers.",
     "source": "https://en.wikipedia.org/wiki/2016_Nagorno-Karabakh_conflict"
+  },
+  {
+    "id": "azerbaijan-2020-second-nagorno-karabakh-war",
+    "title": "Second Nagorno-Karabakh war",
+    "date": "27 Sep 2020",
+    "year-from": 2020,
+    "year-to": 2020,
+    "place": "Shusha",
+    "lat": 39.76,
+    "lon": 46.75,
+    "country": "Azerbaijan",
+    "importance": 1,
+    "description": "Azerbaijan retakes much of Nagorno-Karabakh and the districts around it in 44 days of war, ended by a Russian-brokered ceasefire.",
+    "source": "https://en.wikipedia.org/wiki/Second_Nagorno-Karabakh_War"
+  },
+  {
+    "id": "azerbaijan-2023-offensive-ends-armenian-rule-in-karabakh",
+    "title": "Offensive ends Armenian rule in Karabakh",
+    "date": "19 Sep 2023",
+    "year-from": 2023,
+    "place": "Stepanakert (Khankendi)",
+    "lat": 39.815,
+    "lon": 46.752,
+    "country": "Azerbaijan",
+    "importance": 2,
+    "description": "A one-day offensive forces the surrender of the Armenian authorities in Nagorno-Karabakh.",
+    "source": "https://en.wikipedia.org/wiki/2023_Azerbaijani_offensive_in_Nagorno-Karabakh"
+  },
+  {
+    "id": "azerbaijan-2024-cop29-in-baku",
+    "title": "COP29 in Baku",
+    "date": "Nov 2024",
+    "year-from": 2024,
+    "place": "Baku",
+    "lat": 40.409,
+    "lon": 49.867,
+    "country": "Azerbaijan",
+    "importance": 3,
+    "description": "Baku hosts the UN climate conference, which sets a new climate finance goal.",
+    "source": "https://en.wikipedia.org/wiki/2024_United_Nations_Climate_Change_Conference"
+  },
+  {
+    "id": "azerbaijan-2024-azerbaijan-airlines-crash-at-aktau",
+    "title": "Azerbaijan Airlines crash at Aktau",
+    "date": "25 Dec 2024",
+    "year-from": 2024,
+    "place": "Aktau, Kazakhstan",
+    "lat": 43.65,
+    "lon": 51.2,
+    "country": "Azerbaijan",
+    "importance": 3,
+    "description": "An airliner damaged by Russian air defences over Grozny crashes on the other side of the Caspian, killing 38.",
+    "source": "https://en.wikipedia.org/wiki/Azerbaijan_Airlines_Flight_8243"
   }
 ]

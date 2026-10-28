@@ -419,5 +419,57 @@
     "importance": 2,
     "description": "The Pakistan Tehreek-e-Insaf of former cricketer Imran Khan wins the most seats in the general election and forms a coalition government, its first time in power.",
     "source": "https://en.wikipedia.org/wiki/2018_Pakistani_general_election"
+  },
+  {
+    "id": "pakistan-2022-imran-khan-ousted",
+    "title": "Imran Khan ousted",
+    "date": "10 Apr 2022",
+    "year-from": 2022,
+    "place": "Islamabad",
+    "lat": 33.729,
+    "lon": 73.093,
+    "country": "Pakistan",
+    "importance": 2,
+    "description": "Imran Khan becomes the first Pakistani prime minister removed by a no-confidence vote.",
+    "source": "https://en.wikipedia.org/wiki/2022_Pakistani_constitutional_crisis"
+  },
+  {
+    "id": "pakistan-2022-floods-of-2022",
+    "title": "Floods of 2022",
+    "date": "Aug 2022",
+    "year-from": 2022,
+    "place": "Sindh",
+    "lat": 26.0,
+    "lon": 68.5,
+    "country": "Pakistan",
+    "importance": 2,
+    "description": "Monsoon floods put about a third of the country under water and kill more than 1,700 people.",
+    "source": "https://en.wikipedia.org/wiki/2022_Pakistan_floods"
+  },
+  {
+    "id": "pakistan-2023-imran-khan-arrested",
+    "title": "Imran Khan arrested",
+    "date": "9 May 2023",
+    "year-from": 2023,
+    "place": "Islamabad",
+    "lat": 33.729,
+    "lon": 73.093,
+    "country": "Pakistan",
+    "importance": 3,
+    "description": "Khan's arrest sets off riots, including attacks on army buildings, followed by a crackdown on his party.",
+    "source": "https://en.wikipedia.org/wiki/Arrest_of_Imran_Khan"
+  },
+  {
+    "id": "pakistan-2025-jaffar-express-hijacking",
+    "title": "Jaffar Express hijacking",
+    "date": "11 Mar 2025",
+    "year-from": 2025,
+    "place": "Bolan Pass, Balochistan",
+    "lat": 29.75,
+    "lon": 67.4,
+    "country": "Pakistan",
+    "importance": 3,
+    "description": "Baloch separatists hijack a train carrying hundreds of passengers.",
+    "source": "https://en.wikipedia.org/wiki/2025_Jaffar_Express_hijacking"
   }
 ]

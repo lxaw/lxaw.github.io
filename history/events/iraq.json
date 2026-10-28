@@ -421,5 +421,44 @@
     "importance": 3,
     "description": "Iraqi forces recover the city after nine months of fighting.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Mosul_(2016–2017)"
+  },
+  {
+    "id": "iraq-2021-pope-francis-visits-iraq",
+    "title": "Pope Francis visits Iraq",
+    "date": "5 Mar 2021",
+    "year-from": 2021,
+    "place": "Baghdad",
+    "lat": 33.315,
+    "lon": 44.366,
+    "country": "Iraq",
+    "importance": 3,
+    "description": "The first papal visit to Iraq; Francis meets Grand Ayatollah Ali al-Sistani in Najaf.",
+    "source": "https://en.wikipedia.org/wiki/Pope_Francis's_visit_to_Iraq"
+  },
+  {
+    "id": "iraq-2022-green-zone-clashes",
+    "title": "Green Zone clashes",
+    "date": "29 Aug 2022",
+    "year-from": 2022,
+    "place": "Green Zone, Baghdad",
+    "lat": 33.307,
+    "lon": 44.39,
+    "country": "Iraq",
+    "importance": 3,
+    "description": "Supporters of Muqtada al-Sadr storm the Green Zone after he quits politics, setting off a day of fighting.",
+    "source": "https://en.wikipedia.org/wiki/2022_Baghdad_clashes"
+  },
+  {
+    "id": "iraq-2023-qaraqosh-wedding-fire",
+    "title": "Qaraqosh wedding fire",
+    "date": "26 Sep 2023",
+    "year-from": 2023,
+    "place": "Qaraqosh",
+    "lat": 36.27,
+    "lon": 43.38,
+    "country": "Iraq",
+    "importance": 3,
+    "description": "A fire at a wedding hall in the Christian town of Qaraqosh kills more than 100 people.",
+    "source": "https://en.wikipedia.org/wiki/Qaraqosh_wedding_fire"
   }
 ]

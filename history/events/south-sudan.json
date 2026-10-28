@@ -258,5 +258,31 @@
     "importance": 2,
     "description": "A revitalised agreement shares power again between Kiir, Machar and other factions and largely quiets the war.",
     "source": "https://en.wikipedia.org/wiki/History_of_South_Sudan"
+  },
+  {
+    "id": "south-sudan-2020-unity-government-formed",
+    "title": "Unity government formed",
+    "date": "22 Feb 2020",
+    "year-from": 2020,
+    "place": "Juba",
+    "lat": 4.859,
+    "lon": 31.571,
+    "country": "South Sudan",
+    "importance": 3,
+    "description": "Riek Machar is sworn in as first vice-president under the peace deal.",
+    "source": "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War"
+  },
+  {
+    "id": "south-sudan-2025-machar-arrested",
+    "title": "Machar arrested",
+    "date": "26 Mar 2025",
+    "year-from": 2025,
+    "place": "Juba",
+    "lat": 4.859,
+    "lon": 31.571,
+    "country": "South Sudan",
+    "importance": 3,
+    "description": "The first vice-president is detained, threatening a return to civil war.",
+    "source": "https://en.wikipedia.org/wiki/Riek_Machar"
   }
 ]

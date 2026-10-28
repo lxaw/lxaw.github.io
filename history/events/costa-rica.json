@@ -327,5 +327,31 @@
     "importance": 3,
     "description": "Carlos Alvarado of the Citizens' Action Party won the run-off with 61 per cent of the vote against the conservative candidate Fabricio Alvarado.",
     "source": "https://en.wikipedia.org/wiki/2018_Costa_Rican_general_election"
+  },
+  {
+    "id": "costa-rica-2021-joins-the-oecd",
+    "title": "Joins the OECD",
+    "date": "May 2021",
+    "year-from": 2021,
+    "place": "San José",
+    "lat": 9.928,
+    "lon": -84.091,
+    "country": "Costa Rica",
+    "importance": 3,
+    "description": "Costa Rica becomes the OECD's 38th member.",
+    "source": "https://en.wikipedia.org/wiki/OECD"
+  },
+  {
+    "id": "costa-rica-2022-chaves-elected",
+    "title": "Chaves elected",
+    "date": "3 Apr 2022",
+    "year-from": 2022,
+    "place": "San José",
+    "lat": 9.928,
+    "lon": -84.091,
+    "country": "Costa Rica",
+    "importance": 3,
+    "description": "The former World Bank economist Rodrigo Chaves wins the run-off, weeks after a ransomware attack crippled government systems.",
+    "source": "https://en.wikipedia.org/wiki/2022_Costa_Rican_general_election"
   }
 ]

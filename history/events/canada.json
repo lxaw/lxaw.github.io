@@ -540,5 +540,57 @@
     "importance": 3,
     "description": "Recreational cannabis became legal nationwide, making Canada the second country to legalise it, after Uruguay.",
     "source": "https://en.wikipedia.org/wiki/Cannabis_Act_(Canada)"
+  },
+  {
+    "id": "canada-2020-nova-scotia-attacks",
+    "title": "Nova Scotia attacks",
+    "date": "18 Apr 2020",
+    "year-from": 2020,
+    "place": "Portapique",
+    "lat": 45.4,
+    "lon": -63.7,
+    "country": "Canada",
+    "importance": 3,
+    "description": "A gunman disguised as a police officer kills 22 people, the deadliest rampage in Canadian history.",
+    "source": "https://en.wikipedia.org/wiki/2020_Nova_Scotia_attacks"
+  },
+  {
+    "id": "canada-2022-freedom-convoy-and-the-emergencies-act",
+    "title": "Freedom Convoy and the Emergencies Act",
+    "date": "14 Feb 2022",
+    "year-from": 2022,
+    "place": "Ottawa",
+    "lat": 45.424,
+    "lon": -75.7,
+    "country": "Canada",
+    "importance": 3,
+    "description": "After weeks of truckers' protests blocking Ottawa and border crossings, the government invokes the Emergencies Act for the first time.",
+    "source": "https://en.wikipedia.org/wiki/Canada_convoy_protest"
+  },
+  {
+    "id": "canada-2023-wildfire-season-of-2023",
+    "title": "Wildfire season of 2023",
+    "date": "Jun 2023",
+    "year-from": 2023,
+    "place": "Quebec",
+    "lat": 50.0,
+    "lon": -74.0,
+    "country": "Canada",
+    "importance": 3,
+    "description": "The worst wildfire season on record burns more than 15 million hectares, with smoke reaching New York and Europe.",
+    "source": "https://en.wikipedia.org/wiki/2023_Canadian_wildfires"
+  },
+  {
+    "id": "canada-2025-carney-becomes-prime-minister",
+    "title": "Carney becomes prime minister",
+    "date": "14 Mar 2025",
+    "year-from": 2025,
+    "place": "Ottawa",
+    "lat": 45.424,
+    "lon": -75.7,
+    "country": "Canada",
+    "importance": 3,
+    "description": "Mark Carney succeeds Justin Trudeau and goes on to win the April election amid Trump's tariffs and annexation talk.",
+    "source": "https://en.wikipedia.org/wiki/Mark_Carney"
   }
 ]

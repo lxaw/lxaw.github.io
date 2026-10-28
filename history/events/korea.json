@@ -512,5 +512,70 @@
     "importance": 2,
     "description": "Kim Jong Un crossed the border to meet President Moon Jae-in, the first North Korean leader to set foot in the South since the war, and the two signed the Panmunjom Declaration.",
     "source": "https://en.wikipedia.org/wiki/April_2018_inter-Korean_summit"
+  },
+  {
+    "id": "korea-2022-itaewon-crowd-crush",
+    "title": "Itaewon crowd crush",
+    "date": "29 Oct 2022",
+    "year-from": 2022,
+    "place": "Seoul",
+    "lat": 37.534,
+    "lon": 126.994,
+    "country": "Korea",
+    "importance": 3,
+    "description": "Some 159 people die in a crowd crush during Halloween celebrations.",
+    "source": "https://en.wikipedia.org/wiki/Seoul_Halloween_crowd_crush"
+  },
+  {
+    "id": "korea-2024-martial-law-declared-and-lifted",
+    "title": "Martial law declared and lifted",
+    "date": "3 Dec 2024",
+    "year-from": 2024,
+    "place": "Seoul",
+    "lat": 37.532,
+    "lon": 126.914,
+    "country": "Korea",
+    "importance": 1,
+    "description": "President Yoon Suk Yeol declares martial law; the National Assembly votes it down within hours and later impeaches him.",
+    "source": "https://en.wikipedia.org/wiki/2024_South_Korean_martial_law_crisis"
+  },
+  {
+    "id": "korea-2024-jeju-air-crash-at-muan",
+    "title": "Jeju Air crash at Muan",
+    "date": "29 Dec 2024",
+    "year-from": 2024,
+    "place": "Muan International Airport",
+    "lat": 34.991,
+    "lon": 126.383,
+    "country": "Korea",
+    "importance": 3,
+    "description": "A Jeju Air jet overruns the runway and hits an embankment, killing 179, the deadliest air disaster on South Korean soil.",
+    "source": "https://en.wikipedia.org/wiki/Jeju_Air_Flight_2216"
+  },
+  {
+    "id": "korea-2025-yoon-removed-from-office",
+    "title": "Yoon removed from office",
+    "date": "4 Apr 2025",
+    "year-from": 2025,
+    "place": "Seoul",
+    "lat": 37.578,
+    "lon": 126.986,
+    "country": "Korea",
+    "importance": 2,
+    "description": "The Constitutional Court upholds the impeachment of Yoon Suk Yeol and removes him from office.",
+    "source": "https://en.wikipedia.org/wiki/Impeachment_of_Yoon_Suk_Yeol"
+  },
+  {
+    "id": "korea-2025-lee-jae-myung-elected-president",
+    "title": "Lee Jae-myung elected president",
+    "date": "3 Jun 2025",
+    "year-from": 2025,
+    "place": "Seoul",
+    "lat": 37.566,
+    "lon": 126.978,
+    "country": "Korea",
+    "importance": 3,
+    "description": "The opposition leader wins the snap election called after Yoon's removal.",
+    "source": "https://en.wikipedia.org/wiki/2025_South_Korean_presidential_election"
   }
 ]

@@ -414,5 +414,31 @@
     "importance": 3,
     "description": "The eastern commander orders his forces to take the capital from the government recognised by the United Nations, and the attack fails after fourteen months.",
     "source": "https://en.wikipedia.org/wiki/Western_Libya_campaign"
+  },
+  {
+    "id": "libya-2020-permanent-ceasefire",
+    "title": "Permanent ceasefire",
+    "date": "23 Oct 2020",
+    "year-from": 2020,
+    "place": "Geneva, Switzerland",
+    "lat": 46.204,
+    "lon": 6.143,
+    "country": "Libya",
+    "importance": 3,
+    "description": "The rival governments in Tripoli and the east agree to a ceasefire after Haftar's offensive fails.",
+    "source": "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
+  },
+  {
+    "id": "libya-2023-derna-floods",
+    "title": "Derna floods",
+    "date": "11 Sep 2023",
+    "year-from": 2023,
+    "place": "Derna",
+    "lat": 32.767,
+    "lon": 22.637,
+    "country": "Libya",
+    "importance": 2,
+    "description": "Storm Daniel bursts two dams above Derna; thousands die as a quarter of the city is swept away.",
+    "source": "https://en.wikipedia.org/wiki/2023_Libya_floods"
   }
 ]

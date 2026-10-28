@@ -252,5 +252,18 @@
     "importance": 2,
     "description": "Hundreds of thousands march for a two-term limit and the end of a half century of family rule; talks fail and the movement is banned from the streets.",
     "source": "https://en.wikipedia.org/wiki/2017_Togolese_protests"
+  },
+  {
+    "id": "togo-2024-switch-to-a-parliamentary-system",
+    "title": "Switch to a parliamentary system",
+    "date": "2024",
+    "year-from": 2024,
+    "place": "Lomé",
+    "lat": 6.131,
+    "lon": 1.223,
+    "country": "Togo",
+    "importance": 3,
+    "description": "A new constitution abolishes the presidential election; Faure Gnassingbé becomes president of the council of ministers in 2025.",
+    "source": "https://en.wikipedia.org/wiki/Faure_Gnassingbé"
   }
 ]

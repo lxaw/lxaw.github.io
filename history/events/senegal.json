@@ -384,5 +384,18 @@
     "importance": 3,
     "description": "A museum first proposed by Léopold Sédar Senghor opened in Dakar, advancing Senegal's calls for the return of African artworks kept in Europe.",
     "source": "https://en.wikipedia.org/wiki/Museum_of_Black_Civilisations"
+  },
+  {
+    "id": "senegal-2024-faye-elected",
+    "title": "Faye elected",
+    "date": "24 Mar 2024",
+    "year-from": 2024,
+    "place": "Dakar",
+    "lat": 14.716,
+    "lon": -17.467,
+    "country": "Senegal",
+    "importance": 3,
+    "description": "Bassirou Diomaye Faye, released from prison ten days earlier, wins the presidency in the first round.",
+    "source": "https://en.wikipedia.org/wiki/2024_Senegalese_presidential_election"
   }
 ]

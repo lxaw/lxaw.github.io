@@ -267,5 +267,18 @@
     "importance": 3,
     "description": "Umaro Sissoco Embaló wins the run-off; the result is contested and recognition drags on abroad.",
     "source": "https://en.wikipedia.org/wiki/2019_Guinea-Bissau_presidential_election"
+  },
+  {
+    "id": "guinea-bissau-2022-coup-attempt-of-2022",
+    "title": "Coup attempt of 2022",
+    "date": "1 Feb 2022",
+    "year-from": 2022,
+    "place": "Bissau",
+    "lat": 11.863,
+    "lon": -15.598,
+    "country": "Guinea-Bissau",
+    "importance": 3,
+    "description": "Gunmen attack the government palace during a cabinet meeting and are repelled.",
+    "source": "https://en.wikipedia.org/wiki/2022_Guinea-Bissau_coup_attempt"
   }
 ]

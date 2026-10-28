@@ -341,5 +341,31 @@
     "importance": 1,
     "description": "A week after the army takes control of the capital, Robert Mugabe resigns after thirty-seven years in power and Emmerson Mnangagwa succeeds him.",
     "source": "https://en.wikipedia.org/wiki/2017_Zimbabwean_coup_d'état"
+  },
+  {
+    "id": "zimbabwe-2023-mnangagwa-re-elected",
+    "title": "Mnangagwa re-elected",
+    "date": "23 Aug 2023",
+    "year-from": 2023,
+    "place": "Harare",
+    "lat": -17.825,
+    "lon": 31.053,
+    "country": "Zimbabwe",
+    "importance": 3,
+    "description": "Emmerson Mnangagwa wins a second term in an election observers say fell short of standards.",
+    "source": "https://en.wikipedia.org/wiki/2023_Zimbabwean_general_election"
+  },
+  {
+    "id": "zimbabwe-2024-zig-currency-introduced",
+    "title": "ZiG currency introduced",
+    "date": "5 Apr 2024",
+    "year-from": 2024,
+    "place": "Harare",
+    "lat": -17.825,
+    "lon": 31.053,
+    "country": "Zimbabwe",
+    "importance": 3,
+    "description": "The Zimbabwe Gold, backed by gold reserves, becomes the sixth currency since 2008.",
+    "source": "https://en.wikipedia.org/wiki/Zimbabwe_Gold"
   }
 ]

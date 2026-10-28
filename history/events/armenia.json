@@ -411,5 +411,31 @@
     "importance": 2,
     "description": "Serzh Sargsyan resigns as prime minister after weeks of peaceful protests, and their leader Nikol Pashinyan takes office in May.",
     "source": "https://en.wikipedia.org/wiki/2018_Armenian_Revolution"
+  },
+  {
+    "id": "armenia-2023-flight-of-the-karabakh-armenians",
+    "title": "Flight of the Karabakh Armenians",
+    "date": "Sep 2023",
+    "year-from": 2023,
+    "place": "Goris",
+    "lat": 39.51,
+    "lon": 46.34,
+    "country": "Armenia",
+    "importance": 2,
+    "description": "After Azerbaijan's offensive nearly all of Nagorno-Karabakh's 100,000 Armenians flee to Armenia within a week.",
+    "source": "https://en.wikipedia.org/wiki/Flight_of_Nagorno-Karabakh_Armenians"
+  },
+  {
+    "id": "armenia-2025-peace-deal-with-azerbaijan-initialled",
+    "title": "Peace deal with Azerbaijan initialled",
+    "date": "8 Aug 2025",
+    "year-from": 2025,
+    "place": "White House, Washington, D.C.",
+    "lat": 38.898,
+    "lon": -77.037,
+    "country": "Armenia",
+    "importance": 3,
+    "description": "Armenia and Azerbaijan initial a peace agreement at a summit hosted by Donald Trump.",
+    "source": "https://en.wikipedia.org/wiki/2025_Armenia–Azerbaijan_peace_agreement"
   }
 ]

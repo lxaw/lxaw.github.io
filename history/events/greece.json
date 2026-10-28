@@ -435,5 +435,44 @@
     "importance": 3,
     "description": "Greece formally exits its third bailout programme, ending eight years of emergency loans and direct creditor supervision.",
     "source": "https://en.wikipedia.org/wiki/2015_Greek_bailout_referendum"
+  },
+  {
+    "id": "greece-2023-tempi-train-crash",
+    "title": "Tempi train crash",
+    "date": "28 Feb 2023",
+    "year-from": 2023,
+    "place": "Tempi",
+    "lat": 39.88,
+    "lon": 22.6,
+    "country": "Greece",
+    "importance": 3,
+    "description": "A head-on collision between two trains kills 57 people, the deadliest rail crash in Greek history.",
+    "source": "https://en.wikipedia.org/wiki/Tempi_train_crash"
+  },
+  {
+    "id": "greece-2023-pylos-shipwreck",
+    "title": "Pylos shipwreck",
+    "date": "14 Jun 2023",
+    "year-from": 2023,
+    "place": "off Pylos (conventional location)",
+    "lat": 36.3,
+    "lon": 21.1,
+    "country": "Greece",
+    "importance": 3,
+    "description": "A fishing boat carrying hundreds of migrants sinks off the Peloponnese; most on board die.",
+    "source": "https://en.wikipedia.org/wiki/2023_Messenia_migrant_boat_disaster"
+  },
+  {
+    "id": "greece-2024-same-sex-marriage-legalised",
+    "title": "Same-sex marriage legalised",
+    "date": "15 Feb 2024",
+    "year-from": 2024,
+    "place": "Athens",
+    "lat": 37.976,
+    "lon": 23.736,
+    "country": "Greece",
+    "importance": 3,
+    "description": "Greece becomes the first Orthodox-majority country to allow same-sex marriage.",
+    "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Greece"
   }
 ]

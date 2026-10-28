@@ -514,5 +514,31 @@
     "importance": 3,
     "description": "President Widodo announced that the capital would move from the crowded and sinking Jakarta to a new city in Kalimantan on Borneo.",
     "source": "https://en.wikipedia.org/wiki/Nusantara"
+  },
+  {
+    "id": "indonesia-2022-kanjuruhan-stadium-disaster",
+    "title": "Kanjuruhan Stadium disaster",
+    "date": "1 Oct 2022",
+    "year-from": 2022,
+    "place": "Malang",
+    "lat": -8.15,
+    "lon": 112.575,
+    "country": "Indonesia",
+    "importance": 3,
+    "description": "Police fire tear gas in a packed football stadium, and 135 people die in the crush.",
+    "source": "https://en.wikipedia.org/wiki/Kanjuruhan_Stadium_disaster"
+  },
+  {
+    "id": "indonesia-2024-prabowo-elected-president",
+    "title": "Prabowo elected president",
+    "date": "14 Feb 2024",
+    "year-from": 2024,
+    "place": "Jakarta",
+    "lat": -6.2,
+    "lon": 106.817,
+    "country": "Indonesia",
+    "importance": 3,
+    "description": "Prabowo Subianto wins the presidency in the first round, with outgoing president Jokowi's son as his running mate.",
+    "source": "https://en.wikipedia.org/wiki/2024_Indonesian_presidential_election"
   }
 ]

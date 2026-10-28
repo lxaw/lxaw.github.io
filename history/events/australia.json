@@ -514,5 +514,44 @@
     "importance": 2,
     "description": "Parliament legalised same-sex marriage after a national postal survey returned a majority yes vote.",
     "source": "https://en.wikipedia.org/wiki/Marriage_Amendment_(Definition_and_Religious_Freedoms)_Act_2017"
+  },
+  {
+    "id": "australia-2020-black-summer-bushfires",
+    "title": "Black Summer bushfires",
+    "date": "Jan 2020",
+    "year-from": 2020,
+    "place": "East Gippsland",
+    "lat": -37.5,
+    "lon": 148.5,
+    "country": "Australia",
+    "importance": 2,
+    "description": "The worst bushfire season on record burns more than 24 million hectares across the south-east.",
+    "source": "https://en.wikipedia.org/wiki/2019–20_Australian_bushfire_season"
+  },
+  {
+    "id": "australia-2022-albanese-elected",
+    "title": "Albanese elected",
+    "date": "21 May 2022",
+    "year-from": 2022,
+    "place": "Canberra",
+    "lat": -35.281,
+    "lon": 149.13,
+    "country": "Australia",
+    "importance": 3,
+    "description": "Labor's Anthony Albanese wins the federal election, ending nine years of Coalition government.",
+    "source": "https://en.wikipedia.org/wiki/2022_Australian_federal_election"
+  },
+  {
+    "id": "australia-2023-voice-referendum-rejected",
+    "title": "Voice referendum rejected",
+    "date": "14 Oct 2023",
+    "year-from": 2023,
+    "place": "Canberra",
+    "lat": -35.281,
+    "lon": 149.13,
+    "country": "Australia",
+    "importance": 3,
+    "description": "Voters reject a constitutional Indigenous Voice to Parliament in every state.",
+    "source": "https://en.wikipedia.org/wiki/2023_Australian_Indigenous_Voice_referendum"
   }
 ]

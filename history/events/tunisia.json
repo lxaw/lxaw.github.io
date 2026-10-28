@@ -438,5 +438,31 @@
     "importance": 3,
     "description": "A gunman kills 38 people, most of them British tourists, at a beach hotel.",
     "source": "https://en.wikipedia.org/wiki/2015_Sousse_attacks"
+  },
+  {
+    "id": "tunisia-2021-saied-seizes-power",
+    "title": "Saied seizes power",
+    "date": "25 Jul 2021",
+    "year-from": 2021,
+    "place": "Tunis",
+    "lat": 36.806,
+    "lon": 10.181,
+    "country": "Tunisia",
+    "importance": 2,
+    "description": "President Kais Saied dismisses the government and suspends parliament.",
+    "source": "https://en.wikipedia.org/wiki/2021_Tunisian_self-coup"
+  },
+  {
+    "id": "tunisia-2022-new-constitution",
+    "title": "New constitution",
+    "date": "25 Jul 2022",
+    "year-from": 2022,
+    "place": "Tunis",
+    "lat": 36.806,
+    "lon": 10.181,
+    "country": "Tunisia",
+    "importance": 3,
+    "description": "A referendum on a turnout of 30 percent approves a constitution concentrating power in the president.",
+    "source": "https://en.wikipedia.org/wiki/2022_Tunisian_constitutional_referendum"
   }
 ]

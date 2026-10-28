@@ -408,5 +408,31 @@
     "importance": 2,
     "description": "Houthi fighters kill the former president days after he broke his alliance with them.",
     "source": "https://en.wikipedia.org/wiki/Ali_Abdullah_Saleh"
+  },
+  {
+    "id": "yemen-2022-truce-of-2022",
+    "title": "Truce of 2022",
+    "date": "2 Apr 2022",
+    "year-from": 2022,
+    "place": "Sanaa",
+    "lat": 15.369,
+    "lon": 44.191,
+    "country": "Yemen",
+    "importance": 3,
+    "description": "A UN-brokered truce brings the first lasting pause in the civil war.",
+    "source": "https://en.wikipedia.org/wiki/Yemeni_civil_war_(2014–present)"
+  },
+  {
+    "id": "yemen-2023-houthi-attacks-on-red-sea-shipping",
+    "title": "Houthi attacks on Red Sea shipping",
+    "date": "19 Nov 2023",
+    "year-from": 2023,
+    "place": "Red Sea (conventional location)",
+    "lat": 15.0,
+    "lon": 41.8,
+    "country": "Yemen",
+    "importance": 2,
+    "description": "The Houthis seize the Galaxy Leader and begin attacking ships in support of Gaza, cutting traffic through Suez.",
+    "source": "https://en.wikipedia.org/wiki/Red_Sea_crisis"
   }
 ]

@@ -395,5 +395,31 @@
     "importance": 2,
     "description": "Weeks of peaceful mass protests, known as the Hirak, and pressure from the army make the president step down after twenty years.",
     "source": "https://en.wikipedia.org/wiki/Hirak_(Algeria)"
+  },
+  {
+    "id": "algeria-2020-constitutional-referendum",
+    "title": "Constitutional referendum",
+    "date": "1 Nov 2020",
+    "year-from": 2020,
+    "place": "Algiers",
+    "lat": 36.754,
+    "lon": 3.059,
+    "country": "Algeria",
+    "importance": 3,
+    "description": "A new constitution meant to answer the Hirak protests passes on a turnout of under a quarter.",
+    "source": "https://en.wikipedia.org/wiki/2020_Algerian_constitutional_referendum"
+  },
+  {
+    "id": "algeria-2021-kabylie-wildfires",
+    "title": "Kabylie wildfires",
+    "date": "Aug 2021",
+    "year-from": 2021,
+    "place": "Tizi Ouzou",
+    "lat": 36.71,
+    "lon": 4.05,
+    "country": "Algeria",
+    "importance": 3,
+    "description": "Wildfires kill about 90 people in Kabylie.",
+    "source": "https://en.wikipedia.org/wiki/2021_Algeria_wildfires"
   }
 ]

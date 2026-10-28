@@ -369,5 +369,31 @@
     "importance": 2,
     "description": "The new name comes into force, clearing the way for membership of NATO.",
     "source": "https://en.wikipedia.org/wiki/Prespa_Agreement"
+  },
+  {
+    "id": "north-macedonia-2020-joins-nato",
+    "title": "Joins NATO",
+    "date": "27 Mar 2020",
+    "year-from": 2020,
+    "place": "Skopje",
+    "lat": 41.998,
+    "lon": 21.425,
+    "country": "North Macedonia",
+    "importance": 3,
+    "description": "North Macedonia becomes NATO's 30th member, after settling its name dispute with Greece.",
+    "source": "https://en.wikipedia.org/wiki/North_Macedonia–NATO_relations"
+  },
+  {
+    "id": "north-macedonia-2025-kocani-nightclub-fire",
+    "title": "Kočani nightclub fire",
+    "date": "16 Mar 2025",
+    "year-from": 2025,
+    "place": "Kočani",
+    "lat": 41.916,
+    "lon": 22.412,
+    "country": "North Macedonia",
+    "importance": 3,
+    "description": "Pyrotechnics set a nightclub alight during a concert, killing 62 people.",
+    "source": "https://en.wikipedia.org/wiki/Kočani_nightclub_fire"
   }
 ]

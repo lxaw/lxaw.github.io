@@ -478,5 +478,44 @@
     "importance": 3,
     "description": "The first high-speed railway in Africa opens, linking Tangier with Casablanca in just over two hours.",
     "source": "https://en.wikipedia.org/wiki/Al_Boraq"
+  },
+  {
+    "id": "morocco-2020-us-recognises-claim-to-western-sahara",
+    "title": "US recognises claim to Western Sahara",
+    "date": "10 Dec 2020",
+    "year-from": 2020,
+    "place": "Rabat",
+    "lat": 34.02,
+    "lon": -6.84,
+    "country": "Morocco",
+    "importance": 3,
+    "description": "The United States recognises Moroccan sovereignty over Western Sahara as Morocco normalises ties with Israel.",
+    "source": "https://en.wikipedia.org/wiki/Israel–Morocco_normalization_agreement"
+  },
+  {
+    "id": "morocco-2022-reaches-the-world-cup-semi-final",
+    "title": "Reaches the World Cup semi-final",
+    "date": "10 Dec 2022",
+    "year-from": 2022,
+    "place": "Al Thumama Stadium, Doha, Qatar",
+    "lat": 25.235,
+    "lon": 51.532,
+    "country": "Morocco",
+    "importance": 3,
+    "description": "Beating Portugal in the quarter-final, Morocco becomes the first African and Arab team to reach a World Cup semi-final.",
+    "source": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_knockout_stage"
+  },
+  {
+    "id": "morocco-2023-al-haouz-earthquake",
+    "title": "Al Haouz earthquake",
+    "date": "8 Sep 2023",
+    "year-from": 2023,
+    "place": "Ighil, Al Haouz",
+    "lat": 31.06,
+    "lon": -8.39,
+    "country": "Morocco",
+    "importance": 2,
+    "description": "The deadliest earthquake in Morocco since 1960 kills nearly 3,000 people in the High Atlas.",
+    "source": "https://en.wikipedia.org/wiki/2023_Marrakesh–Safi_earthquake"
   }
 ]

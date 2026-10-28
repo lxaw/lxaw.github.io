@@ -324,5 +324,31 @@
     "importance": 3,
     "description": "Wildfires killed 66 people, the country's deadliest ever, and a second wave in October killed dozens more.",
     "source": "https://en.wikipedia.org/wiki/June_2017_Portugal_wildfires"
+  },
+  {
+    "id": "portugal-2023-costa-resigns",
+    "title": "Costa resigns",
+    "date": "7 Nov 2023",
+    "year-from": 2023,
+    "place": "Lisbon",
+    "lat": 38.722,
+    "lon": -9.139,
+    "country": "Portugal",
+    "importance": 3,
+    "description": "Prime Minister António Costa resigns over a corruption inquiry, ending eight years of Socialist government.",
+    "source": "https://en.wikipedia.org/wiki/Operation_Influencer"
+  },
+  {
+    "id": "portugal-2025-gloria-funicular-crash",
+    "title": "Glória funicular crash",
+    "date": "3 Sep 2025",
+    "year-from": 2025,
+    "place": "Lisbon",
+    "lat": 38.716,
+    "lon": -9.143,
+    "country": "Portugal",
+    "importance": 3,
+    "description": "One of Lisbon's historic funiculars derails, killing 16 people.",
+    "source": "https://en.wikipedia.org/wiki/Ascensor_da_Glória_derailment"
   }
 ]

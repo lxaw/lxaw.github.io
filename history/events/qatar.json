@@ -263,5 +263,31 @@
     "importance": 1,
     "description": "Saudi Arabia, the Emirates, Bahrain and Egypt cut ties and closed Qatar's land border and air routes, a blockade Qatar weathered by deepening links with Turkey and Iran.",
     "source": "https://en.wikipedia.org/wiki/Qatar_diplomatic_crisis"
+  },
+  {
+    "id": "qatar-2022-world-cup-in-qatar",
+    "title": "World Cup in Qatar",
+    "date": "20 Nov 2022",
+    "year-from": 2022,
+    "place": "Al Khor",
+    "lat": 25.65,
+    "lon": 51.49,
+    "country": "Qatar",
+    "importance": 2,
+    "description": "The first World Cup in the Arab world opens, after years of criticism over migrant workers' deaths.",
+    "source": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup"
+  },
+  {
+    "id": "qatar-2025-israeli-strike-on-doha",
+    "title": "Israeli strike on Doha",
+    "date": "9 Sep 2025",
+    "year-from": 2025,
+    "place": "Doha",
+    "lat": 25.286,
+    "lon": 51.533,
+    "country": "Qatar",
+    "importance": 3,
+    "description": "Israel strikes a building in Doha where Hamas leaders are meeting to discuss a ceasefire.",
+    "source": "https://en.wikipedia.org/wiki/Israeli_attack_on_Doha"
   }
 ]

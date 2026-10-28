@@ -421,5 +421,31 @@
     "importance": 2,
     "description": "After four months of street protests the army removes Omar al-Bashir, and in August it agrees to share power with civilians.",
     "source": "https://en.wikipedia.org/wiki/2019_Sudanese_coup_d'%C3%A9tat"
+  },
+  {
+    "id": "sudan-2021-coup-of-2021",
+    "title": "Coup of 2021",
+    "date": "25 Oct 2021",
+    "year-from": 2021,
+    "place": "Khartoum",
+    "lat": 15.501,
+    "lon": 32.56,
+    "country": "Sudan",
+    "importance": 3,
+    "description": "The army dissolves the civilian-led transitional government.",
+    "source": "https://en.wikipedia.org/wiki/2021_Sudanese_coup_d'état"
+  },
+  {
+    "id": "sudan-2023-civil-war-begins",
+    "title": "Civil war begins",
+    "date": "15 Apr 2023",
+    "year-from": 2023,
+    "place": "Khartoum",
+    "lat": 15.501,
+    "lon": 32.56,
+    "country": "Sudan",
+    "importance": 1,
+    "description": "Fighting between the army and the Rapid Support Forces begins a war that displaces more than ten million people.",
+    "source": "https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023–present)"
   }
 ]

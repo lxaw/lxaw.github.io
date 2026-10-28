@@ -350,5 +350,18 @@
     "importance": 3,
     "description": "The new president begins a campaign against corruption and waste alongside growing restrictions on opposition and the press.",
     "source": "https://en.wikipedia.org/wiki/John_Magufuli"
+  },
+  {
+    "id": "tanzania-2021-samia-first-woman-president",
+    "title": "Samia first woman president",
+    "date": "19 Mar 2021",
+    "year-from": 2021,
+    "place": "Dar es Salaam",
+    "lat": -6.792,
+    "lon": 39.208,
+    "country": "Tanzania",
+    "importance": 3,
+    "description": "Samia Suluhu Hassan takes office after the death of John Magufuli.",
+    "source": "https://en.wikipedia.org/wiki/Samia_Suluhu_Hassan"
   }
 ]

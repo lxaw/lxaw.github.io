@@ -363,5 +363,44 @@
     "importance": 2,
     "description": "The legislature passes a law opening marriage to same-sex couples, a first in Asia, which takes effect a week later.",
     "source": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Taiwan"
+  },
+  {
+    "id": "taiwan-2022-pelosi-visit-and-chinese-drills",
+    "title": "Pelosi visit and Chinese drills",
+    "date": "2 Aug 2022",
+    "year-from": 2022,
+    "place": "Taipei",
+    "lat": 25.033,
+    "lon": 121.565,
+    "country": "Taiwan",
+    "importance": 3,
+    "description": "A visit by the US House Speaker is followed by the largest Chinese military exercises around the island to date.",
+    "source": "https://en.wikipedia.org/wiki/2022_visit_by_Nancy_Pelosi_to_Taiwan"
+  },
+  {
+    "id": "taiwan-2024-lai-ching-te-elected-president",
+    "title": "Lai Ching-te elected president",
+    "date": "13 Jan 2024",
+    "year-from": 2024,
+    "place": "Taipei",
+    "lat": 25.033,
+    "lon": 121.565,
+    "country": "Taiwan",
+    "importance": 2,
+    "description": "The DPP wins a third presidential term in a row, a first for any party in Taiwan.",
+    "source": "https://en.wikipedia.org/wiki/2024_Taiwanese_presidential_election"
+  },
+  {
+    "id": "taiwan-2024-hualien-earthquake",
+    "title": "Hualien earthquake",
+    "date": "3 Apr 2024",
+    "year-from": 2024,
+    "place": "Hualien",
+    "lat": 23.977,
+    "lon": 121.604,
+    "country": "Taiwan",
+    "importance": 3,
+    "description": "The strongest earthquake on the island in 25 years strikes off Hualien.",
+    "source": "https://en.wikipedia.org/wiki/2024_Hualien_earthquake"
   }
 ]

@@ -240,5 +240,18 @@
     "importance": 2,
     "description": "Voters agree to send Guatemala's territorial claim to the International Court of Justice.",
     "source": "https://en.wikipedia.org/wiki/2019_Belizean_territorial_dispute_referendum"
+  },
+  {
+    "id": "belize-2020-briceno-elected",
+    "title": "Briceño elected",
+    "date": "11 Nov 2020",
+    "year-from": 2020,
+    "place": "Belmopan",
+    "lat": 17.251,
+    "lon": -88.759,
+    "country": "Belize",
+    "importance": 3,
+    "description": "The People's United Party wins a landslide, ending twelve years of UDP government.",
+    "source": "https://en.wikipedia.org/wiki/2020_Belizean_general_election"
   }
 ]

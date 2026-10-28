@@ -214,5 +214,18 @@
     "importance": 2,
     "description": "Ismaïl Omar Guelleh is re-elected with a large majority, extending his rule past a quarter of a century.",
     "source": "https://en.wikipedia.org/wiki/2016_Djiboutian_presidential_election"
+  },
+  {
+    "id": "djibouti-2021-guelleh-s-fifth-term",
+    "title": "Guelleh's fifth term",
+    "date": "9 Apr 2021",
+    "year-from": 2021,
+    "place": "Djibouti City",
+    "lat": 11.589,
+    "lon": 43.145,
+    "country": "Djibouti",
+    "importance": 3,
+    "description": "Ismaïl Omar Guelleh is re-elected with 98 percent of the vote.",
+    "source": "https://en.wikipedia.org/wiki/2021_Djiboutian_presidential_election"
   }
 ]

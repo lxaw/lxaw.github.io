@@ -1145,5 +1145,70 @@
     "importance": 2,
     "description": "Hundreds of thousands marched against a proposed extradition law, the start of the largest protest movement in Hong Kong's history.",
     "source": "https://en.wikipedia.org/wiki/2019–2020_Hong_Kong_protests"
+  },
+  {
+    "id": "china-2019-covid-19-outbreak-in-wuhan",
+    "title": "COVID-19 outbreak in Wuhan",
+    "date": "Dec 2019",
+    "year-from": 2019,
+    "place": "Wuhan",
+    "lat": 30.593,
+    "lon": 114.305,
+    "country": "China",
+    "importance": 1,
+    "description": "A new coronavirus is identified in Wuhan; it spreads into a pandemic that kills millions worldwide.",
+    "source": "https://en.wikipedia.org/wiki/COVID-19_pandemic"
+  },
+  {
+    "id": "china-2020-hong-kong-national-security-law",
+    "title": "Hong Kong national security law",
+    "date": "30 Jun 2020",
+    "year-from": 2020,
+    "place": "Hong Kong",
+    "lat": 22.28,
+    "lon": 114.16,
+    "country": "China",
+    "importance": 2,
+    "description": "Beijing imposes a security law on Hong Kong that criminalises secession and subversion and ends the protest movement.",
+    "source": "https://en.wikipedia.org/wiki/2020_Hong_Kong_national_security_law"
+  },
+  {
+    "id": "china-2022-beijing-winter-olympics",
+    "title": "Beijing Winter Olympics",
+    "date": "4 Feb 2022",
+    "year-from": 2022,
+    "place": "Beijing",
+    "lat": 39.993,
+    "lon": 116.396,
+    "country": "China",
+    "importance": 3,
+    "description": "Beijing becomes the first city to have hosted both the Summer and the Winter Olympics.",
+    "source": "https://en.wikipedia.org/wiki/2022_Winter_Olympics"
+  },
+  {
+    "id": "china-2022-xi-jinping-s-third-term",
+    "title": "Xi Jinping's third term",
+    "date": "Oct 2022",
+    "year-from": 2022,
+    "place": "Beijing",
+    "lat": 39.904,
+    "lon": 116.391,
+    "country": "China",
+    "importance": 2,
+    "description": "The 20th Party Congress gives Xi Jinping a third term as general secretary, breaking the two-term norm.",
+    "source": "https://en.wikipedia.org/wiki/20th_National_Congress_of_the_Chinese_Communist_Party"
+  },
+  {
+    "id": "china-2022-zero-covid-policy-ends",
+    "title": "Zero-COVID policy ends",
+    "date": "7 Dec 2022",
+    "year-from": 2022,
+    "place": "Beijing",
+    "lat": 39.904,
+    "lon": 116.391,
+    "country": "China",
+    "importance": 3,
+    "description": "After protests sparked by a fatal fire in Ürümqi, the government drops most of its lockdown rules.",
+    "source": "https://en.wikipedia.org/wiki/2022_COVID-19_protests_in_China"
   }
 ]

@@ -348,5 +348,18 @@
     "importance": 3,
     "description": "UNESCO inscribes the reggae music of Jamaica on its Representative List of the Intangible Cultural Heritage of Humanity, recognising its role in international discourse.",
     "source": "https://en.wikipedia.org/wiki/Reggae"
+  },
+  {
+    "id": "jamaica-2024-hurricane-beryl",
+    "title": "Hurricane Beryl",
+    "date": "3 Jul 2024",
+    "year-from": 2024,
+    "place": "Kingston",
+    "lat": 17.971,
+    "lon": -76.793,
+    "country": "Jamaica",
+    "importance": 3,
+    "description": "The earliest category 5 Atlantic hurricane on record sweeps past the south coast.",
+    "source": "https://en.wikipedia.org/wiki/Hurricane_Beryl"
   }
 ]

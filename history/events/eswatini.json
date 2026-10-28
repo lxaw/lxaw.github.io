@@ -223,5 +223,18 @@
     "importance": 1,
     "description": "Marking fifty years since independence, Mswati III announces that Swaziland is renamed the Kingdom of eSwatini.",
     "source": "https://en.wikipedia.org/wiki/Eswatini"
+  },
+  {
+    "id": "eswatini-2021-pro-democracy-unrest",
+    "title": "Pro-democracy unrest",
+    "date": "Jun 2021",
+    "year-from": 2021,
+    "place": "Manzini",
+    "lat": -26.485,
+    "lon": 31.38,
+    "country": "Eswatini",
+    "importance": 3,
+    "description": "Protests against Africa's last absolute monarchy are put down; dozens are killed.",
+    "source": "https://en.wikipedia.org/wiki/2021–2023_Eswatini_protests"
   }
 ]

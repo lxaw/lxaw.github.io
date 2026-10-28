@@ -355,5 +355,31 @@
     "importance": 3,
     "description": "Weeks of mass demonstrations at the Gaza fence for the right of return ended with Israeli fire killing hundreds of protesters.",
     "source": "https://en.wikipedia.org/wiki/2018%E2%80%932019_Gaza_border_protests"
+  },
+  {
+    "id": "palestine-2023-ground-invasion-of-gaza",
+    "title": "Ground invasion of Gaza",
+    "date": "27 Oct 2023",
+    "year-from": 2023,
+    "place": "Gaza City",
+    "lat": 31.5,
+    "lon": 34.467,
+    "country": "Palestine",
+    "importance": 1,
+    "description": "After three weeks of air strikes following the 7 October attack, Israel invades Gaza; tens of thousands of Gazans are killed and most are displaced.",
+    "source": "https://en.wikipedia.org/wiki/Gaza_war"
+  },
+  {
+    "id": "palestine-2025-gaza-ceasefire",
+    "title": "Gaza ceasefire",
+    "date": "10 Oct 2025",
+    "year-from": 2025,
+    "place": "Gaza City",
+    "lat": 31.5,
+    "lon": 34.467,
+    "country": "Palestine",
+    "importance": 2,
+    "description": "A ceasefire under the American peace plan takes effect, and the living hostages are released in exchange for Palestinian prisoners.",
+    "source": "https://en.wikipedia.org/wiki/October_2025_Gaza_ceasefire"
   }
 ]

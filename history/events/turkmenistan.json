@@ -382,5 +382,18 @@
     "importance": 3,
     "description": "Ashgabat hosts the region's games in a new Olympic complex, a rare moment when the closed country welcomes thousands of foreign athletes.",
     "source": "https://en.wikipedia.org/wiki/2017_Asian_Indoor_and_Martial_Arts_Games"
+  },
+  {
+    "id": "turkmenistan-2022-serdar-berdimuhamedow-elected",
+    "title": "Serdar Berdimuhamedow elected",
+    "date": "12 Mar 2022",
+    "year-from": 2022,
+    "place": "Ashgabat",
+    "lat": 37.96,
+    "lon": 58.326,
+    "country": "Turkmenistan",
+    "importance": 3,
+    "description": "Gurbanguly Berdimuhamedow hands the presidency to his son.",
+    "source": "https://en.wikipedia.org/wiki/2022_Turkmenistan_presidential_election"
   }
 ]

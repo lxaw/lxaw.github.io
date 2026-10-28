@@ -379,5 +379,31 @@
     "importance": 2,
     "description": "President Sisi inaugurated a second shipping lane dug beside part of the canal within a year, with the aim of doubling the number of ships it could handle each day.",
     "source": "https://en.wikipedia.org/wiki/Suez_Canal_Area_Development_Project"
+  },
+  {
+    "id": "egypt-2021-ever-given-blocks-the-suez-canal",
+    "title": "Ever Given blocks the Suez Canal",
+    "date": "23 Mar 2021",
+    "year-from": 2021,
+    "place": "Suez Canal",
+    "lat": 30.017,
+    "lon": 32.58,
+    "country": "Egypt",
+    "importance": 3,
+    "description": "A container ship runs aground and blocks the canal for six days, holding up world trade.",
+    "source": "https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction"
+  },
+  {
+    "id": "egypt-2022-cop27-at-sharm-el-sheikh",
+    "title": "COP27 at Sharm el-Sheikh",
+    "date": "Nov 2022",
+    "year-from": 2022,
+    "place": "Sharm el-Sheikh",
+    "lat": 27.915,
+    "lon": 34.33,
+    "country": "Egypt",
+    "importance": 3,
+    "description": "The UN climate conference agrees to set up a fund for loss and damage.",
+    "source": "https://en.wikipedia.org/wiki/2022_United_Nations_Climate_Change_Conference"
   }
 ]

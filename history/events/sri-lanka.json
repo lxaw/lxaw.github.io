@@ -442,5 +442,31 @@
     "importance": 2,
     "description": "Suicide bombers linked to Islamic State attack three churches and three hotels, killing about 270 people.",
     "source": "https://en.wikipedia.org/wiki/2019_Sri_Lanka_Easter_bombings"
+  },
+  {
+    "id": "sri-lanka-2022-aragalaya-ousts-rajapaksa",
+    "title": "Aragalaya ousts Rajapaksa",
+    "date": "13 Jul 2022",
+    "year-from": 2022,
+    "place": "Colombo",
+    "lat": 6.934,
+    "lon": 79.843,
+    "country": "Sri Lanka",
+    "importance": 2,
+    "description": "In an economic collapse, protesters occupy the presidential palace and Gotabaya Rajapaksa flees the country.",
+    "source": "https://en.wikipedia.org/wiki/2022_Sri_Lankan_protests"
+  },
+  {
+    "id": "sri-lanka-2024-dissanayake-elected",
+    "title": "Dissanayake elected",
+    "date": "21 Sep 2024",
+    "year-from": 2024,
+    "place": "Colombo",
+    "lat": 6.927,
+    "lon": 79.861,
+    "country": "Sri Lanka",
+    "importance": 3,
+    "description": "Anura Kumara Dissanayake, of a Marxist party once behind two uprisings, wins the presidency.",
+    "source": "https://en.wikipedia.org/wiki/2024_Sri_Lankan_presidential_election"
   }
 ]

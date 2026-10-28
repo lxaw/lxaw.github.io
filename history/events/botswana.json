@@ -305,5 +305,18 @@
     "importance": 3,
     "description": "The governing Democratic Party wins again in elections whose result the opposition challengers contest in court.",
     "source": "https://en.wikipedia.org/wiki/2019_Botswana_general_election"
+  },
+  {
+    "id": "botswana-2024-bdp-loses-power",
+    "title": "BDP loses power",
+    "date": "30 Oct 2024",
+    "year-from": 2024,
+    "place": "Gaborone",
+    "lat": -24.654,
+    "lon": 25.908,
+    "country": "Botswana",
+    "importance": 2,
+    "description": "The party that had ruled since independence in 1966 is voted out, and Duma Boko becomes president.",
+    "source": "https://en.wikipedia.org/wiki/2024_Botswana_general_election"
   }
 ]

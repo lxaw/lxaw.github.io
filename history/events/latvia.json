@@ -417,5 +417,18 @@
     "importance": 3,
     "description": "After money-laundering accusations from the United States Treasury, ABLV, one of Latvia's largest banks, voted to wind itself up.",
     "source": "https://en.wikipedia.org/wiki/ABLV_Bank"
+  },
+  {
+    "id": "latvia-2023-rinkevics-elected-president",
+    "title": "Rinkēvičs elected president",
+    "date": "31 May 2023",
+    "year-from": 2023,
+    "place": "Riga",
+    "lat": 56.949,
+    "lon": 24.105,
+    "country": "Latvia",
+    "importance": 3,
+    "description": "Edgars Rinkēvičs becomes the first openly gay head of state in the European Union.",
+    "source": "https://en.wikipedia.org/wiki/Edgars_Rinkēvičs"
   }
 ]

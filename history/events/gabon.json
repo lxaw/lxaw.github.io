@@ -237,5 +237,31 @@
     "importance": 3,
     "description": "Junior officers seize the radio station while the president convalesces abroad and are arrested within hours.",
     "source": "https://en.wikipedia.org/wiki/2019_Gabonese_coup_d%27%C3%A9tat_attempt"
+  },
+  {
+    "id": "gabon-2023-coup-ends-bongo-rule",
+    "title": "Coup ends Bongo rule",
+    "date": "30 Aug 2023",
+    "year-from": 2023,
+    "place": "Libreville",
+    "lat": 0.416,
+    "lon": 9.467,
+    "country": "Gabon",
+    "importance": 2,
+    "description": "Officers seize power minutes after Ali Bongo is declared re-elected, ending 56 years of his family's rule.",
+    "source": "https://en.wikipedia.org/wiki/2023_Gabonese_coup_d'état"
+  },
+  {
+    "id": "gabon-2025-oligui-nguema-elected",
+    "title": "Oligui Nguema elected",
+    "date": "12 Apr 2025",
+    "year-from": 2025,
+    "place": "Libreville",
+    "lat": 0.416,
+    "lon": 9.467,
+    "country": "Gabon",
+    "importance": 3,
+    "description": "The coup leader Brice Oligui Nguema is elected president.",
+    "source": "https://en.wikipedia.org/wiki/2025_Gabonese_presidential_election"
   }
 ]

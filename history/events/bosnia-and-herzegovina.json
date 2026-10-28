@@ -409,5 +409,18 @@
     "importance": 3,
     "description": "On appeal the UN court rejects Radovan Karadžić's challenge and increases his sentence from forty years to life imprisonment.",
     "source": "https://en.wikipedia.org/wiki/Radovan_Karadžić"
+  },
+  {
+    "id": "bosnia-and-herzegovina-2025-dodik-convicted",
+    "title": "Dodik convicted",
+    "date": "26 Feb 2025",
+    "year-from": 2025,
+    "place": "Sarajevo",
+    "lat": 43.856,
+    "lon": 18.413,
+    "country": "Bosnia and Herzegovina",
+    "importance": 3,
+    "description": "The Republika Srpska president is convicted of defying the international High Representative.",
+    "source": "https://en.wikipedia.org/wiki/Milorad_Dodik"
   }
 ]

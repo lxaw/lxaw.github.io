@@ -360,5 +360,31 @@
     "importance": 2,
     "description": "A surface-to-air missile downed Malaysia Airlines Flight 17 from Amsterdam over separatist-held eastern Ukraine, killing all 298 aboard, 193 of them Dutch.",
     "source": "https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_17"
+  },
+  {
+    "id": "netherlands-2023-pvv-wins-the-election",
+    "title": "PVV wins the election",
+    "date": "22 Nov 2023",
+    "year-from": 2023,
+    "place": "The Hague",
+    "lat": 52.08,
+    "lon": 4.31,
+    "country": "Netherlands",
+    "importance": 3,
+    "description": "Geert Wilders's Party for Freedom becomes the largest party for the first time.",
+    "source": "https://en.wikipedia.org/wiki/2023_Dutch_general_election"
+  },
+  {
+    "id": "netherlands-2025-nato-summit-in-the-hague",
+    "title": "NATO summit in The Hague",
+    "date": "24 Jun 2025",
+    "year-from": 2025,
+    "place": "The Hague",
+    "lat": 52.08,
+    "lon": 4.31,
+    "country": "Netherlands",
+    "importance": 3,
+    "description": "NATO members agree to raise defence spending to 5 percent of GDP by 2035.",
+    "source": "https://en.wikipedia.org/wiki/2025_NATO_summit"
   }
 ]

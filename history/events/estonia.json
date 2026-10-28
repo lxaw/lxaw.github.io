@@ -429,5 +429,31 @@
     "importance": 3,
     "description": "Estonia wins a non-permanent seat on the United Nations Security Council for the first time, defeating Romania in a run-off.",
     "source": "https://en.wikipedia.org/wiki/2019_United_Nations_Security_Council_election"
+  },
+  {
+    "id": "estonia-2021-kallas-first-woman-prime-minister",
+    "title": "Kallas first woman prime minister",
+    "date": "26 Jan 2021",
+    "year-from": 2021,
+    "place": "Tallinn",
+    "lat": 59.437,
+    "lon": 24.745,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "Kaja Kallas becomes Estonia's first woman prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Kaja_Kallas"
+  },
+  {
+    "id": "estonia-2024-estlink-2-cable-damaged",
+    "title": "Estlink 2 cable damaged",
+    "date": "25 Dec 2024",
+    "year-from": 2024,
+    "place": "Gulf of Finland (conventional location)",
+    "lat": 59.8,
+    "lon": 25.4,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "A tanker of Russia's shadow fleet is suspected of dragging its anchor across the power cable to Finland.",
+    "source": "https://en.wikipedia.org/wiki/2024_Estlink_2_incident"
   }
 ]

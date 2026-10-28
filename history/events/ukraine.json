@@ -395,5 +395,70 @@
     "importance": 3,
     "description": "The actor Volodymyr Zelensky wins the presidency with 73 percent of the vote.",
     "source": "https://en.wikipedia.org/wiki/2019_Ukrainian_presidential_election"
+  },
+  {
+    "id": "ukraine-2022-russian-full-scale-invasion",
+    "title": "Russian full-scale invasion",
+    "date": "24 Feb 2022",
+    "year-from": 2022,
+    "place": "Kyiv",
+    "lat": 50.45,
+    "lon": 30.523,
+    "country": "Ukraine",
+    "importance": 1,
+    "description": "Russia invades from the north, east and south, starting the largest war in Europe since 1945.",
+    "source": "https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine"
+  },
+  {
+    "id": "ukraine-2022-bucha-massacre-revealed",
+    "title": "Bucha massacre revealed",
+    "date": "Apr 2022",
+    "year-from": 2022,
+    "place": "Bucha",
+    "lat": 50.543,
+    "lon": 30.212,
+    "country": "Ukraine",
+    "importance": 2,
+    "description": "After Russian forces withdraw from around Kyiv, hundreds of murdered civilians are found in Bucha.",
+    "source": "https://en.wikipedia.org/wiki/Bucha_massacre"
+  },
+  {
+    "id": "ukraine-2022-kherson-liberated",
+    "title": "Kherson liberated",
+    "date": "11 Nov 2022",
+    "year-from": 2022,
+    "place": "Kherson",
+    "lat": 46.636,
+    "lon": 32.617,
+    "country": "Ukraine",
+    "importance": 3,
+    "description": "Russian troops leave the only regional capital they had taken since the invasion.",
+    "source": "https://en.wikipedia.org/wiki/Liberation_of_Kherson"
+  },
+  {
+    "id": "ukraine-2023-kakhovka-dam-destroyed",
+    "title": "Kakhovka Dam destroyed",
+    "date": "6 Jun 2023",
+    "year-from": 2023,
+    "place": "Nova Kakhovka",
+    "lat": 46.776,
+    "lon": 33.371,
+    "country": "Ukraine",
+    "importance": 3,
+    "description": "The dam on the Dnieper, held by Russian forces, is blown up, flooding the land downstream.",
+    "source": "https://en.wikipedia.org/wiki/Destruction_of_the_Kakhovka_Dam"
+  },
+  {
+    "id": "ukraine-2024-incursion-into-kursk",
+    "title": "Incursion into Kursk",
+    "date": "6 Aug 2024",
+    "year-from": 2024,
+    "place": "Sudzha, Russia",
+    "lat": 51.19,
+    "lon": 35.27,
+    "country": "Ukraine",
+    "importance": 3,
+    "description": "Ukrainian troops cross into Russia's Kursk Oblast, the first foreign occupation of Russian land since 1945.",
+    "source": "https://en.wikipedia.org/wiki/2024_Kursk_offensive"
   }
 ]

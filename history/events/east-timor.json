@@ -296,5 +296,31 @@
     "importance": 3,
     "description": "After months of deadlocked government the president dissolved parliament, and the opposition Alliance of Change and Progress won an absolute majority, making Taur Matan Ruak prime minister.",
     "source": "https://en.wikipedia.org/wiki/2018_East_Timorese_parliamentary_election"
+  },
+  {
+    "id": "east-timor-2022-ramos-horta-returns",
+    "title": "Ramos-Horta returns",
+    "date": "19 Apr 2022",
+    "year-from": 2022,
+    "place": "Dili",
+    "lat": -8.556,
+    "lon": 125.578,
+    "country": "East Timor",
+    "importance": 3,
+    "description": "José Ramos-Horta wins the presidency again, fifteen years after his first term.",
+    "source": "https://en.wikipedia.org/wiki/2022_East_Timorese_presidential_election"
+  },
+  {
+    "id": "east-timor-2025-joins-asean",
+    "title": "Joins ASEAN",
+    "date": "26 Oct 2025",
+    "year-from": 2025,
+    "place": "Kuala Lumpur, Malaysia",
+    "lat": 3.139,
+    "lon": 101.687,
+    "country": "East Timor",
+    "importance": 3,
+    "description": "Timor-Leste becomes the eleventh member of ASEAN.",
+    "source": "https://en.wikipedia.org/wiki/Accession_of_Timor-Leste_to_ASEAN"
   }
 ]

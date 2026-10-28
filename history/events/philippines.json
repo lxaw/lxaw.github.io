@@ -403,5 +403,44 @@
     "importance": 3,
     "description": "An arbitral tribunal rules for the Philippines against China's claims in the South China Sea.",
     "source": "https://en.wikipedia.org/wiki/Philippines_v._China"
+  },
+  {
+    "id": "philippines-2020-taal-eruption",
+    "title": "Taal eruption",
+    "date": "12 Jan 2020",
+    "year-from": 2020,
+    "place": "Taal Volcano",
+    "lat": 14.002,
+    "lon": 120.993,
+    "country": "Philippines",
+    "importance": 3,
+    "description": "The volcano erupts and hundreds of thousands are evacuated.",
+    "source": "https://en.wikipedia.org/wiki/2020_Taal_Volcano_eruption"
+  },
+  {
+    "id": "philippines-2022-marcos-jr-elected",
+    "title": "Marcos Jr. elected",
+    "date": "9 May 2022",
+    "year-from": 2022,
+    "place": "Manila",
+    "lat": 14.599,
+    "lon": 120.984,
+    "country": "Philippines",
+    "importance": 2,
+    "description": "The son of the dictator ousted in 1986 wins the presidency by a landslide.",
+    "source": "https://en.wikipedia.org/wiki/2022_Philippine_presidential_election"
+  },
+  {
+    "id": "philippines-2025-duterte-sent-to-the-hague",
+    "title": "Duterte sent to The Hague",
+    "date": "11 Mar 2025",
+    "year-from": 2025,
+    "place": "Manila",
+    "lat": 14.509,
+    "lon": 121.02,
+    "country": "Philippines",
+    "importance": 2,
+    "description": "Former president Rodrigo Duterte is arrested on an International Criminal Court warrant over his drug war.",
+    "source": "https://en.wikipedia.org/wiki/Arrest_of_Rodrigo_Duterte"
   }
 ]

@@ -437,5 +437,44 @@
     "importance": 2,
     "description": "The Syrian Democratic Forces, backed by a coalition led by the United States, capture the last village held by the Islamic State.",
     "source": "https://en.wikipedia.org/wiki/Battle_of_Baghuz_Fawqani"
+  },
+  {
+    "id": "syria-2023-earthquake-in-the-north-west",
+    "title": "Earthquake in the north-west",
+    "date": "6 Feb 2023",
+    "year-from": 2023,
+    "place": "Jindires",
+    "lat": 36.395,
+    "lon": 36.69,
+    "country": "Syria",
+    "importance": 3,
+    "description": "The earthquake centred in Turkey kills thousands in rebel-held and government-held northern Syria.",
+    "source": "https://en.wikipedia.org/wiki/2023_Turkey–Syria_earthquakes"
+  },
+  {
+    "id": "syria-2024-fall-of-the-assad-regime",
+    "title": "Fall of the Assad regime",
+    "date": "8 Dec 2024",
+    "year-from": 2024,
+    "place": "Damascus",
+    "lat": 33.513,
+    "lon": 36.292,
+    "country": "Syria",
+    "importance": 1,
+    "description": "A rebel offensive led by Hayat Tahrir al-Sham takes Damascus in eleven days and Bashar al-Assad flees to Russia.",
+    "source": "https://en.wikipedia.org/wiki/Fall_of_the_Assad_regime"
+  },
+  {
+    "id": "syria-2025-coastal-massacres",
+    "title": "Coastal massacres",
+    "date": "Mar 2025",
+    "year-from": 2025,
+    "place": "Latakia",
+    "lat": 35.52,
+    "lon": 35.79,
+    "country": "Syria",
+    "importance": 3,
+    "description": "Government forces and allied fighters kill well over a thousand civilians, most of them Alawites, after an insurgent attack on the coast.",
+    "source": "https://en.wikipedia.org/wiki/March_2025_Western_Syria_clashes"
   }
 ]

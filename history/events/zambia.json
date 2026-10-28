@@ -291,5 +291,31 @@
     "importance": 3,
     "description": "Lungu narrowly beats Hakainde Hichilema in the first round of a violent general election.",
     "source": "https://en.wikipedia.org/wiki/History_of_Zambia"
+  },
+  {
+    "id": "zambia-2020-default-on-eurobonds",
+    "title": "Default on Eurobonds",
+    "date": "13 Nov 2020",
+    "year-from": 2020,
+    "place": "Lusaka",
+    "lat": -15.387,
+    "lon": 28.322,
+    "country": "Zambia",
+    "importance": 3,
+    "description": "Zambia becomes the first African country to default during the pandemic.",
+    "source": "https://en.wikipedia.org/wiki/Economy_of_Zambia"
+  },
+  {
+    "id": "zambia-2021-hichilema-elected",
+    "title": "Hichilema elected",
+    "date": "12 Aug 2021",
+    "year-from": 2021,
+    "place": "Lusaka",
+    "lat": -15.387,
+    "lon": 28.322,
+    "country": "Zambia",
+    "importance": 3,
+    "description": "Hakainde Hichilema defeats Edgar Lungu at his sixth attempt.",
+    "source": "https://en.wikipedia.org/wiki/2021_Zambian_general_election"
   }
 ]

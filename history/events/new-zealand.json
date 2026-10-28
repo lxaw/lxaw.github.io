@@ -388,5 +388,44 @@
     "importance": 2,
     "description": "A gunman kills 51 people at two mosques, and Parliament bans most semi-automatic weapons within a month.",
     "source": "https://en.wikipedia.org/wiki/Christchurch_mosque_shootings"
+  },
+  {
+    "id": "new-zealand-2019-whakaari-white-island-eruption",
+    "title": "Whakaari / White Island eruption",
+    "date": "9 Dec 2019",
+    "year-from": 2019,
+    "place": "Whakaari / White Island",
+    "lat": -37.52,
+    "lon": 177.18,
+    "country": "New Zealand",
+    "importance": 3,
+    "description": "An eruption kills 22 people, most of them tourists on the island.",
+    "source": "https://en.wikipedia.org/wiki/2019_Whakaari_/_White_Island_eruption"
+  },
+  {
+    "id": "new-zealand-2020-labour-landslide",
+    "title": "Labour landslide",
+    "date": "17 Oct 2020",
+    "year-from": 2020,
+    "place": "Wellington",
+    "lat": -41.287,
+    "lon": 174.776,
+    "country": "New Zealand",
+    "importance": 3,
+    "description": "Jacinda Ardern's Labour wins the first outright majority under proportional representation.",
+    "source": "https://en.wikipedia.org/wiki/2020_New_Zealand_general_election"
+  },
+  {
+    "id": "new-zealand-2023-cyclone-gabrielle",
+    "title": "Cyclone Gabrielle",
+    "date": "Feb 2023",
+    "year-from": 2023,
+    "place": "Hawke's Bay",
+    "lat": -39.49,
+    "lon": 176.91,
+    "country": "New Zealand",
+    "importance": 3,
+    "description": "The costliest cyclone in New Zealand's history devastates the North Island's east coast.",
+    "source": "https://en.wikipedia.org/wiki/Cyclone_Gabrielle"
   }
 ]

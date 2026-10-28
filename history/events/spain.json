@@ -453,5 +453,31 @@
     "importance": 2,
     "description": "Catalonia held an independence referendum suspended by the Constitutional Court and disrupted by police, and after the Catalan parliament declared independence, Madrid imposed direct rule.",
     "source": "https://en.wikipedia.org/wiki/2017_Catalan_independence_referendum"
+  },
+  {
+    "id": "spain-2024-valencia-floods",
+    "title": "Valencia floods",
+    "date": "29 Oct 2024",
+    "year-from": 2024,
+    "place": "Paiporta, Valencia",
+    "lat": 39.428,
+    "lon": -0.417,
+    "country": "Spain",
+    "importance": 2,
+    "description": "Flash floods kill more than 220 people in the province of Valencia, Spain's deadliest in decades.",
+    "source": "https://en.wikipedia.org/wiki/2024_Spanish_floods"
+  },
+  {
+    "id": "spain-2025-iberian-blackout",
+    "title": "Iberian blackout",
+    "date": "28 Apr 2025",
+    "year-from": 2025,
+    "place": "Madrid",
+    "lat": 40.417,
+    "lon": -3.704,
+    "country": "Spain",
+    "importance": 3,
+    "description": "The whole grid of Spain and Portugal goes down for most of a day.",
+    "source": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout"
   }
 ]

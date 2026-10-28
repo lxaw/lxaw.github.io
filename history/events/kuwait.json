@@ -241,5 +241,18 @@
     "importance": 3,
     "description": "A suicide bomber killed twenty-seven worshippers at a Shia mosque, the deadliest attack in the country's history.",
     "source": "https://en.wikipedia.org/wiki/2015_Kuwait_mosque_bombing"
+  },
+  {
+    "id": "kuwait-2024-parliament-suspended",
+    "title": "Parliament suspended",
+    "date": "10 May 2024",
+    "year-from": 2024,
+    "place": "Kuwait City",
+    "lat": 29.376,
+    "lon": 47.977,
+    "country": "Kuwait",
+    "importance": 3,
+    "description": "Emir Mishal suspends the National Assembly and parts of the constitution for up to four years.",
+    "source": "https://en.wikipedia.org/wiki/Mishal_Al-Ahmad_Al-Jaber_Al-Sabah"
   }
 ]

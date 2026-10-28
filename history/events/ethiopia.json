@@ -454,5 +454,44 @@
     "importance": 2,
     "description": "Abiy Ahmed and Isaias Afwerki declare the state of war over.",
     "source": "https://en.wikipedia.org/wiki/2018_Eritrea–Ethiopia_summit"
+  },
+  {
+    "id": "ethiopia-2020-tigray-war-begins",
+    "title": "Tigray War begins",
+    "date": "4 Nov 2020",
+    "year-from": 2020,
+    "place": "Mekelle",
+    "lat": 13.497,
+    "lon": 39.475,
+    "country": "Ethiopia",
+    "importance": 2,
+    "description": "Federal forces attack the Tigray region's government, starting a war that kills hundreds of thousands.",
+    "source": "https://en.wikipedia.org/wiki/Tigray_war"
+  },
+  {
+    "id": "ethiopia-2022-pretoria-peace-agreement",
+    "title": "Pretoria peace agreement",
+    "date": "2 Nov 2022",
+    "year-from": 2022,
+    "place": "Pretoria, South Africa",
+    "lat": -25.747,
+    "lon": 28.188,
+    "country": "Ethiopia",
+    "importance": 3,
+    "description": "The government and the Tigrayan leadership agree to end the war.",
+    "source": "https://en.wikipedia.org/wiki/Ethiopia–Tigray_peace_agreement"
+  },
+  {
+    "id": "ethiopia-2025-grand-renaissance-dam-inaugurated",
+    "title": "Grand Renaissance Dam inaugurated",
+    "date": "9 Sep 2025",
+    "year-from": 2025,
+    "place": "Guba, Benishangul-Gumuz",
+    "lat": 11.214,
+    "lon": 35.093,
+    "country": "Ethiopia",
+    "importance": 3,
+    "description": "Africa's largest hydroelectric dam opens on the Blue Nile, over Egypt's objections.",
+    "source": "https://en.wikipedia.org/wiki/Grand_Ethiopian_Renaissance_Dam"
   }
 ]

@@ -404,5 +404,18 @@
     "importance": 3,
     "description": "The Supreme Court dissolves the Cambodia National Rescue Party, and the ruling party wins every seat at the next election.",
     "source": "https://en.wikipedia.org/wiki/Cambodia_National_Rescue_Party"
+  },
+  {
+    "id": "cambodia-2023-hun-manet-succeeds-his-father",
+    "title": "Hun Manet succeeds his father",
+    "date": "22 Aug 2023",
+    "year-from": 2023,
+    "place": "Phnom Penh",
+    "lat": 11.556,
+    "lon": 104.928,
+    "country": "Cambodia",
+    "importance": 3,
+    "description": "Hun Sen hands the premiership to his son after 38 years in office.",
+    "source": "https://en.wikipedia.org/wiki/Hun_Manet"
   }
 ]

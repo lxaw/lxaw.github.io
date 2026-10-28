@@ -315,5 +315,18 @@
     "importance": 1,
     "description": "The football star George Weah wins the run-off, and Sirleaf steps down for Liberia's first peaceful transfer between elected presidents in decades.",
     "source": "https://en.wikipedia.org/wiki/2017_Liberian_general_election"
+  },
+  {
+    "id": "liberia-2023-boakai-defeats-weah",
+    "title": "Boakai defeats Weah",
+    "date": "14 Nov 2023",
+    "year-from": 2023,
+    "place": "Monrovia",
+    "lat": 6.3,
+    "lon": -10.797,
+    "country": "Liberia",
+    "importance": 3,
+    "description": "Joseph Boakai wins the run-off and George Weah concedes, a peaceful handover.",
+    "source": "https://en.wikipedia.org/wiki/2023_Liberian_general_election"
   }
 ]

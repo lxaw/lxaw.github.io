@@ -232,5 +232,18 @@
     "importance": 1,
     "description": "The strongest hurricane on record in the Bahamas stalls over Abaco and Grand Bahama, killing scores and destroying whole towns.",
     "source": "https://en.wikipedia.org/wiki/Hurricane_Dorian"
+  },
+  {
+    "id": "bahamas-2021-davis-elected",
+    "title": "Davis elected",
+    "date": "16 Sep 2021",
+    "year-from": 2021,
+    "place": "Nassau",
+    "lat": 25.047,
+    "lon": -77.355,
+    "country": "Bahamas",
+    "importance": 3,
+    "description": "Philip Davis's Progressive Liberal Party wins a snap election in the wake of Hurricane Dorian and the pandemic.",
+    "source": "https://en.wikipedia.org/wiki/2021_Bahamian_general_election"
   }
 ]

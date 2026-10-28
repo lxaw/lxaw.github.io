@@ -434,5 +434,44 @@
     "importance": 2,
     "description": "Félix Tshisekedi succeeds Joseph Kabila after a disputed election, the first peaceful handover of power since independence.",
     "source": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi"
+  },
+  {
+    "id": "democratic-republic-of-the-congo-2024-coup-attempt-in-kinshasa",
+    "title": "Coup attempt in Kinshasa",
+    "date": "19 May 2024",
+    "year-from": 2024,
+    "place": "Kinshasa",
+    "lat": -4.322,
+    "lon": 15.312,
+    "country": "Democratic Republic of the Congo",
+    "importance": 3,
+    "description": "Gunmen led by Christian Malanga attack the presidential palace and are defeated.",
+    "source": "https://en.wikipedia.org/wiki/2024_Democratic_Republic_of_the_Congo_coup_attempt"
+  },
+  {
+    "id": "democratic-republic-of-the-congo-2025-m23-takes-goma",
+    "title": "M23 takes Goma",
+    "date": "27 Jan 2025",
+    "year-from": 2025,
+    "place": "Goma",
+    "lat": -1.679,
+    "lon": 29.222,
+    "country": "Democratic Republic of the Congo",
+    "importance": 2,
+    "description": "The Rwanda-backed M23 rebels capture the largest city in the east, and Bukavu weeks later.",
+    "source": "https://en.wikipedia.org/wiki/2025_Goma_offensive"
+  },
+  {
+    "id": "democratic-republic-of-the-congo-2025-peace-agreement-with-rwanda",
+    "title": "Peace agreement with Rwanda",
+    "date": "27 Jun 2025",
+    "year-from": 2025,
+    "place": "Washington, D.C.",
+    "lat": 38.897,
+    "lon": -77.037,
+    "country": "Democratic Republic of the Congo",
+    "importance": 3,
+    "description": "The foreign ministers of the DR Congo and Rwanda sign a US-brokered peace agreement.",
+    "source": "https://en.wikipedia.org/wiki/2025_Democratic_Republic_of_the_Congo–Rwanda_peace_agreement"
   }
 ]

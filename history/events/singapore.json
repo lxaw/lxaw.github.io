@@ -393,5 +393,18 @@
     "importance": 3,
     "description": "Singapore hosts the first meeting between a sitting president of the United States and a leader of North Korea.",
     "source": "https://en.wikipedia.org/wiki/2018_North_Korea–United_States_Singapore_Summit"
+  },
+  {
+    "id": "singapore-2024-lawrence-wong-prime-minister",
+    "title": "Lawrence Wong prime minister",
+    "date": "15 May 2024",
+    "year-from": 2024,
+    "place": "Singapore",
+    "lat": 1.29,
+    "lon": 103.852,
+    "country": "Singapore",
+    "importance": 3,
+    "description": "Lee Hsien Loong hands over after 20 years; Wong is the fourth prime minister.",
+    "source": "https://en.wikipedia.org/wiki/Lawrence_Wong"
   }
 ]

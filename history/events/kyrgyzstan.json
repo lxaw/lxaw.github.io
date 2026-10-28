@@ -335,5 +335,31 @@
     "importance": 2,
     "description": "Sooronbay Jeenbekov succeeds the term-limited Almazbek Atambayev, Central Asia's first peaceful transfer of power between elected presidents.",
     "source": "https://en.wikipedia.org/wiki/2017_Kyrgyz_presidential_election"
+  },
+  {
+    "id": "kyrgyzstan-2020-third-revolution",
+    "title": "Third revolution",
+    "date": "5 Oct 2020",
+    "year-from": 2020,
+    "place": "Bishkek",
+    "lat": 42.875,
+    "lon": 74.6,
+    "country": "Kyrgyzstan",
+    "importance": 3,
+    "description": "Protests over a parliamentary election topple the government and bring Sadyr Japarov from prison to power.",
+    "source": "https://en.wikipedia.org/wiki/2020_Kyrgyz_protests"
+  },
+  {
+    "id": "kyrgyzstan-2022-border-war-with-tajikistan",
+    "title": "Border war with Tajikistan",
+    "date": "Sep 2022",
+    "year-from": 2022,
+    "place": "Batken",
+    "lat": 40.06,
+    "lon": 70.82,
+    "country": "Kyrgyzstan",
+    "importance": 3,
+    "description": "Fighting on the disputed border kills about a hundred people; a border treaty follows in 2025.",
+    "source": "https://en.wikipedia.org/wiki/2022_Kyrgyzstan–Tajikistan_clashes"
   }
 ]

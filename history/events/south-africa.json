@@ -551,5 +551,31 @@
     "importance": 3,
     "description": "After a three-year drought Cape Town cuts its water use by more than half and postpones indefinitely 'Day Zero', the day its municipal taps were to run dry.",
     "source": "https://en.wikipedia.org/wiki/Cape_Town_water_crisis"
+  },
+  {
+    "id": "south-africa-2021-july-unrest",
+    "title": "July unrest",
+    "date": "Jul 2021",
+    "year-from": 2021,
+    "place": "Durban",
+    "lat": -29.858,
+    "lon": 31.022,
+    "country": "South Africa",
+    "importance": 3,
+    "description": "The jailing of Jacob Zuma sets off riots and looting in KwaZulu-Natal and Gauteng that kill more than 350 people.",
+    "source": "https://en.wikipedia.org/wiki/2021_South_African_unrest"
+  },
+  {
+    "id": "south-africa-2024-anc-loses-its-majority",
+    "title": "ANC loses its majority",
+    "date": "29 May 2024",
+    "year-from": 2024,
+    "place": "Pretoria",
+    "lat": -25.747,
+    "lon": 28.188,
+    "country": "South Africa",
+    "importance": 2,
+    "description": "For the first time since 1994 the ANC falls below half the vote and forms a government of national unity.",
+    "source": "https://en.wikipedia.org/wiki/2024_South_African_general_election"
   }
 ]

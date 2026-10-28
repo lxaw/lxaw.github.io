@@ -392,5 +392,31 @@
     "importance": 3,
     "description": "A decree taxing the unemployed as 'social parasites' sparks a month of protest marches across the country that end with mass detentions in Minsk in March.",
     "source": "https://en.wikipedia.org/wiki/2017_Belarusian_protests"
+  },
+  {
+    "id": "belarus-2020-protests-after-the-2020-election",
+    "title": "Protests after the 2020 election",
+    "date": "9 Aug 2020",
+    "year-from": 2020,
+    "place": "Minsk",
+    "lat": 53.904,
+    "lon": 27.562,
+    "country": "Belarus",
+    "importance": 2,
+    "description": "Lukashenko's claim to a sixth term sets off the largest protests in the country's history, put down with mass arrests.",
+    "source": "https://en.wikipedia.org/wiki/2020–2021_Belarusian_protests"
+  },
+  {
+    "id": "belarus-2021-ryanair-flight-forced-down",
+    "title": "Ryanair flight forced down",
+    "date": "23 May 2021",
+    "year-from": 2021,
+    "place": "Minsk National Airport",
+    "lat": 53.882,
+    "lon": 28.03,
+    "country": "Belarus",
+    "importance": 3,
+    "description": "A fighter jet escorts a flight to Minsk, where the opposition journalist Roman Protasevich is arrested.",
+    "source": "https://en.wikipedia.org/wiki/Ryanair_Flight_4978"
   }
 ]

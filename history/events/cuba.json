@@ -388,5 +388,31 @@
     "importance": 2,
     "description": "Castro dies at 90.",
     "source": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Fidel_Castro"
+  },
+  {
+    "id": "cuba-2021-protests-of-11-july",
+    "title": "Protests of 11 July",
+    "date": "11 Jul 2021",
+    "year-from": 2021,
+    "place": "San Antonio de los Baños",
+    "lat": 22.89,
+    "lon": -82.5,
+    "country": "Cuba",
+    "importance": 2,
+    "description": "Shortages and blackouts set off the largest protests since the revolution, followed by hundreds of prison sentences.",
+    "source": "https://en.wikipedia.org/wiki/2021_Cuban_protests"
+  },
+  {
+    "id": "cuba-2024-grid-collapse",
+    "title": "Grid collapse",
+    "date": "18 Oct 2024",
+    "year-from": 2024,
+    "place": "Havana",
+    "lat": 23.113,
+    "lon": -82.366,
+    "country": "Cuba",
+    "importance": 3,
+    "description": "The national grid fails, leaving the whole island without power for days.",
+    "source": "https://en.wikipedia.org/wiki/2024_Cuba_blackouts"
   }
 ]

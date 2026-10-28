@@ -436,5 +436,18 @@
     "importance": 3,
     "description": "The Permanent Court of Arbitration drew the border with Croatia and gave Slovenia direct access to international waters, but Croatia refused to implement the ruling.",
     "source": "https://en.wikipedia.org/wiki/Croatia–Slovenia_border_disputes"
+  },
+  {
+    "id": "slovenia-2023-floods-of-2023",
+    "title": "Floods of 2023",
+    "date": "4 Aug 2023",
+    "year-from": 2023,
+    "place": "Celje",
+    "lat": 46.236,
+    "lon": 15.268,
+    "country": "Slovenia",
+    "importance": 3,
+    "description": "The worst floods since independence hit two-thirds of the country.",
+    "source": "https://en.wikipedia.org/wiki/2023_Slovenia_floods"
   }
 ]

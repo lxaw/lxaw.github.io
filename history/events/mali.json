@@ -334,5 +334,44 @@
     "importance": 3,
     "description": "Gunmen kill about 160 Fula villagers, the worst attack in the communal violence that has spread to central Mali.",
     "source": "https://en.wikipedia.org/wiki/Ogossagou_massacre"
+  },
+  {
+    "id": "mali-2020-coup-of-2020",
+    "title": "Coup of 2020",
+    "date": "18 Aug 2020",
+    "year-from": 2020,
+    "place": "Kati",
+    "lat": 12.744,
+    "lon": -8.074,
+    "country": "Mali",
+    "importance": 2,
+    "description": "Soldiers overthrow President Ibrahim Boubacar Keïta; a second coup follows in May 2021.",
+    "source": "https://en.wikipedia.org/wiki/2020_Malian_coup_d'état"
+  },
+  {
+    "id": "mali-2022-moura-massacre",
+    "title": "Moura massacre",
+    "date": "Mar 2022",
+    "year-from": 2022,
+    "place": "Moura",
+    "lat": 14.3,
+    "lon": -4.4,
+    "country": "Mali",
+    "importance": 3,
+    "description": "Malian troops and Russian mercenaries kill several hundred people in a village in the centre.",
+    "source": "https://en.wikipedia.org/wiki/Moura_massacre"
+  },
+  {
+    "id": "mali-2023-alliance-of-sahel-states",
+    "title": "Alliance of Sahel States",
+    "date": "16 Sep 2023",
+    "year-from": 2023,
+    "place": "Bamako",
+    "lat": 12.639,
+    "lon": -8.003,
+    "country": "Mali",
+    "importance": 3,
+    "description": "The military governments of Mali, Burkina Faso and Niger form a defence pact, and later leave ECOWAS together.",
+    "source": "https://en.wikipedia.org/wiki/Alliance_of_Sahel_States"
   }
 ]
