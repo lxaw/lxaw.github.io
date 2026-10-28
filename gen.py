@@ -154,6 +154,7 @@ def generate_html(json_file_path, output_file_path):
         <a href="papers_read.html">Papers</a>
         <a href="history.html">History</a>
         <a href="personal_interests.html">Personal</a>
+        <a href="blog/">Blog</a>
     </nav>
     <main>
         <div class="intro">

@@ -42,5 +42,14 @@
       render(btn);
     });
     nav.appendChild(btn);
+
+    // Mark the nav link for the current page; blog posts count as the Blog page
+    var here = location.pathname.replace(/index\.html$/, '');
+    if (/\/blog\/post\.html$/.test(here)) here = here.replace(/post\.html$/, '');
+    var links = nav.querySelectorAll(':scope > a');
+    for (var i = 0; i < links.length; i++) {
+      var path = links[i].pathname.replace(/index\.html$/, '');
+      if (path === here) links[i].classList.add('active');
+    }
   });
 })();

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../theme.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="../index.html">Home</a>
+    <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="../cv/main.pdf">English</a><a href="../cv_ja/main.pdf">日本語</a></span></span>
+    <a href="../books_read.html">Books</a>
+    <a href="../papers_read.html">Papers</a>
+    <a href="../history.html">History</a>
+    <a href="../personal_interests.html">Personal</a>
+    <a href="../blog/">Blog</a>
+  </nav>
+
+  <main class="post">
+    <p class="post-back"><a href="./">&larr; All posts</a></p>
+    <h1 id="post-title"></h1>
+    <p class="post-meta" id="post-date"></p>
+    <article class="post-body" id="post-body"></article>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="blog.js"></script>
+  <script>
+    Blog.render(
+      document.getElementById('post-title'),
+      document.getElementById('post-date'),
+      document.getElementById('post-body')
+    );
+  </script>
+</body>
+</html>

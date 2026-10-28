@@ -56,6 +56,7 @@
 
         .profile-links a {
             color: var(--muted);
+            border-bottom: none;
             font-size: 18px;
             line-height: 1;
             transition: color 0.15s ease;
@@ -89,13 +90,25 @@
             border: 1px solid var(--hair);
         }
 
+        .profile-bio p.note {
+            font-size: 11.5px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
         /* News */
         .news-list {
             list-style: none;
             margin: 0 0 36px 0;
             padding: 0 8px 0 0;
-            max-height: 360px;
+            max-height: 200px;
             overflow-y: auto;
+            position: relative;
+        }
+
+        .news-list.has-more {
+            -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent);
+            mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent);
         }
 
         .news-list li {
@@ -119,48 +132,24 @@
             padding-top: 1px;
         }
 
-        /* Publications */
-        .pub-list {
-            list-style: none;
-            margin: 0 0 36px 0;
-            padding: 0;
+        section + section .section-title {
+            margin-top: 28px;
         }
 
-        .pub-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--hair2);
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .pub-list li:last-child {
-            border-bottom: none;
-        }
-
-        .pub-title {
-            font-weight: normal;
-        }
-
-        .pub-authors {
-            color: var(--muted);
-            font-size: 14px;
-            margin-top: 4px;
-        }
-
-        .pub-venue {
-            display: block;
-            font-size: 13px;
-            font-style: italic;
-            color: var(--muted);
-            margin-top: 3px;
-        }
-
-        .pub-desc {
+        .press p {
             font-size: 13.5px;
-            color: var(--muted);
-            margin-top: 6px;
-            line-height: 1.55;
-            text-align: left;
+            line-height: 1.65;
+            margin: 0 0 36px 0;
+        }
+
+        .site-footer {
+            display: block;
+            text-align: center;
+            margin: 20px 0 10px;
+        }
+
+        .site-footer a {
+            opacity: 0.35;
         }
 
         @media (max-width: 600px) {
@@ -183,6 +172,7 @@
         <a href="papers_read.html">Papers</a>
         <a href="history.html">History</a>
         <a href="personal_interests.html">Personal</a>
+        <a href="blog/">Blog</a>
     </nav>
 
     <main>
@@ -197,7 +187,10 @@
                     I was an NSF Graduate Research Fellow and pursued an M.S. in CS at Georgia Tech.
                     I also serve as an informal advisor on U.S.&ndash;Japan AI policy, joining periodic roundtables with U.S. Embassy Tokyo.
                 </p>
-                <p style="font-size:11.5px;color:var(--muted);line-height:1.6;">
+                <p>
+                    I am a history enthusiast and enjoy discussing history, meaning, and geopolitics. I also enjoy climbing and bouldering, and am trying to get better at it. There's other stuff too probably.
+                </p>
+                <p class="note">
                     I am committed to mentoring students, and make time for this every week. Please feel free to message me on <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a> and I will try to respond. Any background is welcome, and the request can be anything from resume reviews to just general advice. Please note that I cannot help with internship / university / job applications unless I directly was involved in your project.
                 </p>
             </div>
@@ -233,113 +226,37 @@
             </ul>
         </section>
 
-        <section>
-            <div class="section-title">Preprints &amp; Tech Reports</div>
-            <ul class="pub-list">
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2609.08135">KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization</a></div>
-                        <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
-                        <span class="pub-venue">Preprint / Tech Report 2026 &middot; SB Intuitions</span>
-                        <div class="pub-desc">We develop a second-order theory of quantization noise in matrix multiplication, characterizing a format by the variance profile it assigns to each element. The multiplicative variance profile of floating-point rounding collapses the data dependence to a single scalar, the participation factor κ, yielding a closed-form signal-to-noise-ratio law and a closed-form ceiling κ* that no function-preserving linear transform can exceed. Building on this analysis, we introduce KBBQ (Kappa-Braked Blockwise Quantization), which parameterizes how closely a transform approaches this ceiling. At W4A4, across four base models and two FP4 formats, KBBQ outperforms the prior state of the art without additional deployment-time computation.</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2606.11552">Teaching Diffusion to Speculate Left-to-Right</a></div>
-                        <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
-                        <span class="pub-venue">Preprint / Tech Report 2026 &middot; SB Intuitions</span>
-                        <div class="pub-desc">Speculative decoding uses a lightweight draft model to propose tokens verified in parallel by a larger target. Diffusion LMs are natural drafters — they generate entire token blocks in parallel — but are trained with a symmetric bidirectional objective while verification is strictly left-to-right. We analyze three training-time interventions that close this gap: token positional weighting, a first-error focal loss targeting the position that breaks the accepted prefix, and a chain loss as a differentiable surrogate for expected accepted length. Across four target models and six benchmarks, the combined interventions raise accepted draft length by 21–76% without additional overhead.</div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="section-title">Selected Publications</div>
-            <ul class="pub-list">
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2607.05722">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding</a></div>
-                        <div class="pub-authors">Y. Fu, <strong>L. Whalen</strong>, A. Garg, C. Wu, et al.</div>
-                        <span class="pub-venue">EMNLP 2026 &middot; NVIDIA</span>
-                        <div class="pub-desc">We introduce a tri-mode language model that jointly optimizes autoregressive (AR) and diffusion objectives within a single architecture, enabling switching between AR, diffusion, and self-speculation decoding at inference time. AR and diffusion objectives are complementary: diffusion improves lookahead planning while AR injects strong left-to-right priors. In self-speculation mode, the diffusion head drafts while the AR head verifies, outperforming multi-token prediction in both acceptance rate and throughput. Scaling to 3B, 8B, and 14B, the 8B model decodes 6× more tokens per forward pass than Qwen3-8B at comparable accuracy.</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://arxiv.org/pdf/2512.14067">Efficient-DLM: From Autoregressive to Diffusion Language Models, and Beyond in Speed</a></div>
-                        <div class="pub-authors">Y. Fu*, <strong>L. Whalen*</strong>, Z. Ye, X. Dong, S. Diao, et al. &nbsp;<em>(* equal contribution)</em></div>
-                        <span class="pub-venue">ICML 2026 &middot; NVIDIA</span>
-                        <div class="pub-desc">Diffusion LMs promise parallel generation but lag AR models in learning efficiency when trained from scratch. We study AR-to-dLM conversion: systematically identifying that block-wise attention — causal across blocks, bidirectional within — better preserves pretrained AR weight distributions than fully bidirectional training, yielding a win-win in accuracy and speed. We further propose position-dependent token masking to close the training-test gap. Efficient-DLM 8B achieves +5.4%/+2.7% higher accuracy with 4.5×/2.7× higher throughput than Dream 7B and Qwen3 4B.</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11617858/">NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators</a></div>
-                        <div class="pub-authors">C. Shih, C. Li, C. Yu, H. Fang, S. Li, W. Hsin, <strong>L. Whalen</strong>, et al.</div>
-                        <span class="pub-venue">ISCA 2026 &middot; Georgia Tech</span>
-                        <div class="pub-desc">A versatile simulator for benchmarking and design-space exploration of neural rendering accelerators.</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Whalen_Early-Bird_Diffusion_Investigating_and_Leveraging_Timestep-Aware_Early-Bird_Tickets_in_Diffusion_CVPR_2025_paper.html">Early-Bird Diffusion: Investigating and Leveraging Timestep-Aware Early-Bird Tickets in Diffusion Models for Efficient Training</a></div>
-                        <div class="pub-authors"><strong>L. Whalen*</strong>, Z. Du*, H. You*, C. Li, S. Li, Y. Lin &nbsp;<em>(* equal contribution)</em></div>
-                        <span class="pub-venue">CVPR 2025 &middot; Georgia Tech</span>
-                        <div class="pub-desc">Training diffusion models is computationally expensive due to multi-step forward and backward passes across many timesteps. We investigate the existence of Early-Bird (EB) tickets — sparse subnetworks that emerge early in training and maintain high generation quality — and introduce timestep-aware EB tickets that adapt their sparsity based on the importance of each timestep region. Our EB-Diff-Train method derives these tickets, trains them in parallel, and combines them at inference, achieving 2.9–5.8× speedups over training unpruned dense models and up to 10.3× faster training versus standard train-prune-finetune pipelines.</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://aclanthology.org/2025.acl-short.96.pdf">LAMB: A Training-Free Method to Enhance the Long-Context Understanding of SSMs via Attention-Guided Token Filtering</a></div>
-                        <div class="pub-authors">Z. Ye, Z. Wang, K. Xia, J. Hong, L. Li, <strong>L. Whalen</strong>, et al.</div>
-                        <span class="pub-venue">ACL 2025 &middot; Georgia Tech</span>
-                        <div class="pub-desc">State space models achieve efficient sub-quadratic compute but degrade significantly at long contexts due to exponential decay in hidden state memory. We investigate Mamba's attention patterns to explain why token filtering alleviates this degradation, then propose LAMB — a training-free, attention-guided token filtering strategy that preserves critical tokens during inference. LAMB boosts long-context performance for both pure SSMs and hybrid models, achieving up to 30.35% improvement over state-of-the-art techniques on standard long-context benchmarks.</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title"><a href="https://journals.linguisticsociety.org/proceedings/index.php/PLSA/article/view/5467">On 'historical unity' of Russian and Ukrainian: A linguistic perspective on language conflict and change</a></div>
-                        <div class="pub-authors">A. Murphy, <strong>L. Whalen</strong>, S. Dubinsky, et al.</div>
-                        <span class="pub-venue">LSA 2023 &middot; University of South Carolina</span>
-                        <div class="pub-desc">We examine Putin's (2021) claim of "historical linguistic unity" between Russian and Ukrainian using computational lexical distance measures. Applying Levenshtein distance over frequency-based word lists — sensitive to both organic and contact-induced language change — we objectively quantify the linguistic distance between the two languages and their relationships to Polish, substantiating that Russian and Ukrainian are demonstrably distinct languages with no grounds for claims of unity.</div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="section-title" style="margin-top:28px;">Patents</div>
-            <ul class="pub-list">
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title">拡散ベースの投機的ドラフトモデルにおける受理長改善アルゴリズム</div>
-                        <div class="pub-desc" style="margin-top:3px;font-style:italic;">&ldquo;Algorithm to Improve Acceptance Length of Diffusion-Based Speculative Draft Models&rdquo;</div>
-                        <div class="pub-authors"><strong>L. Whalen</strong>, Y. Ito, R. Sakamoto</div>
-                        <span class="pub-venue">Japanese Patent (filed) 2026 &middot; SB Intuitions</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-body">
-                        <div class="pub-title">Training Framework for Converting Autoregressive Language Models into Faster Diffusion Language Models</div>
-                        <div class="pub-authors">Y. Fu, <strong>L. Whalen</strong>, X. Dong, S. Diao, C. Wu, E. Xie, S. Han, J. Kautz, Y. Lin, P. Molchanov</div>
-                        <span class="pub-venue">U.S. Patent (filed) 2026 &middot; NVIDIA</span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="section-title" style="margin-top:28px;">Press / Advising</div>
-            <p style="font-size:13.5px;line-height:1.65;margin:0 0 36px 0;">
+        <section class="press">
+            <div class="section-title">Press / Advising</div>
+            <p>
                 I am open to calls about ML/AI advising, for companies or governments, and have in the past done chats with journalists and embassy members. These can be formal or informal; if interested, please message me via <a href="mailto:whalenlex@gmail.com">email</a> or <a href="https://www.linkedin.com/in/lxaw/">LinkedIn</a>, with the word "Advising" in the title. Thanks!
             </p>
         </section>
     </main>
 
-    <small style="display:block;text-align:center;margin:20px 0 10px;">
-        <a href="gineiden.html" style="opacity:0.35;">_</a>
+    <small class="site-footer">
+        <a href="gineiden.html">_</a>
     </small>
+    <script src="blog/blog.js"></script>
+    <script>
+        var posts = document.getElementById('posts');
+        if (posts) Blog.list(posts, 'blog/');
+
+        // Size the news list to show exactly the first 5 items, then scroll.
+        // The bottom fades out until the list is scrolled to the end.
+        (function () {
+            var list = document.querySelector('.news-list');
+            var items = list && list.children;
+            if (!items || items.length <= 5) return;
+            function fade() {
+                var more = list.scrollTop + list.clientHeight < list.scrollHeight - 2;
+                list.classList.toggle('has-more', more);
+            }
+            function fit() { list.style.maxHeight = items[5].offsetTop + 'px'; fade(); }
+            fit();
+            list.addEventListener('scroll', fade);
+            window.addEventListener('resize', fit);
+        })();
+    </script>
 </body>
 </html>
