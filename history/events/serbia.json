@@ -521,5 +521,31 @@
     "importance": 2,
     "description": "The concrete canopy of the newly renovated railway station collapses, killing 16 and setting off the largest protests since 2000.",
     "source": "https://en.wikipedia.org/wiki/Novi_Sad_railway_station_canopy_collapse"
+  },
+  {
+    "id": "serbia-2026-vucic-resigns-as-president",
+    "title": "Vučić resigns as president",
+    "date": "27 Sep 2026",
+    "year-from": 2026,
+    "place": "Belgrade",
+    "lat": 44.811,
+    "lon": 20.462,
+    "country": "Serbia",
+    "importance": 3,
+    "description": "Aleksandar Vučić steps down as president to lead his party's list in the snap parliamentary election, and Ana Brnabić becomes acting president.",
+    "source": "https://en.wikipedia.org/wiki/2026_Serbian_parliamentary_election"
+  },
+  {
+    "id": "serbia-2026-student-list-wins-election",
+    "title": "Student List wins the election",
+    "date": "25 Oct 2026",
+    "year-from": 2026,
+    "place": "Belgrade",
+    "lat": 44.812,
+    "lon": 20.465,
+    "country": "Serbia",
+    "importance": 2,
+    "description": "The Student List that grew out of the anti-corruption protests wins an absolute majority, defeating the Serbian Progressive Party, in power since 2012.",
+    "source": "https://en.wikipedia.org/wiki/2026_Serbian_parliamentary_election"
   }
 ]

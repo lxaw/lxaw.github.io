@@ -715,5 +715,18 @@
     "importance": 3,
     "description": "Keir Starmer's Labour wins a large majority, ending 14 years of Conservative government.",
     "source": "https://en.wikipedia.org/wiki/2024_United_Kingdom_general_election"
+  },
+  {
+    "id": "united-kingdom-2026-burnham-becomes-prime-minister",
+    "title": "Burnham becomes prime minister",
+    "date": "20 Jul 2026",
+    "year-from": 2026,
+    "place": "London",
+    "lat": 51.503,
+    "lon": -0.128,
+    "country": "United Kingdom",
+    "importance": 2,
+    "description": "Andy Burnham succeeds Keir Starmer as prime minister after returning to Parliament at a by-election and winning the Labour leadership unopposed.",
+    "source": "https://en.wikipedia.org/wiki/Andy_Burnham"
   }
 ]

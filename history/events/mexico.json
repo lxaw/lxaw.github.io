@@ -407,5 +407,18 @@
     "importance": 3,
     "description": "Mexico becomes the first country to elect all its judges by popular vote, on a turnout of about 13 percent.",
     "source": "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections"
+  },
+  {
+    "id": "mexico-2026-el-mencho-killed",
+    "title": "El Mencho killed",
+    "date": "22 Feb 2026",
+    "year-from": 2026,
+    "place": "Tapalpa",
+    "lat": 19.944,
+    "lon": -103.759,
+    "country": "Mexico",
+    "importance": 2,
+    "description": "The Mexican army kills Nemesio Oseguera, leader of the Jalisco New Generation Cartel, setting off a wave of cartel blockades and violence across several states.",
+    "source": "https://en.wikipedia.org/wiki/2026_Jalisco_operation"
   }
 ]

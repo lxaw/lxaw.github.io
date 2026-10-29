@@ -289,5 +289,18 @@
     "importance": 3,
     "description": "Israel strikes a building in Doha where Hamas leaders are meeting to discuss a ceasefire.",
     "source": "https://en.wikipedia.org/wiki/Israeli_attack_on_Doha"
+  },
+  {
+    "id": "qatar-2026-gas-production-halted",
+    "title": "Gas production halted",
+    "date": "2 Mar 2026",
+    "year-from": 2026,
+    "place": "Ras Laffan",
+    "lat": 25.92,
+    "lon": 51.55,
+    "country": "Qatar",
+    "importance": 3,
+    "description": "After Iranian drones strike Ras Laffan and Mesaieed, QatarEnergy stops all natural gas production, removing one of the world's largest LNG suppliers from the market.",
+    "source": "https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_Qatar"
   }
 ]

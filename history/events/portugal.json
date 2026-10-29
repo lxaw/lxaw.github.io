@@ -350,5 +350,18 @@
     "importance": 3,
     "description": "One of Lisbon's historic funiculars derails, killing 16 people.",
     "source": "https://en.wikipedia.org/wiki/Ascensor_da_Glória_derailment"
+  },
+  {
+    "id": "portugal-2026-seguro-elected-president",
+    "title": "Seguro elected president",
+    "date": "8 Feb 2026",
+    "year-from": 2026,
+    "place": "Lisbon",
+    "lat": 38.72,
+    "lon": -9.14,
+    "country": "Portugal",
+    "importance": 3,
+    "description": "The Socialist António José Seguro defeats André Ventura of the far-right Chega in the presidential runoff, 67% to 33%.",
+    "source": "https://en.wikipedia.org/wiki/2026_Portuguese_presidential_election"
   }
 ]

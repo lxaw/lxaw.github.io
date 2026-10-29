@@ -317,5 +317,18 @@
     "importance": 3,
     "description": "Hakainde Hichilema defeats Edgar Lungu at his sixth attempt.",
     "source": "https://en.wikipedia.org/wiki/2021_Zambian_general_election"
+  },
+  {
+    "id": "zambia-2026-hichilema-re-elected",
+    "title": "Hichilema re-elected",
+    "date": "13 Aug 2026",
+    "year-from": 2026,
+    "place": "Lusaka",
+    "lat": -15.42,
+    "lon": 28.28,
+    "country": "Zambia",
+    "importance": 3,
+    "description": "President Hakainde Hichilema wins a second term in the first round of the general election.",
+    "source": "https://en.wikipedia.org/wiki/2026_Zambian_general_election"
   }
 ]

@@ -315,5 +315,18 @@
     "importance": 3,
     "description": "The Birch Glacier collapses and buries most of the village, which had been evacuated days before.",
     "source": "https://en.wikipedia.org/wiki/2025_Blatten_glacier_collapse"
+  },
+  {
+    "id": "switzerland-2026-crans-montana-bar-fire",
+    "title": "Crans-Montana bar fire",
+    "date": "1 Jan 2026",
+    "year-from": 2026,
+    "place": "Crans-Montana, Valais",
+    "lat": 46.31,
+    "lon": 7.48,
+    "country": "Switzerland",
+    "importance": 2,
+    "description": "A fire during New Year celebrations at the Le Constellation bar kills 41 people and injures 115, one of the deadliest fires in modern Swiss history.",
+    "source": "https://en.wikipedia.org/wiki/2026_Crans-Montana_bar_fire"
   }
 ]

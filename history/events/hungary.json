@@ -447,5 +447,18 @@
     "importance": 3,
     "description": "Katalin Novák resigns over a pardon granted in a child sex abuse case.",
     "source": "https://en.wikipedia.org/wiki/Katalin_Novák"
+  },
+  {
+    "id": "hungary-2026-orban-defeated-by-tisza",
+    "title": "Orbán defeated by Tisza",
+    "date": "12 Apr 2026",
+    "year-from": 2026,
+    "place": "Budapest",
+    "lat": 47.507,
+    "lon": 19.046,
+    "country": "Hungary",
+    "importance": 2,
+    "description": "Péter Magyar's Tisza Party wins a two-thirds majority in a record-turnout election, ending Viktor Orbán's sixteen years in power.",
+    "source": "https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election"
   }
 ]

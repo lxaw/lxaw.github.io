@@ -524,5 +524,18 @@
     "importance": 3,
     "description": "The strongest typhoon in northern Vietnam in decades kills about 300 people.",
     "source": "https://en.wikipedia.org/wiki/Typhoon_Yagi"
+  },
+  {
+    "id": "vietnam-2026-fourteenth-party-congress",
+    "title": "Fourteenth Party Congress",
+    "date": "23 Jan 2026",
+    "year-from": 2026,
+    "place": "Hanoi",
+    "lat": 21.006,
+    "lon": 105.787,
+    "country": "Vietnam",
+    "importance": 3,
+    "description": "The Communist Party congress in Hanoi re-elects Tô Lâm as general secretary, confirming him as the country's leader for a new five-year term.",
+    "source": "https://en.wikipedia.org/wiki/14th_National_Congress_of_the_Communist_Party_of_Vietnam"
   }
 ]

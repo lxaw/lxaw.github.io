@@ -356,5 +356,18 @@
     "importance": 3,
     "description": "Xiomara Castro takes office; her predecessor Juan Orlando Hernández is extradited to the United States in April.",
     "source": "https://en.wikipedia.org/wiki/Xiomara_Castro"
+  },
+  {
+    "id": "honduras-2025-asfura-elected",
+    "title": "Asfura elected",
+    "date": "30 Nov 2025",
+    "year-from": 2025,
+    "place": "Tegucigalpa",
+    "lat": 14.072,
+    "lon": -87.192,
+    "country": "Honduras",
+    "importance": 3,
+    "description": "National Party candidate Nasry Asfura narrowly defeats Salvador Nasralla after a long, disputed count, ending the left-wing Libre party's government.",
+    "source": "https://en.wikipedia.org/wiki/2025_Honduran_general_election"
   }
 ]

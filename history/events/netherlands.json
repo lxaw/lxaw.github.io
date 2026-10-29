@@ -386,5 +386,18 @@
     "importance": 3,
     "description": "NATO members agree to raise defence spending to 5 percent of GDP by 2035.",
     "source": "https://en.wikipedia.org/wiki/2025_NATO_summit"
+  },
+  {
+    "id": "netherlands-2026-jetten-becomes-prime-minister",
+    "title": "Jetten becomes prime minister",
+    "date": "23 Feb 2026",
+    "year-from": 2026,
+    "place": "The Hague",
+    "lat": 52.08,
+    "lon": 4.31,
+    "country": "Netherlands",
+    "importance": 3,
+    "description": "Rob Jetten of D66 is sworn in as prime minister at the head of a cabinet with the VVD and CDA, succeeding Dick Schoof.",
+    "source": "https://en.wikipedia.org/wiki/Jetten_cabinet"
   }
 ]

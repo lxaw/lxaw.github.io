@@ -381,5 +381,18 @@
     "importance": 2,
     "description": "A ceasefire under the American peace plan takes effect, and the living hostages are released in exchange for Palestinian prisoners.",
     "source": "https://en.wikipedia.org/wiki/October_2025_Gaza_ceasefire"
+  },
+  {
+    "id": "palestine-2025-famine-confirmed-in-gaza",
+    "title": "Famine confirmed in Gaza",
+    "date": "22 Aug 2025",
+    "year-from": 2025,
+    "place": "Gaza City",
+    "lat": 31.5,
+    "lon": 34.467,
+    "country": "Palestine",
+    "importance": 2,
+    "description": "The UN-backed IPC confirms famine in Gaza Governorate after months of war and restricted aid.",
+    "source": "https://en.wikipedia.org/wiki/Gaza_Strip_famine"
   }
 ]

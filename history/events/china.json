@@ -1210,5 +1210,57 @@
     "importance": 3,
     "description": "After protests sparked by a fatal fire in Ürümqi, the government drops most of its lockdown rules.",
     "source": "https://en.wikipedia.org/wiki/2022_COVID-19_protests_in_China"
+  },
+  {
+    "id": "china-2025-wang-fuk-court-fire",
+    "title": "Wang Fuk Court fire",
+    "date": "26 Nov 2025",
+    "year-from": 2025,
+    "place": "Tai Po, Hong Kong",
+    "lat": 22.452,
+    "lon": 114.169,
+    "country": "China",
+    "importance": 2,
+    "description": "Fire sweeps through a housing estate in Hong Kong and kills 168 people.",
+    "source": "https://en.wikipedia.org/wiki/Wang_Fuk_Court_fire"
+  },
+  {
+    "id": "china-2026-zhang-youxia-purged",
+    "title": "Top general Zhang Youxia purged",
+    "date": "24 Jan 2026",
+    "year-from": 2026,
+    "place": "Beijing",
+    "lat": 39.904,
+    "lon": 116.407,
+    "country": "China",
+    "importance": 3,
+    "description": "The vice chairman of the Central Military Commission and the chief of the Joint Staff are placed under investigation, the most senior officers yet caught in Xi Jinping's purges of the military.",
+    "source": "https://en.wikipedia.org/wiki/Zhang_Youxia"
+  },
+  {
+    "id": "china-2026-trump-state-visit-to-beijing",
+    "title": "Trump state visit to Beijing",
+    "date": "13 May 2026",
+    "year-from": 2026,
+    "place": "Beijing",
+    "lat": 39.903,
+    "lon": 116.387,
+    "country": "China",
+    "importance": 3,
+    "description": "Donald Trump holds three days of talks with Xi Jinping in Beijing, his first visit to China in his second term.",
+    "source": "https://en.wikipedia.org/wiki/2026_state_visit_by_Donald_Trump_to_China"
+  },
+  {
+    "id": "china-2026-liushenyu-coal-mine-explosion",
+    "title": "Liushenyu coal mine explosion",
+    "date": "22 May 2026",
+    "year-from": 2026,
+    "place": "Qinyuan County, Shanxi",
+    "lat": 36.5,
+    "lon": 112.34,
+    "country": "China",
+    "importance": 3,
+    "description": "A gas explosion at a Shanxi coal mine kills 82 people, the country's deadliest mining disaster in over a decade.",
+    "source": "https://en.wikipedia.org/wiki/2026_Liushenyu_coal_mine_explosion"
   }
 ]

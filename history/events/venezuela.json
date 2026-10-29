@@ -413,5 +413,31 @@
     "importance": 2,
     "description": "Maduro claims victory; tallies published by the opposition show Edmundo González won.",
     "source": "https://en.wikipedia.org/wiki/2024_Venezuelan_presidential_election"
+  },
+  {
+    "id": "venezuela-2026-maduro-captured-by-us-forces",
+    "title": "Maduro captured by US forces",
+    "date": "3 Jan 2026",
+    "year-from": 2026,
+    "place": "Caracas",
+    "lat": 10.48,
+    "lon": -66.904,
+    "country": "Venezuela",
+    "importance": 1,
+    "description": "A United States military operation strikes targets around Caracas and seizes President Nicolás Maduro and his wife, who are flown to New York to face drug trafficking charges.",
+    "source": "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela"
+  },
+  {
+    "id": "venezuela-2026-machado-returns-from-exile",
+    "title": "Machado returns from exile",
+    "date": "25 Oct 2026",
+    "year-from": 2026,
+    "place": "Barquisimeto",
+    "lat": 10.067,
+    "lon": -69.317,
+    "country": "Venezuela",
+    "importance": 3,
+    "description": "Opposition leader and Nobel Peace Prize laureate María Corina Machado returns to Venezuela after more than ten months abroad, amid the transition that followed Maduro's removal.",
+    "source": "https://en.wikipedia.org/wiki/María_Corina_Machado"
   }
 ]

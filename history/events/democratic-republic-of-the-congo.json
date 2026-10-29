@@ -473,5 +473,18 @@
     "importance": 3,
     "description": "The foreign ministers of the DR Congo and Rwanda sign a US-brokered peace agreement.",
     "source": "https://en.wikipedia.org/wiki/2025_Democratic_Republic_of_the_Congo–Rwanda_peace_agreement"
+  },
+  {
+    "id": "democratic-republic-of-the-congo-2026-bundibugyo-ebola-epidemic",
+    "title": "Bundibugyo Ebola epidemic",
+    "date": "15 May 2026",
+    "year-from": 2026,
+    "place": "Bunia",
+    "lat": 1.57,
+    "lon": 30.25,
+    "country": "Democratic Republic of the Congo",
+    "importance": 2,
+    "description": "An outbreak of the Bundibugyo strain of Ebola, for which there is no approved vaccine, is confirmed in Ituri and becomes the deadliest in the country's history.",
+    "source": "https://en.wikipedia.org/wiki/2026_Ebola_epidemic"
   }
 ]

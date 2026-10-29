@@ -447,5 +447,31 @@
     "importance": 1,
     "description": "Fighting between the army and the Rapid Support Forces begins a war that displaces more than ten million people.",
     "source": "https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023–present)"
+  },
+  {
+    "id": "sudan-2025-rsf-takes-el-fasher",
+    "title": "RSF takes El Fasher",
+    "date": "26 Oct 2025",
+    "year-from": 2025,
+    "place": "El Fasher",
+    "lat": 13.63,
+    "lon": 25.35,
+    "country": "Sudan",
+    "importance": 2,
+    "description": "The Rapid Support Forces capture the last army stronghold in Darfur after a long siege and kill thousands of civilians in the city.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_El_Fasher"
+  },
+  {
+    "id": "sudan-2026-government-returns-to-khartoum",
+    "title": "Government returns to Khartoum",
+    "date": "11 Jan 2026",
+    "year-from": 2026,
+    "place": "Khartoum",
+    "lat": 15.5,
+    "lon": 32.56,
+    "country": "Sudan",
+    "importance": 3,
+    "description": "The army-aligned government moves back to the capital from Port Sudan, where it had sat for most of the civil war.",
+    "source": "https://en.wikipedia.org/wiki/2026_in_Sudan"
   }
 ]

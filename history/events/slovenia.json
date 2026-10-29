@@ -449,5 +449,18 @@
     "importance": 3,
     "description": "The worst floods since independence hit two-thirds of the country.",
     "source": "https://en.wikipedia.org/wiki/2023_Slovenia_floods"
+  },
+  {
+    "id": "slovenia-2026-golob-coalition-loses-majority",
+    "title": "Golob's coalition loses its majority",
+    "date": "22 Mar 2026",
+    "year-from": 2026,
+    "place": "Ljubljana",
+    "lat": 46.051,
+    "lon": 14.506,
+    "country": "Slovenia",
+    "importance": 3,
+    "description": "Robert Golob's governing coalition loses its majority at the election, and a right-wing coalition later returns Janez Janša as prime minister for a fourth time.",
+    "source": "https://en.wikipedia.org/wiki/2026_Slovenian_parliamentary_election"
   }
 ]

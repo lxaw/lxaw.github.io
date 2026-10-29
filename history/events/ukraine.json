@@ -436,6 +436,19 @@
     "source": "https://en.wikipedia.org/wiki/Liberation_of_Kherson"
   },
   {
+    "id": "ukraine-2022-fall-of-mariupol",
+    "title": "Fall of Mariupol",
+    "date": "20 May 2022",
+    "year-from": 2022,
+    "place": "Mariupol",
+    "lat": 47.098,
+    "lon": 37.6,
+    "country": "Ukraine",
+    "importance": 2,
+    "description": "The last Ukrainian defenders surrender at the Azovstal steelworks, ending a nearly three-month siege of the port city.",
+    "source": "https://en.wikipedia.org/wiki/Siege_of_Mariupol"
+  },
+  {
     "id": "ukraine-2023-kakhovka-dam-destroyed",
     "title": "Kakhovka Dam destroyed",
     "date": "6 Jun 2023",
@@ -460,5 +473,31 @@
     "importance": 3,
     "description": "Ukrainian troops cross into Russia's Kursk Oblast, the first foreign occupation of Russian land since 1945.",
     "source": "https://en.wikipedia.org/wiki/2024_Kursk_offensive"
+  },
+  {
+    "id": "ukraine-2025-operation-spiderweb",
+    "title": "Operation Spiderweb",
+    "date": "1 Jun 2025",
+    "year-from": 2025,
+    "place": "Belaya air base",
+    "lat": 52.915,
+    "lon": 103.575,
+    "country": "Ukraine",
+    "importance": 2,
+    "description": "Drones smuggled into Russia in trucks strike strategic bombers at air bases as far away as Siberia, the largest attack on Russian air bases of the war so far.",
+    "source": "https://en.wikipedia.org/wiki/Operation_Spiderweb"
+  },
+  {
+    "id": "ukraine-2026-protests-over-fedorov-dismissal",
+    "title": "Protests over Fedorov's dismissal",
+    "date": "15 Jul 2026",
+    "year-from": 2026,
+    "place": "Kyiv",
+    "lat": 50.45,
+    "lon": 30.523,
+    "country": "Ukraine",
+    "importance": 3,
+    "description": "Zelenskyy's dismissal of the popular defence minister Mykhailo Fedorov sets off protests across Ukraine, and six days later he also removes the army chief Oleksandr Syrskyi.",
+    "source": "https://en.wikipedia.org/wiki/Protests_against_the_dismissal_of_Mykhailo_Fedorov"
   }
 ]

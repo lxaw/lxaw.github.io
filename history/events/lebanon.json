@@ -445,5 +445,18 @@
     "importance": 3,
     "description": "An Israeli air strike kills Hezbollah's leader of 32 years.",
     "source": "https://en.wikipedia.org/wiki/Assassination_of_Hassan_Nasrallah"
+  },
+  {
+    "id": "lebanon-2026-war-of-2026",
+    "title": "War of 2026",
+    "date": "2 Mar 2026",
+    "year-from": 2026,
+    "place": "Southern Lebanon",
+    "lat": 33.2,
+    "lon": 35.4,
+    "country": "Lebanon",
+    "importance": 2,
+    "description": "Hezbollah fires on Israel after the killing of Khamenei; Israel answers with heavy air strikes and a ground invasion that occupies part of the south.",
+    "source": "https://en.wikipedia.org/wiki/2026_Lebanon_war"
   }
 ]

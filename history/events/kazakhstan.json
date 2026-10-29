@@ -370,5 +370,18 @@
     "importance": 3,
     "description": "Nur-Sultan, named after Nazarbayev in 2019, gets its old name back.",
     "source": "https://en.wikipedia.org/wiki/Astana"
+  },
+  {
+    "id": "kazakhstan-2026-new-constitution-referendum",
+    "title": "New constitution approved",
+    "date": "15 Mar 2026",
+    "year-from": 2026,
+    "place": "Astana",
+    "lat": 51.169,
+    "lon": 71.449,
+    "country": "Kazakhstan",
+    "importance": 2,
+    "description": "Voters approve a new constitution put forward by President Tokayev, which takes effect in July.",
+    "source": "https://en.wikipedia.org/wiki/2026_Kazakh_constitutional_referendum"
   }
 ]

@@ -348,5 +348,18 @@
     "importance": 3,
     "description": "The Supreme Court finds Bolsonaro guilty of plotting a coup and sentences him to 27 years.",
     "source": "https://en.wikipedia.org/wiki/Jair_Bolsonaro"
+  },
+  {
+    "id": "brazil-2026-lula-re-elected",
+    "title": "Lula re-elected",
+    "date": "25 Oct 2026",
+    "year-from": 2026,
+    "place": "Brasília",
+    "lat": -15.794,
+    "lon": -47.882,
+    "country": "Brazil",
+    "importance": 2,
+    "description": "Lula wins a fourth term in the runoff against Flávio Bolsonaro, who had led the first round and calls for the result to be annulled.",
+    "source": "https://en.wikipedia.org/wiki/2026_Brazilian_general_election"
   }
 ]

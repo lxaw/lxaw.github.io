@@ -617,5 +617,31 @@
     "importance": 2,
     "description": "Two weeks after militants kill 26 tourists at Pahalgam, India strikes targets in Pakistan, starting four days of fighting.",
     "source": "https://en.wikipedia.org/wiki/2025_India–Pakistan_conflict"
+  },
+  {
+    "id": "india-2025-air-india-flight-171",
+    "title": "Air India Flight 171",
+    "date": "12 Jun 2025",
+    "year-from": 2025,
+    "place": "Ahmedabad",
+    "lat": 23.0533,
+    "lon": 72.6047,
+    "country": "India",
+    "importance": 3,
+    "description": "A Boeing 787 bound for London crashes into a residential area seconds after take-off from Ahmedabad, killing 260 people on board and on the ground.",
+    "source": "https://en.wikipedia.org/wiki/Air_India_Flight_171"
+  },
+  {
+    "id": "india-2026-trade-agreement-with-the-eu",
+    "title": "Trade agreement with the EU",
+    "date": "27 Jan 2026",
+    "year-from": 2026,
+    "place": "New Delhi",
+    "lat": 28.6129,
+    "lon": 77.2295,
+    "country": "India",
+    "importance": 3,
+    "description": "India and the European Union conclude a free trade agreement after nearly two decades of negotiations, announced at a summit in New Delhi.",
+    "source": "https://en.wikipedia.org/wiki/India–European_Union_Free_Trade_Agreement"
   }
 ]

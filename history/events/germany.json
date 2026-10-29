@@ -1016,5 +1016,18 @@
     "importance": 3,
     "description": "Friedrich Merz is elected chancellor at the second ballot, the first nominee to fail at the first.",
     "source": "https://en.wikipedia.org/wiki/Merz_cabinet"
+  },
+  {
+    "id": "germany-2026-afd-wins-saxony-anhalt-election",
+    "title": "AfD wins Saxony-Anhalt election",
+    "date": "6 Sep 2026",
+    "year-from": 2026,
+    "place": "Magdeburg",
+    "lat": 52.13,
+    "lon": 11.63,
+    "country": "Germany",
+    "importance": 3,
+    "description": "The AfD wins 43.8% of the vote and a plurality in the state parliament, but falls short of a majority of seats.",
+    "source": "https://en.wikipedia.org/wiki/2026_Saxony-Anhalt_state_election"
   }
 ]

@@ -958,5 +958,18 @@
     "importance": 3,
     "description": "The mayor of Istanbul and leading opposition candidate is detained, setting off the largest protests in a decade.",
     "source": "https://en.wikipedia.org/wiki/Arrest_of_Ekrem_İmamoğlu"
+  },
+  {
+    "id": "turkey-2025-pkk-announces-its-dissolution",
+    "title": "PKK announces its dissolution",
+    "date": "12 May 2025",
+    "year-from": 2025,
+    "place": "Sulaymaniyah",
+    "lat": 35.56,
+    "lon": 45.44,
+    "country": "Turkey",
+    "importance": 2,
+    "description": "After a congress in Iraqi Kurdistan, the PKK says it will disband and lay down its arms, ending its four-decade armed struggle against the Turkish state.",
+    "source": "https://en.wikipedia.org/wiki/Kurdistan_Workers'_Party"
   }
 ]

@@ -398,5 +398,18 @@
     "importance": 3,
     "description": "Two car bombs at the education ministry kill more than 120 people.",
     "source": "https://en.wikipedia.org/wiki/2022_Somali_Ministry_of_Education_bombings"
+  },
+  {
+    "id": "somalia-2025-israel-recognises-somaliland",
+    "title": "Israel recognises Somaliland",
+    "date": "26 Dec 2025",
+    "year-from": 2025,
+    "place": "Hargeisa",
+    "lat": 9.56,
+    "lon": 44.07,
+    "country": "Somalia",
+    "importance": 2,
+    "description": "Israel becomes the first UN member state to recognise the breakaway region of Somaliland as an independent state.",
+    "source": "https://en.wikipedia.org/wiki/Israel–Somaliland_relations"
   }
 ]

@@ -402,5 +402,18 @@
     "importance": 3,
     "description": "The strongest earthquake on the island in 25 years strikes off Hualien.",
     "source": "https://en.wikipedia.org/wiki/2024_Hualien_earthquake"
+  },
+  {
+    "id": "taiwan-2025-mass-recall-votes-fail",
+    "title": "Mass recall votes fail",
+    "date": "26 Jul 2025",
+    "year-from": 2025,
+    "place": "Taipei",
+    "lat": 25.033,
+    "lon": 121.565,
+    "country": "Taiwan",
+    "importance": 3,
+    "description": "Voters reject a campaign to recall 24 opposition Kuomintang legislators, leaving the opposition in control of the legislature.",
+    "source": "https://en.wikipedia.org/wiki/2025_Taiwanese_recall_votes"
   }
 ]

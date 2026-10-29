@@ -284,5 +284,18 @@
     "importance": 3,
     "description": "The first vice-president is detained, threatening a return to civil war.",
     "source": "https://en.wikipedia.org/wiki/Riek_Machar"
+  },
+  {
+    "id": "south-sudan-2026-abiemnom-massacre",
+    "title": "Abiemnom massacre",
+    "date": "1 Mar 2026",
+    "year-from": 2026,
+    "place": "Abiemnom",
+    "lat": 9.4,
+    "lon": 28.82,
+    "country": "South Sudan",
+    "importance": 3,
+    "description": "Armed youths from Unity State kill 169 soldiers and civilians in Ruweng amid the country's slide back towards civil war.",
+    "source": "https://en.wikipedia.org/wiki/Abiemnom_massacre"
   }
 ]

@@ -517,5 +517,18 @@
     "importance": 2,
     "description": "The deadliest earthquake in Morocco since 1960 kills nearly 3,000 people in the High Atlas.",
     "source": "https://en.wikipedia.org/wiki/2023_Marrakesh–Safi_earthquake"
+  },
+  {
+    "id": "morocco-2026-first-woman-prime-minister",
+    "title": "First woman prime minister",
+    "date": "29 Sep 2026",
+    "year-from": 2026,
+    "place": "Rabat",
+    "lat": 34.02,
+    "lon": -6.84,
+    "country": "Morocco",
+    "importance": 3,
+    "description": "After her Authenticity and Modernity Party wins the most seats in the general election, King Mohammed VI appoints Fatima Ezzahra El Mansouri as Morocco's first female prime minister.",
+    "source": "https://en.wikipedia.org/wiki/2026_Moroccan_general_election"
   }
 ]

@@ -540,5 +540,18 @@
     "importance": 3,
     "description": "Prabowo Subianto wins the presidency in the first round, with outgoing president Jokowi's son as his running mate.",
     "source": "https://en.wikipedia.org/wiki/2024_Indonesian_presidential_election"
+  },
+  {
+    "id": "indonesia-2026-flores-earthquake",
+    "title": "Flores earthquake",
+    "date": "15 Aug 2026",
+    "year-from": 2026,
+    "place": "Off Flores",
+    "lat": -8.31,
+    "lon": 121.352,
+    "country": "Indonesia",
+    "importance": 3,
+    "description": "A magnitude 7.8 earthquake off the north coast of Flores kills at least 142 people, most in Manggarai Regency.",
+    "source": "https://en.wikipedia.org/wiki/2026_Flores_earthquake"
   }
 ]

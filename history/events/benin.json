@@ -311,5 +311,18 @@
     "importance": 3,
     "description": "Patrice Talon wins a second term in an election from which the main opposition was excluded.",
     "source": "https://en.wikipedia.org/wiki/2021_Beninese_presidential_election"
+  },
+  {
+    "id": "benin-2026-wadagni-elected",
+    "title": "Wadagni elected president",
+    "date": "12 Apr 2026",
+    "year-from": 2026,
+    "place": "Porto-Novo",
+    "lat": 6.497,
+    "lon": 2.605,
+    "country": "Benin",
+    "importance": 3,
+    "description": "Finance Minister Romuald Wadagni, Talon's chosen successor, wins about 94 percent of the vote after the main opposition candidate is barred, months after a failed coup attempt.",
+    "source": "https://en.wikipedia.org/wiki/2026_Beninese_presidential_election"
   }
 ]

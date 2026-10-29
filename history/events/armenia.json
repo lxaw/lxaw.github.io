@@ -437,5 +437,18 @@
     "importance": 3,
     "description": "Armenia and Azerbaijan initial a peace agreement at a summit hosted by Donald Trump.",
     "source": "https://en.wikipedia.org/wiki/2025_Armenia–Azerbaijan_peace_agreement"
+  },
+  {
+    "id": "armenia-2026-parliamentary-election",
+    "title": "Pashinyan's party re-elected",
+    "date": "7 Jun 2026",
+    "year-from": 2026,
+    "place": "Yerevan",
+    "lat": 40.177,
+    "lon": 44.513,
+    "country": "Armenia",
+    "importance": 2,
+    "description": "Pashinyan's Civil Contract keeps its parliamentary majority but falls short of the two-thirds needed for the constitutional referendum Azerbaijan demands as part of the peace deal.",
+    "source": "https://en.wikipedia.org/wiki/2026_Armenian_parliamentary_election"
   }
 ]

@@ -606,5 +606,18 @@
     "importance": 1,
     "description": "Hamas-led gunmen kill about 1,200 people and take 251 hostages, the deadliest day in Israel's history; Israel goes to war in Gaza.",
     "source": "https://en.wikipedia.org/wiki/October_7_attacks"
+  },
+  {
+    "id": "israel-2026-election-of-2026",
+    "title": "Election of 2026",
+    "date": "27 Oct 2026",
+    "year-from": 2026,
+    "place": "Jerusalem",
+    "lat": 31.777,
+    "lon": 35.205,
+    "country": "Israel",
+    "importance": 3,
+    "description": "Israel elects the 26th Knesset, its first general election since the 7 October attack and the wars that followed.",
+    "source": "https://en.wikipedia.org/wiki/2026_Israeli_legislative_election"
   }
 ]

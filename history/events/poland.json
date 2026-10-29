@@ -557,5 +557,18 @@
     "importance": 3,
     "description": "Karol Nawrocki, backed by Law and Justice, narrowly wins the presidential run-off.",
     "source": "https://en.wikipedia.org/wiki/2025_Polish_presidential_election"
+  },
+  {
+    "id": "poland-2025-russian-drones-shot-down",
+    "title": "Russian drones shot down over Poland",
+    "date": "10 Sep 2025",
+    "year-from": 2025,
+    "place": "Lublin Voivodeship",
+    "lat": 51.25,
+    "lon": 22.9,
+    "country": "Poland",
+    "importance": 2,
+    "description": "More than 30 Russian drones cross into Poland overnight and several are shot down, the first time a NATO country downed Russian assets in its airspace during the war, and Poland invokes Article 4.",
+    "source": "https://en.wikipedia.org/wiki/2025_Russian_drone_incursion_into_Poland"
   }
 ]

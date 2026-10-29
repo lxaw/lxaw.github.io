@@ -363,5 +363,18 @@
     "importance": 3,
     "description": "Samia Suluhu Hassan takes office after the death of John Magufuli.",
     "source": "https://en.wikipedia.org/wiki/Samia_Suluhu_Hassan"
+  },
+  {
+    "id": "tanzania-2025-election-protests",
+    "title": "Election protests",
+    "date": "29 Oct 2025",
+    "year-from": 2025,
+    "place": "Dar es Salaam",
+    "lat": -6.79,
+    "lon": 39.21,
+    "country": "Tanzania",
+    "importance": 2,
+    "description": "Protests against an election marred by the suppression of opposition parties are met with live fire and an internet blackout, and hundreds are killed.",
+    "source": "https://en.wikipedia.org/wiki/2025_Tanzanian_election_protests"
   }
 ]

@@ -307,5 +307,18 @@
     "importance": 3,
     "description": "Soldiers and allied militia kill 21 civilians in the Anglophone North-West.",
     "source": "https://en.wikipedia.org/wiki/Ngarbuh_massacre"
+  },
+  {
+    "id": "cameroon-2025-biya-re-elected",
+    "title": "Biya re-elected at 92",
+    "date": "12 Oct 2025",
+    "year-from": 2025,
+    "place": "Yaoundé",
+    "lat": 3.848,
+    "lon": 11.502,
+    "country": "Cameroon",
+    "importance": 3,
+    "description": "Paul Biya, in power since 1982, wins another seven-year term at the age of 92, and the result sets off protests in several cities.",
+    "source": "https://en.wikipedia.org/wiki/2025_Cameroonian_presidential_election"
   }
 ]

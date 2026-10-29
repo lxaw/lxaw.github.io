@@ -418,5 +418,44 @@
     "importance": 2,
     "description": "Israel strikes Iran's nuclear sites and commanders, Iran fires missiles back, and the United States bombs Fordow before a ceasefire.",
     "source": "https://en.wikipedia.org/wiki/Twelve-Day_War"
+  },
+  {
+    "id": "iran-2026-protest-massacres",
+    "title": "Protest massacres",
+    "date": "8 Jan 2026",
+    "year-from": 2026,
+    "place": "Tehran",
+    "lat": 35.69,
+    "lon": 51.39,
+    "country": "Iran",
+    "importance": 2,
+    "description": "Security forces fire on nationwide protests over the economic crisis on 8 and 9 January, killing thousands; estimates run from about 7,000 to tens of thousands.",
+    "source": "https://en.wikipedia.org/wiki/2025–2026_Iranian_protests"
+  },
+  {
+    "id": "iran-2026-killing-of-ali-khamenei",
+    "title": "Killing of Ali Khamenei",
+    "date": "28 Feb 2026",
+    "year-from": 2026,
+    "place": "Tehran",
+    "lat": 35.69,
+    "lon": 51.42,
+    "country": "Iran",
+    "importance": 1,
+    "description": "American and Israeli air strikes open a war on Iran and kill the supreme leader, in power since 1989; his son Mojtaba is named his successor.",
+    "source": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei"
+  },
+  {
+    "id": "iran-2026-strait-of-hormuz-closed",
+    "title": "Strait of Hormuz closed",
+    "date": "4 Mar 2026",
+    "year-from": 2026,
+    "place": "Strait of Hormuz",
+    "lat": 26.57,
+    "lon": 56.25,
+    "country": "Iran",
+    "importance": 2,
+    "description": "Iran declares the strait closed and threatens to attack passing ships, cutting off a large share of the world's oil and gas exports.",
+    "source": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
   }
 ]

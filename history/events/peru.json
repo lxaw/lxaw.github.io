@@ -527,5 +527,18 @@
     "importance": 3,
     "description": "Congress removes Dina Boluarte for permanent moral incapacity.",
     "source": "https://en.wikipedia.org/wiki/Dina_Boluarte"
+  },
+  {
+    "id": "peru-2026-keiko-fujimori-elected",
+    "title": "Keiko Fujimori elected",
+    "date": "7 Jun 2026",
+    "year-from": 2026,
+    "place": "Lima",
+    "lat": -12.046,
+    "lon": -77.043,
+    "country": "Peru",
+    "importance": 2,
+    "description": "On her fourth attempt, Keiko Fujimori, daughter of Alberto Fujimori, wins the presidential runoff against Roberto Sánchez by about 50,000 votes.",
+    "source": "https://en.wikipedia.org/wiki/2026_Peruvian_general_election"
   }
 ]

@@ -361,5 +361,18 @@
     "importance": 3,
     "description": "The earliest category 5 Atlantic hurricane on record sweeps past the south coast.",
     "source": "https://en.wikipedia.org/wiki/Hurricane_Beryl"
+  },
+  {
+    "id": "jamaica-2025-hurricane-melissa",
+    "title": "Hurricane Melissa",
+    "date": "28 Oct 2025",
+    "year-from": 2025,
+    "place": "New Hope, Westmoreland",
+    "lat": 18.21,
+    "lon": -78.05,
+    "country": "Jamaica",
+    "importance": 2,
+    "description": "Melissa makes landfall as a Category 5 hurricane, the strongest ever to hit Jamaica, killing dozens and devastating the west of the island.",
+    "source": "https://en.wikipedia.org/wiki/Hurricane_Melissa"
   }
 ]

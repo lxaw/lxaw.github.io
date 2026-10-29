@@ -411,5 +411,18 @@
     "importance": 2,
     "description": "Gunmen storm a television studio live on air, and President Noboa declares an internal armed conflict against the gangs.",
     "source": "https://en.wikipedia.org/wiki/2024_Ecuadorian_conflict"
+  },
+  {
+    "id": "ecuador-2025-noboa-re-elected",
+    "title": "Noboa re-elected",
+    "date": "13 Apr 2025",
+    "year-from": 2025,
+    "place": "Quito",
+    "lat": -0.18,
+    "lon": -78.467,
+    "country": "Ecuador",
+    "importance": 3,
+    "description": "Daniel Noboa wins a full term in a runoff against Luisa González, on a platform of hard-line measures against the gangs.",
+    "source": "https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election"
   }
 ]

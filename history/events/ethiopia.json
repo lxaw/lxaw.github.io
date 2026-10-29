@@ -493,5 +493,31 @@
     "importance": 3,
     "description": "Africa's largest hydroelectric dam opens on the Blue Nile, over Egypt's objections.",
     "source": "https://en.wikipedia.org/wiki/Grand_Ethiopian_Renaissance_Dam"
+  },
+  {
+    "id": "ethiopia-2026-prosperity-party-wins-the-general-election",
+    "title": "Prosperity Party wins the general election",
+    "date": "1 Jun 2026",
+    "year-from": 2026,
+    "place": "Addis Ababa",
+    "lat": 9.03,
+    "lon": 38.74,
+    "country": "Ethiopia",
+    "importance": 3,
+    "description": "Abiy Ahmed's Prosperity Party wins 438 of 547 seats in a general election held while conflict continues in Amhara and Oromia.",
+    "source": "https://en.wikipedia.org/wiki/2026_Ethiopian_general_election"
+  },
+  {
+    "id": "ethiopia-2026-government-forces-retake-mekelle",
+    "title": "Government forces retake Mekelle",
+    "date": "Oct 2026",
+    "year-from": 2026,
+    "place": "Mekelle",
+    "lat": 13.5,
+    "lon": 39.48,
+    "country": "Ethiopia",
+    "importance": 2,
+    "description": "Renewed war in Tigray ends the 2022 truce, and the federal army enters the regional capital as TPLF-led rebels withdraw.",
+    "source": "https://en.wikipedia.org/wiki/2026_Ethiopian_offensive"
   }
 ]

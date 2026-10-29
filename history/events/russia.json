@@ -1134,6 +1134,19 @@
     "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup"
   },
   {
+    "id": "russia-2020-poisoning-of-alexei-navalny",
+    "title": "Navalny poisoned",
+    "date": "20 Aug 2020",
+    "year-from": 2020,
+    "place": "Omsk",
+    "lat": 54.985,
+    "lon": 73.368,
+    "country": "Russia",
+    "importance": 2,
+    "description": "The opposition leader Alexei Navalny collapses on a flight from Tomsk after being poisoned with the nerve agent Novichok and is flown to Berlin for treatment.",
+    "source": "https://en.wikipedia.org/wiki/Poisoning_of_Alexei_Navalny"
+  },
+  {
     "id": "russia-2022-annexation-of-four-ukrainian-regions",
     "title": "Annexation of four Ukrainian regions",
     "date": "30 Sep 2022",
@@ -1145,6 +1158,19 @@
     "importance": 2,
     "description": "After staged referendums, Russia claims to annex the Donetsk, Luhansk, Zaporizhzhia and Kherson regions; almost no country recognises it.",
     "source": "https://en.wikipedia.org/wiki/Russian_annexation_of_Donetsk,_Kherson,_Luhansk_and_Zaporizhzhia_oblasts"
+  },
+  {
+    "id": "russia-2022-partial-mobilization",
+    "title": "Partial mobilization",
+    "date": "21 Sep 2022",
+    "year-from": 2022,
+    "place": "Moscow",
+    "lat": 55.756,
+    "lon": 37.617,
+    "country": "Russia",
+    "importance": 2,
+    "description": "Putin orders a partial mobilization of reservists for the war in Ukraine, and many Russian men leave the country to avoid the draft.",
+    "source": "https://en.wikipedia.org/wiki/2022_Russian_mobilization"
   },
   {
     "id": "russia-2023-wagner-group-mutiny",
@@ -1184,5 +1210,18 @@
     "importance": 3,
     "description": "Gunmen of the Islamic State's Khorasan branch kill 145 people at a concert hall outside Moscow.",
     "source": "https://en.wikipedia.org/wiki/Crocus_City_Hall_attack"
+  },
+  {
+    "id": "russia-2026-duma-election",
+    "title": "Duma election of 2026",
+    "date": "Sep 2026",
+    "year-from": 2026,
+    "place": "Moscow",
+    "lat": 55.756,
+    "lon": 37.617,
+    "country": "Russia",
+    "importance": 3,
+    "description": "United Russia wins more than three quarters of the State Duma's seats in an election that Russia also holds for the first time in the Ukrainian regions it occupied in 2022.",
+    "source": "https://en.wikipedia.org/wiki/2026_Russian_legislative_election"
   }
 ]

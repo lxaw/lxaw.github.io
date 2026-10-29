@@ -421,5 +421,18 @@
     "importance": 3,
     "description": "Wildfires kill about 90 people in Kabylie.",
     "source": "https://en.wikipedia.org/wiki/2021_Algeria_wildfires"
+  },
+  {
+    "id": "algeria-2026-first-papal-visit",
+    "title": "First papal visit",
+    "date": "13 Apr 2026",
+    "year-from": 2026,
+    "place": "Algiers",
+    "lat": 36.754,
+    "lon": 3.059,
+    "country": "Algeria",
+    "importance": 3,
+    "description": "Pope Leo XIV, an Augustinian, makes the first papal visit to Algeria and goes on to Annaba, the ancient Hippo of Saint Augustine.",
+    "source": "https://en.wikipedia.org/wiki/2026_in_Algeria"
   }
 ]

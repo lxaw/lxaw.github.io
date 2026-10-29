@@ -332,5 +332,18 @@
     "importance": 3,
     "description": "Jihadists kill hundreds of villagers ordered to dig trenches around the town.",
     "source": "https://en.wikipedia.org/wiki/Barsalogho_massacre"
+  },
+  {
+    "id": "burkina-faso-2026-political-parties-dissolved",
+    "title": "Political parties dissolved",
+    "date": "29 Jan 2026",
+    "year-from": 2026,
+    "place": "Ouagadougou",
+    "lat": 12.371,
+    "lon": -1.52,
+    "country": "Burkina Faso",
+    "importance": 3,
+    "description": "The military government dissolves every political party and hands their assets to the state, ending legal party politics under the junta.",
+    "source": "https://en.wikipedia.org/wiki/2026_in_Burkina_Faso"
   }
 ]

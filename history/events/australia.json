@@ -553,5 +553,18 @@
     "importance": 3,
     "description": "Voters reject a constitutional Indigenous Voice to Parliament in every state.",
     "source": "https://en.wikipedia.org/wiki/2023_Australian_Indigenous_Voice_referendum"
+  },
+  {
+    "id": "australia-2025-bondi-beach-shooting",
+    "title": "Bondi Beach shooting",
+    "date": "14 Dec 2025",
+    "year-from": 2025,
+    "place": "Bondi Beach, Sydney",
+    "lat": -33.891,
+    "lon": 151.277,
+    "country": "Australia",
+    "importance": 2,
+    "description": "Two gunmen kill 15 people at a Hanukkah celebration in an antisemitic attack inspired by the Islamic State.",
+    "source": "https://en.wikipedia.org/wiki/Bondi_Beach_shooting"
   }
 ]

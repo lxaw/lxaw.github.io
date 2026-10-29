@@ -372,5 +372,18 @@
     "importance": 3,
     "description": "One of the world's harshest anti-gay laws, including the death penalty in some cases, is signed.",
     "source": "https://en.wikipedia.org/wiki/Anti-Homosexuality_Act,_2023"
+  },
+  {
+    "id": "uganda-2026-museveni-wins-a-seventh-term",
+    "title": "Museveni wins a seventh term",
+    "date": "15 Jan 2026",
+    "year-from": 2026,
+    "place": "Kampala",
+    "lat": 0.35,
+    "lon": 32.58,
+    "country": "Uganda",
+    "importance": 3,
+    "description": "Yoweri Museveni, in power since 1986, is declared winner of the general election with about 72 percent; Bobi Wine rejects the result.",
+    "source": "https://en.wikipedia.org/wiki/2026_Ugandan_general_election"
   }
 ]

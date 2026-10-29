@@ -442,5 +442,18 @@
     "importance": 2,
     "description": "Former president Rodrigo Duterte is arrested on an International Criminal Court warrant over his drug war.",
     "source": "https://en.wikipedia.org/wiki/Arrest_of_Rodrigo_Duterte"
+  },
+  {
+    "id": "philippines-2026-sarangani-earthquake",
+    "title": "Sarangani earthquake",
+    "date": "8 Jun 2026",
+    "year-from": 2026,
+    "place": "Off Maasim, Sarangani",
+    "lat": 5.57,
+    "lon": 124.98,
+    "country": "Philippines",
+    "importance": 3,
+    "description": "A magnitude 7.8 earthquake off southern Mindanao raises a small tsunami and kills more than a hundred people.",
+    "source": "https://en.wikipedia.org/wiki/2026_Sarangani_earthquake"
   }
 ]

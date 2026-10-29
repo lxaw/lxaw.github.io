@@ -435,5 +435,18 @@
     "importance": 3,
     "description": "Bola Tinubu wins a disputed presidential election and soon ends the fuel subsidy.",
     "source": "https://en.wikipedia.org/wiki/2023_Nigerian_presidential_election"
+  },
+  {
+    "id": "nigeria-2026-kwara-state-attacks",
+    "title": "Woro and Nuku massacre",
+    "date": "3 Feb 2026",
+    "year-from": 2026,
+    "place": "Woro, Kaiama, Kwara State",
+    "lat": 9.6,
+    "lon": 3.94,
+    "country": "Nigeria",
+    "importance": 3,
+    "description": "Hundreds of jihadist gunmen attack two villages near the Beninese border and kill at least 162 people, among the deadliest attacks in Nigeria's insurgency.",
+    "source": "https://en.wikipedia.org/wiki/2026_Kwara_State_attacks"
   }
 ]

@@ -460,5 +460,18 @@
     "importance": 2,
     "description": "Student-led protests over job quotas force Hasina to flee to India after 15 years in power; Muhammad Yunus leads an interim government.",
     "source": "https://en.wikipedia.org/wiki/Resignation_of_Sheikh_Hasina"
+  },
+  {
+    "id": "bangladesh-2026-bnp-wins-the-general-election",
+    "title": "BNP wins the general election",
+    "date": "12 Feb 2026",
+    "year-from": 2026,
+    "place": "Dhaka",
+    "lat": 23.8103,
+    "lon": 90.4125,
+    "country": "Bangladesh",
+    "importance": 2,
+    "description": "The first election after the fall of Sheikh Hasina gives the Bangladesh Nationalist Party a two-thirds majority, and Tarique Rahman becomes prime minister.",
+    "source": "https://en.wikipedia.org/wiki/2026_Bangladeshi_general_election"
   }
 ]

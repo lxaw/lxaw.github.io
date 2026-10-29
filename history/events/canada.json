@@ -592,5 +592,44 @@
     "importance": 3,
     "description": "Mark Carney succeeds Justin Trudeau and goes on to win the April election amid Trump's tariffs and annexation talk.",
     "source": "https://en.wikipedia.org/wiki/Mark_Carney"
+  },
+  {
+    "id": "canada-2026-tumbler-ridge-shooting",
+    "title": "Tumbler Ridge shooting",
+    "date": "10 Feb 2026",
+    "year-from": 2026,
+    "place": "Tumbler Ridge, British Columbia",
+    "lat": 55.13,
+    "lon": -120.99,
+    "country": "Canada",
+    "importance": 3,
+    "description": "A shooter kills eight people at a home and a school in a small town, the deadliest school shooting in Canada since 1989.",
+    "source": "https://en.wikipedia.org/wiki/2026_Tumbler_Ridge_shooting"
+  },
+  {
+    "id": "canada-2026-parti-quebecois-returns-to-power",
+    "title": "Parti Québécois returns to power",
+    "date": "5 Oct 2026",
+    "year-from": 2026,
+    "place": "Quebec City",
+    "lat": 46.809,
+    "lon": -71.214,
+    "country": "Canada",
+    "importance": 3,
+    "description": "The sovereigntist Parti Québécois wins the most seats in Quebec's election, though short of a majority, and its leader becomes premier.",
+    "source": "https://en.wikipedia.org/wiki/2026_Quebec_general_election"
+  },
+  {
+    "id": "canada-2026-alberta-rejects-independence",
+    "title": "Alberta rejects independence",
+    "date": "19 Oct 2026",
+    "year-from": 2026,
+    "place": "Edmonton",
+    "lat": 53.546,
+    "lon": -113.49,
+    "country": "Canada",
+    "importance": 2,
+    "description": "About three quarters of Alberta voters choose to remain in Canada in a provincial referendum on separation.",
+    "source": "https://en.wikipedia.org/wiki/2026_Alberta_referendum"
   }
 ]

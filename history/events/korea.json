@@ -577,5 +577,18 @@
     "importance": 3,
     "description": "The opposition leader wins the snap election called after Yoon's removal.",
     "source": "https://en.wikipedia.org/wiki/2025_South_Korean_presidential_election"
+  },
+  {
+    "id": "korea-2026-yoon-sentenced-to-life-for-insurrection",
+    "title": "Yoon sentenced to life for insurrection",
+    "date": "19 Feb 2026",
+    "year-from": 2026,
+    "place": "Seoul",
+    "lat": 37.493,
+    "lon": 127.007,
+    "country": "Korea",
+    "importance": 2,
+    "description": "A Seoul court convicts former president Yoon Suk Yeol of leading an insurrection through his 2024 martial law decree and sentences him to life in prison.",
+    "source": "https://en.wikipedia.org/wiki/Yoon_Suk_Yeol"
   }
 ]

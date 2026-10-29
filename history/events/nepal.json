@@ -410,5 +410,18 @@
     "importance": 3,
     "description": "The former chief justice Sushila Karki leads an interim government.",
     "source": "https://en.wikipedia.org/wiki/Sushila_Karki"
+  },
+  {
+    "id": "nepal-2026-rsp-landslide-and-balen-shah",
+    "title": "RSP landslide; Balen Shah prime minister",
+    "date": "5 Mar 2026",
+    "year-from": 2026,
+    "place": "Kathmandu",
+    "lat": 27.7172,
+    "lon": 85.324,
+    "country": "Nepal",
+    "importance": 2,
+    "description": "The first election after the Gen Z protests gives the Rastriya Swatantra Party 182 of 275 seats, and former Kathmandu mayor Balen Shah becomes prime minister on 27 March.",
+    "source": "https://en.wikipedia.org/wiki/2026_Nepalese_general_election"
   }
 ]

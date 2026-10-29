@@ -472,5 +472,18 @@
     "importance": 3,
     "description": "Five days of fighting on the disputed border kill dozens and displace hundreds of thousands before a ceasefire.",
     "source": "https://en.wikipedia.org/wiki/2025_Cambodia–Thailand_conflict"
+  },
+  {
+    "id": "thailand-2026-bhumjaithai-wins-the-general-election",
+    "title": "Bhumjaithai wins the general election",
+    "date": "8 Feb 2026",
+    "year-from": 2026,
+    "place": "Bangkok",
+    "lat": 13.7563,
+    "lon": 100.5018,
+    "country": "Thailand",
+    "importance": 3,
+    "description": "Anutin Charnvirakul's Bhumjaithai Party wins the most seats and he is re-elected prime minister in coalition with Pheu Thai.",
+    "source": "https://en.wikipedia.org/wiki/2026_Thai_general_election"
   }
 ]

@@ -455,5 +455,18 @@
     "importance": 3,
     "description": "A tanker of Russia's shadow fleet is suspected of dragging its anchor across the power cable to Finland.",
     "source": "https://en.wikipedia.org/wiki/2024_Estlink_2_incident"
+  },
+  {
+    "id": "estonia-2026-madise-elected-president",
+    "title": "Madise elected president",
+    "date": "2 Sep 2026",
+    "year-from": 2026,
+    "place": "Tallinn",
+    "lat": 59.4355,
+    "lon": 24.739,
+    "country": "Estonia",
+    "importance": 3,
+    "description": "The Riigikogu elects Ülle Madise as president in the first round, after Alar Karis declines to seek a second term.",
+    "source": "https://en.wikipedia.org/wiki/2026_Estonian_presidential_election"
   }
 ]

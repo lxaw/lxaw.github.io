@@ -479,5 +479,44 @@
     "importance": 3,
     "description": "The whole grid of Spain and Portugal goes down for most of a day.",
     "source": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout"
+  },
+  {
+    "id": "spain-2026-adamuz-rail-disaster",
+    "title": "Adamuz rail disaster",
+    "date": "18 Jan 2026",
+    "year-from": 2026,
+    "place": "Adamuz, Córdoba",
+    "lat": 37.99,
+    "lon": -4.52,
+    "country": "Spain",
+    "importance": 2,
+    "description": "A high-speed train derails on the Madrid–Seville line and is struck by an oncoming train, killing 46 people.",
+    "source": "https://en.wikipedia.org/wiki/2026_Adamuz_rail_disaster"
+  },
+  {
+    "id": "spain-2026-ceuta-migrant-crisis",
+    "title": "Ceuta migrant crisis",
+    "date": "30 Jul 2026",
+    "year-from": 2026,
+    "place": "Ceuta",
+    "lat": 35.889,
+    "lon": -5.32,
+    "country": "Spain",
+    "importance": 2,
+    "description": "Tens of thousands of migrants cross from Morocco into the Spanish enclave within hours, and many die around the border.",
+    "source": "https://en.wikipedia.org/wiki/2026_Ceuta_migrant_crisis"
+  },
+  {
+    "id": "spain-2026-toledo-train-collision",
+    "title": "Toledo train collision",
+    "date": "28 Oct 2026",
+    "year-from": 2026,
+    "place": "Los Yébenes, Toledo",
+    "lat": 39.58,
+    "lon": -3.87,
+    "country": "Spain",
+    "importance": 2,
+    "description": "An Iryo high-speed train runs into a stationary AVE train on the Madrid–Seville line, killing at least 68 people in Spain's second rail disaster of the year.",
+    "source": "https://en.wikipedia.org/wiki/2026_Toledo_train_collision"
   }
 ]

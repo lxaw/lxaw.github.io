@@ -516,5 +516,18 @@
     "importance": 3,
     "description": "The Taliban suspend university education for women, after closing girls' secondary schools.",
     "source": "https://en.wikipedia.org/wiki/Women's_rights_in_Afghanistan"
+  },
+  {
+    "id": "afghanistan-2026-open-war-with-pakistan",
+    "title": "Open war with Pakistan",
+    "date": "26 Feb 2026",
+    "year-from": 2026,
+    "place": "Kabul",
+    "lat": 34.5553,
+    "lon": 69.2075,
+    "country": "Afghanistan",
+    "importance": 2,
+    "description": "After border fighting with the Taliban, Pakistan strikes Kabul and Kandahar and its defence minister declares open war, the most sustained conflict between the two states.",
+    "source": "https://en.wikipedia.org/wiki/2026_Afghanistan–Pakistan_war"
   }
 ]

@@ -280,5 +280,18 @@
     "importance": 3,
     "description": "Gunmen attack the government palace during a cabinet meeting and are repelled.",
     "source": "https://en.wikipedia.org/wiki/2022_Guinea-Bissau_coup_attempt"
+  },
+  {
+    "id": "guinea-bissau-2025-coup",
+    "title": "Coup of 2025",
+    "date": "26 Nov 2025",
+    "year-from": 2025,
+    "place": "Bissau",
+    "lat": 11.863,
+    "lon": -15.598,
+    "country": "Guinea-Bissau",
+    "importance": 3,
+    "description": "Officers arrest President Umaro Sissoco Embaló and seize power a day before the results of the general election were due.",
+    "source": "https://en.wikipedia.org/wiki/2025_Guinea-Bissau_coup_d'état"
   }
 ]

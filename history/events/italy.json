@@ -626,5 +626,18 @@
     "importance": 2,
     "description": "Robert Prevost becomes Leo XIV, the first pope from the United States, after the death of Pope Francis.",
     "source": "https://en.wikipedia.org/wiki/2025_papal_conclave"
+  },
+  {
+    "id": "italy-2026-milan-cortina-winter-olympics",
+    "title": "Milan–Cortina Winter Olympics",
+    "date": "6 Feb 2026",
+    "year-from": 2026,
+    "place": "Milan",
+    "lat": 45.478,
+    "lon": 9.124,
+    "country": "Italy",
+    "importance": 2,
+    "description": "The Winter Olympics open at San Siro, with events held across Lombardy and at Cortina d'Ampezzo until 22 February.",
+    "source": "https://en.wikipedia.org/wiki/2026_Winter_Olympics"
   }
 ]

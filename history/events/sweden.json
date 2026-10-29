@@ -562,5 +562,18 @@
     "importance": 3,
     "description": "A gunman kills ten people at an adult education centre, the deadliest mass shooting in Swedish history.",
     "source": "https://en.wikipedia.org/wiki/Örebro_school_shooting"
+  },
+  {
+    "id": "sweden-2026-centre-left-wins-the-election",
+    "title": "Centre-left wins the election",
+    "date": "13 Sep 2026",
+    "year-from": 2026,
+    "place": "Stockholm",
+    "lat": 59.33,
+    "lon": 18.07,
+    "country": "Sweden",
+    "importance": 3,
+    "description": "The opposition parties win 176 of the Riksdag's 349 seats, and Prime Minister Ulf Kristersson announces his resignation.",
+    "source": "https://en.wikipedia.org/wiki/2026_Swedish_general_election"
   }
 ]

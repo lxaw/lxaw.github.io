@@ -373,5 +373,18 @@
     "importance": 3,
     "description": "The military governments of Mali, Burkina Faso and Niger form a defence pact, and later leave ECOWAS together.",
     "source": "https://en.wikipedia.org/wiki/Alliance_of_Sahel_States"
+  },
+  {
+    "id": "mali-2026-coordinated-jihadist-and-rebel-offensive",
+    "title": "Coordinated jihadist and rebel offensive",
+    "date": "25 Apr 2026",
+    "year-from": 2026,
+    "place": "Kati",
+    "lat": 12.744,
+    "lon": -8.074,
+    "country": "Mali",
+    "importance": 2,
+    "description": "JNIM and the Tuareg Azawad Liberation Front strike across Mali, killing Defence Minister Sadio Camara at Kati and forcing the army and its Russian allies out of Kidal and other northern towns.",
+    "source": "https://en.wikipedia.org/wiki/2026_Mali_attacks"
   }
 ]

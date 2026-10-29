@@ -353,5 +353,18 @@
     "importance": 3,
     "description": "The former World Bank economist Rodrigo Chaves wins the run-off, weeks after a ransomware attack crippled government systems.",
     "source": "https://en.wikipedia.org/wiki/2022_Costa_Rican_general_election"
+  },
+  {
+    "id": "costa-rica-2026-fernandez-elected",
+    "title": "Fernández elected",
+    "date": "1 Feb 2026",
+    "year-from": 2026,
+    "place": "San José",
+    "lat": 9.933,
+    "lon": -84.083,
+    "country": "Costa Rica",
+    "importance": 3,
+    "description": "Laura Fernández, the chosen successor of Rodrigo Chaves, wins the presidency in the first round and her party takes a majority in the legislature.",
+    "source": "https://en.wikipedia.org/wiki/2026_Costa_Rican_general_election"
   }
 ]

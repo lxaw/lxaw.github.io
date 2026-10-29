@@ -430,5 +430,18 @@
     "importance": 3,
     "description": "Edgars Rinkēvičs becomes the first openly gay head of state in the European Union.",
     "source": "https://en.wikipedia.org/wiki/Edgars_Rinkēvičs"
+  },
+  {
+    "id": "latvia-2026-united-list-wins-election",
+    "title": "United List wins the election",
+    "date": "3 Oct 2026",
+    "year-from": 2026,
+    "place": "Riga",
+    "lat": 56.951,
+    "lon": 24.111,
+    "country": "Latvia",
+    "importance": 3,
+    "description": "The United List wins 41 of 100 Saeima seats, the most of any party since independence was restored, on the lowest turnout in Latvian history.",
+    "source": "https://en.wikipedia.org/wiki/2026_Latvian_parliamentary_election"
   }
 ]

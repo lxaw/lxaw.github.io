@@ -1025,5 +1025,31 @@
     "importance": 2,
     "description": "Sanae Takaichi becomes Japan's first woman prime minister.",
     "source": "https://en.wikipedia.org/wiki/Sanae_Takaichi"
+  },
+  {
+    "id": "japan-2026-ldp-landslide-in-snap-election",
+    "title": "LDP landslide in snap election",
+    "date": "8 Feb 2026",
+    "year-from": 2026,
+    "place": "Tokyo",
+    "lat": 35.676,
+    "lon": 139.745,
+    "country": "Japan",
+    "importance": 2,
+    "description": "Takaichi's Liberal Democrats win 316 of 465 seats, a postwar record and a two-thirds majority for one party on its own.",
+    "source": "https://en.wikipedia.org/wiki/2026_Japanese_general_election"
+  },
+  {
+    "id": "japan-2026-kumamoto-earthquake",
+    "title": "Kumamoto earthquake",
+    "date": "28 Jul 2026",
+    "year-from": 2026,
+    "place": "Uki",
+    "lat": 32.682,
+    "lon": 130.722,
+    "country": "Japan",
+    "importance": 3,
+    "description": "A shallow earthquake strikes Kumamoto Prefecture on Kyushu, killing at least 38 people and injuring hundreds.",
+    "source": "https://en.wikipedia.org/wiki/2026_Kumamoto_earthquake"
   }
 ]

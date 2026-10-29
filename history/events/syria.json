@@ -476,5 +476,18 @@
     "importance": 3,
     "description": "Government forces and allied fighters kill well over a thousand civilians, most of them Alawites, after an insurgent attack on the coast.",
     "source": "https://en.wikipedia.org/wiki/March_2025_Western_Syria_clashes"
+  },
+  {
+    "id": "syria-2026-offensive-in-the-north-east",
+    "title": "Offensive in the north-east",
+    "date": "13 Jan 2026",
+    "year-from": 2026,
+    "place": "Raqqa",
+    "lat": 35.95,
+    "lon": 39.01,
+    "country": "Syria",
+    "importance": 3,
+    "description": "Government forces attack the Kurdish-led SDF and take Raqqa and Deir ez-Zor, ending the SDF's decade-long rule over most of the north-east.",
+    "source": "https://en.wikipedia.org/wiki/2026_northeastern_Syria_offensive"
   }
 ]

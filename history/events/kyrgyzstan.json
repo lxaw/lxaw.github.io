@@ -361,5 +361,18 @@
     "importance": 3,
     "description": "Fighting on the disputed border kills about a hundred people; a border treaty follows in 2025.",
     "source": "https://en.wikipedia.org/wiki/2022_Kyrgyzstan–Tajikistan_clashes"
+  },
+  {
+    "id": "kyrgyzstan-2026-tashiev-dismissed",
+    "title": "Security chief Tashiev dismissed",
+    "date": "Feb 2026",
+    "year-from": 2026,
+    "place": "Bishkek",
+    "lat": 42.875,
+    "lon": 74.6,
+    "country": "Kyrgyzstan",
+    "importance": 3,
+    "description": "President Japarov dismisses Kamchybek Tashiev, his long-time partner and head of the security service, who is charged in April with plotting a seizure of power.",
+    "source": "https://en.wikipedia.org/wiki/Kamchybek_Tashiev"
   }
 ]

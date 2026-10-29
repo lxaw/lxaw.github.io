@@ -521,5 +521,18 @@
     "importance": 3,
     "description": "The mayor of Bucharest defeats the far-right George Simion in the re-run election.",
     "source": "https://en.wikipedia.org/wiki/2025_Romanian_presidential_election"
+  },
+  {
+    "id": "romania-2026-bolojan-government-toppled",
+    "title": "Bolojan government toppled",
+    "date": "5 May 2026",
+    "year-from": 2026,
+    "place": "Bucharest",
+    "lat": 44.4275,
+    "lon": 26.0875,
+    "country": "Romania",
+    "importance": 3,
+    "description": "Parliament passes a no-confidence motion against Prime Minister Ilie Bolojan by the largest vote since 1989, opening a five-month government crisis.",
+    "source": "https://en.wikipedia.org/wiki/2026_Romanian_political_crisis"
   }
 ]

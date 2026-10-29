@@ -15,131 +15,131 @@ Counts come from `python check_events.py`; update this table after each batch.
 
 | Country | Events | Years covered | Status | Notes |
 | --- | ---: | --- | --- | --- |
-| Turkey | 68 | 1048 to 2025 | seeded | Seljuks of Rum, the Ottoman Empire and the republic, with the Balkan Wars and the Kurdish conflict. Has an example article. Manzikert (1071) is in the Greece file; Montenegro opening the Balkan Wars (1912) is in the Montenegro file. |
-| Japan | 78 | 14000 BCE to 2025 | seeded | Jōmon to Yamato added 2026-10-16. The Daisen Kofun ("mid-5th century") fails the source script and stands. |
-| China | 92 | 3300 BCE to 2022 | seeded | Koxinga is in the Taiwan file. The Sanxingdui pits ("12th–11th centuries BC") fail the source script and stand. The Uyghur move west (840) is in the Mongolia file. |
-| Germany | 76 | 9 to 2025 | seeded | Königgrätz (1866) is in the Austria file; the Nuremberg Laws and Kristallnacht are in the Israel file; Legnano (1176) in the Italy file. |
-| Russia | 86 | 862 to 2024 | seeded | Dates before 1918 are New Style unless marked. Russian conquests in Central Asia are in the Central Asian files; the Treaty of Georgievsk is in the Georgia file. Oleg's move to Kyiv (882) and St Sophia Kyiv (1037) are in the Ukraine file. Nicholas II's abdication is cut back to "Mar 1917": the page gives both calendar dates only in a form the source script cannot match. |
+| Turkey | 69 | 1048 to 2025 | seeded | Seljuks of Rum, the Ottoman Empire and the republic, with the Balkan Wars and the Kurdish conflict. Has an example article. Manzikert (1071) is in the Greece file; Montenegro opening the Balkan Wars (1912) is in the Montenegro file. |
+| Japan | 80 | 14000 BCE to 2026 | seeded | Jōmon to Yamato added 2026-10-16. The Daisen Kofun ("mid-5th century") fails the source script and stands. |
+| China | 96 | 3300 BCE to 2026 | seeded | Koxinga is in the Taiwan file. The Sanxingdui pits ("12th–11th centuries BC") fail the source script and stand. The Uyghur move west (840) is in the Mongolia file. |
+| Germany | 77 | 9 to 2026 | seeded | Königgrätz (1866) is in the Austria file; the Nuremberg Laws and Kristallnacht are in the Israel file; Legnano (1176) in the Italy file. |
+| Russia | 89 | 862 to 2026 | seeded | Dates before 1918 are New Style unless marked. Russian conquests in Central Asia are in the Central Asian files; the Treaty of Georgievsk is in the Georgia file. Oleg's move to Kyiv (882) and St Sophia Kyiv (1037) are in the Ukraine file. Nicholas II's abdication is cut back to "Mar 1917": the page gives both calendar dates only in a form the source script cannot match. |
 | Austria | 31 | 976 to 2025 | seeded | The sieges of Vienna (1529, 1683) are in the Turkey file. |
-| Switzerland | 23 | 1291 to 2025 | seeded | The Peace of Westphalia (1648) is in the Germany file. |
+| Switzerland | 24 | 1291 to 2026 | seeded | The Peace of Westphalia (1648) is in the Germany file. |
 | Finland | 35 | 1249 to 2024 | seeded | |
-| Israel | 46 | 1000 BCE to 2023 | seeded | Includes Jewish history outside the land (expulsions, emancipation, the Holocaust). Biblical dates are marked traditional. |
-| Italy | 46 | 753 BCE to 2025 | seeded | Rome, Venice and united Italy. Charlemagne's coronation (800) is in the Germany file, Lepanto in the Turkey file. |
-| United States | 61 | 1100 to 2025 | seeded | Little on the West after 1848. |
-| United Kingdom | 53 | 43 to 2024 | seeded | Some Scotland and Wales since 2026-10-16; little on Ireland or the empire (the East India Company and Plassey are in the India file). |
+| Israel | 47 | 1000 BCE to 2026 | seeded | Includes Jewish history outside the land (expulsions, emancipation, the Holocaust). Biblical dates are marked traditional. |
+| Italy | 47 | 753 BCE to 2026 | seeded | Rome, Venice and united Italy. Charlemagne's coronation (800) is in the Germany file, Lepanto in the Turkey file. |
+| United States | 68 | 1100 to 2026 | seeded | Little on the West after 1848. |
+| United Kingdom | 54 | 43 to 2026 | seeded | Some Scotland and Wales since 2026-10-16; little on Ireland or the empire (the East India Company and Plassey are in the India file). |
 | France | 44 | 52 BCE to 2025 | seeded | Waterloo is in the United Kingdom file, Borodino in the Russia file. |
-| Korea | 43 | 2333 BCE to 2025 | seeded | Both Koreas after 1948. Thin on the Three Kingdoms. |
-| India | 46 | 2600 BCE to 2025 | seeded | Thin on the south and on the centuries between the Guptas and 1192. |
-| Spain | 36 | 218 BCE to 2025 | seeded | The conquest of Mexico and Peru is left for those countries' files. |
-| Portugal | 26 | 1143 to 2025 | seeded | Vasco da Gama's voyage is in the India file. |
-| Netherlands | 29 | 1568 to 2025 | seeded | Nothing before the revolt against Spain. |
+| Korea | 44 | 2333 BCE to 2026 | seeded | Both Koreas after 1948. Thin on the Three Kingdoms. |
+| India | 48 | 2600 BCE to 2026 | seeded | Thin on the south and on the centuries between the Guptas and 1192. |
+| Spain | 39 | 218 BCE to 2026 | seeded | The conquest of Mexico and Peru is left for those countries' files. |
+| Portugal | 27 | 1143 to 2026 | seeded | Vasco da Gama's voyage is in the India file. |
+| Netherlands | 30 | 1568 to 2026 | seeded | Nothing before the revolt against Spain. |
 | Greece | 36 | 1600 BCE to 2024 | seeded | Includes the Byzantine centuries; 1204 is in the Italy file and 1453 in the Turkey file. |
 | Egypt | 31 | 3100 BCE to 2022 | seeded | The 1973 war and the peace with Israel are in the Israel file. |
-| Iran | 31 | 550 BCE to 2025 | seeded | Chaldiran (1514) is in the Turkey file. |
-| Taiwan | 29 | 1624 to 2024 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
-| Mexico | 31 | 1200 BCE to 2025 | seeded | Thin on the Maya and on the colonial centuries. San Jacinto (1836) and the fall of Mexico City (1847) are here, not in the United States file. |
-| Brazil | 26 | 1532 to 2025 | seeded | Nothing before the Portuguese settlement. Cabral's landing (1500) is in the Portugal file. |
-| Poland | 41 | 966 to 2025 | seeded | Poltava-era and 1612 events are in the Russia file, the siege of Vienna (1683) in the Turkey file, the 1939 invasion in the Germany file, the Warsaw Ghetto Uprising and Auschwitz in the Israel file. Little on Lithuania or Ukraine. |
-| Sweden | 43 | 829 to 2025 | seeded | Poltava (1709) is in the Russia file; Nystad (1721) and the loss of Finland (1809) are in the Finland file. Dates before 1753 are Old Style where marked. Nothing on the Viking Age beyond Birka. |
+| Iran | 34 | 550 BCE to 2026 | seeded | Chaldiran (1514) is in the Turkey file. |
+| Taiwan | 30 | 1624 to 2025 | seeded | Nothing before the Dutch. Dates checked against the source page's text by script. |
+| Mexico | 32 | 1200 BCE to 2026 | seeded | Thin on the Maya and on the colonial centuries. San Jacinto (1836) and the fall of Mexico City (1847) are here, not in the United States file. |
+| Brazil | 27 | 1532 to 2026 | seeded | Nothing before the Portuguese settlement. Cabral's landing (1500) is in the Portugal file. |
+| Poland | 42 | 966 to 2025 | seeded | Poltava-era and 1612 events are in the Russia file, the siege of Vienna (1683) in the Turkey file, the 1939 invasion in the Germany file, the Warsaw Ghetto Uprising and Auschwitz in the Israel file. Little on Lithuania or Ukraine. |
+| Sweden | 44 | 829 to 2026 | seeded | Poltava (1709) is in the Russia file; Nystad (1721) and the loss of Finland (1809) are in the Finland file. Dates before 1753 are Old Style where marked. Nothing on the Viking Age beyond Birka. |
 | Ireland | 39 | 432 to 2024 | seeded | The whole island, so the Troubles are here. The Union (1801), the Anglo-Irish Treaty (1921) and the Good Friday Agreement (1998) are in the United Kingdom file. |
-| Vietnam | 39 | 111 BCE to 2024 | seeded | Dien Bien Phu (1954) is in the France file. Thin on Champa, the Khmer south and the centuries of Chinese rule. |
-| Indonesia | 40 | 683 to 2024 | seeded | Batavia (1619) and the transfer of sovereignty (1949) are in the Netherlands file, Malacca (1511) in the Portugal file. Mostly Java and Sumatra. |
-| Ethiopia | 36 | 330 to 2025 | seeded | Adwa (1896) is in the Italy file. Includes Eritrea up to 1993. Dates before 1270 are approximate or traditional. |
+| Vietnam | 40 | 111 BCE to 2026 | seeded | Dien Bien Phu (1954) is in the France file. Thin on Champa, the Khmer south and the centuries of Chinese rule. |
+| Indonesia | 41 | 683 to 2026 | seeded | Batavia (1619) and the transfer of sovereignty (1949) are in the Netherlands file, Malacca (1511) in the Portugal file. Mostly Java and Sumatra. |
+| Ethiopia | 38 | 330 to 2026 | seeded | Adwa (1896) is in the Italy file. Includes Eritrea up to 1993. Dates before 1270 are approximate or traditional. |
 | South Africa | 43 | 1220 to 2024 | seeded | Dias (1488) is in the Portugal file and the founding of the Cape Colony (1652) in the Netherlands file. Little before the Dutch. |
-| Canada | 45 | 1021 to 2025 | seeded | D-Day is in the United States file. Little on First Nations history before contact. |
-| Australia | 42 | 1606 to 2023 | seeded | Nothing on the tens of thousands of years before Europeans. Gallipoli is in the Turkey file. |
+| Canada | 48 | 1021 to 2026 | seeded | D-Day is in the United States file. Little on First Nations history before contact. |
+| Australia | 43 | 1606 to 2025 | seeded | Nothing on the tens of thousands of years before Europeans. Gallipoli is in the Turkey file. |
 | Argentina | 42 | 1516 to 2023 | seeded | The Falklands War (1982) is in the United Kingdom file and the Paraguayan War in the Brazil file. Nothing before the Spanish. |
-| Ukraine | 34 | 882 to 2024 | seeded | The baptism of Rus' (988), the sack of Kyiv (1240), Pereiaslav (1654), Chernobyl and the annexation of Crimea (2014) are in the Russia file. The Holodomor is here; the Russia file has the wider Soviet famine. The 2022 invasion is here; the claimed annexations (2022) are in the Russia file. |
-| Hungary | 33 | 895 to 2024 | seeded | Lechfeld (955) is in the Germany file, Mohács (1526) and Karlowitz (1699) in the Turkey file, the Compromise of 1867 in the Austria file. |
-| Czechia | 35 | 863 to 2023 | seeded | The Defenestration of 1618 and the Munich Agreement are in the Germany file; Austerlitz and Königgrätz in the Austria file. Czechoslovak events are here, so Slovakia is not yet covered on its own. |
+| Ukraine | 37 | 882 to 2026 | seeded | The baptism of Rus' (988), the sack of Kyiv (1240), Pereiaslav (1654), Chernobyl and the annexation of Crimea (2014) are in the Russia file. The Holodomor is here; the Russia file has the wider Soviet famine. The 2022 invasion is here; the claimed annexations (2022) are in the Russia file. |
+| Hungary | 34 | 895 to 2026 | seeded | Lechfeld (955) is in the Germany file, Mohács (1526) and Karlowitz (1699) in the Turkey file, the Compromise of 1867 in the Austria file. |
+| Czechia | 36 | 863 to 2025 | seeded | The Defenestration of 1618 and the Munich Agreement are in the Germany file; Austerlitz and Königgrätz in the Austria file. Czechoslovak events are here, so Slovakia is not yet covered on its own. |
 | Denmark | 35 | 965 to 2024 | seeded | The Kalmar Union, the Stockholm Bloodbath, Roskilde (1658) and Kiel (1814) are in the Sweden file. Includes Greenland. |
 | Norway | 33 | 872 to 2022 | seeded | Kiel (1814) and the end of the union (1905) are in the Sweden file; the Oslo Accords in the Israel file. |
-| Thailand | 35 | 1238 to 2025 | seeded | Nothing before Sukhothai (Dvaravati, the Khmer period). |
-| Philippines | 33 | 900 to 2025 | seeded | The Treaty of Paris (1898) is in the Spain file. Thin before 1521. |
-| Peru | 40 | 2600 BCE to 2025 | seeded | Ayacucho (1824) is in the Spain file. Dates before 1438 are approximate. |
+| Thailand | 36 | 1238 to 2026 | seeded | Nothing before Sukhothai (Dvaravati, the Khmer period). |
+| Philippines | 34 | 900 to 2026 | seeded | The Treaty of Paris (1898) is in the Spain file. Thin before 1521. |
+| Peru | 41 | 2600 BCE to 2026 | seeded | Ayacucho (1824) is in the Spain file. Dates before 1438 are approximate. |
 | Iraq | 34 | 3200 BCE to 2023 | seeded | Gaugamela, al-Qadisiyyah, the Mongol sack of Baghdad (1258) and the war of 1980 are in the Iran file; the Babylonian exile in the Israel file. Dates before 600 BCE are approximate. The killing of Soleimani at Baghdad airport (2020) is in the Iran file. |
 | Saudi Arabia | 33 | 570 to 2024 | seeded | Covers the life of Muhammad and the holy cities, then the Saudi states. Little on Arabia before Islam. The September 11 attacks are in the United States file. |
 | Pakistan | 36 | 127 to 2025 | seeded | The Indus cities, the Hydaspes, Partition and the 1971 war are in the India file. Thin before 1800. The 2025 conflict with India is in the India file. |
 | Chile | 34 | 1520 to 2025 | seeded | The crossing of the Andes is in the Argentina file; Angamos, the occupation of Lima and the Treaty of Ancón in the Peru file. Nothing before the Spanish. |
-| Colombia | 30 | 1525 to 2022 | seeded | Nothing on the Muisca or other peoples before the conquest. |
+| Colombia | 31 | 1525 to 2026 | seeded | Nothing on the Muisca or other peoples before the conquest. |
 | Cuba | 32 | 1492 to 2024 | seeded | The Missile Crisis is in the United States file and the Treaty of Paris (1898) in the Spain file. |
-| Nigeria | 33 | 500 BCE to 2023 | seeded | Dates before 1472 are approximate. Thin on Kanem-Bornu and the Hausa states. |
-| Morocco | 39 | 40 to 2023 | seeded | Ceuta (1415) and Alcácer Quibir (1578) are in the Portugal file, Las Navas de Tolosa in the Spain file. |
-| Afghanistan | 38 | 330 BCE to 2022 | seeded | |
+| Nigeria | 34 | 500 BCE to 2026 | seeded | Dates before 1472 are approximate. Thin on Kanem-Bornu and the Hausa states. |
+| Morocco | 40 | 40 to 2026 | seeded | Ceuta (1415) and Alcácer Quibir (1578) are in the Portugal file, Las Navas de Tolosa in the Spain file. |
+| Afghanistan | 39 | 330 BCE to 2026 | seeded | |
 | Albania | 32 | 627 BCE to 2025 | seeded | |
-| Algeria | 31 | 202 BCE to 2021 | seeded | |
+| Algeria | 32 | 202 BCE to 2026 | seeded | |
 | Angola | 28 | 1390 to 2022 | seeded | |
-| Armenia | 32 | 782 BCE to 2025 | seeded | The 2020 war and the 2023 offensive are in the Azerbaijan file. |
+| Armenia | 33 | 782 BCE to 2026 | seeded | The 2020 war and the 2023 offensive are in the Azerbaijan file. |
 | Azerbaijan | 35 | 84 to 2024 | seeded | |
-| Bangladesh | 34 | 300 BCE to 2024 | seeded | Partition and 1971 are in the India file. |
+| Bangladesh | 35 | 300 BCE to 2026 | seeded | Partition and 1971 are in the India file. |
 | Belarus | 31 | 862 to 2021 | seeded | |
 | Belgium | 32 | 54 BCE to 2025 | seeded | Waterloo is in the United Kingdom file. |
 | Bolivia | 32 | 800 to 2025 | seeded | |
 | Bosnia and Herzegovina | 31 | 1189 to 2025 | seeded | |
-| Bulgaria | 36 | 251 to 2026 | seeded | |
+| Bulgaria | 37 | 251 to 2026 | seeded | |
 | Cambodia | 31 | 245 to 2023 | seeded | The 2025 border war is in the Thailand file. |
 | Croatia | 37 | 305 to 2023 | seeded | |
-| Democratic Republic of the Congo | 35 | 900 to 2025 | seeded | |
+| Democratic Republic of the Congo | 36 | 900 to 2026 | seeded | |
 | Dominican Republic | 35 | 1494 to 2025 | seeded | |
-| Ecuador | 31 | 3500 BCE to 2024 | seeded | |
-| Estonia | 34 | 1030 to 2024 | seeded | |
-| Georgia | 35 | 302 BCE to 2024 | seeded | |
+| Ecuador | 32 | 3500 BCE to 2025 | seeded | |
+| Estonia | 35 | 1030 to 2026 | seeded | |
+| Georgia | 36 | 302 BCE to 2026 | seeded | |
 | Ghana | 36 | 2500 BCE to 2025 | seeded | |
 | Guatemala | 31 | 300 BCE to 2024 | seeded | |
 | Haiti | 33 | 1492 to 2024 | seeded | |
 | Iceland | 32 | 874 to 2024 | seeded | |
 | Jordan | 31 | 7200 BCE to 2021 | seeded | |
-| Kazakhstan | 27 | 3700 BCE to 2022 | seeded | |
+| Kazakhstan | 28 | 3700 BCE to 2026 | seeded | |
 | Kenya | 34 | 750 to 2024 | seeded | The Kenyan-led mission to Haiti (2024) is in the Haiti file. |
 | Laos | 23 | 1353 to 2021 | seeded | |
-| Latvia | 32 | 1186 to 2023 | seeded | |
-| Lebanon | 33 | 1000 BCE to 2024 | seeded | |
-| Libya | 33 | 631 BCE to 2023 | seeded | |
+| Latvia | 33 | 1186 to 2026 | seeded | |
+| Lebanon | 34 | 1000 BCE to 2026 | seeded | |
+| Libya | 34 | 631 BCE to 2026 | seeded | |
 | Lithuania | 37 | 1009 to 2025 | seeded | |
 | Malaysia | 30 | 450 to 2022 | seeded | |
-| Mali | 28 | 250 BCE to 2023 | seeded | |
+| Mali | 29 | 250 BCE to 2026 | seeded | |
 | Mongolia | 35 | 209 BCE to 2022 | seeded | |
 | Mozambique | 26 | 1200 to 2024 | seeded | |
-| Myanmar | 34 | 832 to 2025 | seeded | |
-| Nepal | 30 | 563 BCE to 2025 | seeded | |
-| New Zealand | 32 | 1300 to 2023 | seeded | |
+| Myanmar | 35 | 832 to 2026 | seeded | |
+| Nepal | 31 | 563 BCE to 2026 | seeded | |
+| New Zealand | 33 | 1300 to 2026 | seeded | |
 | North Macedonia | 29 | 350 BCE to 2025 | seeded | |
 | Papua New Guinea | 28 | 5000 BCE to 2024 | seeded | |
 | Paraguay | 32 | 1537 to 2023 | seeded | The Paraguayan War is in the Brazil file. |
-| Romania | 39 | 106 to 2025 | seeded | |
+| Romania | 40 | 106 to 2026 | seeded | |
 | Rwanda | 28 | 1600 to 2024 | seeded | |
 | Senegal | 30 | 1035 to 2024 | seeded | |
-| Serbia | 38 | 269 to 2024 | seeded | |
+| Serbia | 40 | 269 to 2026 | seeded | |
 | Singapore | 30 | 1299 to 2024 | seeded | |
 | Slovakia | 34 | 179 to 2024 | seeded | |
-| Slovenia | 33 | 14 to 2023 | seeded | |
+| Slovenia | 34 | 14 to 2026 | seeded | |
 | Sri Lanka | 34 | 288 BCE to 2024 | seeded | |
-| Sudan | 33 | 2500 BCE to 2023 | seeded | Includes South Sudan's independence (2011). |
-| Syria | 35 | 2300 BCE to 2025 | seeded | |
-| Tanzania | 27 | 960 to 2021 | seeded | |
+| Sudan | 35 | 2500 BCE to 2026 | seeded | Includes South Sudan's independence (2011). |
+| Syria | 36 | 2300 BCE to 2026 | seeded | |
+| Tanzania | 28 | 960 to 2025 | seeded | |
 | Tunisia | 34 | 814 BCE to 2022 | seeded | |
-| Uganda | 28 | 1400 to 2023 | seeded | |
+| Uganda | 29 | 1400 to 2026 | seeded | |
 | Uruguay | 34 | 1624 to 2025 | seeded | |
 | Uzbekistan | 33 | 329 BCE to 2023 | seeded | |
-| Venezuela | 31 | 1498 to 2024 | seeded | |
-| Yemen | 32 | 685 BCE to 2023 | seeded | |
+| Venezuela | 33 | 1498 to 2026 | seeded | |
+| Yemen | 33 | 685 BCE to 2026 | seeded | |
 | Zimbabwe | 27 | 1300 to 2024 | seeded | |
 | Bahamas | 19 | 1648 to 2021 | seeded | Columbus's first landfall (1492) is in the Spain file. |
 | Bahrain | 19 | 2300 BCE to 2022 | seeded | The Abraham Accords (2020) are in the Israel file. |
 | Barbados | 19 | 1625 to 2021 | seeded | |
 | Belize | 19 | 1200 BCE to 2020 | seeded | |
-| Benin | 23 | 1600 to 2021 | seeded | |
+| Benin | 24 | 1600 to 2026 | seeded | |
 | Bhutan | 25 | 747 to 2023 | seeded | Standing fail: Guru Rinpoche (about 747; the source page says 8th century). |
 | Botswana | 24 | 1600 to 2024 | seeded | |
 | Brunei | 21 | 977 to 2019 | seeded | |
-| Burkina Faso | 25 | 1050 to 2024 | seeded | The Alliance of Sahel States (2023) is in the Mali file. |
+| Burkina Faso | 26 | 1050 to 2026 | seeded | The Alliance of Sahel States (2023) is in the Mali file. |
 | Burundi | 24 | 1680 to 2020 | seeded | |
-| Cameroon | 23 | 1394 to 2020 | seeded | |
+| Cameroon | 24 | 1394 to 2025 | seeded | |
 | Cape Verde | 16 | 1460 to 2024 | seeded | |
 | Central African Republic | 21 | 3500 BCE to 2023 | seeded | |
 | Chad | 26 | 2000 BCE to 2022 | seeded | |
 | Comoros | 19 | 1500 to 2024 | seeded | Standing fail: the sultanates (about 1500; the page says by the 15th century). |
-| Costa Rica | 27 | 1502 to 2022 | seeded | |
+| Costa Rica | 28 | 1502 to 2026 | seeded | |
 | Cyprus | 32 | 7000 BCE to 2018 | seeded | Author's own version. |
 | Djibouti | 17 | 1577 to 2021 | seeded | |
 | East Timor | 24 | 1512 to 2025 | seeded | The 1975 invasion and 1999 referendum are in the Indonesia file. |
@@ -151,14 +151,14 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Gabon | 20 | 1472 to 2025 | seeded | |
 | Gambia | 20 | 927 to 2021 | seeded | Senegambia (1982) is in the Senegal file. |
 | Guinea | 22 | 1725 to 2023 | seeded | |
-| Guinea-Bissau | 21 | 1446 to 2022 | seeded | |
+| Guinea-Bissau | 22 | 1446 to 2025 | seeded | |
 | Guyana | 21 | 1616 to 2023 | seeded | |
-| Honduras | 27 | 426 to 2022 | seeded | |
+| Honduras | 28 | 426 to 2025 | seeded | |
 | Ivory Coast | 24 | 1710 to 2024 | seeded | The map name is "Cote D'Ivoire". |
-| Jamaica | 27 | 650 to 2024 | seeded | |
+| Jamaica | 28 | 650 to 2025 | seeded | |
 | Kosovo | 29 | 1321 to 2018 | seeded | Author's own version. |
 | Kuwait | 19 | 2000 BCE to 2024 | seeded | The 1990 invasion and 1991 liberation are in the Iraq file. |
-| Kyrgyzstan | 27 | 2500 BCE to 2022 | seeded | The map name is "Kyrgyz Republic". Standing fail: Pishpek and Tokmok (1862; the pages give no year in the text). |
+| Kyrgyzstan | 28 | 2500 BCE to 2026 | seeded | The map name is "Kyrgyz Republic". Standing fail: Pishpek and Tokmok (1862; the pages give no year in the text). |
 | Lesotho | 24 | 1822 to 2022 | seeded | |
 | Liberia | 25 | 1462 to 2023 | seeded | |
 | Luxembourg | 25 | 963 to 2014 | seeded | Author's own version. |
@@ -172,23 +172,23 @@ Counts come from `python check_events.py`; update this table after each batch.
 | Montenegro | 28 | 1042 to 2017 | seeded | Author's own version. |
 | Namibia | 26 | 1872 to 2024 | seeded | |
 | Nicaragua | 28 | 1200 to 2023 | seeded | |
-| Niger | 24 | 1449 to 2023 | seeded | Sonni Ali and Askia are in the Mali file. The Alliance of Sahel States (2023) is in the Mali file. |
+| Niger | 25 | 1449 to 2026 | seeded | Sonni Ali and Askia are in the Mali file. The Alliance of Sahel States (2023) is in the Mali file. |
 | Oman | 25 | 630 to 2018 | seeded | Author's own version. |
-| Palestine | 28 | 691 to 2025 | seeded | Balfour, the mandate, Oslo and Gaza 2005 are in the Israel file. The 7 October attack (2023) is in the Israel file; the Gaza war and the 2025 ceasefire are here. |
+| Palestine | 29 | 691 to 2025 | seeded | Balfour, the mandate, Oslo and Gaza 2005 are in the Israel file. The 7 October attack (2023) is in the Israel file; the Gaza war and the 2025 ceasefire are here. |
 | Panama | 26 | 1501 to 2024 | seeded | The 1903 separation is in the Colombia file. |
-| Qatar | 22 | 1766 to 2025 | seeded | |
+| Qatar | 23 | 1766 to 2026 | seeded | |
 | Republic of the Congo | 22 | 1550 to 2021 | seeded | Congo-Brazzaville; Diogo Cão (1482) is in the Angola file. |
 | Sierra Leone | 30 | 1462 to 2023 | seeded | |
 | Solomon Islands | 19 | 1568 to 2022 | seeded | Guadalcanal (1942) is in the United States file. |
-| Somalia | 30 | 1269 to 2022 | seeded | The Ogaden War is in the Ethiopia file. |
-| South Sudan | 21 | 1490 to 2025 | seeded | The 2011 independence referendum is in the Sudan file. |
+| Somalia | 31 | 1269 to 2025 | seeded | The Ogaden War is in the Ethiopia file. |
+| South Sudan | 22 | 1490 to 2026 | seeded | The 2011 independence referendum is in the Sudan file. |
 | Suriname | 20 | 1650 to 2025 | seeded | The map name is "Surinam". |
 | Tajikistan | 26 | 3000 BCE to 2025 | seeded | The 2022 border war is in the Kyrgyzstan file. |
 | Togo | 20 | 1600 to 2024 | seeded | |
 | Trinidad and Tobago | 21 | 5000 BCE to 2025 | seeded | |
 | Turkmenistan | 29 | 2200 BCE to 2022 | seeded | |
 | United Arab Emirates | 26 | 2600 BCE to 2017 | seeded | Author's own version. The Abraham Accords (2020) are in the Israel file. |
-| Zambia | 24 | 1600 to 2021 | seeded | |
+| Zambia | 25 | 1600 to 2026 | seeded | |
 
 Deep time (see the section below); the span is in millions of years ago:
 
@@ -237,8 +237,11 @@ Gaps in the seeded countries:
   States and the United Kingdom were filled on 2026-10-16 (see the Log).
 - United Kingdom: Ireland and the empire.
 - United States: the West after 1848.
-- 2020 to 2026: the pass of 2026-10-28 stops at the end of 2025 apart
-  from one event; 2026 still needs filling from current sources. The eight
+- 2020 to 2026: the pass of 2026-10-29 added 78 events from 2026 (to 28
+  Oct 2026), found by web search; smaller countries still have nothing
+  for 2026, and very recent entries (Brazil's runoff, Israel's and
+  Serbia's elections, the Toledo collision) should be rechecked once
+  results and tolls settle. The eight
   files in the author's own versions (Cyprus, Kosovo, Luxembourg, Malta,
   Moldova, Montenegro, Oman, the United Arab Emirates) and Brunei and
   Eritrea got nothing after 2019.
@@ -399,6 +402,18 @@ clicking Japan lists Taiwan's events under Japanese rule, not all of Taiwan's.
   with the same plate model as the coastlines (GPlates can reconstruct points).
 
 ## Log
+
+- 2026-10-29: Added 100 events from web research, 10 per region by ten
+  agents: 78 from 2026 (to 28 Oct) and 22 important ones from 2020 to
+  2025 that were missing (Navalny's poisoning, Russia's mobilization, the
+  fall of Mariupol, Operation Spiderweb, the Gaza famine, El Fasher, the
+  Bondi and Wang Fuk Court disasters and others). The 2026 events include
+  Maduro's capture, the killing of Ali Khamenei and the Iran war, the
+  Lebanon war, Orbán's defeat, Burnham becoming prime minister, Yoon's
+  life sentence and elections across every region. Each was confirmed on
+  its Wikipedia page by the agent; the author's own files got nothing.
+  `check_sources.py` passes all 100 new events. 5708 events in 178
+  files; `python3 check_events.py` reports no problems.
 
 - 2026-10-28: Brought the map to 2026. The time bar now runs to 2026;
   CShapes ends in 2019, so `loadYear` in `history.html` reads the 2019

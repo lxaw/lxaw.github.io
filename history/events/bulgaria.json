@@ -487,5 +487,18 @@
     "importance": 3,
     "description": "The euro replaces the lev, making Bulgaria the 21st country of the eurozone.",
     "source": "https://en.wikipedia.org/wiki/Bulgaria_and_the_euro"
+  },
+  {
+    "id": "bulgaria-2026-radev-wins-parliamentary-majority",
+    "title": "Radev wins a parliamentary majority",
+    "date": "19 Apr 2026",
+    "year-from": 2026,
+    "place": "Sofia",
+    "lat": 42.697,
+    "lon": 23.322,
+    "country": "Bulgaria",
+    "importance": 2,
+    "description": "Former president Rumen Radev's new Progressive Bulgaria coalition wins an absolute majority at the seventh snap election since 2021, ending a five-year political crisis.",
+    "source": "https://en.wikipedia.org/wiki/2026_Bulgarian_parliamentary_election"
   }
 ]

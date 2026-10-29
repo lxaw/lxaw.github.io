@@ -472,5 +472,18 @@
     "importance": 3,
     "description": "A student kills 14 people at the Faculty of Arts, the deadliest mass shooting in the country's history.",
     "source": "https://en.wikipedia.org/wiki/2023_Prague_shooting"
+  },
+  {
+    "id": "czechia-2025-babis-returns-to-power",
+    "title": "Babiš returns to power",
+    "date": "4 Oct 2025",
+    "year-from": 2025,
+    "place": "Prague",
+    "lat": 50.0875,
+    "lon": 14.4035,
+    "country": "Czechia",
+    "importance": 3,
+    "description": "Andrej Babiš's populist ANO wins the parliamentary election, defeating Petr Fiala's centre-right government, and Babiš becomes prime minister again in December.",
+    "source": "https://en.wikipedia.org/wiki/2025_Czech_parliamentary_election"
   }
 ]
