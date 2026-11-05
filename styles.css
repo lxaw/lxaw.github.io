@@ -525,6 +525,12 @@ main.post h1 {
   margin: 0 0 28px 0;
 }
 
+/* Japanese pages: keep Georgia for Latin, use Japanese Mincho fonts for kana/kanji */
+html:lang(ja) body {
+  font-family: Georgia, "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", YuMincho,
+    "Noto Serif JP", "Noto Serif CJK JP", "MS PMincho", serif;
+}
+
 /* Blog: rendered Markdown */
 .post-body {
   font-size: 16px;

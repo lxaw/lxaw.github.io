@@ -69,6 +69,10 @@
           bodyEl.innerHTML = '<p class="post-empty">Nothing here yet.</p>';
           return;
         }
+        // Mark Japanese posts (any kana) so CJK text gets Japanese glyphs/fonts, not Chinese
+        if (/[぀-ヿ]/.test(titleEl.textContent + md)) {
+          document.documentElement.lang = 'ja';
+        }
         bodyEl.innerHTML = marked.parse(md);
       }).catch(function () {
         titleEl.textContent = 'Post not found';
