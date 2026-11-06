@@ -136,8 +136,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 601 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 601 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 602 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 602 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -161,6 +161,15 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2601.18734" target="_blank" rel="noopener noreferrer">Self-Deistilled Reasoner: On-Policy Self-Distillation for Large Language Models</a></td>
+                <td>Siyan Zhou et al</td>
+                <td>2026</td>
+                <td>distillation, llm</td>
+                <td>ICML</td>
+                <td>On-Policy Self-Distillation (OPSD) introduces a training framework in which a single large language model serves as both teacher and student by conditioning on different information. The teacher receives privileged information, such as ground-truth answers or reference reasoning traces, while the student receives only the original problem and generates its own on-policy trajectories. Training minimizes the per-token divergence between the teacher and student probability distributions along the student-generated trajectories, providing dense supervision without requiring an external teacher model or reward model. The method additionally introduces per-token pointwise KL clipping to prevent stylistic tokens from dominating the learning signal and improve training stability. Experiments on Qwen3 models across AIME 2024, AIME 2025, and HMMT 2025 demonstrate that OPSD consistently outperforms supervised fine-tuning and matches or exceeds GRPO while requiring substantially fewer generated tokens and training steps. Ablation studies show that forward KL, a thinking-mode-on teacher paired with a thinking-mode-off student, and full-vocabulary logit distillation provide particularly effective training configurations.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2605.18165" target="_blank" rel="noopener noreferrer">Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs</a></td>

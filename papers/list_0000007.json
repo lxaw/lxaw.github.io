@@ -1,5 +1,15 @@
 [
   {
+    "title": "Self-Deistilled Reasoner: On-Policy Self-Distillation for Large Language Models",
+    "author": "Siyan Zhou et al",
+    "year": "2026",
+    "topic": "distillation, llm",
+    "venue": "ICML",
+    "description": "On-Policy Self-Distillation (OPSD) introduces a training framework in which a single large language model serves as both teacher and student by conditioning on different information. The teacher receives privileged information, such as ground-truth answers or reference reasoning traces, while the student receives only the original problem and generates its own on-policy trajectories. Training minimizes the per-token divergence between the teacher and student probability distributions along the student-generated trajectories, providing dense supervision without requiring an external teacher model or reward model. The method additionally introduces per-token pointwise KL clipping to prevent stylistic tokens from dominating the learning signal and improve training stability. Experiments on Qwen3 models across AIME 2024, AIME 2025, and HMMT 2025 demonstrate that OPSD consistently outperforms supervised fine-tuning and matches or exceeds GRPO while requiring substantially fewer generated tokens and training steps. Ablation studies show that forward KL, a thinking-mode-on teacher paired with a thinking-mode-off student, and full-vocabulary logit distillation provide particularly effective training configurations.",
+    "link": "https://arxiv.org/pdf/2601.18734"
+  },
+
+  {
     "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
     "author": "Junyi Wu et al",
     "year": "2026",
