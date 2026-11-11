@@ -11,7 +11,7 @@ Started 2026-10-07.
 
 ## Status
 
-Counts come from `python check_events.py`; update this table after each batch.
+Counts come from `python3 scripts/check_events.py` (run from the repo root); update this table after each batch.
 
 | Country | Events | Years covered | Status | Notes |
 | --- | ---: | --- | --- | --- |
@@ -253,8 +253,8 @@ Gaps in the seeded countries:
 
 1. Add events to `history/events/<country>.json`. For a new country, create the
    file and add its name to `history/events/list.json`.
-2. Run `python check_events.py` and fix anything it reports.
-   Then run `python check_sources.py history/events/<country>.json`, which
+2. Run `python3 scripts/check_events.py` and fix anything it reports.
+   Then run `python3 scripts/check_sources.py history/events/<country>.json`, which
    looks for each event's year and day on its Wikipedia source page, and
    look at whatever it flags.
 3. Update the status table above.

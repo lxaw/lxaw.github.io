@@ -5,7 +5,7 @@ from html import escape
 
 def load_list(json_file_path):
     """Read a list.json. If it's a manifest of the form
-    {"parts": ["list_0000001.json", ...]} (produced by split_list.py),
+    {"parts": ["list_0000001.json", ...]} (produced by scripts/split_list.py),
     load all parts and concatenate them. Otherwise return the JSON as-is."""
     with open(json_file_path, 'r') as file:
         data = json.load(file)
@@ -36,126 +36,9 @@ def generate_html(json_file_path, output_file_path):
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
     <script src="theme.js"></script>
-    <style>
-        main {{
-            padding-top: 0;
-        }}
-
-        .intro p {{
-            margin: 6px 0;
-        }}
-
-        .search-inputs {{
-            display: flex;
-            gap: 10px;
-            margin: 16px 0;
-            flex-wrap: wrap;
-            align-items: center;
-        }}
-
-        .search-inputs input {{
-            flex: 1;
-            min-width: 180px;
-            padding: 10px;
-            border: 1px solid var(--hair);
-            border-radius: 10px;
-            outline: none;
-            font-size: 14px;
-            background: transparent;
-            color: var(--text);
-        }}
-
-        .search-inputs input:focus {{
-            border-color: rgba(0, 0, 0, 0.25);
-        }}
-
-        .search-inputs button {{
-            border: 1px solid var(--hair);
-            background: transparent;
-            padding: 9px 10px;
-            border-radius: 10px;
-            font-size: 13px;
-            cursor: pointer;
-            color: var(--text);
-        }}
-
-        .search-inputs button:hover {{
-            border-color: rgba(0, 0, 0, 0.25);
-        }}
-
-        #paperCount {{
-            font-weight: 600;
-            font-size: 14px;
-            margin: 0;
-        }}
-
-        #searchCount {{
-            display: block;
-            margin-top: 4px;
-            font-size: 12px;
-            color: var(--muted);
-        }}
-
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 14px;
-            font-size: 14px;
-        }}
-
-        thead th {{
-            text-align: left;
-            font-weight: 600;
-            font-size: 12px;
-            color: var(--muted);
-            padding: 10px 8px;
-            border-bottom: 1px solid var(--hair);
-            cursor: pointer;
-            user-select: none;
-            white-space: nowrap;
-        }}
-
-        thead th:hover {{
-            color: var(--text);
-        }}
-
-        tbody td {{
-            padding: 12px 8px;
-            border-bottom: 1px solid var(--hair2);
-            vertical-align: top;
-        }}
-
-        /* Let the browser skip layout/paint for off-screen rows. */
-        #paperTable tbody tr {{
-            content-visibility: auto;
-            contain-intrinsic-size: auto 150px;
-        }}
-
-        @media (max-width: 720px) {{
-            body {{
-                margin: 0;
-                padding: 0;
-            }}
-            main {{
-                padding: 0 20px;
-                margin: 24px auto;
-            }}
-            .search-inputs input {{
-                min-width: 100%;
-            }}
-        }}
-    </style>
 </head>
-<body>
-    <nav>
-        <a href="index.html">Home</a>
-        <span class="cv-dropdown"><a href="#">CV</a><span class="cv-dropdown-menu"><a href="cv/main.pdf">English</a><a href="cv_ja/main.pdf">日本語</a></span></span>
-        <a href="books_read.html">Books</a>
-        <a href="papers_read.html">Papers</a>
-        <a href="history.html">History</a>
-        <a href="personal_interests.html">Personal</a>
-        <a href="blog/">Blog</a>
-    </nav>
+<body class="page-papers">
+    <nav></nav>
     <main>
         <div class="intro">
             <p>This list was curated by <a href="index.html">myself</a>, beginning from about May 2024 to now.</p>

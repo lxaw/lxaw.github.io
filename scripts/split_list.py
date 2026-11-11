@@ -2,7 +2,7 @@
 Split a large JSON list file into chunks of ~500 lines each.
 
 Usage:
-    python split_list.py <path-to-list.json> [--max-lines N]
+    python3 scripts/split_list.py <path-to-list.json> [--max-lines N]
 
 Behavior:
   - The input file must contain either:

@@ -6,7 +6,7 @@ temporary directory (or the file named in WIKI_CACHE). This only shows that the 
 page, so it is weaker than reading the source.
 
 Usage:
-    python check_sources.py history/events/poland.json ...
+    python3 scripts/check_sources.py history/events/poland.json ...
 """
 import json
 import os

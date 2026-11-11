@@ -1,7 +1,20 @@
-// Light/dark toggle. Loaded in <head> so the saved theme applies before first paint.
+// Site nav and light/dark toggle. Loaded in <head> so the saved theme applies
+// before first paint. Every page has an empty <nav></nav>; the links are filled
+// in here so they only need to change in one place.
 (function () {
   var root = document.documentElement;
   var KEY = 'theme';
+
+  // Nav links, relative to the site root (the folder this script lives in)
+  var NAV = [
+    ['Home', 'index.html'],
+    ['Books', 'books_read.html'],
+    ['Papers', 'papers_read.html'],
+    ['History', 'history.html'],
+    ['Blog', 'blog/']
+  ];
+  // Only readable while this script first runs, not in later callbacks
+  var SITE_ROOT = document.currentScript ? document.currentScript.src : location.href;
 
   function saved() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -31,6 +44,14 @@
   document.addEventListener('DOMContentLoaded', function () {
     var nav = document.querySelector('nav');
     if (!nav) return;
+    NAV.forEach(function (item, i) {
+      // Same spacing as links written on separate lines in HTML
+      if (i) nav.appendChild(document.createTextNode(' '));
+      var a = document.createElement('a');
+      a.href = new URL(item[1], SITE_ROOT).href;
+      a.textContent = item[0];
+      nav.appendChild(a);
+    });
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'theme-toggle';

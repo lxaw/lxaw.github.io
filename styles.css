@@ -99,6 +99,8 @@ nav {
   text-align: center;
   letter-spacing: 0.01em;
   color: var(--faint);
+  /* Hold one line of height while theme.js fills in the links */
+  min-height: calc(1lh + 33px);
 }
 
 nav a {
@@ -147,51 +149,6 @@ nav .separator {
 .theme-toggle:hover {
   color: var(--accent);
   border-color: var(--accent-underline);
-}
-
-/* CV dropdown */
-.cv-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.cv-dropdown > a {
-  cursor: pointer;
-}
-
-.cv-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--bg-elevated);
-  border: 1px solid var(--hair);
-  border-radius: 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  z-index: 300;
-  white-space: nowrap;
-  padding: 4px 0;
-  margin-top: 2px;
-  overflow: hidden;
-}
-
-.cv-dropdown-menu a {
-  display: block;
-  padding: 6px 16px;
-  font-size: 13px;
-  margin: 0;
-  color: var(--text);
-}
-
-.cv-dropdown-menu a:hover {
-  background: var(--hover);
-  color: var(--accent);
-}
-
-.cv-dropdown:hover .cv-dropdown-menu,
-.cv-dropdown:focus-within .cv-dropdown-menu {
-  display: block;
 }
 
 h1 {
@@ -649,3 +606,997 @@ html:lang(ja) body {
 .post-body tbody tr:hover { background: none; }
 .post-body td:empty { display: table-cell; }
 .post-body td:before { content: none !important; }
+
+
+/* ==================================================================
+   Page-specific styles. Each page sets a class on <body> (e.g. page-home)
+   and its rules below are scoped to that class.
+   ================================================================== */
+
+/* ---- Home ---- */
+.page-home .profile-wrap {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.page-home .profile-bio {
+    flex: 1;
+}
+
+.page-home .profile-bio h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.page-home .profile-bio .affil {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 14px 0;
+}
+
+.page-home .profile-bio p {
+    font-size: 14px;
+    margin: 0 0 14px 0;
+    line-height: 1.65;
+}
+
+.page-home .profile-links {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.page-home .profile-links a {
+    color: var(--muted);
+    border-bottom: none;
+    font-size: 18px;
+    line-height: 1;
+    transition: color 0.15s ease;
+}
+
+.page-home .profile-links a.cv-link {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.page-home .profile-links svg {
+    height: 1em;
+    width: auto;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.page-home .profile-links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.page-home .profile-photo {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-home .profile-photo img {
+    width: 167px;
+    height: 167px;
+    object-fit: cover;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    border: 1px solid var(--hair);
+}
+
+.page-home .profile-bio p.note {
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* News */
+.page-home .news-list {
+    list-style: none;
+    margin: 0 0 36px 0;
+    padding: 0 8px 0 0;
+    max-height: 200px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.page-home .news-list.has-more {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent);
+}
+
+.page-home .news-list li {
+    display: flex;
+    gap: 16px;
+    font-size: 12.5px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--hair2);
+    line-height: 1.5;
+}
+
+.page-home .news-list li:last-child {
+    border-bottom: none;
+}
+
+.page-home .news-date {
+    color: var(--muted);
+    white-space: nowrap;
+    min-width: 64px;
+    font-size: 11px;
+    padding-top: 1px;
+}
+
+.page-home section + section .section-title {
+    margin-top: 28px;
+}
+
+.page-home .news-note {
+    display: block;
+    font-size: 10px;
+    font-variant: normal;
+    letter-spacing: normal;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.page-home .site-footer {
+    display: block;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.page-home .site-footer a {
+    opacity: 0.35;
+}
+
+@media (max-width: 600px) {
+    .page-home .profile-wrap {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .page-home .profile-photo img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* ---- Books ---- */
+.page-books .intro p {
+    margin: 6px 0;
+}
+
+/* Controls */
+.page-books .controls {
+    margin: 18px 0 6px 0;
+    padding: 10px 0 0 0;
+    border-top: 1px solid var(--hair);
+}
+
+.page-books .counts {
+    margin: 10px 0 14px 0;
+}
+
+.page-books #bookCount {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+.page-books #searchCount {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.page-books .search-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.page-books .search-row input {
+    flex: 1;
+    min-width: 240px;
+    padding: 10px;
+    border: 1px solid var(--hair);
+    border-radius: 0;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: var(--text);
+}
+
+.page-books .search-row input:focus {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.page-books .btn {
+    border: 1px solid var(--hair);
+    background: transparent;
+    padding: 9px 10px;
+    border-radius: 0;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.page-books .btn:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Advanced filters: hidden by default */
+.page-books #advancedFilters {
+    display: none;
+    gap: 12px;
+    margin: 10px 0 0 0;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0 2px 0;
+}
+
+.page-books #advancedFilters.show {
+    display: flex;
+}
+
+.page-books #advancedFilters label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.page-books #advancedFilters input[type="number"] {
+    width: 90px;
+    padding: 8px;
+    border: 1px solid var(--hair);
+    border-radius: 0;
+    background: transparent;
+    color: var(--text);
+    outline: none;
+}
+
+.page-books #advancedFilters input[type="number"]:focus {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.page-books #advancedFilters input[type="checkbox"] {
+    transform: translateY(1px);
+}
+
+/* Table */
+.page-books table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.page-books thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--hair);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.page-books thead th:hover {
+    color: var(--text);
+}
+
+.page-books tbody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--hair2);
+    vertical-align: top;
+}
+
+/* Keep description readable */
+.page-books td.desc {
+    color: var(--text);
+}
+
+/* styles.css sizes column 6 as the description and column 7 as a
+   narrow link column; here column 6 is tags and column 7 is notes. */
+.page-books #bookTable th:nth-child(6),
+.page-books #bookTable td.tags {
+    min-width: 130px;
+    max-width: 170px;
+    overflow-wrap: normal;
+}
+
+.page-books #bookTable th:nth-child(7),
+.page-books #bookTable td.desc {
+    min-width: 460px;
+    max-width: none;
+}
+
+.page-books .tag {
+    display: inline-block;
+    margin: 0 4px 4px 0;
+    padding: 1px 6px;
+    border: 1px solid var(--hair);
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.page-books .tag:hover,
+.page-books .tag.active {
+    color: var(--accent);
+    border-color: var(--accent-underline);
+    background: var(--accent-soft);
+}
+
+.page-books .page-header {
+    margin-bottom: 16px;
+}
+
+.page-books .controls {
+    margin: 12px 0 4px 0;
+}
+
+@media (max-width: 720px) {
+    body.page-books {
+        margin: 0;
+        padding: 0;
+    }
+    .page-books main {
+        padding: 0 20px;
+        margin: 24px auto;
+    }
+    .page-books .search-row input {
+        min-width: 100%;
+    }
+}
+
+/* ---- Papers (papers_read.html is generated by gen.py) ---- */
+.page-papers main {
+    padding-top: 0;
+}
+
+.page-papers .intro p {
+    margin: 6px 0;
+}
+
+.page-papers .search-inputs {
+    display: flex;
+    gap: 10px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.page-papers .search-inputs input {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid var(--hair);
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: var(--text);
+}
+
+.page-papers .search-inputs input:focus {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.page-papers .search-inputs button {
+    border: 1px solid var(--hair);
+    background: transparent;
+    padding: 9px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.page-papers .search-inputs button:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.page-papers #paperCount {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+.page-papers #searchCount {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.page-papers table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.page-papers thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--hair);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.page-papers thead th:hover {
+    color: var(--text);
+}
+
+.page-papers tbody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--hair2);
+    vertical-align: top;
+}
+
+/* Let the browser skip layout/paint for off-screen rows. */
+.page-papers #paperTable tbody tr {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 150px;
+}
+
+@media (max-width: 720px) {
+    body.page-papers {
+        margin: 0;
+        padding: 0;
+    }
+    .page-papers main {
+        padding: 0 20px;
+        margin: 24px auto;
+    }
+    .page-papers .search-inputs input {
+        min-width: 100%;
+    }
+}
+
+/* ---- History map ---- */
+.page-history .map-wrap {
+    position: relative;
+    border: 1px solid var(--hair);
+    aspect-ratio: 960 / 500;
+}
+
+.page-history .map-wrap.beside .polity.named {
+    cursor: inherit;
+}
+
+/* On the deep-time maps the notes sit beside the map, not over it. */
+.page-history .map-wrap.beside #map {
+    width: calc(100% - 316px);
+}
+
+.page-history #map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+}
+
+.page-history #map:active {
+    cursor: grabbing;
+}
+
+.page-history .sphere {
+    fill: var(--hover);
+    stroke: var(--hair);
+}
+
+.page-history .polity {
+    stroke: var(--bg);
+    stroke-width: 0.6;
+    vector-effect: non-scaling-stroke;
+    fill-opacity: 0.6;
+}
+
+.page-history .polity.unnamed {
+    fill: var(--hair);
+    fill-opacity: 1;
+}
+
+.page-history .polity.named {
+    cursor: pointer;
+}
+
+.page-history .polity.named:hover {
+    fill-opacity: 0.9;
+}
+
+/* A clicked country stands out and the rest fade back. */
+.page-history #polities.has-selection .polity.named {
+    fill-opacity: 0.25;
+}
+
+.page-history #polities.has-selection .polity.named.selected {
+    fill-opacity: 0.9;
+}
+
+.page-history .country-card {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 300px;
+    max-height: calc(100% - 16px);
+    overflow-y: auto;
+    padding: 10px 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--hair);
+    font-size: 13px;
+    z-index: 5;
+}
+
+.page-history .country-card h2 {
+    margin: 0 28px 0 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+}
+
+.page-history .country-card .close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border: 0;
+    background: transparent;
+    padding: 4px 8px;
+    font: inherit;
+    font-size: 16px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.page-history .country-card .close:hover {
+    color: var(--accent);
+}
+
+.page-history .country-card .meta {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.page-history .country-card h3 {
+    margin: 10px 0 2px 0;
+    font-size: 11px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.page-history .country-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-history .country-card li {
+    padding: 5px 0;
+    border-top: 1px solid var(--hair2);
+}
+
+.page-history .country-card li p {
+    margin: 2px 0 0 0;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: left;
+}
+
+.page-history .country-card .source {
+    margin-left: 6px;
+    font-size: 11px;
+}
+
+.page-history .country-card .jump {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font: inherit;
+    color: var(--text);
+    text-align: left;
+    cursor: pointer;
+}
+
+.page-history .country-card .jump:hover {
+    color: var(--accent);
+}
+
+.page-history .country-card .jump .meta {
+    display: inline;
+    margin-right: 6px;
+}
+
+.page-history #labels text {
+    fill: var(--text);
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: var(--bg);
+    stroke-linejoin: round;
+}
+
+.page-history .map-tooltip {
+    position: absolute;
+    pointer-events: none;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    background: var(--bg-elevated);
+    border: 1px solid var(--hair);
+    color: var(--text);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.page-history .map-tooltip small {
+    display: block;
+}
+
+.page-history .map-overlay {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    right: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.page-history #eraLabel {
+    font-size: 15px;
+    font-variant: small-caps;
+    letter-spacing: 0.06em;
+    color: var(--text);
+}
+
+/* Stops with no map: an illustration, with the events of the stretch
+   on a card beside it. */
+.page-history #scene .space {
+    fill: var(--hover);
+}
+
+.page-history #scene .star {
+    fill: var(--text);
+}
+
+.page-history #scene .glow {
+    fill: var(--accent);
+}
+
+.page-history #scene .ring {
+    fill: none;
+    stroke: var(--muted);
+}
+
+.page-history #scene .ocean {
+    fill: hsl(205 38% 45%);
+}
+
+.page-history #scene .crust {
+    fill: var(--hair);
+}
+
+.page-history #scene .rock {
+    fill: var(--muted);
+}
+
+.page-history #mapNote ul {
+    margin-top: 6px;
+}
+
+.page-history #mapNote .title {
+    display: block;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.page-history #mapNote .note {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Timeline */
+.page-history .timeline {
+    padding: 12px 0 0 0;
+}
+
+.page-history .timeline-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+.page-history #periodLabel {
+    flex: 1;
+}
+
+.page-history .timeline-head button,
+.page-history .timeline-head select {
+    border: 1px solid var(--hair);
+    border-radius: 0;
+    background: transparent;
+    padding: 5px 10px;
+    font: inherit;
+    font-size: 13px;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.page-history .timeline-head button {
+    min-width: 64px;
+}
+
+.page-history .timeline-head button:hover,
+.page-history .timeline-head button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.page-history #yearLabel {
+    font-size: 20px;
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+}
+
+.page-history #timeSlider {
+    display: block;
+    width: 100%;
+    margin: 8px 0 0 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.page-history .ticks {
+    position: relative;
+    height: 18px;
+    margin: 2px 8px 0 8px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.page-history .ticks span {
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.page-history .ticks span:first-child {
+    transform: none;
+}
+
+.page-history .ticks span:last-child {
+    transform: translateX(-100%);
+}
+
+.page-history .credit {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: left;
+}
+
+/* Events list */
+.page-history .event-controls {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 4px;
+}
+
+.page-history .event-controls small {
+    flex: 1;
+}
+
+.page-history .event-controls button,
+.page-history .event-controls select {
+    border: 1px solid var(--hair);
+    border-radius: 0;
+    background: transparent;
+    padding: 5px 10px;
+    font: inherit;
+    font-size: 13px;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.page-history .event-controls button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.page-history #eventList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-history #eventList li {
+    padding: 8px 0 8px 10px;
+    border-bottom: 1px solid var(--hair2);
+    border-left: 2px solid transparent;
+    font-size: 14px;
+}
+
+.page-history #eventList li.selected {
+    border-left-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.page-history #eventList li.empty {
+    color: var(--muted);
+}
+
+.page-history #eventList .when {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.page-history #eventList p {
+    margin: 2px 0 0 0;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: left;
+}
+
+.page-history #eventList .source {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+.page-history #eventList p.uncertainty {
+    font-size: 12px;
+    font-style: italic;
+}
+
+@media (max-width: 720px) {
+    .page-history .ticks span.minor {
+        display: none;
+    }
+
+    .page-history .map-wrap {
+        aspect-ratio: auto;
+    }
+
+    .page-history #map,
+    .page-history .map-wrap.beside #map {
+        width: 100%;
+        height: auto;
+    }
+
+    /* No room beside the country on a phone: the card goes under the map. */
+    .page-history .country-card {
+        position: static;
+        width: auto;
+        max-height: 50vh;
+        border-width: 1px 0 0 0;
+    }
+}
+
+/* ---- gineiden ---- */
+.page-gineiden main {
+    max-width: 980px;
+}
+
+.page-gineiden p {
+    margin: 12px 0;
+    line-height: 1.65;
+}
+
+/* ---- Blog index ---- */
+/* Small collapsible "Personal Stuff" block below the post list */
+.page-blog .blog-intro {
+  margin-bottom: 28px;
+}
+
+/* Opened content: a narrower column centered under the post list */
+.page-blog .blog-intro section {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+
+.page-blog .blog-intro summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.page-blog .blog-intro summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-blog .blog-intro summary::before {
+  content: "\25B8";
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+}
+
+.page-blog .blog-intro[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.page-blog .blog-intro summary:hover {
+  color: var(--accent);
+}
+
+.page-blog .blog-intro .intro-heading {
+  font-size: 11.5px;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.page-blog .blog-intro section p,
+.page-blog .blog-intro section li {
+  margin: 4px 0;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ---- History articles ---- */
+.page-history-article main {
+    max-width: 680px;
+}
+
+.page-history-article h2 {
+    font-size: 15px;
+    font-weight: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.06em;
+    margin: 26px 0 6px 0;
+}
+
+.page-history-article h2 small {
+    margin-left: 8px;
+    font-variant: normal;
+    letter-spacing: 0;
+}
+
+.page-history-article h2:target {
+    color: var(--accent);
+}

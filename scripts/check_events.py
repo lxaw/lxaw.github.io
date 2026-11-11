@@ -10,7 +10,7 @@ Deep-time events are dated in millions of years ago ("ma") instead and belong
 to a scope rather than a country.
 
 Usage:
-    python check_events.py
+    python3 scripts/check_events.py
 """
 
 from __future__ import annotations

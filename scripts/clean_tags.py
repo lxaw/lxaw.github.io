@@ -5,8 +5,8 @@ Merges known redundant / misspelled / variant tags into a single canonical
 form, then (optionally) re-saves each part file in place.
 
 Usage:
-    python clean_tags.py           # dry-run: shows what would change
-    python clean_tags.py --apply   # apply changes and overwrite part files
+    python3 scripts/clean_tags.py           # dry-run: shows what would change
+    python3 scripts/clean_tags.py --apply   # apply changes and overwrite part files
 """
 
 from __future__ import annotations
@@ -126,7 +126,7 @@ def main(argv: list[str]) -> int:
         manifest = json.load(f)
 
     if not (isinstance(manifest, dict) and "parts" in manifest):
-        print("papers/list.json is not a manifest — run split_list.py first.")
+        print("papers/list.json is not a manifest — run scripts/split_list.py first.")
         return 1
 
     parts_dir = manifest_path.parent
