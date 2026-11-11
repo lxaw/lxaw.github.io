@@ -1,6 +1,6 @@
 [
   {
-    "title": "Self-Deistilled Reasoner: On-Policy Self-Distillation for Large Language Models",
+    "title": "Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models",
     "author": "Siyan Zhou et al",
     "year": "2026",
     "topic": "distillation, llm",
