@@ -19,8 +19,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 602 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 602 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 606 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 606 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -44,6 +44,42 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2611.09891" target="_blank" rel="noopener noreferrer">CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse</a></td>
+                <td>Peter Belcak et al</td>
+                <td>2026</td>
+                <td>agentic reasoning caching, reasoning reuse, semantic functions, small language models, cost reduction</td>
+                <td>Arxiv</td>
+                <td>This paper asks whether the reasoning a large language model uses to solve a class of problems can be turned into a reusable, executable cache that a small model can run cheaply without losing correctness or robustness. Its method, agentic reasoning caching, has a builder model analyze a source model&#x27;s reasoning transcript and construct a cache entry: a network of Python semantic functions that refer to inputs and sub-functions by natural-language descriptions rather than fixed names. The builder works through five phases (input-output isolation, decomposition, parameter recognition, planning, and implementation), and each candidate function is tested against the transcript&#x27;s answer and rewritten on failure. At inference time a new query is matched to a cache entry by embedding similarity, a small target model extracts the parameters, and plain CPU code executes the reasoning, so the expensive reasoning becomes a one-time build cost while the small model only handles extraction and classification. Across MATH-500, AIME &#x27;24/&#x27;25/&#x27;26, GPQA Diamond, GSM8K, MMLU-Pro, and SciBench, cache accuracy matched or exceeded the source model on seven of eight benchmarks (for example AIME &#x27;25 rose from 83.3 to 93.3), while per-sample invocation was 16x to 291x cheaper. The caches also proved robust to perturbation, solving roughly 91% to 99% of reworded or re-parameterized versions of problems they already handled.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2610.21594" target="_blank" rel="noopener noreferrer">LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models</a></td>
+                <td>Zixuan Liu et al</td>
+                <td>2026</td>
+                <td>looped language models, speculative decoding, decoding latency, lookahead drafting</td>
+                <td>Arxiv</td>
+                <td>This paper asks how to speed up generation in looped Transformers, which reuse the same layers over several recurrent depths and therefore pay repeated weight-access and sequential cost for every token. It proposes LoopAhead, a lossless speculative decoding framework in which a lightweight lookahead drafter (a two-layer Transformer with hidden size 512) reads early-loop hidden states and proposes several future tokens at once instead of waiting for the model to reach full depth. Intermediate-loop readouts act as cheap feedback that suspends candidate branches conflicting with deeper predictions and resumes them later, so less compute is wasted on wrong speculative paths, while only the full-depth model makes the final accept and prune decisions. This works because early-loop predictions already agree strongly with full-depth outputs under the same prefix, and that agreement rises quickly across loops, so early drafts are often correct and wrong ones can be caught early. Under greedy decoding on Ouro and Raven looped models across GSM8K, MATH500, HumanEval, MBPP, and BBH, LoopAhead reaches 2.82x to 7.82x speedups over autoregressive decoding, for example 4.27x on GSM8K for Ouro-1.4B versus 2.92x for LoopSpec and up to 7.82x on HumanEval for Raven-TinyLlama. Greedy outputs exactly reproduce autoregressive outputs, and sampling uses standard speculative acceptance against the full-depth distribution, so quality is preserved.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2610.42084" target="_blank" rel="noopener noreferrer">RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models</a></td>
+                <td>Guangfu Guo et al</td>
+                <td>2026</td>
+                <td>dlm, continuous diffusion, length extrapolation, sliding-window attention, training-free</td>
+                <td>Arxiv</td>
+                <td>This paper asks how to let continuous diffusion language models generate text far beyond their training length without collapsing into repetition, semantic drift, and quality loss. The proposed RangeSWA requires no parameter updates and combines local sliding-window attention with coarse summaries of distant token blocks and content-based retrieval of relevant distant blocks, all within a single softmax. It also remaps distant positions back into the trained positional range, and applies a correction to attention from control tokens to body tokens, since sliding windows otherwise shift too much attention toward those control tokens. A denoising-stage-adaptive window uses a wider local window at high noise and narrows it as denoising proceeds, matching the shift from global layout to local detail. On ELF-B/M/L checkpoints at 8k tokens, RangeSWA reaches GPT-2 Large generative perplexity of 18.37 / 32.13 / 33.39 versus 153.55 / 165.93 / 118.31 for plain sliding-window attention, while full attention degenerates badly (42.6% four-gram repetition on ELF-B). The authors caution that low perplexity can hide repetition, noting that on ELF-B RangeSWA raises repetition relative to SWA, and they show the method transfers to CoLa and LangFlow with large reductions in repetition.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2611.08307" target="_blank" rel="noopener noreferrer">Measured Coupling for Parallel Decoding in Diffusion Language Models</a></td>
+                <td>Tal Oved et al</td>
+                <td>2026</td>
+                <td>dlm, parallel decoding, mean-field decoding, token coupling, training-free</td>
+                <td>Arxiv</td>
+                <td>This paper asks which masked tokens a diffusion language model can safely commit together in a single denoising step, since tokens predicted independently can combine into incoherent pairs. It replaces the similarity-based pairwise penalty used in training-free mean-field parallel decoding with a measured coupling, defined as how much committing token j changes the log-margin confidence at position i, which captures both conflict and mutual support. These couplings are estimated by cheap block-local probes run inside the same forward pass as the main step while reusing the KV cache, and they plug directly into the existing mean-field update with no training or auxiliary model. The approach works because it identifies positions that confirm each other so they can be committed together, and ablations that shuffle the couplings or replace them with a uniform support bonus lose the gain. On LLaDA-8B-Instruct at a matched threshold, the method needs 24% to 43% fewer steps than mean-field decoding, for example 40.1 versus 65.4 NFE on GSM8K at nearly identical accuracy (76.27 vs 76.57). Averaged over three models and four benchmarks the accuracy cost is about 1.1 points, though the drop is larger on Dream, and wall-clock throughput improves in most settings including with a KV cache.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2601.18734" target="_blank" rel="noopener noreferrer">Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models</a></td>

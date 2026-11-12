@@ -1,5 +1,41 @@
 [
   {
+    "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+    "author": "Peter Belcak et al",
+    "year": "2026",
+    "topic": "agentic reasoning caching, reasoning reuse, semantic functions, small language models, cost reduction",
+    "venue": "Arxiv",
+    "description": "This paper asks whether the reasoning a large language model uses to solve a class of problems can be turned into a reusable, executable cache that a small model can run cheaply without losing correctness or robustness. Its method, agentic reasoning caching, has a builder model analyze a source model's reasoning transcript and construct a cache entry: a network of Python semantic functions that refer to inputs and sub-functions by natural-language descriptions rather than fixed names. The builder works through five phases (input-output isolation, decomposition, parameter recognition, planning, and implementation), and each candidate function is tested against the transcript's answer and rewritten on failure. At inference time a new query is matched to a cache entry by embedding similarity, a small target model extracts the parameters, and plain CPU code executes the reasoning, so the expensive reasoning becomes a one-time build cost while the small model only handles extraction and classification. Across MATH-500, AIME '24/'25/'26, GPQA Diamond, GSM8K, MMLU-Pro, and SciBench, cache accuracy matched or exceeded the source model on seven of eight benchmarks (for example AIME '25 rose from 83.3 to 93.3), while per-sample invocation was 16x to 291x cheaper. The caches also proved robust to perturbation, solving roughly 91% to 99% of reworded or re-parameterized versions of problems they already handled.",
+    "link": "https://arxiv.org/pdf/2611.09891"
+  },
+  {
+    "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+    "author": "Zixuan Liu et al",
+    "year": "2026",
+    "topic": "looped language models, speculative decoding, decoding latency, lookahead drafting",
+    "venue": "Arxiv",
+    "description": "This paper asks how to speed up generation in looped Transformers, which reuse the same layers over several recurrent depths and therefore pay repeated weight-access and sequential cost for every token. It proposes LoopAhead, a lossless speculative decoding framework in which a lightweight lookahead drafter (a two-layer Transformer with hidden size 512) reads early-loop hidden states and proposes several future tokens at once instead of waiting for the model to reach full depth. Intermediate-loop readouts act as cheap feedback that suspends candidate branches conflicting with deeper predictions and resumes them later, so less compute is wasted on wrong speculative paths, while only the full-depth model makes the final accept and prune decisions. This works because early-loop predictions already agree strongly with full-depth outputs under the same prefix, and that agreement rises quickly across loops, so early drafts are often correct and wrong ones can be caught early. Under greedy decoding on Ouro and Raven looped models across GSM8K, MATH500, HumanEval, MBPP, and BBH, LoopAhead reaches 2.82x to 7.82x speedups over autoregressive decoding, for example 4.27x on GSM8K for Ouro-1.4B versus 2.92x for LoopSpec and up to 7.82x on HumanEval for Raven-TinyLlama. Greedy outputs exactly reproduce autoregressive outputs, and sampling uses standard speculative acceptance against the full-depth distribution, so quality is preserved.",
+    "link": "https://arxiv.org/pdf/2610.21594"
+  },
+  {
+    "title": "RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models",
+    "author": "Guangfu Guo et al",
+    "year": "2026",
+    "topic": "dlm, continuous diffusion, length extrapolation, sliding-window attention, training-free",
+    "venue": "Arxiv",
+    "description": "This paper asks how to let continuous diffusion language models generate text far beyond their training length without collapsing into repetition, semantic drift, and quality loss. The proposed RangeSWA requires no parameter updates and combines local sliding-window attention with coarse summaries of distant token blocks and content-based retrieval of relevant distant blocks, all within a single softmax. It also remaps distant positions back into the trained positional range, and applies a correction to attention from control tokens to body tokens, since sliding windows otherwise shift too much attention toward those control tokens. A denoising-stage-adaptive window uses a wider local window at high noise and narrows it as denoising proceeds, matching the shift from global layout to local detail. On ELF-B/M/L checkpoints at 8k tokens, RangeSWA reaches GPT-2 Large generative perplexity of 18.37 / 32.13 / 33.39 versus 153.55 / 165.93 / 118.31 for plain sliding-window attention, while full attention degenerates badly (42.6% four-gram repetition on ELF-B). The authors caution that low perplexity can hide repetition, noting that on ELF-B RangeSWA raises repetition relative to SWA, and they show the method transfers to CoLa and LangFlow with large reductions in repetition.",
+    "link": "https://arxiv.org/pdf/2610.42084"
+  },
+  {
+    "title": "Measured Coupling for Parallel Decoding in Diffusion Language Models",
+    "author": "Tal Oved et al",
+    "year": "2026",
+    "topic": "dlm, parallel decoding, mean-field decoding, token coupling, training-free",
+    "venue": "Arxiv",
+    "description": "This paper asks which masked tokens a diffusion language model can safely commit together in a single denoising step, since tokens predicted independently can combine into incoherent pairs. It replaces the similarity-based pairwise penalty used in training-free mean-field parallel decoding with a measured coupling, defined as how much committing token j changes the log-margin confidence at position i, which captures both conflict and mutual support. These couplings are estimated by cheap block-local probes run inside the same forward pass as the main step while reusing the KV cache, and they plug directly into the existing mean-field update with no training or auxiliary model. The approach works because it identifies positions that confirm each other so they can be committed together, and ablations that shuffle the couplings or replace them with a uniform support bonus lose the gain. On LLaDA-8B-Instruct at a matched threshold, the method needs 24% to 43% fewer steps than mean-field decoding, for example 40.1 versus 65.4 NFE on GSM8K at nearly identical accuracy (76.27 vs 76.57). Averaged over three models and four benchmarks the accuracy cost is about 1.1 points, though the drop is larger on Dream, and wall-clock throughput improves in most settings including with a KV cache.",
+    "link": "https://arxiv.org/pdf/2611.08307"
+  },
+  {
     "title": "Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models",
     "author": "Siyan Zhou et al",
     "year": "2026",
@@ -8,7 +44,6 @@
     "description": "On-Policy Self-Distillation (OPSD) introduces a training framework in which a single large language model serves as both teacher and student by conditioning on different information. The teacher receives privileged information, such as ground-truth answers or reference reasoning traces, while the student receives only the original problem and generates its own on-policy trajectories. Training minimizes the per-token divergence between the teacher and student probability distributions along the student-generated trajectories, providing dense supervision without requiring an external teacher model or reward model. The method additionally introduces per-token pointwise KL clipping to prevent stylistic tokens from dominating the learning signal and improve training stability. Experiments on Qwen3 models across AIME 2024, AIME 2025, and HMMT 2025 demonstrate that OPSD consistently outperforms supervised fine-tuning and matches or exceeds GRPO while requiring substantially fewer generated tokens and training steps. Ablation studies show that forward KL, a thinking-mode-on teacher paired with a thinking-mode-off student, and full-vocabulary logit distillation provide particularly effective training configurations.",
     "link": "https://arxiv.org/pdf/2601.18734"
   },
-
   {
     "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
     "author": "Junyi Wu et al",
