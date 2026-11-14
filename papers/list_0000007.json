@@ -1,5 +1,23 @@
 [
   {
+    "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
+    "author": "Shengyin Sun et al",
+    "year": "2026",
+    "topic": "dlm, speculative decoding, parallel decoding, training-free, hierarchical acceptance",
+    "venue": "Arxiv",
+    "description": "This paper asks how to accelerate diffusion language models along two axes at once: spatially, by unmasking several tokens per denoising step, and temporally, by collapsing several future denoising steps into one verification call. Each alone saturates, since aggressive parallel unmasking forces low-confidence tokens to commit and degrades quality, while existing speculative methods still reveal only one token per step and are capped by acceptance. The proposed Parallel Speculative Decoding (PSD) is training-free and policy-agnostic. From a single forward pass, it applies any configurable parallel unmasking policy to reveal multiple positions, then builds speculative drafts at multiple depths by filling the remaining masked positions in descending confidence order, with no extra model calls. A final batched verification pass applies hierarchical acceptance, keeping the deepest draft whose speculated tokens still agree with the verifier's updated predictions, which stops errors from aggressive unmasking from propagating. This works because the set of high-confidence masked positions tends to stay stable as denoising proceeds, so today's confidence ranking is a good guess for the next few steps. On Dream-7B, LLaDA-1.5, and openPangu-7B-Diffusion across GSM8K, HumanEval, and MBPP, PSD reaches 3x to 5.5x tokens per forward pass while staying within 1 point of greedy accuracy in most settings. For example, on GSM8K with LLaDA-1.5 it doubles Spiffy's 2.0x to 4.0x tokens per step, while LoPA pushed to 4.9x collapses HumanEval pass@1 to 23.8%, compared with PSD at 4.2x and no loss. Speculative depth beyond about 3 adds little, and the authors note that evaluation is limited to math and code, so effects on open-ended generation remain untested.",
+    "link": "https://arxiv.org/pdf/2605.15609"
+  },
+  {
+    "title": "Multi-Token Residual Prediction",
+    "author": "Yufeng Xu et al",
+    "year": "2026",
+    "topic": "dlm, residual prediction, speculative decoding, remasking, multi-token decoding",
+    "venue": "Arxiv",
+    "description": "This paper asks whether a diffusion language model can decode several tokens per step while keeping the dependencies between them, instead of sliding along the usual threshold-controlled trade-off where quality drops as more tokens are revealed at once. Its key observation is that the backbone's logits at adjacent denoising steps are very similar when only a few tokens are unmasked between them, so the residual between steps is far smaller than the logits themselves and a much easier prediction target. The proposed Multi-token Residual Prediction (MRP) attaches a lightweight 3-layer transformer to a frozen backbone that predicts this inter-step logit residual from the backbone's hidden states. A chain of MRP steps then approximates what extra backbone passes would produce, decoding more tokens from a single backbone forward through the shared LM head, and it is trained by distillation on still-masked positions. MRP is used in three ways: as a drafter for lossless speculative decoding, whose proposals the backbone verifies jointly in its next forward; as direct decoding without verification for a tunable speed-quality trade-off; and, under low-threshold dynamic decoding, as a remasking scheme that revokes over-eager reveals that the corrected logits do not confirm. Implemented in SGLang on SDAR-Chat 1.7B, 4B, and 8B, speculative mode gives 1.17x to 1.40x lossless speedup (largest on 8B GSM8K), and direct mode at K=1 runs 1.43x to 1.61x faster with close accuracy (90.1 vs 90.9 on 8B GSM8K). Remasking at threshold 0.5 recovers at least 11 points on every task and scale, up to 22.6 on HumanEval and 17.7 on GSM8K, while keeping roughly 0.76x to 0.88x of dynamic decoding's throughput on reasoning tasks, and its gains fade toward zero at high thresholds where the backbone is already conservative.",
+    "link": "https://arxiv.org/pdf/2605.18817"
+  },
+  {
     "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
     "author": "Eliezer Shlomi et al",
     "year": "2026",
