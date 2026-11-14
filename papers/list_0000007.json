@@ -1,5 +1,14 @@
 [
   {
+    "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+    "author": "Eliezer Shlomi et al",
+    "year": "2026",
+    "topic": "dlm, speculative decoding, commit order, draft trees, gumbel coupling, lossless acceleration",
+    "venue": "Arxiv",
+    "description": "This paper asks how to bring lossless speculative decoding to diffusion language models, where bidirectional attention inside a block means the target decides not only what token to write but also where to write it next, so a drafter must predict a trajectory of block states rather than a fixed sequence of tokens. Its key finding is that the tokens are largely known in advance: the target's stale predictions from the previous pass already match the eventually committed token at 92% to 100% of positions, while which position commits next is the hard part. The proposed SPOT is a 0.62M-parameter drafter that reads only the target's output distributions and, after each hypothetical commit, predicts the next position, growing a tree of candidate block states ordered by prefix probability. The target then checks every drafted state in a single batched forward and accepts the longest prefix that matches its own trajectory. To keep this exact when sampling, coupled-noise verification shares per-position Gumbel noise between drafter and target, which makes the target's choice deterministic given the noise so state equality can verify the whole tree at any temperature while still recovering the target distribution. A variant, SPOT-Sets, extends this to dynamic threshold decoding by drafting whole commit sets along with their tokens. On SDAR-8B, SPOT cuts target passes by up to 6.8x and reaches up to 3.4x the throughput of standard decoding, uses 16% to 36% fewer target forwards than Spiffy's calibrated draft graph, and transfers across six diffusion models, including LLaDA-8B and Dream-7B, without retraining. SPOT-Sets adds 59% average throughput over the threshold decoder alone. The authors note that gains shrink when verification is costly (as with wide blocks) or acceptance is low, and that SPOT-Sets needs a short calibration for each new target.",
+    "link": "https://arxiv.org/pdf/2610.22543"
+  },
+  {
     "title": "Transformers Learn Shortcuts to Automata",
     "author": "Bingbin Liu et al",
     "year": "2023",
