@@ -1509,13 +1509,63 @@ html:lang(ja) body {
 }
 
 /* ---- gineiden ---- */
-.page-gineiden main {
+.page-gineiden main,
+.page-rumi main {
     max-width: 980px;
 }
 
-.page-gineiden p {
+.page-gineiden p,
+.page-rumi p {
     margin: 12px 0;
     line-height: 1.65;
+}
+
+/* ---- rumi: full section, Persian beside English ---- */
+.page-rumi .poem {
+    margin-top: 40px;
+}
+
+.page-rumi .poem-title {
+    margin: 4px 0;
+    font-weight: 600;
+}
+
+.page-rumi .poem-note {
+    color: var(--muted);
+    font-size: 0.9em;
+}
+
+.page-rumi .couplet {
+    display: grid;
+    grid-template-columns: 3em 1fr 1fr;
+    gap: 0 24px;
+    align-items: baseline;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.page-rumi .couplet p {
+    margin: 6px 0;
+}
+
+.page-rumi .couplet .num {
+    color: var(--muted);
+    font-size: 0.75em;
+    font-variant-numeric: tabular-nums;
+}
+
+.page-rumi .couplet.key {
+    background: var(--accent-soft);
+}
+
+@media (max-width: 640px) {
+    .page-rumi .couplet {
+        grid-template-columns: 1fr;
+        padding: 8px 0;
+    }
+    .page-rumi .couplet.key {
+        padding: 8px;
+    }
 }
 
 /* ---- Blog index ---- */

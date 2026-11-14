@@ -19,8 +19,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 606 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 606 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 608 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 608 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -44,6 +44,24 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2210.10749" target="_blank" rel="noopener noreferrer">Transformers Learn Shortcuts to Automata</a></td>
+                <td>Bingbin Liu et al</td>
+                <td>2023</td>
+                <td>transformers, automata, circuit complexity, krohn-rhodes, algorithmic reasoning, length generalization</td>
+                <td>ICLR</td>
+                <td>This paper asks how shallow, non-recurrent Transformers manage algorithmic reasoning that seems to require many sequential steps, studying the question through semiautomata, which update a finite state with each input symbol. It defines a shortcut as a network that exactly simulates an automaton on length-T inputs with o(T) depth, and shows that instead of representing states and iterating the transition one step per layer, a Transformer can represent and hierarchically compose the transition functions themselves. Via divide-and-conquer composition, every semiautomaton has an O(log T)-depth shortcut with width polynomial in the number of states. Using the Krohn-Rhodes decomposition, which factors any solvable semiautomaton into modular counters and resettable memory units joined by a cascade product, solvable automata even get constant-depth shortcuts, since soft attention computes prefix sums and hard attention finds the most recent reset. A depth-2 construction handles gridworlds through a nearest-boundary detector, and conversely, constant-depth shortcuts for non-solvable automata such as those generating A5 would imply TC0 = NC1. Empirically, GPT-2-style Transformers trained on 19 automata with T = 100 reach over 99% in-distribution accuracy on all of them (best of 20 runs), with non-abelian groups needing more depth, for example S5 rising from 51.8% at 8 layers to 97.2% at 12, and learned attention heads matching the boundary-detector construction. These shortcuts are brittle, though: training is unstable, accuracy drops under distribution shift and on longer sequences because the model learns intermediate quantities like counts rather than the state, and LSTMs stay perfect where Transformers fail. Scratchpad training with a recency bias steers Transformers back toward recurrent solutions that generalize.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2610.23122" target="_blank" rel="noopener noreferrer">LED: Improving Masked Diffusion Language Models by Lookahead Editing</a></td>
+                <td>Yuyan Zhou et al</td>
+                <td>2026</td>
+                <td>dlm, masked diffusion, uniform diffusion, token editing, lookahead decoding, expressivity</td>
+                <td>Arxiv</td>
+                <td>This paper asks whether masked diffusion language models can gain the expressivity of iterative token revision without giving up the simple, easy-to-optimize transition schedule that makes them easier to train than uniform diffusion models. The authors first argue theoretically that masked models have a zero schedule-matching loss and admit larger learning rates, but because committed tokens can never be rewritten they stay within TC0, whereas uniform models, which can repeatedly rewrite tokens, reach NC1 at the cost of harder optimization. The proposed Lookahead Editing (LED) adds a rewritable proposal branch alongside the usual clean and masked branches. During training, a pretrained masked diffusion model generates proposals containing both correct and incorrect tokens, and LED is trained with plain cross-entropy to keep good proposal tokens and fix bad ones, using an attention mask in which each mask and proposal block attend bidirectionally to each other and to preceding clean blocks. At inference, before each real decoding step LED runs K lookahead passes that repeatedly rewrite a draft of future tokens, then commits high-confidence tokens to the masked sequence, where they become fixed as in standard masked diffusion. This works because revision happens only in the temporary proposal while the committed sequence keeps the mask-based schedule. Fine-tuned from Qwen2.5-7B and Qwen3-8B, LED raises the eight-benchmark average over matched MDM SFT from 45.4 to 56.8 and from 60.8 to 68.5, and LED-8B with SFT alone (68.5) edges out LLaDA2.1-16B (67.9), which uses continued pre-training, SFT, and RL, with gains such as AIME 2025 rising from 23.3 to 40.0. Lookahead trades speed for accuracy, with LED-8B on AIME 2025 ranging from 40.0 at 16 tokens/s to 33.3 at 44 tokens/s, and K = 2 works best, since longer lookaheads tend to accumulate bad proposals and hurt accuracy.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2611.09891" target="_blank" rel="noopener noreferrer">CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse</a></td>
