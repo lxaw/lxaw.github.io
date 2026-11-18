@@ -19,8 +19,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 615 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 615 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 616 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 616 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -44,6 +44,15 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2608.20530" target="_blank" rel="noopener noreferrer">LiLiCorr: Lightweight Likelihood Correlation of Parallel Drafts for Speculative Decoding</a></td>
+                <td>Matan Rusanovsky et al</td>
+                <td>2026</td>
+                <td>speculative decoding, parallel drafts, dflash, diffusion drafter, likelihood correlation</td>
+                <td>Arxiv</td>
+                <td>This paper asks how to make the blocks drafted by a diffusion-style speculative decoding drafter such as DFlash jointly coherent. Such a drafter produces a whole block in one forward pass but is trained on per-position marginals rather than the joint distribution, so its tokens are individually plausible yet incoherent together. LiLiCorr is a lightweight likelihood-based model that correlates these marginals: it keeps the top-K tokens at each position, processes them jointly, and emits an in vector and an out vector for each, with two candidates at consecutive positions matching when the earlier out vector aligns in cosine similarity with the later in vector. Training scores correct pairings highest and pushes competing ones down, and the exponential joint distribution over the block is never materialized, since one network pass yields all vectors, pairwise scores are batched matrix operations, and only a cheap greedy walk stays sequential. The DFlash drafter is co-trained with LiLiCorr so it proposes candidates that correlate into longer accepted sequences. Over vanilla DFlash it accepts more and serves faster in all 72 tested settings (nine benchmarks, two target sizes, greedy and temperature-one decoding, plus a throughput sweep), raising acceptance length by 7 to 19% while the scoring head adds only about 3% of per-block latency. Against three concurrent methods that also restore coherence at draft time, it has the highest throughput in 63 settings, ties in 6, and trails in 3.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2608.00146" target="_blank" rel="noopener noreferrer">DiffusionGemma Technical Report</a></td>
