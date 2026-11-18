@@ -19,8 +19,8 @@
             <p class="muted">I typically use this to organize papers I found interesting. Please feel free to do whatever you want with it. Note that this is not every single paper I have ever read, just a collection of ones that I remember to put down.</p>
         </div>
         
-        <p id="paperCount">So far, we have read 611 papers. Let's keep it up!</p> 
-        <small id="searchCount">Your search returned 611 papers. Nice!</small>
+        <p id="paperCount">So far, we have read 615 papers. Let's keep it up!</p> 
+        <small id="searchCount">Your search returned 615 papers. Nice!</small>
         
         <div class="search-inputs">
             <input type="text" id="titleSearch" placeholder="Search title...">
@@ -44,6 +44,42 @@
             </tr>
         </thead>
         <tbody>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2608.00146" target="_blank" rel="noopener noreferrer">DiffusionGemma Technical Report</a></td>
+                <td>DiffusionGemma Team et al</td>
+                <td>2026</td>
+                <td>dlm, diffusion llm, open-weight, moe, sampler distillation, rl</td>
+                <td>Arxiv</td>
+                <td>This report introduces DiffusionGemma, an experimental open-weight language model that generates text with discrete diffusion, iteratively refining blocks of 256 tokens in parallel instead of decoding one token at a time. Rather than training from scratch, it fine-tunes the mixture-of-experts Gemma 4 model (3.8B activated, 25.2B total parameters) using a two-stage pipeline that costs under 10% of the original autoregressive training token budget. The first stage is supervised fine-tuning to teach bidirectional denoising, and the second combines reinforcement learning with sampler distillation to improve both quality and inference efficiency. Across the evaluation suite it generates around 20 tokens per forward pass and roughly 1,500 output tokens per second on a single H100, which the authors say is substantially faster than autoregressive models even with state-of-the-art speculative decoding, establishing a new Pareto frontier for speed versus capability. It keeps thinking mode, multimodal inputs, and long-context support, and can still do autoregressive generation with minor degradation, which points toward hybrid diffusion-AR decoding.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2512.17351" target="_blank" rel="noopener noreferrer">Physics of Language Models: Part 4.1, Architecture Design and the Magic of Canon Layers</a></td>
+                <td>Zeyuan Allen-Zhu</td>
+                <td>2025</td>
+                <td>architecture, canon layers, synthetic pretraining, linear attention, reasoning</td>
+                <td>Arxiv</td>
+                <td>This paper asks how to compare language model architectures reliably at academic scale (around 1.3B parameters, 100B tokens), where results are usually dominated by noise. It introduces controlled synthetic pretraining tasks that isolate core capabilities, and within that framework discovers Canon layers: lightweight components that compute weighted sums of nearby token representations to promote horizontal information flow between neighboring tokens. They plug into Transformers, linear attention, state-space models, or any sequence architecture. The paper reports 12 key results, including roughly doubling reasoning depth, improving reasoning breadth and knowledge manipulation, letting NoPE match RoPE, and lifting linear attention to rival models like Mamba2 and GDN, validated on both synthetic tasks and real-world academic-scale pretraining. The author argues the synthetic playground is an economical way to isolate capabilities and may even predict how future architectures behave as training pipelines improve.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2510.25741" target="_blank" rel="noopener noreferrer">Scaling Latent Reasoning via Looped Language Models</a></td>
+                <td>Rui-Jie Zhu et al</td>
+                <td>2025</td>
+                <td>looped language models, latent reasoning, pretraining, adaptive depth, ouro</td>
+                <td>Arxiv</td>
+                <td>This paper argues that chain-of-thought defers reasoning to post-training and under-uses pre-training data, and instead builds reasoning into pre-training with Looped Language Models (LoopLM), released as the Ouro family. LoopLM combines iterative computation in latent space, an entropy-regularized objective that learns how much depth to allocate, and scaling to 7.7T tokens. The Ouro 1.4B and 2.6B models match the results of SOTA LLMs of up to 12B across a wide range of benchmarks. Controlled experiments indicate the advantage comes not from more knowledge capacity but from better knowledge manipulation, and LoopLM yields reasoning traces that are more aligned with the final output than explicit chain-of-thought. The authors present looping as a new scaling direction for the reasoning era.</td>
+            </tr>
+        
+            <tr>
+                <td><a href="https://arxiv.org/pdf/2405.00263" target="_blank" rel="noopener noreferrer">Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge</a></td>
+                <td>Bin Xiao et al</td>
+                <td>2024</td>
+                <td>speculative decoding, parallel decoding, medusa, regressive connection, attention decoder</td>
+                <td>Arxiv</td>
+                <td>This paper targets the inefficiency of autoregressive decoding, where the GPU spends most of its time moving parameters through limited memory bandwidth while computing only a small batch of tokens. Parallel decoding methods such as Medusa add extra heads that predict several future tokens and verify them in one step, but this deviates from the next-token-prediction objective and gives a low hit rate for candidates. Clover injects sequential knowledge into the parallel decoding process: a Regressive Connection passes information from pre-speculated tokens forward, an Attention Decoder integrates those speculated tokens, and an Augmenting Block modifies hidden states to suit speculation rather than next-token prediction. This raises the speculators&#x27; hit rate and overall efficiency. It outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, and beats the previous best method, Medusa, by up to 37% and 57% respectively.</td>
+            </tr>
         
             <tr>
                 <td><a href="https://arxiv.org/pdf/2605.15609" target="_blank" rel="noopener noreferrer">PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding</a></td>
