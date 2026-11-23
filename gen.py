@@ -14,7 +14,7 @@ def load_list(json_file_path):
         entries = []
         for part_name in reversed(data["parts"]):
             with open(os.path.join(base_dir, part_name), 'r') as pf:
-                entries.extend(json.load(pf))
+                entries.extend(reversed(json.load(pf)))
         return entries
     return data
 
